@@ -1099,6 +1099,14 @@ input[type='checkbox'] {
 	margin-left: 0.625rem;
 }
 
+.basic-1 .image-container-top-padding-small-align-center {
+	/* margin-right: 1rem; */
+	/* margin-left: 1.5rem; */
+	/* width: 600px; */
+	padding-top: 1rem;
+	text-align: center;
+}
+
 
 /*********************/
 /*     10. Video     */
