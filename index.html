@@ -37,29 +37,27 @@
         content="Start building modern services with a complete learning path that teaches you everything about microservices and the .NET platform, step by step.">
     <meta name="author" content="Julio Casal">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
     <meta property="og:site_name" content="" /> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
     <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
     <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
     <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
-    <!-- Website Title -->
+    <!-- Webpage Title -->
     <title>Building Microservices With .NET</title>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos/dist/aos.css" rel="stylesheet" />
 
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -67,397 +65,362 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-    <!-- Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
-    <!-- end of preloader -->
-
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
+            <a class="navbar-brand logo-text page-scroll" href="index.html">Building Microservices With .NET</a>
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html" style="text-decoration: none;">Building Microservices
-                With .NET</a>
+            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
 
-            <!-- Mobile Menu Toggle Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-awesome fas fa-bars"></span>
-                <span class="navbar-toggler-awesome fas fa-times"></span>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- end of mobile menu toggle button -->
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <span class="nav-item ml-auto">
-                    <a class="btn-solid-reg" href="https://learn.dotnetmicroservices.com/pages/get-free-course"
-                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-free-course'); return false;">TRY
+                    <a class="btn-solid-reg" href="https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course"
+                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course'); return false;">TRY
                         IT
                         FREE</a>
                     <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/users/sign_in">Member
                         LogIn</a>
                 </span>
-            </div>
+            </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
 
-    <div data-aos="fade-up">
-        <!-- Header -->
-        <header id="header" class="header">
-            <div class="header-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-xl-5">
-                            <div class="text-container">
-                                <h1>Building Microservices With .NET</h1>
-                                <p class="p-large">Escape the monolithic hell and start building modern services with
-                                    a complete learning path that teaches you everything about microservices and the
-                                    .NET
-                                    platform, step by step.</p>
-                                <a class="btn-solid-lg"
-                                    href="https://learn.dotnetmicroservices.com/pages/get-free-course"
-                                    onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-free-course'); return false;">GET
-                                    STARTED
-                                    NOW</a>
-                            </div> <!-- end of text-container -->
-                        </div> <!-- end of col -->
-                        <div class="col-lg-6 col-xl-7">
-                            <div class="image-container">
-                                <div class="img-wrapper">
-                                    <img class="img-fluid" src="images/dotnet-bot_microservices.png" alt="alternative">
-                                </div> <!-- end of img-wrapper -->
-                            </div> <!-- end of image-container -->
-                        </div> <!-- end of col -->
-                    </div> <!-- end of row -->
-                </div> <!-- end of container -->
-            </div> <!-- end of header-content -->
-        </header> <!-- end of header -->
-        <svg class="header-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-            viewBox="0 0 1920 310">
+    <!-- Header -->
+    <header id="header" class="header" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h1 class="h1-large">Building Microservices With .NET</h1>
+                        <p class="p-large">Escape the monolithic hell and start building modern services with a complete
+                            learning path that teaches you everything about microservices and the .NET platform, step by
+                            step.</p>
+                        <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course"
+                            onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course'); return false;">GET
+                            STARTED NOW</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of div -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/dotnet-bot_microservices.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <svg class="header-decoration" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            viewBox="0 0 1920 305.139">
             <defs>
                 <style>
                     .cls-1 {
-                        fill: #5f4def;
+                        fill: #ffffff;
                     }
                 </style>
             </defs>
-            <title>header-frame</title>
+            <title>header-decoration</title>
             <path class="cls-1"
-                d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z" />
+                d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
+                transform="translate(0 0)" />
         </svg>
-        <!-- end of header -->
-    </div>
+    </header> <!-- end of header -->
+    <!-- end of header -->
 
-
-    <!-- Description -->
-    <div class="cards-1">
+    <!-- What Are Microservices -->
+    <div id="description" class="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <div class="above-heading">DESCRIPTION</div> -->
                     <h2 class="h2-heading">What Are Microservices?</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div data-aos="zoom-in">
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-image">
-                                <img class="img-fluid" src="images/build-apis-microservices-docker-containers.png"
-                                    alt="alternative">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Autonomous, loosely coupled services</h4>
-                                <p>Microservices are an architectural style that structures an application as a
-                                    collection of autonomous, loosely coupled services that are modeled around a
-                                    business domain. Each microservice is focused on doing one thing well.</p>
-                            </div>
-                        </div>
-                        <!-- end of card -->
-                    </div>
 
-                    <div data-aos="zoom-in">
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-image">
-                                <img class="img-fluid" src="images/fs-open-source-community-bots-table.png"
-                                    alt="alternative">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Owned by small, focused teams</h4>
-                                <p>A microservice is small enough that a single feature team can own it. Small team
-                                    sizes promote greater agility. Large teams tend be less productive, because
-                                    communication is slower, management overhead goes up, and agility diminishes.</p>
-                            </div>
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/build-apis-microservices-docker-containers.png"
+                                alt="alternative">
                         </div>
-                        <!-- end of card -->
+                        <div class="card-body">
+                            <h5 class="card-title">Autonomous, loosely coupled services</h5>
+                            <p>Microservices are an architectural style that structures an application as a collection
+                                of autonomous, loosely coupled services that are modeled around a business domain. Each
+                                microservice is focused on doing one thing well.</p>
+                        </div>
                     </div>
+                    <!-- end of card -->
 
-                    <div data-aos="zoom-in">
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-image">
-                                <img class="img-fluid" src="images/microservices-docker-containers-bot-packages.png"
-                                    alt="alternative">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Built and deployed independently</h4>
-                                <p>A team can update an existing microservice without rebuilding and redeploying the
-                                    entire application, and roll back an update if something goes wrong. In traditional
-                                    applications, a bug found in one part of the application, can block the entire
-                                    release.</p>
-                            </div>
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-small-focused-team.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Owned by small, focused teams</h5>
+                            <p>A microservice is small enough that a single feature team can own it. Small team sizes
+                                promote greater agility. Large teams tend be less productive, because communication is
+                                slower, management overhead goes up, and agility diminishes.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-docker-containers-bot-packages.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Built and deployed independently</h5>
+                            <p>A team can update an existing microservice without rebuilding and redeploying the entire
+                                application, and roll back an update if something goes wrong. In traditional
+                                applications, a bug found in one part of the application, can block the entire release.
+                            </p>
                         </div>
                     </div>
                     <!-- end of card -->
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-            <div class="row basic-1">
-                <div class="col-lg-12">
-                    <div data-aos="zoom-in">
-                        <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-free-course"
-                            onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-free-course'); return false;">GET
-                            STARTED NOW</a>
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
 
-
-    <div data-aos="fade-right">
-        <!-- Details -->
-        <div id="why-microservices" class="basic-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="text-container">
-                            <h2>Why should I move to microservices?</h2>
-                            <p>Because your current monolithic system has grown so much that:</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">It takes forever to build and deploy such big system, even
-                                        for small features or bug fixes</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">A small bug anywhere in the code can break the entire
-                                        system, and it's not easy to roll back</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Can't scale fast enough when needed and other times there
-                                        are so many resources wasted all over the place</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">New team members strugle a lot trying to understand the
-                                        entire code base</div>
-                                </li>
-                            </ul>
-                        </div> <!-- end of text-container -->
-                    </div> <!-- end of col -->
-                    <div class="col-lg-6">
-                        <div class="image-container-top-padding">
-                            <img class="img-fluid" src="images/team-mistake.jpg" alt="alternative">
-                        </div> <!-- end of image-container -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-1 -->
-        <!-- end of details -->
-    </div>
-
-    <div data-aos="fade-left">
-        <!-- Details -->
-        <div id="who-uses-microservices" class="basic-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="text-container">
-                            <h2>Who is using microservices?</h2>
-                            <p>Top companies that are constantly dealing with very complex changing requirements have
-                                been embracing microservices for several years.</p>
-                            <p>Only microservices allow teams to stay agile and autonomous, while also getting your
-                                system ready to scale when unexpected traffic peaks show up.</p>
-                        </div> <!-- end of text-container -->
-                    </div> <!-- end of col -->
-                    <div class="col-lg-6">
-                        <div class="image-container">
-                            <img class="img-fluid" src="images/microservices-companies.png" alt="alternative">
-                        </div> <!-- end of image-container -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-1 -->
-        <!-- end of details -->
-    </div>
-
-    <div data-aos="zoom-in">
+    <!-- Get Started Button 1 -->
+    <div id="get-started-1" class="basic-2" data-aos="zoom-in">
         <div class="container">
-            <div class="row basic-2">
+            <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-free-course"
-                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-free-course'); return false;">GET
+                    <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course"
+                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course'); return false;">GET
                         STARTED NOW</a>
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->
+            </div>
         </div>
     </div>
+    <!-- end of Get Started Button 1 -->
 
-    <div data-aos="fade-right">
-        <!-- Details -->
-        <div id="who-am-i" class="basic-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="image-container-top-padding-small-align-center">
-                            <img class="img-fluid" src="images/Comm_Julio_Square.png" alt="alternative">
-                        </div> <!-- end of image-container -->
-                    </div> <!-- end of col -->
-                    <div class="col-lg-9">
-                        <div class="text-container">
-                            <h2>Hi, I'm Julio!</h2>
-                            <p>I'm a passionate software engineer with almost two decades of experience building all
-                                sorts of applications and systems based on the .NET platform.
-                            </p>
-                            <p>I like to continuously explore the latest software engineering trends and practices and
-                                use them to solve real world problems.</p>
-                            <p>I believe reducing complex concepts into simple
-                                step by step instructions is incredibly valuable and helps to make coding accessible and
-                                fun for everyone.</p>
-                        </div> <!-- end of text-container -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-1 -->
-        <!-- end of details -->
+    <!-- Why Microservices -->
+    <div id="why-microservices" class="basic-1" data-aos="fade-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/monolithic-hell-team.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->                
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Why should I move to microservices?</h2>
+                        <p>Because your current monolithic system has grown so much that:</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">It takes forever to build and deploy such big system, even
+                                    for small features or bug fixes</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">A small bug anywhere in the code can break the entire
+                                    system, and it's not easy to roll back</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Can't scale fast enough when needed and other times there
+                                    are so many resources wasted all over the place</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">New team members strugle a lot trying to understand the
+                                    entire code base</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Why Microservices -->
+
+    <!-- Who Uses Microservices -->
+    <div id="who-uses-microservices" class="basic-1" data-aos="fade-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/microservices-companies.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->                
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Who is using microservices?</h2>
+                        <p>Top companies that are constantly dealing with very complex changing requirements have
+                            been embracing microservices for several years.</p>
+                        <p>Only microservices allow teams to stay agile and autonomous, while also getting your
+                            system ready to scale when unexpected traffic peaks show up.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Who Uses Microservices -->
+
+    <!-- Get Started Button 2 -->
+    <div id="get-started-2" class="basic-2" data-aos="zoom-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course"
+                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course'); return false;">GET
+                        STARTED NOW</a>
+                </div> <!-- end of col -->
+            </div>
+        </div>
     </div>
+    <!-- end of Get Started Button 2 -->
 
-    <div data-aos="zoom-in-right">
-        <!-- Testimonials -->
-        <div class="slider-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
+    <!-- Whom Am I -->
+    <div id="who-am-i" class="basic-1" data-aos="fade-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/Julio_Casal.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-9">
+                    <div class="text-container">
+                        <h2>Hi, I'm Julio!</h2>
+                        <p>I'm a passionate software engineer with almost two decades of experience building all sorts
+                            of applications and systems based on the .NET platform.
+                        </p>
+                        <p>I like to continuously explore the latest software engineering trends and practices and use
+                            them to solve real world problems.</p>
+                        <p>I believe reducing complex concepts into simple step by step instructions is incredibly
+                            valuable and helps to make coding accessible and fun for everyone.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Whom Am I -->
 
-                        <!-- Text Slider -->
-                        <div class="slider-container">
-                            <div class="swiper-container text-slider">
-                                <div class="swiper-wrapper">
+    <!-- Testimonials -->
+    <div class="slider-2" data-aos="zoom-in-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img class="img-fluid" src="images/EduardoMartins.jpg" alt="alternative">
-                                        </div> <!-- end of image-wrapper -->
-                                        <div class="text-wrapper">
-                                            <div class="testimonial-text">This course teaches you WebApi, DI, new c# 9.0
-                                                functionalities, Docker, mongodb, microservices stuff and even some
-                                                Postman stuff I wasn't aware of. Really went far beyond all my
-                                                expectations. I did other individual courses about some of these topics
-                                                (some considerably more expensive) and now I feel that most of these
-                                                would not have been necessary had I watched this one first. Very likely
-                                                the best programming course I ever did.</div>
-                                            <div class="testimonial-author">Eduardo Martins</div>
-                                        </div> <!-- end of text-wrapper -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                    <!-- Text Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container text-slider">
+                            <div class="swiper-wrapper">
 
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img class="img-fluid" src="images/NathanWaterman.jpg" alt="alternative">
-                                        </div> <!-- end of image-wrapper -->
-                                        <div class="text-wrapper">
-                                            <div class="testimonial-text">I really enjoyed this course. The content and
-                                                pacing was just right for me as someone with C# experience but little
-                                                microservices experience. Julio is really responsive to questions and
-                                                has an engaging teaching style.</div>
-                                            <div class="testimonial-author">Nathan Waterman</div>
-                                        </div> <!-- end of text-wrapper -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-wrapper">
+                                        <img class="img-fluid" src="images/Eduardo_Martins.jpg" alt="alternative">
+                                    </div> <!-- end of image-wrapper -->
+                                    <div class="text-wrapper">
+                                        <div class="testimonial-text">This course teaches you WebApi, DI, new c# 9.0
+                                            functionalities, Docker, mongodb, microservices stuff and even some
+                                            Postman stuff I wasn't aware of. Really went far beyond all my
+                                            expectations. I did other individual courses about some of these topics
+                                            (some considerably more expensive) and now I feel that most of these
+                                            would not have been necessary had I watched this one first. Very likely
+                                            the best programming course I ever did.</div>
+                                        <div class="testimonial-author">Eduardo Martins</div>
+                                    </div> <!-- end of text-wrapper -->
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
 
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img class="img-fluid" src="images/VikasChoodikottammel.jfif"
-                                                alt="alternative">
-                                        </div> <!-- end of image-wrapper -->
-                                        <div class="text-wrapper">
-                                            <div class="testimonial-text">Amazing course content!! The structure and
-                                                material make it easy to absorb and recreate. Thank you for bringing
-                                                this out. Would be great if there is another course that would build on
-                                                top of this to complete the entire application including the front end.
-                                                Really look forward to it!!</div>
-                                            <div class="testimonial-author">Vikas Choodikottammel</div>
-                                        </div> <!-- end of text-wrapper -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-wrapper">
+                                        <img class="img-fluid" src="images/Nathan_Waterman.jpg" alt="alternative">
+                                    </div> <!-- end of image-wrapper -->
+                                    <div class="text-wrapper">
+                                        <div class="testimonial-text">I really enjoyed this course. The content and
+                                            pacing was just right for me as someone with C# experience but little
+                                            microservices experience. Julio is really responsive to questions and
+                                            has an engaging teaching style.</div>
+                                        <div class="testimonial-author">Nathan Waterman</div>
+                                    </div> <!-- end of text-wrapper -->
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
 
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img class="img-fluid" src="images/KyleCollie.jpeg" alt="alternative">
-                                        </div> <!-- end of image-wrapper -->
-                                        <div class="text-wrapper">
-                                            <div class="testimonial-text">I have watched Julio's free YouTube videos and
-                                                learned a great deal there. I am looking to solidify what I have learned
-                                                and continue learning more here. Halfway through and I am NOT
-                                                disappointed! Finished it this morning and it was great! I cannot wait
-                                                for Julio's next update.</div>
-                                            <div class="testimonial-author">Kyle Collie</div>
-                                        </div> <!-- end of text-wrapper -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-wrapper">
+                                        <img class="img-fluid" src="images/Vikas_Choodikottammel.jfif" alt="alternative">
+                                    </div> <!-- end of image-wrapper -->
+                                    <div class="text-wrapper">
+                                        <div class="testimonial-text">Amazing course content!! The structure and
+                                            material make it easy to absorb and recreate. Thank you for bringing
+                                            this out. Would be great if there is another course that would build on
+                                            top of this to complete the entire application including the front end.
+                                            Really look forward to it!!</div>
+                                        <div class="testimonial-author">Vikas Choodikottammel</div>
+                                    </div> <!-- end of text-wrapper -->
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
 
-                                    <!-- Slide -->
-                                    <div class="swiper-slide">
-                                        <div class="image-wrapper">
-                                            <img class="img-fluid" src="images/Rajeev Ranjan Roy.png" alt="alternative">
-                                        </div> <!-- end of image-wrapper -->
-                                        <div class="text-wrapper">
-                                            <div class="testimonial-text">One of the best course for me so far. Thanks
-                                                Julio for such a wonderful course on microservice , which can be
-                                                followed. Looking forward to see more courses from you.</div>
-                                            <div class="testimonial-author">Rajeev Ranjan Roy</div>
-                                        </div> <!-- end of text-wrapper -->
-                                    </div> <!-- end of swiper-slide -->
-                                    <!-- end of slide -->
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-wrapper">
+                                        <img class="img-fluid" src="images/Kyle_Collie.jpeg" alt="alternative">
+                                    </div> <!-- end of image-wrapper -->
+                                    <div class="text-wrapper">
+                                        <div class="testimonial-text">I have watched Julio's free YouTube videos and
+                                            learned a great deal there. I am looking to solidify what I have learned
+                                            and continue learning more here. Halfway through and I am NOT
+                                            disappointed! Finished it this morning and it was great! I cannot wait
+                                            for Julio's next update.</div>
+                                        <div class="testimonial-author">Kyle Collie</div>
+                                    </div> <!-- end of text-wrapper -->
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
 
-                                </div> <!-- end of swiper-wrapper -->
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="image-wrapper">
+                                        <img class="img-fluid" src="images/Rajeev_Ranjan_Roy.png" alt="alternative">
+                                    </div> <!-- end of image-wrapper -->
+                                    <div class="text-wrapper">
+                                        <div class="testimonial-text">One of the best course for me so far. Thanks
+                                            Julio for such a wonderful course on microservice , which can be
+                                            followed. Looking forward to see more courses from you.</div>
+                                        <div class="testimonial-author">Rajeev Ranjan Roy</div>
+                                    </div> <!-- end of text-wrapper -->
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
 
-                                <!-- Add Arrows -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <!-- end of add arrows -->
+                            </div> <!-- end of swiper-wrapper -->
 
-                            </div> <!-- end of swiper-container -->
-                        </div> <!-- end of slider-container -->
-                        <!-- end of text slider -->
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
 
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of slider-2 -->
-        <!-- end of testimonials -->
-    </div>
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-2 -->
+    <!-- end of testimonials -->
 
     <!-- Statistics -->
     <div class="counter">
@@ -491,123 +454,123 @@
     </div> <!-- end of counter -->
     <!-- end of statistics -->
 
-    <div data-aos="fade-right">
-        <!-- Details -->
-        <div id="how-get-started" class="basic-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="text-container">
-                            <h2>What do I need to get started?</h2>
-                            <p>This is the only beginner level course on microservices and .NET. To get started all you
-                                need is:</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Basic C# knowledge</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Some web development experience</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">A computer with one of the most popular operating systems
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">A big desire to learn by doing</div>
-                                </li>
-                            </ul>
-                            <p>You don’t have to be an expert on anything since you will write every line of code from
-                                scratch and the course explains everything in great detail. No magic copy pasted code!
-                            </p>
-                        </div> <!-- end of text-container -->
-                    </div> <!-- end of col -->
-                    <div class="col-lg-6">
-                        <div class="image-container-top-padding-small">
-                            <img class="img-fluid" src="images/WhatYouNeedToStart.png" alt="alternative">
-                        </div> <!-- end of image-container -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-1 -->
-        <!-- end of details -->
-    </div>
+    <!-- How To Get Started -->
+    <div id="how-get-started" class="basic-1" data-aos="fade-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/microservices-how-get-started.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->                
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>What do I need to get started?</h2>
+                        <p>This is the only beginner level course on microservices and .NET. To get started all you
+                            need is:</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Basic C# knowledge</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Some web development experience</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">A computer with one of the most popular operating systems
+                                </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">A big desire to learn by doing</div>
+                            </li>
+                        </ul>
+                        <p>You don’t have to be an expert on anything since you will write every line of code from
+                            scratch and the course explains everything in great detail. No magic copy pasted code!
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of How To Get Started -->
 
-    <div data-aos="zoom-in">
-        <div class="basic-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>Start Building Microservices Today!</h4>
-                            <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-free-course"
-                                onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-free-course'); return false;">GET
-                                STARTED NOW</a>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
+    <!-- Get Started Button 3 -->
+    <div id="get-started-3" class="basic-2" data-aos="zoom-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Start Building Microservices Today!</h2>
+                    <a class="btn-solid-lg" href="https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course"
+                        onclick="getOutboundLink('https://learn.dotnetmicroservices.com/pages/get-building-microservices-with-net-course'); return false;">GET
+                        STARTED NOW</a>
+                </div> <!-- end of col -->
+            </div>
         </div>
     </div>
+    <!-- end of Get Started Button 3 -->
 
-    <div data-aos="zoom-out-up">
-        <!-- Newsletter -->
-        <div class="form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="icon-container">
-                            <span class="fa-stack">
-                                <a href="https://www.youtube.com/c/jcasalt" target="blank">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-youtube fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="https://twitter.com/julioc" target="blank">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="https://www.linkedin.com/in/juliocasal" target="blank">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </div> <!-- end of col -->
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of form -->
-        <!-- end of newsletter -->
-    </div>
+    <!-- Social -->
+    <div class="basic-3" data-aos="zoom-out-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="icon-container">
+                        <span class="fa-stack">
+                            <a href="https://www.youtube.com/c/jcasalt" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/julioc" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/juliocasal" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of icon-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of social -->
+
 
     <!-- Footer -->
-    <svg class="footer-frame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-        viewBox="0 0 1920 79">
-        <defs>
-            <style>
-                .cls-2 {
-                    fill: #5f4def;
-                }
-            </style>
-        </defs>
-        <title>footer-frame</title>
-        <path class="cls-2"
-            d="M0,72.427C143,12.138,255.5,4.577,328.644,7.943c147.721,6.8,183.881,60.242,320.83,53.737,143-6.793,167.826-68.128,293-60.9,109.095,6.3,115.68,54.364,225.251,57.319,113.58,3.064,138.8-47.711,251.189-41.8,104.012,5.474,109.713,50.4,197.369,46.572,89.549-3.91,124.375-52.563,227.622-50.155A338.646,338.646,0,0,1,1920,23.467V79.75H0V72.427Z"
-            transform="translate(0 -0.188)" />
-    </svg>
+    <div class="footer-decoration">
+        <svg class="footer-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            viewBox="0 0 1920 115.984">
+            <defs>
+                <style>
+                    .cls-2 {
+                        fill: #5f4dee;
+                    }
+                </style>
+            </defs>
+            <title>footer-frame</title>
+            <path class="cls-2"
+                d="M1616.28,381.705c-87.656,5.552-93.356-59.62-197.369-67.562-112.391-8.581-137.609,65.077-251.189,60.632-109.57-4.288-116.156-74.017-225.25-83.153-125.171-10.483-150,78.5-293,88.35-136.948,9.437-173.108-68.092-320.83-77.956C255.5,297.133,143,308.1,0,395.564V406.75H1920V324.537c-18-6.507-43.63-14.492-76.1-15.591C1740.655,305.452,1705.829,376.033,1616.28,381.705Z"
+                transform="translate(0 -290.766)" />
+        </svg>
+    </div> <!-- end of footer-decoration -->
+    <!-- end of footer -->
+
 
     <!-- Copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2021 Building Microservices With .NET <a href="https://inovatik.com">
-                            | Template by
-                            Inovatik</a></p>
+                    <p class="p-small">Copyright © 2021 Building Microservices With .NET <a
+                            href="https://inovatik.com">| Template by Inovatik</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
@@ -615,21 +578,20 @@
     <!-- end of copyright -->
 
 
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://unpkg.com/aos/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1400,
         })
     </script>
-
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+  
 </body>
 
 </html>
