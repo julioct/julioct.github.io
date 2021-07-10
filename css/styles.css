@@ -1083,10 +1083,15 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
+.cards-2 .col-xs-6 {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
 .cards-2 .card {
 	max-width: 330px;
 	margin-right: auto;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 	margin-left: auto;
 	border: 2px solid #e4e7fc;
 	border-radius: 8px;
