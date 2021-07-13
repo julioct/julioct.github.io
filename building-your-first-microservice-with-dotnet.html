@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4779172-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-4779172-9');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Build your first microservice with C#, ASP.NET Core, VS Code, MongoDB, and Docker. Step by Step.">
+    <meta name="author" content="Julio Casal">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Build Your First Microservice With .NET</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos/dist/aos.css" rel="stylesheet" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Header -->
+    <header id="header" class="header" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <h1 class="h1-large">BUILD YOUR FIRST MICROSERVICE WITH .NET</h1>
+                        <p class="p-large">Build your first microservice with C#, ASP.NET Core, MongoDB, and Docker. Step by Step.</p>
+                        <a class="btn-solid-lg page-scroll" href="#pricing">ENROLL NOW</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of div -->
+                <div class="col-lg-5">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/FreeCourseThumbnail.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+        <svg class="header-decoration" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            viewBox="0 0 1920 305.139">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #ffffff;
+                    }
+                </style>
+            </defs>
+            <title>header-decoration</title>
+            <path class="cls-1"
+                d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
+                transform="translate(0 0)" />
+        </svg>
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Basic -->
+    <div id="avoid-monolithic-hell" class="ex-basic-1 pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Avoid the pitfalls of the monolithic hell</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <p>Is your team suffering the symptoms of the <strong>monolithic hell</strong>? Has your code base
+                        become so complex it's too hard to understand and modify? Does it take forever to build and
+                        deploy your system? Do you just want to know what's the latest in distributed systems
+                        architecture?</p>
+                    <p>In this course you will learn <strong>why everyone is moving to microservices</strong> and <strong>how to get started</strong> with C# and the .NET platform.</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- Reasons -->
+    <div id="reasons" class="basic-1">
+        <div class="container">
+            <div class="row" data-aos="fade-right">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/monolithic-hell-team.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Should my teams use microservices?</h2>
+                        <p>It may time to move away from the monolith if:</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Can't scale your system fast enough when needed</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">It takes forever to build, test and deploy</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Even a small bug can break the entire system</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">The big code base is too hard to understand</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Reasons -->
+
+    <!-- Testimonials 01 -->
+    <div >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <!-- Text Slider -->
+                    <div>
+                        <div class="text-wrapper">
+                            <div class="testimonial-text">"I was even new to VSCode. This training is from scratch. Anybody can follow. Hoping to attend all other training. Thanks, Julio for making it so easy so that the fundamentals are thorough."</div>
+                            <div class="testimonial-author">Dhanya Gopinath</div>
+                        </div> <!-- end of text-wrapper -->
+                    </div> <!-- end of swiper-container -->
+                    <!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-2 -->
+    <!-- end of Testimonials 01 -->
+
+    <!-- Statistics -->
+    <div class="counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">The course in numbers</h2>
+                    <br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Counter -->
+                    <div id="counter">
+                        <div class="cell">
+                            <i class="fas fa-users yellow"></i>
+                            <div class="counter-value number-count" data-count="790">1</div>
+                            <p class="counter-info">Happy Students</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-clock dark-blue"></i>
+                            <div class="counter-value number-count" data-count="380">1</div>
+                            <p class="counter-info">Hours Watched</p>
+                        </div>
+                        <div class="cell">
+                            <i class="fas fa-video turquoise"></i>
+                            <div class="counter-value number-count" data-count="18">1</div>
+                            <p class="counter-info">Lectures</p>
+                        </div>
+                    </div>
+                    <!-- end of counter -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of statistics -->
+
+    <!-- Who Is Course For -->
+    <div id="who-is-course-for" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/who-is-course-for.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Who is this course for?</h2>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Beginner C# / .NET developers wanting to get a deep
+                                    understanding of the microservices building blocks</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Experienced C# / .NET developers new to microservices that want
+                                    to understand if this modern architecture makes sense for their projects</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Anyone willing to learn by doing. Even if you have never built
+                                    an ASPNET Core app you should not have problems with this course since I will
+                                    explain every line of code in detail</div>
+                            </li>
+                        </ul>
+                    </div> <!-- end of text-container -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Who Is Course For -->
+
+    <!-- Testimonials 02 -->
+    <div >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <!-- Text Slider -->
+                    <div>
+                        <div class="text-wrapper">
+                            <div class="testimonial-text">"The course is an excellent introduction to building microservices with .NET. Main topics are presented very clearly."</div>
+                            <div class="testimonial-author">R Adams</div>
+                        </div> <!-- end of text-wrapper -->
+                    </div> <!-- end of swiper-container -->
+                    <!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-2 -->
+    <!-- end of Testimonials 02 -->
+
+    <!-- Get Started Button 2 -->
+    <div id="get-started-2" class="basic-3" data-aos="zoom-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">ENROLL NOW</a>
+                </div> <!-- end of col -->
+            </div>
+        </div>
+    </div>
+    <!-- end of Get Started Button 2 -->
+
+    <!-- Course Curriculum -->
+    <div id="course-curriculum" class="basic-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="h2-heading">Course curriculum</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="accordion" id="curriculum-accordion">
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#welcome-to-course"
+                                aria-controls="collapseOne" aria-expanded="true">
+                                <span class="chapter-number">01</span>
+                                <span>Welcome to the course!</span>
+                            </h5>
+                            <div id="welcome-to-course" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#curriculum-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Course Introduction</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-cloud-download-alt"></i>
+                                            <div class="media-body">Source code and other course downloads</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Development environment setup</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What's wrong with the monolith?</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What are microservices?</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#your-first-microservice"
+                                aria-controls="collapseOne">
+                                <span class="chapter-number">02</span>
+                                <span>Your first microservice</span>
+                            </h5>
+                            <div id="your-first-microservice" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a microservice via the .NET CLI</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction to the REST API and DTOs</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the DTOs</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the REST API operations</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Handling invalid inputs</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#adding-database-storage"
+                                aria-controls="collapseOne">
+                                <span class="chapter-number">03</span>
+                                <span>Adding database storage</span>
+                            </h5>
+                            <div id="adding-database-storage" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction to the repository pattern and MongoDB
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing a MongoDB repository</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction to Docker</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Trying out the REST API with a MongoDB container
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction to Dependency Injection and
+                                                Configuration</div>
+                                        </li>
+                                        <li class="media">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing dependency injection and configuration
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Course Curriculum -->
+
+    <!-- Course preview 01 -->
+    <div id="course-preview-01" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="h2-heading">Course previews</h2>
+                    <br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row" data-aos="fade-right">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <a class="popup-youtube" href="https://player.vimeo.com/video/574063295"
+                                data-effect="fadeIn">
+                                <img class="img-fluid" src="images/Preview04.png" alt="alternative">
+                                <span class="video-play-button">
+                                    <span></span>
+                                </span>
+                            </a>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>Understand the key concepts before coding</h2>
+                        <p>In this beginner level course, I intentionally take my time to explain every new concept in a
+                            very didactic way to ensure you understand the purpose of the code you are about to write.
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+            <div class="row" data-aos="fade-right">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <a class="popup-youtube" href="https://player.vimeo.com/video/574058073"
+                                data-effect="fadeIn">
+                                <img class="img-fluid" src="images/Preview05.png" alt="alternative">
+                                <span class="video-play-button">
+                                    <span></span>
+                                </span>
+                            </a>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>From scratch, step by step</h2>
+                        <p>You will start absolutely from scratch and I will explain every line of code as I guide you
+                            through the coding lessons.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- Course preview 01 -->
+
+    <!-- Testimonials 03 -->
+    <div >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <!-- Text Slider -->
+                    <div>
+                        <div class="text-wrapper">
+                            <div class="testimonial-text">"Super helpful, very thorough, easy to understand and follow. Gave me an excellent starting point to start migration of a monolith app to microservices. Excited about next modules! :)"</div>
+                            <div class="testimonial-author">Gerardo Rendon</div>
+                        </div> <!-- end of text-wrapper -->
+                    </div> <!-- end of swiper-container -->
+                    <!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-2 -->
+    <!-- end of Testimonials 03 -->
+
+    <!-- What You Get When You Enroll -->
+    <div class="what-you-get">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">What you get when you enroll</h2>
+                    <br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col">
+                    <i class="fas fa-video dark-blue"></i>
+                    <h5>2+ hours on-demand video</h5>
+                    <p>More than 2 hours of didactic, high quality video, specifically designed for learning purposes.
+                    </p>
+                </div> <!-- end of col -->
+                <div class="col">
+                    <i class="fas fa-cloud-download-alt turquoise"></i>
+                    <h5>Source code</h5>
+                    <p>Each coding lesson includes downloadable source code so you can easily compare and troubleshoot.
+                    </p>
+                </div> <!-- end of col -->
+                <div class="col">
+                    <i class="fas fa-infinity yellow"></i>
+                    <h5>Full lifetime access</h5>
+                    <p>Learn at your own pace, from anywhere and come back anytime. You'll have full access for life.
+                    </p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of What You Get When You Enroll -->
+
+    <!-- Whom Am I -->
+    <div id="who-am-i" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/Julio_Casal.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-9">
+                    <div class="text-container">
+                        <h2>Hi, I'm Julio!</h2>
+                        <p>I'm a passionate software engineer with almost two decades of experience building all sorts
+                            of applications and systems based on the .NET platform.
+                        </p>
+                        <p>I like to continuously explore the latest software engineering trends and practices and use
+                            them to solve real world problems.</p>
+                        <p>I believe reducing complex concepts into simple step by step instructions is incredibly
+                            valuable and helps to make coding accessible and fun for everyone.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Whom Am I -->
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Start Building Microservices With .NET Today!</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col-xs-6">
+                    <!-- Card-->
+                    <div class="card best-value">
+                        <div class="card-body">
+                            <div class="card-title best-value">One-time payment</div>
+                            <div><span class="currency best-value">$</span><span class="value best-value">9.95</span>
+                            </div>
+                            <div>&nbsp;</div>
+                            <div class="button-wrapper">
+                                <a id="one-time-payment-link" class="btn-solid-reg"
+                                    href="https://learn.dotnetmicroservices.com/enroll/1399238?price_id=1872658">GET INSTANT ACCESS</a>
+                            </div>
+                            <hr class="cell-divide-hr">
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Instant access to the latest course content</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">2+ hours of self-paced, high quality training</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Full source code for all coding lessons</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Lifetime access</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Full captions</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Ask questions to the instructor any time</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Money Back Guarantee</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+                </div> <!-- end of col -->                
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of pricing -->
+
+    <!-- Money Back Guarantee -->
+    <div id="money-back-guarantee" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/30-day-guarantee.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-9">
+                    <div class="text-container">
+                        <h2>Money Back Guarantee</h2>
+                        <p>I do my best to provide high quality content that will meet or exceed your expectations. But
+                            if for whatever reason you find this course isn't for you, you can request a refund during
+                            the first 30 days.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Money Back Guarantee -->
+
+    <!-- Footer -->
+    <div class="footer-decoration">
+        <svg class="footer-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            viewBox="0 0 1920 115.984">
+            <defs>
+                <style>
+                    .cls-2 {
+                        fill: #5f4dee;
+                    }
+                </style>
+            </defs>
+            <title>footer-frame</title>
+            <path class="cls-2"
+                d="M1616.28,381.705c-87.656,5.552-93.356-59.62-197.369-67.562-112.391-8.581-137.609,65.077-251.189,60.632-109.57-4.288-116.156-74.017-225.25-83.153-125.171-10.483-150,78.5-293,88.35-136.948,9.437-173.108-68.092-320.83-77.956C255.5,297.133,143,308.1,0,395.564V406.75H1920V324.537c-18-6.507-43.63-14.492-76.1-15.591C1740.655,305.452,1705.829,376.033,1616.28,381.705Z"
+                transform="translate(0 -290.766)" />
+        </svg>
+    </div> <!-- end of footer-decoration -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2021 .NET Microservices</p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://unpkg.com/aos/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1400,
+        })
+    </script>
+
+</body>
+
+</html>
