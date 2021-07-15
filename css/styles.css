@@ -1109,7 +1109,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .card-body {
-	padding: 3rem 1.625rem 3.25rem 1.625rem;
+	padding: 1rem 1.625rem 2rem 1rem;
 }
 
 .cards-2 .card .card-title {
@@ -1911,7 +1911,7 @@ content: "\f106";
 	}
 
 	.header .text-container {
-		margin-right: 4.5rem;
+		margin-right: 1.5rem;
 	}
 
 	.header .image-container {
@@ -1980,8 +1980,8 @@ content: "\f106";
 	}
 	
 	.cards-2 .card .card-body {
-		padding-right: 2.5rem;
-		padding-left: 2.5rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
 	.cards-2 .card:nth-of-type(3n+2) {
