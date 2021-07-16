@@ -191,6 +191,7 @@ a.white:hover {
 	line-height: 0;
 	text-decoration: none;
 	transition: all 0.2s;
+	min-width: 300px;
 }
 
 .btn-solid-lg:hover {
@@ -436,6 +437,7 @@ input[type='checkbox'] {
 	font-size: 0.875rem;
 	line-height: 0.875rem;
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
+	min-width: 380px;
 }
 
 .navbar .navbar-brand {
