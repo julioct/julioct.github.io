@@ -100,6 +100,17 @@ h6 {
 	line-height: 1.75rem;
 }
 
+.p-extra-large-centered {
+	font-size: 1.95rem;
+	line-height: 1.75rem;
+	text-align: center;
+}
+
+.p-extra-large-centered-save-value {
+	color: #eb8a2f;
+	font-weight: bold;
+}
+
 .p-small {
 	font-size: 0.875rem;
 	line-height: 1.5rem;
@@ -188,7 +199,7 @@ a.white:hover {
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 1.5rem;
-	line-height: 0;
+	line-height: 1;
 	text-decoration: none;
 	transition: all 0.2s;
 	min-width: 300px;
@@ -574,8 +585,9 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
-.header .text-container {
-	margin-bottom: 3rem;
+.header .btn-solid-lg-container {
+	margin-top: 2rem;
+	text-align: center;
 }
 
 .header h1 {
@@ -1521,6 +1533,7 @@ a:hover.back-to-top {
 	padding-top: 8.5rem;
 	padding-bottom: 4rem;
 	background-color: #5f4dee;
+	text-align: center;
 }
 
 .ex-header h1 {
@@ -1657,6 +1670,10 @@ content: "\f106";
 		padding: 1.75rem 2rem 0.875rem 2rem;
 	}
 	/* end of extra pages */
+
+	.btn-solid-lg {
+		line-height: 0;
+	}	
 }
 /* end of min-width 768px */
 
@@ -1681,6 +1698,10 @@ content: "\f106";
 	}
 	/* end of general styles */
 
+	.header .btn-solid-lg-container {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}	
 
 	/* Navigation */
 	.navbar {
