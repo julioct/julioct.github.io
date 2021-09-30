@@ -27,11 +27,6 @@
     </script>
     <!--End of Tawk.to Script-->
 
-    <!-- Deadline Funnel -->
-    <script type="text/javascript"
-        data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
-    <!-- End Deadline Funnel -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,7 +46,7 @@
     <meta name="robots" content="noindex">
 
     <!-- Webpage Title -->
-    <title>Building Microservices With .NET - The Basics</title>
+    <title>Source code sent! Check out this special .NET Microservices Basics course offer</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -71,14 +66,20 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <h1 class="h1-large">BUILDING MICROSERVICES WITH .NET</h1>
-                        <h1 class="h1-large">THE BASICS</h1>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of div -->
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1 class="h2-heading">The Tutorial Source Code Is On Your Way!</h1>
+                </div> <!-- end of col -->
             </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <p class="p-large-no-margin">Your source code download link will arrive in your email inbox
+                        <strong>within 5 minutes.</strong>
+                    </p>
+                    <p class="p-large-no-margin">While you wait, please check out this <strong>special offer</strong> for my <strong>.NET Microservices Basics Course</strong>.
+                    </p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->                 
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10">
                     <div class="image-container">
@@ -94,6 +95,14 @@
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h1 class="h1-large" style="margin-bottom: 0px;">BUILDING MICROSERVICES</h1>
+                        <h1 class="h1-large">WITH .NET: THE BASICS</h1>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of div -->
+            </div> <!-- end of row -->            
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
@@ -144,28 +153,67 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
-    <!-- Reasons -->
-    <div id="reasons" class="basic-1">
+    <!-- What Are Microservices -->
+    <div id="description" class="cards-1">
         <div class="container">
-            <div class="row" data-aos="fade-right">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/microservices-companies.png" alt="alternative">
-                    </div> <!-- end of image-container -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">What Are Microservices?</h2>
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Who is using microservices?</h2>
-                        <p>Top companies that are constantly dealing with very complex changing requirements have
-                            been embracing microservices for several years.</p>
-                        <p>Only microservices allow teams to stay agile and autonomous, while also getting your
-                            system ready to scale when unexpected traffic peaks show up.</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/build-apis-microservices-docker-containers.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Autonomous, loosely coupled services</h5>
+                            <p>Microservices are an architectural style that structures an application as a collection
+                                of autonomous, loosely coupled services that are modeled around a business domain. Each
+                                microservice is focused on doing one thing well.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-small-focused-team.png" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Owned by small, focused teams</h5>
+                            <p>A microservice is small enough that a single feature team can own it. Small team sizes
+                                promote greater agility. Large teams tend be less productive, because communication is
+                                slower, management overhead goes up, and agility diminishes.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-docker-containers-bot-packages.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Built and deployed independently</h5>
+                            <p>A team can update an existing microservice without rebuilding and redeploying the entire
+                                application, and roll back an update if something goes wrong. In traditional
+                                applications, a bug found in one part of the application, can block the entire release.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of Reasons -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
 
     <!-- Testimonials 01 -->
     <div class="slider-2">
@@ -732,8 +780,8 @@
             <div class="row">
                 <div class="col">
                     <i class="fas fa-video dark-blue"></i>
-                    <h5>12+ hours on-demand video</h5>
-                    <p>More than 12 hours of didactic, high quality video, specifically designed for learning
+                    <h5>7+ hours on-demand video</h5>
+                    <p>More than 7 hours of didactic, high quality video, specifically designed for learning
                         purposes.
                     </p>
                 </div> <!-- end of col -->
