@@ -255,8 +255,8 @@ a.white:hover {
 .btn-outline-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 1px solid #2f363b;
-	border-radius: 32px;
+	border: 2px solid #5f4dee;
+	border-radius: 10px;
 	background-color: transparent;
 	color: #2f363b;
 	font-weight: 600;
@@ -267,8 +267,8 @@ a.white:hover {
 }
 
 .btn-outline-sm:hover {
-	border: 1px solid #2f363b;
-	background-color: #2f363b;
+	border: 2px solid #f3f7fd;
+	background-color: #5f4dee;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -1654,7 +1654,6 @@ a:hover.back-to-top {
 
 .accordion .card-body {
 	padding: 0;
-	padding-left: 1.25rem;
 }
 
 .chapter-number{
@@ -1681,6 +1680,17 @@ font-family: "Font Awesome 5 Free"
 
 .chapter-title[aria-expanded="true"]::after {
 content: "\f106";
+}
+
+.basic-1 .lesson-title {
+	display: flex;
+	align-items: flex-start;
+	background: #f9f9f9;
+	margin: 0;
+	padding: 0.5rem;
+	list-style-type: none;
+	border-bottom: 2px solid #fff;
+	align-items: center;
 }
 
 /*************************/
