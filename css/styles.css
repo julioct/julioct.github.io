@@ -202,7 +202,6 @@ a.white:hover {
 	line-height: 1;
 	text-decoration: none;
 	transition: all 0.2s;
-	min-width: 300px;
 }
 
 .btn-solid-lg:hover {
@@ -240,10 +239,10 @@ a.white:hover {
 	background-color: transparent;
 	color: #2f363b;
 	font-weight: 600;
-	font-size: 0.875rem;
-	line-height: 0;
+	font-size: 1.5rem;
+	line-height: 1;
 	text-decoration: none;
-	transition: all 0.2s;
+	transition: all 0.2s;	
 }
 
 .btn-outline-lg:hover {
@@ -615,6 +614,7 @@ input[type='checkbox'] {
 }
 
 .header .btn-outline-lg {
+	margin-bottom: 1rem;
 	border: 1px solid #ffffff;
 	color: #ffffff;
 }
@@ -1716,6 +1716,10 @@ content: "\f106";
 	.btn-solid-lg {
 		line-height: 0;
 	}	
+
+	.btn-outline-lg {
+		line-height: 0;
+	}	
 }
 /* end of min-width 768px */
 
@@ -1816,6 +1820,11 @@ content: "\f106";
 		margin-bottom: 0;
 		text-align: center;
 	}
+
+	.header .btn-outline-lg {
+		margin-bottom: 0;
+		text-align: center;
+	}	
 	
 	.header .btn-solid-lg,
 	.header .btn-outline-lg {
