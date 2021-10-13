@@ -27,6 +27,18 @@
     </script>
     <!--End of Tawk.to Script-->
 
+    <!-- Play video -->
+    <script type="text/javascript">
+        function playVideo()
+        {
+            var iframe = document.getElementById('vimeoIframe');
+            var src = iframe.getAttribute("src");
+            var newSrc = src.replace("background=1", "autoplay=1");
+            iframe.setAttribute("src", newSrc);
+            document.getElementById('play-button').style.display = "none";
+        }
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -85,13 +97,17 @@
                 <div class="col-lg-10">
                     <div class="image-container">
                         <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://player.vimeo.com/video/603956792"
-                                data-effect="fadeIn">
-                                <img class="img-fluid" src="images/BasicsCourseThumbnail.png" alt="alternative">
-                                <span class="video-play-button">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="vimeoIframe"
+                                    src="https://player.vimeo.com/video/631443718?h=6f2d0356ee&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Building Microservices With .NET: The Basics"></iframe>
+                                <span id="play-button" class="video-play-button" onclick="playVideo();">
                                     <span></span>
                                 </span>
-                            </a>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
                         </div> <!-- end of video-wrapper -->
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
@@ -107,14 +123,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <p class="p-large-no-margin">Is your team suffering the symptoms of the <strong>monolithic
-                                hell</strong>? Are you wondering if a microservices architecture is the right fit for
-                            your .NET project? Have you been asked to implement microservices but don't know where
-                            to start? Are you just curious about this trendy new term?</p>
-                        <p class="p-large-no-margin">Learn the fundamentals of the modern architecture that everyone is
-                            using today. In this course you will learn <strong>why you may want to embrace a
-                                microservices architecture</strong> and <strong>how to get started by using the .NET
-                                platform</strong>.</p>
+                        <p class="p-large-no-margin">Are you suffering the symptoms of the <strong>monolithic
+                                hell</strong>? Has it become impossible to scale your increasingly complex system?
+                            Is it taking forever to build, test and deploy features to production? </p>
+                        <p class="p-large-no-margin">Master the core building blocks of <strong>microservices</strong>,
+                            the modern software architecture that finally lets you <strong>continuously deliver
+                                resilient and scalable systems in minutes, not months</strong>.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of div -->
             </div> <!-- end of row -->
@@ -124,14 +138,14 @@
                         <span class="save-value best-value">$9.99 Only!</span>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of div -->
-            </div> <!-- end of row -->               
+            </div> <!-- end of row -->
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <div class="btn-solid-lg-container">
                         <a class="btn-solid-lg page-scroll"
                             href="https://learn.dotnetmicroservices.com/enroll/1397062?price_id=1627006">ENROLL NOW!</a>
                     </div> <!-- end of text-container -->
-                </div> <!-- end of div -->                
+                </div> <!-- end of div -->
                 <div class="col-lg-4">
                     <div class="btn-solid-lg-container">
                         <a class="btn-outline-lg page-scroll"
@@ -220,32 +234,6 @@
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
 
-    <!-- Testimonials 01 -->
-    <div class="slider-2">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <!-- Text Slider -->
-                    <div>
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/Nathan_Waterman.jpg" alt="alternative">
-                        </div> <!-- end of image-wrapper -->
-                        <div class="text-wrapper">
-                            <div class="testimonial-text">I really enjoyed this course. The content and
-                                pacing was just right for me as someone with C# experience but little
-                                microservices experience. Julio is really responsive to questions and
-                                has an engaging teaching style.</div>
-                            <div class="testimonial-author">Nathan Waterman</div>
-                        </div> <!-- end of text-wrapper -->
-                    </div> <!-- end of swiper-container -->
-                    <!-- end of text slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-2 -->
-    <!-- end of Testimonials 01 -->
-
     <!-- Who Is Course For -->
     <div id="who-is-course-for" class="basic-1">
         <div class="container">
@@ -288,7 +276,26 @@
     <div class="slider-2">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-11">
+                    <!-- Text Slider -->
+                    <div>
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/Nathan_Waterman.jpg" alt="alternative">
+                        </div> <!-- end of image-wrapper -->
+                        <div class="text-wrapper">
+                            <div class="testimonial-text">I really enjoyed this course. The content and
+                                pacing was just right for me as someone with C# experience but little
+                                microservices experience. Julio is really responsive to questions and
+                                has an engaging teaching style.</div>
+                            <div class="testimonial-author">Nathan Waterman</div>
+                        </div> <!-- end of text-wrapper -->
+                    </div> <!-- end of swiper-container -->
+                    <!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->            
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
                     <!-- Text Slider -->
                     <div>
                         <div class="image-wrapper">
@@ -317,7 +324,7 @@
                         <span class="save-value best-value">$9.99 Only!</span>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of div -->
-            </div> <!-- end of row -->                        
+            </div> <!-- end of row -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="btn-solid-lg-container">
@@ -354,31 +361,36 @@
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Course Introduction</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">A look at the final solution</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-cloud-download-alt"></i>
-                                            <div class="media-body">Source code and other course downloads</div>                                            
+                                            <div class="media-body">Source code and other course downloads</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Development environment setup</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">What's wrong with the monolith?</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">What are microservices?</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -397,32 +409,38 @@
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Introduction</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Creating a microservice via the .NET CLI</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Introduction to the REST API and DTOs</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Adding the DTOs</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Adding the REST API operations</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Handling invalid inputs</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -441,37 +459,48 @@
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Introduction</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Introduction to the repository pattern and MongoDB</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <div class="media-body">Introduction to the repository pattern and MongoDB
+                                            </div>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Implementing a MongoDB repository</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Introduction to Docker</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Trying out the REST API with a MongoDB container</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <div class="media-body">Trying out the REST API with a MongoDB container
+                                            </div>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Introduction to Dependency Injection and Configuration</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <div class="media-body">Introduction to Dependency Injection and
+                                                Configuration</div>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Implementing dependency injection and configuration</div>
-                                            <a class="btn-outline-sm" href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
+                                            <div class="media-body">Implementing dependency injection and configuration
+                                            </div>
+                                            <a class="btn-outline-sm"
+                                                href="https://learn.dotnetmicroservices.com/enroll/1397062?et=free_trial">Preview</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -700,6 +729,23 @@
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <!-- Text Slider -->
+                    <div>
+                        <div class="image-wrapper">
+                            <img class="img-fluid" src="images/SamuelToth.jpg" alt="alternative">
+                        </div> <!-- end of image-wrapper -->
+                        <div class="text-wrapper">
+                            <div class="testimonial-text">Amazing course I'd recommend anybody who wants to quickly
+                                grasp the fundamentals of microservices based on the .NET stack in a very practical way.
+                                There's no fluff material and the content itself is structured pretty well.</div>
+                            <div class="testimonial-author">Samuel Tóth</div>
+                        </div> <!-- end of swiper-container -->
+                    </div><!-- end of text slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->            
         </div> <!-- end of container -->
     </div> <!-- end of slider-2 -->
     <!-- end of Testimonials 03 -->
@@ -751,8 +797,9 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-9">
                     <div class="text-container">
-                        <h2>Hi, I'm Julio!</h2>
-                        <p>I'm a passionate software engineer with almost two decades of experience building all
+                        <h2>Your Instructor</h2>
+                        <p>Hi! My name is Julio Casal. I'm a passionate software engineer with almost two decades of
+                            experience building all
                             sorts
                             of applications and systems based on the .NET platform.
                         </p>
@@ -798,7 +845,7 @@
                         <span class="save-value best-value">$9.99 Only!</span>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of div -->
-            </div> <!-- end of row -->                        
+            </div> <!-- end of row -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="btn-solid-lg-container">
