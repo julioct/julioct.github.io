@@ -1687,6 +1687,7 @@ content: "\f106";
 .chapter-title .chapter-duration {
 	float: right;
 	font-weight: normal;
+	display: none;
 }
 
 .basic-1 .lesson-title {
@@ -1973,6 +1974,10 @@ content: "\f106";
 		margin-left: 1rem;
 	}
 	/* end of extra pages */
+
+	.chapter-title .chapter-duration {
+		display: block;
+	}		
 }
 /* end of min-width 992px */
 
