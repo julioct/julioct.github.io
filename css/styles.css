@@ -1684,6 +1684,11 @@ font-family: "Font Awesome 5 Free"
 content: "\f106";
 }
 
+.chapter-title .chapter-duration {
+	float: right;
+	font-weight: normal;
+}
+
 .basic-1 .lesson-title {
 	display: flex;
 	align-items: flex-start;
