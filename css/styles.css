@@ -199,7 +199,7 @@ a.white:hover {
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 1.5rem;
-	line-height: 1;
+	line-height: 1.5;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -1727,6 +1727,7 @@ content: "\f106";
 
 	.btn-solid-lg {
 		line-height: 0;
+		min-width: 297px;
 	}	
 
 	.btn-outline-lg {
@@ -1828,17 +1829,11 @@ content: "\f106";
 		margin-bottom: 0;
 	}
 
-	.header .btn-solid-lg {
-		margin-bottom: 0;
-		text-align: center;
-	}
-
 	.header .btn-outline-lg {
 		margin-bottom: 0;
 		text-align: center;
 	}	
 	
-	.header .btn-solid-lg,
 	.header .btn-outline-lg {
 		margin-right: 0.5rem;
 		margin-left: 0;
