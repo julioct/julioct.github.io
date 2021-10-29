@@ -1896,13 +1896,6 @@ content: "\f106";
 
 
 	/* Pricing */
-	.cards-2 .card {
-		display: inline-block;
-		width: 304px;
-		max-width: 100%;
-		vertical-align: top;
-	}
-	
 	.cards-2 .card:nth-of-type(3n+2) {
 		margin-right: 0.125rem;
 		margin-left: 0.125rem;
@@ -2057,15 +2050,6 @@ content: "\f106";
 
 
 	/* Pricing */
-	.cards-2 .card {
-		width: 334px;
-	}
-	
-	.cards-2 .card .card-body {
-		padding-right: 2rem;
-		padding-left: 2rem;
-	}
-
 	.cards-2 .card:nth-of-type(3n+2) {
 		margin-right: 3rem;
 		margin-left: 3rem;
