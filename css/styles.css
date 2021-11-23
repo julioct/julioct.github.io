@@ -1275,6 +1275,12 @@ input[type='checkbox'] {
 	margin-left: 0.5rem;
 }
 
+.cards-2 .h2-heading.save-value.best-value {
+	font-weight: 700;
+	font-size: 3.5rem;
+	color:#eb8a2f
+}
+
 
 /************************/
 /*     Testimonials     */
