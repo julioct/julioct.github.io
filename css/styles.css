@@ -722,6 +722,16 @@ input[type='checkbox'] {
 	color:#eb8a2f
 }
 
+.header .simple-list {
+	margin-bottom: 1.75rem;
+	text-align: left;
+	color: #e4e7fc;
+}
+
+.header .simple-list li {
+	margin-bottom: 1.0rem;
+}
+
 .basic-3 .full-price.best-value {
 	font-weight: 700;
 	font-size: 3.5rem;
@@ -1762,6 +1772,10 @@ content: "\f106";
 		text-align: center;
 	}
 
+	.h3-heading {
+		text-align: center;
+	}	
+
 	.p-heading {
 		width: 40rem;
 		margin-right: auto;
@@ -1994,17 +2008,10 @@ content: "\f106";
 
 
 	/* Header */
-	.header {
-		padding-bottom: 18rem;
-	}
-
 	.header .text-container {
 		margin-right: 1.5rem;
 	}
 
-	.header .header-decoration {
-		height: 260px;
-	}
 	/* end of header */
 
 
