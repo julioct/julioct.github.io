@@ -1792,7 +1792,7 @@ content: "\f106";
 	}
 
 	.h3-heading {
-		text-align: center;
+		text-align: left;
 	}	
 
 	.p-heading {
@@ -2115,11 +2115,5 @@ content: "\f106";
 		margin-left: 2.875rem;
 	}
 	/* end of extra pages */
-
-	/* Course Curriculum */
-	.accordion .card {
-		margin-left: 7rem;
-		margin-right: 7rem;	
-	}
 }
 /* end of min-width 1200px */
