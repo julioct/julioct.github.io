@@ -1151,6 +1151,11 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
+.cards-2 .small-bottom-margin {
+	margin-bottom: 1.75rem;
+	text-align: center;
+}
+
 .cards-2 .col-xs-6 {
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
