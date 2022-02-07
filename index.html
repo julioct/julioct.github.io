@@ -13,8 +13,11 @@
     </script>
 
     <!--Redirect to keeplearning-->
-    <script>
-        if (document.referrer === "https://www.youtube.com/")
+    <script type="text/javascript">
+        // console.info("Referrer: " + document.referrer);
+        // console.info("location.protocol: " + location.protocol);
+        // console.info("location.host: " + location.host);
+        if (document.referrer.indexOf(location.protocol + "//" + location.host) !== 0)
         {
             window.location.href = "/keeplearning";
         }
