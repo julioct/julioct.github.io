@@ -14,10 +14,7 @@
 
     <!--Redirect to keeplearning-->
     <script type="text/javascript">
-        // console.info("Referrer: " + document.referrer);
-        // console.info("location.protocol: " + location.protocol);
-        // console.info("location.host: " + location.host);
-        if (document.referrer.indexOf(location.protocol + "//" + location.host) !== 0)
+        if (document.referrer === "https://www.youtube.com/")
         {
             window.location.href = "/keeplearning";
         }
