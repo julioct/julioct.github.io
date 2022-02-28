@@ -1232,11 +1232,12 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .full-price {
-	color: #2f363b;
 	font-weight: 700;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	line-height: 3.5rem;
 	text-decoration: line-through;
+	margin-right: 0.25rem;
+	/* text-decoration-color: #eb8a2f; */
 }
 
 .cards-2 .card .full-price.best-value {
@@ -1308,6 +1309,11 @@ input[type='checkbox'] {
 
 .cards-2 .card .list-unstyled .media-body {
 	margin-left: 0.5rem;
+}
+
+.cards-2 .card .list-unstyled .media-body.not-available {
+	margin-left: 0.5rem;
+	text-decoration: line-through;
 }
 
 .cards-2 .h2-heading.save-value.best-value {
