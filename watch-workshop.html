@@ -12,11 +12,23 @@
         gtag('config', 'UA-4779172-9');
     </script>
 
+    <!-- Play video -->
+    <script type="text/javascript">
+        function playVideo()
+        {
+            var iframe = document.getElementById('vimeoIframe');
+            var src = iframe.getAttribute("src");
+            var newSrc = src.replace("background=1", "autoplay=1");
+            iframe.setAttribute("src", newSrc);
+            document.getElementById('play-button').style.display = "none";
+        }
+    </script>    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Source code sent!">
+    <meta name="description" content="Free Workshop With Julio">
     <meta name="author" content="Julio Casal">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
@@ -30,7 +42,7 @@
     <meta name="robots" content="noindex">
 
     <!-- Webpage Title -->
-    <title>You Are In The Waitlist!</title>
+    <title>Free Workshop With Julio</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
@@ -40,7 +52,6 @@
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos/dist/aos.css" rel="stylesheet" />
 
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -48,26 +59,30 @@
 
 <body data-spy="scroll" data-target=".fixed-top" class="header-only">
     <!-- Header -->
-    <header class="header">
+    <header class="header small-padding-top">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                    <h1 class="h2-heading">You Are In The Waitlist!</h1>
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <h3 class="white">Your Workshop is in progress. Do NOT Close Window or Presentation Will End</h3>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/dotnet-bot_scene_space-drone.png" alt="alternative">
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="vimeoIframe"
+                                    src="https://player.vimeo.com/video/700015253?h=37832ab872&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Building Microservices With .NET"></iframe>
+                                <span id="play-button" class="video-play-button" onclick="playVideo();">
+                                    <span></span>
+                                </span>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div> <!-- end of video-wrapper -->
                     </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                    <p class="p-large-no-margin">I’m so excited that you’re interested in enrolling in <strong>Building
-                            Microservices With .NET.</strong></p>
-                    <p class="p-large-no-margin">You'll be the first to know when I open the doors again.</p>
-                    <p class="p-large-no-margin">Read the latest Building Microservices With .NET reviews submitted by grads <strong><a href="https://www.trustpilot.com/review/dotnetmicroservices.com">here!</a></strong>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -94,11 +109,6 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script src="https://unpkg.com/aos/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1400,
-        })
     </script>
 
 </body>

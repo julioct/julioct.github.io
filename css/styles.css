@@ -107,6 +107,7 @@ h6 {
 }
 
 .p-extra-large-centered-save-value {
+	font-size: 1.95rem;
 	color: #eb8a2f;
 	font-weight: bold;
 }
@@ -457,6 +458,18 @@ input[type='checkbox'] {
 }
 /* end of fade-move animation for details lightbox - magnific popup */
 
+.top-announcement {
+    background-image: url('../images/free-training-header.png');
+	text-align: center;
+	display: inline-flex;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+
 
 /**********************/
 /*     Navigation     */
@@ -614,6 +627,10 @@ input[type='checkbox'] {
 	color: #ffffff;
 }
 
+.header h2 {
+	color: #e4e7fc;
+}
+
 .header .p-large {
 	margin-bottom: 2.125rem;
 	color: #ffffff;
@@ -742,6 +759,12 @@ input[type='checkbox'] {
 	color:#eb8a2f
 }
 
+.header .source-code-sent {
+	font-weight: 700;
+	font-size: 2.5rem;
+	color:#eb8a2f
+}
+
 .header .simple-list {
 	margin-bottom: 1.75rem;
 	text-align: left;
@@ -750,6 +773,15 @@ input[type='checkbox'] {
 
 .header .simple-list li {
 	margin-bottom: 1.0rem;
+}
+
+.header.small-padding-top {
+	padding-top: 1.5rem;
+}
+
+.gold-subheader {
+	text-align: center;
+	color: #eb8a2f;
 }
 
 .basic-3 .full-price.best-value {
@@ -952,6 +984,10 @@ input[type='checkbox'] {
 
 .basic-1 .image-container {
 	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.centered-button {
 	text-align: center;
 }
 
@@ -1769,6 +1805,13 @@ content: "\f106";
 /*************************/	
 .header-only {
 	background-color: #5f4dee;
+}
+
+/*************************/
+/* Font Awesome */
+/*************************/	
+.fab.fa-react {
+	font-size: 4.1em;
 }
 
 /*************************/
