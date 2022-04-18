@@ -635,6 +635,10 @@ input[type='checkbox'] {
 	color: #e4e7fc;
 }
 
+.header h4.dark {
+	color: #2f363b;
+}
+
 .header .p-large {
 	margin-bottom: 2.125rem;
 	color: #ffffff;
