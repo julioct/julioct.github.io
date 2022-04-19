@@ -648,6 +648,11 @@ input[type='checkbox'] {
 	color: #ffffff;
 }
 
+.header .clear-left-aligned {
+	text-align: left;
+	color: #e4e7fc;
+}
+
 .header .btn-solid-lg {
 	margin-bottom: 1rem;
 }
