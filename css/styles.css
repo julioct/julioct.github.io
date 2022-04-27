@@ -752,6 +752,15 @@ input[type='checkbox'] {
 	border-bottom: 16px solid transparent;
 }
 
+.iframeBlocker{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+}
+
 .header .full-price.best-value {
 	color: #e4e7fc;
 	font-weight: 700;

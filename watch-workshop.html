@@ -24,18 +24,6 @@
         })(window, document, 'script', 'dataLayer', 'GTM-5VRD9ZP');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Play video -->
-    <script type="text/javascript">
-        function playVideo()
-        {
-            var iframe = document.getElementById('vimeoIframe');
-            var src = iframe.getAttribute("src");
-            var newSrc = src.replace("background=1", "autoplay=1");
-            iframe.setAttribute("src", newSrc);
-            document.getElementById('play-button').style.display = "none";
-        }
-    </script>
-
     <!-- Deadline Funnel -->
     <script type="text/javascript"
         data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
@@ -100,19 +88,28 @@
                         <div class="video-wrapper">
                             <div style="padding:56.25% 0 0 0;position:relative;">
                                 <iframe id="vimeoIframe"
-                                    src="https://player.vimeo.com/video/702409349?h=f9074a0309&amp;badge=0&amp;autopause=0&amp;player_id=vimeoIframe&amp;app_id=58479&amp;background=1"
-                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    src="https://player.vimeo.com/video/702409349?h=f9074a0309&amp;badge=0&amp;autopause=0&amp;player_id=vimeoIframe&amp;app_id=58479&amp;autoplay=1&amp;muted=1"
+                                    frameborder="0" allow="autoplay" allowfullscreen
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                     title="Building Microservices With .NET" data-progress="true" data-seek="true"
                                     data-bounce="false"></iframe>
-                                <span id="play-button" class="video-play-button" onclick="playVideo();">
+                            </div>
+                            <div id="iframeBlocker" class="iframeBlocker">
+                                <div id="play-button" class="video-play-button">
                                     <span></span>
-                                </span>
+                                </div>
                             </div>
                             <script src="https://player.vimeo.com/api/player.js"></script>
                         </div> <!-- end of video-wrapper -->
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div id="enroll" class="row justify-content-center" style="display: none;">
+                <div class="col-lg-8">
+                    <div class="btn-solid-lg-container">
+                        <a class="btn-solid-lg page-scroll" href="special-offer.html">ENROLL NOW!</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of div -->
             </div> <!-- end of row -->
             <!-- <div class="row">
                 <div class="col-lg-4">
@@ -178,6 +175,34 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
     <script src="js/vimeo.ga.min.js"></script>
+
+    <script>
+        (function ()
+        {
+            var iframe = document.getElementById('vimeoIframe');
+            var player = new Vimeo.Player(iframe);
+
+            player.ready().then(function ()
+            {
+                $('#play-button').on('click', function ()
+                {
+                    player.setCurrentTime(0);
+                    player.play();
+                    player.setVolume(1);
+                    document.getElementById('iframeBlocker').style.display = "none";
+                });
+
+                player.on('timeupdate', function (data)
+                {
+                    console.log(data);
+                    if (data.seconds >= 5316)
+                    {
+                        $('#enroll').fadeIn(3000);
+                    }
+                });
+            });
+        })();
+    </script>
 
 </body>
 
