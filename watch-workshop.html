@@ -175,24 +175,40 @@
         {
             var iframe = document.getElementById('vimeoIframe');
             var player = new Vimeo.Player(iframe);
+            var startedPlaying = false;
 
             player.ready().then(function ()
             {
                 $('#play-button').on('click', function ()
                 {
-                    player.setCurrentTime(0);
+                    let time = localStorage.getItem('videoProgress');
+                    if (time != null)
+                    {
+                        player.setCurrentTime(time);
+                    }
+                    else
+                    {
+                        player.setCurrentTime(0);
+                    }
+
                     player.play();
                     player.setVolume(1);
                     document.getElementById('iframeBlocker').style.display = "none";
+                    startedPlaying = true;
                 });
 
                 player.on('timeupdate', function (data)
                 {
-                    // console.log(data);
+                    if (!startedPlaying){
+                        return;
+                    }
+                    
                     if (data.seconds >= 4623)
                     {
                         $('#enroll').fadeIn(3000);
                     }
+
+                    localStorage.setItem('videoProgress', data.seconds);
                 });
             });
         })();
