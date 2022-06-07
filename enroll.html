@@ -77,6 +77,39 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <a class="navbar-brand logo-text page-scroll" href="index.html">Building Microservices With .NET</a>
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="enroll.html">Enroll</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-solid-sm page-scroll" href="free-training.html">FREE WORKSHOP</a>
+                    </li>                    
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->    
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
@@ -154,7 +187,7 @@
         </div> <!-- end of container -->
     </div> <!-- end of slider-2 -->
     <!-- end of Testimonials -->
-    
+
     <!-- Course Intro -->
     <div id="course-intro" class="basic-1">
         <div class="container">
@@ -205,7 +238,7 @@
 
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
-    <!-- end of description -->  
+    <!-- end of description -->
 
     <!-- The Microservices Learning Path -->
     <div id="learning-path" class="basic-1">
@@ -224,7 +257,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of The Microservices Learning Path -->        
+    <!-- end of The Microservices Learning Path -->
 
     <!-- Testimonials -->
     <div id="testimonials4" class="slider-2">
@@ -264,7 +297,7 @@
             </div>
         </div>
     </div>
-    <!-- end of Get Started Button 2 -->    
+    <!-- end of Get Started Button 2 -->
 
     <!-- Course Curriculum -->
     <div id="course-curriculum" class="basic-1">
@@ -1589,7 +1622,7 @@
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of Course Curriculum -->    
+    <!-- end of Course Curriculum -->
 
     <!-- Who Is Course For -->
     <div id="who-is-course-for" class="basic-1">
@@ -1622,7 +1655,7 @@
                 </div> <!-- end of col -->
                 <div class="col">
                     <ul class="list-unstyled li-space-lg">
-                        <p>This online course is <strong>not for</strong>:</p>                        
+                        <p>This online course is <strong>not for</strong>:</p>
                         <li class="media">
                             <i class="fas fa-xmark"></i>
                             <div class="media-body">People who was never coded or just starting with C#.</div>
@@ -1633,15 +1666,16 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-xmark"></i>
-                            <div class="media-body">Non self-learners. You take the lessons at your own pace, in your own schedule. No live training here.</div>
+                            <div class="media-body">Non self-learners. You take the lessons at your own pace, in your
+                                own schedule. No live training here.</div>
                         </li>
                     </ul>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of Who Is Course For -->        
-    
+    <!-- end of Who Is Course For -->
+
     <!-- Whom Am I -->
     <div id="who-am-i" class="basic-1">
         <div class="container">
@@ -1689,7 +1723,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of Testimonials 02 -->      
+    <!-- end of Testimonials 02 -->
 
     <!-- What You Get When You Enroll -->
     <div class="what-you-get">
@@ -1751,19 +1785,19 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row justify-content-center">
-                <div class="col-xl-4 order-xl-2">
+                <div class="col-xl-4 order-xl-3">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
-                            <div class="card-title best-value">STANDARD</div>
+                            <div class="card-title best-value">ULTIMATE</div>
                             <div>
                                 <span class="currency best-value">$</span>
-                                <span class="value best-value">197</span>
+                                <span class="value best-value">497</span>
                                 <div class="frequency">instant access</div>
                             </div>
                             <div class="button-wrapper">
-                                <a id="one-time-payment-link" class="btn-solid-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/1839456?price_id=2470633">ENROLL
+                                <a id="payment-plan-link" class="btn-solid-lg"
+                                    href="https://learn.dotnetmicroservices.com/enroll/1409411?price_id=1651338">ENROLL
                                     NOW!</a>
                             </div>
                             <hr class="cell-divide-hr">
@@ -1807,30 +1841,43 @@
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
                                     <div class="media-body">Reporting the microservices health</div>
-                                </li>                                
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Storing secrets in Azure Key Vault</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Adding the API Gateway</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Enabling HTTPS and TLS termination</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Running the entire system in Production</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Using Helm charts to simplify microservices deployment</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Microservices and Continuous Integration</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Microservices and Continuous Deployment</div>
+                                </li>
                                 <li>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
                                     <div>&nbsp;</div>
                                 </li>
                             </ul>
                         </div>
                     </div> <!-- end of card -->
                     <!-- end of card -->
-                </div> <!-- end of col -->
+                </div>
 
                 <div class="col-xl-4 order-xl-1">
                     <!-- Card-->
@@ -1839,7 +1886,7 @@
                             <div class="card-title">ESSENTIALS</div>
                             <div>
                                 <span class="currency">$</span>
-                                <span class="value">97</span>
+                                <span class="value">297</span>
                                 <div class="frequency">instant access</div>
                             </div>
                             <div class="button-wrapper">
@@ -1930,82 +1977,6 @@
                     </div> <!-- end of card -->
                     <!-- end of card -->
                 </div>
-
-                <div class="col-xl-4 order-xl-3">
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">ULTIMATE</div>
-                            <div>
-                                <span class="currency">$</span>
-                                <span class="value">497</span>
-                                <div class="frequency">instant access</div>
-                            </div>
-                            <div class="button-wrapper">
-                                <a id="payment-plan-link" class="btn-outline-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/1409411?price_id=1651338">ENROLL
-                                    NOW!</a>
-                            </div>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body"><strong>Everything in the STANDARD Package</strong></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Storing secrets in Azure Key Vault</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Adding the API Gateway</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Enabling HTTPS and TLS termination</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Running the entire system in Production</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Using Helm charts to simplify microservices deployment</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Microservices and Continuous Integration</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Microservices and Continuous Deployment</div>
-                                </li>
-                                <li>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                    <div>&nbsp;</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-                </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
@@ -2070,7 +2041,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-3 -->
-    <!-- end of FAQ -->    
+    <!-- end of FAQ -->
 
     <!-- Footer -->
     <div class="footer-decoration">
