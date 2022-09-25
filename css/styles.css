@@ -1399,12 +1399,12 @@ input[type='checkbox'] {
 
 .cards-2 .card .list-unstyled .fas {
 	color: #2b44ff;
-	font-size: 0.75rem;
+	font-size: 1.25rem;
 	line-height: 1.625rem;
 }
 
 .cards-2 .card .list-unstyled .fas.fa-times {
-	color: #828286;
+	color: #d33737;
 }
 
 .cards-2 .card .list-unstyled .media-body {
