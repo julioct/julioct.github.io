@@ -485,6 +485,20 @@ input[type='checkbox'] {
 	margin-bottom: 2.4rem;
 }
 
+.h2-heading {
+	text-align: center;
+}
+
+.list-unstyled .fas {
+	color: #2b44ff;
+	font-size: 1.25rem;
+	line-height: 1.625rem;
+}
+
+.list-unstyled .fas.fa-times {
+	color: #d33737;
+}
+
 /**********************/
 /*     Navigation     */
 /**********************/
@@ -1007,12 +1021,6 @@ input[type='checkbox'] {
 	margin-bottom: 1.625rem;
 }
 
-.basic-1 .list-unstyled .fas {
-	color: #5f4dee;
-	font-size: 0.375rem;
-	line-height: 1.625rem;
-}
-
 .basic-1 .list-unstyled .fas.fa-check {
 	color: #5f4dee;
 	font-size: 1.5rem;
@@ -1397,16 +1405,6 @@ input[type='checkbox'] {
 	margin-bottom: 0.5rem;
 }
 
-.cards-2 .card .list-unstyled .fas {
-	color: #2b44ff;
-	font-size: 1.25rem;
-	line-height: 1.625rem;
-}
-
-.cards-2 .card .list-unstyled .fas.fa-times {
-	color: #d33737;
-}
-
 .cards-2 .card .list-unstyled .media-body {
 	margin-left: 0.5rem;
 }
@@ -1424,6 +1422,14 @@ input[type='checkbox'] {
 
 .cards-2 .h1-heading {
 	margin-bottom: 0rem;
+}
+
+.cards-2 .btn-outline-lg {
+	font-size: 1.3rem;
+}
+
+.cards-2 .btn-solid-lg {
+	font-size: 1.3rem;
 }
 
 /*******************/
@@ -2019,7 +2025,6 @@ a:hover.back-to-top {
 
 	.btn-solid-lg {
 		line-height: 0;
-		min-width: 297px;
 	}
 
 	.btn-outline-lg {
@@ -2041,10 +2046,6 @@ a:hover.back-to-top {
 	.h1-large {
 		font-size: 3.5rem;
 		line-height: 4.375rem;
-	}
-
-	.h2-heading {
-		text-align: center;
 	}
 
 	.h3-heading {
