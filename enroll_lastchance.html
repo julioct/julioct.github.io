@@ -131,10 +131,11 @@
                         <div class="video-wrapper">
                             <div style="padding:56.25% 0 0 0;position:relative;">
                                 <iframe id="vimeoIframe"
-                                    src="https://player.vimeo.com/video/753470379?h=60c01f91f5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
-                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                    title="Building Microservices With .NET"></iframe>
+                                    src="https://player.vimeo.com/video/754136213?h=68ba89ad78&amp;badge=0&amp;autopause=0&amp;player_id=vimeoIframe&amp;app_id=58479&amp;autoplay=1&amp;muted=1"
+                                    frameborder="0" allow="autoplay" webkitAllowFullScreen mozallowfullscreen
+                                    allowFullScreen style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Building Microservices With .NET: Ultimate" data-progress="true"
+                                    data-seek="true" data-bounce="false"></iframe>
                                 <span id="play-button" class="video-play-button" onclick="playVideo();">
                                     <span></span>
                                 </span>
@@ -170,6 +171,119 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
+    <!-- Problem Statement -->
+    <div id="problem-statement" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Your original .NET system looked like this...</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/small-system.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="text-container">
+                        A small backend system that is easy to code, can be quickly deployed to production and can be
+                        managed by just a few developers.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">But a year later, looks more like this...</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/complex-system.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col">
+                    <div class="text-container">
+                        <p>The continuously changing business requirements forced the team to grow the system
+                            organically
+                            into a series of confusing interconnected blocks of code that are hard to maintain and
+                            increasingly difficult to deploy even when you add more and more developers to the mix.</p>
+                        <p><strong>There must be a better way.</strong></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+
+    <!-- What Are Microservices -->
+    <div id="what-are-microservices" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">What Are Microservices?</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/build-apis-microservices-docker-containers.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Business aligned, loosely coupled services</h5>
+                            <p>Microservices are an architectural style that structures an application as a collection
+                                of autonomous, loosely coupled services that are modeled around a business domain. Each
+                                microservice is focused on doing one thing well.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-small-focused-team.png" alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Owned by small, focused teams</h5>
+                            <p>A microservice is small enough that a single feature team can own it. Small team sizes
+                                promote greater agility. Large teams tend be less productive, because communication is
+                                slower, management overhead goes up, and agility diminishes.</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card" data-aos="zoom-in">
+                        <div class="card-image">
+                            <img class="img-fluid" src="images/microservices-docker-containers-bot-packages.png"
+                                alt="alternative">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Built and deployed independently</h5>
+                            <p>A team can update an existing microservice without rebuilding and redeploying the entire
+                                application and roll back an update if something goes wrong. In traditional
+                                applications, a bug found in one part of the application, can block the entire release.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
+
     <!-- Course Intro -->
     <div id="course-intro" class="basic-1">
         <div class="container">
@@ -201,6 +315,18 @@
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
+
+    <!-- Get Started Button -->
+    <div class="basic-3" style="padding-top:0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">ENROLL NOW!</a>
+                </div> <!-- end of col -->
+            </div>
+        </div>
+    </div>
+    <!-- end of Get Started Button -->
 
     <!-- What You Get When You Enroll -->
     <div id="what-you-get">
@@ -753,6 +879,55 @@
     </div> <!-- end of basic-1 -->
     <!-- end of Q&A -->
 
+    <!-- Pay In Full Bonus -->
+    <div id="payinfull_bonus" class="basic-1">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h3 class="h2-heading">Bonus #6: Julio's .NET Backend Developer Roadmap</h3>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/backend_dev_roadmap.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 my-auto">
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <p>A fully interactive roadmap to update your .NET skills with today’s must-know
+                                    technologies</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <p>Includes 110+ topics with links to the best videos or articles on the Web
+                                </p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <p>Stop wasting time and focus on what most employers are looking for today!</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <p><strong>Included only if you choose the One-Time Payment option</strong></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Pay In Full Bonus -->
+
     <!-- Testimonials -->
     <div id="testimonials" class="basic-1">
         <div class="container">
@@ -895,47 +1070,58 @@
                     <h2 class="h2-heading">Select Which Option is Best for You:</h2> -->
             <!-- </div> end of col -->
             <!-- </div> end of row -->
-            <!-- <div class="row mb-4">
-                <div class="col-12">
+            <div class="row mb-4">
+                <div class="col">
                     <div class="toggle-btn">
-                        <span style="margin: 0.8em;"><strong>One-Time Payment</strong></span>
-                        <label class="switch">
-                            <input type="checkbox" id="checbox" onclick="check()" ; />
-                            <span class="slider round"></span>
-                        </label>
-                        <span style="margin: 0.8em;"><strong>Payment Plan</strong></span>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-auto mb-2">
+                                    <span><strong>One-Time Payment</strong></span>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <label class="switch">
+                                        <input type="checkbox" id="checbox" onclick="check()" ; />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <span"><strong>Payment Plan</strong></span>
+                                </div>                                                                
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 order-lg-2">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">ULTIMATE</div>
-                            <!-- <div class="text1">
+                            <div class="text1">
                                 <span class="currency best-value">$</span>
-                                <span class=" value best-value">97</span>
+                                <span class=" value best-value">197</span>
+                                <div class="frequency">x 3 months</div>
+                                <div class="mb-2">
+                                    <span class="save-value best-value">Limited Time Discount</span>
+                                </div>
+                            </div>
+                            <div class="text2">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span class="value best-value">497</span>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="full-price">$1,497</span><span class="save-value best-value">SAVE
+                                        67%</span>
+                                </div>
+                            </div>
 
-                                <div class="frequency">x 6 months</div>
-                            </div> -->
-                            <!-- <div class="text2">
-                                <span class="currency best-value">$</span>
-                                <span class="value best-value">497</span>
-                                <div class="frequency">instant access</div>
-                            </div> -->
-                            <div>
-                                <span class="currency best-value">$</span><span class="value best-value">497</span>
-                            </div>
-                            <div class="mb-2">
-                                <span class="full-price">$1,497</span><span class="save-value best-value">SAVE
-                                    67%</span>
-                            </div>
-                            <!-- <div class="button-wrapper text1">
+                            <div class="button-wrapper text1">
                                 <a id="payment-plan-link" class="btn-solid-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/1409411?price_id=2631941">ENROLL
+                                    href="https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2898894">ENROLL
                                     NOW!</a>
-                            </div> -->
+                            </div>
                             <div class="button-wrapper text2">
                                 <a id="one-time-payment-link" class="btn-solid-lg"
                                     href="https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2894278&coupon=specialofferultimate">ENROLL
@@ -976,79 +1162,10 @@
                                     <i class="fas fa-check best-value"></i>
                                     <div class="media-body">Monthly Q&A with Julio</div>
                                 </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-                </div>
-
-                <div class="col-lg-4 order-lg-1">
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">ESSENTIALS</div>
-                            <!-- <div class="text1">
-                                <span class="currency">$</span>
-                                <span class=" value">97</span>
-                                <div class="frequency">x 4 months</div>
-                            </div> -->
-                            <!-- <div class="text2">
-                                <span class="currency">$</span>
-                                <span class="value">197</span>
-                                <div class="frequency">instant access</div>
-                            </div> -->
-                            <div>
-                                <span class="currency">$</span><span class="value">197</span>
-                            </div>
-                            <div class="mb-2">
-                                <span class="full-price">$497</span><span class="save-value best-value">SAVE 60%</span>
-                            </div>
-                            <!-- <div class="button-wrapper text1">
-                                <a id="one-time-payment-link" class="btn-outline-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/1839966?price_id=2631943">ENROLL
-                                    NOW!</a>
-                            </div> -->
-                            <div class="button-wrapper text2">
-                                <a id="payment-plan-link" class="btn-outline-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/2146150?price_id=2900371&coupon=specialofferessentials">ENROLL
-                                    NOW!</a>
-                            </div>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
                                 <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Building Microservices With .NET Training</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Unlock The Power Of Microservices In The Azure Cloud
-                                        Training</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> Automate All The Things With DevOps Training<del>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> Microservices Troubleshooting Essentials Training<del>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> Quick Reference Cheat Sheets<del> </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> The .NET Microservice Template<del> </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> Exclusive .NET Microservices Community<del> </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del> Monthly Q&A with Julio<del> </div>
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Julio's .NET Backend Developer Roadmap <strong>(One-Time
+                                            Payment Only)</strong></div>
                                 </li>
                             </ul>
                         </div>
@@ -1110,7 +1227,7 @@
                 <div class="col">
                     <h2 class="h2-heading" style="margin-bottom:0">Who is using microservices?</h2>
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->            
+            </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
