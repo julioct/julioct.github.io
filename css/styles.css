@@ -510,7 +510,6 @@ input[type='checkbox'] {
 	line-height: 0.875rem;
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 	min-width: 380px;
-	padding-top: 4.5rem;
 }
 
 .navbar .navbar-brand {
@@ -2069,6 +2068,7 @@ a:hover.back-to-top {
 
 	/* Navigation */
 	.navbar {
+		padding-top: 1.75rem;
 		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
