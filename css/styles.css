@@ -1426,7 +1426,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .btn-outline-lg {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 }
 
 .cards-2 .btn-solid-lg {
@@ -2323,6 +2323,9 @@ a:hover.back-to-top {
 
 	/* end of description */
 
+	.cards-2 .btn-outline-lg {
+		font-size: 1.3rem;
+	}
 
 	/* Features */
 	.tabs .nav-tabs {
