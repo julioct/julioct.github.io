@@ -50,6 +50,7 @@
     <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <meta name="robots" content="noindex">
 
     <!-- Webpage Title -->
     <title>ASP.NET Core Full Stack Online Course</title>
@@ -68,49 +69,21 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text page-scroll" href="index.html">Building Microservices With .NET</a>
-
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>  -->
-
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="testimonials.html">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="courses.html">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-solid-sm page-scroll" href="workshop.html">FREE
-                            WORKSHOP</a>
-                    </li>
-                </ul>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 2rem">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <h1>From Zero To Full Stack ASP.NET Core Developer, Step By Step</h1>
+                        <h2 class="source-code-sent">The source code is on its way to your email inbox!</h2>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of div -->
+            </div> <!-- end of row -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Before you go, check out this one time offer for the full course...
+                    </h2>
+                </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10">
@@ -203,7 +176,8 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
-                            <div class="media-body">Create a beautiful user experience fast with <strong>Blazor's</strong> flexible and
+                            <div class="media-body">Create a beautiful user experience fast with
+                                <strong>Blazor's</strong> flexible and
                                 reusable component model.
                             </div>
                         </li>
@@ -236,7 +210,8 @@
                         <li class="media">
                             <i class="fas fa-check"></i>
                             <div class="media-body">
-                                <p>Learn the new way to build fast APIs with low ceremony using the <strong>Minimal API</strong>
+                                <p>Learn the new way to build fast APIs with low ceremony using the <strong>Minimal
+                                        API</strong>
                                     framework.</p>
                             </div>
                         </li>
@@ -282,8 +257,10 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
-                            <div class="media-body">Talk to your database using only C# by using the popular <strong>Entity
-                                Framework Core</strong> O/RM framework.</div>
+                            <div class="media-body">Talk to your database using only C# by using the popular
+                                <strong>Entity
+                                    Framework Core</strong> O/RM framework.
+                            </div>
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
@@ -302,7 +279,7 @@
                 <div class="col">
                     <h3 class="h2-heading">What You Get When You Enroll</h3>
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->            
+            </div> <!-- end of row -->
             <div class="row mb-2">
                 <div class="col">
                     <div class="image-container">
@@ -750,25 +727,6 @@
     </div> <!-- end of basic-1 -->
     <!-- end of Course Curriculum -->
 
-    <div id="course-preview" class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="h2-heading">Course Preview</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-6">
-                    <div class="image-container" style="margin-bottom:0">
-                        <a id="free-preview-link" href="https://youtu.be/WfMHUp8tOVE" target="_blank"><img
-                                class="img-fluid" src="images/aspnet_course_freepreview.jpg" alt="alternative"></a>
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col-->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-
     <div id="community" class="basic-1">
         <div class="container">
             <div class="row mb-4">
@@ -915,25 +873,36 @@
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading" style="margin-bottom: 1rem">Special Offer Ends In:
+                    </h2>
+                </div> <!-- end of col -->
+            </div><!-- end of row -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="ddio_countdown_wrap"></div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
             <div class="row justify-content-center">
                 <div class="col-lg-4 order-lg-1">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
-                            <div class="card-title best-value">FULL COURSE</div>
+                            <div class="card-title best-value">ASP.NET CORE FULL STACK</div>
                             <div class="text2">
                                 <div>
                                     <span class="currency best-value">$</span>
-                                    <span class="value best-value">97</span>
+                                    <span class="value best-value">79</span>
                                 </div>
                                 <div class="mb-1">
-                                    <span class="full-price">$145</span><span class="save-value best-value">30%
+                                    <span class="full-price">$145</span><span class="save-value best-value">45%
                                         OFF</span>
                                 </div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/2306490?price_id=3084100&coupon=aspnet30">ENROLL
+                                    href="https://learn.dotnetmicroservices.com/enroll/2306490?price_id=3084100&coupon=aspnet45">ENROLL
                                     NOW!</a>
                             </div>
                             <hr class="cell-divide-hr">
@@ -965,61 +934,6 @@
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
                                     <div class="media-body">Course Certificate</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-                </div>
-
-                <div class="col-lg-4 order-lg-0">
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body" style="text-align:center">
-                            <div class="card-title">SOURCE CODE</div>
-                            <div class="container">
-                                <div class="row justify-content-center mb-4">
-                                    <div class="col-auto">
-                                        <div class="card-image" style="max-width:170px;">
-                                            <img class="img-fluid" src="images/source_code.png" alt="alternative">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="button-wrapper">
-                                <a data-formkit-toggle="47c5fa8c85" class="btn-outline-lg"
-                                    href="https://dotnetmicroservices.ck.page/47c5fa8c85">FREE DOWNLOAD</a>
-                            </div>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i>
-                                    <div class="media-body">Full Source Code</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Signature Online Video Training</del>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Access to the Discord channel</del></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Step By Step Lesson Scripts</del></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Full English Captions</del></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Beautifully Illustrated Handouts</del></div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i>
-                                    <div class="media-body"><del>Course Certificate</del></div>
                                 </li>
                             </ul>
                         </div>
