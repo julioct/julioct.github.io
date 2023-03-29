@@ -33,6 +33,8 @@
         data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
     <!-- End Deadline Funnel -->
 
+    <script async data-uid="47c5fa8c85" src="https://dotnetmicroservices.ck.page/47c5fa8c85/index.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -201,8 +203,7 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
-                            <div class="media-body">Create a beautiful user experience fast with
-                                <strong>Blazor's</strong> flexible and
+                            <div class="media-body">Create a beautiful user experience fast with <strong>Blazor's</strong> flexible and
                                 reusable component model.
                             </div>
                         </li>
@@ -235,8 +236,7 @@
                         <li class="media">
                             <i class="fas fa-check"></i>
                             <div class="media-body">
-                                <p>Learn the new way to build fast APIs with low ceremony using the <strong>Minimal
-                                        API</strong>
+                                <p>Learn the new way to build fast APIs with low ceremony using the <strong>Minimal API</strong>
                                     framework.</p>
                             </div>
                         </li>
@@ -282,9 +282,8 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
-                            <div class="media-body">Talk to your database using only C# by using the popular
-                                <strong>Entity
-                                    Framework Core</strong> O/RM framework.</div>
+                            <div class="media-body">Talk to your database using only C# by using the popular <strong>Entity
+                                Framework Core</strong> O/RM framework.</div>
                         </li>
                         <li class="media">
                             <i class="fas fa-check"></i>
@@ -303,7 +302,7 @@
                 <div class="col">
                     <h3 class="h2-heading">What You Get When You Enroll</h3>
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->
+            </div> <!-- end of row -->            
             <div class="row mb-2">
                 <div class="col">
                     <div class="image-container">
@@ -988,9 +987,8 @@
                                 </div>
                             </div>
                             <div class="button-wrapper">
-                                <a class="btn-outline-lg"
-                                    href="https://www.patreon.com/posts/asp-net-core-80701768?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
-                                    target="_blank">DOWNLOAD NOW!</a>
+                                <a data-formkit-toggle="47c5fa8c85" class="btn-outline-lg"
+                                    href="https://dotnetmicroservices.ck.page/47c5fa8c85">FREE DOWNLOAD</a>
                             </div>
                             <hr class="cell-divide-hr">
                             <ul class="list-unstyled li-space-lg">
