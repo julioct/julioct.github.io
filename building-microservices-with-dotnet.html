@@ -29,13 +29,13 @@
 
     <!-- Play video -->
     <script type="text/javascript">
-        function playVideo()
+        function playVideo(videoId, playButtonId)
         {
-            var iframe = document.getElementById('vimeoIframe');
+            var iframe = document.getElementById(videoId);
             var src = iframe.getAttribute("src");
             var newSrc = src.replace("background=1", "autoplay=1");
             iframe.setAttribute("src", newSrc);
-            document.getElementById('play-button').style.display = "none";
+            document.getElementById(playButtonId).style.display = "none";
         }
     </script>
 
@@ -132,12 +132,12 @@
                     <div class="image-container">
                         <div class="video-wrapper">
                             <div style="padding:56.25% 0 0 0;position:relative;">
-                                <iframe id="vimeoIframe"
+                                <iframe id="trailerIframe"
                                     src="https://player.vimeo.com/video/763908216?h=ed61a22301&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
                                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;"
                                     title="Building Microservices With .NET"></iframe>
-                                <span id="play-button" class="video-play-button" onclick="playVideo();">
+                                <span id="trailer-play-button" class="video-play-button" onclick="playVideo('trailerIframe', 'trailer-play-button');">
                                     <span></span>
                                 </span>
                             </div>
@@ -204,6 +204,37 @@
         </div> <!-- end of container -->
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
+
+    <!-- Testimonial 01 -->
+    <div id="testimonial01" class="basic-2">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col">
+                    <h2 class="h2-heading">What students are saying</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10">
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="testimonial1Iframe"
+                                    src="https://player.vimeo.com/video/812904460?h=7702a1549b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Gerardo Rendon"></iframe>
+                                <span id="testimonial1-play-button" class="video-play-button" onclick="playVideo('testimonial1Iframe', 'testimonial1-play-button');">
+                                    <span></span>
+                                </span>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Testimonial 01 -->
 
     <!-- What You Get When You Enroll -->
     <div id="what-you-get">
@@ -762,23 +793,65 @@
     </div> <!-- end of basic-1 -->
     <!-- end of .Simplifying your ASP.NET Core Code -->
 
-    <!-- Testimonials -->
-    <div id="testimonials" class="basic-1">
+    <!-- Testimonial 02 -->
+    <div id="testimonial02" class="basic-2">
         <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col">
+                    <h2 class="h2-heading">Success Stories</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
             <div class="row justify-content-center">
                 <div class="col">
-                    <h2 class="h2-heading">What others are saying</h2>
+                    <h3 class="h2-heading">Stephen Dooley</h3>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->            
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10">
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="testimonial2Iframe"
+                                    src="https://player.vimeo.com/video/812904551?h=81ea0be582&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Gerardo Rendon"></iframe>
+                                <span id="testimonial2-play-button" class="video-play-button" onclick="playVideo('testimonial2Iframe', 'testimonial2-play-button');">
+                                    <span></span>
+                                </span>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                    <div class="elfsight-app-84974106-57c3-4e4c-b354-a2f0d7f23389"></div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h3 class="h2-heading">Vicenzo Cuomo</h3>
                 </div> <!-- end of col -->
-            </div> <!-- end of row -->
+            </div> <!-- end of row -->                
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10">
+                    <div class="image-container">
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="testimonial3Iframe"
+                                    src="https://player.vimeo.com/video/812904687?h=e4f417bf6f&texttrack=en-US&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Gerardo Rendon"></iframe>
+                                <span id="testimonial3-play-button" class="video-play-button" onclick="playVideo('testimonial3Iframe', 'testimonial3-play-button');">
+                                    <span></span>
+                                </span>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->            
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of Testimonials -->
+    <!-- end of Testimonial 02 -->
 
     <!-- Course Curriculum -->
     <div id="course-curriculum" class="basic-1">
@@ -2410,6 +2483,24 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
     <!-- end of Compared To -->
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="basic-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="h2-heading">What others are saying</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-84974106-57c3-4e4c-b354-a2f0d7f23389"></div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Testimonials -->
 
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
