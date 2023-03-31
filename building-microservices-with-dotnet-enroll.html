@@ -2514,7 +2514,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-sm-auto mb-2">
-                                    <span><strong>One-Time Payment</strong></span>
+                                    <span><strong>Payment Plan</strong></span>
                                 </div>
                                 <div class="col-sm-auto">
                                     <label class="switch">
@@ -2523,7 +2523,7 @@
                                     </label>
                                 </div>
                                 <div class="col-sm-auto">
-                                    <span"><strong>Payment Plan</strong></span>
+                                    <span"><strong>One-Time Payment</strong></span>
                                 </div>
                             </div>
                         </div>
@@ -2545,12 +2545,14 @@
                                         style="text-decoration: line-through;">x 6 months</span>
                                 </div> -->
                             </div>
-                            <div class="text2">
+                            <div class="text2 mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span class="value best-value">497</span>
                                 </div>
-                                <div class="frequency mb-4">one-time payment</div>
+                                <div>
+                                    <span class="save-value best-value">SAVE 15%</span>
+                                </div>
                             </div>
 
                             <div class="button-wrapper text1">
@@ -2635,18 +2637,20 @@
                             <div class="card-title">ESSENTIALS</div>
                             <div class="text1 mb-4">
                                 <span class="currency">$</span>
-                                <span class=" value">97</span>
+                                <span class=" value">79</span>
                                 <div class="frequency" style="margin-bottom:0">x 3 monthly payments</div>
                                 <!-- <div class="mb-2">
                                     <span class="full-price">$97</span><span class="frequency"
                                         style="text-decoration: line-through;">x 3 months</span>
                                 </div> -->
                             </div>
-                            <div class="text2">
+                            <div class="text2 mb-2">
                                 <div>
                                     <span class="currency">$</span><span class="value">197</span>
                                 </div>
-                                <div class="frequency mb-4">one-time payment</div>
+                                <div>
+                                    <span class="save-value best-value">SAVE 15%</span>
+                                </div>
                             </div>
                             <div class="button-wrapper text1">
                                 <a id="payment-plan-link" class="btn-outline-lg"
@@ -2893,12 +2897,12 @@
             {
                 if (checkBox.checked == true)
                 {
-                    text1[i].style.display = "block";
-                    text2[i].style.display = "none";
+                    text2[i].style.display = "block";
+                    text1[i].style.display = "none";
                 } else if (checkBox.checked == false)
                 {
-                    text1[i].style.display = "none";
-                    text2[i].style.display = "block";
+                    text2[i].style.display = "none";
+                    text1[i].style.display = "block";
                 }
             }
         }
