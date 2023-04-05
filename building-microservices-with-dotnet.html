@@ -24,7 +24,8 @@
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
-    </script>    
+    </script>
+    <!--End of Tawk.to Script-->
 
     <!-- Play video -->
     <script type="text/javascript">
@@ -2462,34 +2463,62 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading" style="margin-bottom: 1rem">Special Offer Ends In:
-                    </h2>
+                    <h2 class="h2-heading" style="margin-bottom: 2rem">Select Which Option is Best for You:</h2>
                 </div> <!-- end of col -->
             </div><!-- end of row -->
             <div class="row mb-4">
-                <div class="col-lg-12">
-                    <div class="ddio_countdown_wrap"></div>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+                <div class="col">
+                    <div class="toggle-btn">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-auto mb-2">
+                                    <span><strong>One-Time Payment</strong></span>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <label class="switch">
+                                        <input type="checkbox" id="checbox" onclick="check()" ; />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <span"><strong>Payment Plan</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 order-lg-3">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">ULTIMATE</div>
-                            <div class="text2 mb-2">
+                            <div class="text1 mb-4">
+                                <span class="currency best-value">$</span>
+                                <span class=" value best-value">97</span>
+                                <div class="frequency" style="margin-bottom:0">x 6 monthly payments</div>
+                                <!-- <div class="mb-2">
+                                    <span class="full-price">$97</span><span class="frequency"
+                                        style="text-decoration: line-through;">x 6 months</span>
+                                </div> -->
+                            </div>
+                            <div class="text2">
                                 <div>
                                     <span class="currency best-value">$</span>
-                                    <span class="value best-value">297</span>
+                                    <span class="value best-value">497</span>
                                 </div>
-                                <div>
-                                    <span class="full-price">$497</span><span class="save-value best-value">40%
-                                        OFF</span>
-                                </div>
+                                <div class="frequency mb-4">one-time payment</div>
+                            </div>
+
+                            <div class="button-wrapper text1">
+                                <a id="payment-plan-link" class="btn-solid-lg"
+                                    href="https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2916582">ENROLL
+                                    NOW!</a>
                             </div>
                             <div class="button-wrapper text2">
                                 <a id="one-time-payment-link" class="btn-solid-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2894278&coupon=UltimateToday400">ENROLL
+                                    href="https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2894278">ENROLL
                                     NOW!</a>
                             </div>
                             <hr class="cell-divide-hr">
@@ -2562,18 +2591,29 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title">ESSENTIALS</div>
-                            <div class="text2 mb-2">
+                            <div class="text1 mb-4">
+                                <span class="currency">$</span>
+                                <span class=" value">79</span>
+                                <div class="frequency" style="margin-bottom:0">x 3 monthly payments</div>
+                                <!-- <div class="mb-2">
+                                    <span class="full-price">$97</span><span class="frequency"
+                                        style="text-decoration: line-through;">x 3 months</span>
+                                </div> -->
+                            </div>
+                            <div class="text2">
                                 <div>
-                                    <span class="currency">$</span><span class="value">147</span>
+                                    <span class="currency">$</span><span class="value">197</span>
                                 </div>
-                                <div>
-                                    <span class="full-price">$197</span><span class="save-value best-value">25%
-                                        OFF</span>
-                                </div>
+                                <div class="frequency mb-4">one-time payment</div>
+                            </div>
+                            <div class="button-wrapper text1">
+                                <a id="payment-plan-link" class="btn-outline-lg"
+                                    href="https://learn.dotnetmicroservices.com/enroll/2146150?price_id=2916579">ENROLL
+                                    NOW!</a>
                             </div>
                             <div class="button-wrapper text2">
                                 <a id="one-time-payment-link" class="btn-outline-lg"
-                                    href="https://learn.dotnetmicroservices.com/enroll/2146150?price_id=2900371&coupon=EssentialsFull50">ENROLL
+                                    href="https://learn.dotnetmicroservices.com/enroll/2146150?price_id=2900371">ENROLL
                                     NOW!</a>
                             </div>
                             <hr class="cell-divide-hr">
@@ -2670,7 +2710,7 @@
                         </div>
                     </div> <!-- end of card -->
                     <!-- end of card -->
-                </div>                
+                </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
