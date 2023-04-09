@@ -1369,8 +1369,13 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .frequency {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	margin-bottom: 1rem;
+}
+
+.cards-2 .card .frequency.best-value {
+	color: #eb8a2f;
+	font-weight: 700;
 }
 
 .cards-2 .card .save-value {
