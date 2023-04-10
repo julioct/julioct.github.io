@@ -1369,7 +1369,7 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .frequency {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	margin-bottom: 1rem;
 }
 
@@ -1465,7 +1465,7 @@ input[type='checkbox'] {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #1e2321;
+	background-color: #50bfe6;
 	-webkit-transition: 0.4s;
 
 	box-shadow: 2px 6px 25px #1e2321;
