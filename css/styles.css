@@ -1995,6 +1995,10 @@ a:hover.back-to-top {
 	font-size: 4.1em;
 }
 
+.line-spaced-paragraph {
+	line-height: 2rem
+}
+
 /*************************/
 /*     Media Queries     */
 /*************************/
