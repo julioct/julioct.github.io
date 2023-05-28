@@ -500,6 +500,11 @@ input[type='checkbox'] {
 	color: #d33737;
 }
 
+.list-unstyled .fas.fa-times.for-paragraph {
+	color: #d33737;
+	margin-top: 0.3rem
+}
+
 /**********************/
 /*     Navigation     */
 /**********************/
@@ -1057,6 +1062,13 @@ input[type='checkbox'] {
 
 .centered-button {
 	text-align: center;
+}
+
+.basic-1 .list-unstyled .fas.fa-check.for-paragraph {
+	color: #5f4dee;
+	font-size: 1.5rem;
+	line-height: 1.625rem;
+	margin-top: 0.3rem
 }
 
 /****************************/
