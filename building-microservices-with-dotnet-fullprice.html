@@ -15,8 +15,7 @@
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function ()
-        {
+        (function () {
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
             s1.src = 'https://embed.tawk.to/60f2e5ae649e0a0a5cccac8e/1faqd2cig';
@@ -29,8 +28,7 @@
 
     <!-- Play video -->
     <script type="text/javascript">
-        function playVideo(videoId, playButtonId)
-        {
+        function playVideo(videoId, playButtonId) {
             var iframe = document.getElementById(videoId);
             var src = iframe.getAttribute("src");
             var newSrc = src.replace("background=1", "autoplay=1");
@@ -185,7 +183,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/BundlePictureUltimate_2.jpg" alt="alternative">
+                        <img class="img-fluid" src="images/ultimate_bundle_mockup.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -2822,20 +2820,16 @@
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
     <script>
-        function check()
-        {
+        function check() {
             var checkBox = document.getElementById("checbox");
             var text1 = document.getElementsByClassName("text1");
             var text2 = document.getElementsByClassName("text2");
 
-            for (var i = 0; i < text1.length; i++)
-            {
-                if (checkBox.checked == true)
-                {
+            for (var i = 0; i < text1.length; i++) {
+                if (checkBox.checked == true) {
                     text1[i].style.display = "block";
                     text2[i].style.display = "none";
-                } else if (checkBox.checked == false)
-                {
+                } else if (checkBox.checked == false) {
                     text1[i].style.display = "none";
                     text2[i].style.display = "block";
                 }
