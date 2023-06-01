@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4779172-9"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNYCMQ291F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'UA-4779172-9');
+        gtag('config', 'G-MNYCMQ291F');
     </script>
 
     <!-- Play video -->
     <script type="text/javascript">
-        function playVideo(videoId, playButtonId) {
+        function playVideo(videoId, playButtonId)
+        {
             var iframe = document.getElementById(videoId);
             var src = iframe.getAttribute("src");
             var newSrc = src.replace("background=1", "autoplay=1");
@@ -2730,16 +2731,20 @@
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
     <script>
-        function check() {
+        function check()
+        {
             var checkBox = document.getElementById("checbox");
             var text1 = document.getElementsByClassName("text1");
             var text2 = document.getElementsByClassName("text2");
 
-            for (var i = 0; i < text1.length; i++) {
-                if (checkBox.checked == true) {
+            for (var i = 0; i < text1.length; i++)
+            {
+                if (checkBox.checked == true)
+                {
                     text1[i].style.display = "block";
                     text2[i].style.display = "none";
-                } else if (checkBox.checked == false) {
+                } else if (checkBox.checked == false)
+                {
                     text1[i].style.display = "none";
                     text2[i].style.display = "block";
                 }
