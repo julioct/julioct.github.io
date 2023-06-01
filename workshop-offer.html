@@ -471,7 +471,8 @@
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 
     <script>
-        function check() {
+        function check()
+        {
             var oneTimePaymentSection = document.getElementById("one-time-payment");
             var oneTimePaymentPrice = document.getElementById("one-time-payment-price");
             var oneTimePaymentRadio = document.getElementById("one-time-payment-radio");
@@ -481,19 +482,21 @@
 
             var enrollButton = document.getElementById("enroll-button");
 
-            if (oneTimePaymentRadio.checked == true) {
+            if (oneTimePaymentRadio.checked == true)
+            {
                 oneTimePaymentSection.style.background = "#f1f1f1"
                 oneTimePaymentPrice.style.fontWeight = "bold"
                 paymentPlanSection.style.background = ""
                 paymentPlanPrice.style.fontWeight = ""
                 enrollButton.href = "https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2894278&coupon=UltimateWS300"
             }
-            else {
+            else
+            {
                 paymentPlanSection.style.background = "#f1f1f1"
                 paymentPlanPrice.style.fontWeight = "bold"
                 oneTimePaymentSection.style.background = ""
                 oneTimePaymentPrice.style.fontWeight = ""
-                enrollButton.href = "https://learn.dotnetmicroservices.com/enroll/2141091?price_id=2995476"
+                enrollButton.href = "https://learn.dotnetmicroservices.com/enroll/2141091?price_id=3282748"
             }
         }
         check();
