@@ -142,6 +142,35 @@ a:hover {
 	text-decoration: underline;
 }
 
+.card .course-title {
+	transition: color 0.2s ease-in-out;
+}
+
+.card .course-title:hover {
+	color: #5f4dee;
+}
+
+.card.course:hover {
+	box-shadow: 0 0 10px #5f4dee;
+}
+
+.card .course-title.best-value  {
+	color: white;
+	transition: color 0.2s ease-in-out;
+}
+
+.card .course-title.best-value:hover {
+	color: #eb8a2f;
+}
+
+.card.best-value {
+	background-color: #5f4dee;
+}
+
+.card.course.best-value:hover {
+	box-shadow: 0 0 10px #eb8a2f;
+}
+
 .no-line {
 	text-decoration: none;
 }
@@ -523,7 +552,7 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-	width: 76px;
+	/* width: 250px; */
 	height: 30px;
 }
 
@@ -662,7 +691,6 @@ input[type='checkbox'] {
 	position: relative;
 	overflow: hidden;
 	padding-top: 6.5rem;
-	padding-bottom: 7rem;
 	background-color: #5f4dee;
 	text-align: center;
 }
@@ -2147,7 +2175,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		padding-bottom: 10rem;
+		padding-bottom: 3rem;
 	}
 
 	.header .text-container {

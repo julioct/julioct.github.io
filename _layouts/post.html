@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<!-- Header -->
+<header id="header" class="header">
+    <svg class="header-decoration" style="height: 60px;" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        viewBox="0 0 1920 305.139">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #ffffff;
+                }
+            </style>
+        </defs>
+        <title>header-decoration</title>
+        <path class="cls-1"
+            d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
+            transform="translate(0 0)" />
+    </svg>
+</header> <!-- end of header -->
+<!-- end of header -->
+
+<!-- Header -->
+<div class="basic-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="image-container">
+                    {% if page.featured-image %}{% include post-featured-image.html image=page.featured-image
+                    alt=page.featured-image-alt %}{% endif %}
+                </div> <!-- end of image-container -->
+            </div> <!-- end of div -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of header -->
+
+<!-- Problem Statement -->
+<div id="problem-statement" class="basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+                    <header class="post-header">
+                        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+                        <p class="post-meta">
+                            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
+                                itemprop="datePublished">
+                                {{ page.date | date: date_format }}
+                            </time>
+                            {%- if page.modified_date -%}
+                            ~
+                            {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+                            <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+                                {{ mdate | date: date_format }}
+                            </time>
+                            {%- endif -%}
+                            {%- if page.author -%}
+                            • {% for author in page.author %}
+                            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                            {%- if forloop.last == false %}, {% endif -%}
+                            {% endfor %}
+                            {%- endif -%}
+                        </p>
+                    </header>
+
+                    <div class="post-content e-content" itemprop="articleBody">
+                        {{ content }}
+                    </div>
+
+                    {%- if site.disqus.shortname -%}
+                    {%- include disqus_comments.html -%}
+                    {%- endif -%}
+
+                    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+                </article>
+            </div> <!-- end of col-->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of cards-1 -->
+<!-- end of description -->
