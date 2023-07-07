@@ -3,13 +3,13 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9ZY03MKP6"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-V9ZY03MKP6');
+        gtag('config', 'G-GKWPQFHL1Y');
     </script>
 
     <meta charset="utf-8">
@@ -37,7 +37,7 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/fontawesome-all.css" rel="stylesheet">
     <link href="/css/swiper.css" rel="stylesheet">
-    <link href="/css/magnific-popup.css" rel="stylesheet">    
+    <link href="/css/magnific-popup.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
     <!-- <link href="/css/styles.css" rel="stylesheet"> -->
 
@@ -79,164 +79,164 @@
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
-<!-- Header -->
-<header id="header" class="header">
-    <svg class="header-decoration" style="height: 60px;" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-        viewBox="0 0 1920 305.139">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: #ffffff;
-                }
-            </style>
-        </defs>
-        <title>header-decoration</title>
-        <path class="cls-1"
-            d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
-            transform="translate(0 0)" />
-    </svg>
-</header> <!-- end of header -->
-<!-- end of header -->
+    <!-- Header -->
+    <header id="header" class="header">
+        <svg class="header-decoration" style="height: 60px;" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none" viewBox="0 0 1920 305.139">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #ffffff;
+                    }
+                </style>
+            </defs>
+            <title>header-decoration</title>
+            <path class="cls-1"
+                d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
+                transform="translate(0 0)" />
+        </svg>
+    </header> <!-- end of header -->
+    <!-- end of header -->
 
-<!-- Header -->
-<div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="image-container mt-4 mb-4">
-                    {% if page.featured-image %}{% include post-featured-image.html image=page.featured-image
-                    alt=page.featured-image-alt %}{% endif %}
-                </div> <!-- end of image-container -->
-            </div> <!-- end of div -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of header -->
+    <!-- Header -->
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="image-container mt-4 mb-4">
+                        {% if page.featured-image %}{% include post-featured-image.html image=page.featured-image
+                        alt=page.featured-image-alt %}{% endif %}
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of div -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of header -->
 
-<div id="problem-statement">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <div id="problem-statement">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-                    <header class="post-header">
-                        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-                        <p class="post-meta">
-                            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
-                                itemprop="datePublished">
-                                {{ page.date | date: date_format }}
-                            </time>
-                            {%- if page.modified_date -%}
-                            ~
-                            {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-                            <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-                                {{ mdate | date: date_format }}
-                            </time>
-                            {%- endif -%}
-                            {%- if page.author -%}
-                            • {% for author in page.author %}
-                            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                            {%- if forloop.last == false %}, {% endif -%}
-                            {% endfor %}
-                            {%- endif -%}
-                        </p>
-                    </header>
+                        <header class="post-header">
+                            <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+                            <p class="post-meta">
+                                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
+                                    itemprop="datePublished">
+                                    {{ page.date | date: date_format }}
+                                </time>
+                                {%- if page.modified_date -%}
+                                ~
+                                {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+                                <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+                                    {{ mdate | date: date_format }}
+                                </time>
+                                {%- endif -%}
+                                {%- if page.author -%}
+                                • {% for author in page.author %}
+                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                                {%- if forloop.last == false %}, {% endif -%}
+                                {% endfor %}
+                                {%- endif -%}
+                            </p>
+                        </header>
 
-                    <div class="post-content e-content" itemprop="articleBody">
-                        {{ content }}
-                    </div>
+                        <div class="post-content e-content" itemprop="articleBody">
+                            {{ content }}
+                        </div>
 
-                    {%- if site.disqus.shortname -%}
-                    {%- include disqus_comments.html -%}
-                    {%- endif -%}
+                        {%- if site.disqus.shortname -%}
+                        {%- include disqus_comments.html -%}
+                        {%- endif -%}
 
-                    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-                </article>
-            </div> <!-- end of col-->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of cards-1 -->
-<!-- end of description -->
+                        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+                    </article>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of description -->
 
-<!-- Social -->
-<div class="basic-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="icon-container">
-                    <span class="fa-stack">
-                        <a href="https://www.youtube.com/c/jcasalt" target="blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-youtube fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://discord.gg/QmcxZAcKFw" target="blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-discord fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://twitter.com/julioc" target="blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="https://www.linkedin.com/in/juliocasal" target="blank">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </div> <!-- end of icon-container -->
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-3 -->
-<!-- end of social -->
+    <!-- Social -->
+    <div class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="icon-container">
+                        <span class="fa-stack">
+                            <a href="https://www.youtube.com/c/jcasalt" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://discord.gg/QmcxZAcKFw" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-discord fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/julioc" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/juliocasal" target="blank">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of icon-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of social -->
 
-<!-- Footer -->
-<div class="footer-decoration">
-    <svg class="footer-frame" style="height: 20px;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none" viewBox="0 0 1920 115.984">
-        <defs>
-            <style>
-                .cls-2 {
-                    fill: #5f4dee;
-                }
-            </style>
-        </defs>
-        <title>footer-frame</title>
-        <path class="cls-2"
-            d="M1616.28,381.705c-87.656,5.552-93.356-59.62-197.369-67.562-112.391-8.581-137.609,65.077-251.189,60.632-109.57-4.288-116.156-74.017-225.25-83.153-125.171-10.483-150,78.5-293,88.35-136.948,9.437-173.108-68.092-320.83-77.956C255.5,297.133,143,308.1,0,395.564V406.75H1920V324.537c-18-6.507-43.63-14.492-76.1-15.591C1740.655,305.452,1705.829,376.033,1616.28,381.705Z"
-            transform="translate(0 -290.766)" />
-    </svg>
-</div> <!-- end of footer-decoration -->
-<!-- end of footer -->
-
-
-<!-- Copyright -->
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <p class="p-small">Copyright © 2023 Julio Casal | <a href="https://learn.dotnetacademy.io">Log
-                        In</a></p>
-            </div> <!-- end of col -->
-        </div> <!-- enf of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of copyright -->
-<!-- end of copyright -->
+    <!-- Footer -->
+    <div class="footer-decoration">
+        <svg class="footer-frame" style="height: 20px;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none" viewBox="0 0 1920 115.984">
+            <defs>
+                <style>
+                    .cls-2 {
+                        fill: #5f4dee;
+                    }
+                </style>
+            </defs>
+            <title>footer-frame</title>
+            <path class="cls-2"
+                d="M1616.28,381.705c-87.656,5.552-93.356-59.62-197.369-67.562-112.391-8.581-137.609,65.077-251.189,60.632-109.57-4.288-116.156-74.017-225.25-83.153-125.171-10.483-150,78.5-293,88.35-136.948,9.437-173.108-68.092-320.83-77.956C255.5,297.133,143,308.1,0,395.564V406.75H1920V324.537c-18-6.507-43.63-14.492-76.1-15.591C1740.655,305.452,1705.829,376.033,1616.28,381.705Z"
+                transform="translate(0 -290.766)" />
+        </svg>
+    </div> <!-- end of footer-decoration -->
+    <!-- end of footer -->
 
 
-<!-- Scripts -->
-<script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-<script src="/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-<script src="/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-<script src="/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-<script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-<script src="/js/scripts.js"></script> <!-- Custom scripts -->
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2023 Julio Casal | <a href="https://learn.dotnetacademy.io">Log
+                            In</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="/js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 
 </html>
