@@ -36,12 +36,12 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
 <div id="problem-statement" class="basic-1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-9">
                 <h2 class="h2-heading">Previous Issues of The .NET Saturday</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
                 {% if site.paginate %}
                 {% assign posts = paginator.posts %}
                 {% else %}
@@ -69,11 +69,11 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
 
                 <div class="card mb-3" style="border: 0;">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             {% if post.featured-image %}{% include post-featured-image.html image=post.featured-image
                             alt=post.featured-image-alt %}{% endif %}
                         </div>
-                        <div class="col-md-8">
+                        <div class="col">
                             <div class="card-body">                                
                                 <h3>
                                     <a class="post-link" href="{{ post.url | relative_url }}">
