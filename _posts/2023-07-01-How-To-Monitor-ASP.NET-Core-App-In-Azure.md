@@ -1,12 +1,12 @@
 ---
 title: "TNS #001: How To Monitor Your ASP.NET Core Application In Azure"
-date: 2023-07-04
+date: 2023-07-01
 layout: post
 featured-image: HowToMetrics.jpg
 featured-image-alt: How To Monitor Your ASP.NET Core Application In Azure
 ---
 
-Read time: 3 minutes
+*Read time: 3 minutes*
 
 Today I'm going to show you how to quickly start monitoring your ASP.NET Core application in Azure.
 
@@ -16,7 +16,7 @@ Many folks leave monitoring for the very end, which is not surprising since it's
 
 <br/>
 
-### You need to start monitoring to your .NET application today.
+### **You need to start monitoring to your .NET application today.**
 
 <br/>
 
@@ -32,13 +32,13 @@ Here's how to get started, step by step:
 
 <br/>
 
-#### Prerequisites
+#### **Prerequisites**
 * **An Azure subscription**. You can sign up for a free trial here.
 * **Your existing ASP.NET Core application**. I'm not sure how much you'll be able to do with other types of .NET apps.
 ​
 <br/><br/>
 
-#### 1. Create an Application Insights resource
+#### **1. Create an Application Insights resource**
 In your Azure Portal, look for the Application Insights service and create a new one:
 
 ![Alt text](/assets/images/app-insights-wizard.png )
@@ -49,7 +49,7 @@ Once creation is completed (20-30 seconds in my case), go to your new App Insigh
 
 <br/>
 
-#### 2. Install the client library
+#### **2. Install the client library**
 Open a Terminal, switch to your ASP.NET Core app dir and install the Azure Monitor OpenTelemetry Distro client library:
 
 ```powershell
@@ -58,7 +58,7 @@ dotnet add package --prerelease Azure.Monitor.OpenTelemetry.AspNetCore
 
 <br/>
 
-#### 3. Register the Azure Monitor OpenTelemetry services
+#### **3. Register the Azure Monitor OpenTelemetry services**
 Add the following line to your Program.cs file:
 
 ```csharp
@@ -79,7 +79,7 @@ app.Run();
 
 <br/>
 
-#### 4. Provide the App Insights connection string to your app
+#### **4. Provide the App Insights connection string to your app**
 For your app to start talking to Azure App Insights, it needs the connection string you copied earlier. There are a few ways to configure the connection string in your app, but for local development purposes my preferred approach is to use the .NET Secret Manager.
 
 To do that, first go back to your Terminal and initialize user secrets for your app:
@@ -90,9 +90,13 @@ dotnet user-secrets init
 
 Then, set your secret, where the key must be `AzureMonitor:ConnectionString` and the value the actual connection string:
 
+```powershell
+dotnet user-secrets set "AzureMonitor:ConnectionString" "YOUR CONN STRING HERE"
+```
+
 <br/>
 
-#### 5. Confirm your app is sending data to Azure App Insights
+#### **5. Confirm your app is sending data to Azure App Insights**
 Surprisingly, there's nothing else to do to start getting data in App Insights. So, start your app and start hitting a few of your endpoints to start collecting monitoring data.
 
 Give it a few minutes (data will not show up in real time in Azure) and eventually you should see a few essential metrics popping up in your App Insights Overview blade:
@@ -103,7 +107,7 @@ I even tried out a few requests that resulted in a 404 to confirm they would sho
 
 <br/>
 
-#### 6. Track custom metrics
+#### **6. Track custom metrics**
 Let's say that now you want to start tracking your own metrics. For instance, in my little Match Making app I'd like to start counting each time a new match is created and report that as a new metric.
 
 That's actually quite easy with the built in APIs provided in .NET. So here's what you do:
@@ -163,5 +167,9 @@ I hope you enjoyed it.
 **Whenever you’re ready, there are 3 ways I can help you:**
 
 1. [​Building Microservices With .NET](https://dotnetmicroservices.com/):​ A complete online program designed to transform the way you build .NET systems at scale so that they are resilient, secure, easy to maintain, and ready to handle constantly changing business requirements and production demands.
+<br/>
+
 2. [​Building .NET REST APIs](https://dotnetrestapis.com/)​: A carefully crafted online course to learn how to build production ready .NET based REST APIs, step by step.
+<br/>
+
 3. [​Full source code](https://www.patreon.com/juliocasal). Get the source code behind all my newsletter articles and YouTube videos by supporting me on [Patreon](https://www.patreon.com/juliocasal).
