@@ -35,7 +35,7 @@ Here's how to get started, step by step:
 
 <br/>
 
-#### **1. Use ILogger methods to log important events across your app**
+#### **Step 1: Use ILogger methods to log important events across your app**
 ILogger is available anywhere you need it in your application. For instance, here's how you can use it log an informational event in your Program.cs file:
 
 ```csharp
@@ -94,7 +94,7 @@ That's to take advantage of feature called `Structured Logging`, which allows yo
 
 <br/>
 
-#### **2. Export logs to Azure Application Insights**
+#### **Step 2: Export logs to Azure Application Insights**
 You need to take those logs out of your box and into the cloud. 
 
 For this, open a Terminal, switch to your app dir and install the `Azure Monitor OpenTelemetry Distro` client library:
@@ -113,7 +113,7 @@ That will take care of exporting all logs to Azure Application Insights, without
 
 <br/>
 
-#### **3. Connect your app to Azure Application Insights**
+#### **Step 3: Connect your app to Azure Application Insights**
 If you don't have an Azure Application Insights account, check out [this article]({{ site.url }}/blog/How-To-Monitor-ASP.NET-Core-App-In-Azure) to learn how to create one and how to grab the connection string you'll need next.
 
 Then, go back to your Terminal and add your connection string as a user secret via the Secret Manager tool:
@@ -125,12 +125,12 @@ dotnet user-secrets set "AzureMonitor:ConnectionString" "YOUR CONN STRING HERE"
 
 <br/>
 
-#### **4. Start your app and get it to log events**
+#### **Step 4: Start your app and get it to log events**
 Start your app and start hitting a few of the endpoints where you added logging.
 
 Also try making it so that some errors are thrown and logged to get some interesting traces.
 
-You should see your logs pop on on your terminal:
+You should see your logs pop on your terminal:
 
 ```powershell
 info: MatchMaker.Api.Services.GameMatcher[0]
@@ -145,7 +145,7 @@ Give it a few minutes (data will not show up in real time in App Insights) and e
 
 <br/>
 
-#### **5. Query your logs**
+#### **Step 5: Query your logs**
 Go back to your Application Insights resource in the Azure Portal and click on the Logs blade.
 
 ![Alt text]({{ site.url }}/assets/images/app-insights-click-logs.png)
