@@ -4,6 +4,7 @@ date: 2023-07-01
 layout: post
 featured-image: HowToMetrics.jpg
 featured-image-alt: How To Monitor Your ASP.NET Core Application In Azure
+image: /assets/images/HowToMetrics.jpg
 ---
 
 *Read time: 3 minutes*
@@ -41,11 +42,11 @@ Here's how to get started, step by step:
 #### **1. Create an Application Insights resource**
 In your Azure Portal, look for the Application Insights service and create a new one:
 
-![Alt text](/assets/images/app-insights-wizard.png )
+![Alt text]( {{ site.url }}/assets/images/app-insights-wizard.png )
 
 Once creation is completed (20-30 seconds in my case), go to your new App Insights resource and copy the connection string that you'll find in the Overview blade. You'll need that later.
 
-![Alt text](/assets/images/app-insights-overview.png)
+![Alt text]({{ site.url }}/assets/images/app-insights-overview.png)
 
 <br/>
 
@@ -101,7 +102,7 @@ Surprisingly, there's nothing else to do to start getting data in App Insights. 
 
 Give it a few minutes (data will not show up in real time in Azure) and eventually you should see a few essential metrics popping up in your App Insights Overview blade:
 
-![Alt text](/assets/images/app-insights-charts.png)
+![Alt text]({{ site.url }}/assets/images/app-insights-charts.png)
 
 I even tried out a few requests that resulted in a 404 to confirm they would show up as failed requests in the first chart.
 
@@ -152,7 +153,7 @@ That's actually quite easy with the built in APIs provided in .NET. So here's wh
 
 5. Run your app and execute the endpoint(s) that use the above logic. Then go to your Metrics blade in the Azure portal and add your new metric. In my case, the created matches look like this:
 
-![Alt text](/assets/images/app-insights-metric.png)
+![Alt text]({{ site.url }}/assets/images/app-insights-metric.png)
 
 Done!
 
