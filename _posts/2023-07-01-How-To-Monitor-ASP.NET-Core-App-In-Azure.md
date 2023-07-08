@@ -1,5 +1,5 @@
 ---
-title: "TNS #001: How To Monitor Your ASP.NET Core Application In Azure"
+title: "TNS #001: How To Monitor Your ASP.NET Core Application In Azure (TEST)"
 date: 2023-07-01
 layout: post
 featured-image: HowToMetrics.jpg
