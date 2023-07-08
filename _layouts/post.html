@@ -98,66 +98,114 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <!-- Header -->
+    <!-- Post Body -->
     <div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="image-container mt-4 mb-4">
-                        {% if page.featured-image %}{% include post-featured-image.html image=page.featured-image
-                        alt=page.featured-image-alt %}{% endif %}
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of div -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of header -->
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- Featured Image -->
+                    <div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <div class="image-container mt-4 mb-4">
+                                        {% if page.featured-image %}{% include post-featured-image.html
+                                        image=page.featured-image
+                                        alt=page.featured-image-alt %}{% endif %}
+                                    </div> <!-- end of image-container -->
+                                </div> <!-- end of div -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of container -->
+                    </div> <!-- end of Featured Image -->
 
-    <div id="problem-statement">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+                    <!-- Post Contents -->
+                    <div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-                        <header class="post-header">
-                            <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-                            <p class="post-meta">
-                                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
-                                    itemprop="datePublished">
-                                    {{ page.date | date: date_format }}
-                                </time>
-                                {%- if page.modified_date -%}
-                                ~
-                                {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-                                <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-                                    {{ mdate | date: date_format }}
-                                </time>
-                                {%- endif -%}
-                                {%- if page.author -%}
-                                • {% for author in page.author %}
-                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                                {%- if forloop.last == false %}, {% endif -%}
-                                {% endfor %}
-                                {%- endif -%}
-                            </p>
-                        </header>
+                                        <header class="post-header">
+                                            <h1 class="post-title p-name" itemprop="name headline">{{ page.title |
+                                                escape }}</h1>
+                                            <p class="post-meta">
+                                                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+                                                -%}
+                                                <time class="dt-published"
+                                                    datetime="{{ page.date | date_to_xmlschema }}"
+                                                    itemprop="datePublished">
+                                                    {{ page.date | date: date_format }}
+                                                </time>
+                                                {%- if page.modified_date -%}
+                                                ~
+                                                {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+                                                <time class="dt-modified" datetime="{{ mdate }}"
+                                                    itemprop="dateModified">
+                                                    {{ mdate | date: date_format }}
+                                                </time>
+                                                {%- endif -%}
+                                                {%- if page.author -%}
+                                                • {% for author in page.author %}
+                                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                                    <span class="p-author h-card" itemprop="name">{{ author
+                                                        }}</span></span>
+                                                {%- if forloop.last == false %}, {% endif -%}
+                                                {% endfor %}
+                                                {%- endif -%}
+                                            </p>
+                                        </header>
 
-                        <div class="post-content e-content" itemprop="articleBody">
-                            {{ content }}
-                        </div>
+                                        <div class="post-content e-content" itemprop="articleBody">
+                                            {{ content }}
+                                        </div>
 
-                        {%- if site.disqus.shortname -%}
-                        {%- include disqus_comments.html -%}
-                        {%- endif -%}
+                                        {%- if site.disqus.shortname -%}
+                                        {%- include disqus_comments.html -%}
+                                        {%- endif -%}
 
-                        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-                    </article>
-                </div> <!-- end of col-->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of description -->
+                                        <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+                                    </article>
+                                </div> <!-- end of col-->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of container -->
+                    </div> <!-- end of cards-1 -->
+                    <!-- end of Post Contents -->
+                </div>
+                <div class="col-md-3 mt-4">
+                    <h5>About the Newsletter</h5>
+                    <p>5,000+ subscribers get one tip to learn, grow & upgrade their .NET skills every Saturday morning.
+                    </p>
+                    <div class="btn-solid-lg-container">
+                        <a class="btn-solid-sm" style="color: white;" href="/blog.html">Subscribe</a>
+                    </div>
+                    <h5 class="mt-4">Connect with Me</h5>
+                    <div class="icon-container">
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://www.youtube.com/c/jcasalt" target="blank">
+                                <i class="fab fa-youtube" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://twitter.com/julioc" target="blank">
+                                <i class="fab fa-twitter" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://www.linkedin.com/in/juliocasal" target="blank">
+                                <i class="fab fa-linkedin-in" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://www.patreon.com/juliocasal" target="blank">
+                                <i class="fab fa-patreon" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of icon-container -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Post Body -->
 
     <!-- Social -->
     <div class="basic-3">
@@ -171,12 +219,7 @@
                                 <i class="fab fa-youtube fa-stack-1x"></i>
                             </a>
                         </span>
-                        <span class="fa-stack">
-                            <a href="https://discord.gg/QmcxZAcKFw" target="blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-discord fa-stack-1x"></i>
-                            </a>
-                        </span>
+
                         <span class="fa-stack">
                             <a href="https://twitter.com/julioc" target="blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>
