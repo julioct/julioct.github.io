@@ -200,7 +200,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 60px;
+	height: 20px;
 }
 
 /******************/
@@ -322,14 +322,6 @@
 /* Min-width 768px */
 @media (min-width: 768px) {
 
-	/* Header */
-	.header .header-decoration {
-		height: 100px;
-	}
-
-	/* end of header */
-
-
 	/* Footer */
 	.footer-decoration {
 		height: 40px;
@@ -442,12 +434,6 @@
 		/* transform: rotate(2deg); */
 		filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.2));
 	}
-
-	.header .header-decoration {
-		height: 160px;
-	}
-
-	/* end of header */
 
 	/* Footer */
 	.footer-decoration {
