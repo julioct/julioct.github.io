@@ -316,6 +316,14 @@
 	right: 0;
 }
 
+/*********************/
+/*     Others     */
+/*********************/
+
+#newsletter-iphone-mockup {
+	display: none;
+}
+
 /*************************/
 /*     Media Queries     */
 /*************************/
@@ -445,6 +453,10 @@
 	}
 
 	/* end of footer */
+
+	#newsletter-iphone-mockup {
+		display: block;
+	}	
 }
 
 /* end of min-width 992px */
