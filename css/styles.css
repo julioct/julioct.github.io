@@ -902,6 +902,13 @@ input[type='checkbox'] {
 	color: #eb8a2f
 }
 
+.header-newsletter {
+	position: relative;
+	overflow: hidden;
+	padding-top: 6.5rem;
+	background-color: #5f4dee;
+	text-align: center;
+}
 
 /********************/
 /*    Customers     */
@@ -2039,9 +2046,24 @@ a:hover.back-to-top {
 	line-height: 2rem
 }
 
+/*********************/
+/*     Others     */
+/*********************/
+
+#newsletter-iphone-mockup {
+	display: none;
+}
+
 /*************************/
 /*     Media Queries     */
 /*************************/
+/* Min-width 576px */
+@media (min-width: 576px) {	
+	.header-newsletter {
+		height: 88%
+	}	
+}
+
 /* Min-width 768px */
 @media (min-width: 768px) {
 
@@ -2313,6 +2335,10 @@ a:hover.back-to-top {
 	.chapter-title .chapter-duration {
 		display: block;
 	}
+
+	#newsletter-iphone-mockup {
+		display: block;
+	}		
 }
 
 /* end of min-width 992px */
