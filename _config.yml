@@ -26,6 +26,7 @@ permalink: /blog/:title:output_ext
 url: "https://juliocasal.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: julioc
 github_username:  julioct
+timezone: America/Los_Angeles
 
 # Build settings
 theme: minima
