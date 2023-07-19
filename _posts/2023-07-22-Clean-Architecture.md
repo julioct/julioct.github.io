@@ -7,7 +7,7 @@ featured-image-alt: Keep It Clean With Clean Architecture
 image: /assets/images/clean-arch.jpg
 ---
 
-*Read time: 6 minutes*
+*Read time: 7 minutes*
 
 This issue is a bit longer than usual, but I think it's worth it. 
 
@@ -101,15 +101,44 @@ Yes, theoretically you should have Entities apart, so you can reuse them across 
 
 But in practice, I've never seen a system that requires this. Especially when you do microservices, where each microservice will fully own their domain, so there's no need to share entities across systems.
 
+Here's the **GameMatch** entity (shortened for brevity):
+
+```csharp
+public class GameMatch
+{
+    public GameMatch(Guid id, string player1)
+    {
+        // Validate parameters here
+
+        Id = id;
+        Player1 = player1;
+        State = GameMatchState.WaitingForOpponent;
+    }
+
+    public Guid Id { get; }
+
+    public string Player1 { get; }
+
+    public string? Player2 { get; private set; }
+
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public GameMatchState State { get; private set; }
+
+    // More properties here
+
+    public void SetPlayer2(string player2)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(player2, nameof(player2));        
+
+        Player2 = player2;
+        State = GameMatchState.MatchWaitingForGame;
+    }
+}
+```
+
 Regarding the `Use Cases`, I call them `Handlers` here, with each one being a small class dedicated to handle one, and only one use case. 
 
-There will also be a `Repositories` folder here, which only contains the repository interfaces, but not the concrete implementations, which belong in the Infrastructure project.
-
-Similar to Repositories, sometimes I also have a `Services` folder here, with a bunch of interfaces to interact with other infrastructure services.
-
-Lastly, the `ValueObjects` folder contains any types that can only be defined by their attributes rather than their identity.
-
-Here's an example handler for the Match Player use case:
+Here's **MatchPlayerHandler** (logging removed for brevity):
 
 ```csharp
 public class MatchPlayerHandler
@@ -146,18 +175,54 @@ public class MatchPlayerHandler
                 await repository.UpdateMatchAsync(match);
                 await bus.Publish(new MatchWaitingForGame(match.Id));
             }
-
-            logger.LogInformation("{PlayerId} assigned to match {MatchId}.", playerId, match.Id);
-        }
-        else
-        {
-            logger.LogInformation("{PlayerId} already assigned to match {MatchId}.", playerId, match.Id);
         }
 
         return match.ToGameMatchResponse();
     }
 }
 ```
+
+There will also be a `Repositories` folder here, which only contains the repository interfaces, but not the concrete implementations, which belong in the **Infrastructure** project.
+
+Here's **IGameMatchRepository**:
+
+```csharp
+public interface IGameMatchRepository
+{
+    Task CreateMatchAsync(GameMatch match);
+    Task<GameMatch?> FindMatchForPlayerAsync(string playerId);
+    Task<GameMatch?> FindOpenMatchAsync();
+    Task UpdateMatchAsync(GameMatch match);
+}
+```
+
+Similar to Repositories, sometimes I also have a `Services` folder here, with a bunch of interfaces to interact with other infrastructure services.
+
+The `ValueObjects` folder contains any types that can only be defined by their attributes rather than their identity. Like **GameMatchState** here:
+
+```csharp
+public enum GameMatchState
+{
+    WaitingForOpponent,
+    MatchWaitingForGame,
+    GameReady
+}
+```
+
+Lastly, I also have a `Extensions` class there to provide a single method to register all the Core dependencies:
+
+```csharp
+public static IServiceCollection AddCore(
+    this IServiceCollection services)
+{
+    services.AddSingleton<GetMatchForPlayerHandler>()
+            .AddSingleton<MatchPlayerHandler>();
+
+    return services;
+}
+```
+
+<br/>
 
 **Contracts**  
 This one is not mentioned anywhere in the Clean Architecture theory, but I find it necessary.
@@ -172,9 +237,17 @@ These contracts are used as inputs and outputs for the use cases, so the Core pr
 
 Is that super clean? Can't tell, but it's the best I could come up with.
 
+Here are the DTOs used by the **MatchPlayerHandler**:
+
+```csharp
+public record GameMatchResponse(Guid Id, string Player1, string? Player2, string State, string? IpAddress, int? Port);
+public record JoinMatchRequest(string PlayerId);
+```
+
+<br/>
 
 **Infrastructure**  
-This is one of the "dirtiest" projects since it's allowed to get a dependency on pretty much any external framework.
+This is probably the "dirtiest" project since it's allowed to get a dependency on pretty much any external framework.
 
 <img src="{{ site.url }}/assets/images/clean-arch-infra.png" style="max-width: 50%" />
 
@@ -186,14 +259,112 @@ And, before you ask:
 
 > Yes, if you are using Entity Framework, here is where you implement a concrete EF repository. Your Core project should have no idea that you are using Entity Framework.
 
+Here's **MongoGameMatchRepository** (most method implementations removed for brevity):
+    
+```csharp
+public class MongoGameMatchRepository : IGameMatchRepository
+{
+    private const string collectionName = "matches";
+    private readonly IMongoCollection<GameMatch> dbCollection;
+    private readonly FilterDefinitionBuilder<GameMatch> filterBuilder = Builders<GameMatch>.Filter;
+
+    public MongoGameMatchRepository(IMongoDatabase mongoDatabase)
+    {
+        dbCollection = mongoDatabase.GetCollection<GameMatch>(collectionName);
+    }
+
+    public async Task<GameMatch?> FindMatchForPlayerAsync(string playerId)
+    {
+        var filter = filterBuilder.Or(
+            filterBuilder.Eq(match => match.Player1, playerId),
+            filterBuilder.Eq(match => match.Player2, playerId));
+        return await dbCollection.Find(filter).FirstOrDefaultAsync();
+    }
+
+    public async Task<GameMatch?> FindOpenMatchAsync()
+    {
+        // Find an open match
+    }
+
+    public async Task CreateMatchAsync(GameMatch match)
+    {
+        // Create the match
+    }
+
+    public async Task UpdateMatchAsync(GameMatch match)
+    {
+        // Update the match
+    }
+}
+```
+
+I also have a `Extensions` class there to provide a single method to register all the infrastructure dependencies:
+
+```csharp
+public static IServiceCollection AddInfrastructure(
+    this IServiceCollection services,
+    IConfiguration configuration)
+{
+    services.AddSingleton(serviceProvider =>
+    {
+        MongoClient mongoClient = new(configuration["DatabaseConnectionString"]);
+        return mongoClient.GetDatabase(configuration["DatabaseName"]);
+    })
+    .AddSingleton<IGameMatchRepository, MongoGameMatchRepository>();
+
+    services.AddMassTransit(configurator =>
+    {
+        configurator.UsingRabbitMq();
+    });
+
+    return services;
+}
+```
+
+Notice that **AddInfrastructure** eventually makes this call:
+
+```csharp
+services.AddSingleton<IGameMatchRepository, MongoGameMatchRepository>();
+```
+
+> And that's where the dependency inversion magic happens.
+
+So, when **MatchPlayerHandler** is instantiated, it will receive an instance of **MongoGameMatchRepository**, but it will have no idea that it's a Mongo repository since it only knows about **IGameMatchRepository**.
+
+Cool stuff!
+
+<br/>
+
 **API**  
 Here's where you'll define all your `controllers` and `endpoints`.
 
-But, more importantly, here's where the dependency inversion magic happens.
-
 <img src="{{ site.url }}/assets/images/clean-arch-api.png" style="max-width: 50%" />
 
-See, during startup, in `Program.cs`, you'll have something like this:
+Here are the endpoints:
+
+```csharp
+public static class MatchMakerEndpoints
+{
+    public static RouteGroupBuilder MapMatchMakerEndpoints(this IEndpointRouteBuilder routes)
+    {
+        var group = routes.MapGroup("/matches");
+
+        group.MapPost("/", async (JoinMatchRequest request, MatchPlayerHandler handler) =>
+        {
+            return await handler.HandleAsync(request);
+        });
+
+        group.MapGet("/", async (string playerId, GetMatchForPlayerHandler handler) =>
+        {
+            return await handler.HandleAsync(playerId);
+        });
+
+        return group;
+    }
+}
+```
+
+And, during startup, in `Program.cs`, you'll have something like this:
 
 ```csharp
 builder.Services.AddInfrastructure(builder.Configuration)
@@ -202,17 +373,8 @@ builder.Services.AddInfrastructure(builder.Configuration)
 
 Which takes care of registering all the dependencies in the Core and Infrastructure projects.
 
-In particular, that AddInfrastructure method will eventually make this call:
 
-```csharp
-services.AddSingleton<IGameMatchRepository, MongoGameMatchRepository>();
-```
-
-And that's where the concrete implementation of the IGameMatchRepository interface is registered.
-
-So, when the MatchPlayerHandler class is instantiated, it will receive an instance of MongoGameMatchRepository, but it will have no idea that it's a Mongo repository.
-
-Cool stuff!
+<br/>
 
 **Tests**  
 Lastly, we got our test project, which is where all the automated tests live.
@@ -224,6 +386,30 @@ And here's where one of the key benefits of Clean Architecture comes into play:
 > You can focus your unit tests on the business rules (entities and use cases) without having to worry about any external dependencies.
 
 This is possible because the Core project has no dependencies on any external framework, so you can easily mock any dependencies when testing the handlers.
+
+Here's one of the **MatchPlayerHandler** unit tests:
+
+```csharp
+[Fact]
+public async Task HandleAsync_ExistingOpenMatch_ReturnsMatch()
+{
+    // Arrange
+    GameMatch match = new(Guid.NewGuid(), "P1");
+    repositoryStub.Setup(repo => repo.FindMatchForPlayerAsync(It.IsAny<string>()))
+        .ReturnsAsync((GameMatch?)null);
+    repositoryStub.Setup(repo => repo.FindOpenMatchAsync())
+        .ReturnsAsync(match);
+    GameMatchResponse expected = new(match.Id, match.Player1, "P2", GameMatchState.MatchWaitingForGame.ToString(), null, null);
+
+    var handler = new MatchPlayerHandler(repositoryStub.Object, busStub.Object, loggerStub.Object);
+
+    // Act
+    var actual = await handler.HandleAsync(new JoinMatchRequest(expected.Player2!));
+
+    // Assert
+    actual.Should().Be(expected);
+}
+```
 
 And when you are done adding tests for Core, you know that you have a solid foundation that you can build on top of.
 
@@ -247,8 +433,6 @@ And that's it for today.
 
 I hope you enjoyed it.
 
-P.S. It's hard to show all the source code of this newsletter issue while keeping it brief, but when you are ready you can get the full clean architecture sample by [becoming a Patron here](https://www.patreon.com/juliocasal).
-
 ---
 
 <br/>
@@ -261,4 +445,4 @@ P.S. It's hard to show all the source code of this newsletter issue while keepin
 2. [​Building .NET REST APIs](https://dotnetrestapis.com/)​: A carefully crafted online course to learn how to build production ready .NET based REST APIs, step by step.
 <br/>
 
-3. [​Full source code](https://www.patreon.com/juliocasal). Get the source code behind all my newsletter articles and YouTube videos by supporting me on [Patreon](https://www.patreon.com/juliocasal).
+3. [​Full source code](https://www.patreon.com/juliocasal). Get the source code behind this and all my newsletter issues and YouTube videos by supporting me on [Patreon](https://www.patreon.com/juliocasal).
