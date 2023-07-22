@@ -9,7 +9,7 @@ image: /assets/images/clean-arch.jpg
 
 *Read time: 7 minutes*
 
-This issue is a bit longer than usual but I think it's worth it. 
+This issue is a bit longer than usual, but I think it's worth it. 
 
 Today I'll show you how I've been using Clean Architecture to structure my ASP.NET Core applications.
 
