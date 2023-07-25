@@ -121,14 +121,13 @@ public class GameMatch
 
     public string? Player2 { get; private set; }
 
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public GameMatchState State { get; private set; }
 
     // More properties here
 
     public void SetPlayer2(string player2)
     {
-        ArgumentException.ThrowIfNullOrEmpty(player2, nameof(player2));        
+        ArgumentException.ThrowIfNullOrEmpty(player2);        
 
         Player2 = player2;
         State = GameMatchState.MatchWaitingForGame;
@@ -198,18 +197,7 @@ public interface IGameMatchRepository
 
 Similar to Repositories, sometimes I also have a `Services` folder here, with a bunch of interfaces to interact with other infrastructure services.
 
-The `ValueObjects` folder contains any types that can only be defined by their attributes rather than their identity. Like **GameMatchState** here:
-
-```csharp
-public enum GameMatchState
-{
-    WaitingForOpponent,
-    MatchWaitingForGame,
-    GameReady
-}
-```
-
-Lastly, I also have a `Extensions` class there to provide a single method to register all the Core dependencies:
+Lastly, there's an `Extensions` class to provide a single method to register all the Core dependencies:
 
 ```csharp
 public static IServiceCollection AddCore(
@@ -247,7 +235,7 @@ public record JoinMatchRequest(string PlayerId);
 <br/>
 
 **Infrastructure**  
-This is probably the "dirtiest" project since it's allowed to get a dependency on pretty much any external framework.
+This is where the `Interface Adapters` live, and therefore this project is allowed to get a dependency on pretty much any external framework.
 
 <img src="{{ site.url }}/assets/images/clean-arch-infra.png" style="max-width: 50%" />
 
@@ -385,7 +373,7 @@ And here's where one of the key benefits of Clean Architecture comes into play:
 
 > You can focus your unit tests on the business rules (entities and use cases) without having to worry about any external dependencies.
 
-This is possible because the Core project has no dependencies on any external framework, so you can easily mock any dependencies when testing the handlers.
+This is possible because the Core project has no dependencies on any external framework, so you can easily mock any collaborators via the repository and service interfaces defined in Core.
 
 Here's one of the **MatchPlayerHandler** unit tests:
 
@@ -418,12 +406,12 @@ And when you are done adding tests for Core, you know that you have a solid foun
 #### **So, what do you get by using Clean Architecture?**
 In concrete terms, here are the benefits I've gotten in my projects by using Clean Architecture:
 
-* I can easily make changes to my core business rules (entities and use cases) since they are centralized in one place, and they are not mixed with any infrastructure concerns.
-* I can easily unit test those business rules without having to worry about any external dependencies.
-* It's easy to understand my use cases since they are small classes that only have one responsibility.
-* I don't have to worry about the database I ultimately choose to use. I can start with an in-memory repository and then switch to Mongo DB, Entity Framework with SQL Server, Cosmos DB, etc. without having to change any code in the Core project.
-* In fact, I can switch any infrastructure piece without having to change any code in the Core project, which protects me from unnecessary regressions.
-* My endpoints or controllers are super lean since all they do is invoke a handler and return the result. Because of this I don't worry much about unit testing them (let integration tests take care).
+* **I can easily make changes to my core business rules** (entities and use cases) since they are centralized in one place, and they are not mixed with any infrastructure concerns.
+* **I can easily unit test those business rules** without having to worry about any external dependencies.
+* **It's easy to understand my use cases** since they are small classes that only have one responsibility.
+* **I don't have to worry about the database I ultimately choose to use**. I can start with an in-memory repository and then switch to Mongo DB, Entity Framework with SQL Server, Cosmos DB, etc. without having to change any code in the Core project.
+* In fact, **I can switch any infrastructure piece** without having to change any code in the Core project, which protects me from unnecessary regressions.
+* **My endpoints or controllers are super lean** since all they do is invoke a handler and return the result. Because of this I don't worry much about unit testing them (let integration tests take care).
 
 But I think the most important benefit is this:
 
