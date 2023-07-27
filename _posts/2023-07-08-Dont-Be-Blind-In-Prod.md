@@ -200,4 +200,4 @@ I hope you enjoyed it.
 2. [​Building .NET REST APIs](https://dotnetrestapis.com/)​: A carefully crafted online course to learn how to build production ready .NET based REST APIs, step by step.
 <br/>
 
-3. [​Full source code](https://www.patreon.com/juliocasal). Get the source code behind all my newsletter articles and YouTube videos by supporting me on [Patreon](https://www.patreon.com/juliocasal).
+3. [​Full source code](https://www.patreon.com/juliocasal). Join me on [Patreon](https://www.patreon.com/juliocasal) to get the source code behind this and all my newsletter issues and YouTube videos.
