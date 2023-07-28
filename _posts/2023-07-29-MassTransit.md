@@ -48,9 +48,9 @@ With asynchronous communication or distributed messaging, there is always an int
 Because there's no coupling between microservices, you get a bunch of benefits right away:
 
 * **Loose coupling** between microservices, which makes it easier to evolve them independently.
-* **Resilience** since having one service fail won't affect the others.
-* **Better load distribution** since you can easily add more instances of a service to handle more load.
-* **Reduced latency** since the caller doesn't have to wait for the response.
+* **Resilience**, since having one service fail won't affect the others.
+* **Better load distribution**, since you can easily add more instances of a service to handle more load.
+* **Reduced latency**, since the caller doesn't have to wait for the response.
 
 But enabling this kind of communication in your .NET microservices seems like a lot of work. 
 
@@ -83,7 +83,7 @@ dotnet add package MassTransit.RabbitMQ
 #### **Step 2: Create The Message Contract**
 The Match Maker microservice somehow needs to communicate to the Game Manager microservice that a new game match is ready and that it is waiting for a game to be provisioned.
 
-So a contract needs to be established for to clearly represent this intent.
+So a contract needs to be established to clearly represent this intent.
 
 Let's create a `MatchWaitingForGame` record in our `MatchMaker.Contracts` project:
 
@@ -119,22 +119,65 @@ public class GameMatcher : IGameMatcher
 Then call its `Publish` method with a `MatchWaitingForGame` message when it's time to notify Game Manager that a new match is ready:
 
 ```csharp
+await bus.Publish(new MatchWaitingForGame(match.Id));
+```
+
+Here's the complete `GameMatcher` class:
+
+```csharp
 public class GameMatcher : IGameMatcher
 {
-    // More code here...
+    private readonly IGameMatchRepository repository;
+    private readonly IBus bus;
+    private readonly ILogger<GameMatcher> logger;
+
+    public GameMatcher(IGameMatchRepository repository, IBus bus, ILogger<GameMatcher> logger)
+    {
+        this.repository = repository;
+        this.bus = bus;
+        this.logger = logger;
+    }
 
     public async Task<GameMatchResponse> MatchPlayerAsync(JoinMatchRequest matchRequest)
     {
-        // More code here...
+        string playerId = matchRequest.PlayerId;
 
-        await bus.Publish(new MatchWaitingForGame(match.Id));
+        // Is the player already assigned to a match?
+        GameMatch? match = await repository.FindMatchForPlayerAsync(playerId);
 
-        // Even more code here...
+        if (match is null)
+        {
+            // Is there an open match he can join?
+            match = await repository.FindOpenMatchAsync();
+
+            if (match is null)
+            {
+                // Create a new match
+                match = new GameMatch(Guid.NewGuid(), playerId);
+
+                await repository.CreateMatchAsync(match);
+            }
+            else
+            {
+                // Assign to open match
+                match.SetPlayer2(playerId);
+                await repository.UpdateMatchAsync(match);
+                await bus.Publish(new MatchWaitingForGame(match.Id));
+            }
+
+            logger.LogInformation("{PlayerId} assigned to match {MatchId}.", playerId, match.Id);
+        }
+        else
+        {
+            logger.LogInformation("{PlayerId} already assigned to match {MatchId}.", playerId, match.Id);
+        }
+
+        return match.ToGameMatchResponse();
     }
 }
 ```
 
-For completeness, here's the minimal API that makes use of GameMatcher:
+And here's the minimal API endpoint that makes use of GameMatcher:
 
 ```csharp
 public static class MatchMakerEndpoints
@@ -193,7 +236,7 @@ So, any time a new `MatchWaitingForGame` message is available in RabbitMQ, the `
 <br/>
 
 #### **Step 5: Register The MassTransit Services**
-In your Match Maker microservice `Program.cs` file, add this:
+In your **Match Maker** microservice `Program.cs` file, add this:
 
 ```csharp
 builder.Services.AddMassTransit(configurator =>
@@ -206,7 +249,7 @@ That will take care of registering the required MassTransit services and will al
 
 You can further configure RabbitMQ in that `UsingRabbitMq` call, specifying things like the RabbitMQ host, port, username, password, etc. But for now we'll just use the defaults.
 
-You need to do something similar in your Game Manager microservice `Program.cs` file, but in that case you also need to register and configure your consumer:
+You need to do something similar in your **Game Manager** microservice `Program.cs` file, but in that case you also need to register and configure your consumer:
 
 ```csharp
 services.AddMassTransit(x =>
@@ -247,7 +290,7 @@ Now run both microservices:
 dotnet run
 ```
 
-You should see something like this in your consoles:
+You should see something like this in your terminals:
 
 ```
 info: MassTransit[0]
