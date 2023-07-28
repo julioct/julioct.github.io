@@ -12,7 +12,7 @@ on:
     branches: ["main"]
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '40 22 * * *'
+    - cron:  '0 7 * * 6'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
