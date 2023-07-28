@@ -328,7 +328,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-> Notice that both requests come back immediatelly, no waiting for a response from Game Manager. Yes!
+> Notice that both requests come back immediately, no waiting for a response from Game Manager. Yes!
 
 And, in the meanwhile, you'll see this in Game Manager's console:
 
