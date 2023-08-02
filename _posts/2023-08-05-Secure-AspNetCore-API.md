@@ -104,13 +104,13 @@ That will make sure any requests to this endpoint that have not been authenticat
 
 However, before we can use that method we also need to add the required authorization services.
 
-So, let's call **AddAuthorization()** after the AddAuthentication() call:
+So, let's call **AddAuthorizationBuilder()** after the AddAuthentication() call:
 
 ```csharp{4}
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication().AddJwtBearer();
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorizationBuilder();
 
 var app = builder.Build();
 ```
