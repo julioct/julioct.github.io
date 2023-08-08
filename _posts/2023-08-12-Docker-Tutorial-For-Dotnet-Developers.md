@@ -73,7 +73,7 @@ dotnet run
 GET http://localhost:5056/weatherforecast
 ```
 
-It will return a list of random weather forecasts (showing first forecast only for brevity):
+It will return a list of random weather forecasts (showing only first forecast here for brevity):
 
 ```http
 HTTP/1.1 200 OK
@@ -173,7 +173,7 @@ docker tag hellodocker:1.0.0 julioc.azurecr.io/hellodocker:1.0.0
 
 And, since Azure Container Registries are private, you have to authenticate first before you can push your Docker image there.
 
-For this, first enable the Admin user in your Azure Container Registry and copy the generated username and password:
+For this, first enable the **Admin user** in your Azure Container Registry and copy the generated username and password:
 
 <img src="{{ site.url }}/assets/images/acr-accesskeys.png"/>
 
