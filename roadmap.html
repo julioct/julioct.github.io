@@ -21,8 +21,6 @@
         data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
     <!-- End Deadline Funnel -->
 
-    <script async data-uid="eb3f4ed54d" src="https://dotnetmicroservices.ck.page/eb3f4ed54d/index.js"></script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,49 +54,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <div class="alert alert-warning small text-center" role="alert"
-        style="position: fixed; width: 100%; z-index: 1030;top: 0;">
-        <b>Limited-time 15% Discount</b> on any Course with Coupon Code <b>KEEPLEARNING</b>.
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text page-scroll" href="index.html">Julio Casal</a>
-
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html">
-                <img src="images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
-            </a> -->
-
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="roadmap.html">Roadmap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="blog.html">Newsletter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="courses.html">Courses</a>
-                    </li>
-                </ul>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
-
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 2rem;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -136,12 +93,12 @@
     <div id="what-you-will-learn" class="basic-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 my-auto order-lg-2">
+                <div class="col-lg-6 my-auto order-lg-2">
                     <div class="image-container">
                         <img class="img-fluid" src="images/roadmap-screenshot-raw.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-5 my-auto order-lg-1">
+                <div class="col-lg-6 my-auto order-lg-1">
                     <div class="container">
                         <div class="row justify-content-center">
                             <ul class="list-unstyled li-space-lg">
@@ -174,11 +131,7 @@
                         </div>
                         <div class="row justify-content-center mb-4">
                             <div class="col-lg-12">
-                                <div class="btn-solid-lg-container">
-                                    <a class="btn-solid-lg page-scroll" style="white-space: nowrap"
-                                        data-formkit-toggle="eb3f4ed54d"
-                                        href="https://dotnetmicroservices.ck.page/eb3f4ed54d">Get The FREE Roadmap</a>
-                                </div>
+                                <script async data-uid="07fed555f1" src="https://dotnetacademy.ck.page/07fed555f1/index.js"></script>
                             </div> <!-- end of col -->
                         </div>
                     </div>
@@ -186,44 +139,6 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of What you will learn -->
-
-    <!-- Social -->
-    <div class="basic-3 pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="icon-container">
-                        <span class="fa-stack">
-                            <a href="https://www.youtube.com/c/jcasalt" target="blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
-
-                        <span class="fa-stack">
-                            <a href="https://twitter.com/julioc" target="blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://www.linkedin.com/in/juliocasal" target="blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://www.patreon.com/juliocasal" target="blank">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-patreon fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of icon-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
-    <!-- end of social -->
 
     <!-- Footer -->
     <div class="footer-decoration">
@@ -250,8 +165,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2023 Julio Casal LLC | <a href="https://learn.dotnetacademy.io">Log
-                            In</a></p>
+                    <p class="p-small">Copyright © 2023 Julio Casal LLC</p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
