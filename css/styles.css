@@ -670,10 +670,6 @@ input[type='checkbox'] {
 	font-size: 1.25rem;
 }
 
-.navbar.fixed-top {
-	top: 70px
-}
-
 .red-value {
 	color: #BA1631;
 	font-weight: bold;
@@ -2101,10 +2097,6 @@ a:hover.back-to-top {
 	.navbar .logo-text {
 		font-size: 1.5rem;
 	}
-
-	.navbar.fixed-top {
-		top: 45px
-	}	
 }
 
 /* end of min-width 768px */
