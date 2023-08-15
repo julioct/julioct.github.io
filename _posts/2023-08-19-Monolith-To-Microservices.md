@@ -15,7 +15,7 @@ Many folks are eager to start reaping the benefits of microservices, usually aft
 
 The problem is that it can be hard to tell where to start and how to get there.
 
-Fortunately there are multiple ways to move from a monolith to microservices, and today I'll show you one that many teams have used successfully in the past.
+Fortunately, there are multiple ways to move from a monolith to microservices, and today I'll show you one that many teams have used successfully in the past.
 
 Let's dive in.
 
