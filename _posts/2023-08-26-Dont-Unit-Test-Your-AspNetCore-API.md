@@ -120,12 +120,12 @@ Add this class to your test project:
 internal class MatchMakerWebApplicationFactory : WebApplicationFactory<Program>
 {
     private const string dbFileName = "MatchMaker-Tests.db";
-    private readonly SqliteConnection sqliteConnection = new($"Data Source={dbFileName};Pooling=false");
+    private readonly SqliteConnection dbConn = new($"Data Source={dbFileName};Pooling=false");
 
     override protected void ConfigureWebHost(IWebHostBuilder builder)
     {
         File.Delete(dbFileName);
-        sqliteConnection.Open();
+        dbConn.Open();
 
         builder.ConfigureTestServices(services =>
         {
@@ -137,15 +137,16 @@ internal class MatchMakerWebApplicationFactory : WebApplicationFactory<Program>
 
             // Add the options as singletons since the IDbContextFactory is a singleton
             var dbContextOptionsBuilder = new DbContextOptionsBuilder<MatchMakerDbContext>();
-            dbContextOptionsBuilder.UseSqlite(sqliteConnection);
+            dbContextOptionsBuilder.UseSqlite(dbConn);
             services.AddSingleton(dbContextOptionsBuilder.Options);
-            services.AddSingleton<DbContextOptions>(s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
+            services.AddSingleton<DbContextOptions>(
+                s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
         });
     }
 
     protected override void Dispose(bool disposing)
     {
-        sqliteConnection?.Dispose();
+        dbConn?.Dispose();
         base.Dispose(disposing);
     }
 }
@@ -210,13 +211,14 @@ dotnet test
 
 Unfortunately, you will get something like this:
 
-```powershell{6}
+```powershell{6 7}
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 [xUnit.net 00:00:01.81]     MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch [FAIL] 
   Failed MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch [902 ms]
   Error Message:
-   System.Net.Http.HttpRequestException : Response status code does not indicate success: 401 (Unauthorized).
+   System.Net.Http.HttpRequestException : Response status code does not indicate success: 
+   401 (Unauthorized).
   Stack Trace:
      at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
    at MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch() in D:\projects\Testing_Blog_Post\MatchMaker.Api.IntegrationTests\MatchesControllerTests.cs:line 23
@@ -262,7 +264,7 @@ The key in this class is the **HandleAuthenticateAsync** method, which is where 
 
 We now need to tell our WebApplicationFactory to take advantage of it, so let's make an **AddAuthentication** call at the very end of the **ConfigureTestServices** call in the **MatchMakerWebApplicationFactory**:
 
-```csharp{16 17 18}
+```csharp{17 18 19}
 builder.ConfigureTestServices(services =>
 {
     // Add the DBContext factory to be used in our tests
@@ -273,9 +275,10 @@ builder.ConfigureTestServices(services =>
 
     // Add the options as singletons since the IDbContextFactory is a singleton
     var dbContextOptionsBuilder = new DbContextOptionsBuilder<MatchMakerDbContext>();
-    dbContextOptionsBuilder.UseSqlite(sqliteConnection);
+    dbContextOptionsBuilder.UseSqlite(dbConn);
     services.AddSingleton(dbContextOptionsBuilder.Options);
-    services.AddSingleton<DbContextOptions>(s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
+    services.AddSingleton<DbContextOptions>(
+        s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
 
     // Add the authentication handler
     services.AddAuthentication(defaultScheme: "TestScheme")
