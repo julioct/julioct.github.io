@@ -7,7 +7,7 @@ featured-image-alt: test-aspnetcore-api
 image: /assets/images/test-api.png
 ---
 
-*Read time: 5 minutes*
+*Read time: 6 minutes*
 
 Today I'll show how to write integration tests for an ASP.NET Core API, step by step.
 
@@ -46,7 +46,7 @@ public class MatchesController : ControllerBase
 }
 ```
 
-And let's say we already have an extensive unit test suite for the **GameMatcher** class, which gives us great confidence on that **MatchPlayerAsync** method.
+And let's say we already have an extensive unit test suite for the **GameMatcher.MatchPlayerAsync()** method, as well as for the **ToGameMatchResponse()** extension method. So that's all covered.
 
 Now we want to test the **JoinMatch** controller action, which is the entry point to the whole match making process.
 
@@ -78,7 +78,7 @@ dotnet new xunit -n MatchMaker.Api.IntegrationTests
 
 Then, add the following NuGet packages to your new test project:
 
-* **Microsoft.AspNetCore.Mvc.Testing**. Adds support for writting integration tests for ASP.NET Core apps.
+* **Microsoft.AspNetCore.Mvc.Testing**. Adds support for writing integration tests for ASP.NET Core apps.
 * **FluentAssertions**. Adds support for writing assertions in a more readable way.
 
 Also, add a project reference from your new test project to your API project:
@@ -106,12 +106,40 @@ To allow this, we need to add an **InternalsVisibleTo** element to our API proje
   </ItemGroup>    
 
 </Project>
-
 ```
 
 <br/>
 
-### **Step 3: Create a WebApplicationFactory**
+### **Step 3: Add the test database connection string**
+We could use an in-memory database for our integration tests, but since our application uses SQL Server, why not use a real SQL Server instance for our tests? 
+
+That should give us the highest confidence that the entire stack is working properly.
+
+Now, I'll assume you already have a SQL Server instance running somewhere in your box, so I won't get into how to stand up one.
+
+But we still need to come up with the DB used for the tests and also how to make our test project aware of the corresponding connection string. 
+
+And, since storing things like that in your code is not a great idea (even for tests), you can just store the connection string as a user secret.
+
+So, in your terminal, switch to your test project directory, and run this (replace YOUR-CONNECTION-STRING-HERE with your actual connection string):
+    
+```powershell
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:MatchMaker" "YOUR-CONNECTION-STRING-HERE"
+```
+
+For instance, since I'm using a SQL Server docker container, this is how my connection string looks like:
+
+```
+Server=localhost; Database=MatchMaker-Tests; User Id=sa; Password=MY-SA-PASSWORD-HERE;TrustServerCertificate=True
+```
+**Important: Here you want to use a completely different database name, meant only for your tests. Please don't use your real DB name!**
+
+Notice how my database is named **MatchMaker-Tests** here, not MatchMaker.
+
+<br/>
+
+### **Step 4: Create a WebApplicationFactory**
 A **WebApplicationFactory** is a class that can bootstrap an entire application in memory, which is what we need to do in our integration tests.
 
 Add this class to your test project:
@@ -119,48 +147,62 @@ Add this class to your test project:
 ```csharp
 internal class MatchMakerWebApplicationFactory : WebApplicationFactory<Program>
 {
-    private const string dbFileName = "MatchMaker-Tests.db";
-    private readonly SqliteConnection dbConn = new($"Data Source={dbFileName};Pooling=false");
-
     override protected void ConfigureWebHost(IWebHostBuilder builder)
     {
-        File.Delete(dbFileName);
-        dbConn.Open();
-
         builder.ConfigureTestServices(services =>
         {
-            // Add the DBContext factory to be used in our tests
-            services.AddDbContextFactory<MatchMakerDbContext>();
-
             // Remove the existing DbContextOptions
             services.RemoveAll(typeof(DbContextOptions<MatchMakerDbContext>));
 
-            // Add the options as singletons since the IDbContextFactory is a singleton
-            var dbContextOptionsBuilder = new DbContextOptionsBuilder<MatchMakerDbContext>();
-            dbContextOptionsBuilder.UseSqlite(dbConn);
-            services.AddSingleton(dbContextOptionsBuilder.Options);
-            services.AddSingleton<DbContextOptions>(
-                s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
+            // Register a new DBContext that will use our test connection string
+            string? connString = GetConnectionString();
+            services.AddSqlServer<MatchMakerDbContext>(connString);
+
+            // Delete the database (if exists) to ensure we start clean
+            MatchMakerDbContext dbContext = CreateDbContext(services);
+            dbContext.Database.EnsureDeleted();
         });
     }
 
-    protected override void Dispose(bool disposing)
+    private static string? GetConnectionString()
     {
-        dbConn?.Dispose();
-        base.Dispose(disposing);
+        var configuration = new ConfigurationBuilder()
+            .AddUserSecrets<MatchMakerWebApplicationFactory>()
+            .Build();
+
+        var connString = configuration.GetConnectionString("MatchMaker");
+        return connString;
     }
+
+    private static MatchMakerDbContext CreateDbContext(IServiceCollection services)
+    {
+        var serviceProvider = services.BuildServiceProvider();
+        var scope = serviceProvider.CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<MatchMakerDbContext>();
+        return dbContext;
+    }    
 }
 ```
 
-Notice how it defines a new database to be used for test purposes (**MatchMaker-Tests.db**), and how it uses the **ConfigureTestServices** method to replace the normal DBContext that the real app uses with a new one that will use the test database.
+A few key things about this class:
 
-It will also make sure to delete and recreate the test database at the start of **ConfigureWebHost**, and to release the database connection when the class is disposed.
+* The class has to be **internal** in order to be able to access the internal **Program** class of our API project.
+
+* **ConfigureWebHost** will be invoked by the WebApplicationFactory when it's time to bootstrap our API in memory.
+
+* **ConfigureTestServices** method is where we register all the services that will be used exclusively during our tests. Gives you a chance to replace any service with a test version.
+
+* We use **ConfigureTestServices** to replace the real DBContext that our API uses with a new one that will use our test database. 
+
+* **GetConnectionString** is a helper method that will read the connection string from our user secrets.
+
+* We also delete the test database via **EnsureDeleted** to ensure each test starts with a clean slate.
 
 Let's now go ahead and add the actual test.
 
 <br/>
 
-### **Step 4: Create the integration test**
+### **Step 5: Create the integration test**
 This is the easy part. Now that we have our WebApplicationFactory in place, writing the integration test is as easy as writing any program that talks to an HTTP API.
 
 Replace the default **UnitTest1** class with this test class in your test project:
@@ -172,7 +214,7 @@ public class MatchesControllerTests
     public async Task JoinMatchRequest_AddsPlayerToMatch()
     {
         // Arrange
-        using var application = new MatchMakerWebApplicationFactory();
+        var application = new MatchMakerWebApplicationFactory();
         JoinMatchRequest request = new("P1");
 
         var client = application.CreateClient();
@@ -193,7 +235,7 @@ public class MatchesControllerTests
 
 Our test is doing basically the following:
 
-1. It creates a new instance of our WebApplicationFactory, which will bootstrap our API in memory. 
+1. It creates a new instance of our WebApplicationFactory, which will bootstrap our API in memory and create our test database. 
 
 2. It creates a new JoinMatchRequest object, which is the payload that our API expects.
 
@@ -233,7 +275,7 @@ Let's fix that.
 
 <br/>
 
-### **Step 5: Add an authentication handler**
+### **Step 6: Add an authentication handler**
 An **AuthenticationHandler** is a class that can be used to provide authentication to our API.
 
 Let's add this class to our test project:
@@ -262,28 +304,26 @@ public class TestAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions
 
 The key in this class is the **HandleAuthenticateAsync** method, which is where we create an **AuthenticationTicket** that will be used to authenticate our test request.
 
-We now need to tell our WebApplicationFactory to take advantage of it, so let's make an **AddAuthentication** call at the very end of the **ConfigureTestServices** call in the **MatchMakerWebApplicationFactory**:
+We now need to tell our WebApplicationFactory to take advantage of it, so let's make an **AddAuthentication** call to **ConfigureTestServices** in our **MatchMakerWebApplicationFactory**:
 
-```csharp{17 18 19}
+```csharp{11 12 13}
 builder.ConfigureTestServices(services =>
 {
-    // Add the DBContext factory to be used in our tests
-    services.AddDbContextFactory<MatchMakerDbContext>();
-
     // Remove the existing DbContextOptions
     services.RemoveAll(typeof(DbContextOptions<MatchMakerDbContext>));
 
-    // Add the options as singletons since the IDbContextFactory is a singleton
-    var dbContextOptionsBuilder = new DbContextOptionsBuilder<MatchMakerDbContext>();
-    dbContextOptionsBuilder.UseSqlite(dbConn);
-    services.AddSingleton(dbContextOptionsBuilder.Options);
-    services.AddSingleton<DbContextOptions>(
-        s => s.GetRequiredService<DbContextOptions<MatchMakerDbContext>>());
+    // Register a new DBContext that will use our test connection string
+    string? connString = GetConnectionString();
+    services.AddSqlServer<MatchMakerDbContext>(connString);
 
     // Add the authentication handler
     services.AddAuthentication(defaultScheme: "TestScheme")
         .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
-            "TestScheme", options => { });            
+            "TestScheme", options => { });
+
+    // Delete the database (if exists) to ensure we start clean
+    MatchMakerDbContext dbContext = CreateDbContext(services);
+    dbContext.Database.EnsureDeleted();
 });
 ```
 
