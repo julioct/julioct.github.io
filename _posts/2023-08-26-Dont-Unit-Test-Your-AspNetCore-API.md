@@ -59,7 +59,7 @@ Not really. Unit tests are not the best option to test controller actions, becau
 
 * **ToGameMatchResponse can also be unit tested in isolation**. No need to test it again here.
 
-* **JoinMatch requires authorization**, but a unit test that just calls JoinMatch would skip that completelly.
+* **JoinMatch requires authorization**, but a unit test that just calls JoinMatch would skip that completely.
 
 > What we really want to test here is that the controller action can do its job in the context of the whole ASP.NET Core pipeline, which is something that unit tests can't do.
 
