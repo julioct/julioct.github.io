@@ -544,6 +544,7 @@ input[type='checkbox'] {
 	line-height: 0.875rem;
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 	min-width: 380px;
+	z-index: 100007;
 }
 
 .navbar .navbar-brand {
@@ -668,6 +669,10 @@ input[type='checkbox'] {
 	padding: 0;
 	border: none;
 	font-size: 1.25rem;
+}
+
+.navbar.fixed-top {
+	top: 70px
 }
 
 .red-value {
@@ -1485,6 +1490,23 @@ input[type='checkbox'] {
 	font-size: 1.3rem;
 }
 
+.card-bottom-right-text {
+    /* display: inline-block; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    background-color: #d33737;
+    color: white;
+    padding: 7px;
+    font-weight: bold;
+	float: right;
+}
+
+.card-footer {
+    background-color: transparent;
+    border: none;
+	padding-top: 0;
+}
+
 /*******************/
 /*     Toggle Button     */
 /*******************/
@@ -2137,7 +2159,7 @@ a:hover.back-to-top {
 	}
 
 	.navbar.top-nav-collapse {
-		padding-top: 0.5rem;
+		/* padding-top: 0.5rem; */
 		padding-bottom: 0.5rem;
 		background-color: #5f4dee;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);

@@ -38,6 +38,7 @@
 	line-height: 0.875rem;
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 	min-width: 380px;
+	z-index: 100007;
 }
 
 .navbar .navbar-brand {
@@ -152,6 +153,10 @@
 	padding: 0;
 	border: none;
 	font-size: 1.25rem;
+}
+
+.navbar.fixed-top {
+	top: 70px
 }
 
 /*****************/
@@ -370,7 +375,7 @@
 	}
 
 	.navbar.top-nav-collapse {
-		padding-top: 0.5rem;
+		// padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: #5f4dee;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
