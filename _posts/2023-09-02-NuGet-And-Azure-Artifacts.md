@@ -1,19 +1,19 @@
 ---
-title: "TNS #010: Create Reusable Libraries With NuGet"
+title: "TNS #010: Sharing Libraries With NuGet And Azure Artifacts"
 date: 2023-09-02
 layout: post
-featured-image: nuget-logo.png
-featured-image-alt: nuget-logo
-image: /assets/images/nuget-logo.png
+featured-image: nuget-and-azure-artifacts.png
+featured-image-alt: nuget-and-azure-artifacts
+image: /assets/images/nuget-and-azure-artifacts.png
 ---
 
 *Read time: 5 minutes*
 
-Today I'll show you how to share your reusable libraries via NuGet.
+Today I'll show you how to share your reusable libraries with NuGet and Azure Artifacts.
 
 As your team grows and you start finding repeated code across different repos and projects, you'll want to extract and centralize that code into reusable libraries.
 
-Most devs are very confortable with consuming NuGet packages, but not so much with creating and publishing them.
+Most devs are very comfortable with consuming NuGet packages, but not so much with creating and sharing them.
 
 But it's actually a very simple process, and it's something you should definitely learn how to do if you want to become a better .NET developer.
 
@@ -185,7 +185,7 @@ Here, **DotnetAcademy** is the name of the source we added in the previous step.
 
 Also, the very first time you do this you want to include that **--interactive** flag so that you can authenticate against your feed in the browser. That's where the credential provider kicks in.
 
-Once the packge gets published successfully, you can get back to your **Azure Artifacts** home page, refresh it, and you should see your shiny new package there:
+Once the package gets published successfully, you can get back to your **Azure Artifacts** home page, refresh it, and you should see your shiny new package there:
 
 <img src="{{ site.url }}/assets/images/azure-artifacts-package-published.png"/>
 
