@@ -671,9 +671,9 @@ input[type='checkbox'] {
 	font-size: 1.25rem;
 }
 
-.navbar.fixed-top {
+/* .navbar.fixed-top {
 	top: 70px
-}
+} */
 
 .red-value {
 	color: #BA1631;
@@ -2159,7 +2159,7 @@ a:hover.back-to-top {
 	}
 
 	.navbar.top-nav-collapse {
-		/* padding-top: 0.5rem; */
+		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		background-color: #5f4dee;
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
