@@ -82,9 +82,6 @@
                         <a class="nav-link page-scroll" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="roadmap.html">Roadmap</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link page-scroll" href="blog.html">Newsletter</a>
                     </li>
                     <li class="nav-item">
@@ -324,16 +321,20 @@
     <script src="js/favicon.js"></script>
 
     <script>
-        function check() {
+        function check()
+        {
             var checkBox = document.getElementById("checbox");
             var text1 = document.getElementsByClassName("text1");
             var text2 = document.getElementsByClassName("text2");
 
-            for (var i = 0; i < text1.length; i++) {
-                if (checkBox.checked == true) {
+            for (var i = 0; i < text1.length; i++)
+            {
+                if (checkBox.checked == true)
+                {
                     text1[i].style.display = "block";
                     text2[i].style.display = "none";
-                } else if (checkBox.checked == false) {
+                } else if (checkBox.checked == false)
+                {
                     text1[i].style.display = "none";
                     text2[i].style.display = "block";
                 }
