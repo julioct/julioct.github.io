@@ -82,7 +82,7 @@ app.Use(async (context, next) =>
     stopwatch.Stop();
     
     // Log the time it took to process the request
-    app.Logger.LogInformation("{RequestMethod} {RequestPath} request took {ElapsedMilliseconds}ms to complete",
+    app.Logger.LogInformation("{Method} {Path} request took {Milliseconds}ms to complete",
         context.Request.Method,
         context.Request.Path,
         stopwatch.ElapsedMilliseconds);
@@ -128,7 +128,7 @@ app.Use(async (context, next) =>
     {
         stopwatch.Stop();
 
-        app.Logger.LogInformation("{RequestMethod} {RequestPath} request took {ElapsedMilliseconds}ms to complete",
+        app.Logger.LogInformation("{Method} {Path} request took {Milliseconds}ms to complete",
             context.Request.Method,
             context.Request.Path,
             stopwatch.ElapsedMilliseconds);
@@ -173,7 +173,7 @@ public class RequestTimingMiddleware
             stopWatch.Stop();
 
             logger.LogInformation(
-                "{RequestMethod} {RequestPath} request took {EllapsedMilliseconds}ms to complete",
+                "{Method} {Path} request took {Milliseconds}ms to complete",
                 context.Request.Method,
                 context.Request.Path,
                 stopWatch.ElapsedMilliseconds);
