@@ -1,5 +1,5 @@
 ---
-title: "TNS #011: How To Use Middleware In ASP.NET Core"
+title: "TNS #011: How To Create Middleware Components"
 date: 2023-10-14
 layout: post
 featured-image: what-is-middleware.png
