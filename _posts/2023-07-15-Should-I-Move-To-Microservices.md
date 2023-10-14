@@ -131,12 +131,9 @@ I hope you enjoyed it.
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, there are 2 ways I can help you:**
 
-1. [​Building Microservices With .NET](https://dotnetmicroservices.com/):​ A complete online program designed to transform the way you build .NET systems at scale so that they are resilient, secure, easy to maintain, and ready to handle constantly changing business requirements and production demands.
+1. **[In-depth Courses For .NET Developers](https://juliocasal.com/courses)**:​ Whether you want to upgrade your software development skills to find a better job, you need best practices for your next project, or you just want to keep up with the latest tech, my in-depth courses will help you get there, step by step. **[Join 700+ students here](https://juliocasal.com/courses)**.
 <br/>
 
-2. [​Building .NET REST APIs](https://dotnetrestapis.com/)​: A carefully crafted online course to learn how to build production ready .NET based REST APIs, step by step.
-<br/>
-
-3. [​Full source code](https://www.patreon.com/juliocasal). Join me on [Patreon](https://www.patreon.com/juliocasal) to get the source code behind this and all my newsletter issues and YouTube videos.
+2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my newsletter issues and YouTube videos, plus get exclusive discounts for my courses. **[Join 25+ .NET developers here](https://www.patreon.com/juliocasal)**.
