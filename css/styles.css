@@ -244,6 +244,26 @@ a.white:hover {
 	text-decoration: none;
 }
 
+.btn-solid-lg-small-padding {
+	display: inline-block;
+	padding: 1.5rem 1.0rem 1.5rem 1.0rem;
+	border-radius: 32px;
+	background: linear-gradient(to right, #bf3333 33.33%, #d33737 66.33%, #f62d22 100%);
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-solid-lg-small-padding:hover {
+	background: linear-gradient(to left, #bf3333 33.33%, #d33737 66.33%, #f62d22 100%);
+	color: #f3f7fd;
+	/* needs to stay here because of the forced color property of a tag */
+	text-decoration: none;
+}
+
 .btn-solid-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
@@ -301,6 +321,27 @@ a.white:hover {
 }
 
 .btn-outline-lg:hover {
+	border: 1px solid #2f363b;
+	background-color: #2f363b;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.btn-outline-lg-small-padding {
+	display: inline-block;
+	padding: 1.5rem 1.0rem 1.5rem 1.0rem;
+	border: 1px solid #2f363b;
+	border-radius: 32px;
+	background-color: transparent;
+	color: #2f363b;
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-lg-small-padding:hover {
 	border: 1px solid #2f363b;
 	background-color: #2f363b;
 	color: #ffffff;
@@ -2109,7 +2150,7 @@ a:hover.back-to-top {
 	/* end of extra pages */
 
 	.btn-solid-lg {
-		line-height: 0;
+		line-height: 0;		
 	}
 
 	.btn-outline-lg {
@@ -2148,7 +2189,7 @@ a:hover.back-to-top {
 	.header .btn-solid-lg-container {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-	}
+	}	
 
 	/* Navigation */
 	.navbar {
