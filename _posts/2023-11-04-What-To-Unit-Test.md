@@ -127,7 +127,7 @@ public class GameMatch
 
         if (State != GameMatchState.MatchReady)
         {
-            throw new MatchNotReadyException($"Cannot set server details for match in state {State}.");
+            throw new MatchNotReadyException("Invalid state.");
         }
 
         ServerIpAddress = parsedIpAddress;
@@ -165,61 +165,43 @@ public void SetServerDetails_InvalidIpAddress_ThrowsInvalidIpAddressException()
 <br/>
 
 ### **Overcomplicated code**
-Here's a piece of overcomplicated code:
+Here's a piece of overcomplicated code in the **MatchesController** class:
 
 ```csharp
-[ApiController]
-[Route("matches")]
-public class MatchesController : ControllerBase
+[HttpPost]
+public async Task<GameMatchResponse> JoinMatchAsync(JoinMatchRequest request)
 {
-    private readonly IGameMatchRepository repository;
-    private readonly ILogger<MatchesController> logger;
+    string playerId = request.PlayerId;
 
-    public MatchesController(IGameMatchRepository repository, ILogger<MatchesController> logger)
+    GameMatch? match = await repository.FindMatchForPlayerAsync(playerId);
+
+    if (match is null)
     {
-        this.repository = repository;
-        this.logger = logger;        
-    }
-
-    [HttpPost]
-    public async Task<GameMatchResponse> JoinMatchAsync(JoinMatchRequest request)
-    {
-        string playerId = request.PlayerId;
-
-        logger.LogInformation("Matching player {PlayerId}...", playerId);
-
-        GameMatch? match = await repository.FindMatchForPlayerAsync(playerId);
+        match = await repository.FindOpenMatchAsync();
 
         if (match is null)
         {
-            match = await repository.FindOpenMatchAsync();
-
-            if (match is null)
+            match = new GameMatch
             {
-                match = new GameMatch
-                {
-                    Player1 = playerId,
-                    State = GameMatchState.WaitingForOpponent
-                };
+                Player1 = playerId,
+                State = GameMatchState.WaitingForOpponent
+            };
 
-                await repository.CreateMatchAsync(match);
-            }
-            else
-            {
-                match.Player2 = playerId;
-                match.State = GameMatchState.MatchReady;
-                await repository.UpdateMatchAsync(match);
-            }
-
-            logger.LogInformation("{PlayerId} assigned to match {MatchId}.", playerId, match.Id);
+            await repository.CreateMatchAsync(match);
         }
         else
         {
-            logger.LogInformation("{PlayerId} already assigned to match {MatchId}.", playerId, match.Id);
+            match.Player2 = playerId;
+            match.State = GameMatchState.MatchReady;
+            await repository.UpdateMatchAsync(match);
         }
-
-        return match.ToGameMatchResponse();        
     }
+    else
+    {
+        logger.LogInformation("{PlayerId} already assigned to existing match.", playerId);
+    }
+
+    return match.ToGameMatchResponse();        
 }
 ```
 
