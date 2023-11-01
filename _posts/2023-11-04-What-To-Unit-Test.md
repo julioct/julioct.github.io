@@ -252,4 +252,4 @@ I hope that helped.
 1. **[In-depth Courses For .NET Developers](https://juliocasal.com/courses)**:​ Whether you want to upgrade your software development skills to find a better job, you need best practices for your next project, or you just want to keep up with the latest tech, my in-depth courses will help you get there, step by step. **[Join 700+ students here](https://juliocasal.com/courses)**.
 <br/>
 
-2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my newsletter issues and YouTube videos, plus get exclusive discounts for my courses. **[Join 25+ .NET developers here](https://www.patreon.com/juliocasal)**.
+2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my YouTube videos, plus get exclusive discounts for my courses. **[Join 25+ .NET developers here](https://www.patreon.com/juliocasal)**.
