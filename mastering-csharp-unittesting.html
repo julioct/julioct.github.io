@@ -27,7 +27,7 @@
         {
             var iframe = document.getElementById('vimeoIframe');
             var src = iframe.getAttribute("src");
-            var newSrc = src.replace("background=1", "autoplay=1");
+            var newSrc = src.replace("controls=0", "autoplay=1");
             iframe.setAttribute("src", newSrc);
             document.getElementById('play-button').style.display = "none";
         }
@@ -641,6 +641,42 @@
         </div>
     </div>
     <!-- end of Enroll Button -->
+
+    <div id="course-preview" class="basic-2">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">Course Preview</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="image-container mb-2">
+                        <div class="video-wrapper">
+                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                <iframe id="vimeoIframe"
+                                    src="https://player.vimeo.com/video/883479231?h=60322166e9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=0"
+                                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    title="Mastering C# Unit Testing Preview"></iframe>
+                                <span id="play-button" class="video-play-button" onclick="playVideo();">
+                                    <span></span>
+                                </span>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div> <!-- end of video-wrapper -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 mx-auto">
+                    <p class="line-spaced-paragraph" style="text-align: center;"><strong>Here's a preview of a few of the lessons included in this course.</strong></p>
+                </div>
+            </div>            
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
 
     <div id="who-is-course-for" class="basic-1">
         <div class="container">
