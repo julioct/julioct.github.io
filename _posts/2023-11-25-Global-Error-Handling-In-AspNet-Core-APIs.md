@@ -186,14 +186,7 @@ public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IE
         return true;
     }
 
-    private static (int StatusCode, string Title) MapException(Exception exception)
-    {
-        return exception switch
-        {
-            ArgumentOutOfRangeException => (StatusCodes.Status400BadRequest, exception.Message),
-            _ => (StatusCodes.Status500InternalServerError, "We made a mistake but we are working on it!")
-        };
-    }
+    ...
 }
 ```
 
@@ -205,13 +198,26 @@ Then we **log the exception details** using the ILogger instance, making sure we
 
 Next, we use the **MapException()** method to map the exception to the correct status code and title. 
 
-Any ArgumentOutOfRangeException will return a 400 status code and the exception message as the title since this will be useful for clients. 
-
-Any other exception will return a 500 status code and a generic title since we don't want to reveal too much of our internal details to clients.
-
 Finally, we use the **Problem()** helper method to create a problem details response with the correct status code, title, and traceId.
 
 Notice also that we **return true at the end of the method**, which means we handled the exception and the request pipeline can stop here. 
+
+Here's the **MapException()** implementation:
+
+```csharp
+private static (int StatusCode, string Title) MapException(Exception exception)
+{
+    return exception switch
+    {
+        ArgumentOutOfRangeException => (StatusCodes.Status400BadRequest, exception.Message),
+        _ => (StatusCodes.Status500InternalServerError, "We made a mistake but we are on it!")
+    };
+}
+```
+
+Any ArgumentOutOfRangeException will return a 400 status code and the exception message as the title since this will be useful for clients. 
+
+Any other exception will return a 500 status code and a generic title since we don't want to reveal too much of our internal details to clients.
 
 There's just one more step to make this work.
 
@@ -250,7 +256,7 @@ Transfer-Encoding: chunked
 
 {
   "type": "https://tools.ietf.org/html/rfc9110#section-15.6.1",
-  "title": "We made a mistake but we are working on it!",
+  "title": "We made a mistake but we are on it!",
   "status": 500,
   "traceId": "00-1a14f00c442cbe9c882d83e409f5513e-a8c14abf348ef27e-00"
 }
