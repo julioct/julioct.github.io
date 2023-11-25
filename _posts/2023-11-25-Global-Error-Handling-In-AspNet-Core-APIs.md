@@ -156,8 +156,6 @@ With the new **IExceptionHandler** interface available starting with .NET 8, imp
 ```csharp
 public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
 {
-    private readonly ILogger<GlobalExceptionHandler> logger = logger;
-
     public async ValueTask<bool> TryHandleAsync(
         HttpContext httpContext,
         Exception exception,
