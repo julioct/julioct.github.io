@@ -133,7 +133,7 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 2 ways I can help you:**
 
-1. **[In-depth Courses For .NET Developers](https://juliocasal.com/courses)**:​ Whether you want to upgrade your software development skills to find a better job, you need best practices for your next project, or you just want to keep up with the latest tech, my in-depth courses will help you get there, step by step. **[Join 700+ students here](https://juliocasal.com/courses)**.
+1. **[Building Microservices With .NET​](https://dotnetmicroservices.com)**:​ An in-depth online program designed to transform the way you build .NET systems at scale so that they are resilient, secure, easy to maintain, and ready to handle constantly changing business requirements and production demands.
 <br/>
 
-2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my newsletter issues and YouTube videos, plus get exclusive discounts for my courses. **[Join 25+ .NET developers here](https://www.patreon.com/juliocasal)**.
+2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my YouTube videos, plus get exclusive discounts for my premium courses.
