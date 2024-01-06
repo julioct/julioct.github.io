@@ -68,79 +68,9 @@ title: Julio Casal | Helping .NET developers reach the next level
 </div> <!-- end of basic-1 -->
 <!-- end of The Tech -->
 
-<!-- Whom Am I -->
-<div id="who-am-i" class="basic-1">
+<div id="newsletter-recent" class="basic-1">
     <div class="container">
-        <div class="row  mt-4">
-            <div class="col-lg-4">
-                <div class="image-container">
-                    <img class="img-fluid" src="images/Julio-7.jpg" alt="alternative">
-                </div> <!-- end of image-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-8">
-                <div class="text-container">
-                    <h2>ABOUT ME</h2>
-                    <p class="line-spaced-paragraph">I spent the last decade helping multiple teams at Microsoft
-                        build all sorts of C#/.NET cloud-based services that handle millions of requests every month.
-                    </p>
-                    <p class="line-spaced-paragraph">Today, I help software developers unlock the power of the .NET
-                        platform
-                        and the cloud to reach the next level in their careers.</p>
-                    <div class="btn-solid-lg-container">
-                        <a class="btn-solid-reg page-scroll" href="about.html">Read My Story</a>
-                    </div>
-                </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-1 -->
-<!-- end of Whom Am I -->
-
-<div id="what-you-get-when-enroll" class="what-you-get">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3 class="h2-heading  mb-4">3 DIFFERENT WAYS I CAN HELP YOU</h3>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-        <div class="row">
-            <div class="col">
-                <i class="fas fa-1 dark-blue"></i>
-                <h5>THE .NET SATURDAY WEEKLY NEWSLETTER</h5>
-                <p class="line-spaced-paragraph">Every Saturday morning, you'll get 1 actionable tip to upgrade your
-                    .NET skills.</p>
-                <div class="btn-solid-lg-container mb-4">
-                    <a class="btn-solid-reg page-scroll" href="blog.html" style="white-space: nowrap;">Join 10,000+
-                        Subscribers</a>
-                </div>
-            </div> <!-- end of col -->
-            <div class="col">
-                <i class="fas fa-2 dark-blue"></i>
-                <h5>MY .NET BACKEND DEVELOPER ROADMAP</h5>
-                <p class="line-spaced-paragraph">An interactive roadmap to update your .NET skills with today's
-                    top technologies.</p>
-                <div class="btn-solid-lg-container mb-4">
-                    <a class="btn-solid-reg page-scroll" href="roadmap.html" style="white-space: nowrap;">Get The
-                        Roadmap</a>
-                </div>
-            </div> <!-- end of col -->
-            <div class="col">
-                <i class="fas fa-3 dark-blue"></i>
-                <h5>DEEP-DIVE COURSES FOR .NET DEVELOPERS</h5>
-                <p class="line-spaced-paragraph">Self-paced courses where you'll learn essential .NET skills by building
-                    real world apps.</p>
-                <div class="btn-solid-lg-container">
-                    <a class="btn-solid-reg page-scroll" href="courses.html" style="white-space: nowrap;">View
-                        Courses</a>
-                </div>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of counter -->
-
-<div id="newsletter-recent" class="basic-1 pt-0">
-    <div class="container">
-        <div class="row">
+        <div class="row mt-4">
             <div class="col">
                 <h2 class="h2-heading" style="margin-bottom: 2rem;">RECENT ISSUES OF THE .NET SATURDAY</h2>
             </div> <!-- end of col -->
@@ -185,6 +115,20 @@ title: Julio Casal | Helping .NET developers reach the next level
     </div> <!-- end of container -->
 </div> <!-- end of newsletter-recent -->
 
+<!-- Recent Youtube Videos -->
+<div id="youtube-videos" class="basic-1">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <h2 class="h2-heading" style="margin-bottom: 2rem;">LATEST FROM THE CHANNEL</h2>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div id="video-container" class="row justify-content-center">
+            
+        </div>
+    </div> <!-- end of container -->
+</div> <!-- end of youtube-videos -->
+
 <!-- Problem Statement -->
 <div id="newsletter-subscribe" class="basic-1">
     <div class="container">
@@ -196,3 +140,51 @@ title: Julio Casal | Helping .NET developers reach the next level
     </div> <!-- end of container -->
 </div> <!-- end of cards-1 -->
 <!-- end of description -->
+
+<!-- YouTube API Script -->
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+    function loadYouTubeVideos() {
+        gapi.client.init({
+            'apiKey': 'AIzaSyBvNkb5hBiWySW2e0ilN11r6nVQjcWod10'
+        }).then(function() {
+            return gapi.client.request({
+                'path': 'https://www.googleapis.com/youtube/v3/search',
+                'params': {
+                    'part': 'snippet',
+                    'channelId': 'UCw8aBxRvQ2ksWNFuO5eHdmA',
+                    'order': 'date',
+                    'maxResults': 3
+                }
+            });
+        }).then(function(response) {
+            var videos = response.result.items;
+            var videoContainer = document.getElementById('video-container');
+
+            videos.forEach(function(video) {
+                var videoId = video.id.videoId;
+                var videoTitle = video.snippet.title;
+                var videoThumbnail = video.snippet.thumbnails.medium.url;
+
+                var videoElement = document.createElement('div');
+                videoElement.classList.add('col');
+
+                videoElement.innerHTML = `
+                        <div class="card course h-100 text-center" style="transition: box-shadow 0.2s ease-in-out;">
+                            <div class="card-image">
+                                <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">
+                                    <img class="img-fluid" style="width: 100%;" src="${videoThumbnail}" alt="${videoTitle}">
+                                </a>
+                            </div>
+                        </div>
+                `;
+
+                videoContainer.appendChild(videoElement);
+            });
+        }, function(error) {
+            console.error('Error loading YouTube videos:', error);
+        });
+    }
+
+    gapi.load('client', loadYouTubeVideos);
+</script>
