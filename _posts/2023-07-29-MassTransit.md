@@ -1,10 +1,11 @@
 ---
-title: "TNS #005: Easy Distributed Messaging With MassTransit"
+title: "Easy Distributed Messaging With MassTransit"
 date: 2023-07-29
 layout: post
 featured-image: MassTransit-Issue-Title.png
 featured-image-alt: MassTransit
 image: /assets/images/MassTransit-Issue-Title.png
+issue-number: 5
 ---
 
 *Read time: 5 minutes*

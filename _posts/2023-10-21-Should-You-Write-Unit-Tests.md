@@ -1,10 +1,11 @@
 ---
-title: "TNS #012: Should You Write Unit Tests?"
+title: "Should You Write Unit Tests?"
 date: 2023-10-21
 layout: post
 featured-image: cost-of-not-having-tests.png
 featured-image-alt: cost-of-not-having-tests
 image: /assets/images/cost-of-not-having-tests.png
+issue-number: 12
 ---
 
 *Read time: 5 minutes*

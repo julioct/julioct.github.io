@@ -1,10 +1,11 @@
 ---
-title: "TNS #014: What Should I Unit Test?"
+title: "What Should I Unit Test?"
 date: 2023-11-04
 layout: post
 featured-image: the-4-types-of-code.png
 featured-image-alt: the-4-types-of-code
 image: /assets/images/the-4-types-of-code.png
+issue-number: 14
 ---
 
 *Read time: 4 minutes*

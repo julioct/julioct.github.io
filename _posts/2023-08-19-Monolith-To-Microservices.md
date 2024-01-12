@@ -1,10 +1,11 @@
 ---
-title: "TNS #008: How To Move From A Monolith To Microservices"
+title: "How To Move From A Monolith To Microservices"
 date: 2023-08-19
 layout: post
 featured-image: monolith-to-microservices-featured.png
 featured-image-alt: monolith-to-microservices
 image: /assets/images/monolith-to-microservices-featured.png
+issue-number: 8
 ---
 
 *Read time: 5 minutes*

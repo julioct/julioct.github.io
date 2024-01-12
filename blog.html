@@ -92,14 +92,17 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
 
                 <div class="card mb-3" style="border: 0;">
                     <div class="row no-gutters">
-                        <div class="col-md-3" style="display: flex; align-items: center">
-                            {% if post.featured-image %}{% include post-featured-image.html image=post.featured-image
-                            alt=post.featured-image-alt %}{% endif %}
+                        <div class="col-md-1" style="display: flex; align-items: center; justify-content: center;">
+                            <a class="post-link" style="text-decoration: none" href="{{ post.url | relative_url }}">
+                                <span style="font-size: 1em; color: #ffffff; font-weight: bold; background-color: #5f4dee; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
+                                    {{ post.issue-number | prepend: "#" }}
+                                </span>
+                            </a>                         
                         </div>
                         <div class="col">
                             <div class="card-body">                                
-                                <h3>
-                                    <a class="post-link" href="{{ post.url | relative_url }}">
+                                <h3 class="mb-1" style="font-size: 1.5em; color: #5f4dee; text-transform: uppercase; letter-spacing: 1px;">
+                                    <a class="post-link" href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
                                         {{ post.title | escape }}
                                     </a>
                                 </h3>

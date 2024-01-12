@@ -1,10 +1,11 @@
 ---
-title: "TNS #004: Keep It Clean With Clean Architecture"
+title: "Keep It Clean With Clean Architecture"
 date: 2023-07-22
 layout: post
 featured-image: clean-arch.jpg
 featured-image-alt: Keep It Clean With Clean Architecture
 image: /assets/images/clean-arch.jpg
+issue-number: 4
 ---
 
 *Read time: 7 minutes*

@@ -1,10 +1,11 @@
 ---
-title: "TNS #001: How To Monitor Your ASP.NET Core Application In Azure"
+title: "How To Monitor Your ASP.NET Core Application In Azure"
 date: 2023-07-01
 layout: post
 featured-image: HowToMetrics.jpg
 featured-image-alt: How To Monitor Your ASP.NET Core Application In Azure
 image: /assets/images/HowToMetrics.jpg
+issue-number: 1
 ---
 
 *Read time: 3 minutes*

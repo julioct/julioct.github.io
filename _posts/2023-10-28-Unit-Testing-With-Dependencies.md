@@ -1,10 +1,11 @@
 ---
-title: "TNS #013: The Problem With Dependencies And Unit Testing"
+title: "The Problem With Dependencies And Unit Testing"
 date: 2023-10-28
 layout: post
 featured-image: dependency-injection.png
 featured-image-alt: dependency-injection
 image: /assets/images/dependency-injection.png
+issue-number: 13
 ---
 
 *Read time: 5 minutes*

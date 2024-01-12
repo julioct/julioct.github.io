@@ -1,10 +1,11 @@
 ---
-title: "TNS #016: Global Error Handling in ASP.NET Core APIs"
+title: "Global Error Handling in ASP.NET Core APIs"
 date: 2023-11-25
 layout: post
 featured-image: global-error-handling.png
 featured-image-alt: global-error-handling
 image: /assets/images/global-error-handling.png
+issue-number: 16
 ---
 
 *Read time: 5 minutes*

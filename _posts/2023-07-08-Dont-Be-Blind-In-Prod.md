@@ -1,10 +1,11 @@
 ---
-title: "TNS #002: Don't Be Blind In Prod!"
+title: "Don't Be Blind In Prod!"
 date: 2023-07-08
 layout: post
 featured-image: dont-be-blind-prod.jpg
 featured-image-alt: Don't Be Blind In Prod!
 image: /assets/images/dont-be-blind-prod.jpg
+issue-number: 2
 ---
 
 *Read time: 4 minutes*

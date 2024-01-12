@@ -1,10 +1,11 @@
 ---
-title: "TNS #006: How To Secure An ASP.NET Core API"
+title: "How To Secure An ASP.NET Core API"
 date: 2023-08-05
 layout: post
 featured-image: secure-aspnetcore-api.png
 featured-image-alt: secure-aspnetcore-api
 image: /assets/images/secure-aspnetcore-api.png
+issue-number: 6
 ---
 
 *Read time: 5 minutes*

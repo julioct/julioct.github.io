@@ -1,10 +1,11 @@
 ---
-title: "TNS #007: Docker Tutorial For .NET Developers"
+title: "Docker Tutorial For .NET Developers"
 date: 2023-08-12
 layout: post
 featured-image: docker-containers-apps-bot-crane.png
 featured-image-alt: docker-containers-apps-bot-crane
 image: /assets/images/docker-containers-apps-bot-crane.png
+issue-number: 7
 ---
 
 *Read time: 5 minutes*

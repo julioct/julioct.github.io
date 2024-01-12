@@ -1,10 +1,11 @@
 ---
-title: "TNS #009: Don't Unit Test Your ASP.NET Core API"
+title: "Don't Unit Test Your ASP.NET Core API"
 date: 2023-08-26
 layout: post
 featured-image: test-api.png
 featured-image-alt: test-aspnetcore-api
 image: /assets/images/test-api.png
+issue-number: 9
 ---
 
 *Read time: 6 minutes*

@@ -1,10 +1,11 @@
 ---
-title: "TNS #010: Sharing Libraries With NuGet And Azure Artifacts"
+title: "Sharing Libraries With NuGet And Azure Artifacts"
 date: 2023-09-02
 layout: post
 featured-image: nuget-and-azure-artifacts.png
 featured-image-alt: nuget-and-azure-artifacts
 image: /assets/images/nuget-and-azure-artifacts.png
+issue-number: 10
 ---
 
 *Read time: 5 minutes*

@@ -1,10 +1,11 @@
 ---
-title: "TNS #011: How To Create Middleware Components"
+title: "How To Create Middleware Components"
 date: 2023-10-14
 layout: post
 featured-image: what-is-middleware.png
 featured-image-alt: what-is-middleware
 image: /assets/images/what-is-middleware.png
+issue-number: 11
 ---
 
 *Read time: 4 minutes*
