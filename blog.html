@@ -20,7 +20,7 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
                                 <h1 class="h2-heading" style="text-align: left;">Learn, Grow & Upgrade Your .NET
                                     Skills</h1>
                                 <p class="line-spaced-paragraph white">
-                                    Join 10,000+ subscribers to The .NET Saturday. Every Saturday
+                                    Join 11,000+ subscribers to The .NET Saturday. Every Saturday
                                     morning, you'll get 1 actionable tip to upgrade your .NET skills in less than 5
                                     minutes.
                                 </p>
@@ -34,7 +34,7 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
                         </div> <!-- end of text-container -->
                     </div> <!-- end of div -->
                 </div> <!-- end of div -->
-            </div> <!-- end of col -->            
+            </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 
@@ -94,21 +94,24 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
                     <div class="row no-gutters">
                         <div class="col-md-1" style="display: flex; align-items: center; justify-content: center;">
                             <a class="post-link" style="text-decoration: none" href="{{ post.url | relative_url }}">
-                                <span style="font-size: 1em; color: #ffffff; font-weight: bold; background-color: #5f4dee; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
+                                <span
+                                    style="font-size: 1em; color: #ffffff; font-weight: bold; background-color: #5f4dee; padding: 10px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
                                     {{ post.issue-number | prepend: "#" }}
                                 </span>
-                            </a>                         
+                            </a>
                         </div>
                         <div class="col">
-                            <div class="card-body">                                
-                                <h3 class="mb-1" style="font-size: 1.5em; color: #5f4dee; text-transform: uppercase; letter-spacing: 1px;">
-                                    <a class="post-link" href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                            <div class="card-body">
+                                <h3 class="mb-1"
+                                    style="font-size: 1.5em; color: #5f4dee; text-transform: uppercase; letter-spacing: 1px;">
+                                    <a class="post-link" href="{{ post.url | relative_url }}"
+                                        style="text-decoration: none; color: inherit;">
                                         {{ post.title | escape }}
                                     </a>
                                 </h3>
                                 <span class="post-meta">{{ post.date | date: date_format }}</span>
                                 {%- if site.show_excerpts -%}
-                                    {{ post.excerpt }}
+                                {{ post.excerpt }}
                                 {%- endif -%}
                             </div>
                         </div>
@@ -146,6 +149,29 @@ title: Julio Casal | The .NET Saturday Weekly Newsletter
 
                 {%- endif -%}
             </div> <!-- end of col-->
+            <div class="col-md-3">
+                <div class="sticky-top" style="top: 6rem;">
+                    <h5>Subscribe to the Newsletter</h5>
+                    <p>Join 11,000+ readers of The .NET Saturday for exclusive tips to learn, grow & upgrade your .NET
+                        skills.
+                    </p>
+                    <script async data-uid="2747effed2" src="https://juliocasal.ck.page/2747effed2/index.js"></script>
+                    <h5 class="mt-4">Share this Article on</h5>
+                    <div class="icon-container">
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}" target="blank">
+                                <i class="fab fa-twitter" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack" style="width: 2em;">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                                target="_blank">
+                                <i class="fab fa-linkedin-in" style="color: #5f4dee;font-size: 1.5em"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of icon-container -->
+                </div>
+            </div>
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 </div> <!-- end of cards-1 -->

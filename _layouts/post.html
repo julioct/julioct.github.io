@@ -130,15 +130,16 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col">
-                                    <div class="image-container mt-4 mb-4" style="display: flex; justify-content: center; align-items: center;">
+                                    <div class="image-container mt-4 mb-4"
+                                        style="display: flex; justify-content: center; align-items: center;">
                                         {% if page.featured-image %}{% include post-featured-image.html
                                         image=page.featured-image
                                         alt=page.featured-image-alt %}{% endif %}
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Post Contents -->
                     <div>
@@ -200,36 +201,30 @@
                     <!-- end of Post Contents -->
                 </div>
                 <div class="col-md-3 mt-4">
-                    <h5>About the Newsletter</h5>
-                    <p>10,000+ subscribers get one tip to learn, grow & upgrade their .NET skills every Saturday
-                        morning.
-                    </p>
-                    <div class="btn-solid-lg-container">
-                        <a class="btn-solid-sm" style="color: white;" href="/blog.html">Subscribe</a>
+                    <div class="sticky-top" style="top: 6rem;">
+                        <h5>Subscribe to the Newsletter</h5>
+                        <p>Join 11,000+ readers of The .NET Saturday for exclusive tips to learn, grow & upgrade your
+                            .NET
+                            skills.
+                        </p>
+                        <script async data-uid="2747effed2"
+                            src="https://juliocasal.ck.page/2747effed2/index.js"></script>
+                        <h5 class="mt-4">Share this Article on</h5>
+                        <div class="icon-container">
+                            <span class="fa-stack" style="width: 2em;">
+                                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"
+                                    target="blank">
+                                    <i class="fab fa-twitter" style="color: #5f4dee;font-size: 1.5em"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack" style="width: 2em;">
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                                    target="_blank">
+                                    <i class="fab fa-linkedin-in" style="color: #5f4dee;font-size: 1.5em"></i>
+                                </a>
+                            </span>
+                        </div> <!-- end of icon-container -->
                     </div>
-                    <h5 class="mt-4">Connect with Me</h5>
-                    <div class="icon-container">
-                        <span class="fa-stack" style="width: 2em;">
-                            <a href="https://www.youtube.com/c/jcasalt" target="blank">
-                                <i class="fab fa-youtube" style="color: #5f4dee;font-size: 1.5em"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack" style="width: 2em;">
-                            <a href="https://twitter.com/julioc" target="blank">
-                                <i class="fab fa-twitter" style="color: #5f4dee;font-size: 1.5em"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack" style="width: 2em;">
-                            <a href="https://www.linkedin.com/in/juliocasal" target="blank">
-                                <i class="fab fa-linkedin-in" style="color: #5f4dee;font-size: 1.5em"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack" style="width: 2em;">
-                            <a href="https://www.patreon.com/juliocasal" target="blank">
-                                <i class="fab fa-patreon" style="color: #5f4dee;font-size: 1.5em"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of icon-container -->
                 </div>
             </div>
         </div>
