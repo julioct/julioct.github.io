@@ -4,6 +4,7 @@ backend:
   name: github
   repo: julioct/julioct.github.io
   branch: main # Branch to update (optional; defaults to master)
+  site_domain: benevolent-griffin-a30179.netlify.app
 media_folder: 'assets/uploads'
 collections:
   - name: 'blog'
