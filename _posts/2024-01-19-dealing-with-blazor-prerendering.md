@@ -31,7 +31,7 @@ Prerendering is enabled by default for all your interactive components, regardle
 
 Before .NET 8, I was mostly used to standalone Blazor WASM, since I love the idea of running everything I can in the browser, for the best possible experience.
 
-However, when I started working with .NET 8, and started creating Blazor WASM apps (via the new template) that talk to my REST APIs, something odd happened.
+However, when I started working with .NET 8 and started creating Blazor WASM apps (via the new template) that talk to my REST APIs, something odd happened.
 
 I noticed that the first time I loaded a page that fetched data from my API, it would end up calling my API twice. 
 
@@ -112,13 +112,13 @@ It turns out that there's a cool Blazor service called [PersistentComponentState
 
 And it's actually very easy to use:
 
-1. Inject an instance of the **PersistentComponentState** service:
+**1. Inject an instance of the PersistentComponentState service:**
 
 ```csharp
 @inject PersistentComponentState ApplicationState
 ```
 
-2. Register a callback to persist the component state before the app is paused (when prerendering completes):
+**2. Register a callback to persist the component state before the app is paused** (when prerendering completes):
 
 ```csharp
 @implements IDisposable
@@ -150,6 +150,32 @@ And it's actually very easy to use:
 At the end of the prerendering stage the **PersistData** method will take care of persisting the games array, with all the loaded data, using the key specified by **gamesDataKey**.
 
 Notice that you should also implement **IDisposable** and dispose the subscription on the **Dispose** method.
+
+**3. Update OnInitializedAsync to load the persisted data, if available.** Otherwise, get data from the backend:
+
+```csharp
+protected override async Task OnInitializedAsync()
+{
+    persistingSubscription = ApplicationState.RegisterOnPersisting(PersistData);
+
+    if (!ApplicationState.TryTakeFromJson<Game[]>(gamesDataKey, out var restored))
+    {
+        games = await Client.GetGamesAsync();
+    }
+    else
+    {
+        games = restored;
+    }
+}
+```
+
+And that's it! 
+
+With this approach:
+
+* Your page will load fast, taking full advantage of prerendering
+* A single call is made to your API to load the initial data
+* You have a fully interactive Blazor WASM client that takes full advantage of the prerendered data
 
 
 
