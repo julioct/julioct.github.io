@@ -132,6 +132,7 @@ And it's actually very easy to use:
 
 ```csharp
 @implements IDisposable
+@inject PersistentComponentState ApplicationState
 
 @code {
     private const string gamesDataKey = "GamesData";
@@ -163,7 +164,7 @@ Notice that you should also implement **IDisposable** and dispose of the subscri
 
 **3. Update OnInitializedAsync to load the persisted data, if available.** Otherwise, get data from the backend:
 
-```csharp
+```csharp{5 6 7 8 9 10 11 12}
 protected override async Task OnInitializedAsync()
 {
     persistingSubscription = ApplicationState.RegisterOnPersisting(PersistData);
