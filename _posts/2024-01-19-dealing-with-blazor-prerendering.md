@@ -1,21 +1,25 @@
 ---
 layout: post
-featured-image: /assets/images/blazorprerendering.jpg
+featured-image: blazorprerendering.jpg
 issue-number: 18
 title: Dealing With Blazor Prerendering
-date: 2024-01-20T14:00:00.000Z
+date: 2024-01-20
 ---
-*Read time: X minutes*
+*Read time: 4 minutes*
 
-\[WHAT THIS POST IS ABOUT]
+Today I want to talk about Blazor prerendering and how to deal with it when you have a Blazor WASM app that talks to your backend API.
 
-\[WHY IT IS IMPORTANT]
+Prerendering is a great feature that can make your Blazor app feel more responsive to users, and can even improve your SEO.
 
-\[THE CHALLENGE]
+However, it can also cause some unexpected behavior if you're not aware of it or if you come from building standalone Blazor WASM apps like me.
 
-\[HOW I'LL SOLVE IT FOR YOU TODAY]
+With a good understanding of how prerendering can work for you, your Blazor apps:
 
-\[CALL TO ACTION]
+* Will load faster than when using standalone Blazor WASM
+* Will efficiently call your backend API only when needed
+* Will be just as responsive and interactive as standalone Blazor WASM apps
+
+Let's get started.
 
 <br/>
 
@@ -26,6 +30,8 @@ date: 2024-01-20T14:00:00.000Z
 The server outputs the HTML UI of the page as soon as possible in response to the initial request, which makes the app feel more responsive to users.
 
 Prerendering is enabled by default for all your interactive components, regardless of the render mode (Server, WebAssembly, or Auto).
+
+<br>
 
 ## **What's the problem with prerendering?**
 
@@ -39,7 +45,7 @@ For instance, in the razor component that renders this simple page:
 
 ![](/assets/images/blazor-table.jpg)
 
-This `OnInitializedAsync()` implementation would always be invoked twice:
+This **OnInitializedAsync()** implementation would always be invoked twice:
 
 ```csharp
 @code {
@@ -54,13 +60,15 @@ This `OnInitializedAsync()` implementation would always be invoked twice:
 
 That never happened in the same version of the app when running in .NET 7 Blazor WASM.
 
-This was driving me crazy for a few hours, but after learning about [prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) and how it affects the lifecycle of a Blazor app, things started making sense.
+This was driving me crazy for a few hours, but after learning about [prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) and how it affects the lifecycle of a Blazor app, things started making sense.  
+
+<br>
 
 ### **Why is OnInitializedAsync invoked twice?**
 
 To start with, the new Blazor template in .NET 8 will always create an ASP.NET Core backend to serve your Blazor app if you choose WebAssembly interactivity.
 
-<img src="{{ site.url }}/assets/images/blazor-folder-structure.jpg" width="30%"/>
+![](/assets/images/blazor-folder-structure.jpg)
 
 Kind of similar to the [Blazor WASM Hosted](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-7.0#hosted-deployment-with-aspnet-core) approach available before, which I had not tried.
 
@@ -77,7 +85,9 @@ However, having my Blazor app call my backend API twice is unacceptable in terms
 
 How to deal with this?
 
-### **Use OnAfterRenderAsync** instead of OnInitializedAsync?
+<br>
+
+## **Use OnAfterRenderAsync instead of OnInitializedAsync?**
 
 OnAfterRenderAsync is invoked after a component has rendered interactively and the UI has finished updating.
 
@@ -149,7 +159,7 @@ And it's actually very easy to use:
 
 At the end of the prerendering stage the **PersistData** method will take care of persisting the games array, with all the loaded data, using the key specified by **gamesDataKey**.
 
-Notice that you should also implement **IDisposable** and dispose the subscription on the **Dispose** method.
+Notice that you should also implement **IDisposable** and dispose of the subscription on the **Dispose** method.
 
 **3. Update OnInitializedAsync to load the persisted data, if available.** Otherwise, get data from the backend:
 
@@ -175,9 +185,14 @@ With this approach:
 
 * Your page will load fast, taking full advantage of prerendering
 * A single call is made to your API to load the initial data
-* You have a fully interactive Blazor WASM client that takes full advantage of the prerendered data
+* You have an interactive Blazor WASM client that takes full advantage of the prerendered data
 
-- - -
+And that's it for today.
+
+
+I hope it was helpful.
+
+---
 
 <br/>
 
