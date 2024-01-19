@@ -5,10 +5,22 @@ backend:
   repo: julioct/julioct.github.io
   branch: main # Branch to update (optional; defaults to master)
   site_domain: juliocasal.com
-media_folder: 'assets/uploads'
+
+media_folder: 'assets/images'
+
+publish_mode: editorial_workflow
+
 collections:
   - name: 'blog'
     label: 'Blog'
     folder: '_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    preview_path: blog/{{slug}}
+    editor:
+      preview: false
     fields:
-      - { name: Title }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
