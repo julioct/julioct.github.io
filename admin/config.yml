@@ -21,7 +21,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     preview_path: blog/{{title}}
     editor:
-      preview: true
+      preview: false
     fields:
       - label: 'Layout'
         name: 'layout'
