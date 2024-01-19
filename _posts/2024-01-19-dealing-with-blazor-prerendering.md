@@ -1,8 +1,9 @@
 ---
 layout: post
 featured-image: /assets/images/blazorprerendering.jpg
+issue-number: 18
 title: Dealing With Blazor Prerendering
-date: 2024-01-20T14:14:00.000Z
+date: 2024-01-20T14:00:00.000Z
 ---
 *Read time: X minutes*
 
