@@ -60,7 +60,7 @@ This was driving me crazy for a few hours, but after learning about [prerenderin
 
 To start with, the new Blazor template in .NET 8 will always create an ASP.NET Core backend to serve your Blazor app if you choose WebAssembly interactivity.
 
-![](/assets/images/blazor-folder-structure.jpg)
+<img src="{{ site.url }}/assets/images/blazor-folder-structure.jpg" width="30%"/>
 
 Kind of similar to the [Blazor WASM Hosted](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/webassembly?view=aspnetcore-7.0#hosted-deployment-with-aspnet-core) approach available before, which I had not tried.
 
@@ -176,8 +176,6 @@ With this approach:
 * Your page will load fast, taking full advantage of prerendering
 * A single call is made to your API to load the initial data
 * You have a fully interactive Blazor WASM client that takes full advantage of the prerendered data
-
-
 
 - - -
 
