@@ -4,7 +4,6 @@ date: YYYY-MM-DD
 layout: post
 featured-image: IMAGE.jpg
 featured-image-alt: TITLE
-image: /assets/images/IMAGE.jpg
 issue-number: NN
 ---
 
