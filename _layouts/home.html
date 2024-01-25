@@ -82,7 +82,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="workshop.html">Free Training</a>
-                    </li>                    
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="courses.html">Courses</a>
                     </li>
@@ -157,7 +157,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2023 Julio Casal LLC | <a href="https://learn.dotnetacademy.io">Log
+                    <p class="p-small">Copyright © 2024 Julio Casal LLC | <a href="https://learn.dotnetacademy.io">Log
                             In</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
@@ -176,16 +176,20 @@
     <script src="/js/favicon.js"></script>
 
     <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
+        if (window.netlifyIdentity)
+        {
+            window.netlifyIdentity.on("init", user =>
+            {
+                if (!user)
+                {
+                    window.netlifyIdentity.on("login", () =>
+                    {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
         }
-      </script>    
+    </script>
 </body>
 
 </html>

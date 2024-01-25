@@ -1,10 +1,11 @@
 ---
-title: "TNS #000: TITLE"
+title: "TITLE"
 date: YYYY-MM-DD
 layout: post
-featured-image: IMAGE.png
+featured-image: IMAGE.jpg
 featured-image-alt: TITLE
-image: /assets/images/IMAGE.png
+image: /assets/images/IMAGE.jpg
+issue-number: NN
 ---
 
 *Read time: X minutes*
