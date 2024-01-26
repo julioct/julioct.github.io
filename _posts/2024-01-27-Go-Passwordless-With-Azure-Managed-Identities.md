@@ -132,7 +132,7 @@ Mission accomplished!
 
 <br/>
 
-**Whenever you’re ready, there are 2 ways I can help you:**
+**Whenever you’re ready, there are 3 ways I can help you:**
 
 1. **[In-depth Courses For .NET Developers](https://juliocasal.com/courses)**:​ Whether you want to upgrade your software development skills to find a better job, you need best practices for your next project, or you just want to keep up with the latest tech, my in-depth courses will help you get there, step by step. **[Join 800+ students here](https://juliocasal.com/courses)**.
 <br/>
