@@ -272,4 +272,4 @@ Till next time!
 
 2. **[Patreon Community](https://www.patreon.com/juliocasal)**: Get access to the source code I use in all my YouTube videos, plus get exclusive discounts for my in-depth courses. **[Join 30+ .NET developers here](https://www.patreon.com/juliocasal)**.
 
-3. **[Promote yourself to 11,000 subscribers](https://juliocasal.com/sponsor-the-newsletter)** by sponsoring this newsletter.
+3. **[Promote yourself to 12,000 subscribers](https://juliocasal.com/sponsor-the-newsletter)** by sponsoring this newsletter.
