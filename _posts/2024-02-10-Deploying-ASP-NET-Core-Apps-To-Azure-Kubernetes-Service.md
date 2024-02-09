@@ -54,7 +54,7 @@ Let's see how to deploy your ASP.NET Core applications to AKS in 5 simple steps.
 
 <br/>
 
-### **Step 1. Publish your Docker image to ACR**
+### **Step 1: Publish your Docker image to ACR**
 I have already created a resource group called **hello-aks** in my Azure subscription and I have my ASP.NET Core app Docker image already published to my **helloaksacr** [Azure Container Registry (ACR)](https://learn.microsoft.com/en-us/azure/container-registry){:target="_blank"}.
 
 If you need a refresher on how to turn your ASP.NET Core app into a Docker image and publish it to an ACR, check out my [Docker Tutorial For .NET Developers](https://juliocasal.com/blog/Docker-Tutorial-For-Dotnet-Developers){:target="_blank"}.
@@ -68,7 +68,7 @@ dotnet publish /t:PublishContainer -p ContainerImageTag=1.0.0 \
 
 <br>
 
-### **Step 2. Create an AKS cluster**
+### **Step 2: Create an AKS cluster**
 I'll be using the [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli){:target="_blank"} for this tutorial, but you can also use the [Azure Portal](https://portal.azure.com){:target="_blank"} if you prefer.
 
 Now, let's login:
@@ -92,7 +92,7 @@ That's going to take a few minutes to complete, so let's move on to the next ste
 
 <br/>
 
-### **Step 3. Defining the AKS resources**
+### **Step 3: Define your AKS resources**
 The way to tell Kubernetes what to do is by creating **YAML** files that define the resources you want to deploy.
 
 The first resource we will need is a **Deployment**. This is a resource that tells Kubernetes to run a certain number of instances of a certain container.
@@ -158,7 +158,7 @@ That should be enough to get our ASP.NET Core app running in AKS, so let's apply
 
 <br/>
 
-### **Step 4. Applying resources to the AKS cluster**
+### **Step 4: Deploy resources to the AKS cluster**
 First, let's make sure we are connected to our AKS cluster:
 
 ```bash
@@ -208,7 +208,7 @@ We are ready to access our ASP.NET Core app running in AKS!
 
 <br/>
 
-### **Step 5. Access your AKS deployed app**
+### **Step 5: Access your AKS deployed app**
 Our ASP.NET Core app is the default Weather Forecast API that gets created when you create a new ASP.NET Core Web API project.
 
 So let's send a GET request to it:
