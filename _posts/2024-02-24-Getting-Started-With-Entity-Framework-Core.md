@@ -9,7 +9,7 @@ issue-number: 22
 
 *Read time: 3 minutes*
 
-Today you will learn how to quickly add database support to an ASP.NET Core API via Entity Framework Core.
+Today you will learn how to quickly add database support to an ASP.NET Core API via [Entity Framework Core](https://learn.microsoft.com/ef/core){:target="_blank"}.
 
 A database is a crucial part of most applications. It's where you store your data, and it's where you retrieve it from when you need it.
 
@@ -45,7 +45,7 @@ Let's see how to quickly add database support to an ASP.NET Core API via Entity 
 ### **Step 1: Add your entity**
 The entity is the class that represents the data that you want to map to a database table.
 
-Here's the Game entity, from a game store application:
+Here's the **Game** entity, from a Game Store application:
 
 ```csharp
 public class Game
@@ -63,9 +63,9 @@ public class Game
 <br/>
 
 ### **Step 2: Add the DBContext**
-A DbContext instance represents a session with the database and can be used to query and save instances of your entities. 
+A [DbContext](https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext){:target="_blank"} instance represents a session with the database and can be used to query and save instances of your entities. 
 
-DbContext is a combination of the Unit Of Work and Repository patterns.
+DbContext is a combination of the **Unit Of Work** and **Repository** patterns.
 
 To use a DbContext, first add the appropriate NuGet package for your database provider:
 
@@ -83,7 +83,7 @@ public class GameStoreContext(DbContextOptions<GameStoreContext> options)
 }
 ```
 
-And finally, register it with the service container in Program.cs:
+And finally, register it with the service container in **Program.cs**:
 
 ```csharp
 var connString = "Data Source=GameStore.db";
