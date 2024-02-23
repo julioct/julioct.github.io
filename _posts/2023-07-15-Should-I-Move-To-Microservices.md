@@ -132,11 +132,10 @@ I hope you enjoyed it.
 
 <br/>
 
-**Whenever you’re ready, there are 2 ways I can help you:**
+**Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[Building Microservices With .NET​](https://dotnetmicroservices.com)**:​ An in-depth online program designed to transform the way you build .NET systems at scale so that they are resilient, secure, easy to maintain, and ready to handle constantly changing business requirements and production demands. **[Join 800+ students here](https://dotnetmicroservices.com)**.
-<br/>
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
-2. **[Patreon Community](https://www.patreon.com/juliocasal)**. Get access to the source code I use in all my YouTube videos, plus get exclusive discounts for my premium courses. **[Join 30+ .NET developers here](https://www.patreon.com/juliocasal)**.
+2. **[.NET Academy All-Access Pass]({{ site.url }}/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
 
-3. **[Promote yourself to 12,000 subscribers](https://juliocasal.com/sponsor-the-newsletter)** by sponsoring this newsletter.
+2. **[Promote yourself to 12,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.

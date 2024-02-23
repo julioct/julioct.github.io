@@ -163,9 +163,8 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[In-depth Courses For .NET Developers](https://juliocasal.com/courses)**:​ Whether you want to upgrade your software development skills to find a better job, you need best practices for your next project, or you just want to keep up with the latest tech, my in-depth courses will help you get there, step by step. **[Join 800+ students here](https://juliocasal.com/courses)**.
-<br/>
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
-2. **[Patreon Community](https://www.patreon.com/juliocasal)**: Get access to the source code I use in all my YouTube videos, plus get exclusive discounts for my in-depth courses. **[Join 30+ .NET developers here](https://www.patreon.com/juliocasal)**.
+2. **[.NET Academy All-Access Pass]({{ site.url }}/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
 
-3. **[Promote yourself to 12,000 subscribers](https://juliocasal.com/sponsor-the-newsletter)** by sponsoring this newsletter.
+2. **[Promote yourself to 12,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
