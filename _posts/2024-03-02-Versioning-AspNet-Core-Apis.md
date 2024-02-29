@@ -28,7 +28,7 @@ For instance, say today you have an API endpoint that returns the details of a v
 
 ```json
 {
-  "id": 1, 
+  "id": 2, 
   "name": "FIFA 23",
   "price": 69.99
 }
@@ -42,7 +42,7 @@ So we change our API endpoint response to address these new requirements:
 
 ```json{3 4 5 6}
 {
-  "id": 1,
+  "id": 2,
   "price": "USD 69.99",
   "details": {
     "title": "FIFA 23",
