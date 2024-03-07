@@ -1,5 +1,5 @@
 ---
-title: "TITLE"
+title: TITLE
 date: YYYY-MM-DD
 layout: post
 featured-image: IMAGE.jpg
