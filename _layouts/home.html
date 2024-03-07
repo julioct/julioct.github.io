@@ -51,8 +51,6 @@
 
     <!-- Favicon  -->
     <link rel="icon">
-
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -174,22 +172,6 @@
     <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="/js/scripts.js"></script> <!-- Custom scripts -->
     <script src="/js/favicon.js"></script>
-
-    <script>
-        if (window.netlifyIdentity)
-        {
-            window.netlifyIdentity.on("init", user =>
-            {
-                if (!user)
-                {
-                    window.netlifyIdentity.on("login", () =>
-                    {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>
