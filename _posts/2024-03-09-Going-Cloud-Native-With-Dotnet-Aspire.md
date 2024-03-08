@@ -121,7 +121,7 @@ To define your app model, start by adding a reference from the App Host project 
 And, since our application makes use of Azure resources (Blob Storage), we also need to install this NuGet package in the App Host project:
 
 ```bash
-dotnet add package Aspire.Hosting.Azure --version 8.0.0-preview.3.24105.21
+dotnet add package Aspire.Hosting.Azure --prerelease
 ```
 
 Then, in the **Program.cs** file of the App Host project, add the following code to define the app model:
@@ -168,7 +168,7 @@ Starting with our backend API, we know it needs to connect to a database, in par
 For this, we could use the standard Npgsql package, but .NET Aspire provides a more opinionated and cloud-native package. So let's install it into our backend project:
 
 ```bash
-dotnet add package Aspire.Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.0-preview.3.24105.21
+dotnet add package Aspire.Npgsql.EntityFrameworkCore.PostgreSQL --prerelease
 ```
 
 Then you can add the following code to your backend Program.cs to register your PostgreSQL DBContext:
@@ -192,7 +192,7 @@ What about the frontend?
 Following the same idea, start by installing the Blob Storage NuGet package into your frontend project:
 
 ```bash
-dotnet add package Aspire.Azure.Storage.Blobs --version 8.0.0-preview.3.24105.21
+dotnet add package Aspire.Azure.Storage.Blobs --prerelease
 ```
 
 And now you can add these few lines to your frontend Program.cs:
