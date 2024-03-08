@@ -172,4 +172,4 @@ I hope you enjoyed it.
 
 2. **[.NET Academy All-Access Pass]({{ site.url }}/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
 
-2. **[Promote yourself to 12,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+2. **[Promote yourself to 13,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
