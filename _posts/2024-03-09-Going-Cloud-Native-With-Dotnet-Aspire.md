@@ -131,14 +131,17 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 // Add a PostgreSQL container, with a GameStore database, 
 // Also enable PgAdmin for easy DB management
-var postgres = builder.AddPostgresContainer("postgres")
+var postgres = builder.AddPostgres("postgres")
                       .WithPgAdmin()
                       .AddDatabase("GameStore");
 
 // Add the Azure Storage Emulator container, and enable the blob service
 // Exposing it on port 10000 makes it easy to connect from Storage Explorer
-var blobs = builder.AddAzureStorage("storage")    
-                   .UseEmulator(blobPort: 10000)
+var blobs = builder.AddAzureStorage("storage")
+                   .RunAsEmulator(container =>
+                   {
+                        container.UseBlobPort(10000);
+                   })
                    .AddBlobs("blobs");
 
 // Add our backend API, and establish the dependency on PostgreSQL
@@ -147,9 +150,9 @@ var backend = builder.AddProject<Projects.GameStore_Api>("backend")
 
 // Add the frontend UI, and establish the dependency on both 
 // the backend API and the blob service
-var frontend = builder.AddProject<Projects.GameStore_Frontend>("frontend")
-                      .WithReference(backend)
-                      .WithReference(blobs);
+builder.AddProject<Projects.GameStore_Frontend>("frontend")
+       .WithReference(backend)
+       .WithReference(blobs);
 
 builder.Build().Run();
 ```
@@ -207,9 +210,12 @@ builder.Services.AddHttpClient<GamesClient>(
 
 Here, **"blobs"** is the connection string you defined in the App Host project:
 
-```csharp{3}
-var blobs = builder.AddAzureStorage("storage")    
-                   .UseEmulator(blobPort: 10000)
+```csharp{6}
+var blobs = builder.AddAzureStorage("storage")
+                   .RunAsEmulator(container =>
+                   {
+                        container.UseBlobPort(10000);
+                   })
                    .AddBlobs("blobs");
 ```
 
@@ -241,7 +247,7 @@ info: Aspire.Hosting.DistributedApplication[0]
 info: Aspire.Hosting.DistributedApplication[0]
       Now listening on: http://localhost:15127
 info: Aspire.Hosting.DistributedApplication[0]
-      Distributed application started. Press CTRL-C to stop.
+      Distributed application started. Press Ctrl+C to shut down.
 ```
 
 Browse to that URL in your browser and you'll land here:
