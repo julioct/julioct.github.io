@@ -129,10 +129,14 @@ Then, in the **Program.cs** file of the App Host project, add the following code
 ```csharp
 var builder = DistributedApplication.CreateBuilder(args);
 
-// Add a PostgreSQL container, with a GameStore database, 
-// Also enable PgAdmin for easy DB management
+// Add a PostgreSQL container, with a GameStore database 
+// Enable PgAdmin for easy DB management and deploy to the 
+// cloud as an Azure PostgreSQL Flexible Server.
+var adminUser = builder.AddParameter("adminUser");
+var adminPassword = builder.AddParameter("adminPassword", secret: true);
 var postgres = builder.AddPostgres("postgres")
                       .WithPgAdmin()
+                      .PublishAsAzurePostgresFlexibleServer(adminUser, adminPassword)
                       .AddDatabase("GameStore");
 
 // Add the Azure Storage Emulator container, and enable the blob service
