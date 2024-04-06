@@ -928,6 +928,7 @@ input[type='checkbox'] {
 .gold-subheader {
 	text-align: center;
 	color: #eb8a2f;
+	font-weight: bold;
 }
 
 .basic-3 .full-price.best-value {
