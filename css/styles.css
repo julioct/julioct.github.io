@@ -226,12 +226,11 @@ a.white:hover {
 
 .btn-solid-lg {
 	display: inline-block;
-	padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+	padding: 1rem 2rem 1rem 2rem;
 	border-radius: 32px;
 	background: linear-gradient(to right, #bf3333 33.33%, #d33737 66.33%, #f62d22 100%);
 	color: #ffffff;
-	font-weight: 600;
-	font-size: 1.5rem;
+	font-weight: 600;	
 	line-height: 1.5;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -2151,7 +2150,9 @@ a:hover.back-to-top {
 	/* end of extra pages */
 
 	.btn-solid-lg {
-		line-height: 0;		
+		line-height: 0;	
+		font-size: 1.5rem;	
+		padding: 1.5rem 2.5rem 1.5rem 2.5rem;
 	}
 
 	.btn-outline-lg {
