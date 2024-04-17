@@ -140,7 +140,7 @@ spec:
 
 The main things there are the **hostname**, which is the public DNS name that clients can use to access your system, and the **tlsSecret**, which is the name of the Kubernetes secret that contains the SSL certificate for that domain.
 
-The steps to provision that SSL certificate are too much to cover in this article, but you can get all the details in the [Cert-Manager documentation](https://cert-manager.io/docs){:target="_blank"} documentation or in my [microservices program]({{ site.url }}/dotnetmicroservices).
+The steps to provision that SSL certificate are too much to cover in this article, but you can get all the details in the [Cert-Manager documentation](https://cert-manager.io/docs){:target="_blank"} documentation or in my [microservices program]({{ site.url }}/courses/dotnetmicroservices).
 
 Now run these in your terminal to apply both resources to your cluster
 
@@ -218,8 +218,8 @@ Mission accomplished.
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET]({{ site.url }}/dotnetmicroservices)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
+1. **[​Building Microservices With .NET]({{ site.url }}/courses/dotnetmicroservices)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
 
-2. **[.NET Academy All-Access Pass]({{ site.url }}/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
+2. **[.NET Academy All-Access Pass]({{ site.url }}/courses/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
 
 3. **[Promote yourself to 14,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.

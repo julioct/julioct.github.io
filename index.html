@@ -68,6 +68,26 @@ title: Julio Casal | Helping .NET developers reach the next level
 </div> <!-- end of basic-1 -->
 <!-- end of The Tech -->
 
+<div id="catch-defects-early" class="basic-1 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 my-auto order-lg-2">
+                <div class="image-container mb-3">
+                    <img class="img-fluid" src="images/dotnet-academy-mockup.png" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->            
+            <div class="col-lg-6 my-auto order-lg-1">
+                <h2 class="h2-heading" style="text-align: left;">In-Depth .NET Courses</h2>
+                <div class="text-container">
+                    <p class="line-spaced-paragraph">A complete catalog of in-depth courses to help you kickstart your
+                        .NET Developer career. From beginner to advanced, you will find the right course for you.</p>
+                </div> <!-- end of text-container -->
+                <a class="btn-outline-lg page-scroll" href="/courses">Browse Courses</a>                
+            </div> <!-- end of col-->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-1 -->
+
 <div id="newsletter-recent" class="basic-1">
     <div class="container">
         <div class="row mt-4">
@@ -97,7 +117,7 @@ title: Julio Casal | Helping .NET developers reach the next level
                         alt=post.featured-image-alt %}{% endif %}
                     </div>
                     <div class="card-body">
-                        <a style="text-decoration: none;" href="{{ post.url | relative_url }}">
+                        <a style="text-decoration: none;" href="{{ post.url | relative_url | remove: '.html' }}">
                             <h5 style="font-weight: 600;" class="course-title">{{ post.title | escape }}</h5>
                         </a>
                         <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -124,7 +144,7 @@ title: Julio Casal | Helping .NET developers reach the next level
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div id="video-container" class="row justify-content-center">
-            
+
         </div>
     </div> <!-- end of container -->
 </div> <!-- end of youtube-videos -->
@@ -144,10 +164,12 @@ title: Julio Casal | Helping .NET developers reach the next level
 <!-- YouTube API Script -->
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
-    function loadYouTubeVideos() {
+    function loadYouTubeVideos()
+    {
         gapi.client.init({
             'apiKey': 'AIzaSyBvNkb5hBiWySW2e0ilN11r6nVQjcWod10'
-        }).then(function() {
+        }).then(function ()
+        {
             return gapi.client.request({
                 'path': 'https://www.googleapis.com/youtube/v3/search',
                 'params': {
@@ -157,11 +179,13 @@ title: Julio Casal | Helping .NET developers reach the next level
                     'maxResults': 3
                 }
             });
-        }).then(function(response) {
+        }).then(function (response)
+        {
             var videos = response.result.items;
             var videoContainer = document.getElementById('video-container');
 
-            videos.forEach(function(video) {
+            videos.forEach(function (video)
+            {
                 var videoId = video.id.videoId;
                 var videoTitle = video.snippet.title;
                 var videoThumbnail = video.snippet.thumbnails.medium.url;
@@ -181,7 +205,8 @@ title: Julio Casal | Helping .NET developers reach the next level
 
                 videoContainer.appendChild(videoElement);
             });
-        }, function(error) {
+        }, function (error)
+        {
             console.error('Error loading YouTube videos:', error);
         });
     }
