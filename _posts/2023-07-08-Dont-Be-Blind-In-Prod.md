@@ -183,7 +183,7 @@ traces | where customDimensions.PlayerId == "player2" | sort by timestamp desc
 
 And there you go, you can now query your logs from anywhere you can access your Azure Portal to quickly get to the bottom of any issues that might be happening in your app.
 
-There's a lot more you can do with the .NET logging system that I didn't get to cover here, but I do cover in my [in-depth courses]({{ site.url }}/courses.html), if you are interested.
+There's a lot more you can do with the .NET logging system that I didn't get to cover here, but I do cover in my [in-depth courses]({{ site.url }}/courses), if you are interested.
 
 An that's it for today.
 
