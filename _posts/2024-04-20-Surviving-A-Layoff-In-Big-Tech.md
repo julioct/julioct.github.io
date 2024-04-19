@@ -148,7 +148,7 @@ I'm not becoming a millionaire anytime soon, but I'm making enough money to pay 
 
 Remember, this is money I'm making out of thin air, just from my knowledge and experience, paid by normal people directly to me, and is not capped by any salary.
 
-![](/assets/images/family-cherry-blossoms.jpg)
+![](/assets/images/road-ahead.jpg)
 
 Still have to figure out how to deal with health insurance (so expensive in the US), but we'll get there.
 
