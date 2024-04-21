@@ -177,6 +177,6 @@ I hope it was helpful.
 
 1. **[​Building Microservices With .NET]({{ site.url }}/courses/dotnetmicroservices)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
-2. **[.NET Academy All-Access Pass]({{ site.url }}/courses/all-access)**: Get instant access to a growing catalog of premium courses on .NET, Azure, DevOps, Testing and more, all for a low recurring fee and the freedom to cancel anytime. 
+2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 
 2. **[Promote yourself to 14,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
