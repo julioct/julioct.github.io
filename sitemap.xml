@@ -33,156 +33,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://juliocasal.com/blog/Surviving-A-Layoff-In-Big-Tech</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Standing-Up-An-API-Gateway-For-Dotnet-Microservices</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Building-Microservices-With-Dotnet-8</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/How-I-Use-AI-To-Get-Stuff-Done-10x-Faster</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/How-To-Deploy-Dotnet-Applications-To-Azure</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/How-To-Become-A-Senior-Dotnet-Backend-Developer</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Going-Cloud-Native-With-Dotnet-Aspire</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Versioning-AspNet-Core-Apis</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Getting-Started-With-Entity-Framework-Core</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Deploying-ASP-NET-Core-Apps-To-Azure-Kubernetes-Service</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Building-A-CICD-Pipeline-With-Azure-DevOps</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Go-Passwordless-With-Azure-Managed-Identities</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/dealing-with-blazor-prerendering</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Simple-Identity-Management-For-Your-Client-Apps</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Global-Error-Handling-In-AspNet-Core-APIs</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/TDD</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/What-To-Unit-Test</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Unit-Testing-With-Dependencies</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Should-You-Write-Unit-Tests</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Create-Middleware</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/NuGet-And-Azure-Artifacts</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Dont-Unit-Test-Your-AspNetCore-API</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Monolith-To-Microservices</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Docker-Tutorial-For-Dotnet-Developers</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Secure-AspNetCore-API</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/MassTransit</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Clean-Architecture</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Should-I-Move-To-Microservices</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/Dont-Be-Blind-In-Prod</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/blog/How-To-Monitor-ASP.NET-Core-App-In-Azure</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://juliocasal.com/courses/dotnet-restapi-essentials</loc>
   <lastmod>2024-04-24T13:15:16+00:00</lastmod>
   <priority>0.64</priority>
@@ -194,11 +44,6 @@
 </url>
 <url>
   <loc>https://juliocasal.com/courses/dotnetrestapis</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/courses/dotnetmicroservices</loc>
   <lastmod>2024-04-24T13:15:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -236,6 +81,11 @@
   <loc>https://juliocasal.com/roadmap</loc>
   <lastmod>2024-04-24T13:15:16+00:00</lastmod>
   <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://juliocasal.com/newsletter</loc>
+  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 </urlset>
