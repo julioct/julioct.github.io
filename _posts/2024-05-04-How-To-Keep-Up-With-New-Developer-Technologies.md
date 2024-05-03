@@ -73,6 +73,7 @@ What should you be learning today? It certainly depends on your interests and yo
 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core){:target="_blank"} is at the core of most web applications built with .NET and deployed to Azure today. Specifically, you need to learn how to:
 - Create a Web/REST API backend
 - Use Entity Framework Core for data access
+- Create interactive frontend apps with Blazor
 - Create background services
 - Create real-time applications with SignalR
 - Secure your APIs with JWTs and OIDC
