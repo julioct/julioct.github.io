@@ -53,12 +53,6 @@
         "category": "Paid",
         "priceCurrency": "USD",
         "price": 197
-      },
-      {
-        "@type": "Offer",
-        "category": "Subscription",
-        "priceCurrency": "USD",
-        "price": 97
       }],
       "hasCourseInstance": [
       {
@@ -1651,21 +1645,44 @@
     <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col">
                     <h2 class="h2-heading display-4 font-weight-bold mb-4">Unlock Building .NET REST APIs Today</h2>
                 </div> <!-- end of col -->
-            </div><!-- end of row -->
+            </div> <!-- end of row -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="toggle-btn">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-auto mb-2">
+                                    <span><strong>This Course</strong></span>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="check(this)" ; />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-auto">
+                                    <span"><strong>All Courses</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
             <div class="row justify-content-center">
-                <div class="col-lg-5 order-lg-1 mr-xl-n5">
+                <div class="col-lg-5 text2">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">BUILDING .NET REST APIS</div>
                             <div class="mb-2">
                                 <div>
-                                    <span class="currency best-value">$</span><span class="value best-value">197</span>
+                                    <span class="currency best-value">$</span>
+                                    <span class="value best-value">197</span>
                                 </div>
-                                <div class="frequency mb-4">this course</div>
+                                <div class="frequency mt-2 mb-4">lifetime access</div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
@@ -1673,9 +1690,6 @@
                                     ACCESS</a>
                             </div>
                             <hr class="cell-divide-hr">
-                            <div class="card-image mb-4">
-                                <img class="img-fluid" src="../images/netrestapis_course_mockup.png" alt="alternative">
-                            </div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -1691,10 +1705,6 @@
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Course roadmap</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
                                     <div class="media-body">Course certificate</div>
                                 </li>
                                 <li class="media">
@@ -1706,26 +1716,20 @@
                     </div> <!-- end of card -->
                     <!-- end of card -->
                 </div>
-
-                <div class="col-lg-5 order-lg-2 ml-xl-n5">
+                <div class="col-lg-5 text1">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">ALL-ACCESS PASS</div>
-                            <div class="text2">
-                                <div>
-                                    <span class="currency best-value">$</span>
-                                    <span class=" value best-value">97</span><span class="frequency">/month</span>
-                                </div>
-                                <div class="frequency mb-4">full course library</div>
-                            </div>
+                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2">
+                                <img class="img-fluid" style="width: 100%; object-fit: contain;"
+                                    src="../images/dotnet-academy-mockup.png" alt="alternative">
+                            </div>                            
+                            <div class="frequency mt-3 mb-4">full course library</div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg" href="all-access">LEARN MORE</a>
                             </div>
                             <hr class="cell-divide-hr">
-                            <div class="card-image mb-4">
-                                <img class="img-fluid" src="../images/dotnet-academy-mockup.png" alt="alternative">
-                            </div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -1954,6 +1958,7 @@
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
     <script src="../js/favicon.js"></script>
+    <script src="../js/checkbox.js"></script>
 
 </body>
 
