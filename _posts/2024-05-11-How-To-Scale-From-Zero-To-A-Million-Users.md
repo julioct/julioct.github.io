@@ -124,7 +124,7 @@ Since containers are very small and start very fast, you can scale up and down y
 
 Plus you can deploy any container to any server that has available resources, which means you can make the most out of your infrastructure.
 
-And, if you plug in a good **CI/CD pipeline** via [GitHub Actions]({{ site.url }}/blog/Building-A-CICD-Pipeline-With-GitHub-Actions) or [Azure DevOps]({{ site.url }}blog/Building-A-CICD-Pipeline-With-Azure-DevOps), you can automate the whole process of building, testing, and deploying your containers, so all you do is push your code to the repository and see your new containers spinning up in production a few minutes later.
+And, if you plug in a good **CI/CD pipeline** via [GitHub Actions]({{ site.url }}/blog/Building-A-CICD-Pipeline-With-GitHub-Actions) or [Azure DevOps]({{ site.url }}/blog/Building-A-CICD-Pipeline-With-Azure-DevOps), you can automate the whole process of building, testing, and deploying your containers, so all you do is push your code to the repository and see your new containers spinning up in production a few minutes later.
 
 <br/>
 
