@@ -260,7 +260,7 @@ Mission accomplished.
 
 If you want a more advanced authorization policy, so you can require specific user roles or check for custom claims, I also got a [YouTube video](https://youtu.be/wVFfPrB5kEw) where I cover those details. 
 
-And if you are thinking on taking your API to production, I cover how to stand up your own authorization server in my [.NET Microservices program](https://dotnetmicroservices.com) and how to use a ready-to-go, hosted authorization server in my [.NET REST APIs course](https://dotnetrestapis.com).
+And if you are thinking on taking your API to production, I cover how to stand up your own authorization server in my [.NET Microservices program](https://dotnetmicroservices.com/fs0510) and how to use a ready-to-go, hosted authorization server in my [.NET REST APIs course](https://dotnetrestapis.com).
 
 ---
 
@@ -268,7 +268,7 @@ And if you are thinking on taking your API to production, I cover how to stand u
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 

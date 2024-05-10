@@ -224,7 +224,7 @@ To deploy our microservice to AKS, we will use a **Helm** chart that I had alrea
 
 If you are not familiar with Helm, it is basically a package manager for Kubernetes that allows you to define, install, and upgrade Kubernetes applications.
 
-What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR. I won't dive into that part here, but I cover it in detail in my [microservices program](https://dotnetmicroservices.com){:target="_blank"}.
+What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR. I won't dive into that part here, but I cover it in detail in my [microservices program](https://dotnetmicroservices.com/fs0510){:target="_blank"}.
 
 So first let's add a step to get access to the AKS cluster (we can do this because we already authenticated with Azure in the previous job):
 
@@ -395,7 +395,7 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step. 
 

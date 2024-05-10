@@ -255,7 +255,7 @@ There are a bunch of things I didn't get to cover here, like:
 * How to use GitHub Packages as opposed to Azure Artifacts
 * How to build and publish NuGet packages in your CI/CD pipelines
 
-If you are interested, I cover that and a bunch of other related topics in my [microservices program](https://dotnetmicroservices.com), since using NuGet fluently when working with microservices is a must.
+If you are interested, I cover that and a bunch of other related topics in my [microservices program](https://dotnetmicroservices.com/fs0510), since using NuGet fluently when working with microservices is a must.
 
 I hope you liked it.
 
@@ -267,7 +267,7 @@ Till next time!
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 
