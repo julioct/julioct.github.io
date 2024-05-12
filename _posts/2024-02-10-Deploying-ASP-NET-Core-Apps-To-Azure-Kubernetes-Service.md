@@ -256,7 +256,7 @@ Which returns this:
 
 Mission accomplished!
 
-I get into much more detail about many other things to consider when using AKS in my [microservices program](https://dotnetmicroservices.com/fs0510).
+I get into much more detail about many other things to consider when using AKS in my [microservices program](https://dotnetmicroservices.com).
 
 But now that you have your first ASP.NET Core app deployed there you can:
 
@@ -274,7 +274,7 @@ Welcome to cloud-native development!
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 

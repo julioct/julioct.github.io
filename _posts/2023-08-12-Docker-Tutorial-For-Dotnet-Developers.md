@@ -279,7 +279,7 @@ Mission accomplished!
 <br/>
 
 ### **How to run my docker container in the cloud?**
-To run your containers in the cloud you can prepare a VM with Docker via your cloud provider or, if you don't want to have to prepare any production VM, and just run the containers, you can use services like Azure Kubernetes Service (AKS), which I cover in [my microservices program](https://dotnetmicroservices.com/fs0510).
+To run your containers in the cloud you can prepare a VM with Docker via your cloud provider or, if you don't want to have to prepare any production VM, and just run the containers, you can use services like Azure Kubernetes Service (AKS), which I cover in [my microservices program](https://dotnetmicroservices.com).
 
 And that's it for today. I hope you enjoyed it.
 
@@ -289,7 +289,7 @@ And that's it for today. I hope you enjoyed it.
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 

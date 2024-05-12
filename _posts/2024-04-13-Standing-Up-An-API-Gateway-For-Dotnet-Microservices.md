@@ -140,7 +140,7 @@ spec:
 
 The main things there are the **hostname**, which is the public DNS name that clients can use to access your system, and the **tlsSecret**, which is the name of the Kubernetes secret that contains the SSL certificate for that domain.
 
-The steps to provision that SSL certificate are too much to cover in this article, but you can get all the details in the [Cert-Manager documentation](https://cert-manager.io/docs){:target="_blank"} documentation or in my [microservices program](https://dotnetmicroservices.com/fs0510).
+The steps to provision that SSL certificate are too much to cover in this article, but you can get all the details in the [Cert-Manager documentation](https://cert-manager.io/docs){:target="_blank"} documentation or in my [microservices program](https://dotnetmicroservices.com).
 
 Now run these in your terminal to apply both resources to your cluster
 
@@ -218,7 +218,7 @@ Mission accomplished.
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 

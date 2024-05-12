@@ -129,7 +129,7 @@ And, if you plug in a good **CI/CD pipeline** via [GitHub Actions]({{ site.url }
 <br/>
 
 ### **The tech**
-I go into more details in my [microservices program](https://dotnetmicroservices.com/fs0510), but here are some popular options in the .NET and Azure ecosystem for the different components in this architecture:
+I go into more details in my [microservices program](https://dotnetmicroservices.com), but here are some popular options in the .NET and Azure ecosystem for the different components in this architecture:
 
 - **Containers**: [Azure Kubernetes Service (AKS)]({{ site.url }}/blog/Deploying-ASP-NET-Core-Apps-To-Azure-Kubernetes-Service) or [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps){:target="_blank"}.
 - **Database**: [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database){:target="_blank"} or [Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db){:target="_blank"}.
@@ -146,7 +146,7 @@ And that's it, on to the next million users!
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com/fs0510)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
+1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior .NET Backend Engineer.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step. 
 
