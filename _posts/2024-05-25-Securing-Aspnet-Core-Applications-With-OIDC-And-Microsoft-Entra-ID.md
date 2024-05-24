@@ -7,7 +7,7 @@ featured-image-alt: Securing ASP.NET Core Apps With OIDC and Microsoft Entra ID
 issue-number: 35
 ---
 
-*Read time: 9 minutes*
+*Read time: 11 minutes*
 
 Today I'll show you how to secure your ASP.NET Core applications using OpenID Connect (OIDC) and Microsoft Entra ID.
 
@@ -122,14 +122,115 @@ Lastly, you'll need to head to **Certificates & secrets** and create a new **cli
 
 You'll need more configuration there if you need to do things like support application roles, but this is good to get started.
 
-Let's now start writing some code.
+<br/>
+
+### **Step 2: (Optional) Understand your access tokens**
+You don't have to do this, but I find it helpful to understand the access tokens that Entra ID will generate, so I can tell which claims to expect to find in them.
+
+To manually get an access token, you will first need to know your **Authorization Endpoint** and your **Token Endpoint**. Get those from the **Overview** blade of your Entra ID app registration in the Portal:
+
+![](/assets/images/tns-35-endpoints.jpg)
+
+<br>
+
+Then open up [Postman](https://www.postman.com/downloads){:target="_blank"}, create a new request, and head to the **Authorization** tab:
+
+![](/assets/images/tns-35-postman01.jpg)
+
+<br>
+
+On the right side, under **Configure New Token**, select **Authorization Code (With PKCE)** as the grant type, and fill in the boxes I highlighted below with your **Redirect URI**, **Authorization Endpoint**, **Token Endpoint**, **Client ID**, **Client Secret**, and **Scope** (all from your Entra ID app registration in the Portal):
+
+![](/assets/images/tns-35-postman02.jpg)
+
+<br>
+
+Notice that for **Scope** I also added **openid** and **profile**, so that I can get not just the **access token**, but also the **ID token** with some interesting user info on it. 
+
+And, make sure you select **Send client credentials in body** for the **Client Authentication** setting, or it won't work.
+
+Click **Get New Access Token**, which should take you to the Entra ID sign-in page. After signing in, you'll be back in Postman with your new tokens:
+
+![](/assets/images/tns-35-postman03.jpg)
+
+<br>
+
+Now, grab your **Access Token** from Postman and decode it in a page like [jwt.ms](https://jwt.ms){:target="_blank"}. Here's my token decoded:
+
+```json{7 8 26}
+{
+  "typ": "JWT",
+  "alg": "RS256",
+  "x5t": "L1KfKFI_jnXbwWc22xZxw1sUHH0",
+  "kid": "L1KfKFI_jnXbwWc22xZxw1sUHH0"
+}.{
+  "aud": "api://8814267c-25fc-459e-b0a6-f6d7ed056f12",
+  "iss": "https://sts.windows.net/e6244037-0452-4a93-bcb4-864751f62fcf/",
+  "iat": 1716569236,
+  "nbf": 1716569236,
+  "exp": 1716574166,
+  "acr": "1",
+  "aio": "AVQAq/8WAAAAk9VaoKrqC7/gpqMXx9XMbpIhpZ9oVzSheQZQr1jCbfJiSkkYd9JgF8ziMf+rrxjonWeQPIAzTpqPtw6DLqjMTIDVsxbtfos6J6ksaoO3BfA=",
+  "amr": [
+    "pwd",
+    "mfa"
+  ],
+  "appid": "8814267c-25fc-459e-b0a6-f6d7ed056f12",
+  "appidacr": "1",
+  "family_name": "Casal",
+  "given_name": "Julio",
+  "ipaddr": "50.35.76.187",
+  "name": "Julio Casal",
+  "oid": "3f7e659c-1aaf-43ec-8ffd-fb6dc91d1045",
+  "rh": "0.AXYAN0Ak5lIEk0q8tIZHUfYvz3wmFIj8JZ5FsKb21-0FbxJ2AO4.",
+  "scp": "games:all",
+  "sub": "ofM-v1Euz4cuFXSEzmQ1DVtz5W5V27vVR4E5iVHgvFk",
+  "tid": "e6244037-0452-4a93-bcb4-864751f62fcf",
+  "unique_name": "julioc@dotnetacademy.io",
+  "upn": "julioc@dotnetacademy.io",
+  "uti": "l6MNUJEh9UmpJOCnIG-nAA",
+  "ver": "1.0"
+}.[Signature]
+```
+
+Now you can tell exactly which **Audience (aud)**, **Authority (iss)**, and **Scopes (scp)** your backend API will receive in the access tokens, besides a bunch of other interesting claims.
+
+From that same Postman dialog, scroll down a bit, grab your **id_token** and decode it. Should be something like this:
+
+```json{11 13 15}
+{
+  "typ": "JWT",
+  "alg": "RS256",
+  "kid": "L1KfKFI_jnXbwWc22xZxw1sUHH0"
+}.{
+  "aud": "8814267c-25fc-459e-b0a6-f6d7ed056f12",
+  "iss": "https://login.microsoftonline.com/e6244037-0452-4a93-bcb4-864751f62fcf/v2.0",
+  "iat": 1716570599,
+  "nbf": 1716570599,
+  "exp": 1716574499,
+  "name": "Julio Casal",
+  "oid": "3f7e659c-1aaf-43ec-8ffd-fb6dc91d1045",
+  "preferred_username": "julioc@dotnetacademy.io",
+  "rh": "0.AXYAN0Ak5lIEk0q8tIZHUfYvz3wmFIj8JZ5FsKb21-0FbxJ2AO4.",
+  "sub": "ofM-v1Euz4cuFXSEzmQ1DVtz5W5V27vVR4E5iVHgvFk",
+  "tid": "e6244037-0452-4a93-bcb4-864751f62fcf",
+  "uti": "5vHcMCJMnkG87UQUAZAbAA",
+  "ver": "2.0"
+}.[Signature]
+```
+
+The **ID Token** is the one that your Blazor frontend can use to identify the user via interesting claims like **name**, **preferred_username**, and **sub**.
+
+Knowing about all these claims will save you a lot of trouble down the road, trust me.
+
+Let’s now start writing some code.
 
 <br/>
 
-### **Step 2: Secure the backend API endpoints**
+### **Step 3: Secure the backend API endpoints**
 First things first. We have to make sure our endpoints are protected and only accessible to authorized users.
 
-For this, I first defined a couple of **authorization policies** in API backend:
+For this, I first defined a couple of **authorization policies** in the API backend:
 
 ```csharp
 builder.Services
@@ -146,7 +247,7 @@ builder.Services
 
 The **read_access** policy is meant for my GET endpoints, while the **write_access** policy is meant for all endpoints that can modify my games in any way.
 
-In each policy, we require the **scp** claim to be present in the user's token. That is the claim where Entra ID will place the scope(s) the client was granted.
+In each policy, we require the **scp** claim to be present in the user's token. From the access token we inspected earlier, we know that is the claim where Entra ID will place the scope(s) the client was granted.
 
 So, GET endpoints will require either the **games:read** or **games:all** scope, while all other endpoints will require either the **games:write** or **games:all** scope.
 
@@ -162,11 +263,11 @@ group.MapGet("/{id}", async (int id, GameStoreContext dbContext) =>
 .RequireAuthorization("read_access");
 ```
 
-You would set policies via the **RequireAuthorization** method for each of your endpoints in a similar way.
+You can use the **RequireAuthorization** method to set the policy for each of your endpoints similarly.
 
 <br/>
 
-### **Step 3: Configure the backend API for Entra ID**
+### **Step 4: Configure the backend API for Entra ID**
 First, we'll need one NuGet package to be able to use JWT-bearer authentication:
 
 ```bash
@@ -198,7 +299,7 @@ There's a lot more you may want to configure there depending on your scenario, b
 
 <br/>
 
-### **Step 4: Configure the Blazor frontend for Entra ID**
+### **Step 5: Configure the Blazor frontend for Entra ID**
 For this, we'll need to add one new NuGet package to the Blazor frontend project:
     
 ```bash
@@ -235,7 +336,7 @@ Let's break down that:
 
 - **SignOutScheme:** The scheme used to sign out the user. We use the OIDC scheme so that the user is signed out of both the OIDC provider and the frontend.
 
-- **Authority:** The Entra ID authorization server, which is the one that will authenticate the user. You can get the GUID the same way as you did for the backend, it's just that the format of the URL is different.
+- **Authority:** The Entra ID authorization server, which is the one that will authenticate the user. Use the same GUID you used for **Authority** in the backend. It's just that the format of the URL is different.
 
 - **ClientId:** The Client ID of the Entra ID application for whom the token will be issued. It's the same GUID you used for **Audience** in the backend configuration.
 
@@ -269,7 +370,7 @@ app.MapGet("/authentication/login", ()
     .AllowAnonymous();
 ```
 
-That endpoint will be invoked by an anchor tag in some of the Blazor components. Something like this:
+That endpoint will be invoked by an anchor tag in the Blazor Login component. Something like this:
 
 ```html
 <a href="authentication/login" class="btn btn-warning">Login</a>
@@ -281,10 +382,10 @@ But, there's one more thing needed to let the frontend make authenticated reques
 
 <br/>
 
-### **Step 5: Add an authorization handler**
+### **Step 6: Add an authorization handler**
 Just because the user is authenticated in the frontend doesn't mean the backend will automatically trust the frontend to make requests on behalf of the user.
 
-We need to make sure we attach the access token as a header on every request we make to the backend API endpoints that require authorization.
+We need to make sure we attach the **access token** as a header on every request we make to the backend API endpoints that require authorization.
 
 We could do this manually in every request, but it's easier via a delegating handler like this:
 
@@ -328,14 +429,14 @@ builder.Services.AddHttpClient<GamesClient>(
 
 <br/>
 
-### **Step 6: ASP.NET Core + Entra ID in action**
+### **Step 7: ASP.NET Core + Entra ID in action**
 Now run your backend and frontend applications and navigate to the frontend in your browser:
 
 ![](/assets/images/tns-35-blazor-loggedout.jpg)
 
 <br>
 
-We can display games queried from the backend API without signing in because that GET endpoint doesn't require any authorization.
+How is the home page able to query games without signing in? That's because I didn't want users to have to sign in just to be able to list the games, so I didn't add any authorization policy to the GET endpoint that retrieves all games from the backend.
 
 Clicking the **Login** button should take you to a sign-in page like this:
 
@@ -347,15 +448,15 @@ And, after authenticating, you should be redirected back to the frontend:
 ![](/assets/images/tns-35-blazor-loggedin.jpg)
 
 <br>
-Thanks to the claims available in the ID token provided by Entra ID, I was able to display the user's name and generate a Gravatar image where the login button was before.
+Thanks to the claims available in the **ID token** provided by Entra ID, I was able to display the user's name and generate a Gravatar image where the login button was before.
 
 I was also able to show **New Game**, **Edit** and **Delete** buttons for each game, which are only visible if the user is authenticated.
 
-And if I click on the *Edit* button, I can see the game details and update them:
+And if I click on the **Edit** button, I can see the game details and update them:
 
 ![](/assets/images/tns-35-blazor-edit-game.jpg)
 
-Both the GET and PUT endpoints used by this page require authorization, so if you can load the page and save the updates, the access token was correctly attached to the requests by the authorization handler.
+Both the GET and PUT backend endpoints used by this page require authorization, so if you can load the page and save the updates, the access token was correctly attached to the requests by the authorization handler.
 
 Mission accomplished!
 
