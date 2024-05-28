@@ -210,7 +210,7 @@ That is what is known as a fat controller. Its **JoinMatchAsync** method is coor
 
 Should we write unit tests for **JoinMatchAsync**?
 
-NO. That method is overcomplicated, and it has important domain logic that should be refactored into other component(s) that can be easily unit tested, which is something I cover in detail in my **[Mastering C# Unit Testing](https://juliocasal.com/mastering-csharp-unittesting)** course.
+NO. That method is overcomplicated, and it has important domain logic that should be refactored into other component(s) that can be easily unit tested, which is something I cover in detail in my **[Mastering C# Unit Testing]({{ site.url }}/courses/mastering-csharp-unittesting)** course.
 
 And once that refactoring is done, you'll end up with a thin controller that will fit into the Controllers quadrant.
 

@@ -207,7 +207,7 @@ Thanks to this, your unit test can now focus on verifying the behavior of GetPla
 ### **Do I need to create fake classes all the time?**
 No, that's only one type of test double. There are other types, like **stubs** and **mocks**, which can make things much easier. 
 
-I go over those in detail in my [C# Unit Testing Essentials Course](https://juliocasal.com/csharp-unittesting-essentials).
+I go over those in detail in my [C# Unit Testing Essentials Course]({{ site.url }}/courses/csharp-unittesting-essentials).
 
 And that's it for today.
 
