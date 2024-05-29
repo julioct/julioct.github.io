@@ -2196,7 +2196,6 @@ a:hover.back-to-top {
 	/* Navigation */
 	.navbar {
 		padding-top: 1.75rem;
-		background-color: transparent;
 		box-shadow: none;
 		transition: all 0.2s;
 	}

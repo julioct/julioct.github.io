@@ -61,6 +61,10 @@
         data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
     <!-- End Deadline Funnel -->
 
+    <!-- Parity Deals -->
+    <script src="https://cdn.paritydeals.com/banner.js"></script>    
+    <!-- End Parity Deals -->       
+
     <!-- Play video -->
     <script type="text/javascript">
         function playVideo()
@@ -112,44 +116,46 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
+    <div class="fixed-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text page-scroll" href="/">Julio Casal</a>
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <a class="navbar-brand logo-text page-scroll" href="/">Julio Casal</a>
 
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html">
+                <!-- Image Logo -->
+                <!-- <a class="navbar-brand logo-image" href="index.html">
                 <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
             </a> -->
 
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#testimonials-featured">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#faq">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-solid-sm page-scroll" href="#pricing">Get Instant Access Now</a>
-                    </li>
-                </ul>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#testimonials-featured">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#faq">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-solid-sm page-scroll" href="#pricing">Get Instant Access Now</a>
+                        </li>
+                    </ul>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    </div>
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 10rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex align-items-center">
