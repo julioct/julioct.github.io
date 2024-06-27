@@ -24,7 +24,7 @@ Let's dive in.
 ### **What is MongoDB?**
 MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It is a popular choice for developers because it is easy to use and can scale with your application. 
 
-![](/assets/images/tns-38-what-is-mongodb.jpg)
+![](/assets/images/tns-39-what-is-mongodb.jpg)
 
 I like using MongoDB when:
 
@@ -366,13 +366,13 @@ To confirm the data made it to the database, you can either use your GET endpoin
 
 But where is the database? Well, start by browsing to your .NET Aspire dashboard using the URL provided in the terminal output:
 
-![](/assets/images/tns-38-aspire-with-mongodb.jpg)
+![](/assets/images/tns-39-aspire-with-mongodb.jpg)
 
 The endpoint for the MongoDB database is listed there, and you can use it to connect to the database using your preferred MongoDB client.
 
 Here I connected using the [MongoDB extension for VS Code](https://www.mongodb.com/products/tools/vs-code){:target="_blank"}:
 
-![](/assets/images/tns-38-mongodb-vscode.jpg)
+![](/assets/images/tns-39-mongodb-vscode.jpg)
 
 Mission accomplished!
 

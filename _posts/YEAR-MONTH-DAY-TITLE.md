@@ -2,7 +2,7 @@
 title: TITLE
 date: YYYY-MM-DD
 layout: post
-featured-image: IMAGE.jpg
+featured-image: tns-NN.jpg
 featured-image-alt: TITLE
 issue-number: NN
 ---
