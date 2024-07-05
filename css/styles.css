@@ -711,9 +711,9 @@ input[type='checkbox'] {
 	font-size: 1.25rem;
 }
 
-.fixed-top {
+/* .fixed-top {
 	top: 70px
-}
+} */
 
 .red-value {
 	color: #BA1631;
