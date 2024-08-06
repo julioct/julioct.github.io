@@ -224,4 +224,4 @@ I hope it was useful.
 
 2. **[ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step.
 
-2. **[Promote yourself to 15,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+2. **[Promote yourself to 16,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
