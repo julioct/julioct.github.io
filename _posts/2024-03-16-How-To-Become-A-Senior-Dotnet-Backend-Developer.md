@@ -142,7 +142,7 @@ I hope the resources I've shared here will help you get there.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ A complete program designed to transform the way you build cloud-ready .NET systems at scale.
+1. **[.NET Cloud Developer Bootcamp](https://go.dotnetacademy.io/bootcamp-waitlist)**:​ Everything you need to go from zero to building real-world .NET cloud applications, step by step.
 
 2. **[​Building .NET REST APIs]({{ site.url }}/courses/dotnetrestapis)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step. 
 
