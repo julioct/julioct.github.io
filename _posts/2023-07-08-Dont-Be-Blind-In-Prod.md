@@ -197,7 +197,7 @@ I hope you enjoyed it.
 
 1. **[.NET Cloud Developer Bootcamp](https://go.dotnetacademy.io/bootcamp-waitlist)**:​ Everything you need to go from zero to building real-world .NET cloud applications, step by step.
 
-2. **[​Building .NET REST APIs]({{ site.url }}/courses/dotnetrestapis)**: A carefully crafted package to kickstart your career as an ASP.NET Core Full Stack Developer, step by step. 
+2. **[​All-Access Pass]({{ site.url }}/courses/all-access)**: A complete catalog of premium courses, with continuous access to new training and updates. 
 
 3. **[​Patreon Community](https://www.patreon.com/juliocasal)**: Join for exclusive discounts on all my in-depth courses and access my Discord server for community support and discussions. 
 
