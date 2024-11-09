@@ -176,6 +176,58 @@
             text-align: center;
         }
     </style>
+
+    <style>
+        .course-info-box {
+            background-color: #f5f6fb;
+            /* Light gray background to match page style */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #2f363b;
+        }
+
+        .course-info-box h4 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .course-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .course-info-list li {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #6b747b;
+            /* Dark gray text color */
+            margin-bottom: 10px;
+        }
+
+        .course-info-list i {
+            flex-shrink: 0;
+            width: 1.5rem;
+            /* Fixed width to align icons */
+            font-size: 1.25rem;
+            color: #5f4dee;
+            /* Icon color matching headers */
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .course-info-list span {
+            flex-grow: 1;
+        }
+
+        .course-info-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -472,11 +524,12 @@
     <div id="course-curriculum" class="basic-1">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <h2 class="h2-heading display-4 font-weight-bold">Course 1 Curriculum</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row justify-content-center mb-4">
+                <!-- Main curriculum content -->
                 <div class="col-lg-8">
                     <div class="accordion" id="curriculum-accordion">
                         <div class="card">
@@ -851,6 +904,24 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar with course information -->
+                <div class="col-lg-4">
+                    <div class="course-info-box">
+                        <h4>Course Includes</h4>
+                        <ul class="course-info-list">
+                            <li><i class="fas fa-bookmark"></i> <span>9 Modules, 74 Lessons</span></li>
+                            <li><i class="fas fa-video"></i> <span>6.5 Hours of Video</span></li>
+                            <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
+                            <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
+                            <li><i class="fas fa-tasks"></i> <span>Knowledge Checks</span></li>
+                            <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
+                        </ul>
+                        <div class="course-info-cta">
+                            <a class="btn-solid-lg-small-padding page-scroll" href="#pricing">Start Watching</a>
                         </div>
                     </div>
                 </div>
