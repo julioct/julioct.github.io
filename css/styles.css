@@ -154,7 +154,7 @@ a:hover {
 	box-shadow: 0 0 10px #5f4dee;
 }
 
-.card .course-title.best-value  {
+.card .course-title.best-value {
 	color: white;
 	transition: color 0.2s ease-in-out;
 }
@@ -230,7 +230,7 @@ a.white:hover {
 	border-radius: 32px;
 	background: linear-gradient(to right, #bf3333 33.33%, #d33737 66.33%, #f62d22 100%);
 	color: #ffffff;
-	font-weight: 600;	
+	font-weight: 600;
 	line-height: 1.5;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -1532,19 +1532,19 @@ input[type='checkbox'] {
 }
 
 .card-bottom-right-text {
-    /* display: inline-block; */
-    /* justify-content: flex-end; */
-    /* align-items: center; */
-    background-color: #d33737;
-    color: white;
-    padding: 7px;
-    font-weight: bold;
+	/* display: inline-block; */
+	/* justify-content: flex-end; */
+	/* align-items: center; */
+	background-color: #d33737;
+	color: white;
+	padding: 7px;
+	font-weight: bold;
 	float: right;
 }
 
 .card-footer {
-    background-color: transparent;
-    border: none;
+	background-color: transparent;
+	border: none;
 	padding-top: 0;
 }
 
@@ -2041,7 +2041,6 @@ a:hover.back-to-top {
 /*************************/
 .accordion .card {
 	border: none;
-	min-width: 600px;
 }
 
 .accordion .card-body {
@@ -2121,10 +2120,26 @@ a:hover.back-to-top {
 /*     Media Queries     */
 /*************************/
 /* Min-width 576px */
-@media (min-width: 576px) {	
+@media (min-width: 576px) {
 	.header-newsletter {
 		height: 88%
-	}	
+	}
+}
+
+/* Max-width 768px */
+@media (max-width: 768px) {
+	.chapter-title span {
+		font-size: 1rem;
+	}
+
+	.lesson-title {
+		font-size: 1rem;
+	}
+
+	.btn.preview-button {
+		font-size: 0.8rem;
+		padding: 4px 6px;
+	}
 }
 
 /* Min-width 768px */
@@ -2150,8 +2165,8 @@ a:hover.back-to-top {
 	/* end of extra pages */
 
 	.btn-solid-lg {
-		line-height: 0;	
-		font-size: 1.5rem;	
+		line-height: 0;
+		font-size: 1.5rem;
 		padding: 1.5rem 2.5rem 1.5rem 2.5rem;
 	}
 
@@ -2191,7 +2206,7 @@ a:hover.back-to-top {
 	.header .btn-solid-lg-container {
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-	}	
+	}
 
 	/* Navigation */
 	.navbar {
@@ -2402,7 +2417,7 @@ a:hover.back-to-top {
 
 	#newsletter-iphone-mockup {
 		display: block;
-	}		
+	}
 }
 
 /* end of min-width 992px */
