@@ -163,7 +163,7 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp](https://go.dotnetacademy.io/bootcamp-waitlist)**:​ Everything you need to go from zero to building real-world .NET cloud applications, step by step.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**:​ Everything you need to build production ready .NET applications for the Azure cloud at scale.
 
 2. **[​All-Access Pass]({{ site.url }}/courses/all-access)**: A complete catalog of premium courses, with continuous access to new training and updates. 
 
