@@ -210,7 +210,7 @@ public class MongoBasketRepository(IMongoDatabase database) : IBasketRepository
 }
 ```
 
-If you want to take things further, you could add methods to get all baskets, delete a basket, and more. I go over those, and even how to implement a generic MongoDB repository, in my [Building Microservices With .NET](https://dotnetmicroservices.com){:target="_blank"} training program.
+If you want to take things further, you could add methods to get all baskets, delete a basket, and more. I go over those, and even how to implement a generic MongoDB repository, in my [.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 Now let's see what to do to register that repository in the application.
 

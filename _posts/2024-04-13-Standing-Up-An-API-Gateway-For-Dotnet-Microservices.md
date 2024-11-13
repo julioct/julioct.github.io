@@ -140,8 +140,6 @@ spec:
 
 The main things there are the **hostname**, which is the public DNS name that clients can use to access your system, and the **tlsSecret**, which is the name of the Kubernetes secret that contains the SSL certificate for that domain.
 
-The steps to provision that SSL certificate are too much to cover in this article, but you can get all the details in the [Cert-Manager documentation](https://cert-manager.io/docs){:target="_blank"} documentation or in my [microservices program](https://dotnetmicroservices.com).
-
 Now run these in your terminal to apply both resources to your cluster
 
 ```powershell 

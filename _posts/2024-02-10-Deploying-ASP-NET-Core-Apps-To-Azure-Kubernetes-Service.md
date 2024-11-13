@@ -256,15 +256,7 @@ Which returns this:
 
 Mission accomplished!
 
-I get into much more detail about many other things to consider when using AKS in my [microservices program](https://dotnetmicroservices.com).
-
-But now that you have your first ASP.NET Core app deployed there you can:
-
-- Quickly scale your app up and down as needed.
-- Make sure your app is always available.
-- Automatically distribute traffic between your pods.
-- Roll out updates and changes really fast and with zero downtime.
-- Ensure the resources on all your machines are used efficiently.
+And if standing up and maintaining your own AKS cluster is too much, you can instead use the Azure Container Apps (ACA) service, covered in detail in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**, which abstracts away the Kubernetes complexity and lets you focus on your code.
 
 Welcome to cloud-native development!
 

@@ -150,10 +150,7 @@ A common pattern for building distributed systems is the **microservices archite
 To get started with .NET Aspire:
 * [Check out my article]({{ site.url }}/blog/Going-Cloud-Native-With-Dotnet-Aspire) 
 * [Watch my YouTube video](https://youtu.be/pk6FJfHhfq8){:target="_blank"}.
-
-To get started with microservices:
-* [Read these official docs](https://dotnet.microsoft.com/en-us/apps/aspnet/microservices){:target="_blank"} 
-* [Get my in-depth microservices training program](https://dotnetmicroservices.com){:target="_blank"}
+* [Join my .NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)
 
 <br/>
 

@@ -279,7 +279,7 @@ Mission accomplished!
 <br/>
 
 ### **How to run my docker container in the cloud?**
-To run your containers in the cloud you can prepare a VM with Docker via your cloud provider or, if you don't want to have to prepare any production VM, and just run the containers, you can use services like Azure Kubernetes Service (AKS), which I cover in [my microservices program](https://dotnetmicroservices.com).
+To run your containers in the cloud you can prepare a VM with Docker via your cloud provider or, if you don't want to have to prepare any production VM, and just run the containers, you can use services like Azure Kubernetes Service (AKS) or Azure Container Apps (ACA), which I cover in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 And that's it for today. I hope you enjoyed it.
 

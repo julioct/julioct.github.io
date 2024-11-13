@@ -252,10 +252,9 @@ There are a bunch of things I didn't get to cover here, like:
 
 * How to version your NuGet packages
 * How to consume NuGet packages from private feeds in Docker 
-* How to use GitHub Packages as opposed to Azure Artifacts
 * How to build and publish NuGet packages in your CI/CD pipelines
 
-If you are interested, I cover that and a bunch of other related topics in my [microservices program](https://dotnetmicroservices.com), since using NuGet fluently when working with microservices is a must.
+If you are interested, I cover that and a bunch of other related topics in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 I hope you liked it.
 

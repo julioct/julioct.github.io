@@ -260,7 +260,7 @@ Mission accomplished.
 
 If you want a more advanced authorization policy, so you can require specific user roles or check for custom claims, I also got a [YouTube video](https://youtu.be/wVFfPrB5kEw) where I cover those details. 
 
-And if you are thinking on taking your API to production, I cover how to stand up your own authorization server in my [.NET Microservices program](https://dotnetmicroservices.com) and how to use a ready-to-go, hosted authorization server in my [.NET REST APIs course](https://dotnetrestapis.com).
+And if you are thinking on taking your API to production, I cover how to take things to the next level with OIDC and Microsoft Entra ID in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 ---
 

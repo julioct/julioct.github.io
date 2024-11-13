@@ -224,7 +224,7 @@ To deploy our microservice to AKS, we will use a **Helm** chart that I had alrea
 
 If you are not familiar with Helm, it is basically a package manager for Kubernetes that allows you to define, install, and upgrade Kubernetes applications.
 
-What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR. I won't dive into that part here, but I cover it in detail in my [microservices program](https://dotnetmicroservices.com){:target="_blank"}.
+What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR. 
 
 So first let's add a step to get access to the AKS cluster (we can do this because we already authenticated with Azure in the previous job):
 

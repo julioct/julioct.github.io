@@ -130,7 +130,7 @@ I have a free course to get started with .NET microservices over [here](https://
 ### **Looking for a Shortcut?**
 The free resources listed above should be good enough to prepare you for a Senior .NET Backend Developer role.
 
-However, if you are short on time and prefer to learn all these topics in a structured way, please check out my [**Building Microservices With .NET**](https://dotnetmicroservices.com) and [**Building .NET REST APIs**]({{ site.url }}/dotnetrestapis) in-depth courses.
+However, if you are short on time and need a step-by-step guide to learn most of those topics in a curated, well-structured format, please check out my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 Senior .NET Backend Developers are in high demand and are very well compensated. 
 

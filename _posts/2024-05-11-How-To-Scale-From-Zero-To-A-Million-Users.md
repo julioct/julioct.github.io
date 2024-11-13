@@ -129,7 +129,7 @@ And, if you plug in a good **CI/CD pipeline** via [GitHub Actions]({{ site.url }
 <br/>
 
 ### **The tech**
-I go into more details in my [microservices program](https://dotnetmicroservices.com), but here are some popular options in the .NET and Azure ecosystem for the different components in this architecture:
+I go into more details in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**, but here are some popular options in the .NET and Azure ecosystem for the different components in this architecture:
 
 - **Containers**: [Azure Kubernetes Service (AKS)]({{ site.url }}/blog/Deploying-ASP-NET-Core-Apps-To-Azure-Kubernetes-Service) or [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps){:target="_blank"}.
 - **Database**: [Azure SQL Database](https://azure.microsoft.com/en-us/products/azure-sql/database){:target="_blank"} or [Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db){:target="_blank"}.
