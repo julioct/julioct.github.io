@@ -735,7 +735,7 @@ input[type='checkbox'] {
 .header {
 	position: relative;
 	overflow: hidden;
-	padding-top: 8.5rem;
+	padding-top: 6rem;
 	background-color: #5f4dee;
 	text-align: center;
 }
