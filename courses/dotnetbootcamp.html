@@ -62,8 +62,7 @@
     <!-- End Deadline Funnel -->
 
     <script type="text/javascript">
-        (function (c, l, a, r, i, t, y)
-        {
+        (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
@@ -266,7 +265,7 @@
     <!-- end of navigation -->
 
     <!-- Header -->
-    <header id="header" class="header" style="padding-top: 7rem">
+    <header id="header" class="header">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 d-flex align-items-center">
@@ -281,17 +280,27 @@
                                 <div class="text-container">
                                     <h1 class="h2-heading" style="text-align: left;">Become A .NET Cloud Developer,
                                         Step By Step</h1>
+                                    <p class="line-spaced-paragraph white" style="text-align: left;">
+                                        A complete blueprint for C# developers who need to build production ready .NET
+                                        applications
+                                        for the Azure cloud at scale.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <p class="line-spaced-paragraph white" style="text-align: left;">
-                            A complete blueprint for C# developers who need to build production ready .NET applications
-                            for the Azure cloud at scale.
-                        </p>
                         <div class="row">
                             <div class="col-lg-12">
+                                <div class="text-container mr-0">
+                                    <h1 class="save-value best-value mb-0" style="font-size: 2rem;">BLACK FRIDAY SPECIAL
+                                    </h1>
+                                </div> <!-- end of text-container -->
+                            </div> <!-- end of div -->
+                        </div> <!-- end of row -->                        
+                        <div class="row">
+                            <div class="col">
                                 <div class="btn-solid-lg-container">
-                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
+                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <span
+                                            style="text-decoration: line-through;">$494</span> <strong>$247</strong></a>
                                 </div>
                             </div> <!-- end of text-container -->
                         </div> <!-- end of div -->
@@ -1135,7 +1144,7 @@
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
-                            <div class="card-title best-value">EARLY BIRD PRICE</div>
+                            <div class="card-title best-value">CLOUD DEVELOPER BOOTCAMP</div>
                             <div class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
@@ -1148,7 +1157,7 @@
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
-                                    href="https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720">START
+                                    href="https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720&coupon=BLACKFRIDAY24">START
                                     WATCHING</a>
                             </div>
                             <hr class="cell-divide-hr">
@@ -1337,34 +1346,28 @@
         const closePopup = document.getElementById('closePopup');
 
         // Function to open the popup with a specified video
-        function openVideoPopup(videoId, videoHash)
-        {
+        function openVideoPopup(videoId, videoHash) {
             videoIframe.src = `https://player.vimeo.com/video/${videoId}?h=${videoHash}&autoplay=1`;
             popupOverlay.style.display = 'flex';
         }
 
         // Close the popup and stop the video
-        closePopup.addEventListener('click', () =>
-        {
+        closePopup.addEventListener('click', () => {
             videoIframe.src = ''; // Clear the src to stop the video
             popupOverlay.style.display = 'none';
         });
 
         // Close the popup if clicked outside the content
-        popupOverlay.addEventListener('click', (e) =>
-        {
-            if (e.target === popupOverlay)
-            {
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
                 videoIframe.src = '';
                 popupOverlay.style.display = 'none';
             }
         });
 
         // Attach click event to each "Free Preview" button
-        document.querySelectorAll('.preview-button').forEach(button =>
-        {
-            button.addEventListener('click', () =>
-            {
+        document.querySelectorAll('.preview-button').forEach(button => {
+            button.addEventListener('click', () => {
                 const videoId = button.getAttribute('data-video-id');
                 const videoHash = button.getAttribute('data-video-hash');
                 openVideoPopup(videoId, videoHash);

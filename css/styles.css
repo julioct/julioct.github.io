@@ -711,9 +711,9 @@ input[type='checkbox'] {
 	font-size: 1.25rem;
 }
 
-/* .fixed-top {
+.fixed-top {
 	top: 70px
-} */
+}
 
 .red-value {
 	color: #BA1631;
@@ -735,7 +735,7 @@ input[type='checkbox'] {
 .header {
 	position: relative;
 	overflow: hidden;
-	padding-top: 6rem;
+	padding-top: 8rem;
 	background-color: #5f4dee;
 	text-align: center;
 }
