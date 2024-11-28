@@ -198,4 +198,4 @@ Hope you find them as useful as I did.
 
 3. **[​Patreon Community](https://www.patreon.com/juliocasal)**: Join for exclusive discounts on all my in-depth courses and access my Discord server for community support and discussions. 
 
-4. **[Promote yourself to 19,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+4. **[Promote yourself to 20,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
