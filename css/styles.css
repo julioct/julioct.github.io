@@ -2116,6 +2116,23 @@ a:hover.back-to-top {
 	display: none;
 }
 
+/* Custom CSS for image resizing */
+.course-box-image {
+	width: 35%;
+	height: auto;
+	min-width: 200px;
+}
+
+.featured-product {
+	background-color: #F4F8FF; 
+	border: 1px solid #e0e0e0; 
+	border-radius: 8px; 
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-left: auto;
+    margin-right: auto;
+}
+
 /*************************/
 /*     Media Queries     */
 /*************************/
@@ -2124,6 +2141,13 @@ a:hover.back-to-top {
 	.header-newsletter {
 		height: 88%
 	}
+}
+
+@media (max-width: 576px) {
+    .featured-product {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 /* Max-width 768px */
@@ -2417,6 +2441,10 @@ a:hover.back-to-top {
 
 	#newsletter-iphone-mockup {
 		display: block;
+	}
+
+	.course-box-image {
+		width: 80%;
 	}
 }
 
