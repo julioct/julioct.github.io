@@ -28,32 +28,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://juliocasal.com/courses/dotnet-restapi-essentials</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/courses/blazor-essentials</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/courses/dotnetrestapis</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://juliocasal.com/courses/csharp-unittesting-essentials</loc>
   <lastmod>2024-04-24T13:15:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/mastering-csharp-unittesting</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/courses/aspnetcore-fullstack-bundle</loc>
   <lastmod>2024-04-24T13:15:16+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -66,11 +46,6 @@
   <loc>https://juliocasal.com/courses/dotnetbootcamp</loc>
   <lastmod>2024-11-13T13:15:16+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/courses/all-access</loc>
-  <lastmod>2024-04-24T13:15:16+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/sponsor-the-newsletter</loc>
