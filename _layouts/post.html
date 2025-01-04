@@ -61,6 +61,20 @@
     <link href="/assets/css/style.css" rel="stylesheet">
     <!-- <link href="/css/styles.css" rel="stylesheet"> -->
 
+    <style>
+        /* Override Kit styles for all relevant forms */
+        form.seva-form [data-style="clean"] {
+            padding: 0 !important;
+            /* Override the top padding */
+        }
+
+        /* Remove the margin below the email input field */
+        form.seva-form[data-uid="50f23d4f29"] .formkit-field {
+            margin-bottom: 7px !important;
+            /* Reset margin below the input field */
+        }
+    </style>
+
     <!-- Favicon  -->
     <link rel="icon">
 </head>
@@ -208,28 +222,21 @@
                 </div>
                 <div class="col-md-3 mt-4">
                     <div class="sticky-top" style="top: 6rem;">
-                        <h5>Subscribe to the Newsletter</h5>
-                        <p>Join 20,000+ readers of The .NET Saturday for exclusive tips to learn, grow & upgrade your
-                            .NET
-                            skills.
-                        </p>
-                        <script async data-uid="2747effed2"
-                            src="https://juliocasal.ck.page/2747effed2/index.js"></script>
-                        <h5 class="mt-4">Share this Article on</h5>
-                        <div class="icon-container">
-                            <span class="fa-stack" style="width: 2em;">
-                                <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}"
-                                    target="blank">
-                                    <i class="fab fa-twitter" style="color: #5f4dee;font-size: 1.5em"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack" style="width: 2em;">
-                                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                                    target="_blank">
-                                    <i class="fab fa-linkedin-in" style="color: #5f4dee;font-size: 1.5em"></i>
-                                </a>
-                            </span>
-                        </div> <!-- end of icon-container -->
+                        <div class="card course best-value h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                            <div class="card-image mt-2">
+                                <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
+                                    src="/images/roadmap-ad.png" width="90%" alt="alternative">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="course-title best-value text-center"
+                                    style="white-space: normal; font-size: 1rem;">
+                                    <strong>FREE .NET Developer Roadmap</strong>
+                                </h5>
+                                <p style="color: white;">Fully interactive with 110+ topics on today's must-know technologies.</p>
+                                <script async data-uid="50f23d4f29"
+                                    src="https://juliocasal.kit.com/50f23d4f29/index.js"></script>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,7 +300,7 @@
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-patreon fa-stack-1x"></i>
                             </a>
-                        </span>                           
+                        </span>
                         <span class="fa-stack">
                             <a href="https://www.instagram.com/thejuliocasal" target="blank">
                                 <i class="fas fa-circle fa-stack-2x"></i>

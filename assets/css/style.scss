@@ -8,6 +8,30 @@
 /*     General Styles     */
 /**************************/
 
+.card .course-title:hover {
+	color: #5f4dee;
+}
+
+.card.course:hover {
+	box-shadow: 0 0 10px #5f4dee;
+}
+
+.card .course-title.best-value {
+	color: white;
+}
+
+.card.best-value {
+	background-color: #5f4dee;
+}
+
+.card.course.best-value:hover {
+	box-shadow: 0 0 10px #eb8a2f;
+}
+
+.card-body {
+	padding: 0.75rem;
+}
+
 .btn-solid-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
