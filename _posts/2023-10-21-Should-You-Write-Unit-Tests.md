@@ -161,12 +161,10 @@ I hope it was useful.
 
 <br/>
 
-**Whenever you’re ready, there are 4 ways I can help you:**
+**Whenever you’re ready, there are 3 ways I can help you:**
 
 1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**:​ Everything you need to build production ready .NET applications for the Azure cloud at scale.
 
-2. **[​All-Access Pass]({{ site.url }}/courses/all-access)**: A complete catalog of premium courses, with continuous access to new training and updates. 
+2. **[​Ultimate C# Unit Testing Bundle]({{ site.url }}/courses/unittesting-bundle)**: A complete beginner to advanced C# unit testing package to write high-quality C# code and ship real-world applications faster and with high confidence. 
 
-3. **[​Patreon Community](https://www.patreon.com/juliocasal)**: Join for exclusive discounts on all my in-depth courses and access my Discord server for community support and discussions. 
-
-4. **[Promote yourself to 20,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+3. **[Promote yourself to 20,000+ subscribers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
