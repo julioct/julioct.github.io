@@ -80,37 +80,53 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top" style="display: block;">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="fixed-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <a class="navbar-brand logo-text page-scroll" href="/">Julio Casal</a>
 
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <a class="navbar-brand logo-text page-scroll" href="/">Julio Casal</a>
+                <!-- Image Logo -->
+                <!-- <a class="navbar-brand logo-image" href="index.html">
+                    <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
+                </a> -->
 
-        <!-- Image Logo -->
-        <!-- <a class="navbar-brand logo-image" href="index.html">
-            <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
-        </a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="/blog">Newsletter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="/courses">Courses</a>
-                </li>
-            </ul>
-        </div> <!-- end of navbar-collapse -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="/blog">Newsletter</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link page-scroll dropdown-toggle" href="/courses" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Courses
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/courses/dotnetbootcamp">.NET Cloud Developer
+                                    Bootcamp</a>
+                                <a class="dropdown-item" href="/courses/unittesting-bundle">Ultimate C# Unit Testing
+                                    Bundle</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-solid-sm page-scroll" href="/roadmap">FREE ROADMAP</a>
+                        </li>
+                    </ul>
+                </div> <!-- end of navbar-collapse -->
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    </div>
 
     {{ content }}
 

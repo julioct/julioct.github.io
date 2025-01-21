@@ -664,10 +664,10 @@ input[type='checkbox'] {
 }
 
 .navbar .dropdown-menu {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-	border: none;
-	background-color: #5f4dee;
+    background: #201B3D;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .dropdown-item {
@@ -680,9 +680,13 @@ input[type='checkbox'] {
 	text-decoration: none;
 }
 
+.navbar .dropdown-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .navbar .dropdown-item:hover {
-	background-color: #5f4dee;
-	color: #ffffff;
+    background-color: #4e3dbb; /* Slightly darker shade */
+    color: #ffffff;
 }
 
 .navbar .dropdown-divider {
