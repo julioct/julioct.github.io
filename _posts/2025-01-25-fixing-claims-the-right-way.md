@@ -132,7 +132,7 @@ Mission accomplished!
 ​
 
 ### **Wrapping up**
-If you would like to know more about Keycloak integration with ASP.NET Core, I got all that covered in course 3 of [the bootcamp](https://dotnetacademy.io/bootcamp).
+If you would like to know more about Keycloak integration with ASP.NET Core, I got all that covered in course 3 of [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 Now I'll get back to reinstalling this Windows box and hope I don't miss anything important along the way :)
 
