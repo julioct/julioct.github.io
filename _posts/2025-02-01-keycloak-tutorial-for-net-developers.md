@@ -451,7 +451,7 @@ For instance, here's the shopping cart page, where the back-end must know who th
 
 So there you go, ASP.NET Core + Keycloak working end to end, all secured with the industry standard OIDC protocol.
 
-If you need a step by step video based guide to everything I showed you above and many other details I could not cover here, plus the full source code, and even an additional React application also configured for Keycloak, I got all that covered in [the bootcamp](https://dotnetacademy.io/bootcamp).
+If you need a step by step video based guide to everything I showed you above and many other details I could not cover here, plus the full source code, and even an additional React application also configured for Keycloak, I got all that covered in [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 ​
 
