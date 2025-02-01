@@ -2,7 +2,7 @@
 layout: post
 title: "Keycloak Tutorial for .NET Developers"
 date: 2025-02-01
-featured-image: 4ghDFAZYvbFtvU3CTR72ZN-ofDFUsa5NF2Mi4L6Nsyw7u.jpeg
+featured-image: 2025-02-01/4ghDFAZYvbFtvU3CTR72ZN-ofDFUsa5NF2Mi4L6Nsyw7u.jpeg
 issue-number: 70
 ---
 
