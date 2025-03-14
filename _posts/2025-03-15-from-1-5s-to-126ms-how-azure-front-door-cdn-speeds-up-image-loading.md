@@ -114,17 +114,7 @@ It's not like I don't like creating diagrams, but after spending this last week 
 
 However, I think good diagrams are extremely important to understand exactly how your app will interact with a myriad of Azure services after deployment, and I could not find many of those in the Microsoft docs.
 
-A small sample:
-
-
-![](/assets/images/2025-03-15/4ghDFAZYvbFtvU3CTR72ZN-cbW4qzPvrDNUyrXuzA15et.jpeg)
-
-​
-
-
-![](/assets/images/2025-03-15/4ghDFAZYvbFtvU3CTR72ZN-pa8s3rv8vpBJctcCXtKoXD.jpeg)
-
-​
+A small sample of what's coming:
 
 
 ![](/assets/images/2025-03-15/4ghDFAZYvbFtvU3CTR72ZN-vuo24Wp74h5UJLMMZJFc4q.jpeg)
@@ -141,9 +131,21 @@ A small sample:
 
 ​
 
-And I still have a few more to go for the last couple of modules where we'll cover .NET Aspire and Infrastructure as Code.
 
-Can't wait to start recording!
+![](/assets/images/2025-03-15/4ghDFAZYvbFtvU3CTR72ZN-o19zwt4Dfxzymw7gGLpKAT.jpeg)
+
+​
+
+
+![](/assets/images/2025-03-15/4ghDFAZYvbFtvU3CTR72ZN-8rgw39GDCubicDyKYXjHV.jpeg)
+
+​
+
+I'm finishing the last diagram now, which means next week will be the time to start recording the course. 
+
+As a reminder, all current bootcamp students will get access to this new Azure for .NET Developers course, with downloadable diagrams and full source code, at no additional cost, on day 1.
+
+Until next week!
 
 Julio
 
