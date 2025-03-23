@@ -234,18 +234,41 @@
 
     // Check if parity-deals is hidden and show payment plan if needed
     document.addEventListener("DOMContentLoaded", function() {
-        // Give parity deals script time to load and execute
+        // Allow more time for the parity deals script to fully load and render
         setTimeout(function() {
             const parityDealsElement = document.getElementById('parity-deals');
             const paymentPlanContainer = document.getElementById('payment-plan-container');
+            const frequencyElement = document.querySelector('.one-time-payment');
             
-            // If parity-deals is empty or hidden, show the payment plan
-            if (!parityDealsElement.innerHTML.trim() || parityDealsElement.offsetHeight === 0) {
-                paymentPlanContainer.style.display = 'block';
+            // More robust check for parity-deals visibility
+            const isParityDealsEmpty = !parityDealsElement || 
+                                       !parityDealsElement.innerHTML.trim() || 
+                                       parityDealsElement.offsetHeight === 0 || 
+                                       parityDealsElement.style.display === 'none' ||
+                                       getComputedStyle(parityDealsElement).display === 'none';
+            
+            console.log("Parity deals status - Empty or Hidden:", isParityDealsEmpty);
+            
+            if (isParityDealsEmpty) {
+                // If parity-deals is empty or hidden, show payment plan and change text to "Best Value"
+                if (paymentPlanContainer) {
+                    paymentPlanContainer.style.display = 'block';
+                }
+                if (frequencyElement) {
+                    console.log("Changing text to 'Best Value'");
+                    frequencyElement.textContent = 'Best Value';
+                }
             } else {
-                paymentPlanContainer.style.display = 'none';
+                // If parity-deals is visible, hide payment plan and set text to "Lifetime Access"
+                if (paymentPlanContainer) {
+                    paymentPlanContainer.style.display = 'none';
+                }
+                if (frequencyElement) {
+                    console.log("Changing text to 'Lifetime Access'");
+                    frequencyElement.textContent = 'Lifetime Access';
+                }
             }
-        }, 1000); // Wait 1 second to ensure parity deals script has run
-    });    
+        }, 1500); // Increased timeout to ensure parity deals script has fully executed
+    });
 
 })(jQuery);
