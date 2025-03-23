@@ -232,4 +232,20 @@
         }
     });
 
+    // Check if parity-deals is hidden and show payment plan if needed
+    document.addEventListener("DOMContentLoaded", function() {
+        // Give parity deals script time to load and execute
+        setTimeout(function() {
+            const parityDealsElement = document.getElementById('parity-deals');
+            const paymentPlanContainer = document.getElementById('payment-plan-container');
+            
+            // If parity-deals is empty or hidden, show the payment plan
+            if (!parityDealsElement.innerHTML.trim() || parityDealsElement.offsetHeight === 0) {
+                paymentPlanContainer.style.display = 'block';
+            } else {
+                paymentPlanContainer.style.display = 'none';
+            }
+        }, 1000); // Wait 1 second to ensure parity deals script has run
+    });    
+
 })(jQuery);
