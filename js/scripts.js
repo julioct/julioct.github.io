@@ -232,15 +232,20 @@
         }
     });
 
-    // Check if parity-deals is hidden and show payment plan if needed
+    // Use MutationObserver to check when parity-deals content appears
     document.addEventListener("DOMContentLoaded", function() {
-        // Allow more time for the parity deals script to fully load and render
-        setTimeout(function() {
-            const parityDealsElement = document.getElementById('parity-deals');
-            const paymentPlanContainer = document.getElementById('payment-plan-container');
-            const frequencyElement = document.querySelector('.one-time-payment');
-            
-            // More robust check for parity-deals visibility
+        const parityDealsElement = document.getElementById('parity-deals');
+        const paymentPlanContainer = document.getElementById('payment-plan-container');
+        const frequencyElement = document.querySelector('.one-time-payment');
+        
+        // Initial setup - hide payment plan container by default
+        if (paymentPlanContainer) {
+            paymentPlanContainer.style.display = 'none';
+        }
+        
+        // Function to check parity deals visibility and update UI
+        const updatePaymentPlanVisibility = function() {
+            // Check if parity deals has content
             const isParityDealsEmpty = !parityDealsElement || 
                                        !parityDealsElement.innerHTML.trim() || 
                                        parityDealsElement.offsetHeight === 0 || 
@@ -268,7 +273,28 @@
                     frequencyElement.textContent = 'Lifetime Access';
                 }
             }
-        }, 1500); // Increased timeout to ensure parity deals script has fully executed
+        };
+        
+        // Check initial state
+        updatePaymentPlanVisibility();
+        
+        // Set up MutationObserver to watch for changes to the parity-deals element
+        if (parityDealsElement) {
+            const observer = new MutationObserver(function(mutations) {
+                updatePaymentPlanVisibility();
+            });
+            
+            // Observe changes to the parity-deals element
+            observer.observe(parityDealsElement, { 
+                childList: true,    // Watch for changes to child elements
+                subtree: true,      // Watch the entire subtree
+                attributes: true,   // Watch for changes to attributes
+                characterData: true // Watch for changes to text content
+            });
+            
+            // Also check after a short delay to catch any changes that might happen after initial load
+            setTimeout(updatePaymentPlanVisibility, 500);
+        }
     });
 
 })(jQuery);
