@@ -150,8 +150,8 @@ I go over this entire process, for a real-world e-commerce application, in [the 
 
 ​
 
-### **New Course Available April 17!**
-A couple of days ago I finished recording my new course, **Azure for .NET Developers**, which means I'm now going through the finishing touches to have it ready for launch on April 17!
+### **New Course Available April 15!**
+A couple of days ago I finished recording my new course, **Azure for .NET Developers**, which means I'm now going through the finishing touches to have it ready for launch on April 15!
 
 This is the 4th bootcamp course, which builds on top of the 3 previous courses and aims to serve as an introduction to the Azure cloud specifically crafted for .NET developers.
 
@@ -167,7 +167,7 @@ A few of the top questions answered across the 11 modules included in this new c
 
 Plus, in the last couple of modules, I show how to deploy both a Blazor (server) app and a React (SPA) app to Azure and how to connect them to your cloud-based backend API, to experience the full-stack application end-to-end in Azure.
 
-All current bootcamp students will get this new course on April 17 at no additional cost.
+All current bootcamp students will get this new course on April 15 at no additional cost.
 
 More details coming next week.
 
