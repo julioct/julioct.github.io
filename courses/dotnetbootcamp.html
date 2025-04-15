@@ -16,8 +16,6 @@
         gtag('config', 'G-GKWPQFHL1Y');
     </script>
 
-    <script src="https://cdn.paritydeals.com/banner.js"></script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -157,6 +155,100 @@
             width: 100%;
             height: 600px;
         }
+
+        /* Countdown Timer Styling */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
+        }
+
+        .countdown-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #5f4dee, #ff6a00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: #5f4dee;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .countdown-value::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #5f4dee;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        .ddio_countdown_wrap {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .countdown-value {
+            animation: pulse 1s infinite;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .countdown-container {
+                gap: 10px;
+            }
+
+            .countdown-item {
+                min-width: 70px;
+            }
+
+            .countdown-value {
+                font-size: 2.5rem;
+            }
+
+            .countdown-label {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 
     <style>
@@ -234,10 +326,8 @@
 <body data-spy="scroll" data-target=".fixed-top">
     <div class="fixed-top">
         <!-- Notification Bar -->
-        <!-- <div class="alert alert-info text-center mb-0" role="alert" style="background-color: #E56717; color: white">
-            Use Code <strong>SECURITY20</strong> At Checkout For 20% Off (One-Time Payment Only)
-        </div> -->
-        <div id="parity-deals"></div>
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+            style="background-color: #E56717; color: white; display: none;"></div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -279,62 +369,53 @@
 
     <!-- Header -->
     <header id="header" class="header" style="padding-top: 9rem">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-6 d-flex align-items-center">
-                    <div class="image-container mb-4">
-                        <img class="img-fluid" src="../images/bootcamp-Box_Mockup.png" width="70%" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="text-container">
-                                    <h1 class="h2-heading" style="text-align: left;">Become A .NET Cloud Developer,
-                                        Step By Step</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="line-spaced-paragraph white" style="text-align: left;">
-                            A complete blueprint for C# developers who need to build production ready .NET applications
-                            for the Azure cloud at scale.
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="btn-solid-lg-container">
-                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
-                                </div>
-                            </div> <!-- end of text-container -->
-                        </div> <!-- end of div -->
-                        <div class="row">
-                            <div class="col-lg-10 mx-auto text-center">
-                                <!-- 5 golden stars with larger size -->
-                                <i class="fas fa-star" style="color: gold; font-size: 2em;"></i>
-                                <i class="fas fa-star" style="color: gold; font-size: 2em;"></i>
-                                <i class="fas fa-star" style="color: gold; font-size: 2em;"></i>
-                                <i class="fas fa-star" style="color: gold; font-size: 2em;"></i>
-                                <i class="fas fa-star" style="color: gold; font-size: 2em;"></i>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-lg-10 mx-auto">
-                                <script
-                                    src="https://widget.senja.io/widget/1d328d6a-5050-479e-b5b3-2fc51a13064a/platform.js"
-                                    type="text/javascript" async></script>
-                                <div class="senja-embed" data-id="1d328d6a-5050-479e-b5b3-2fc51a13064a"
-                                    data-mode="shadow" data-lazyload="false" style="display: block;"></div>
-                            </div> <!-- end of text-container -->
-                        </div> <!-- end of div -->
-                        <div class="row">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <p class="line-spaced-paragraph white">150+ students have rated my courses 5 out of 5.
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!-- end of div -->
-                </div> <!-- end of row -->
+        <div class="container text-center">
+            <div class="mb-4">
+                <h1 class="display-3 font-weight-bold" style="line-height: 1.2;">The .NET Cloud Developer Bootcamp</h1>
             </div>
+            <div class="mb-5">
+                <p class="lead text-white"
+                    style="font-size: 1.4rem; line-height: 1.8; font-weight: 300; max-width: 720px; margin: 0 auto;">
+                    A complete blueprint for C# developers who need to build production-ready .NET applications for the
+                    Azure cloud at scale.
+                </p>
+            </div>
+
+            <!-- Bootcamp Image -->
+            <div class="image-container mb-5">
+                <img class="img-fluid" src="../images/bootcamp-hero.png" width="90%" alt="alternative">
+            </div>
+
+            <!-- CTA Button -->
+            <div class="mb-4">
+                <div class="btn-solid-lg-container">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
+                </div>
+            </div> <!-- end of div -->
+
+            <!-- Star Rating -->
+            <div class="mb-2">
+                <i class="fas fa-star" style="color: gold; font-size: 1.5em;"></i>
+                <i class="fas fa-star" style="color: gold; font-size: 1.5em;"></i>
+                <i class="fas fa-star" style="color: gold; font-size: 1.5em;"></i>
+                <i class="fas fa-star" style="color: gold; font-size: 1.5em;"></i>
+                <i class="fas fa-star" style="color: gold; font-size: 1.5em;"></i>
+            </div>
+
+            <!-- Testimonials Embed -->
+            <div class="d-flex justify-content-center mt-3">
+                <div style="max-width: 260px; width: 100%;">
+                    <script src="https://widget.senja.io/widget/1d328d6a-5050-479e-b5b3-2fc51a13064a/platform.js"
+                        type="text/javascript" async></script>
+                    <div class="senja-embed" data-id="1d328d6a-5050-479e-b5b3-2fc51a13064a" data-mode="shadow"
+                        data-lazyload="false" style="display: block;"></div>
+                </div>
+            </div>
+
+            <!-- Trust Text -->
+            <p class="text-white mb-4" style="font-size: 1.05rem; letter-spacing: 0.25px;">
+                150+ students have rated my courses 5 out of 5.
+            </p>
         </div> <!-- end of container -->
 
         <svg class="header-decoration" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -818,7 +899,6 @@
                             <li><i class="fas fa-video"></i> <span>6.5 Hours of Video</span></li>
                             <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
                             <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
-                            <li><i class="fas fa-tasks"></i> <span>Knowledge Checks</span></li>
                             <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
                         </ul>
                         <div class="course-info-cta">
@@ -1152,7 +1232,6 @@
                             <li><i class="fas fa-video"></i> <span>4 Hours of Video</span></li>
                             <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
                             <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
-                            <li><i class="fas fa-tasks"></i> <span>Knowledge Checks</span></li>
                             <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
                         </ul>
                         <div class="course-info-cta">
@@ -1597,7 +1676,6 @@
                             <li><i class="fas fa-video"></i> <span>7 Hours of Video</span></li>
                             <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
                             <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
-                            <li><i class="fas fa-tasks"></i> <span>Knowledge Checks</span></li>
                             <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
                         </ul>
                         <div class="course-info-cta">
@@ -1610,11 +1688,595 @@
     </div> <!-- end of basic-1 -->
     <!-- end of Course 03 Curriculum -->
 
+    <!-- Course 04 Curriculum -->
+    <div id="course04-curriculum" class="basic-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="h2-heading display-4 font-weight-bold">Course 4: Azure For .NET Developers</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center mb-4">
+                <!-- Main curriculum content -->
+                <div class="col-lg-8">
+                    <div class="accordion" id="curriculum-course04-accordion">
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module01"
+                                aria-controls="collapseOne" aria-expanded="true">
+                                <span>Welcome to the course!</span>
+                                <span class="chapter-duration">5min</span>
+                            </h5>
+                            <div id="course04-module01" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Course introduction</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1074022220"
+                                                data-video-hash="7889307050"><strong>Free Preview</strong></button>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What this course covers</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1073696840"
+                                                data-video-hash="6d8f709d80"><strong>Free Preview</strong></button>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What you need to know first</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1074022193"
+                                                data-video-hash="f2c9189d85"><strong>Free Preview</strong></button>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Software prerequisites</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1074022214"
+                                                data-video-hash="af903f1645"><strong>Free Preview</strong></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module02"
+                                aria-controls="collapseOne">
+                                <span>Cloud computing and Azure</span>
+                                <span class="chapter-duration">40min</span>
+                            </h5>
+                            <div id="course04-module02" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is cloud computing?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">The shared responsibility model</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Cloud service models</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Microsoft Azure?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Getting Azure credits</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Interacting with Azure resources</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Azure infrastructure basics</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Azure hosting options</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module03"
+                                aria-controls="collapseOne">
+                                <span>Azure App Service</span>
+                                <span class="chapter-duration">1hr 4min</span>
+                            </h5>
+                            <div id="course04-module03" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is App Service?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a resource group</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating an App Service Web App</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Preparing your app for deployment</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app to App Service</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Exploring your Web App deployment</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Automating the Web App deployment</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using Postman environments</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using logging in App Service</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module04"
+                                aria-controls="collapseOne">
+                                <span>Microsoft Entra</span>
+                                <span class="chapter-duration">1hr 59min</span>
+                            </h5>
+                            <div id="course04-module04" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Microsoft Entra?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating an Entra External ID tenant</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering the backend with Entra</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding API scopes</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering the Postman client</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating users</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Getting access tokens from Entra</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Exploring Entra access tokens</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating and assigning roles</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring the Entra scheme in the backend</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Fixing the role claim</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Fixing the scope claim</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding a UserId claim</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding multi scheme support</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Enabling the email claim</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with Entra support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module05"
+                                aria-controls="collapseOne">
+                                <span>Azure Storage</span>
+                                <span class="chapter-duration">53min</span>
+                            </h5>
+                            <div id="course04-module05" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Azure Storage?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing an Azure Storage file uploader</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering the BlobServiceClient</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running the Azurite emulator</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Testing file upload with the Azurite emulator</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a Storage Account in Azure</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configure the Web App connection to Storage
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with Azure Storage support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module06"
+                                aria-controls="collapseOne">
+                                <span>Azure Front Door</span>
+                                <span class="chapter-duration">37min</span>
+                            </h5>
+                            <div id="course04-module06" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Azure Front Door?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Enable Front Door for a Storate Account</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring your Front Door endpoint in your Web App
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing a CDN URL transformer</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using the CDN URL transformer</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with Front Door support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module07"
+                                aria-controls="collapseOne">
+                                <span>Azure Managed Identities</span>
+                                <span class="chapter-duration">46min</span>
+                            </h5>
+                            <div id="course04-module07" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What are Managed Identities?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Enabling a System Assigned Managed Identity</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Granting permissions to a Managed Identity</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Use a Managed Identity in your Backend</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with System Assigned Managed
+                                                Identity support</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Enabling logging in the Azure SDK</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a User Assigned Managed Identity</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Associating your User Assigned Managed Identities to
+                                                your Web App</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using your User Assigned Managed Identity in the
+                                                Backend</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with User Assigned Managed
+                                                Identity support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module08"
+                                aria-controls="collapseOne">
+                                <span>Azure Database for PostgreSQL</span>
+                                <span class="chapter-duration">1hr 24min</span>
+                            </h5>
+                            <div id="course04-module08" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Azure Database for PostgreSQL?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using the Npgsql database provider</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Generating a PostgreSQL EF migration</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding entity type constraints</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running PostgreSQL as a Docker container</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running backend with PostgreSQL locally</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating an Azure Database for PostgreSQL server
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a passwordless connection to the PostgreSQL
+                                                database</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Preparing the DefaultAzureCredential for reuse</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring the backend connection to PostgreSQL via
+                                                the Managed Identity</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying your app with PostgreSQL support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module09"
+                                aria-controls="collapseOne">
+                                <span>Blazor front-end deployment</span>
+                                <span class="chapter-duration">43min</span>
+                            </h5>
+                            <div id="course04-module09" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering the Blazor front-end in Microsoft Entra
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring the Blazor front-end for local
+                                                development
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running the Blazor front-end locally</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Enabling user registration in Entra</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring the Blazor front-end Azure Web App</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the Blazor front-end to the Azure Web App
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module10"
+                                aria-controls="collapseOne">
+                                <span>Azure Key Vault</span>
+                                <span class="chapter-duration">23min</span>
+                            </h5>
+                            <div id="course04-module10" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Azure Key Vault?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a Key Vault</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Setting Key Vault permissions</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Assigning a managed identity to the front-end Web
+                                                App
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring front-end environment variables</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding secrets to Key Vault</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the front-end with Key Vault support</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course04-module11"
+                                aria-controls="collapseOne">
+                                <span>React front-end deployment</span>
+                                <span class="chapter-duration">31min</span>
+                            </h5>
+                            <div id="course04-module11" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course04-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering the React front-end in Microsoft Entra
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring the React front-end for local
+                                                development
+                                            </div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running the React front-end locally</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating the React front-end Static Web App</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the React front-end to the Azure Static
+                                                Web App</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Running the React front-end as an Azure Static Web
+                                                App</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar with course information -->
+                <div class="col-lg-4">
+                    <div class="course-info-box">
+                        <img src="../images/bootcamp-course04-box.png" alt="Azure For .NET Developers"
+                            class="img-fluid mb-3 course-box-image">
+                        <h4>Course Includes</h4>
+                        <ul class="course-info-list">
+                            <li><i class="fas fa-bookmark"></i> <span>11 Modules, 91 Lessons</span></li>
+                            <li><i class="fas fa-video"></i> <span>9 Hours of Video</span></li>
+                            <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
+                            <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
+                            <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
+                        </ul>
+                        <div class="course-info-cta">
+                            <a class="btn-solid-lg-small-padding page-scroll" href="#pricing">Start Watching</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Course 04 Curriculum -->
+
     <div id="next-course-topics" class="basic-1 mb-5">
         <div class="container">
             <div class="row justify-content-center mt-4">
                 <div class="col-lg-8">
-                    <h2 class="h2-heading display-4 font-weight-bold">Course 4: Azure For .NET Developers</h2>
+                    <h2 class="h2-heading display-4 font-weight-bold">Course 5: Containers & Cloud Native</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -1623,15 +2285,15 @@
                         <img class="img-fluid rounded" src="../images/bootcamp-nextcourse-topics.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-6 pl-4 mt-1">
-                    <h2 class="h2-heading" style="text-align: left;">Coming this April 15</h2>
+                <div class="col-lg-6 pl-4">
+                    <h2 class="h2-heading" style="text-align: left;">Coming May 2025</h2>
                     <div class="text-container">
-                        <p class="line-spaced-paragraph">Securely deploy full stack .NET Web applications to the Azure
-                            cloud using the
-                            most popular services designed for production workloads.</p>
-                        <p class="line-spaced-paragraph">Leverage Azure App Service, Database for PostgreSQL, Microsoft
-                            Entra, and more to build scalable, resilient, and secure applications ready for real-world
-                            environments.</p>
+                        <p class="line-spaced-paragraph">Take your Azure deployment skills to the next level with
+                            containers, cloud-native architecture, and Infrastructure as Code.</p>
+                        <p class="line-spaced-paragraph">Build Docker images, publish to Azure Container
+                            Registry, and run scalable services with Azure Container Apps.</p>
+                        <p class="line-spaced-paragraph">Go hands-on with .NET Aspire for modern local
+                            development and Bicep for provisioning real infrastructure entirely from code.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col-->
             </div> <!-- end of row -->
@@ -1695,12 +2357,6 @@
                     <p class="line-spaced-paragraph">In case you need them, English captions can be turned on quickly
                         for any of the lessons.</p>
                 </div> <!-- end of col -->
-                <div class="col" style="color: #2e3676;">
-                    <i class="fa-solid fa-list-check fa-7x"></i>
-                    <h5>Knowledge Checks</h5>
-                    <p>Check your understanding with quizzes at the end of each module to reinforce your learning.
-                    </p>
-                </div> <!-- end of col -->
                 <div class="col">
                     <img class="img-fluid" src="../images/certificate.jpg" style="height: 135px;" alt="certificate">
                     <h5 class="mt-2">Course Certificate</h5>
@@ -1710,6 +2366,63 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of counter -->
+
+    <div id="bonuses" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold outstanding-title">Exclusive Limited Time Bonus
+                    </h2>
+                    <h4 class="subheader">Only Available Until Sunday, April 20</h4>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <!-- .NET Microservices Training -->
+    <div id="net-microservices-bonus" class="basic-1 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-auto">
+                    <div class="image-container" style="margin-bottom:0">
+                        <img class="img-fluid" src="../images/core-course-box-mockup.png" alt="alternative" width="65%">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 my-auto">
+                    <h3 class="h2-heading">Building Microservices With .NET</h3>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Go from zero to a complete .NET microservices-based system, step by
+                                step</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Avoid code duplication across microservices</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Maximize service availability with the best inter-service
+                                communication patterns</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Protect your microservices with state-of-the-art security tools and
+                                protocols
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body"><strong>Note:</strong> This bonus includes Course 1 of the full
+                                Building Microservices with .NET program (a $297 value).</div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of col-->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of .NET Microservices Training -->
 
     <div id="newway-to-learn" class="basic-1 mb-5">
         <div class="container">
@@ -1811,59 +2524,83 @@
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
-            <div class="row">
+            <div id="countdown-title" class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading display-4 font-weight-bold" style="margin-bottom: 2rem">Become A .NET Cloud
-                        Developer Today!
-                    </h2>
-                </div> <!-- end of col -->
-            </div><!-- end of row -->
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading display-5 font-weight-bold" style="margin-bottom: 2rem">
-                        <span style="background-color: #FFD700; color: #4B0082; padding: 0 5px;">20% Discount</span>
-                        With Code <span
-                            style="background-color: #FFD700; color: #4B0082; padding: 0 5px;">SECURITY20</span> (One-Time Payment Only) Expires
-                        In
-                    </h2>
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0"></h2>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-lg-12">
-                    <div class="ddio_countdown_wrap"></div>
+                    <div class="ddio_countdown_wrap">
+                        <div id="countdown-timer" class="countdown-container">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">ONE-TIME PAYMENT</div>
-                            <div class="mb-2">
+                            <div id="full-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span class=" value best-value" style="font-size: 4.3rem;">497</span>
                                 </div>
                                 <div class="frequency mt-3 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
+                            <div id="discounted-price" class="mb-2">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span id="discounted-price-value" class="value best-value"
+                                        style="font-size: 4.3rem;">397</span>
+                                </div>
+                                <div>
+                                    <span id="original-price" class="full-price">$497</span><span id="discount-amount"
+                                        class="save-value best-value">$100
+                                        OFF</span>
+                                </div>
+                            </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
-                                    href="https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720">START
+                                    href="https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720&coupon=CLOUD100">START
                                     WATCHING</a>
                             </div>
                             <hr class="cell-divide-hr">
                             <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
-                                <img class="img-fluid" style="height: 300px; object-fit: contain;"
-                                    src="../images/bootcamp-Box_Mockup.png" alt="alternative">
+                                <img class="img-fluid" style="object-fit: contain;" src="../images/bootcamp-boxes.png"
+                                    alt="alternative">
                             </div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">3 premium courses to watch instantly</div>
+                                    <div class="media-body">4 premium courses to watch instantly</div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">7 upcoming courses at no additional cost</div>
+                                    <div class="media-body">6 upcoming courses at no additional cost</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body"><strong>Bonus: Building Microservices With .NET - Course
+                                            1</strong></div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -1887,7 +2624,6 @@
                     <!-- end of card -->
                 </div>
                 <div class="col-lg-4" id="payment-plan-container" style="display: none;">
-                    <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">PAYMENT PLAN</div>
@@ -1897,7 +2633,7 @@
                                     <span class="value best-value" style="font-size: 4.3rem;">129</span><span
                                         class="frequency">/month</span>
                                 </div>
-                                <div class="frequency mb-4 mt-3">4 Monthly Payments</div>
+                                <div class="frequency mt-3">4 Monthly Payments</div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
@@ -1906,17 +2642,17 @@
                             </div>
                             <hr class="cell-divide-hr">
                             <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
-                                <img class="img-fluid" style="height: 300px; object-fit: contain;"
-                                    src="../images/bootcamp-Box_Mockup.png" alt="alternative">
+                                <img class="img-fluid" style="object-fit: contain;" src="../images/bootcamp-boxes.png"
+                                    alt="alternative">
                             </div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">3 premium courses to watch instantly</div>
+                                    <div class="media-body">4 premium courses to watch instantly</div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">7 upcoming courses at no additional cost</div>
+                                    <div class="media-body">6 upcoming courses at no additional cost</div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -2003,10 +2739,10 @@
                         <p>The .NET Cloud Developer Bootcamp is a completely self-paced online program. You decide when
                             you start and when you finish.</p>
                         <h4>Does the bootcamp currently include all 10 courses?</h4>
-                        <p>No. Courses 1, 2 and 3 are included today. Courses 4 to 10 will start releasing on April 2025
+                        <p>No. Courses 1 to 4 are included today. Courses 5 to 10 will release on the following months
                             at no additional cost.</p>
                         <h4>How many hours of video content are included in this bootcamp?</h4>
-                        <p>Courses 1 to 3 add up to 17.5 hours. Each future course is expected to add 4+ hours.
+                        <p>Courses 1 to 4 add up to 26.5 hours. Each future course is expected to add 4+ hours.
                         </p>
                         <h4>What version of .NET is used in this bootcamp?</h4>
                         <p>This bootcamp uses .NET 8 since it has Long Term Support (LTS). It will not be updated to
@@ -2084,6 +2820,8 @@
     <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="../js/countdown-timer.js"></script> <!-- Countdown timer script -->
+    <script src="../js/parity-deals.js"></script> <!-- Parity deals script -->
     <script src="../js/favicon.js"></script>
     <script src="../js/navbar-collapse.js"></script>
 
@@ -2132,3 +2870,4 @@
 </body>
 
 </html>
+````

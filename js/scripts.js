@@ -232,69 +232,8 @@
         }
     });
 
-    // Use MutationObserver to check when parity-deals content appears
-    document.addEventListener("DOMContentLoaded", function() {
-        const parityDealsElement = document.getElementById('parity-deals');
-        const paymentPlanContainer = document.getElementById('payment-plan-container');
-        const frequencyElement = document.querySelector('.one-time-payment');
-        
-        // Initial setup - hide payment plan container by default
-        if (paymentPlanContainer) {
-            paymentPlanContainer.style.display = 'none';
-        }
-        
-        // Function to check parity deals visibility and update UI
-        const updatePaymentPlanVisibility = function() {
-            // Check if parity deals has content
-            const isParityDealsEmpty = !parityDealsElement || 
-                                       !parityDealsElement.innerHTML.trim() || 
-                                       parityDealsElement.offsetHeight === 0 || 
-                                       parityDealsElement.style.display === 'none' ||
-                                       getComputedStyle(parityDealsElement).display === 'none';
-            
-            console.log("Parity deals status - Empty or Hidden:", isParityDealsEmpty);
-            
-            if (isParityDealsEmpty) {
-                // If parity-deals is empty or hidden, show payment plan and change text to "Best Value"
-                if (paymentPlanContainer) {
-                    paymentPlanContainer.style.display = 'block';
-                }
-                if (frequencyElement) {
-                    console.log("Changing text to 'Best Value'");
-                    frequencyElement.textContent = 'Best Value';
-                }
-            } else {
-                // If parity-deals is visible, hide payment plan and set text to "Lifetime Access"
-                if (paymentPlanContainer) {
-                    paymentPlanContainer.style.display = 'none';
-                }
-                if (frequencyElement) {
-                    console.log("Changing text to 'Lifetime Access'");
-                    frequencyElement.textContent = 'Lifetime Access';
-                }
-            }
-        };
-        
-        // Check initial state
-        updatePaymentPlanVisibility();
-        
-        // Set up MutationObserver to watch for changes to the parity-deals element
-        if (parityDealsElement) {
-            const observer = new MutationObserver(function(mutations) {
-                updatePaymentPlanVisibility();
-            });
-            
-            // Observe changes to the parity-deals element
-            observer.observe(parityDealsElement, { 
-                childList: true,    // Watch for changes to child elements
-                subtree: true,      // Watch the entire subtree
-                attributes: true,   // Watch for changes to attributes
-                characterData: true // Watch for changes to text content
-            });
-            
-            // Also check after a short delay to catch any changes that might happen after initial load
-            setTimeout(updatePaymentPlanVisibility, 500);
-        }
-    });
+    // The countdown timer and parity deals logic have been moved to separate files:
+    // - countdown-timer.js
+    // - parity-deals.js
 
 })(jQuery);
