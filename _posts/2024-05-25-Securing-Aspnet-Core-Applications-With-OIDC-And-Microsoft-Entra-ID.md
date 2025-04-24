@@ -88,6 +88,11 @@ The choice of provider will depend on your specific requirements and constraints
 
 For this post, I'll focus on **Microsoft Entra ID** because it's part of the Microsoft ecosystem, and it's a great starting point to understand how OIDC works.
 
+Prefer to watch instead? Here's a full walkthrough:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SZTsdOpEb8M?si=AdNQ172-xU6wDCc1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br/>
 Let's see how to secure an ASP.NET Core full-stack application via Microsoft Entra ID in a few simple steps.
 
 <br/>

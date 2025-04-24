@@ -72,6 +72,9 @@ It's stable, easy to deploy, and lets you go from your box to the cloud in minut
 
 Let's go through this last option step by step.
 
+Prefer to watch instead? Here's a full walkthrough:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dLuUJcxFcxU?rel=0&modestbranding=1&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ​
 
 ### **Deploying to Azure App Service**

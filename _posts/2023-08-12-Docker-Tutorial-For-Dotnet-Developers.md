@@ -91,6 +91,10 @@ HTTP/1.1 200 OK
 
 Let's see how to dockerize this simple API.
 
+Prefer to watch instead? Here's a full walkthrough:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cWMztQwIQNs?rel=0&modestbranding=1&controls=1" title="Docker Tutorial for .NET Developers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <br/>
 
 ### **Step 1: Build a Docker image for your .NET app in your box**
