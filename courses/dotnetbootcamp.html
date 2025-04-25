@@ -112,10 +112,9 @@
 <body data-spy="scroll" data-target=".fixed-top">
     <div class="fixed-top">
         <!-- Notification Bar -->
-        <!-- <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
-            style="background-color: #E56717; color: white">
-            Azure for .NET Developers Is Here! Get <strong>$100 Off</strong> + <strong>Bonus Course</strong> until Sunday 4/20!
-        </div> -->
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+            style="background-color: #E56717; color: white; display: none;">
+        </div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -2353,18 +2352,17 @@
                                 </div>
                                 <div class="frequency mt-3 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
-                            <!-- <div id="discounted-price" class="mb-2">
+                            <div id="discounted-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span id="discounted-price-value" class="value best-value"
-                                        style="font-size: 4.3rem;">397</span>
+                                        style="font-size: 4.3rem;"></span>
                                 </div>
                                 <div>
                                     <span id="original-price" class="full-price">$497</span><span id="discount-amount"
-                                        class="save-value best-value">$100
-                                        OFF</span>
+                                        class="save-value best-value">OFF</span>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
                                     href="https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720">START
@@ -2383,11 +2381,6 @@
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
                                     <div class="media-body">6 upcoming courses at no additional cost</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body"><strong>Bonus: Building Microservices With .NET - Course
-                                            1</strong></div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -2410,7 +2403,7 @@
                     </div> <!-- end of card -->
                     <!-- end of card -->
                 </div>
-                <div class="col-lg-4" id="payment-plan-container">
+                <div class="col-lg-4" id="payment-plan-container" style="display: none;">
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">PAYMENT PLAN</div>
@@ -2420,7 +2413,7 @@
                                     <span class="value best-value" style="font-size: 4.3rem;">129</span><span
                                         class="frequency">/month</span>
                                 </div>
-                                <div class="frequency mb-4 mt-3">4 Monthly Payments</div>
+                                <div class="frequency mt-3">4 Monthly Payments</div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
@@ -2440,11 +2433,6 @@
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
                                     <div class="media-body">6 upcoming courses at no additional cost</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body"><strong>Bonus: Building Microservices With .NET - Course
-                                            1</strong></div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check best-value"></i>
@@ -2613,6 +2601,7 @@
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
     <script src="../js/countdown-timer.js"></script> <!-- Countdown timer script -->
+    <script src="../js/parity-deals.js"></script> <!-- Parity deals script -->
     <script src="../js/favicon.js"></script>
     <script src="../js/navbar-collapse.js"></script>
 

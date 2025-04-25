@@ -11,9 +11,9 @@
     {
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "CLOUD100", // Default coupon code (if defined here, banner shows immediately)
+            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
             discountPercentage: "", // Default discount percentage (no decimals)
-            discountDollars: "100",  // Manual default discount in dollars (not provided by API)
+            discountDollars: "",  // Manual default discount in dollars (not provided by API)
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
@@ -62,12 +62,12 @@
                 discountText = `$${discountDollars}`;
             }
 
-            let bannerText = `Course 4 Launch Sale: Get <strong>${discountText} Off</strong> + <strong>Bonus Course</strong> until Sunday 4/20!`;
+            let bannerText = ``;
 
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
             {
-                bannerText = `Course 4 Launch Sale: Special offer for <strong>${country}</strong> – <strong>${discountText} Off</strong> + Bonus Course until Sunday 4/20!`;
+                bannerText = `Price adjusted for your region (<strong>${country}</strong>) — Save <strong>${discountText}</strong> for a limited time`;
             }
 
             notificationBanner.innerHTML = bannerText;
@@ -225,7 +225,7 @@
             }
         };
 
-        // Initialize the UI based on current state (handling hardcoded value)
+        // Initialize the UI based on current state
         updateUI();
 
         // Fetch from API only once
