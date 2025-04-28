@@ -13,13 +13,13 @@
         if (!document.getElementById("countdown-days")) return;
 
         // Set the date to count down to - April 20, 2025 at 6am Seattle time (PDT)
-        const targetDate = new Date("April 21, 2025 06:00:00 PDT").getTime();
+        const targetDate = new Date("May 2, 2025 06:00:00 PDT").getTime();
 
         // Default countdown title (can be overridden by custom value)
-        const defaultCountdownTitle = "Become A .NET Cloud Developer Today!";
+        const defaultCountdownTitle = "Unlock Your All-Access Pass Today!";
 
         // Custom countdown title (if needed)
-        const customCountdownTitle = "Course 4 Launch Sale Ends In";
+        const customCountdownTitle = "All-Access Pass Doors Close In";
 
         // Elements
         const daysElement = document.getElementById("countdown-days");
