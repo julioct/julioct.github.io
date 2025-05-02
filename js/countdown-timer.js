@@ -15,9 +15,6 @@
         // Set the date to count down to - April 20, 2025 at 6am Seattle time (PDT)
         const targetDate = new Date("May 2, 2025 06:00:00 PDT").getTime();
 
-        // Default countdown title (can be overridden by custom value)
-        const defaultCountdownTitle = "Unlock Your All-Access Pass Today!";
-
         // Custom countdown title (if needed)
         const customCountdownTitle = "All-Access Pass Doors Close In";
 
@@ -36,11 +33,7 @@
         // Update countdown title based on timer state
         if (countdownTitleElement)
         {
-            if (initialDistance <= 0)
-            {
-                // Timer expired, use default title
-                countdownTitleElement.textContent = defaultCountdownTitle;
-            } else
+            if (initialDistance > 0)
             {
                 // Timer active, use custom title
                 countdownTitleElement.textContent = customCountdownTitle;
