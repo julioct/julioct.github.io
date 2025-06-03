@@ -168,26 +168,6 @@ Cloud-native apps deserve cloud-native security.
 
 Go passwordless.
 
-​
-
-### **Bootcamp Sale Ends Tomorrow: Save $100 + Bonus Course**
-The .NET Cloud Developer Bootcamp just got even better—Course 4: Azure for .NET Developers is now live.
-
-To celebrate, you’ll get **$100 off** and a **bonus course** from my microservices program ($297 value) when you join during the launch sale.
-
-
-![](/assets/images/2025-04-19/4ghDFAZYvbFtvU3CTR72ZN-ihStAMkkaw6eiqKsLhdzUs.jpeg)
-
-This offer ends tomorrow at midnight.
-
-If you're ready to deploy secure, production-ready .NET apps to Azure using services like App Service, PostgreSQL, Microsoft Entra, and more, now's the time.
-
-​[Join the bootcamp before the deadline]({{ site.url }}/courses/dotnetbootcamp)​
-
-Until next time!
-
-Julio
-
 ---
 
 <br/>

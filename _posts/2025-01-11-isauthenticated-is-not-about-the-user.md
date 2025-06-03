@@ -158,17 +158,7 @@ Now there are more known issues with reading claims, like the **role** claim com
 If you are facing those issues, check out [the bootcamp,](https://juliocasal.com/courses/dotnetbootcamp) where I go over the right way to deal with them.
 
 ​
-
-### **The ASP.NET Core Security course launches this Tuesday!**
-I know many of you struggle with all sorts of security aspects in your ASP.NET Core apps, and in this third bootcamp course, I'm spending more time than in any of my previous courses going over all the security topics, patterns, protocols, and best practices you must know to ensure your apps are well protected from unauthorized access.
-
-This is also the last course on Stage 1 of the bootcamp, which completes what I think is the first major milestone every .NET cloud developer should reach, which is mastering the ASP.NET Core platform from the very essentials, across must-know advanced concepts and all the way to key security aspects like JWT and OpenID Connect.
-
-Watch out for the new course launch email early this Tuesday!
-
-Cheers,
-
-Julio
+Until next time!
 
 ---
 

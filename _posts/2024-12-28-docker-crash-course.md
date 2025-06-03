@@ -153,13 +153,11 @@ I just scratched the surface there, but if you need to know more about Docker co
 *   <span>How to preserve your updates across container restarts?</span>
 *   <span>How to pass environment variables to your containers?</span>
 
-I got all that (and more!) covered in a **new Docker mini-course** I include with Course 3 of [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp) (on sale for a few more days).
+I got all that (and more!) covered in a **new Docker mini-course** I include with Course 3 of [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
 Speaking of which, I have 7 modules of that course already recorded, with 3 more to be completed next week, so I better get back to work.
 
 Happy Holidays!
-
-Julio
 
 ---
 

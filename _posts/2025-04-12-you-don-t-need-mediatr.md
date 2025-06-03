@@ -176,56 +176,6 @@ Write clear, focused endpoints as features.
 
 And stop abstracting away the simple stuff.
 
-​
-
-### **New Azure for .NET Developers Course Drops This Tuesday**
-The wait is over. My new Azure for .NET Developers course launches this **Tuesday, April 15** as part of [the bootcamp]({{ site.url }}/courses/dotnetbootcamp)!
-
-If you're already enrolled in the bootcamp, you’ve had early access for a few days now—check your dashboard and dive in.
-
-
-![](/assets/images/2025-04-12/4ghDFAZYvbFtvU3CTR72ZN-iZ9vRYANFBeK9DCBmioEz6.jpeg)
-
-​
-
-For everyone else, this is your chance to:
-
-*   <span>Go beyond local dev and learn how to deploy your apps the right way</span>
-*   <span>Gain real hands-on experience with Azure, specifically tailored for .NET developers</span>
-*   <span>Build real cloud deployment skills that make you stand out</span>
-
-The course includes:
-
-*   <span>**103 lessons** and **9 hours** of focused, step-by-step content</span>
-*   <span>Hands-on walkthroughs for:</span>
-
-    *   <span>Azure App Service</span>
-    *   <span>Microsoft Entra</span>
-    *   <span>Azure Storage</span>
-    *   <span>Azure Front Door</span>
-    *   <span>Azure Managed Identities</span>
-    *   <span>Azure PostgreSQL</span>
-    *   <span>Azure Key Vault</span>
-    *   <span>Azure Static Web Apps</span>
-
-*   <span>Updated **Blazor** and **React frontends** wired up with Microsoft Entra and ready for Azure</span>
-
-
-
-![](/assets/images/2025-04-12/4ghDFAZYvbFtvU3CTR72ZN-eUzR2172ommQCt1wbWPdkR.jpeg)
-
-​
-
-You can preview the full curriculum and a short overview video [here](https://learn.dotnetacademy.io/courses/azure-for-dotnet-developers){:target="_blank"}.
-
-If you’re already in the bootcamp, enjoy the early access.
-
-If not, stay tuned for the course launch announcement on Tuesday.
-
-Until then!
-
-Julio
-
 ---
 
 <br/>

@@ -148,32 +148,7 @@ And then your deployed app will have no trouble reading secrets into your app co
 
 I go over this entire process, for a real-world e-commerce application, in [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
-​
-
-### **New Course Available April 15!**
-A couple of days ago I finished recording my new course, **Azure for .NET Developers**, which means I'm now going through the finishing touches to have it ready for launch on April 15!
-
-This is the 4th bootcamp course, which builds on top of the 3 previous courses and aims to serve as an introduction to the Azure cloud specifically crafted for .NET developers.
-
-A few of the top questions answered across the 11 modules included in this new course:
-
-*   <span>What is Azure and how to shift to cloud computing?</span>
-*   <span>How to quickly deploy ASP.NET Core apps to Azure and access them over HTTPS?</span>
-*   <span>How to use Microsoft Entra to protect your app in Azure and to provide user login and registration?</span>
-*   <span>How to store files in the cloud and serve them with minimal delay to your clients?</span>
-*   <span>How to implement passwordless communication between your app and multiple Azure services?</span>
-*   <span>How to use a cloud-native PostgreSQL database in Azure?</span>
-*   <span>How to manage application secrets in the cloud?</span>
-
-Plus, in the last couple of modules, I show how to deploy both a Blazor (server) app and a React (SPA) app to Azure and how to connect them to your cloud-based backend API, to experience the full-stack application end-to-end in Azure.
-
-All current bootcamp students will get this new course on April 15 at no additional cost.
-
-More details coming next week.
-
-Stay tuned!
-
-Julio
+Until next time!
 
 ---
 

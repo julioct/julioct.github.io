@@ -217,7 +217,7 @@ Deploying such a simple Web API to Azure is trivial. But what if you need to:
 *   <span>Protect your API via Microsoft Entra, Azure's identity provider</span>
 *   <span>Use passwordless authentication to avoid connection strings</span>
 
-I got all that covered in the upcoming **Azure For .NET Developers** course, which will soon launch in [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
+I got all that covered in [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 Need to build something at scale using containers? I'll cover Azure Container Apps in the bootcamp too.
 
@@ -233,8 +233,6 @@ Once you’ve mastered that, you can level up to containers, scaling, and all th
 But don’t start complicated. Start simple. Deploy. Then grow.
 
 Until next week!
-
-Julio
 
 ---
 
