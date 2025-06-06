@@ -7,25 +7,22 @@ issue-number: 54
 ---
 
 *Read time: 7 minutes*
-​
 
-As we approach the recording phase for the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), it's great to see the course outline finally taking shape. As I write this, we have 19 modules scripted, with likely 3 more modules to go.
+If you’ve ever felt overwhelmed by the endless layers and abstractions in a typical .NET backend, you’re not alone. 
 
-And that is only to cover the first mayor phase of the bootcamp, which includes building 2 parts of the Game Store application (Catalog and Shopping Basket), plus securing everything with ASP.NET Core's authentication and authorization features, including OIDC.
+Most of us have spent hours tracing a single feature across controllers, services, repositories, and DTOs—just to make a simple change. 
 
-As I wrote the scripts, I put a crazy amount of effort into breaking down each concept and component of the ASP.NET Core platform into very granular pieces that are introduced one at a time, so students get a solid understanding of each piece before moving on to the next one.
+**It’s easy to lose sight of what really matters: delivering features that solve real problems, fast.**
 
-I do this because I'm a big fan of [first principles](https://jamesclear.com/first-principles), which essentially means you should not assume anything and instead you should start from the most foundational truths. This translates into learning how to build the application with only the techniques and components that are absolutely needed, explaining exactly why you need them, and avoid everything else (unless proven needed).
+That’s why today I want to share a practical approach that’s made my own projects (and my students’ projects) dramatically simpler and more maintainable: **Vertical Slice Architecture**.
 
-Today I'll go over one aspect completely new to my courses that I think you'll find very useful in your own projects: Vertical Slice Architecture.
+In this article, I’ll break down what vertical slices are, why they beat the old “N-Tier” way of structuring code, and how you can start applying this mindset in your own .NET projects—without extra frameworks or over-engineering. 
 
-Let's dive in.
+I’ll show you how to group code by feature, not by technical layer, so you and your team can move faster and keep your sanity.
 
+Let’s dive in.
 
-![](/assets/images/2024-10-12/4ghDFAZYvbFtvU3CTR72ZN-w8HLXixyUosSvD8Gco8vtd.jpeg)
-
-
-​
+<br/>
 
 ### **What is Vertical Slice Architecture?**
 Essentially it is a way of grouping your code around features, as opposed to technical layers. Those technical layers would traditionally look like this:
