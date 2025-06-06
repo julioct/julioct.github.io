@@ -198,4 +198,4 @@ Until next time!
 
 2. **​[Patreon Community](https://www.patreon.com/juliocasal){:target="_blank"}**: Get the full working code from this newsletter, exclusive course discounts, and access to a private community for .NET developers.
 
-3. **[Promote your business to 20,000+ developers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+3. **[Promote your business to 25,000+ developers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.

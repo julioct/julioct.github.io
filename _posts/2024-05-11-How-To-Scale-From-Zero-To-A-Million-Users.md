@@ -148,4 +148,4 @@ And that's it, on to the next million users!
 
 1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**:​ Everything you need to build production ready .NET applications for the Azure cloud at scale.
 
-2. **[Promote your business to 20,000+ developers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
+2. **[Promote your business to 25,000+ developers]({{ site.url }}/sponsor-the-newsletter)** by sponsoring this newsletter.
