@@ -68,7 +68,7 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 3rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex align-items-center">
@@ -81,12 +81,14 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-container">
-                                    <h1 class="h2-heading" style="text-align: left;">Build .NET Apps That Actually Work Everywhere</h1>
+                                    <h1 class="h2-heading" style="text-align: left;">Build .NET Apps That Actually Work
+                                        Everywhere</h1>
                                 </div>
                             </div>
                         </div>
                         <p class="line-spaced-paragraph white" style="text-align: left;">
-                            End "works on my machine" problems forever with containers, modern orchestration, and automated cloud deployments.
+                            End "works on my machine" problems forever with containers, modern orchestration, and
+                            automated cloud deployments.
                         </p>
                         <p class="line-spaced-paragraph white" style="text-align: left;">
                             <strong>Available June 17</strong>
@@ -158,7 +160,7 @@
                             style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; min-width: 260px; max-width: 320px; margin: 0 0.5rem 1.5rem 0.5rem;">
                             <span class="me-3"><i class="fas fa-code-branch fa-5x" style="color: #2d4de0;"></i></span>
                             <span>Clone a .NET repo, hit F5, and... it doesn't run out of the box</span>
-                        </li>                        
+                        </li>
                         <li class="d-flex align-items-center card shadow pain-point-card animate-fade-in"
                             style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem; min-width: 260px; max-width: 320px; margin: 0 0.5rem 1.5rem 0.5rem;">
                             <span class="me-3"><i class="fas fa-bug fa-5x" style="color: #2d4de0;"></i></span>
@@ -229,7 +231,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
                     <a href="images/waitlist/docker-dashboard.png" class="lightbox">
                         <img src="images/waitlist/docker-dashboard.png" alt="Docker Desktop"
-                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 420px;">
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -269,7 +271,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
                     <a href="images/waitlist/container-apps-screenshot.png" class="lightbox">
                         <img src="images/waitlist/container-apps-screenshot.png" alt="Azure Container Apps"
-                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 420px;">
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -307,7 +309,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
                     <a href="images/waitlist/aspire-dashboard-graph.png" class="lightbox">
                         <img src="images/waitlist/aspire-dashboard-graph.png" alt=".NET Aspire dashboard"
-                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 420px;">
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -345,7 +347,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
                     <a href="images/waitlist/infrastructure-as-code.png" class="lightbox">
                         <img src="images/waitlist/infrastructure-as-code.png" alt="Bicep template"
-                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 420px;">
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -431,8 +433,7 @@
                                 alt="Container architecture diagram" class="card-img-top screenshot-img" loading="lazy">
                         </a>
                         <div class="card-body">
-                            <div class="overlay-caption">Container architecture diagrams: Understand how services
-                                connect</div>
+                            <div class="overlay-caption">System diagram: Understand how services connect</div>
                         </div>
                     </div>
                 </div>
@@ -450,17 +451,6 @@
                 </div>
                 <div class="col-md-4 animate-fade-in">
                     <div class="card shadow preview-card">
-                        <a href="images/waitlist/azure-portal-resources.png" class="lightbox">
-                            <img src="images/waitlist/azure-portal-resources.png" alt="Azure portal resources"
-                                class="card-img-top screenshot-img" loading="lazy">
-                        </a>
-                        <div class="card-body">
-                            <div class="overlay-caption">Azure portal: See your deployed resources in action</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 animate-fade-in">
-                    <div class="card shadow preview-card">
                         <a href="images/waitlist/aspire-dashboard.png" class="lightbox">
                             <img src="images/waitlist/aspire-dashboard.png" alt="Distributed tracing example"
                                 class="card-img-top screenshot-img" loading="lazy">
@@ -468,6 +458,17 @@
                         <div class="card-body">
                             <div class="overlay-caption">.NET Aspire Dashboard: Diagnose issues before hitting Prod
                             </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-md-4 animate-fade-in">
+                    <div class="card shadow preview-card">
+                        <a href="images/waitlist/azure-portal-resources.png" class="lightbox">
+                            <img src="images/waitlist/azure-portal-resources.png" alt="Azure portal resources"
+                                class="card-img-top screenshot-img" loading="lazy">
+                        </a>
+                        <div class="card-body">
+                            <div class="overlay-caption">Azure portal: See your deployed resources in action</div>
                         </div>
                     </div>
                 </div>
