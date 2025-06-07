@@ -459,9 +459,9 @@ If this tutorial got you excited about .NET Aspire, you've only scratched the su
 
 **That's exactly what my new Containers & .NET Aspire course will teach you—launching June 17th.**
 
-[![](/assets/images/2025-06-07/4ghDFAZYvbFtvU3CTR72ZN-eHvNJdeRffhDDzbYQrX8Np.jpeg)](https://go.dotnetacademy.io/aspire-course-waitlist)
+[![](/assets/images/2025-06-07/4ghDFAZYvbFtvU3CTR72ZN-eHvNJdeRffhDDzbYQrX8Np.jpeg)]({{ site.url }}/waitlist)
 
-​[**Containers & .NET Aspire: Join The Waitlist**](https://go.dotnetacademy.io/aspire-course-waitlist)​
+​[**Containers & .NET Aspire: Join The Waitlist**]({{ site.url }}/waitlist)​
 
 This is Course 5 of the **.NET Cloud Developer Bootcamp** and builds directly on Course 4 (Azure for .NET Developers), taking you from cloud basics to advanced containerization and orchestration.
 
@@ -476,7 +476,7 @@ You'll learn how to:
 
 If you're tired of broken local setups and deployment nightmares, and ready to ship reliable distributed applications, **join the waitlist** to be the first to know when it launches.
 
-​[**Containers & .NET Aspire: Join The Waitlist →**](https://go.dotnetacademy.io/aspire-course-waitlist)​
+​[**Containers & .NET Aspire: Join The Waitlist →**]({{ site.url }}/waitlist)​
 
 More details coming next week.
 
@@ -488,7 +488,7 @@ Stay tuned!
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **​[​Containers & .NET Aspire](https://go.dotnetacademy.io/aspire-course-waitlist)**:​ Build production-ready .NET apps that actually run when teammates clone them, and deploy to Azure without fighting scripts.
+1. **​[​Containers & .NET Aspire]({{ site.url }}/waitlist)**:​ Build production-ready .NET apps that actually run when teammates clone them, and deploy to Azure without fighting scripts.
 
 2. **​[Patreon Community](https://www.patreon.com/juliocasal){:target="_blank"}**: Get the full working code from this newsletter, exclusive course discounts, and access to a private community for .NET developers.
 
