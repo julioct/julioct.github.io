@@ -2,7 +2,7 @@
 layout: post
 title: "Vertical Slice Architecture"
 date: 2024-10-12
-featured-image: image.jpg
+featured-image: 2024-10-12/4ghDFAZYvbFtvU3CTR72ZN-2qt5vZG7PaUDuGpbDHBg57.jpeg
 issue-number: 54
 ---
 
