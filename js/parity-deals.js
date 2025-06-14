@@ -62,12 +62,12 @@
                 discountText = `$${discountDollars}`;
             }
 
-            let bannerText = `Course 5 Launch Sale: Get <strong>${discountText} Off</strong> + Exclusive Bonuses for <strong>first 100!</strong>`;
+            let bannerText = `Containers & .NET Aspire (Course 5) Launch — <strong>Save ${discountText}</strong> + <strong>Early-Bird Bonuses (first 100)</strong>`;
 
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
             {
-                bannerText = `Course 5 Launch Sale: Special offer for <strong>${country}</strong> – <strong>${discountText} Off</strong> + Exclusive Bonuses for <strong>first 100!</strong>`;
+                bannerText = `Containers & .NET Aspire Launch — Special price for <small><strong>${country}</strong></small> — <strong>Save ${discountText}</strong> — Early-Bird Bonuses <strong>(first 100)</strong>`;
             }
 
             notificationBanner.innerHTML = bannerText;
