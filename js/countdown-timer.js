@@ -16,7 +16,7 @@
         const targetDate = new Date("June 23, 2025 06:00:00 PDT").getTime();
 
         // Custom countdown title (if needed)
-        const customCountdownTitle = "Course 5 Launch Sale Ends In";
+        const customCountdownTitle = "Bootcamp Doors Close In";
 
         // Elements
         const daysElement = document.getElementById("countdown-days");
