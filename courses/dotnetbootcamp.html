@@ -136,14 +136,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#testimonials-latest">Testimonials</a>
+                            <a class="nav-link page-scroll" href="#transform-how-you-build-and-ship-dotnet-apps">What's Inside?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
-                        </li>
+                            <a class="nav-link page-scroll" href="#inside-this-course">Curriculum</a>
+                        </li>                        
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#bonuses">Bonuses</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#testimonials-latest">Testimonials</a>
+                        </li>                        
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#faq">FAQs</a>
                         </li>
@@ -232,6 +235,18 @@
                             box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
                         }
                     }
+
+                    @keyframes bounceDown {
+
+                        0%,
+                        100% {
+                            transform: translateY(0);
+                        }
+
+                        50% {
+                            transform: translateY(12px);
+                        }
+                    }
                 </style>
             </defs>
             <title>header-decoration</title>
@@ -241,13 +256,87 @@
         </svg>
     </header> <!-- end of header -->
     <!-- end of header -->
-
-    <div id="create-realworld-backend" class="basic-1">
+    <div id="problem-statement" class="basic-1"
+        style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0;">
         <div class="container">
-            <div class="row mt-4">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading display-4 font-weight-bold">Create a production-ready .NET application for the
-                        Azure cloud</h2>
+            <!-- Main Headline -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="h2-heading display-3 font-weight-bold mb-4" style="color: #2c3e50;">
+                        Stop Building Apps,<br>
+                        <span style="color: #e74c3c;">Start Building Production Systems</span>
+                    </h2>
+                    <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                        You know C# basics, but companies need developers who can build <strong>production-ready systems
+                            on Azure</strong>.
+                        There's a massive gap between tutorials and real-world applications.
+                    </p>
+                </div>
+            </div> <!-- Skills breakdown -->
+            <div class="row mt-4 mb-4 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-left" style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: #5a6c7d;">
+                        <div
+                            style="display: grid; grid-template-columns: 90px 1fr; gap: 0px 20px; align-items: start; margin-bottom: 30px;">
+                            <div style="justify-self: start; padding-top: 8px;">
+                                <i class="fas fa-code text-primary" style="font-size: 2.5em; line-height: 1;"></i>
+                            </div>
+                            <div>
+                                <span><strong>Your current skills aren't enterprise-ready:</strong> You can build basic
+                                    APIs, but haven't implemented real
+                                    authentication or cloud deployment</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: grid; grid-template-columns: 90px 1fr; gap: 0px 20px; align-items: start; margin-bottom: 30px;">
+                            <div style="justify-self: start; padding-top: 8px;">
+                                <i class="fas fa-mountain text-primary" style="font-size: 2.5em; line-height: 1;"></i>
+                            </div>
+                            <div>
+                                <span><strong>The learning gap is massive:</strong> There's a canyon between "Hello
+                                    World" tutorials and cloud-native, security-focused, scalable applications</span>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 90px 1fr; gap: 0px 20px; align-items: start;">
+                            <div style="justify-self: start; padding-top: 8px;">
+                                <i class="fas fa-users text-primary" style="font-size: 2.5em; line-height: 1;"></i>
+                            </div>
+                            <div>
+                                <span><strong>You're competing against cloud experts:</strong> While you're still
+                                    figuring out the basics, other developers are deploying containerized microservices
+                                    with Infrastructure as Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <!-- <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                        Stop learning in isolation. Start building like a professional.
+                    </p> -->
+                    <div class="mt-5 animate-fade-in"
+                        style="font-size: 1.35rem; font-weight: 600; letter-spacing: 0.01em;">
+                        Ready to close the gap?
+                        <div class="d-flex justify-content-center mt-2">
+                            <span style="display: inline-block; animation: bounceDown 1.5s infinite;">
+                                <i class="fas fa-arrow-down fa-2x" style="color: #6a82fb;"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Skills breakdown -->
+        </div>
+    </div> <!-- end of basic-1 -->
+
+    <div id="transform-how-you-build-and-ship-dotnet-apps" class="what-you-get">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">Transform The Way You Build & Ship .NET Systems</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row mt-4">
@@ -257,25 +346,663 @@
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+        </div>
+    </div>
+
+    <!-- Section 2: Solution Overview (with Screenshots) -->
+
+    <div id="master-key-aspnetcore-features-and-patterns" class="basic-1 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto order-lg-2">
+                    <div class="image-container">
+                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-course01-di.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 my-auto">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Master ASP.NET Core</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Must-know features:</strong> Dependency injection, configuration, minimal
+                                APIs, Entity Framework Core, and essential ASP.NET Core patterns.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Go beyond the basics:</strong> Handle real-world concerns like async
+                                programming, logging, middleware, error handling, that separate junior from senior
+                                developers.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Best practices:</strong> Stop copy pasting samples and learn when to use each
+                                each ASP.NET Core block in real applications.</span>
+                        </li>
+                    </ul>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
 
-    <!-- <div id="buildit-at-scale" class="basic-1">
+    <section id="rest-api" class="basic-1 py-5" style="background: #f8f9fa;">
         <div class="container">
-            <div class="row mt-4">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading display-4 font-weight-bold">Then, learn how to build it at scale.</h2>
-                </div> 
-            </div> 
-            <div class="row">
-                <div class="col-lg-12 mx-auto text-center">
-                    <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/bootcamp-stage3.png" alt="alternative">
-                    </div> 
-                </div> 
-            </div> 
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course01-restapi.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course01-restapi.jpg" alt="Docker Desktop"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Build solid REST APIs</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>REST Fundamentals:</strong> Stop building inconsistent APIs - master HTTP
+                                verbs, status codes, and resource conventions that other developers expect.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Client-Friendly Design:</strong> Build APIs that don't frustrate frontend
+                                teams - proper error handling and consistent response formats.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Minimal APIs:</strong> Build lightweight endpoints with simple functions -
+                                perfect for microservices and scenarios where full MVC controllers are overkill.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div> -->
+    </section>
+
+    <div id="vertical-slice-architecture" class="basic-1 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto order-lg-2">
+                    <div class="image-container">
+                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-course01-code01.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 my-auto">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Use Vertical Slice Architecture</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Feature-Based Organization:</strong> Group everything for each feature
+                                together so you can find and modify related code in one place.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Reduced Coupling:</strong> Build features that don't break each other - each
+                                slice contains its own models and logic without shared dependencies.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Simple Changes Stay Simple:</strong> Stop touching 6 different files just to
+                                add one field - make feature changes in one focused area.</span>
+                        </li>
+                    </ul>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <section id="oidc" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course03-oidc.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course03-oidc.jpg" alt="Docker Desktop"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">JWT, OAuth 2.0 & OpenID Connect</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>JWT:</strong> Stop storing user sessions in your database - encode user claims
+                                into tamper-proof tokens your API validates instantly.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>OAuth 2.0:</strong> Stop hardcoding authentication into every endpoint -
+                                delegate to a dedicated server that issues trusted tokens.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>OpenID Connect:</strong> Get verified user identity (name, email) seamlessly
+                                after OAuth login - no more building registration flows.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="keycloak" class="basic-1 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto order-lg-2">
+                    <div class="image-container">
+                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-course03-keycloak.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 my-auto">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Local development with Keycloak</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Easy Local Setup:</strong> Run Keycloak locally with just Docker - learn OIDC
+                                concepts hands-on without cloud complexity.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Developer-Friendly Admin:</strong> Manage users, roles, and permissions
+                                through a simple web interface - no custom admin code needed.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Foundation for Enterprise:</strong> Master identity concepts on Keycloak's
+                                clear platform, then transfer to any enterprise provider.</span>
+                        </li>
+                    </ul>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <section id="entra" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-entra.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-entra.jpg" alt="Microsoft Entra ID"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">To Prod with Microsoft Entra ID</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Production-Ready Integration:</strong> Stop running your own identity server -
+                                integrate with Microsoft's managed service that handles scaling and security
+                                updates.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Complex Configuration Simplified:</strong> Stop getting lost in Microsoft's
+                                confusing docs - learn the exact steps to integrate .NET apps with Entra ID without
+                                frustration.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Complete Identity Management:</strong> Manage users, roles, and permissions
+                                through Entra's admin portal - no more building custom login flows.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appservice" class="basic-1 py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-appservice.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-appservice.jpg" alt="Azure App Service"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Deploy To Azure App Service</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Deploy from VS Code:</strong> Push your .NET apps to Azure directly from VS
+                                Code with simple commands - no server configuration needed.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Managed .NET Hosting:</strong> Focus on writing code instead of managing
+                                servers - Azure handles scaling and uptime automatically.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Azure-Native Configuration:</strong> Use built-in environment variables and
+                                connection strings - production-ready apps without complex setup.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="storage" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-storage.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-storage.jpg" alt="Docker Desktop"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">File uploads with Azure Storage</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Offload File Storage:</strong> Stop storing uploads on your server's disk -
+                                let Azure handle file storage while your .NET app stays lightweight.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Simple .NET Integration:</strong> Upload, download, and manage files with
+                                Azure's .NET SDK - no complex file management needed.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Infinite Scalability:</strong> Handle millions of files without worrying about
+                                disk space - Azure Storage scales automatically as your app grows.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="front-door" class="basic-1 py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-frontdoor.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-frontdoor.jpg" alt="Azure Front Door"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Global File Delivery with Azure Front Door
+                    </h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Global Performance:</strong> Deliver images from the nearest Azure edge
+                                location - faster downloads for customers worldwide.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Hide Storage URLs:</strong> Serve files through custom domain names instead of
+                                exposing your actual Azure Storage account URLs.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Handle Traffic Spikes:</strong> Let Azure's CDN absorb sudden traffic surges -
+                                your storage account stays protected from overload.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="managed-identities" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-managed-identities.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-managed-identities.jpg" alt="Docker Desktop"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Passwordless Azure Authentication</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Passwordless Azure Access:</strong> Stop hardcoding connection strings and API
+                                keys - let Azure automatically authenticate your services.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Zero Credential Management:</strong> Eliminate password rotation and secret
+                                storage complexity - Azure handles authentication automatically.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Secure by Default:</strong> Access Storage, databases and more without storing
+                                any secrets in config files or environment variables.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="postgresql" class="basic-1 py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-postgres.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-postgres.jpg" alt="Managed PostgreSQL Database"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Managed PostgreSQL Database</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Managed Infrastructure:</strong> Stop managing database servers - Azure
+                                handles patching, backups, and scaling automatically.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Passwordless Database Access: </strong> Connect using managed identities - no
+                                database passwords or credentials in your .NET code.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>High Availability:</strong> Ensure 99.99% uptime with automatic failover and
+                                backups - focus on code, not database maintenance.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keyvault" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/bootcamp-course04-keyvault.jpg" class="lightbox">
+                        <img src="../images/bootcamp/bootcamp-course04-keyvault.jpg" alt="Azure Key Vault"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Secure Secret Management with Key Vault</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Secure Secret Storage:</strong> Stop hardcoding API keys in config files -
+                                store sensitive data encrypted in Azure's secure vault.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Easy .NET Integration:</strong> Access secrets programmatically using .NET
+                                configuration system - seamless integration with your apps.</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span><strong>Centralized Access Control:</strong> Manage who accesses which secrets across
+                                environments - audit trails and rotation included.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="container-fundamentals" class="basic-1 py-5">
+        <div class="container">
+            <div class="row align-items-center  flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/docker-dashboard.png" class="lightbox">
+                        <img src="../images/bootcamp/docker-dashboard.png" alt="Docker Desktop"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Container Fundamentals</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Finally understand what containers actually are and why you need them</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Build, run, and test your .NET apps as containers, ready to publish to the
+                                cloud</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Build container images 45% smaller using optimizations and best practices</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Use modern .NET tooling to skip complex Docker commands and avoid typical
+                                errors</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="azure-container-apps" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/container-apps-screenshot.png" class="lightbox">
+                        <img src="../images/bootcamp/container-apps-screenshot.png" alt="Azure Container Apps"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Production Containers Made Simple with
+                        Container Apps</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Deploy production containers without becoming a Kubernetes expert</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Pay $0 when nobody's using your app with automatic scale-to-zero</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Sleep better with auto-scaling that handles traffic spikes</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Rollback disasters in 30 seconds with revision management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aspire-orchestration" class="basic-1 py-5">
+        <div class="container">
+            <div class="row align-items-center  flex-lg-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/aspire-dashboard-graph.png" class="lightbox">
+                        <img src="../images/bootcamp/aspire-dashboard-graph.png" alt=".NET Aspire dashboard"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Cloud Native Development with .NET Aspire
+                    </h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Reduce developer onboarding from days to minutes</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Eliminate connection string and configuration nightmares</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Catch issues across the entire system before they reach production</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Monitor complex apps with beautiful, built-in dashboards</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infrastructure-as-code" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                    <a href="../images/bootcamp/infrastructure-as-code.png" class="lightbox">
+                        <img src="../images/bootcamp/infrastructure-as-code.png" alt="Bicep template"
+                            class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h2-heading text-center mb-3 animate-fade-in">Infrastructure as Code with C#</h2>
+                    <ul class="list-unstyled" style="font-size:1.15rem;">
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Never manually click through Azure portal to set up environments again</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Build bulletproof deployments that work identically every time</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Deploy to dev, staging, and production with one command</span>
+                        </li>
+
+                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
+                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                    class="fas fa-check fa-lg"></i></span>
+                            <span>Write infrastructure in C# instead of struggling with YAML or JSON</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="frontends" class="what-you-get">
+        <div class="container">
+            <div class="row mb-4 mt-4">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">Two Frontend Stacks Included</h2>
+                    <p class="line-spaced-paragraph">Make your backend API shine by integrating it with the included
+                        Blazor and React frontends, so you can see how your API works in a real-world scenario.</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mb-2">
+                <div class="col d-flex align-items-center">
+                    <div class="image-container">
+                        <img class="img-fluid" src="../images/bootcamp/bootcamp-frontends-blazor.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col d-flex align-items-center">
+                    <div class="image-container">
+                        <img class="img-fluid" src="../images/bootcamp/bootcamp-frontends-react.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h5>Blazor</h5>
+                    <p>Static Server-Side Rendered (SSR) Application</p>
+                    </p>
+                </div> <!-- end of col -->
+                <div class="col">
+                    <h5>React</h5>
+                    <p>Vite Single Page Application (SPA)</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mb-2">
+                <div class="col-lg-6 d-flex align-items-center mx-auto">
+                    <div class="image-container">
+                        <img class="img-fluid" src="../images/bootcamp/bootcamp-frontends-browser.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h5>Two frontend stacks, same user experience</h5>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+
+    <!-- Enroll Button -->
+    <div class="basic-3 pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
+                </div> <!-- end of col -->
+            </div>
+        </div>
+    </div>
+    <!-- end of Enroll Button -->
 
     <div id="inside-this-course" class="basic-1">
         <div class="container">
@@ -294,18 +1021,6 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-
-    <!-- Enroll Button -->
-    <div class="basic-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
-                </div> <!-- end of col -->
-            </div>
-        </div>
-    </div>
-    <!-- end of Enroll Button -->
 
     <!-- Course 01 Curriculum -->
     <div id="course01-curriculum" class="basic-1">
@@ -3089,6 +3804,8 @@
                         <h4>What version of .NET is used in this bootcamp?</h4>
                         <p>This bootcamp uses .NET 8 since it has Long Term Support (LTS). It will not be updated to
                             .NET 9, given it's a Standard Term Support (STS) release.</p>
+                        <h4>Will there be more courses added to this bootcamp?</h4>
+                        <p>No more courses will be added to this bootcamp.</p>                            
                         <h4>Do you offer a certification on course completion?</h4>
                         <p>Yes, you will get a certificate at no additional cost after completing all lessons on each
                             course.</p>
