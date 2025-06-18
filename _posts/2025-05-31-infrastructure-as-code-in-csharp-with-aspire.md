@@ -178,33 +178,6 @@ And what if you need to customize the Storage Account configuration, or modify a
 
 That's also possible, and I'll cover all those in detail, plus how to even use your existing Bicep files with Aspire, in the upcoming **Containers & .NET Aspire course** that will join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp) soon.
 
-​
-
-### **Containers & .NET Aspire Course Updates**
-I’ve been heads down on the new **Containers & .NET Aspire** course for the past month, and I’m now recording the final module. Half of the editing work is complete already, so we are almost there!
-
-Keeping up with .NET Aspire updates hasn’t been easy—I had to rewrite several modules I initially built for Aspire 8.2 to align with all the new capabilities in 9.3. That being said, I'm very happy with the end result.
-
-The leap from ASP.NET Core to containers, cloud native development and .NET Aspire requires a solid understanding of dozens of things I have not seen anyone explain quite well so far, like:
-
-*   <span>Why would you move to Docker containers and what does it mean for your .NET apps?</span>
-*   <span>Why Kubernetes is an overkill for most teams and what to use instead to run containers in the cloud?</span>
-*   <span>What does it mean to have a self healing app in the cloud?</span>
-*   <span>What are the 3 concrete benefits you get by onboarding to .NET Aspire?</span>
-*   <span>What exactly happens when you host a .NET app in .NET Aspire?</span>
-*   <span>How does seasoned teams use IaC to stop provisioning infra manually and get rid of dozens of automation scripts?</span>
-
-I go over all of those (and lots more) in detail across this new course, which means **this is not a course for beginners, but for experienced ASP.NET Core devs ready for the jump to cloud native development.** 
-
-I’ll share the release date in next week’s newsletter, but for now, here’s a preview of what’s coming:
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1088965825?h=e7cb96a73b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Containers &amp; .NET Aspire Course Overview"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-<br>
-By the way, the already released [**Azure for .NET Developers**]({{ site.url }}/courses/dotnetbootcamp#course04-curriculum) course is a **hard prerequisite** for this one. If you haven’t taken it yet, now’s the time.
-
-More details coming soon—**stay tuned!**
-
 ---
 
 <br/>

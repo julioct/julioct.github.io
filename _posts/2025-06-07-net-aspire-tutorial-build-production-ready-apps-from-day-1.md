@@ -452,43 +452,13 @@ A few minutes later, we are up and running in Prod!
 
 Mission accomplished!
 
-​
-
-### **Take Containers & .NET Aspire to the Next Level**
-If this tutorial got you excited about .NET Aspire, you've only scratched the surface. There's a lot more to learn if you want to build truly robust, scalable distributed systems ready for Prod from day 1.
-
-**That's exactly what my new Containers & .NET Aspire course will teach you—launching June 17th.**
-
-[![](/assets/images/2025-06-07/4ghDFAZYvbFtvU3CTR72ZN-eHvNJdeRffhDDzbYQrX8Np.jpeg)]({{ site.url }}/waitlist)
-
-​[**Containers & .NET Aspire: Join The Waitlist**]({{ site.url }}/waitlist)​
-
-This is Course 5 of the **.NET Cloud Developer Bootcamp** and builds directly on Course 4 (Azure for .NET Developers), taking you from cloud basics to advanced containerization and orchestration.
-
-You'll learn how to:
-
-*   <span>**Containerize .NET applications,** from “why containers?” to multi-stage builds and creating containers with no dockerfiles.</span>
-*   <span>**Master Azure Container Apps** for production-grade orchestration without Kubernetes complexity</span>
-*   <span>**Build resilient health checks** that actually prevent outages</span>
-*   <span>**Deploy with confidence** using built-in revision management and zero-downtime updates</span>
-*   <span>**Use Infrastructure as Code** to create repeatable, bulletproof deployments, all with C#</span>
-*   <span>**Deploy front-end applications seamlessly** using .NET Aspire with Blazor and React, fully deployed to Azure alongside your backend services</span>
-
-If you're tired of broken local setups and deployment nightmares, and ready to ship reliable distributed applications, **join the waitlist** to be the first to know when it launches.
-
-​[**Containers & .NET Aspire: Join The Waitlist →**]({{ site.url }}/waitlist)​
-
-More details coming next week.
-
-Stay tuned!
-
 ---
 
 <br/>
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **​[​Containers & .NET Aspire]({{ site.url }}/waitlist)**:​ Build production-ready .NET apps that actually run when teammates clone them, and deploy to Azure without fighting scripts.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: Everything you need to build production-ready .NET applications for the Azure cloud at scale.
 
 2. **​[Patreon Community](https://www.patreon.com/juliocasal){:target="_blank"}**: Get the full working code from this newsletter, exclusive course discounts, and access to a private community for .NET developers.
 

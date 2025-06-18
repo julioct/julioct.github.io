@@ -273,38 +273,13 @@ The best part? This level of observability comes out of the box with .NET Aspire
 
 **Just run your app and start debugging like a pro.**
 
-**​**
-
-### **Containers & .NET Aspire Course launches this Tuesday!**
-My new **Containers and .NET Aspire** course drops this **Tuesday, June 17**, as part of [the bootcamp]({{ site.url }}/courses/dotnetbootcamp)!
-
-
-![](/assets/images/2025-06-14/4ghDFAZYvbFtvU3CTR72ZN-hE87FjcakGEBUxRXdUe8Ly.jpeg)
-
-**End "works on my machine" problems forever.**
-
-Here's what you'll master:
-
-*   <span>Consistent environments that eliminate deployment disasters</span>
-*   <span>An F5 experience that actually works in production</span>
-*   <span>Bulletproof deployments using containers and Azure</span>
-*   <span>Modern .NET Aspire workflows with the observability features you just saw in action</span>
-
-The course includes **9 modules,** **61 lessons**, and **8 hours** of hands-on content covering containerizing .NET applications, Azure Container Registry, Azure Container Apps, health checks, and the full story on .NET Aspire.
-
-**Plus:** updated Blazor and React front-ends now powered by .NET Aspire for easy deployments to Azure as containers.
-
-​[Join the waitlist here]({{ site.url }}/waitlist) to get notified the moment it goes live.
-
-Let's end deployment disasters forever!
-
 ---
 
 <br/>
 
 **Whenever you’re ready, there are 3 ways I can help you:**
 
-1. **​[​Containers & .NET Aspire]({{ site.url }}/waitlist)**:​ Build production-ready .NET apps that actually run when teammates clone them, and deploy to Azure without fighting scripts.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: Everything you need to build production-ready .NET applications for the Azure cloud at scale.
 
 2. **​[Patreon Community](https://www.patreon.com/juliocasal){:target="_blank"}**: Get the full working code from this newsletter, exclusive course discounts, and access to a private community for .NET developers.
 
