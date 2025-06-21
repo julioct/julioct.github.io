@@ -16,11 +16,6 @@
         gtag('config', 'G-GKWPQFHL1Y');
     </script>
 
-    <!-- Deadline Funnel -->
-    <script type="text/javascript"
-        data-cfasync="false">function SendUrlToDeadlineFunnel(e) { var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0, l = 0, s = "", u = []; if (!e) return e; do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length); s = u.join(""); var C = e.length % 3; var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3); decoded = decoded.replace("+", "-"); decoded = decoded.replace("/", "_"); return decoded; } var dfUrl = SendUrlToDeadlineFunnel(location.href); var dfParentUrlValue; try { dfParentUrlValue = window.parent.location.href; } catch (err) { if (err.name === "SecurityError") { dfParentUrlValue = document.referrer; } } var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : ""; (function () { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.setAttribute("data-scriptid", "dfunifiedcode"); s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6IkhjNkVNRUJSV0JiWWtodHV0bXVNOHc9PSIsInZhbHVlIjoiZEg0bFJIMHpFc3ovWmNTYjdqMXFiZz09IiwibWFjIjoiYTMyY2E1YWFkYTk1NWRjMjRmNWIwNTAwYzljY2E1OWU5NWE2YjFhNTJiOGU3NjkyOTM5YzRmZmRkYTE3MTNhNiJ9&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl; var s2 = document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s, s2); })();</script>
-    <!-- End Deadline Funnel -->
-
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y)
         {
@@ -93,23 +88,14 @@
                             <a class="nav-link page-scroll" href="/blog">Newsletter</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link page-scroll" href="/courses">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="/courses/all-access">All-Access Pass</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link page-scroll" href="/sponsorship">Sponsorship</a>
                         </li>                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link page-scroll dropdown-toggle" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Courses
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/courses/dotnetbootcamp">.NET Cloud Developer
-                                    Bootcamp</a>
-                                <a class="dropdown-item" href="https://dotnetmicroservices.com">Building Microservices
-                                    With .NET</a>
-                                <a class="dropdown-item" href="/courses/unittesting-bundle">Ultimate C# Unit Testing
-                                    Bundle</a>
-                                <!-- <a class="dropdown-item" href="/courses/all-access">All-Access Pass</a> -->
-                            </div>
-                        </li>
                         <li class="nav-item">
                             <a class="btn-solid-sm page-scroll" href="/roadmap">FREE ROADMAP</a>
                         </li>
@@ -149,119 +135,197 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <div id="bundles" class="basic-1 pb-0 pt-0">
+    <div id="master-dotnet-development" class="basic-1 pb-0">
         <div class="container">
             <div class="row mt-4">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading display-4 font-weight-bold">Bundles</h2>
+                    <h2 class="h2-heading display-4 font-weight-bold">Master .NET Backend Development</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-
-    <!-- Course List -->
-    <div id="course-list" class="basic-1 pt-0" style="padding-left:0">
+    </div> <!-- end of basic-1 --> <!-- Course List -->
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card course best-value h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <div class="card-image mt-2" style="height: 200px;">
-                            <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
-                                src="../images/bootcamp-boxes.png" width="90%" alt="alternative">
-                        </div>
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/aspnet-core-essentials/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
-                            <a href="dotnetbootcamp" style="text-decoration: none;">
-                                <h5 class="course-title best-value">.NET Cloud Developer Bootcamp</h5>
+                            <a href="aspnet-core-essentials" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Essentials</h5>
                             </a>
-                            <p class="line-spaced-paragraph" style="color: white;">Build production ready .NET
-                                applications for the Azure cloud at scale.</p>
+                            <p class="card-text">Kick-start your backend skills with ASP.NET Core.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <div class="card-image mt-2" style="height: 200px;">
-                            <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
-                                src="../images/microservices-boxes.png" width="80%" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <a href="https://dotnetmicroservices.com" style="text-decoration: none;">
-                                <h5 class="course-title">Building Microservices With .NET</h5>
-                            </a>
-                            <p class="line-spaced-paragraph">Transform the way you build .NET systems at scale.</p>
-                        </div>
-                    </div> <!-- end of card -->
+                <div class="d-none d-md-flex justify-content-center align-items-center" style="flex: 0 0 30px;">
+                    <i class="fas fa-arrow-right" style="font-size: 1.5rem; color: #5f4dee; opacity: 0.7;"></i>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-3 mb-4">
                     <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <div class="card-image mt-2" style="height: 200px;">
-                            <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
-                                src="../images/unit-testing-bundle-boxes.png" width="80%" alt="alternative">
-                        </div>
+                        <img src="../images/courses/aspnet-core-advanced/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
-                            <a href="unittesting-bundle" style="text-decoration: none;">
-                                <h5 class="course-title">Ultimate C# Unit Testing Bundle</h5>
+                            <a href="aspnet-core-advanced" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Advanced</h5>
                             </a>
-                            <p class="line-spaced-paragraph">Get beginner to advanced skills to master the art of C#
-                                unit testing.</p>
+                            <p class="card-text">Build Bulletproof ASP.NET Core Apps for Production.</p>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end of row -->
-
+                <div class="d-none d-md-flex justify-content-center align-items-center" style="flex: 0 0 30px;">
+                    <i class="fas fa-arrow-right" style="font-size: 1.5rem; color: #5f4dee; opacity: 0.7;"></i>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/aspnet-core-security/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="aspnet-core-security" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Security</h5>
+                            </a>
+                            <p class="card-text">The complete guide to ASP.NET Core security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
     <!-- end of Course List -->
 
-    <div id="individual-courses" class="basic-1 pb-0">
+    <div id="deploy-and-scale" class="basic-1 pb-0">
         <div class="container">
             <div class="row mt-4">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading display-4 font-weight-bold">Courses</h2>
+                    <h2 class="h2-heading display-4 font-weight-bold">Deploy & Scale</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
 
-    <!-- Course List -->
     <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-3 mb-4">
                     <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <div class="card-image mt-2" style="height: 200px;">
-                            <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
-                                src="../images/UnitTesting-Essentials-Box_Mockup.png" width="70%" alt="alternative">
+                        <img src="../images/courses/azure-for-dotnet-developers/box-mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="azure-for-dotnet-developers" style="text-decoration: none;">
+                                <h5 class="course-title">Azure for .NET Developers</h5>
+                            </a>
+                            <p class="card-text">Deploy .NET apps to Azure like a Pro.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-flex justify-content-center align-items-center" style="flex: 0 0 30px;">
+                    <i class="fas fa-arrow-right" style="font-size: 1.5rem; color: #5f4dee; opacity: 0.7;"></i>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/containers-and-dotnet-aspire/box-mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="containers-and-dotnet-aspire" style="text-decoration: none;">
+                                <h5 class="course-title">Containers & .NET Aspire</h5>
+                            </a>
+                            <p class="card-text">Build production ready apps from day 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-flex justify-content-center align-items-center" style="flex: 0 0 30px;">
+                    <i class="fas fa-arrow-right" style="font-size: 1.5rem; color: #5f4dee; opacity: 0.7;"></i>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/core-course-box-mockup.png" class="card-img-top mt-2" alt="..."
+                            style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="https://dotnetmicroservices.com" style="text-decoration: none;">
+                                <h5 class="course-title">Building Microservices with .NET</h5>
+                            </a>
+                            <p class="card-text">Transform the way you build .NET systems at scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of Course List -->
+
+    <div id="ship-quality-code" class="basic-1 pb-0">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold">Ship Quality Code</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 --> <!-- Course List -->
+
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/UnitTesting-Essentials-Box_Mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
                             <a href="csharp-unittesting-essentials" style="text-decoration: none;">
                                 <h5 class="course-title">C# Unit Testing Essentials</h5>
                             </a>
-                            <p class="line-spaced-paragraph">Code, refactor and ship high quality C# code every time.
-                            </p>
+                            <p class="card-text">Code, refactor and ship high quality C# code every time.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="d-none d-md-flex justify-content-center align-items-center" style="flex: 0 0 30px;">
+                    <i class="fas fa-arrow-right" style="font-size: 1.5rem; color: #5f4dee; opacity: 0.7;"></i>
+                </div>
+                <div class="col-md-3 mb-4">
                     <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <div class="card-image mt-2" style="height: 200px;">
-                            <img class="img-fluid mx-auto d-block" style="height: 100%; object-fit: contain;"
-                                src="../images/UnitTesting-Advanced-Box_Mockup.png" width="70%" alt="alternative">
-                        </div>
+                        <img src="../images/UnitTesting-Advanced-Box_Mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
                             <a href="mastering-csharp-unittesting" style="text-decoration: none;">
                                 <h5 class="course-title">Mastering C# Unit Testing</h5>
                             </a>
-                            <p class="line-spaced-paragraph">Unlock the secrets of C# unit testing in the real world.
-                            </p>
+                            <p class="card-text">Unlock the secrets of C# unit testing in the real world.</p>
                         </div>
                     </div>
-                </div>
-            </div> <!-- end of row -->
-
+                </div>                
+            </div>
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
-    <!-- end of Course List -->
+
+    <div id="ship-quality-code" class="basic-1 pb-0">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold">Full Course Library</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 --> <!-- Course List -->
+
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col mb-4">
+                    <div class="card course h-100 best-value" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/all-access-pass-boxes.png"
+                            class="card-img-top mt-2" alt="..." style="width: 95%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="all-access" style="text-decoration: none;">
+                                <h5 class="course-title best-value">All-Access Pass</h5>
+                            </a>
+                            <p class="card-text" style="color: white;">Everything You Need To Upgrade Your .NET Skills</p>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->    
 
     <!-- Social -->
     <div class="basic-3 pb-0">
@@ -326,8 +390,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2025 Julio Casal LLC | <a href="https://learn.dotnetacademy.io">Log
-                            In</a></p>
+                    <p class="p-small">Copyright © 2025 Julio Casal LLC</p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
