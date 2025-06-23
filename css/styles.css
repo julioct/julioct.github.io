@@ -1510,7 +1510,8 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .list-unstyled .media-body {
-    margin-left: 0.5rem;
+    margin-left: 0;
+    flex: 1;
 }
 
 .cards-2 .card .list-unstyled .media-body.not-available {
@@ -2813,4 +2814,16 @@ a:hover.back-to-top {
 
 .card.h-100.shadow-sm.border-0 {
     cursor: pointer;
+}
+
+.cards-2 .card .list-unstyled .media {
+    display: flex;
+    align-items: center;
+}
+
+.cards-2 .card .list-unstyled .media i {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    width: 1.25rem;
+    text-align: center;
 }
