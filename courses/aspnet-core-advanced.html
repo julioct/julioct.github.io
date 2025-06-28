@@ -107,12 +107,12 @@
 <body data-spy="scroll" data-target=".fixed-top">
     <div class="fixed-top">
         <!-- Notification Bar -->
-        <!-- <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
             style="background-color: #E56717; color: white">
-        </div> -->
+        </div>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <a class="navbar-brand logo-text page-scroll" href="/"></a>
@@ -148,7 +148,7 @@
     </div>
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 9rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-5 order-lg-2 d-flex align-items-center">
@@ -162,18 +162,19 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-container">
-                                    <h1 class="h2-heading display-4 font-weight-bold" style="text-align: left;">Build Bulletproof ASP.NET Core Apps for Production</h1>
+                                    <h1 class="h2-heading display-4 font-weight-bold" style="text-align: left;">Build
+                                        Bulletproof ASP.NET Core Apps for Production</h1>
                                 </div>
                             </div>
                         </div>
                         <p class="line-spaced-paragraph white" style="text-align: left;">
-                            Real traffic exposes every flaw. Learn the advanced patterns that keep your ASP.NET Core APIs fast, easy to troubleshoot, and stress-proof in production.
+                            Real traffic exposes every flaw. Learn the advanced patterns that keep your ASP.NET Core
+                            APIs fast, easy to troubleshoot, and stress-proof in production.
                         </p>
                         <div class="row">
                             <div class="col">
                                 <div class="btn-solid-lg-container">
-                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for
-                                        <strong>$147</strong></a>
+                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                                 </div>
                             </div> <!-- end of text-container -->
                         </div> <!-- end of div -->
@@ -635,7 +636,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -1085,23 +1086,60 @@
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="h2-heading display-4 font-weight-bold mb-4">Unlock ASP.NET Core Advanced Today!</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+            <div id="countdown-title" class="row">
+                <div class="col-lg-12">
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">Unlock ASP.NET Core
+                        Advanced Today!</h2>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="ddio_countdown_wrap">
+                        <div id="countdown-timer" class="countdown-container">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 text2">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">ASP.NET Core Advanced</div>
-                            <div class="mb-2">
+                            <div id="full-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span class="value best-value">147</span>
                                 </div>
-                                <div class="frequency mt-2 mb-4">lifetime access</div>
+                                <div class="frequency mt-2 mb-4 one-time-payment">Lifetime Access</div>
+                            </div>
+                            <div id="discounted-price" class="mb-2">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span id="discounted-price-value" class="value best-value"
+                                        style="font-size: 4.3rem;"></span>
+                                </div>
+                                <div>
+                                    <span id="original-price" class="full-price">$147</span><span id="discount-amount"
+                                        class="save-value best-value">OFF</span>
+                                </div>
+                                <div class="frequency mt-2 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
@@ -1261,6 +1299,8 @@
     <script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="../js/countdown-timer.js"></script>
+    <script src="../js/parity-deals.js"></script>
     <script src="../js/favicon.js"></script>
     <script src="../js/navbar-collapse.js"></script>
     <script src="../js/video-popup.js"></script>

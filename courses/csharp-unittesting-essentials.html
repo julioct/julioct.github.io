@@ -125,44 +125,52 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text page-scroll" href="/"></a>
+    <div class="fixed-top">
+        <!-- Notification Bar -->
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+            style="background-color: #E56717; color: white">
+        </div>
 
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <a class="navbar-brand logo-text page-scroll" href="/"></a>
+
+                <!-- Image Logo -->
+                <!-- <a class="navbar-brand logo-image" href="index.html">
                 <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
             </a> -->
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#testimonials-featured">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#faq">FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn-solid-sm page-scroll" href="#pricing">Start Watching Now</a>
-                    </li>
-                </ul>
-            </div> <!-- end of navbar-collapse -->
-        </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#testimonials-featured">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#faq">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-solid-sm page-scroll" href="#pricing">Start Watching Now</a>
+                        </li>
+                    </ul>
+                </div> <!-- end of navbar-collapse -->
+            </div>
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    </div>
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 9rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex align-items-center">
@@ -188,8 +196,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="btn-solid-lg-container" style="text-align: left;">
-                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for
-                                        <strong>$147</strong></a>
+                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                                 </div>
                             </div> <!-- end of text-container -->
                         </div> <!-- end of div -->
@@ -245,7 +252,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -348,7 +355,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -424,7 +431,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -747,7 +754,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -775,23 +782,60 @@
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="h2-heading display-4 font-weight-bold mb-4">Unlock C# Unit Testing Essentials Today!</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
+            <div id="countdown-title" class="row">
+                <div class="col-lg-12">
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">Unlock C# Unit
+                        Testing Essentials Today!</h2>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="ddio_countdown_wrap">
+                        <div id="countdown-timer" class="countdown-container">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-4 text2">
                     <!-- Card-->
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">THIS COURSE</div>
-                            <div class="mb-2">
+                            <div id="full-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span class="value best-value">147</span>
                                 </div>
-                                <div class="frequency mt-2 mb-4">lifetime access</div>
+                                <div class="frequency mt-2 mb-4 one-time-payment">Lifetime Access</div>
+                            </div>
+                            <div id="discounted-price" class="mb-2">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span id="discounted-price-value" class="value best-value"
+                                        style="font-size: 4.3rem;"></span>
+                                </div>
+                                <div>
+                                    <span id="original-price" class="full-price">$147</span><span id="discount-amount"
+                                        class="save-value best-value">OFF</span>
+                                </div>
+                                <div class="frequency mt-2 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
                             <div class="button-wrapper">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
@@ -825,8 +869,7 @@
                     </div> <!-- end of card -->
                     <!-- end of card -->
                 </div>
-                <div class="col-lg-4 text2">
-                    <!-- Card-->
+                <!-- <div class="col-lg-4 text2">
                     <div class="card best-value">
                         <div class="card-body">
                             <div class="card-title best-value">C# UNIT TESTING BUNDLE</div>
@@ -866,9 +909,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-                </div>
+                    </div>
+                </div> -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
@@ -936,7 +978,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching for <strong>$147</strong></a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -984,6 +1026,8 @@
     <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="../js/countdown-timer.js"></script>
+    <script src="../js/parity-deals.js"></script>
     <script src="../js/favicon.js"></script>
     <script src="../js/checkbox.js"></script>
     <script src="../js/navbar-collapse.js"></script>

@@ -1,0 +1,86 @@
+/* Countdown Timer Styles for julioct.github.io
+   Description: Reusable styles for countdown timers in notification banners
+*/
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    gap: 8px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 6px 8px 4px 8px;
+    border-radius: 8px;
+    min-width: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-item span:first-child {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #2C3E8C;
+}
+
+.countdown-item small {
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 2px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.countdown-separator {
+    display: none;
+    /* Hide separators since we're using boxes */
+}
+
+@media (max-width: 768px) {
+    .countdown-timer {
+        font-size: 0.75rem;
+        margin: 5px 0;
+        gap: 4px;
+    }
+
+    .countdown-item {
+        padding: 4px 6px 3px 6px;
+        min-width: 32px;
+        border-radius: 6px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1rem;
+    }
+
+    .countdown-item small {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-timer {
+        gap: 3px;
+    }
+
+    .countdown-item {
+        padding: 3px 5px 2px 5px;
+        min-width: 28px;
+        border-radius: 5px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 0.9rem;
+    }
+
+    .countdown-item small {
+        font-size: 0.55rem;
+    }
+}

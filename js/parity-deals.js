@@ -10,11 +10,11 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "ASPIRE30", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "30", // Default discount percentage (no decimals)
+            couponCode: "SUMMER22", // Default coupon code (empty - no hardcoded coupon)
+            discountPercentage: "22", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
-            paymentPlanCouponCode: "ASPIRE15", // Default payment plan coupon code
-            paymentPlanDiscountPercentage: "15", // Default payment plan discount percentage
+            paymentPlanCouponCode: "", // Default payment plan coupon code
+            paymentPlanDiscountPercentage: "", // Default payment plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         }; const paymentPlanContainer = document.getElementById('payment-plan-container');
@@ -23,9 +23,37 @@
         const discountedPriceDiv = document.getElementById('discounted-price'); const oneTimePaymentLink = document.getElementById('one-time-payment-link');
         const paymentPlanLink = document.querySelector('#payment-plan-container #payment-plan-link'); // Payment plan link within payment plan container
         const notificationBanner = document.getElementById('notification-banner');
-        const originalHref = "https://learn.dotnetacademy.io/enroll/3177167?price_id=4059720"; const paymentPlanOriginalHref = "https://learn.dotnetacademy.io/enroll/3177167?price_id=4132623"; // Add payment plan original URL
-        const originalPrice = 497; // Original price in dollars
-        const originalMonthlyPrice = 129; // Original monthly price in dollars
+
+        // Get original URLs from existing links instead of hardcoding them
+        const originalHref = oneTimePaymentLink ? oneTimePaymentLink.href : "";
+        const paymentPlanOriginalHref = paymentPlanLink ? paymentPlanLink.href : "";
+
+        // Function to extract price from page elements
+        const getOriginalPrice = function ()
+        {
+            const originalPriceSpan = document.getElementById('original-price');
+            if (originalPriceSpan)
+            {
+                // Extract numeric value from text content (remove $ and any other non-numeric characters except decimal point)
+                const priceText = originalPriceSpan.textContent || originalPriceSpan.innerText || "";
+                const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+                return isNaN(price) ? 497 : price; // Fallback to 497 if parsing fails
+            }
+            return 497; // Default fallback price
+        };
+
+        const getOriginalMonthlyPrice = function ()
+        {
+            const originalMonthlyPriceSpan = document.getElementById('original-monthly-price');
+            if (originalMonthlyPriceSpan)
+            {
+                // Extract numeric value from text content (remove $, /mo and any other non-numeric characters except decimal point)
+                const priceText = originalMonthlyPriceSpan.textContent || originalMonthlyPriceSpan.innerText || "";
+                const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+                return isNaN(price) ? 129 : price; // Fallback to 129 if parsing fails
+            }
+            return 129; // Default fallback price
+        };
 
         // Make sure banner is completely hidden by default (in case CSS doesn't do this)
         if (notificationBanner)
@@ -62,12 +90,12 @@
                 discountText = `$${discountDollars}`;
             }
 
-            let bannerText = `Containers & .NET Aspire (Course 5) Launch — <strong>Save ${discountText}</strong> + <strong>Early-Bird Bonuses (first 100)</strong>`;
+            let bannerText = `☀️ Summer Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;July&nbsp;6`;
 
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
             {
-                bannerText = `Containers & .NET Aspire Launch — Special price for <small><strong>${country}</strong></small> — <strong>Save ${discountText}</strong> — Early-Bird Bonuses <strong>(first 100)</strong>`;
+                bannerText = `☀️ Summer Sale • Local pricing for ${country} applied — <strong>${discountText} OFF</strong> • Ends&nbsp;July&nbsp;6`;
             }
 
             notificationBanner.innerHTML = bannerText;
@@ -75,35 +103,42 @@
         };        // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update one-time payment link (not in payment plan container)
-            const oneTimeLink = document.querySelector('.col-lg-4:not(#payment-plan-container) #one-time-payment-link');
-            if (oneTimeLink)
+            // Update one-time payment link
+            if (oneTimePaymentLink && originalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
                 if (couponCode)
                 {
-                    oneTimeLink.href = originalHref + "&coupon=" + couponCode;
+                    // Remove existing coupon parameter if present, then add new one
+                    const baseUrl = originalHref.split('&coupon=')[0].split('?coupon=')[0];
+                    const separator = baseUrl.includes('?') ? '&' : '?';
+                    oneTimePaymentLink.href = baseUrl + separator + "coupon=" + couponCode;
                 } else
                 {
-                    oneTimeLink.href = originalHref;
+                    oneTimePaymentLink.href = originalHref;
                 }
-            }            // Update payment plan link (within payment plan container)
-            if (paymentPlanLink)
+            }
+
+            // Update payment plan link (within payment plan container)
+            if (paymentPlanLink && paymentPlanOriginalHref)
             {
                 const paymentPlanCouponCode = window.parityDealsInfo.paymentPlanCouponCode;
                 if (paymentPlanCouponCode)
                 {
-                    paymentPlanLink.href = paymentPlanOriginalHref + "&coupon=" + paymentPlanCouponCode;
+                    // Remove existing coupon parameter if present, then add new one
+                    const baseUrl = paymentPlanOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
+                    const separator = baseUrl.includes('?') ? '&' : '?';
+                    paymentPlanLink.href = baseUrl + separator + "coupon=" + paymentPlanCouponCode;
                 } else
                 {
                     paymentPlanLink.href = paymentPlanOriginalHref;
                 }
             }
-        };// Function to calculate discounted price based on percentage or fixed amount
+        };        // Function to calculate discounted price based on percentage or fixed amount
         const calculateDiscountedPrice = function (isPaymentPlan = false)
         {
             let discountPercentage, discountDollars;
-            let basePrice = isPaymentPlan ? originalMonthlyPrice : originalPrice;
+            let basePrice = isPaymentPlan ? getOriginalMonthlyPrice() : getOriginalPrice();
 
             if (isPaymentPlan)
             {
@@ -145,6 +180,7 @@
             // Update one-time payment discount display
             if (discountedPriceValue && originalPriceSpan && discountAmountSpan)
             {
+                const currentOriginalPrice = getOriginalPrice();
                 const discountedPrice = calculateDiscountedPrice(false);
                 const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
                 const discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
@@ -152,8 +188,12 @@
                 // Update the discounted price
                 discountedPriceValue.textContent = discountedPrice;
 
-                // Update original price display
-                originalPriceSpan.textContent = `$${originalPrice}`;
+                // Update original price display (only if it's not already showing the correct price)
+                const currentDisplayedPrice = parseFloat(originalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
+                if (isNaN(currentDisplayedPrice) || currentDisplayedPrice !== currentOriginalPrice)
+                {
+                    originalPriceSpan.textContent = `$${currentOriginalPrice}`;
+                }
 
                 // Determine and update the discount text
                 if (discountPercentage > 0)
@@ -168,14 +208,19 @@
             // Update payment plan discount display
             if (discountedMonthlyPriceValue && originalMonthlyPriceSpan && monthlyDiscountAmountSpan)
             {
+                const currentOriginalMonthlyPrice = getOriginalMonthlyPrice();
                 const discountedMonthlyPrice = calculateDiscountedPrice(true);
                 const paymentPlanDiscountPercentage = parseInt(window.parityDealsInfo.paymentPlanDiscountPercentage) || 0;
 
                 // Update the discounted price for payment plan
                 discountedMonthlyPriceValue.textContent = discountedMonthlyPrice;
 
-                // Update original price display for payment plan
-                originalMonthlyPriceSpan.textContent = `$${originalMonthlyPrice}/mo`;
+                // Update original price display for payment plan (only if it's not already showing the correct price)
+                const currentDisplayedMonthlyPrice = parseFloat(originalMonthlyPriceSpan.textContent.replace(/[^0-9.]/g, ''));
+                if (isNaN(currentDisplayedMonthlyPrice) || currentDisplayedMonthlyPrice !== currentOriginalMonthlyPrice)
+                {
+                    originalMonthlyPriceSpan.textContent = `$${currentOriginalMonthlyPrice}/mo`;
+                }
 
                 // Update the discount text for payment plan
                 if (paymentPlanDiscountPercentage > 0)
@@ -216,6 +261,12 @@
             {
                 oneTimeFullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
                 oneTimeDiscountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
+            }
+            // Fallback: try to find elements without the container restriction if the above doesn't work
+            else if (fullPriceDiv && discountedPriceDiv)
+            {
+                fullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
+                discountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
             }
 
             // Update payment plan price display

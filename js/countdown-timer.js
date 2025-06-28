@@ -1,30 +1,55 @@
 /* Countdown Timer Script for julioct.github.io
-   Description: Handles the countdown timer functionality
+   Description: Handles countdown timer functionality for main countdown and notification banner
 */
 
 (function ($)
 {
     "use strict";
 
-    /* Countdown Timer */
+    // Configuration object for countdown timers
+    const countdownConfig = {
+        // Main countdown timer configuration
+        main: {
+            targetDate: "July 7, 2025 06:00:00 PDT",
+            title: "Summer Sale Ends In",
+            selectors: {
+                days: "#countdown-days",
+                hours: "#countdown-hours",
+                minutes: "#countdown-minutes",
+                seconds: "#countdown-seconds",
+                container: ".countdown-container",
+                titleElement: "#countdown-title-text"
+            }
+        },
+        // Banner countdown timer configuration
+        banner: {
+            targetDate: "July 7, 2025 06:00:00 PDT", // Same date as main countdown
+            selectors: {
+                days: "#banner-countdown-days",
+                hours: "#banner-countdown-hours",
+                minutes: "#banner-countdown-minutes",
+                seconds: "#banner-countdown-seconds",
+                container: "#banner-countdown",
+                bannerContainer: "#notification-banner"
+            }
+        }
+    };
+
+    /* Main Countdown Timer */
     function initCountdownTimer()
     {
+        const config = countdownConfig.main;
+
         // Check if the countdown elements exist
-        if (!document.getElementById("countdown-days")) return;
+        if (!document.querySelector(config.selectors.days)) return;
 
-        // Set the date to count down to - April 20, 2025 at 6am Seattle time (PDT)
-        const targetDate = new Date("June 23, 2025 06:00:00 PDT").getTime();
-
-        // Custom countdown title (if needed)
-        const customCountdownTitle = "Bootcamp Doors Close In";
-
-        // Elements
-        const daysElement = document.getElementById("countdown-days");
-        const hoursElement = document.getElementById("countdown-hours");
-        const minutesElement = document.getElementById("countdown-minutes");
-        const secondsElement = document.getElementById("countdown-seconds");
-        const countdownContainer = document.querySelector('.countdown-container');
-        const countdownTitleElement = document.getElementById('countdown-title-text');
+        const targetDate = new Date(config.targetDate).getTime();
+        const daysElement = document.querySelector(config.selectors.days);
+        const hoursElement = document.querySelector(config.selectors.hours);
+        const minutesElement = document.querySelector(config.selectors.minutes);
+        const secondsElement = document.querySelector(config.selectors.seconds);
+        const countdownContainer = document.querySelector(config.selectors.container);
+        const countdownTitleElement = document.querySelector(config.selectors.titleElement);
 
         // Check if the countdown has already ended on page load
         const now = new Date().getTime();
@@ -35,8 +60,7 @@
         {
             if (initialDistance > 0)
             {
-                // Timer active, use custom title
-                countdownTitleElement.textContent = customCountdownTitle;
+                countdownTitleElement.textContent = config.title;
             }
         }
 
@@ -46,31 +70,15 @@
             {
                 countdownContainer.style.display = 'none';
             }
-            return; // Exit early if countdown already finished
+            return;
         }
 
         // Update the countdown every 1 second
         const countdown = setInterval(function ()
         {
-            // Get current date and time
             const now = new Date().getTime();
-
-            // Find the distance between now and the countdown date
             const distance = targetDate - now;
 
-            // Time calculations for days, hours, minutes and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result with leading zeros
-            daysElement.innerHTML = days < 10 ? "0" + days : days;
-            hoursElement.innerHTML = hours < 10 ? "0" + hours : hours;
-            minutesElement.innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            secondsElement.innerHTML = seconds < 10 ? "0" + seconds : seconds;
-
-            // If the countdown is finished, hide the countdown container
             if (distance < 0)
             {
                 clearInterval(countdown);
@@ -78,19 +86,91 @@
                 {
                     countdownContainer.style.display = 'none';
                 }
-                // Reset to default title if timer expires while on page
-                if (countdownTitleElement)
-                {
-                    countdownTitleElement.textContent = defaultCountdownTitle;
-                }
+                return;
             }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.innerHTML = days < 10 ? "0" + days : days;
+            hoursElement.innerHTML = hours < 10 ? "0" + hours : hours;
+            minutesElement.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            secondsElement.innerHTML = seconds < 10 ? "0" + seconds : seconds;
         }, 1000);
     }
 
-    // Initialize the countdown timer when document is ready
+    /* Banner Countdown Timer */
+    function initBannerCountdownTimer()
+    {
+        const config = countdownConfig.banner;
+
+        // Check if the banner countdown elements exist
+        if (!document.querySelector(config.selectors.days)) return;
+
+        const targetDate = new Date(config.targetDate).getTime();
+        const daysElement = document.querySelector(config.selectors.days);
+        const hoursElement = document.querySelector(config.selectors.hours);
+        const minutesElement = document.querySelector(config.selectors.minutes);
+        const secondsElement = document.querySelector(config.selectors.seconds);
+        const countdownContainer = document.querySelector(config.selectors.container);
+        const bannerContainer = document.querySelector(config.selectors.bannerContainer);
+
+        // Check if the countdown has already ended on page load
+        const now = new Date().getTime();
+        const initialDistance = targetDate - now;
+
+        if (initialDistance <= 0)
+        {
+            // Hide the entire banner if countdown is over
+            if (bannerContainer)
+            {
+                bannerContainer.style.display = 'none';
+            }
+            return;
+        }
+
+        // Show the countdown timer
+        if (countdownContainer)
+        {
+            countdownContainer.style.display = 'flex';
+        }
+
+        // Update the countdown every 1 second
+        const countdown = setInterval(function ()
+        {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0)
+            {
+                clearInterval(countdown);
+                // Hide the entire banner when countdown expires
+                if (bannerContainer)
+                {
+                    bannerContainer.style.display = 'none';
+                }
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysElement.innerHTML = days < 10 ? "0" + days : days;
+            hoursElement.innerHTML = hours < 10 ? "0" + hours : hours;
+            minutesElement.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            secondsElement.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+        }, 1000);
+    }
+
+    // Initialize both countdown timers when document is ready
     $(document).ready(function ()
     {
         initCountdownTimer();
+        initBannerCountdownTimer();
     });
 
 })(jQuery);

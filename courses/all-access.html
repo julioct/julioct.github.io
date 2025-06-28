@@ -65,10 +65,9 @@
 <body data-spy="scroll" data-target=".fixed-top">
     <div class="fixed-top">
         <!-- Notification Bar -->
-        <!-- <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
             style="background-color: #E56717; color: white;">
-            <strong>72 Hours Only: All-Access Pass Enrollment Now Open</strong>
-        </div> -->
+        </div>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
 
@@ -301,8 +300,8 @@
             <div class="row row-cols-1 row-cols-md-3 justify-content-center">
                 <div class="col-md-4 mb-4">
                     <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <img src="../images/UnitTesting-Essentials-Box_Mockup.png"
-                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <img src="../images/UnitTesting-Essentials-Box_Mockup.png" class="card-img-top mt-2" alt="..."
+                            style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
                             <a href="csharp-unittesting-essentials" style="text-decoration: none;">
                                 <h5 class="course-title">C# Unit Testing Essentials</h5>
@@ -314,8 +313,8 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
-                        <img src="../images/UnitTesting-Advanced-Box_Mockup.png"
-                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <img src="../images/UnitTesting-Advanced-Box_Mockup.png" class="card-img-top mt-2" alt="..."
+                            style="width: 60%; margin: 0 auto;">
                         <div class="card-body">
                             <a href="mastering-csharp-unittesting" style="text-decoration: none;">
                                 <h5 class="course-title">Mastering C# Unit Testing</h5>
@@ -323,7 +322,7 @@
                             <p class="card-text">Unlock the secrets of C# unit testing in the real world.</p>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
@@ -443,7 +442,7 @@
                     <div class="image-container" style="margin-bottom:0">
                         <img class="img-fluid" src="../images/bootcamp/aspire-starter-api-template.png"
                             alt="alternative" width="65%">
-                    </div> 
+                    </div>
                 </div>
                 <div class="col-lg-7 my-auto">
                     <h2 class="h2-heading">.NET Aspire Starter API Template</h2>
@@ -474,10 +473,10 @@
                             </div>
                         </li>
                     </ul>
-                </div> 
-            </div> 
-        </div> 
-    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Enroll Button -->
     <div class="basic-3 pt-0">
@@ -512,14 +511,12 @@
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
-            <div id="countdown-title" class="row mb-4">
+            <div id="countdown-title" class="row">
                 <div class="col-lg-12">
-                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">
-                        Choose Your Plan
-                    </h2>
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0"></h2>
                 </div>
             </div>
-            <!-- <div class="row mb-4">
+            <div class="row mb-4">
                 <div class="col-lg-12">
                     <div class="ddio_countdown_wrap">
                         <div id="countdown-timer" class="countdown-container">
@@ -542,7 +539,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="row justify-content-center">
                 <!-- Monthly Plan - Left when all fit horizontally, bottom when stacked -->
                 <div class="col-lg-4 col-md-6 order-lg-1 order-3" style="display: none;">
@@ -550,7 +547,7 @@
                     <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
                         <div class="card-body">
                             <div class="card-title  mb-2">MONTHLY</div>
-                            <div class="text2 mb-4">
+                            <div id="full-price" class="text2 mb-4">
                                 <div class="price-display"
                                     style="display: flex; align-items: baseline; justify-content: center;">
                                     <div class="price-container" style="display: inline-flex; align-items: baseline;">
@@ -607,24 +604,28 @@
                     <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
                         <div class="card-body">
                             <div class="card-title best-value mb-3">ANNUALLY</div>
-                            <!-- <div class="badge badge-success mb-2">BEST VALUE</div> -->
-                            <div class="text2 mb-4">
+                            <div id="full-price" class="text2 mb-4">
                                 <div class="price-display"
                                     style="display: flex; align-items: baseline; justify-content: center;">
                                     <div class="price-container" style="display: inline-flex; align-items: baseline;">
                                         <span class="currency best-value"
                                             style="line-height: 1; position: relative;">$</span>
-                                        <span class="value best-value"
+                                        <span id="original-price" class="value best-value"
                                             style="font-size: 5rem; line-height: 1;">579</span>
                                     </div>
                                     <span class="frequency" style="margin-left: 2px;">/year</span>
                                 </div>
-                                <!-- <div class="savings-text" style="color: #eb8a2f; font-weight: bold;">
-                                    Get 5 Months Free
-                                </div> -->
-                                <!-- <div class="monthly-equiv" style="font-size: 0.9rem;">
-                                    Just $48.25/Month
-                                </div> -->
+                            </div>
+                            <div id="discounted-price" class="mb-2" style="display: none;">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span id="discounted-monthly-price-value" class="value best-value"
+                                        style="font-size: 4.3rem;">452</span><span class="frequency">/year</span>
+                                </div>
+                                <div>
+                                    <span id="original-monthly-price" class="full-price">$579</span><span
+                                        id="monthly-discount-amount" class="save-value best-value">22% OFF</span>
+                                </div>
                             </div>
                             <div class="button-wrapper text2">
                                 <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap"
@@ -673,14 +674,26 @@
                     <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
                         <div class="card-body">
                             <div class="card-title  mb-3 ">QUARTERLY</div>
-                            <div class="text2 mb-4">
+                            <div id="full-price" class="text2 mb-4">
                                 <div class="price-display"
                                     style="display: flex; align-items: baseline; justify-content: center;">
                                     <div class="price-container" style="display: inline-flex; align-items: baseline;">
                                         <span class="currency" style="line-height: 1; position: relative;">$</span>
-                                        <span class="value" style="font-size: 5rem; line-height: 1;">199</span>
+                                        <span id="original-price" class="value"
+                                            style="font-size: 5rem; line-height: 1;">199</span>
                                     </div>
                                     <span class="frequency" style="margin-left: 2px;">/quarter</span>
+                                </div>
+                            </div>
+                            <div id="discounted-price" class="mb-2" style="display: none;">
+                                <div>
+                                    <span class="currency">$</span>
+                                    <span id="discounted-monthly-price-value" class="value"
+                                        style="font-size: 4.3rem;">155</span><span class="frequency">/quarter</span>
+                                </div>
+                                <div>
+                                    <span id="original-monthly-price" class="full-price">$199</span><span
+                                        id="monthly-discount-amount" class="save-value best-value">22% OFF</span>
                                 </div>
                             </div>
                             <div class="button-wrapper text2">
@@ -820,9 +833,10 @@
     <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="../js/countdown-timer.js"></script>
     <script src="../js/favicon.js"></script>
     <script src="../js/navbar-collapse.js"></script>
-    <!-- <script src="../js/countdown-timer.js"></script> -->
+    <script src="../js/parity-deals-allaccess.js"></script> <!-- Parity deals for all-access -->
 </body>
 
 </html>

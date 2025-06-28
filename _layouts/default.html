@@ -60,6 +60,7 @@
     <link href="/css/magnific-popup.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/css/countdown-timer.css" rel="stylesheet">
 
     <style>
         /* Override Kit styles for all relevant forms */
@@ -82,13 +83,40 @@
 <body data-spy="scroll" data-target=".fixed-top" style="display: block;">
     <div class="fixed-top">
         <!-- Notification Bar -->
-        <!-- <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+<div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
             style="background-color: #E56717; color: white;">
-            New Course: Containers & .NET Aspire → <strong>30 % Launch Discount</strong> + <strong>Early-Bird Bonuses (first 100 seats)</strong>
-            <a href="/courses/dotnetbootcamp" class="btn btn-sm ml-3"
-                style="font-weight: bold; color: white; text-decoration: none; background-color: #2C3E8C; border: none;">
-                LEARN MORE</a>
-        </div> -->
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                <span class="mr-3">
+                    ☀️ Summer Sale:
+                    <strong>22 % OFF EVERYTHING</strong>
+                    • Ends&nbsp;July&nbsp;6
+                </span>
+                <div id="banner-countdown" class="countdown-timer mx-3" style="display: none;">
+                    <span class="countdown-item">
+                        <span id="banner-countdown-days">00</span>
+                        <small>days</small>
+                    </span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-item">
+                        <span id="banner-countdown-hours">00</span>
+                        <small>hrs</small>
+                    </span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-item">
+                        <span id="banner-countdown-minutes">00</span>
+                        <small>min</small>
+                    </span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-item">
+                        <span id="banner-countdown-seconds">00</span>
+                        <small>sec</small>
+                    </span>
+                </div>
+                <a href="/courses" class="btn btn-sm ml-3"
+                    style="font-weight: bold; color: white; text-decoration: none; background-color: #2C3E8C; border: none; padding: 8px 16px; display: flex; align-items: center; height: 44px;">
+                    SAVE 22% NOW</a>
+            </div>
+        </div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -216,6 +244,7 @@
     <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="/js/scripts.js"></script> <!-- Custom scripts -->
     <script src="/js/favicon.js"></script>
+    <script src="/js/countdown-timer.js"></script> <!-- Countdown timer functionality -->
 </body>
 
 </html>
