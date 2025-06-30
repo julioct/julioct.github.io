@@ -53,6 +53,87 @@
 
     <!-- Favicon  -->
     <link rel="icon">
+
+    <!-- Custom responsive styles -->
+    <style>
+        /* Mobile-first approach - smaller text by default */
+        .header .source-code-sent {
+            font-size: 1.75rem !important;
+            line-height: 2.2rem !important;
+        }
+
+        .header .h2-heading {
+            font-size: 1.25rem !important;
+            line-height: 1.6rem !important;
+        }
+
+        /* Add bottom spacing to header content */
+        .header .container {
+            padding-bottom: 2rem !important;
+        }
+
+        /* Remove top padding from headline by default (mobile) */
+        #headline.basic-1 {
+            padding-top: 0 !important;
+        }
+
+        /* Tablet styles */
+        @media (min-width: 768px) {
+            .header .source-code-sent {
+                font-size: 2.2rem !important;
+                line-height: 2.8rem !important;
+            }
+
+            .header .h2-heading {
+                font-size: 1.6rem !important;
+                line-height: 2rem !important;
+            }
+
+            .header .container {
+                padding-bottom: 2.5rem !important;
+            }
+        }
+
+        /* Desktop styles - larger text */
+        @media (min-width: 992px) {
+            .header .source-code-sent {
+                font-size: 2.5rem !important;
+                line-height: 3.2rem !important;
+            }
+
+            .header .h2-heading {
+                font-size: 2rem !important;
+                line-height: 2.5rem !important;
+            }
+
+            .header .container {
+                padding-bottom: 0rem !important;
+            }
+
+            /* Restore headline padding on desktop */
+            #headline.basic-1 {
+                padding-top: 1.75rem !important;
+            }
+
+            /* Add more top margin to button on desktop */
+            #headline .btn-solid-lg-container {
+                margin-top: 3rem !important;
+            }
+        }
+
+        /* Large desktop styles */
+        @media (min-width: 1200px) {
+            .header .source-code-sent {
+                font-size: 3rem !important;
+                line-height: 3.8rem !important;
+            }
+
+            .header .h2-heading {
+                font-size: 2.3rem !important;
+                line-height: 2.8rem !important;
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll">
@@ -95,9 +176,11 @@
             <div class="row align-items-center justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex flex-column justify-content-center">
                     <div class="image-container mb-4" style="margin-top: 30px;">
-                        <img class="img-fluid" src="images/all-access-pass-9-offer.jpg" alt="alternative">
+                        <img class="img-fluid" src="images/all-access-pass-9-offer.png" alt="alternative">
                     </div> <!-- end of image-container -->
-                    <div class="d-flex justify-content-center">
+
+                    <!-- Badge below image on desktop, hidden on mobile -->
+                    <div class="d-none d-lg-flex justify-content-center">
                         <div
                             style="background: linear-gradient(135deg, #e8e4ff 0%, #f0f0ff 100%); border-radius: 12px; padding: 15px 20px; border: 1px solid #d1c7ff; box-shadow: 0 2px 8px rgba(95, 77, 238, 0.1); width: 100%; display: flex; align-items: center; gap: 12px;">
                             <span style="color: #5f4dee; font-size: 1.2rem; flex-shrink: 0;">✨</span>
@@ -109,11 +192,12 @@
                             <span style="color: #5f4dee; font-size: 1.2rem; flex-shrink: 0;">✨</span>
                         </div>
                     </div>
+
                 </div> <!-- end of col -->
                 <div class="col-lg-6 order-lg-1">
                     <div class="text-container" style="padding-right: 2rem;">
                         <h1 class="h2-heading display-4 font-weight-bold mb-4" style="text-align: left;">
-                            Fast-Track Your Path to <span style="color:#5f4dee">Senior .NET Developer</span>
+                            Get Your Senior .NET Developer <span style="color:#5f4dee">All-Access Pass</span>
                         </h1>
                         <p class="line-spaced-paragraph mb-4"
                             style="text-align: left; font-size: 1.1rem; line-height: 1.6;">
@@ -121,16 +205,30 @@
                             Azure cloud with confidence, and deep-dive into modern microservices architecture—all inside
                             one pass.
                         </p>
-                        <div class="btn-solid-lg-container mb-4">
-                            <a class="btn-solid-lg page-scroll" href="#pricing"><strong>Start My $9 Trial</strong></a>
-                        </div>
                         <div class="d-flex">
                             <div style="width: 100%;">
                                 <script
-                                    src="https://widget.senja.io/widget/fa8eab0d-bfeb-4bcc-97ba-ed7d5594e45d/platform.js"
+                                    src="https://widget.senja.io/widget/af93ca0c-b80a-40b2-aa47-b7f1fc39e22f/platform.js"
                                     type="text/javascript" async></script>
-                                <div class="senja-embed" data-id="fa8eab0d-bfeb-4bcc-97ba-ed7d5594e45d"
+                                <div class="senja-embed" data-id="af93ca0c-b80a-40b2-aa47-b7f1fc39e22f"
                                     data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="btn-solid-lg-container mt-4 text-center text-lg-left">
+                            <a class="btn-solid-lg page-scroll" href="#pricing"><strong>Start My $9 Trial</strong></a>
+                        </div>
+
+                        <!-- Badge on mobile only, below the button -->
+                        <div class="d-flex d-lg-none justify-content-center mt-4">
+                            <div
+                                style="background: linear-gradient(135deg, #e8e4ff 0%, #f0f0ff 100%); border-radius: 12px; padding: 15px 20px; border: 1px solid #d1c7ff; box-shadow: 0 2px 8px rgba(95, 77, 238, 0.1); width: 100%; display: flex; align-items: center; gap: 12px;">
+                                <span style="color: #5f4dee; font-size: 1.2rem; flex-shrink: 0;">✨</span>
+                                <p
+                                    style="font-size: 1.05rem; letter-spacing: 0.25px; text-align: center; margin: 0; color: #5f4dee; font-weight: 500; flex: 1;">
+                                    This offer is only for roadmap readers—and it expires when you leave this
+                                    page!
+                                </p>
+                                <span style="color: #5f4dee; font-size: 1.2rem; flex-shrink: 0;">✨</span>
                             </div>
                         </div>
                     </div> <!-- end of text-container -->
@@ -140,11 +238,11 @@
     </div> <!-- end of cards-1 -->
 
     <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+    <div id="pricing" class="cards-2 pl-0">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2 class="h2-heading display-4 font-weight-bold mb-4">Unlock This Exclusive Offer</h2>
+                    <h2 class="h2-heading display-4 font-weight-bold mb-4">This Offer Expires When You Leave</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row justify-content-center">
@@ -153,7 +251,7 @@
                     <!-- Card-->
                     <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
                         <div class="card-body">
-                            <div class="card-title  mb-2 ">FIRST MONTH TRIAL</div>
+                            <div class="card-title  mb-2 ">ALL-ACCESS PASS TRIAL</div>
                             <div id="discounted-price" class="mb-2">
                                 <div>
                                     <span class="currency">$</span>
@@ -161,7 +259,7 @@
                                         style="font-size: 4.3rem;">9</span>
                                 </div>
                                 <div class="mt-2 mb-4">
-                                    <span >(Then $79/month)</span>
+                                    <span>(Then $79/month)</span>
                                 </div>
                             </div>
                             <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
@@ -170,35 +268,35 @@
                             </div>
                             <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
                                 <li class="media">
-                                    <i class="fas fa-check "></i>
+                                    <i class="fas fa-book-open"></i>
                                     <div class="media-body">Instant access to the entire course library</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check "></i>
+                                    <i class="fas fa-rocket"></i>
                                     <div class="media-body">Early access to new courses and updates</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-users"></i>
                                     <div class="media-body">Community access</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-microphone"></i>
                                     <div class="media-body">Microsoft employee interviews</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-video"></i>
                                     <div class="media-body">Live workshop recordings</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check "></i>
+                                    <i class="fas fa-times-circle"></i>
                                     <div class="media-body">Cancel anytime</div>
                                 </li>
                             </ul>
                             <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
                             <div class="button-wrapper text2">
                                 <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap;"
-                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4267390">GET
-                                    YOUR PASS</a>
+                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4267390">START MY $9
+                                    TRIAL</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -210,15 +308,15 @@
                     <!-- Card-->
                     <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
                         <div class="card-body">
-                            <div class="card-title best-value mb-2">ANNUALLY</div>
+                            <div class="card-title best-value mb-2">ALL-ACCESS PASS - ANNUAL</div>
                             <div id="discounted-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
                                     <span id="discounted-monthly-price-value" class="value best-value"
                                         style="font-size: 4.3rem;">497</span><span class="frequency">/year</span>
                                 </div>
-                                <div class="mt-1 mb-3">
-                                    <span class="save-value best-value">Save 48%</span>
+                                <div class="mt-2 mb-4">
+                                    <span style="color: #eb8a2f;"><strong>Save $451 vs. monthly</strong></span>
                                 </div>
                             </div>
 
@@ -228,35 +326,35 @@
                             </div>
                             <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-book-open best-value"></i>
                                     <div class="media-body">Instant access to the entire course library</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-rocket best-value"></i>
                                     <div class="media-body">Early access to new courses and updates</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-users best-value"></i>
                                     <div class="media-body">Community access</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-microphone best-value"></i>
                                     <div class="media-body">Microsoft employee interviews</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-video best-value"></i>
                                     <div class="media-body">Live workshop recordings</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check best-value"></i>
+                                    <i class="fas fa-times-circle best-value"></i>
                                     <div class="media-body">Cancel anytime</div>
                                 </li>
                             </ul>
                             <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
                             <div class="button-wrapper text2">
                                 <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap"
-                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4354880&coupon=AllAccess48">GET
-                                    YOUR PASS</a>
+                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4354880&coupon=AllAccess48">SAVE
+                                    $451 NOW</a>
                             </div>
 
                         </div>
