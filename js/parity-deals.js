@@ -10,8 +10,8 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "SUMMER22", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "22", // Default discount percentage (no decimals)
+            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
+            discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             paymentPlanCouponCode: "", // Default payment plan coupon code
             paymentPlanDiscountPercentage: "", // Default payment plan discount percentage
@@ -95,7 +95,7 @@
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
             {
-                bannerText = `☀️ Summer Sale • Local pricing for ${country} applied — <strong>${discountText} OFF</strong> • Ends&nbsp;July&nbsp;6`;
+                bannerText = `Pricing adjusted for <strong>${country}</strong> — <strong>${discountText} OFF</strong>`;
             }
 
             notificationBanner.innerHTML = bannerText;
@@ -245,12 +245,6 @@
             {
                 // Only hide payment plan for parity deals coupons, but show it for regular coupons
                 paymentPlanContainer.style.display = hasParityDealsCoupon ? 'none' : 'block';
-            }
-
-            // Update frequency element text
-            if (frequencyElement)
-            {
-                frequencyElement.textContent = hasCouponCode ? 'Lifetime Access' : 'Best Value';
             }
 
             // Update one-time payment price display - show discounted price when coupon code is present
