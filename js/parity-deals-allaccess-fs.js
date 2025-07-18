@@ -12,12 +12,12 @@
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code
-            discountPercentage: "2", // Default discount percentage (no decimals)
+            discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
-            annualCouponCode: "", // Annual plan coupon code
-            annualDiscountPercentage: "", // Annual plan discount percentage
-            quarterlyCouponCode: "", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
+            annualCouponCode: "ALLACCESS30", // Annual plan coupon code
+            annualDiscountPercentage: "30", // Annual plan discount percentage
+            quarterlyCouponCode: "ALLACCESS20", // Quarterly plan coupon code
+            quarterlyDiscountPercentage: "20", // Quarterly plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
@@ -63,41 +63,109 @@
             notificationBanner.style.display = 'none';
         }
 
+        // Function to get the dynamic deadline date (integrates with countdown timer logic)
+        const getDynamicDeadlineDate = function ()
+        {
+            try
+            {
+                // Check if the countdown timer's deadline funnel is available
+                if (window.deadlineFunnel && typeof window.deadlineFunnel.getDeadline === 'function')
+                {
+                    const deadline = window.deadlineFunnel.getDeadline();
+                    const deadlineDate = new Date(deadline);
+
+                    // Format the date as "July 20" or "Jul 20" based on preference
+                    const options = { month: 'long', day: 'numeric' };
+                    return deadlineDate.toLocaleDateString('en-US', options);
+                }
+
+                // Fallback: try to replicate the countdown timer logic here
+                const urlParams = new URLSearchParams(window.location.search);
+                const emailTime = urlParams.get('emailTime') || urlParams.get('et');
+
+                if (emailTime)
+                {
+                    // Convert email timestamp and add 72 hours
+                    const emailTimestamp = parseInt(emailTime) * 1000;
+                    const deadline = emailTimestamp + (72 * 60 * 60 * 1000); // 72 hours
+                    const deadlineDate = new Date(deadline);
+                    const options = { month: 'long', day: 'numeric' };
+                    return deadlineDate.toLocaleDateString('en-US', options);
+                }
+
+                // Check localStorage for stored deadline
+                const storedDeadline = localStorage.getItem('dealDeadline');
+                if (storedDeadline)
+                {
+                    const deadlineDate = new Date(parseInt(storedDeadline));
+                    const options = { month: 'long', day: 'numeric' };
+                    return deadlineDate.toLocaleDateString('en-US', options);
+                }
+
+                // Create new 72-hour deadline from current time
+                const now = new Date().getTime();
+                const newDeadline = now + (72 * 60 * 60 * 1000);
+                localStorage.setItem('dealDeadline', newDeadline.toString());
+
+                const deadlineDate = new Date(newDeadline);
+                const options = { month: 'long', day: 'numeric' };
+                return deadlineDate.toLocaleDateString('en-US', options);
+
+            } catch (error)
+            {
+                console.warn('Error getting dynamic deadline date:', error);
+                // Fallback to a reasonable future date
+                const fallback = new Date();
+                fallback.setDate(fallback.getDate() + 2); // 2 days from now
+                const options = { month: 'long', day: 'numeric' };
+                return fallback.toLocaleDateString('en-US', options);
+            }
+        };
+
         // Function to update notification banner with discount information
         const updateNotificationBanner = function ()
         {
             if (!notificationBanner) return;
 
             const couponCode = window.parityDealsInfo.couponCode;
+            const annualCouponCode = window.parityDealsInfo.annualCouponCode;
+            const quarterlyCouponCode = window.parityDealsInfo.quarterlyCouponCode;
 
-            // If there's no coupon code, don't show the banner at all
-            if (!couponCode)
+            // If there's no coupon code (any of the three), don't show the banner at all
+            if (!couponCode && !annualCouponCode && !quarterlyCouponCode)
             {
                 notificationBanner.style.display = 'none';
                 return;
             }
 
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
+            const parityDiscountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
             const discountDollars = window.parityDealsInfo.discountDollars;
+            const annualDiscountPercentage = parseInt(window.parityDealsInfo.annualDiscountPercentage) || 0;
             const country = window.parityDealsInfo.country || "your country";
 
             let discountText = "";
 
-            // Determine whether to use percentage or dollar amount
-            if (discountPercentage > 0)
+            // Prioritize Parity Deals discount, fall back to annual discount percentage
+            if (parityDiscountPercentage > 0)
             {
-                discountText = `${discountPercentage}%`;
-            } else
+                discountText = `${parityDiscountPercentage}%`;
+            } else if (discountDollars && parseInt(discountDollars) > 0)
             {
                 discountText = `$${discountDollars}`;
+            } else if (annualDiscountPercentage > 0)
+            {
+                discountText = `${annualDiscountPercentage}%`;
             }
 
-            let bannerText = `☀️ Summer Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;July&nbsp;6`;
+            // Get the dynamic deadline date
+            const deadlineDate = getDynamicDeadlineDate();
+
+            let bannerText = `Limited Time Deal: <strong>${discountText} OFF the Annual Pass</strong> • Ends&nbsp;${deadlineDate}`;
 
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
             {
-                bannerText = `Pricing adjusted for <strong>${country}</strong> — <strong>${discountText} OFF</strong>`;
+                bannerText = `Special pricing for <strong>${country}</strong>: <strong>${discountText} OFF the Annual Pass</strong> • Ends&nbsp;${deadlineDate}`;
             }
 
             notificationBanner.innerHTML = bannerText;
