@@ -1623,6 +1623,28 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+/* Pricing Card Container Styles */
+.pricing-card-container {
+    width: 350px;
+    margin: 0 15px 30px 15px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .pricing-card-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 30px auto;
+    }
+
+    #pricing .row.justify-content-center {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* end of pricing card container */
+
 
 
 /************************/

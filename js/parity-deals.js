@@ -8,25 +8,37 @@
 
     // Parity Deals coupon handling
     document.addEventListener("DOMContentLoaded", function ()
-    {        // Global variable to store Parity Deals response data
+    {
+        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code (empty - no hardcoded coupon)
             discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
-            paymentPlanCouponCode: "", // Default payment plan coupon code
-            paymentPlanDiscountPercentage: "", // Default payment plan discount percentage
+            allAccessCouponCode: "", // All-access pass coupon code
+            allAccessDiscountPercentage: "", // All-access pass discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
-        }; const paymentPlanContainer = document.getElementById('payment-plan-container');
+        };
+
         const frequencyElement = document.querySelector('.one-time-payment');
         const fullPriceDiv = document.getElementById('full-price');
-        const discountedPriceDiv = document.getElementById('discounted-price'); const oneTimePaymentLink = document.getElementById('one-time-payment-link');
-        const paymentPlanLink = document.querySelector('#payment-plan-container #payment-plan-link'); // Payment plan link within payment plan container
+        const discountedPriceDiv = document.getElementById('discounted-price');
+
+        const oneTimePaymentLink = document.getElementById('one-time-payment-link');
         const notificationBanner = document.getElementById('notification-banner');
+
+        // All-access pass elements - look for the second pricing card container
+        const allAccessContainer = document.querySelectorAll('.pricing-card-container')[1]; // Second card container
+        const allAccessFullPriceDiv = allAccessContainer?.querySelector('#full-price');
+        const allAccessDiscountedPriceDiv = allAccessContainer?.querySelector('#discounted-price');
+        const allAccessDiscountedPriceValue = allAccessContainer?.querySelector('#discounted-monthly-price-value');
+        const allAccessOriginalPriceInDiscount = allAccessContainer?.querySelector('#original-monthly-price');
+        const allAccessDiscountAmountSpan = allAccessContainer?.querySelector('#monthly-discount-amount');
+        const allAccessPaymentLink = allAccessContainer?.querySelector('#payment-plan-link');
 
         // Get original URLs from existing links instead of hardcoding them
         const originalHref = oneTimePaymentLink ? oneTimePaymentLink.href : "";
-        const paymentPlanOriginalHref = paymentPlanLink ? paymentPlanLink.href : "";
+        const allAccessOriginalHref = allAccessPaymentLink ? allAccessPaymentLink.href : "";
 
         // Function to extract price from page elements
         const getOriginalPrice = function ()
@@ -37,22 +49,15 @@
                 // Extract numeric value from text content (remove $ and any other non-numeric characters except decimal point)
                 const priceText = originalPriceSpan.textContent || originalPriceSpan.innerText || "";
                 const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
-                return isNaN(price) ? 497 : price; // Fallback to 497 if parsing fails
+                return isNaN(price) ? 147 : price; // Fallback to 147 if parsing fails
             }
-            return 497; // Default fallback price
+            return 147; // Default fallback price
         };
 
-        const getOriginalMonthlyPrice = function ()
+        const getAllAccessOriginalPrice = function ()
         {
-            const originalMonthlyPriceSpan = document.getElementById('original-monthly-price');
-            if (originalMonthlyPriceSpan)
-            {
-                // Extract numeric value from text content (remove $, /mo and any other non-numeric characters except decimal point)
-                const priceText = originalMonthlyPriceSpan.textContent || originalMonthlyPriceSpan.innerText || "";
-                const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
-                return isNaN(price) ? 129 : price; // Fallback to 129 if parsing fails
-            }
-            return 129; // Default fallback price
+            // Get the price from the all-access card - it shows 199/quarter
+            return 199; // Default all-access quarterly price
         };
 
         // Make sure banner is completely hidden by default (in case CSS doesn't do this)
@@ -100,10 +105,12 @@
 
             notificationBanner.innerHTML = bannerText;
             notificationBanner.style.display = 'block';
-        };        // Function to update link with coupon code
+        };
+
+        // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update one-time payment link
+            // Update one-time payment link only
             if (oneTimePaymentLink && originalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
@@ -119,35 +126,26 @@
                 }
             }
 
-            // Update payment plan link (within payment plan container)
-            if (paymentPlanLink && paymentPlanOriginalHref)
-            {
-                const paymentPlanCouponCode = window.parityDealsInfo.paymentPlanCouponCode;
-                if (paymentPlanCouponCode)
-                {
-                    // Remove existing coupon parameter if present, then add new one
-                    const baseUrl = paymentPlanOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
-                    const separator = baseUrl.includes('?') ? '&' : '?';
-                    paymentPlanLink.href = baseUrl + separator + "coupon=" + paymentPlanCouponCode;
-                } else
-                {
-                    paymentPlanLink.href = paymentPlanOriginalHref;
-                }
-            }
-        };        // Function to calculate discounted price based on percentage or fixed amount
-        const calculateDiscountedPrice = function (isPaymentPlan = false)
+            // Do not modify the all-access pass "LEARN MORE" link
+            // Keep it as the original /courses/all-access link without any coupon codes
+        };
+
+        // Function to calculate discounted price based on percentage or fixed amount
+        const calculateDiscountedPrice = function (isAllAccess = false)
         {
             let discountPercentage, discountDollars;
-            let basePrice = isPaymentPlan ? getOriginalMonthlyPrice() : getOriginalPrice();
+            let basePrice;
 
-            if (isPaymentPlan)
+            if (isAllAccess)
             {
-                // Use payment plan specific discount
-                discountPercentage = parseInt(window.parityDealsInfo.paymentPlanDiscountPercentage) || 0;
-                discountDollars = 0; // Payment plan only uses percentage discount
+                // All-access pass logic
+                basePrice = getAllAccessOriginalPrice();
+                discountPercentage = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) || 0;
+                discountDollars = 0; // All-access only uses percentage discount
             } else
             {
                 // Use one-time payment discount
+                basePrice = getOriginalPrice();
                 discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
                 discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
             }
@@ -158,24 +156,21 @@
             if (discountPercentage > 0)
             {
                 discountedPrice = basePrice - (basePrice * discountPercentage / 100);
-            } else if (discountDollars > 0 && !isPaymentPlan)
+            } else if (discountDollars > 0 && !isAllAccess)
             {
                 discountedPrice = basePrice - discountDollars;
             }
 
             // Ensure the price is not negative and round to whole number
             return Math.max(Math.round(discountedPrice), 0);
-        };        // Update discount display information
+        };
+
+        // Update discount display information
         const updateDiscountDisplay = function ()
         {
             const discountedPriceValue = document.getElementById('discounted-price-value');
             const originalPriceSpan = document.getElementById('original-price');
             const discountAmountSpan = document.getElementById('discount-amount');
-
-            // Payment plan discount elements (correct IDs from HTML)
-            const discountedMonthlyPriceValue = document.getElementById('discounted-monthly-price-value');
-            const originalMonthlyPriceSpan = document.getElementById('original-monthly-price');
-            const monthlyDiscountAmountSpan = document.getElementById('monthly-discount-amount');
 
             // Update one-time payment discount display
             if (discountedPriceValue && originalPriceSpan && discountAmountSpan)
@@ -205,51 +200,43 @@
                 }
             }
 
-            // Update payment plan discount display
-            if (discountedMonthlyPriceValue && originalMonthlyPriceSpan && monthlyDiscountAmountSpan)
+            // Update all-access pass discount display
+            if (allAccessDiscountedPriceValue && allAccessOriginalPriceInDiscount && allAccessDiscountAmountSpan)
             {
-                const currentOriginalMonthlyPrice = getOriginalMonthlyPrice();
-                const discountedMonthlyPrice = calculateDiscountedPrice(true);
-                const paymentPlanDiscountPercentage = parseInt(window.parityDealsInfo.paymentPlanDiscountPercentage) || 0;
+                const allAccessOriginalPrice = getAllAccessOriginalPrice();
+                const allAccessDiscountedPrice = calculateDiscountedPrice(true);
+                const allAccessDiscountPercentage = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) || 0;
 
-                // Update the discounted price for payment plan
-                discountedMonthlyPriceValue.textContent = discountedMonthlyPrice;
+                // Update the discounted price for all-access pass
+                allAccessDiscountedPriceValue.textContent = allAccessDiscountedPrice;
 
-                // Update original price display for payment plan (only if it's not already showing the correct price)
-                const currentDisplayedMonthlyPrice = parseFloat(originalMonthlyPriceSpan.textContent.replace(/[^0-9.]/g, ''));
-                if (isNaN(currentDisplayedMonthlyPrice) || currentDisplayedMonthlyPrice !== currentOriginalMonthlyPrice)
+                // Update original price display for all-access pass
+                allAccessOriginalPriceInDiscount.textContent = `$${allAccessOriginalPrice}`;
+
+                // Update the discount text for all-access pass
+                if (allAccessDiscountPercentage > 0)
                 {
-                    originalMonthlyPriceSpan.textContent = `$${currentOriginalMonthlyPrice}/mo`;
-                }
-
-                // Update the discount text for payment plan
-                if (paymentPlanDiscountPercentage > 0)
-                {
-                    monthlyDiscountAmountSpan.textContent = `${paymentPlanDiscountPercentage}% OFF`;
+                    allAccessDiscountAmountSpan.textContent = `${allAccessDiscountPercentage}% OFF`;
                 }
             }
-        };// Function to set payment plan discount percentage (for external configuration)
-        window.setPaymentPlanDiscount = function (discountPercentage)
+        };
+
+        // Function to set all-access discount percentage (for external configuration)
+        window.setAllAccessDiscount = function (discountPercentage)
         {
-            window.parityDealsInfo.paymentPlanDiscountPercentage = discountPercentage.toString();
+            window.parityDealsInfo.allAccessDiscountPercentage = discountPercentage.toString();
             updateUI(); // Update UI to reflect the new discount
-        };        // Function to update UI based on coupon code availability
+        };
+
+        // Function to update UI based on coupon code availability
         const updateUI = function ()
         {
             const hasCouponCode = !!window.parityDealsInfo.couponCode;
-            const hasPaymentPlanCouponCode = !!window.parityDealsInfo.paymentPlanCouponCode;
-            const hasParityDealsCoupon = hasCouponCode && window.parityDealsInfo.couponFromAPI;
-
-            // Show payment plan container - now we show it even with discounts
-            if (paymentPlanContainer)
-            {
-                // Only hide payment plan for parity deals coupons, but show it for regular coupons
-                paymentPlanContainer.style.display = hasParityDealsCoupon ? 'none' : 'block';
-            }
+            const hasAllAccessCouponCode = !!window.parityDealsInfo.allAccessCouponCode;
 
             // Update one-time payment price display - show discounted price when coupon code is present
-            const oneTimeFullPriceDiv = document.querySelector('.col-lg-4:not(#payment-plan-container) #full-price');
-            const oneTimeDiscountedPriceDiv = document.querySelector('.col-lg-4:not(#payment-plan-container) #discounted-price');
+            const oneTimeFullPriceDiv = document.querySelector('.pricing-card-container:first-child #full-price');
+            const oneTimeDiscountedPriceDiv = document.querySelector('.pricing-card-container:first-child #discounted-price');
 
             if (oneTimeFullPriceDiv && oneTimeDiscountedPriceDiv)
             {
@@ -263,14 +250,11 @@
                 discountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
             }
 
-            // Update payment plan price display
-            const paymentPlanFullPriceDiv = document.querySelector('#payment-plan-container #full-price');
-            const paymentPlanDiscountedPriceDiv = document.querySelector('#payment-plan-container #discounted-price');
-
-            if (paymentPlanFullPriceDiv && paymentPlanDiscountedPriceDiv)
+            // Update all-access pass price display
+            if (allAccessFullPriceDiv && allAccessDiscountedPriceDiv)
             {
-                paymentPlanFullPriceDiv.style.display = hasPaymentPlanCouponCode ? 'none' : 'block';
-                paymentPlanDiscountedPriceDiv.style.display = hasPaymentPlanCouponCode ? 'block' : 'none';
+                allAccessFullPriceDiv.style.display = hasAllAccessCouponCode ? 'none' : 'block';
+                allAccessDiscountedPriceDiv.style.display = hasAllAccessCouponCode ? 'block' : 'none';
             }
 
             // Update discount display values
@@ -306,6 +290,7 @@
                 if (data.couponCode)
                 {
                     window.parityDealsInfo.couponCode = data.couponCode;
+                    window.parityDealsInfo.allAccessCouponCode = data.couponCode; // Store for display purposes only
                     window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
                     uiNeedsUpdate = true;
                 }
@@ -314,18 +299,14 @@
                 {
                     // Remove any decimal places from the discount percentage
                     window.parityDealsInfo.discountPercentage = parseInt(data.discountPercentage).toString();
-                    uiNeedsUpdate = true;
-                }                // Add handling for country from the API
-                if (data.country)
-                {
-                    window.parityDealsInfo.country = data.country;
+                    window.parityDealsInfo.allAccessDiscountPercentage = parseInt(data.discountPercentage).toString(); // Apply same discount to all-access for display
                     uiNeedsUpdate = true;
                 }
 
-                // Handle payment plan discount from API if provided
-                if (data.paymentPlanDiscountPercentage)
+                // Add handling for country from the API
+                if (data.country)
                 {
-                    window.parityDealsInfo.paymentPlanDiscountPercentage = parseInt(data.paymentPlanDiscountPercentage).toString();
+                    window.parityDealsInfo.country = data.country;
                     uiNeedsUpdate = true;
                 }
 
