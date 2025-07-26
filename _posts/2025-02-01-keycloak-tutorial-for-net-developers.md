@@ -451,20 +451,27 @@ For instance, here's the shopping cart page, where the back-end must know who th
 
 So there you go, ASP.NET Core + Keycloak working end to end, all secured with the industry standard OIDC protocol.
 
-If you need a step by step video based guide to everything I showed you above and many other details I could not cover here, plus the full source code, and even an additional React application also configured for Keycloak, I got all that covered in [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
-
+Mission accomplished!
 ​
+<br/><br/>
+
 
 ### **Wrapping up**
-On a different topic, I was supposed to get a bunch of Docker content recorded this past week, but that cold I caught completely screwed up my throat, so I have not been able to record anything :(
+You now have a complete ASP.NET Core application secured with industry-standard OIDC authentication, all running locally without any cloud dependencies.
 
-But, since I could not just sit there and do nothing, I spent a couple of days working on a mini project that allowed me to finally publish all my missing newsletters from July 2024 to Jan 2025 right on [this blog]({{ site.url }}/blog). Yay!
+Your backend API validates JWT tokens properly. Your frontend handles the authorization code flow seamlessly. And Keycloak provides enterprise-grade identity management that just works.
 
-Now that my voice is finally back, it's time to start doing some serious recording.
+This setup gives you everything you need for local development: a real identity provider, proper token validation, and the confidence that your authentication flow will work the same way in production.
+
+**Want to take this even further?**
+
+In [Part 2 of this series]({{ site.url }}/blog/keycloak-tutorial-part-2-clone-and-f5-ready-with-net-aspire), I'll show you how to make this entire setup even more developer-friendly using .NET Aspire. We'll eliminate the manual Keycloak configuration and make everything start automatically when you hit F5.
+
+Just clone, run, and authenticate. Every single time.
 
 Until next time!
 
-Julio
+**P.S.** For a step-by-step video guide to everything I showed you above plus advanced topics like role, claims and resource based authorization, and complete frontend integration with both Blazor and React applications, check out my [**ASP.NET Core Security Course**]({{ site.url }}/courses/aspnet-core-security).
 
 ---
 
