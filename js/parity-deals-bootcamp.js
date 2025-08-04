@@ -10,72 +10,73 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "", // Default discount percentage (no decimals)
-            discountDollars: "",  // Manual default discount in dollars (not provided by API)
+            couponCode: "", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
+            couponCodePaymentPlan: "", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
+            discountPercentage: "", // Set this to the discount percentage for onetime payment (e.g., "20")
+            discountPercentagePaymentPlan: "", // Set this to the discount percentage for payment plan (e.g., "15")
+            discountDollars: "",  // Alternative: set this to a fixed dollar amount
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
 
-        const coreEditionContainer = document.getElementById('core-edition-container');
-        const completeEditionContainer = document.getElementById('complete-edition-container');
+        const paymentPlanContainer = document.getElementById('payment-plan-container');
         const notificationBanner = document.getElementById('notification-banner');
 
         // Get original URLs from existing links instead of hardcoding them
-        const coreEditionLink = document.getElementById('core-edition-payment-link');
-        const completeEditionLink = document.getElementById('complete-edition-payment-link');
-        const coreEditionOriginalHref = coreEditionLink ? coreEditionLink.href : "";
-        const completeEditionOriginalHref = completeEditionLink ? completeEditionLink.href : "";
+        const onetimePaymentLink = document.getElementById('onetime-payment-link');
+        const paymentPlanLink = document.getElementById('payment-plan-link');
+        const onetimePaymentOriginalHref = onetimePaymentLink ? onetimePaymentLink.href : "";
+        const paymentPlanOriginalHref = paymentPlanLink ? paymentPlanLink.href : "";
 
         // Debug logging
-        console.log("Core edition link found:", !!coreEditionLink, coreEditionOriginalHref);
-        console.log("Complete edition link found:", !!completeEditionLink, completeEditionOriginalHref);
+        console.log("Onetime payment link found:", !!onetimePaymentLink, onetimePaymentOriginalHref);
+        console.log("Payment plan link found:", !!paymentPlanLink, paymentPlanOriginalHref);
 
         // Function to extract price from page elements
-        const getCoreEditionPrice = function ()
+        const getOnetimePaymentPrice = function ()
         {
             // First try to get from the original-price span (when discount is active)
-            const coreOriginalPriceSpan = document.querySelector('#core-edition-container #original-price');
-            if (coreOriginalPriceSpan && coreOriginalPriceSpan.textContent.trim())
+            const onetimeOriginalPriceSpan = document.querySelector('#onetime-payment-container #original-price');
+            if (onetimeOriginalPriceSpan && onetimeOriginalPriceSpan.textContent.trim())
             {
-                const priceText = coreOriginalPriceSpan.textContent || coreOriginalPriceSpan.innerText || "";
+                const priceText = onetimeOriginalPriceSpan.textContent || onetimeOriginalPriceSpan.innerText || "";
                 const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
                 if (!isNaN(price)) return price;
             }
 
             // If not found, get from the main price display (when no discount)
-            const coreMainPriceSpan = document.querySelector('#core-edition-container .value');
-            if (coreMainPriceSpan)
+            const onetimeMainPriceSpan = document.querySelector('#onetime-payment-container .value');
+            if (onetimeMainPriceSpan)
             {
-                const priceText = coreMainPriceSpan.textContent || coreMainPriceSpan.innerText || "";
+                const priceText = onetimeMainPriceSpan.textContent || onetimeMainPriceSpan.innerText || "";
                 const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
                 if (!isNaN(price)) return price;
             }
 
-            return 247; // Default fallback price for core edition
+            return 497; // Default fallback price for onetime payment
         };
 
-        const getCompleteEditionPrice = function ()
+        const getPaymentPlanPrice = function ()
         {
-            // First try to get from the original-price span (when discount is active)
-            const completeOriginalPriceSpan = document.querySelector('#complete-edition-container #original-price');
-            if (completeOriginalPriceSpan && completeOriginalPriceSpan.textContent.trim())
+            // First try to get from the original-monthly-price span (when discount is active)
+            const paymentPlanOriginalPriceSpan = document.querySelector('#payment-plan-container #original-monthly-price');
+            if (paymentPlanOriginalPriceSpan && paymentPlanOriginalPriceSpan.textContent.trim())
             {
-                const priceText = completeOriginalPriceSpan.textContent || completeOriginalPriceSpan.innerText || "";
+                const priceText = paymentPlanOriginalPriceSpan.textContent || paymentPlanOriginalPriceSpan.innerText || "";
                 const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
                 if (!isNaN(price)) return price;
             }
 
             // If not found, get from the main price display (when no discount)
-            const completeMainPriceSpan = document.querySelector('#complete-edition-container .value');
-            if (completeMainPriceSpan)
+            const paymentPlanMainPriceSpan = document.querySelector('#payment-plan-container .value');
+            if (paymentPlanMainPriceSpan)
             {
-                const priceText = completeMainPriceSpan.textContent || completeMainPriceSpan.innerText || "";
+                const priceText = paymentPlanMainPriceSpan.textContent || paymentPlanMainPriceSpan.innerText || "";
                 const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
                 if (!isNaN(price)) return price;
             }
 
-            return 497; // Default fallback price for complete edition
+            return 129; // Default fallback price for payment plan
         };
 
         // Make sure banner is completely hidden by default (in case CSS doesn't do this)
@@ -126,52 +127,54 @@
         };        // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update core edition link
-            if (coreEditionLink && coreEditionOriginalHref)
+            // Update onetime payment link
+            if (onetimePaymentLink && onetimePaymentOriginalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
                 if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
-                    const baseUrl = coreEditionOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
+                    const baseUrl = onetimePaymentOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
                     const separator = baseUrl.includes('?') ? '&' : '?';
-                    coreEditionLink.href = baseUrl + separator + "coupon=" + couponCode;
-                    console.log("Core edition link updated:", coreEditionLink.href);
+                    onetimePaymentLink.href = baseUrl + separator + "coupon=" + couponCode;
+                    console.log("Onetime payment link updated:", onetimePaymentLink.href);
                 } else
                 {
-                    coreEditionLink.href = coreEditionOriginalHref;
+                    onetimePaymentLink.href = onetimePaymentOriginalHref;
                 }
             } else
             {
-                console.log("Core edition link not found or no original href");
+                console.log("Onetime payment link not found or no original href");
             }
 
-            // Update complete edition link
-            if (completeEditionLink && completeEditionOriginalHref)
+            // Update payment plan link
+            if (paymentPlanLink && paymentPlanOriginalHref)
             {
-                const couponCode = window.parityDealsInfo.couponCode;
+                const couponCode = window.parityDealsInfo.couponCodePaymentPlan;
                 if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
-                    const baseUrl = completeEditionOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
+                    const baseUrl = paymentPlanOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
                     const separator = baseUrl.includes('?') ? '&' : '?';
-                    completeEditionLink.href = baseUrl + separator + "coupon=" + couponCode;
-                    console.log("Complete edition link updated:", completeEditionLink.href);
+                    paymentPlanLink.href = baseUrl + separator + "coupon=" + couponCode;
+                    console.log("Payment plan link updated:", paymentPlanLink.href);
                 } else
                 {
-                    completeEditionLink.href = completeEditionOriginalHref;
+                    paymentPlanLink.href = paymentPlanOriginalHref;
                 }
             } else
             {
-                console.log("Complete edition link not found or no original href");
+                console.log("Payment plan link not found or no original href");
             }
         };        // Function to calculate discounted price based on percentage or fixed amount
-        const calculateDiscountedPrice = function (editionType = 'complete')
+        const calculateDiscountedPrice = function (paymentType = 'onetime')
         {
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
+            const discountPercentage = paymentType === 'onetime'
+                ? parseInt(window.parityDealsInfo.discountPercentage) || 0
+                : parseInt(window.parityDealsInfo.discountPercentagePaymentPlan) || 0;
             const discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
 
-            let basePrice = editionType === 'core' ? getCoreEditionPrice() : getCompleteEditionPrice();
+            let basePrice = paymentType === 'onetime' ? getOnetimePaymentPrice() : getPaymentPlanPrice();
             let discountedPrice = basePrice;
 
             // Apply percentage discount if available, otherwise use dollar discount
@@ -188,93 +191,122 @@
         };        // Update discount display information
         const updateDiscountDisplay = function ()
         {
-            // Core edition discount elements
-            const coreDiscountedPriceValue = document.querySelector('#core-edition-container #discounted-price-value');
-            const coreOriginalPriceSpan = document.querySelector('#core-edition-container #original-price');
-            const coreDiscountAmountSpan = document.querySelector('#core-edition-container #discount-amount');
+            // Onetime payment discount elements
+            const onetimeDiscountedPriceValue = document.querySelector('#onetime-payment-container #discounted-price-value');
+            const onetimeOriginalPriceSpan = document.querySelector('#onetime-payment-container #original-price');
+            const onetimeDiscountAmountSpan = document.querySelector('#onetime-payment-container #discount-amount');
 
-            // Complete edition discount elements
-            const completeDiscountedPriceValue = document.querySelector('#complete-edition-container #discounted-price-value');
-            const completeOriginalPriceSpan = document.querySelector('#complete-edition-container #original-price');
-            const completeDiscountAmountSpan = document.querySelector('#complete-edition-container #discount-amount');
+            // Payment plan discount elements
+            const paymentPlanDiscountedPriceValue = document.querySelector('#payment-plan-container #discounted-monthly-price-value');
+            const paymentPlanOriginalPriceSpan = document.querySelector('#payment-plan-container #original-monthly-price');
+            const paymentPlanDiscountAmountSpan = document.querySelector('#payment-plan-container #monthly-discount-amount');
 
             const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
+            const discountPercentagePaymentPlan = parseInt(window.parityDealsInfo.discountPercentagePaymentPlan) || 0;
             const discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
 
-            // Update core edition discount display
-            if (coreDiscountedPriceValue && coreOriginalPriceSpan && coreDiscountAmountSpan)
+            // Update onetime payment discount display
+            if (onetimeDiscountedPriceValue && onetimeOriginalPriceSpan && onetimeDiscountAmountSpan)
             {
-                const currentCorePrice = getCoreEditionPrice();
-                const discountedCorePrice = calculateDiscountedPrice('core');
+                const currentOnetimePrice = getOnetimePaymentPrice();
+                const discountedOnetimePrice = calculateDiscountedPrice('onetime');
 
                 // Update the discounted price
-                coreDiscountedPriceValue.textContent = discountedCorePrice;
+                onetimeDiscountedPriceValue.textContent = discountedOnetimePrice;
 
                 // Update original price display (only if it's not already showing the correct price)
-                const currentDisplayedCorePrice = parseFloat(coreOriginalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
-                if (isNaN(currentDisplayedCorePrice) || currentDisplayedCorePrice !== currentCorePrice)
+                const currentDisplayedOnetimePrice = parseFloat(onetimeOriginalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
+                if (isNaN(currentDisplayedOnetimePrice) || currentDisplayedOnetimePrice !== currentOnetimePrice)
                 {
-                    coreOriginalPriceSpan.textContent = `$${currentCorePrice}`;
+                    onetimeOriginalPriceSpan.textContent = `$${currentOnetimePrice}`;
                 }
 
                 // Determine and update the discount text
                 if (discountPercentage > 0)
                 {
-                    coreDiscountAmountSpan.textContent = `${discountPercentage}% OFF`;
+                    onetimeDiscountAmountSpan.textContent = `${discountPercentage}% OFF`;
                 } else
                 {
-                    coreDiscountAmountSpan.textContent = `$${discountDollars} OFF`;
+                    onetimeDiscountAmountSpan.textContent = `$${discountDollars} OFF`;
                 }
             }
 
-            // Update complete edition discount display
-            if (completeDiscountedPriceValue && completeOriginalPriceSpan && completeDiscountAmountSpan)
+            // Update payment plan discount display (only if not a parity deals discount)
+            if (paymentPlanDiscountedPriceValue && paymentPlanOriginalPriceSpan && paymentPlanDiscountAmountSpan && !window.parityDealsInfo.couponFromAPI)
             {
-                const currentCompletePrice = getCompleteEditionPrice();
-                const discountedCompletePrice = calculateDiscountedPrice('complete');
+                const currentPaymentPlanPrice = getPaymentPlanPrice();
+                const discountedPaymentPlanPrice = calculateDiscountedPrice('paymentplan');
 
                 // Update the discounted price
-                completeDiscountedPriceValue.textContent = discountedCompletePrice;
+                paymentPlanDiscountedPriceValue.textContent = discountedPaymentPlanPrice;
 
                 // Update original price display (only if it's not already showing the correct price)
-                const currentDisplayedCompletePrice = parseFloat(completeOriginalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
-                if (isNaN(currentDisplayedCompletePrice) || currentDisplayedCompletePrice !== currentCompletePrice)
+                const currentDisplayedPaymentPlanPrice = parseFloat(paymentPlanOriginalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
+                if (isNaN(currentDisplayedPaymentPlanPrice) || currentDisplayedPaymentPlanPrice !== currentPaymentPlanPrice)
                 {
-                    completeOriginalPriceSpan.textContent = `$${currentCompletePrice}`;
+                    paymentPlanOriginalPriceSpan.textContent = `$${currentPaymentPlanPrice}`;
                 }
 
-                // Determine and update the discount text
-                if (discountPercentage > 0)
+                // Determine and update the discount text (use payment plan specific discount)
+                if (discountPercentagePaymentPlan > 0)
                 {
-                    completeDiscountAmountSpan.textContent = `${discountPercentage}% OFF`;
+                    paymentPlanDiscountAmountSpan.textContent = `${discountPercentagePaymentPlan}% OFF`;
                 } else
                 {
-                    completeDiscountAmountSpan.textContent = `$${discountDollars} OFF`;
+                    paymentPlanDiscountAmountSpan.textContent = `$${discountDollars} OFF`;
                 }
             }
         };        // Function to update UI based on coupon code availability
         const updateUI = function ()
         {
-            const hasCouponCode = !!window.parityDealsInfo.couponCode;
+            const hasCouponCode = !!(window.parityDealsInfo.couponCode || window.parityDealsInfo.couponCodePaymentPlan);
+            const hasOnetimeCoupon = !!window.parityDealsInfo.couponCode;
+            const hasPaymentPlanCoupon = !!window.parityDealsInfo.couponCodePaymentPlan;
+            const isParityDealsDiscount = window.parityDealsInfo.couponFromAPI;
 
-            // Update core edition price display - show discounted price when coupon code is present
-            const coreFullPriceDiv = document.querySelector('#core-edition-container #full-price');
-            const coreDiscountedPriceDiv = document.querySelector('#core-edition-container #discounted-price');
-
-            if (coreFullPriceDiv && coreDiscountedPriceDiv)
+            // Hide payment plan container if there's a parity deals coupon
+            if (paymentPlanContainer)
             {
-                coreFullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
-                coreDiscountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
+                if (isParityDealsDiscount)
+                {
+                    paymentPlanContainer.style.display = 'none';
+                } else
+                {
+                    paymentPlanContainer.style.display = 'block';
+                }
             }
 
-            // Update complete edition price display - show discounted price when coupon code is present
-            const completeFullPriceDiv = document.querySelector('#complete-edition-container #full-price');
-            const completeDiscountedPriceDiv = document.querySelector('#complete-edition-container #discounted-price');
-
-            if (completeFullPriceDiv && completeDiscountedPriceDiv)
+            // Update onetime payment frequency text based on whether payment plan is showing
+            const onetimeFrequencyDivs = document.querySelectorAll('#onetime-payment-container .frequency.one-time-payment');
+            onetimeFrequencyDivs.forEach(div =>
             {
-                completeFullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
-                completeDiscountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
+                if (isParityDealsDiscount)
+                {
+                    div.textContent = 'Lifetime Access';
+                } else
+                {
+                    div.textContent = 'Best Value';
+                }
+            });
+
+            // Update onetime payment price display - show discounted price when coupon code is present
+            const onetimeFullPriceDiv = document.querySelector('#onetime-payment-container #full-price');
+            const onetimeDiscountedPriceDiv = document.querySelector('#onetime-payment-container #discounted-price');
+
+            if (onetimeFullPriceDiv && onetimeDiscountedPriceDiv)
+            {
+                onetimeFullPriceDiv.style.display = hasOnetimeCoupon ? 'none' : 'block';
+                onetimeDiscountedPriceDiv.style.display = hasOnetimeCoupon ? 'block' : 'none';
+            }
+
+            // Update payment plan price display - show discounted price when coupon code is present and not parity deals
+            const paymentPlanFullPriceDiv = document.querySelector('#payment-plan-container #full-price');
+            const paymentPlanDiscountedPriceDiv = document.querySelector('#payment-plan-container #discounted-price');
+
+            if (paymentPlanFullPriceDiv && paymentPlanDiscountedPriceDiv && !isParityDealsDiscount)
+            {
+                paymentPlanFullPriceDiv.style.display = hasPaymentPlanCoupon ? 'none' : 'block';
+                paymentPlanDiscountedPriceDiv.style.display = hasPaymentPlanCoupon ? 'block' : 'none';
             }
 
             // Update discount display values
@@ -309,6 +341,7 @@
 
                 if (data.couponCode)
                 {
+                    // Override any hardcoded discount with parity deals discount
                     window.parityDealsInfo.couponCode = data.couponCode;
                     window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
                     uiNeedsUpdate = true;

@@ -368,6 +368,21 @@ a.white:hover {
     text-decoration: none;
 }
 
+/* Custom button for bootcamp promotion on purple background */
+.btn-bootcamp-promo {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-bootcamp-promo:hover {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+    text-decoration: none;
+}
+
 .form-group {
     position: relative;
     margin-bottom: 1.25rem;
