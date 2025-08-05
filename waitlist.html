@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="LWAWGOWE" defer></script>
+    <!-- / Fathom -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GKWPQFHL1Y');
+    </script>
+
+    <!-- Play video -->
+    <script type="text/javascript">
+        function playVideo()
+        {
+            var iframe = document.getElementById('vimeoIframe');
+            var src = iframe.getAttribute("src");
+            var newSrc = src.replace("background=1", "autoplay=1");
+            iframe.setAttribute("src", newSrc);
+            document.getElementById('play-button').style.display = "none";
+        }
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Add real payments to your .NET apps with Stripe—fast, secure, production-ready.">
+    <meta name="author" content="Julio Casal">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Julio Casal" />
+    <meta property="og:site" content="https://juliocasal.com" />
+    <meta property="og:title" content="Stripe for .NET Developers | Join The Waitlist" />
+    <meta property="og:description"
+        content="Add real payments to your .NET apps with Stripe—fast, secure, production-ready." />
+    <meta property="og:image"
+        content="https://juliocasal.com/images/courses/stripe-for-dotnet-developers/Course_Thumbnail.jpg" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="https://juliocasal.com/courses/stripe-for-dotnet-developers" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <meta name="twitter:image"
+        content="https://juliocasal.com/images/courses/stripe-for-dotnet-developers/Course_Thumbnail.jpg">
+    <meta name="thumbnail"
+        content="https://juliocasal.com/images/courses/stripe-for-dotnet-developers/Course_Thumbnail.jpg" />
+
+    <!-- Webpage Title -->
+    <title>Stripe for .NET Developers | Join The Waitlist</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Header -->
+    <header id="header" class="header" style="padding-top: 3rem">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-6 order-lg-2 d-flex align-items-center">
+                    <div class="image-container mb-4">
+                        <img class="img-fluid" src="images/courses/stripe-for-dotnet-developers/box-mockup.png"
+                            width="70%" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 order-lg-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-container">
+                                    <h1 class="h2-heading" style="text-align: left;">Build Secure Payments With Confidence
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="line-spaced-paragraph white" style="text-align: left;">
+                            Add real payments to your .NET apps with <strong>Stripe</strong>—fast, secure, production-ready.
+                        </p>
+                        <ul class="list-unstyled mt-4" style="text-align: left;">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check"
+                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Stop spending weeks debugging payment flows and edge cases</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check"
+                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Go from Stripe tutorial hell to deployed production system</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check"
+                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Get customers paying in days, not months of trial-and-error</span>
+                            </li>
+                        </ul>
+                        <div class="row mt-5">
+                            <div class="col">
+                                <script async data-uid="32db162a82"
+                                    src="https://juliocasal.kit.com/32db162a82/index.js"></script>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of div -->
+                    </div> <!-- end of div -->
+                </div> <!-- end of row -->
+            </div>
+        </div> <!-- end of container -->
+
+        <svg class="header-decoration" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            viewBox="0 0 1920 305.139">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #ffffff;
+                    }
+                </style>
+            </defs>
+            <title>header-decoration</title>
+            <path class="cls-1"
+                d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
+                transform="translate(0 0)" />
+        </svg>
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <div id="pain-point" class="basic-1">
+        <div class="container"> <!-- Main Headline -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="h2-heading display-4 font-weight-bold mb-4" style="color: #2c3e50;">
+                        Payment integration shouldn't be<br>
+                        <span style="color: #e74c3c;">this complicated</span>
+                    </h2>
+                    <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                        Building secure payment systems in .NET can be overwhelming. Here's what developers struggle
+                        with the most:
+                    </p>
+                </div>
+            </div> <!-- Pain Points Row -->
+            <div class="row justify-content-center mb-3">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow pain-point-card animate-fade-in h-100"
+                        style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center">
+                            <span class="d-block mb-3"><i class="fas fa-credit-card fa-4x"
+                                    style="color: #e74c3c;"></i></span>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Payment Flows</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Understanding the complete
+                                payment lifecycle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow pain-point-card animate-fade-in h-100"
+                        style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center">
+                            <span class="d-block mb-3"><i class="fas fa-shield-alt fa-4x"
+                                    style="color: #e74c3c;"></i></span>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Security & Compliance</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Ensuring secure handling of
+                                sensitive payment data</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow pain-point-card animate-fade-in h-100"
+                        style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center">
+                            <span class="d-block mb-3"><i class="fas fa-sync-alt fa-4x"
+                                    style="color: #e74c3c;"></i></span>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Idempotency Issues</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Preventing duplicate charges
+                                and handling network failures</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card shadow pain-point-card animate-fade-in h-100"
+                        style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center">
+                            <span class="d-block mb-3"><i class="fas fa-cloud fa-4x" style="color: #e74c3c;"></i></span>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Production Deployment</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Configuring webhooks and
+                                Azure integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <div class="mt-5 animate-fade-in"
+                        style="font-size: 1.35rem; font-weight: 600; letter-spacing: 0.01em;">
+                        Let's make payments easy again...
+                        <div class="d-flex justify-content-center mt-2">
+                            <span style="display: inline-block; animation: bounceDown 1.5s infinite;">
+                                <i class="fas fa-arrow-down fa-2x" style="color: #6a82fb;"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 --> <!-- Key Technologies Section -->
+
+    <section id="course-features" class="basic-1 py-5" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="h2-heading display-4 font-weight-bold">Build Production-Ready Stripe Integration in .NET
+                    </h2>
+                    <p class="lead" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #5a6c7d;">
+                        A complete payment system with idempotency, webhooks, Azure deployment, and working UI - not
+                        another toy tutorial.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-credit-card fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Master The Payment Flow</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-shield-alt fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Build Secure Systems</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-link fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Handle Webhooks</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Deploy to Azure</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-sync-alt fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Prevent Duplicate Charges</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-desktop fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Frontend Integration</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="course06-curriculum" class="basic-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="h2-heading display-4 font-weight-bold">Course Curriculum</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center mb-4">
+                <!-- Main curriculum content -->
+                <div class="col-lg-8">
+                    <div class="accordion" id="curriculum-course06-accordion">
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module01"
+                                aria-controls="collapseOne" aria-expanded="true">
+                                <span>Welcome to the course!</span>
+                                <span class="chapter-duration"></span>
+                            </h5>
+                            <div id="course06-module01" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Course introduction</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What this course covers</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What you need to know first</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Software prerequisites</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module02"
+                                aria-controls="collapseOne">
+                                <span>Getting Started with Stripe</span>
+                            </h5>
+                            <div id="course06-module02" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is Stripe?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Stripe Integration options</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">The Stripe payment intents flow</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Creating a Stripe account</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module03"
+                                aria-controls="collapseOne">
+                                <span>Payment Intents</span>
+                            </h5>
+                            <div id="course06-module03" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring Stripe Keys</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Registering Stripe services</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">The Basket Total Calculator</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">The Payment Intent DTOs</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Add CreatePaymentIntent endpoint</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Testing the Create Payment Intents endpoint</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module04"
+                                aria-controls="collapseOne">
+                                <span>Idempotency</span>
+                            </h5>
+                            <div id="course06-module04" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Stripe and Idempotency</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the CheckoutToken</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implement the CheckoutTokenProvider</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding idempotency</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Testing idempotency</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module05"
+                                aria-controls="collapseOne">
+                                <span>Stripe Webhooks</span>
+                            </h5>
+                            <div id="course06-module05" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is a Webhook?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing the Stripe webhook</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Forwarding Stripe events to localhost</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Triggering Stripe events</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module06"
+                                aria-controls="collapseOne">
+                                <span>Implementing a Stripe Hosting Integration</span>
+                            </h5>
+                            <div id="course06-module06" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Why a hosting integration?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing the Stripe CLI Resource</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the AddStripeCli extension</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the WithWebhookEventListener extension</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the WithPrintSecret extension</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module07"
+                                aria-controls="collapseOne">
+                                <span>Reacting to Stripe Payments Via Internal Events</span>
+                            </h5>
+                            <div id="course06-module07" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Dispatching internal events</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing an internal event handler</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implementing an internal event publisher</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Publishing internal events from Stripe webhook</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module08"
+                                aria-controls="collapseOne">
+                                <span>UI Integration</span>
+                            </h5>
+                            <div id="course06-module08" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Implement the Get Payment Status endpoint</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Blazor: The checkout experience</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Blazor: How it works</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Configuring payment methods</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">React: The checkout experience</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">React: How it works</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module09"
+                                aria-controls="collapseOne">
+                                <span>Stripe on Azure</span>
+                            </h5>
+                            <div id="course06-module09" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Storing Stripe secrets on Key Vault</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the backend</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the Azure event destination</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Testing the payment endpoints in Azure</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the Blazor frontend</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Deploying the React frontend</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar with course information -->
+                <div class="col-lg-4">
+                    <div class="course-info-box">
+                        <img src="images/courses/stripe-for-dotnet-developers/box-mockup.png"
+                            alt="Stripe for .NET Developers" class="img-fluid mb-3 course-box-image">
+                        <h4>Course Includes</h4>
+                        <ul class="course-info-list">
+                            <li><i class="fas fa-bookmark"></i> <span>9 Modules, 44 Lessons</span></li>
+                            <!-- <li><i class="fas fa-video"></i> <span>7 Hours of Video</span></li> -->
+                            <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
+                            <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
+                            <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
+                        </ul>
+                        <!-- <div class="course-info-cta">
+                            <a class="btn-solid-lg-small-padding page-scroll" href="#pricing">Start Watching</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <!-- Section 12: Final CTA -->
+    <section class="final-cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center animate-fade-in">
+                    <h2 class="h2-heading mb-3">Reserve Your Spot</h2>
+                    <p class="lead mb-0">Join the waitlist and be the first to know when the course launches. </p>
+                    <script async data-uid="32db162a82" src="https://juliocasal.kit.com/32db162a82/index.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal (hidden, for screenshots) -->
+    <div id="lightboxModal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0">
+                    <img id="lightboxImage" src="" alt="Screenshot" class="img-fluid rounded shadow">
+                    <div id="lightboxCaption" class="caption text-center mt-2 text-white"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Lightbox functionality
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            var lightboxLinks = document.querySelectorAll('.lightbox');
+            var modal = document.getElementById('lightboxModal');
+            var modalImg = document.getElementById('lightboxImage');
+            var modalCaption = document.getElementById('lightboxCaption');
+            lightboxLinks.forEach(function (link)
+            {
+                link.addEventListener('click', function (e)
+                {
+                    e.preventDefault();
+                    modalImg.src = this.href;
+                    var caption = this.querySelector('img')?.alt || '';
+                    modalCaption.textContent = caption;
+                    var bsModal = new bootstrap.Modal(modal);
+                    bsModal.show();
+                });
+            });
+        });
+    </script>
+    <style>
+        .solution-card,
+        .testimonial-card,
+        .preview-card,
+        .outcome-card,
+        .instructor-bio-card {
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(95, 77, 238, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .solution-card:hover,
+        .testimonial-card:hover,
+        .preview-card:hover,
+        .outcome-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(95, 77, 238, 0.16);
+        }
+
+        .screenshot-img {
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 12px rgba(95, 77, 238, 0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .screenshot-img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(95, 77, 238, 0.18);
+        }
+
+        .timeline {
+            gap: 1.5rem;
+        }
+
+        .timeline-step {
+            min-width: 120px;
+        }
+
+        .timeline-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5f4dee 0%, #6a82fb 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 0.5rem auto;
+            box-shadow: 0 2px 12px rgba(95, 77, 238, 0.10);
+        }
+
+        .timeline-line {
+            width: 40px;
+            height: 4px;
+            background: linear-gradient(90deg, #5f4dee 0%, #6a82fb 100%);
+            margin: 0 0.5rem;
+            border-radius: 2px;
+        }
+
+        .curriculum-accordion .accordion-button {
+            font-weight: 600;
+        }
+
+        .curriculum-accordion .accordion-body {
+            background: #fff;
+        }
+
+        .faq-accordion .accordion-button {
+            font-weight: 600;
+        }
+
+        .faq-accordion .accordion-body {
+            background: #fff;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .overlay-caption {
+            background: rgba(95, 77, 238, 0.08);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(.4, 0, .2, 1), transform 0.7s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .animate-fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Responsive masonry for preview section */
+        .masonry-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 991px) {
+            .masonry-layout {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive timeline */
+        @media (max-width: 767px) {
+            .timeline {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .timeline-line {
+                width: 4px;
+                height: 40px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Add to the bottom of your CSS or in a <style> block */
+        .bullet-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            margin-left: 0;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .bullet-check {
+            background: #22c55e;
+            color: #fff;
+        }
+
+        .bullet-x {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        .bullet-icon i {
+            color: #fff !important;
+        }
+
+        /* Bullet list alignment for multi-line text */
+        .who-for-section ul.list-unstyled {
+            padding-left: 0;
+        }
+
+        .who-for-section ul.list-unstyled li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .who-for-section ul.list-unstyled li span.bullet-icon {
+            margin-top: 0.1rem;
+        }
+
+        .who-for-section ul.list-unstyled li {
+            line-height: 1.4;
+        }
+
+        .who-for-section ul.list-unstyled li>span+span,
+        .who-for-section ul.list-unstyled li>span.bullet-icon+span {
+            flex: 1 1 0%;
+            display: block;
+            min-width: 0;
+        }
+
+        @media (max-width: 576px) {
+            .bullet-icon {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1.1rem;
+                margin-right: 0.7rem;
+            }
+        }
+    </style>
+    <script>
+        // Fade-in animation on scroll
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            var fadeEls = document.querySelectorAll('.animate-fade-in');
+            var observer = new IntersectionObserver(function (entries)
+            {
+                entries.forEach(function (entry)
+                {
+                    if (entry.isIntersecting)
+                    {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            fadeEls.forEach(function (el) { observer.observe(el); });
+        });
+    </script>
+
+
+    <!-- Footer -->
+    <div class="footer-decoration">
+        <svg class="footer-frame" style="height: 20px;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none" viewBox="0 0 1920 115.984">
+            <defs>
+                <style>
+                    .cls-2 {
+                        fill: #5f4dee;
+                    }
+                </style>
+            </defs>
+            <title>footer-frame</title>
+            <path class="cls-2"
+                d="M1616.28,381.705c-87.656,5.552-93.356-59.62-197.369-67.562-112.391-8.581-137.609,65.077-251.189,60.632-109.57-4.288-116.156-74.017-225.25-83.153-125.171-10.483-150,78.5-293,88.35-136.948,9.437-173.108-68.092-320.83-77.956C255.5,297.133,143,308.1,0,395.564V406.75H1920V324.537c-18-6.507-43.63-14.492-76.1-15.591C1740.655,305.452,1705.829,376.033,1616.28,381.705Z"
+                transform="translate(0 -290.766)" />
+        </svg>
+    </div> <!-- end of footer-decoration -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2025 Julio Casal LLC</p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/favicon.js"></script>
+</body>
+
+</html>
