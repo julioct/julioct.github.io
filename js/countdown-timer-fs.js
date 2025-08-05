@@ -18,7 +18,7 @@
         },
         // Main countdown timer configuration
         main: {
-            title: "Limited Time Deal Ends In",
+            title: "This Offer Disappears In",
             selectors: {
                 days: "#countdown-days",
                 hours: "#countdown-hours",
