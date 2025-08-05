@@ -141,7 +141,7 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​](https://go.dotnetacademy.io/stripe-waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[​Stripe for .NET Developers (Waitlist)​](https://juliocasal.com/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
 
 2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
 

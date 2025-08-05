@@ -242,7 +242,7 @@ And that's all for today.
 
 See you next Saturday.
 
-**P.S.** My upcoming **Stripe for .NET Developers** course dives deep into complete payment flows—from payment intents to webhooks and a complete e-commerce checkout experience. [Join the waitlist](https://go.dotnetacademy.io/stripe-waitlist) to be first in line.
+**P.S.** My upcoming **Stripe for .NET Developers** course dives deep into complete payment flows—from payment intents to webhooks and a complete e-commerce checkout experience. [Join the waitlist](https://juliocasal.com/waitlist) to be first in line.
 
 ---
 
@@ -250,7 +250,7 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​](https://go.dotnetacademy.io/stripe-waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[​Stripe for .NET Developers (Waitlist)​](https://juliocasal.com/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
 
 2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
 
