@@ -62,8 +62,49 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
+    <div class="fixed-top">
+        <!-- Notification Bar -->
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+            style="background-color: #E56717; color: white; display: none;">
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <a class="navbar-brand logo-text page-scroll" href="/"></a>
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="index.html">
+                <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
+            </a> -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#testimonials-featured">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#inside-this-course">What's Inside?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#faq">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-solid-sm page-scroll" href="#pricing">Get Your Pass Now</a>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    </div>
+
     <!-- Header -->
-    <header id="header" class="header" style="padding-top: 4rem">
+    <header id="header" class="header" style="padding-top: 9rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex align-items-center">
@@ -72,6 +113,37 @@
                             alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
+                <div class="col-lg-6 order-lg-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-container">
+                                    <h1 class="h2-heading" style="text-align: left;">Everything You Need To Upgrade Your
+                                        .NET Skills</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="line-spaced-paragraph white" style="text-align: left;">
+                            A complete catalog of premium courses, with continuous access to new training and updates.
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="btn-solid-lg-container" style="text-align: left;">
+                                    <a class="btn-solid-lg page-scroll" href="#pricing">Get Your Pass</a>
+                                </div>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of div -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <script
+                                    src="https://widget.senja.io/widget/af93ca0c-b80a-40b2-aa47-b7f1fc39e22f/platform.js"
+                                    type="text/javascript" async></script>
+                                <div class="senja-embed" data-id="af93ca0c-b80a-40b2-aa47-b7f1fc39e22f"
+                                    data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of div -->
+                    </div> <!-- end of div -->
+                </div> <!-- end of row -->
             </div>
         </div> <!-- end of container -->
 
@@ -91,27 +163,641 @@
         </svg>
     </header> <!-- end of header -->
 
-    <div id="enrollment-closed" class="basic-1">
+    <div id="testimonials-featured" class="basic-1">
         <div class="container">
-            <div class="row justify-content-center mt-4">
-                <h2 class="h2-heading display-3 font-weight-bold mb-4" style="color: #2c3e50;">
-                    Enrollment Is Closed</span>
-                </h2>
-                <p class="lead" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
-                    The All-Access Pass is currently closed for enrollment. 
-                </p>
-                <p class="lead" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
-                    Choose the course or learning path that fits your goals.
-                </p>
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold">Here's What <span style="color: #5f4dee;">.NET
+                            Developers</span> Love About All-Access Pass Courses</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col">
+                    <div class="senja-embed" data-id="4ab85450-0f3a-4dd7-8f1f-2a2c8a08d1cc" data-lazyload="false"></div>
+                    <script async type="text/javascript" src="https://static.senja.io/dist/platform.js"></script>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+
+    <!-- Enroll Button -->
+    <div class="basic-3 pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Get Your Pass</a>
+                </div> <!-- end of col -->
             </div>
-            <div class="row justify-content-center mt-4">
-                <div class="button-wrapper text2">
-                    <a class="btn-solid-lg" style="white-space: nowrap;" href="../courses">Browse
-                        Courses</a>
+        </div>
+    </div>
+    <!-- end of Enroll Button -->
+
+    <!-- What You Get When You Enroll -->
+    <div id="inside-this-course">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">What Will You Get Inside?</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of What You Get When You Enroll -->
+
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/aspnet-core-essentials/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="aspnet-core-essentials" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Essentials</h5>
+                            </a>
+                            <p class="card-text">Kick-start your backend skills with ASP.NET Core.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/aspnet-core-advanced/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="aspnet-core-advanced" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Advanced</h5>
+                            </a>
+                            <p class="card-text">Build Bulletproof ASP.NET Core Apps for Production.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/aspnet-core-security/box-mockup.png" class="card-img-top mt-2"
+                            alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="aspnet-core-security" style="text-decoration: none;">
+                                <h5 class="course-title">ASP.NET Core Security</h5>
+                            </a>
+                            <p class="card-text">The complete guide to ASP.NET Core security.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> <!-- Skills breakdown -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of Course List -->
+
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/azure-for-dotnet-developers/box-mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="azure-for-dotnet-developers" style="text-decoration: none;">
+                                <h5 class="course-title">Azure for .NET Developers</h5>
+                            </a>
+                            <p class="card-text">Deploy .NET apps to Azure like a Pro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/containers-and-dotnet-aspire/box-mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="containers-and-dotnet-aspire" style="text-decoration: none;">
+                                <h5 class="course-title">Containers & .NET Aspire</h5>
+                            </a>
+                            <p class="card-text">Build production ready apps from day 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/core-course-box-mockup.png" class="card-img-top mt-2" alt="..."
+                            style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="https://dotnetmicroservices.com" style="text-decoration: none;">
+                                <h5 class="course-title">Building Microservices with .NET</h5>
+                            </a>
+                            <p class="card-text">Transform the way you build .NET systems at scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of Course List -->
+
+    <div id="course-list" class="basic-1 pt-0 pb-0" style="padding-left:0">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/csharp-unittesting-essentials/UnitTesting-Essentials-Box_Mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="csharp-unittesting-essentials" style="text-decoration: none;">
+                                <h5 class="course-title">C# Unit Testing Essentials</h5>
+                            </a>
+                            <p class="card-text">Code, refactor and ship high quality C# code every time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card course h-100" style="transition: box-shadow 0.2s ease-in-out;">
+                        <img src="../images/courses/mastering-csharp-unittesting/UnitTesting-Advanced-Box_Mockup.png"
+                            class="card-img-top mt-2" alt="..." style="width: 60%; margin: 0 auto;">
+                        <div class="card-body">
+                            <a href="mastering-csharp-unittesting" style="text-decoration: none;">
+                                <h5 class="course-title">Mastering C# Unit Testing</h5>
+                            </a>
+                            <p class="card-text">Unlock the secrets of C# unit testing in the real world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+
+    <!-- Microsoft Employee Interviews -->
+    <div id="microsoft-employee-interviews-title" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">Exclusive All-Access Pass Member Benefits</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Microsoft Employee Interviews -->
+
+    <div id="community-access" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-auto">
+                    <div class="image-container" style="margin-bottom:0">
+                        <img class="img-fluid" src="../images/courses/all-access/community-screenshot.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 my-auto">
+                    <h3 class="h2-heading">Community Access</h3>
+                    <p class="line-spaced-paragraph">
+                        Get direct help and feedback from your instructor and peers inside the private Community:
+                    </p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Post your questions anytime</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Receive personalized answers from the instructor within 24 hours
+                            </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Learn faster by exploring real-world answers to real-world
+                                challenges</div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of col-->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <div id="microsoft-employee-interviews" class="basic-1 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-auto order-lg-2">
+                    <div class="image-container shadow-lg">
+                        <img class="img-fluid rounded" src="../images/courses/all-access/employee-interviews.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 my-auto">
+                    <h3 class="h2-heading">Microsoft Employee Interviews</h3>
+                    <p class="line-spaced-paragraph">
+                        Watch 4 exclusive interviews with Microsoft employees who share real-world advice on career
+                        growth, technical skills, and landing a job at Microsoft.
+                    </p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Learn the strategies used by successful engineers and hiring
+                                managers</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">Get insider tips you won't find in public blog posts</div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <div id="life-workshop-recordings" class="basic-1 mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-auto">
+                    <div class="image-container shadow-lg">
+                        <img class="img-fluid rounded" src="../images/courses/all-access/workshop-recordings.jpg"
+                            alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7 my-auto">
+                    <h3 class="h2-heading">Live Workshop Recordings</h3>
+                    <p class="line-spaced-paragraph">
+                        Instantly access 2 popular workshops where Julio breaks down essential .NET skills you won't
+                        find in typical tutorials:
+                    </p>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body"><strong>Introduction to Clean Architecture</strong> — What Clean
+                                Architecture really is, why it matters, and how to apply it to your .NET projects</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body"><strong>.NET Microservices Testing</strong> — How to test .NET
+                                microservices effectively, from unit testing to integration and contract testing</div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+
+    <!-- <div id="aspire-template-bonus" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 my-auto order-lg-2">
+                    <div class="image-container" style="margin-bottom:0">
+                        <img class="img-fluid" src="../images/bootcamp/aspire-starter-api-template.png"
+                            alt="alternative" width="65%">
+                    </div>
+                </div>
+                <div class="col-lg-7 my-auto">
+                    <h2 class="h2-heading">.NET Aspire Starter API Template</h2>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="media">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <strong>One Command → Cloud-Ready </strong>&mdash; Run
+                                <code>dotnet new aspire-starter-api</code> and get an ASP.NET Core API with Postgres,
+                                Entra ID
+                                auth, telemetry, and .NET Aspire integration, ready for Azure.
+                            </div>
+                        </li>
+                        <li class="media mt-4">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <strong>The Exact Bootcamp Blueprint </strong>&mdash; Vertical slices, clean DI,
+                                cloud-native patterns, infra-as-code, and best practices—exactly the cloud-native
+                                architecture you'll master in the bootcamp.
+                            </div>
+                        </li>
+                        <li class="media mt-4">
+                            <i class="fas fa-check"></i>
+                            <div class="media-body">
+                                <strong>CI/CD Confidence </strong>&mdash; Save hours of setup: a ready-made Azure DevOps
+                                pipeline and
+                                integration tests build, verify, and deploy your app on every commit.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Enroll Button -->
+    <div class="basic-3 pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Get Your Pass</a>
+                </div> <!-- end of col -->
+            </div>
+        </div>
     </div>
+    <!-- end of Enroll Button -->
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="basic-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold">More Happy Customers</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col">
+                    <div class="senja-embed" data-id="b525b11e-c35a-4973-ac18-1166489b05e7" data-lazyload="false"></div>
+                    <script async type="text/javascript" src="https://static.senja.io/dist/platform.js"></script>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Testimonials -->
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2">
+        <div class="container">
+            <div id="countdown-title" class="row mb-4">
+                <div class="col-lg-12">
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">
+                        Choose Your Plan
+                    </h2>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="ddio_countdown_wrap">
+                        <div id="countdown-timer" class="countdown-container">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="countdown-seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Monthly Plan - Left when all fit horizontally, bottom when stacked -->
+                <div class="col-lg-4 col-md-6 order-lg-1 order-3" style="display: none;">
+                    <!-- Card-->
+                    <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
+                        <div class="card-body">
+                            <div class="card-title  mb-2">MONTHLY</div>
+                            <div id="full-price" class="text2 mb-4">
+                                <div class="price-display"
+                                    style="display: flex; align-items: baseline; justify-content: center;">
+                                    <div class="price-container" style="display: inline-flex; align-items: baseline;">
+                                        <span class="currency" style="line-height: 1; position: relative;">$</span>
+                                        <span class="value" style="font-size: 4.3rem; line-height: 1;">79</span>
+                                    </div>
+                                    <span class="frequency" style="margin-left: 2px;">/month</span>
+                                </div>
+                            </div>
+                            <div class="button-wrapper text2">
+                                <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap;"
+                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4267390">GET
+                                    YOUR PASS</a>
+                            </div>
+                            <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
+                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
+                                <img class="img-fluid" style="width: 100%; object-fit: contain;"
+                                    src="../images/courses/all-access/all-access-pass-boxes.png" alt="alternative">
+                            </div>
+                            <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Instant access to the entire course library</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Early access to new courses and updates</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Community access</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Microsoft employee interviews</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Live workshop recordings</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Cancel anytime</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+                </div>
+
+                <!-- Annual (Best Value) Plan - Middle when all fit horizontally, top when stacked -->
+                <div class="col-lg-4 col-md-12 order-lg-2 order-1">
+                    <!-- Card-->
+                    <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
+                        <div class="card-body">
+                            <div class="card-title best-value mb-3">ANNUALLY</div>
+                            <div id="full-price" class="text2 mb-4">
+                                <div class="price-display"
+                                    style="display: flex; align-items: baseline; justify-content: center;">
+                                    <div class="price-container" style="display: inline-flex; align-items: baseline;">
+                                        <span class="currency best-value"
+                                            style="line-height: 1; position: relative;">$</span>
+                                        <span id="original-price" class="value best-value"
+                                            style="font-size: 5rem; line-height: 1;">569</span>
+                                    </div>
+                                    <span class="frequency" style="margin-left: 2px;">/year</span>
+                                </div>
+                            </div>
+                            <div id="discounted-price" class="mb-2" style="display: none;">
+                                <div>
+                                    <span class="currency best-value">$</span>
+                                    <span id="discounted-monthly-price-value" class="value best-value"
+                                        style="font-size: 4.3rem;">452</span><span class="frequency">/year</span>
+                                </div>
+                                <div>
+                                    <span id="original-monthly-price" class="full-price">$579</span><span
+                                        id="monthly-discount-amount" class="save-value best-value">22% OFF</span>
+                                </div>
+                            </div>
+                            <div class="button-wrapper text2">
+                                <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap"
+                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=3203401">GET
+                                    YOUR PASS</a>
+                            </div>
+                            <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
+                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
+                                <img class="img-fluid" style="width: 100%; object-fit: contain;"
+                                    src="../images/courses/all-access/all-access-pass-boxes.png" alt="alternative">
+                            </div>
+                            <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Instant access to the entire course library</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Early access to new courses and updates</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Community access</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Microsoft employee interviews</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Live workshop recordings</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check best-value"></i>
+                                    <div class="media-body">Cancel anytime</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+                </div>
+
+                <!-- Quarterly Plan - Right when all fit horizontally, middle when stacked -->
+                <div class="col-lg-4 col-md-6 order-lg-3 order-2">
+                    <!-- Card-->
+                    <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
+                        <div class="card-body">
+                            <div class="card-title  mb-3 ">QUARTERLY</div>
+                            <div id="full-price" class="text2 mb-4">
+                                <div class="price-display"
+                                    style="display: flex; align-items: baseline; justify-content: center;">
+                                    <div class="price-container" style="display: inline-flex; align-items: baseline;">
+                                        <span class="currency" style="line-height: 1; position: relative;">$</span>
+                                        <span id="original-price" class="value"
+                                            style="font-size: 5rem; line-height: 1;">199</span>
+                                    </div>
+                                    <span class="frequency" style="margin-left: 2px;">/quarter</span>
+                                </div>
+                            </div>
+                            <div id="discounted-price" class="mb-2" style="display: none;">
+                                <div>
+                                    <span class="currency">$</span>
+                                    <span id="discounted-monthly-price-value" class="value"
+                                        style="font-size: 4.3rem;">155</span><span class="frequency">/quarter</span>
+                                </div>
+                                <div>
+                                    <span id="original-monthly-price" class="full-price">$199</span><span
+                                        id="monthly-discount-amount" class="save-value best-value">22% OFF</span>
+                                </div>
+                            </div>
+                            <div class="button-wrapper text2">
+                                <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap;"
+                                    href="https://learn.dotnetacademy.io/enroll/2413963?price_id=3961039">GET
+                                    YOUR PASS</a>
+                            </div>
+                            <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
+                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
+                                <img class="img-fluid" style="width: 100%; object-fit: contain;"
+                                    src="../images/courses/all-access/all-access-pass-boxes.png" alt="alternative">
+                            </div>
+                            <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
+                                <li class="media">
+                                    <i class="fas fa-check "></i>
+                                    <div class="media-body">Instant access to the entire course library</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check "></i>
+                                    <div class="media-body">Early access to new courses and updates</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Community access</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Microsoft employee interviews</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i>
+                                    <div class="media-body">Live workshop recordings</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check "></i>
+                                    <div class="media-body">Cancel anytime</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+                </div>
+            </div>
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- end of pricing -->
+
+    <!-- Whom Am I -->
+    <div id="who-am-i" class="basic-1">
+        <div class="container">
+            <h2 class="h2-heading display-4 font-weight-bold">Meet Your Instructor</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-3">
+                    <div class="image-container">
+                        <img class="img-fluid" src="../images/Julio-7.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <p class="line-spaced-paragraph">My name is Julio Casal. I'm a passionate software engineer with
+                            a wealth of experience building all sorts of applications and systems based on the
+                            .NET platform.</p>
+                        <p class="line-spaced-paragraph">Throughout my 10+ years working at Microsoft, I had the
+                            opportunity to work on real-world projects, building and refining backend services that
+                            handle millions of requests every month.</p>
+                        <p class="line-spaced-paragraph">I believe reducing complex concepts into simple step by step
+                            instructions is incredibly valuable and helps to make coding accessible and fun for
+                            everyone.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Whom Am I -->
+
+    <div id="faq" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold">FAQs</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12 mb-2">
+                    <div class="text-container">
+                        <h4>Will new premium courses be included with the All-Access Pass?</h4>
+                        <p class="line-spaced-paragraph">Yes, all new courses will show up in the All-Access Pass on
+                            day one.</p>
+                        <h4>What version of .NET and ASP.NET Core is used on the included courses?</h4>
+                        <p class="line-spaced-paragraph">.NET 8 and ASP.NET Core 8.</p>
+                        <h4>I have more questions!</h4>
+                        <p class="line-spaced-paragraph">Happy to help! Send me an email: <a
+                                href="mailto:julioc@dotnetacademy.io">julioc@dotnetacademy.io</a></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
 
     <!-- Footer -->
     <div class="footer-decoration">
