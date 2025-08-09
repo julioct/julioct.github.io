@@ -8,74 +8,52 @@
 
 
 <url>
-  <loc>https://juliocasal.com/</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>1.00</priority>
+  <loc>https://juliocasal.com</loc>
 </url>
 <url>
   <loc>https://juliocasal.com/about</loc>
-  <lastmod>2025-07-07T19:35:37+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/blog</loc>
-  <lastmod>2025-07-07T19:35:37+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://juliocasal.com/courses/</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://juliocasal.com/sponsorship</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://juliocasal.com/newsletter</loc>
 </url>
 <url>
   <loc>https://juliocasal.com/roadmap</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://juliocasal.com/sponsorship</loc>
+</url>
+<url>
+  <loc>https://juliocasal.com/courses</loc>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/dotnetbootcamp</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/aspnet-core-essentials</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/aspnet-core-advanced</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/aspnet-core-security</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/azure-for-dotnet-developers</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/containers-and-dotnet-aspire</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/csharp-unittesting-essentials</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/mastering-csharp-unittesting</loc>
-  <lastmod>2025-07-07T19:35:38+00:00</lastmod>
-  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://juliocasal.com/courses/all-access</loc>
 </url>
 
 </urlset>
