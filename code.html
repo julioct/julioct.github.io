@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="LWAWGOWE" defer></script>
+    <!-- / Fathom -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GKWPQFHL1Y');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Optional: small delay ensures Fathom loads before redirect -->
+    <script>
+        (function ()
+        {
+            const p = new URLSearchParams(location.search);
+            const kitSlug = (p.get('utm_content') || '').toLowerCase();
+            const allowed = /^[a-z0-9-]{1,40}$/;               // safety: prevent junk/open redirects
+            if (!allowed.test(kitSlug))
+            {
+                // Redirect to juliocasal.com for invalid or missing utm_content
+                setTimeout(() => { location.href = 'https://juliocasal.com'; }, 120);
+                return;
+            }
+
+            // Build destination. Pass through UTMs if you want (Kit will ignore them, but fine).
+            const keep = ['utm_campaign', 'utm_content', 'utm_term'];
+            const out = new URL('https://go.dotnetacademy.io/' + encodeURIComponent(kitSlug));
+            keep.forEach(k => { if (p.get(k)) out.searchParams.set(k, p.get(k)); });
+
+            // Give Fathom a moment, then redirect.
+            setTimeout(() => { location.href = out.toString(); }, 120);
+        })();
+    </script>
+</head>
+
+<body>
+    <p>Redirecting…</p>
+</body>
+
+</html>
