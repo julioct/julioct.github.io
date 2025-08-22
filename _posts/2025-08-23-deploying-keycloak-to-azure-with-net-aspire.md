@@ -28,15 +28,44 @@ Running a local Keycloak server with .NET Aspire is pretty straightforward. I co
 
 But, to recap, all you need is the **Aspire.Hosting.Keycloak** NuGet package in your **AppHost** project:
 
+```xml{15}
+<Project Sdk="Microsoft.NET.Sdk">
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-ioPBhF2eatzFP4X3fNJ9Ls.jpeg)
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.4.1" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>92823f80-554d-4fd2-9ad2-b361574d1318</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.1" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.4.1-preview.1.25408.4" />
+  </ItemGroup>
+
+</Project>
+```
 
 ​
 
 And then add a few lines to **AppHost.cs** to introduce Keycloak into your application model:
 
+```csharp
+var builder = DistributedApplication.CreateBuilder(args);
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-3RVjYmSZU8Xf86tvZeNixH.jpeg)
+var keycloakPassword = builder.AddParameter("KeycloakPassword",
+                                            secret: true,
+                                            value: "admin");
+
+builder.AddKeycloak("keycloak", adminPassword: keycloakPassword)
+        .WithDataVolume()
+        .WithRealmImport("./realms");
+
+builder.Build().Run();
+```
 
 ​
 
@@ -65,8 +94,14 @@ Keycloak's container will run internally in ACA's infrastructure, never publicly
 
 In Aspire, you can set those 3 env vars like this:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-k7VszvyYbGfVcRzQxixjbG.jpeg)
+```csharp{4 5 6}
+builder.AddKeycloak("keycloak", adminPassword: keycloakPassword)
+        .WithDataVolume()
+        .WithRealmImport("./realms")
+        .WithEnvironment("KC_HTTP_ENABLED", "true")
+        .WithEnvironment("KC_PROXY_HEADERS", "xforwarded")
+        .WithEnvironment("KC_HOSTNAME_STRICT", "false");
+```
 
 ​
 
@@ -83,22 +118,52 @@ Instead, it's best to provision and use a real database in the cloud. Keycloak s
 
 Start by installing the **Aspire.Hosting.Azure.PostgreSQL** NuGet package to your AppHost:
 
+```xml{10}
+<Project Sdk="Microsoft.NET.Sdk">
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-8rzxYTy8m6nzbSVZ6hJh24.jpeg)
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.4.1" />
+
+    ...
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.1" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.4.1-preview.1.25408.4" />
+    <PackageReference Include="Aspire.Hosting.Azure.PostgreSQL" Version="9.4.1" />
+  </ItemGroup>
+
+</Project>
+```
 
 ​
 
 Then, define a couple of parameters to configure the user and password to be used for your PostgreSQL server:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-mdiL6t7VcUHaLNxcMZLFnq.jpeg)
+```csharp
+var postgresUser = builder.AddParameter("PostgresUser");
+var postgresPassword = builder.AddParameter("PostgresPassword", secret: true);
+```
 
 ​
 
 Next, let's add the PostgreSQL resource, with a few special configurations:
 
+```csharp
+var postgres = builder.AddAzurePostgresFlexibleServer("postgres")
+                    .WithPasswordAuthentication(
+                        userName: postgresUser,
+                        password: postgresPassword)
+                    .ConfigureInfrastructure(infra =>
+                    {
+                        var pg = infra.GetProvisionableResources()
+                                      .OfType<PostgreSqlFlexibleServer>()
+                                      .Single();
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-hoZHHsDGaeRqNmaiGfWN8p.jpeg)
+                        infra.Add(new ProvisioningOutput("hostname", typeof(string))
+                        {
+                            Value = pg.FullyQualifiedDomainName
+                        });
+                    });
+```
 
 ​
 
@@ -110,15 +175,19 @@ We need it so that, just after the Postgres instance is provisioned, an output p
 
 Before that, let's ask Postgres to provision a new database for Keycloak:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-vNzEfyTwjszqXG8WXZDAmd.jpeg)
+```csharp
+var keycloakDb = postgres.AddDatabase("keycloakDB", "keycloak");
+```
 
 ​
 
 And now we can form the full URL that Keycloak will need to reach out to the DB where it will store all its data:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-gfr5EaBJXsWs1Df2CURUGM.jpeg)
+```csharp
+var keycloakDbUrl = ReferenceExpression.Create(
+    $"jdbc:postgresql://{postgres.GetOutput("hostname")}/{keycloakDb.Resource.DatabaseName}"
+);
+```
 
 ​
 
@@ -126,8 +195,18 @@ Such **ReferenceExpression** will be evaluated after the Postgres resource is fu
 
 Now we can provide all the info that Keycloak will need to connect to and use PostgreSQL for all persistence purposes:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-jA3n3oP1QFxBzmoT43Lf9R.jpeg)
+```csharp{7 8 9 10}
+builder.AddKeycloak("keycloak", adminPassword: keycloakPassword)
+        .WithDataVolume()
+        .WithRealmImport("./realms")
+        .WithEnvironment("KC_HTTP_ENABLED", "true")
+        .WithEnvironment("KC_PROXY_HEADERS", "xforwarded")
+        .WithEnvironment("KC_HOSTNAME_STRICT", "false")
+        .WithEnvironment("KC_DB", "postgres")
+        .WithEnvironment("KC_DB_URL", keycloakDbUrl)
+        .WithEnvironment("KC_DB_USERNAME", postgresUser)
+        .WithEnvironment("KC_DB_PASSWORD", postgresPassword);
+```
 
 ​
 
@@ -142,8 +221,24 @@ Because all our Keycloak data will be stored in PostgreSQL, we won't need the da
 
 In fact, data volumes and bind mounts won't quite work with our ACA deployment, so we need to account for that:
 
+```csharp{12 13 14 15 16}
+var keycloak = builder.AddKeycloak(
+            "keycloak",
+            adminPassword: keycloakPassword)
+        .WithEnvironment("KC_HTTP_ENABLED", "true")
+        .WithEnvironment("KC_PROXY_HEADERS", "xforwarded")
+        .WithEnvironment("KC_HOSTNAME_STRICT", "false")
+        .WithEnvironment("KC_DB", "postgres")
+        .WithEnvironment("KC_DB_URL", keycloakDbUrl)
+        .WithEnvironment("KC_DB_USERNAME", postgresUser)
+        .WithEnvironment("KC_DB_PASSWORD", postgresPassword);
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-7c1nFwf9iEKjwsuKZeTuTv.jpeg)
+if (builder.ExecutionContext.IsRunMode)
+{
+    keycloak.WithDataVolume()
+            .WithRealmImport("./realms");
+}
+```
 
 ​
 
@@ -160,8 +255,19 @@ We, however, need an external endpoint, or we won't be able to access the Admin 
 
 Here's how we can enable that external endpoint:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-guNuZx35C6EWamLTi2xMWq.jpeg)
+```csharp{11}
+var keycloak = builder.AddKeycloak(
+            "keycloak",
+            adminPassword: keycloakPassword)
+        .WithEnvironment("KC_HTTP_ENABLED", "true")
+        .WithEnvironment("KC_PROXY_HEADERS", "xforwarded")
+        .WithEnvironment("KC_HOSTNAME_STRICT", "false")
+        .WithEnvironment("KC_DB", "postgres")
+        .WithEnvironment("KC_DB_URL", keycloakDbUrl)
+        .WithEnvironment("KC_DB_USERNAME", postgresUser)
+        .WithEnvironment("KC_DB_PASSWORD", postgresPassword)
+        .WithEndpoint("http", e => e.IsExternal = true);
+```
 
 ​
 
@@ -176,15 +282,30 @@ One of the beautiful things about .NET Aspire is that you don't have to think to
 
 At this point, we are ready to target ACA, so let's start by bringing in the **Aspire.Hosting.Azure.AppContainers** NuGet package:
 
+```xml{9}
+<Project Sdk="Microsoft.NET.Sdk">
 
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-tbd92wCocf4KX9ipD2s7ad.jpeg)
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.4.1" />
+
+    ...
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.1" />
+    <PackageReference Include="Aspire.Hosting.Azure.AppContainers" Version="9.4.1" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.4.1-preview.1.25408.4" />
+    <PackageReference Include="Aspire.Hosting.Azure.PostgreSQL" Version="9.4.1" />
+  </ItemGroup>
+
+</Project>
+```
 
 ​
 
 And now add one line to our application model to target ACA:
 
-
-![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-rpWWJCiWqv9hn4zm38a9Gq.jpeg)
+```csharp
+builder.AddAzureContainerAppEnvironment("cae");
+```
 
 ​
 
@@ -194,7 +315,6 @@ Let's try this out.
 
 ### **Deploying Keycloak to Azure**
 Let's kick off the deployment with an **azd up** call:
-
 
 ![](/assets/images/2025-08-23/4ghDFAZYvbFtvU3CTR72ZN-qwyeewW5QEujvey8pFQxDb.jpeg)
 
