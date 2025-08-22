@@ -33,6 +33,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Rouge syntax highlighting configuration
+highlighter: rouge
+rouge:
+  line_numbers: false
+  span:
+    line_numbers: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
