@@ -88,7 +88,7 @@ Great, now let's try to get a local repro.
 ​
 
 ### **Get a local repro**
-We'll start by getting all the reviews for a specific game we just created in our local environment. 
+We'll start by getting all the reviews for a specific game we just created in our local environment.
 
 Let's grab the Reviews API endpoint from the resources table:
 
@@ -153,11 +153,11 @@ We see 3 requests there:
 2.  <span>The POST to create the new review</span>
 3.  <span>The final GET for all reviews</span>
 
-What calls my attention right away is how Redis shows up right before we reach the PostgreSQL database on the GET requests. 
+What calls my attention right away is how Redis shows up right before we reach the PostgreSQL database on the GET requests.
 
 In fact, Redis is the only thing the API talks to in our final GET request.
 
-However, I don't see Redis involved at all during the POST request trace. 
+However, I don't see Redis involved at all during the POST request trace.
 
 Opening up that first GET request, we can see this:
 
@@ -212,7 +212,7 @@ Now for the POST endpoint:
 
 Again, just as we saw in the dashboard trace, we store the review in the DB, publish a message, and return.
 
-But here's the issue: 
+But here's the issue:
 
 **We are never invalidating that cache after creating new reviews, so the GET endpoint will keep retrieving old cache entries for at least 15 minutes.**
 
@@ -249,7 +249,7 @@ Let's start our .NET Aspire app again and run our repro steps:
 
 ​
 
-Success! 
+Success!
 
 And we can even confirm things look good on the tracing side:
 
@@ -279,9 +279,9 @@ The best part? This level of observability comes out of the box with .NET Aspire
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

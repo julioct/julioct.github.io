@@ -60,14 +60,14 @@ I cover several of those in [my blog]({{ site.url }}/blog) and on [my YouTube ch
 * **Event Sourcing**: A pattern that helps you build systems that can store all changes to the application state as a sequence of events.
 
 #### **How to learn those?**
-Get my free [.NET Backend Developer Roadmap]({{ site.url }}/roadmap) which includes pointers to learn all of these design principles and patterns (and a bunch of other stuff). 
+Get my free [.NET Backend Developer Roadmap]({{ site.url }}/roadmap) which includes pointers to learn all of these design principles and patterns (and a bunch of other stuff).
 
 <br/>
 
 ### **3. Cloud Computing and Azure**
-Cloud platforms have become the backbone of modern software infrastructure. 
+Cloud platforms have become the backbone of modern software infrastructure.
 
-[Azure](https://azure.microsoft.com){:target="_blank"} is one of the leading cloud platforms and most organizations that use .NET are also using multiple Azure services. 
+[Azure](https://azure.microsoft.com){:target="_blank"} is one of the leading cloud platforms and most organizations that use .NET are also using multiple Azure services.
 
 You don't need to master all Azure services (there are over 200 of them) but as a Senior .NET Backend Developer you should at least be familiar with the following:
 
@@ -87,7 +87,7 @@ I also cover some of them on [my YouTube channel](https://www.youtube.com/c/jcas
 <br/>
 
 ### **4. DevOps Practices and CI/CD Pipelines**
-[Continuous Integration and Continuous Deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD){:target="_blank"} practices are key to modern agile development workflows. 
+[Continuous Integration and Continuous Deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD){:target="_blank"} practices are key to modern agile development workflows.
 
 Understanding how to automate builds, tests, and deployments is critical for speeding up the development cycle and ensuring high-quality releases.
 
@@ -132,7 +132,7 @@ The free resources listed above should be good enough to prepare you for a Senio
 
 However, if you are short on time and need a step-by-step guide to learn most of those topics in a curated, well-structured format, please check out my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
-Senior .NET Backend Developers are in high demand and are very well compensated. 
+Senior .NET Backend Developers are in high demand and are very well compensated.
 
 I hope the resources I've shared here will help you get there.
 
@@ -142,9 +142,9 @@ I hope the resources I've shared here will help you get there.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

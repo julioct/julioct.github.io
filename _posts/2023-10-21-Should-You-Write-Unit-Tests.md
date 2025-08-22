@@ -121,7 +121,7 @@ Now let’s see why unit tests are way more cost effective over time:
 ### **Do you need to pick one type of test?**
 No, it’s not about having only one type of tests, but making sure you invest the right amount of resources on a combination of tests that provides the best return on your investment.
 
-Now, assuming you are sold on the idea of having automated tests, how many unit, integration and end to end tests should you write? 
+Now, assuming you are sold on the idea of having automated tests, how many unit, integration and end to end tests should you write?
 
 Time to bring in the most famous of all pyramids.
 
@@ -147,7 +147,7 @@ That gives us a great reference on how to distribute our testing efforts:
 
 ### **So, should you write unit tests?**
 
-**Yes please!** Write as many unit tests as you can and complement them with a moderate amount of integration tests and a few end to end tests. 
+**Yes please!** Write as many unit tests as you can and complement them with a moderate amount of integration tests and a few end to end tests.
 
 That will give you the best return on your investment in terms of software quality and developer productivity.
 
@@ -163,9 +163,9 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

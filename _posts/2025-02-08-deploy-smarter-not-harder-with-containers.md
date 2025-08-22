@@ -59,14 +59,14 @@ Containers represent the next evolution in virtualization technology, taking a c
 
 Every OS is divided into two key components: the **kernel** (the core part of the OS that directly controls the hardware) and the **user space** (where your applications and most system services live).
 
-In the containers world what we do is leave that OS kernel alone (no hypervisor) and instead, we introduce what's called a **container runtime** in the user space. 
+In the containers world what we do is leave that OS kernel alone (no hypervisor) and instead, we introduce what's called a **container runtime** in the user space.
 
 
 ![](/assets/images/2025-02-08/4ghDFAZYvbFtvU3CTR72ZN-v4pnZxCkqawYMnjEpyQgRk.jpeg)
 
 **​**
 
-**Docker** is the most popular container runtime, and its job is similar to what a hypervisor does for VMs, but much more lightweight. 
+**Docker** is the most popular container runtime, and its job is similar to what a hypervisor does for VMs, but much more lightweight.
 
 Instead of creating entire virtual computers, it creates isolated spaces within the existing operating system, which we call **containers**, where the applications can run.
 
@@ -90,7 +90,7 @@ This new way of virtualizing things enables tons of benefits:
 *   <span>**Efficient resource usage.** No more wasted duplicated resources thanks to the shared OS kernel.</span>
 *   <span>**Built-in versioning.** Container images come with a built-in versioning mechanism, making it trivial to deploy a specific version or rollback to any version when needed</span>
 
-OK, so, given all these benefits, we should just stop using VMs altogether, no? 
+OK, so, given all these benefits, we should just stop using VMs altogether, no?
 
 Not necessarily.
 
@@ -108,7 +108,7 @@ For any given physical server, you can use a hypervisor to create your fully iso
 
 Then, inside each VM we can run a container runtime like Docker, which lets it host multiple containers that share that VM's kernel.
 
-This hybrid approach is exactly what major cloud providers like Azure, AWS, and Google use to run thousands of customer workloads. 
+This hybrid approach is exactly what major cloud providers like Azure, AWS, and Google use to run thousands of customer workloads.
 
 It gives you the bulletproof isolation of VMs between different customers or environments, while still letting you get all the efficiency and speed benefits of containers within each VM.
 
@@ -136,9 +136,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

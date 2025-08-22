@@ -104,7 +104,7 @@ To allow this, we need to add an **InternalsVisibleTo** element to our API proje
   ...
   <ItemGroup>
       <InternalsVisibleTo Include="MatchMaker.Api.IntegrationTests" />
-  </ItemGroup>    
+  </ItemGroup>
 
 </Project>
 ```
@@ -112,18 +112,18 @@ To allow this, we need to add an **InternalsVisibleTo** element to our API proje
 <br/>
 
 ### **Step 3: Add the test database connection string**
-We could use an in-memory database for our integration tests, but since our application uses SQL Server, why not use a real SQL Server instance for our tests? 
+We could use an in-memory database for our integration tests, but since our application uses SQL Server, why not use a real SQL Server instance for our tests?
 
 That should give us the highest confidence that the entire stack is working properly.
 
 Now, I'll assume you already have a SQL Server instance running somewhere in your box, so I won't get into how to stand up one.
 
-But we still need to come up with the DB used for the tests and also how to make our test project aware of the corresponding connection string. 
+But we still need to come up with the DB used for the tests and also how to make our test project aware of the corresponding connection string.
 
 And, since storing things like that in your code is not a great idea (even for tests), you can just store the connection string as a user secret.
 
 So, in your terminal, switch to your test project directory, and run this (replace YOUR-CONNECTION-STRING-HERE with your actual connection string):
-    
+
 ```powershell
 dotnet user-secrets init
 dotnet user-secrets set "ConnectionStrings:MatchMaker" "YOUR-CONNECTION-STRING-HERE"
@@ -181,7 +181,7 @@ internal class MatchMakerWebApplicationFactory : WebApplicationFactory<Program>
         var scope = serviceProvider.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<MatchMakerDbContext>();
         return dbContext;
-    }    
+    }
 }
 ```
 
@@ -193,7 +193,7 @@ A few key things about this class:
 
 * **ConfigureTestServices** method is where we register all the services that will be used exclusively during our tests. Gives you a chance to replace any service with a test version.
 
-* We use **ConfigureTestServices** to replace the real DBContext that our API uses with a new one that will use our test database. 
+* We use **ConfigureTestServices** to replace the real DBContext that our API uses with a new one that will use our test database.
 
 * **GetConnectionString** is a helper method that will read the connection string from our user secrets.
 
@@ -236,7 +236,7 @@ public class MatchesControllerTests
 
 Our test is doing basically the following:
 
-1. It creates a new instance of our WebApplicationFactory, which will bootstrap our API in memory and create our test database. 
+1. It creates a new instance of our WebApplicationFactory, which will bootstrap our API in memory and create our test database.
 
 2. It creates a new JoinMatchRequest object, which is the payload that our API expects.
 
@@ -257,10 +257,10 @@ Unfortunately, you will get something like this:
 ```powershell{6 7}
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
-[xUnit.net 00:00:01.81]     MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch [FAIL] 
+[xUnit.net 00:00:01.81]     MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch [FAIL]
   Failed MatchMaker.Api.IntegrationTests.MatchesControllerTests.JoinMatchRequest_AddsPlayerToMatch [902 ms]
   Error Message:
-   System.Net.Http.HttpRequestException : Response status code does not indicate success: 
+   System.Net.Http.HttpRequestException : Response status code does not indicate success:
    401 (Unauthorized).
   Stack Trace:
      at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
@@ -357,9 +357,9 @@ I hope this was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

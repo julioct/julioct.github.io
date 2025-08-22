@@ -70,7 +70,7 @@ How to deal with both issues by writing less code?
 ​
 
 ### **Using a .NET Aspire Client Integration**
-You may have heard of .NET Aspire, the new set of tools, templates, and packages for building observable, production-ready apps. 
+You may have heard of .NET Aspire, the new set of tools, templates, and packages for building observable, production-ready apps.
 
 But one thing that many devs have not realized yet is the fact that you don't need to add new projects or change your deployment process to start taking advantage of some of the benefits of the new tooling.
 
@@ -92,7 +92,7 @@ But here's the new code you can write now to do essentially the same thing as be
 
 ​
 
-The **AddAzureBlobClient** method will look for a connection string named "Blobs" and use it to inject the BlobServiceClient into the service container. 
+The **AddAzureBlobClient** method will look for a connection string named "Blobs" and use it to inject the BlobServiceClient into the service container.
 
 But how will this new library help us deal with transient Azure Storage failures?
 
@@ -106,7 +106,7 @@ After running my app again and making it try to talk to storage while my Azurite
 
 ​
 
-I collapsed the rest of the stack trace for brevity, but the key thing is that now we can see the Azure.Core library reporting its failing attempts to write to Storage right away. 
+I collapsed the rest of the stack trace for brevity, but the key thing is that now we can see the Azure.Core library reporting its failing attempts to write to Storage right away.
 
 That will make it much easier to troubleshoot the problem in Prod, and also to react much quicker as we see the logs appear in whichever logging system we are using over there.
 
@@ -124,7 +124,7 @@ To take advantage of this, you first need to configure the health checks middlew
 
 ​
 
-Now, run your app while keeping that Azurite container stopped as before. 
+Now, run your app while keeping that Azurite container stopped as before.
 
 Then send a GET request to your new **/health/ready** endpoint:
 
@@ -166,7 +166,7 @@ Switching to the new .NET Aspire integrations is a zero-cost way to significantl
 2.  <span>You get improved and quicker logging of transient failures</span>
 3.  <span>You get free health checks for proactive troubleshooting</span>
 
-And, you don't even need to add new projects or change your deployment model. 
+And, you don't even need to add new projects or change your deployment model.
 
 Big win!
 
@@ -180,9 +180,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

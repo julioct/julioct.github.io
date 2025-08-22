@@ -23,7 +23,7 @@ So, let's dive in.
 <br/>
 
 ### **What's a dependency?**
-A dependency is an object that your class uses to do its job. 
+A dependency is an object that your class uses to do its job.
 
 For example, say you have a **GameWorld** class that uses a **FileBasedStatisticsService** class to both retrieve and record player statistics:
 
@@ -49,7 +49,7 @@ public class GameWorld
     public PlayerReportDto GetPlayerReport(Player player)
     {
         var stats = statisticsService.GetPlayerStatistics(player.Name);
-        double averageScore = stats.GamesPlayed == 0 ? 
+        double averageScore = stats.GamesPlayed == 0 ?
             0 : (double)stats.TotalScore / stats.GamesPlayed;
 
         return new PlayerReportDto(
@@ -80,7 +80,7 @@ When you're writing unit tests, you want to **isolate** the unit you're testing 
 ### **How to decouple the dependencies?**
 GameWorld should not need to create an instance of FileBasedStatisticsService directly.
 
-In fact, GameWorld doesn't even need to know about FileBasedStatisticsService at all. 
+In fact, GameWorld doesn't even need to know about FileBasedStatisticsService at all.
 
 All it needs is some object that implements the **interface** with the methods that GameWorld needs to use.
 
@@ -114,7 +114,7 @@ public class GameWorld
     public PlayerReportDto GetPlayerReport(Player player)
     {
         var stats = statisticsService.GetPlayerStatistics(player.Name);
-        double averageScore = stats.GamesPlayed == 0 ? 
+        double averageScore = stats.GamesPlayed == 0 ?
             0 : (double)stats.TotalScore / stats.GamesPlayed;
 
         return new PlayerReportDto(
@@ -167,7 +167,7 @@ public void GetPlayerReport_PlayerExists_ReturnsExpectedReport()
 {
     // Arrange
     var player = new Player("Alice", 10, new DateTime(2020, 1, 1));
-    
+
     var statisticsService = new FakePlayerStatisticsService();
     var stats = new PlayerStatistics
     {
@@ -178,15 +178,15 @@ public void GetPlayerReport_PlayerExists_ReturnsExpectedReport()
 
     statisticsService.UpdatePlayerStatistics(stats);
     var expected = new PlayerReportDto(
-        player.Name, 
-        player.Level, 
-        player.JoinDate, 
-        stats.GamesPlayed, 
-        stats.TotalScore, 
+        player.Name,
+        player.Level,
+        player.JoinDate,
+        stats.GamesPlayed,
+        stats.TotalScore,
         stats.TotalScore / stats.GamesPlayed);
 
     var sut = new GameWorld(statisticsService);
-    
+
     // Act
     var actual = sut.GetPlayerReport(player);
 
@@ -205,7 +205,7 @@ Thanks to this, your unit test can now focus on verifying the behavior of GetPla
 <br/>
 
 ### **Do I need to create fake classes all the time?**
-No, that's only one type of test double. There are other types, like **stubs** and **mocks**, which can make things much easier. 
+No, that's only one type of test double. There are other types, like **stubs** and **mocks**, which can make things much easier.
 
 I go over those in detail in my [C# Unit Testing Essentials Course]({{ site.url }}/courses/csharp-unittesting-essentials).
 
@@ -219,9 +219,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

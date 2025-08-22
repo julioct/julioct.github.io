@@ -139,7 +139,7 @@ Now, as I eventually found, the moment you need to introduce the smallest custom
 
 ​
 
-There is an overload for **AddAzureStorage()** you can use for this, but it is not very intuitive and is currently experimental, so you don't know how much that will change later. 
+There is an overload for **AddAzureStorage()** you can use for this, but it is not very intuitive and is currently experimental, so you don't know how much that will change later.
 
 Fortunately, there is a nice second layer of customization you can use here, but for that, we need to dig deeper into what's going on behind the scenes.
 
@@ -148,9 +148,9 @@ Fortunately, there is a nice second layer of customization you can use here, but
 ### **Under the hood: it's all Bicep!**
 It's not quite evident at first glance, but what the Azure Developer CLI (azd) is doing to provision your Azure resources is turning the app model you declared in AppHost into a bunch of [Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) resources.
 
-Bicep is an increasingly popular language and tool to define and manage cloud resources on Azure. 
+Bicep is an increasingly popular language and tool to define and manage cloud resources on Azure.
 
-Instead of manually clicking around in the Azure portal to set up databases, storage accounts, etc., you write a Bicep file that describes what you want your infrastructure to look like. Then, Azure takes that file and creates or updates the resources according to your specifications. 
+Instead of manually clicking around in the Azure portal to set up databases, storage accounts, etc., you write a Bicep file that describes what you want your infrastructure to look like. Then, Azure takes that file and creates or updates the resources according to your specifications.
 
 This is what we know as [Infrastructure As Code](https://learn.microsoft.com/devops/deliver/what-is-infrastructure-as-code), or IaC, an incredibly useful practice in the world of IT and DevOps.
 
@@ -168,11 +168,11 @@ That will translate your .NET Aspire app model into Bicep files. But, instead of
 
 ​
 
-You can now go ahead and explore each of those files to understand exactly how each resource will be provisioned. You could even modify any of those files to alter the properties of the resources. 
+You can now go ahead and explore each of those files to understand exactly how each resource will be provisioned. You could even modify any of those files to alter the properties of the resources.
 
 However, it's best to not touch those files since they will get overridden the next time you run **azd infra synth**. Please notice that this command effectively exits your app model from C# into Bicep, which is not very convenient.
 
-What I like to do instead is grab a copy of the generated Bicep for the resource I'm interested in, delete all the stuff that **azd infra synth** generated, and then add my own Bicep file. 
+What I like to do instead is grab a copy of the generated Bicep for the resource I'm interested in, delete all the stuff that **azd infra synth** generated, and then add my own Bicep file.
 
 For instance, this is what I came up with for my Storage account:
 
@@ -234,7 +234,7 @@ Ohh, and one more thing you get for free:
 
 That's the .NET Aspire dashboard deployed alongside the other Azure resources, so you can easily check the logs, metrics and even distributed traces of your microservices as they interact with any of their dependencies. Very useful!
 
-There's A LOT more that I had to do to make this work (Aspire service discovery on Azure just doesn't work!), and I'll go over all of that in the bootcamp, but now it's time to switch to another critical aspect I don't want to miss before jumping into the DevOps side of things: 
+There's A LOT more that I had to do to make this work (Aspire service discovery on Azure just doesn't work!), and I'll go over all of that in the bootcamp, but now it's time to switch to another critical aspect I don't want to miss before jumping into the DevOps side of things:
 
 **Integration Testing**
 
@@ -250,9 +250,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

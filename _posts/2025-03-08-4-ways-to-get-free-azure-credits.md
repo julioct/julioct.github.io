@@ -37,7 +37,7 @@ Here's what you get:
 *   <span>Access to 65+ always-free services</span>
 *   <span>$200 credit to access anything else for 30 days</span>
 
-The catch here is that you have to enter your credit card, mainly for identity verification. 
+The catch here is that you have to enter your credit card, mainly for identity verification.
 
 However, it won't be charged unless you explicitly remove the spending protection that will be automatically enabled for you.
 
@@ -60,7 +60,7 @@ Here's what you get with this option:
 
 But the beautiful thing about this option is that **no credit card is required,** which makes things much easier for students.
 
-Are you a student but not 18 yet? 
+Are you a student but not 18 yet?
 
 Well, if you are at least 13 there's a variant of this option called **Azure for Students Starter,** which only gives you access to the free tier of a limited set of services, but might be enough for school projects.
 
@@ -74,7 +74,7 @@ This one I discovered recently, but I think it's a valid option for one-off lear
 
 ​
 
-These sandboxes are essentially time-boxed Azure subscriptions with restrictions around the regions, service types, and SKUs you can use. 
+These sandboxes are essentially time-boxed Azure subscriptions with restrictions around the regions, service types, and SKUs you can use.
 
 They are available across multiple Microsoft Learn training modules and have a few other restrictions:
 
@@ -106,7 +106,7 @@ If your business qualifies, you can get anywhere between $1,000 to $150,000 in A
 
 This is what I used to complete all the Azure training content included in my [microservices program](https://dotnetmicroservices.com) and is what I'm heavily using to produce the new training coming to [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
-What's crazy is that they actually encourage you to spend more credits by achieving a series of milestones tied to the growth of your business. 
+What's crazy is that they actually encourage you to spend more credits by achieving a series of milestones tied to the growth of your business.
 
 
 ![](/assets/images/2025-03-08/4ghDFAZYvbFtvU3CTR72ZN-ttb6v5a99pSxm6AtnVyaEc.jpeg)
@@ -118,7 +118,7 @@ I'm actually finding it a bit challenging to spend those $25,000, but we'll see!
 ​
 
 ### **Quick Bootcamp Update**
-Last week I completed all the required Game Store application updates to get it fully deployed to Azure, which is quite a milestone! 
+Last week I completed all the required Game Store application updates to get it fully deployed to Azure, which is quite a milestone!
 
 There were a few last-minute updates to introduce both Azure Front Door and a new EF migrations background worker, mainly to showcase best practices around blob storage and the database.
 
@@ -132,7 +132,7 @@ There were a few last-minute updates to introduce both Azure Front Door and a ne
 
 ​
 
-But the really cool thing is that this was deployed with just one command from my **.NET Aspire**-powered project and the Azure Developer CLI. 
+But the really cool thing is that this was deployed with just one command from my **.NET Aspire**-powered project and the Azure Developer CLI.
 
 Infrastructure as Code is really amazing, especially when done mostly via pure C#, and I can't wait to walk bootcamp students through the steps to get there.
 
@@ -160,9 +160,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

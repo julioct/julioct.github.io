@@ -18,7 +18,7 @@ Minimal APIs let you build clean, fast APIs without the overhead. No controllers
 
 Just direct, obvious code that does exactly what it says.
 
-Today, I'll show you how to build a complete Game Store API using Minimal APIs from scratch. 
+Today, I'll show you how to build a complete Game Store API using Minimal APIs from scratch.
 
 By the end, you'll see why this approach is perfect for most API scenarios.
 
@@ -65,7 +65,7 @@ Now let's also open that **Program.cs** file to see what we are starting with:
 
 That **MapGet** line is doing something important. It's telling ASP.NET Core: "When someone makes a GET request to the root path **/**, execute this function and return **Hello World!**"
 
-Unlike MVC where you'd create a controller class with an action method, here you're directly mapping a route to a function. 
+Unlike MVC where you'd create a controller class with an action method, here you're directly mapping a route to a function.
 
 The lambda expression **"() => Hello World!"** is your entire endpoint implementation.
 
@@ -76,7 +76,7 @@ Now, let's work on our data model.
 ​
 
 ### **Step 2: Define your data model**
-Before we dive into our API endpoints, let's define our data model, which for our small API will be just our **Game** class. 
+Before we dive into our API endpoints, let's define our data model, which for our small API will be just our **Game** class.
 
 Create **Game.cs** under a new **Models** directory:
 
@@ -96,7 +96,7 @@ With our model defined, let's add the database layer.
 ### **Step 3: Add Entity Framework Core**
 We need somewhere to store our games, and Entity Framework Core (EF Core) is Microsoft's recommended way to work with databases in .NET.
 
-We'll use **SQLite** for this tutorial because it's lightweight and doesn't require any setup—perfect for getting started quickly. 
+We'll use **SQLite** for this tutorial because it's lightweight and doesn't require any setup—perfect for getting started quickly.
 
 In production, you'd likely use SQL Server, PostgreSQL, or another full database.
 
@@ -114,7 +114,7 @@ Now let's create the database context to connect our model to the database.
 ​
 
 ### **Step 4: Set up the DbContext**
-A **DbContext** is EF Core's main class for interacting with your database. 
+A **DbContext** is EF Core's main class for interacting with your database.
 
 Think of it as your application's gateway to the database—it handles connections, tracks changes to your entities, and translates your C# code into SQL queries.
 
@@ -134,7 +134,7 @@ Time to wire up our database configuration in the application startup.
 ​
 
 ### **Step 5: Configure the database**
-Now we need to tell ASP.NET Core how to create and inject our **GameStoreContext**. This involves two parts: 
+Now we need to tell ASP.NET Core how to create and inject our **GameStoreContext**. This involves two parts:
 
 1.  <span>Defining where the database lives (the connection string) </span>
 2.  <span>Registering the context with the dependency injection container.</span>
@@ -175,14 +175,14 @@ Several important things are happening here:
 **MapPost("/games", ...)** tells ASP.NET Core to handle POST requests to **/games** with this function.
 
 #### **Dependency injection**
-The **GameStoreContext dbContext** parameter is automatically injected by ASP.NET Core's DI container. 
+The **GameStoreContext dbContext** parameter is automatically injected by ASP.NET Core's DI container.
 
 Because we registered the context in **Step 5**, ASP.NET Core knows how to create and provide it to our endpoint function. You don't need constructor injection like you do with controllers.
 
 #### **Model binding**
-The **Game game** parameter automatically deserializes the JSON request body into a **Game** object. 
+The **Game game** parameter automatically deserializes the JSON request body into a **Game** object.
 
-ASP.NET Core looks at the incoming **Content-Type: application/json** header and automatically converts the JSON into your C# object. 
+ASP.NET Core looks at the incoming **Content-Type: application/json** header and automatically converts the JSON into your C# object.
 
 #### **Results helper**
 **Results.Created()** returns a proper HTTP 201 status with a Location header pointing to the newly created resource. This follows REST conventions for resource creation.
@@ -206,12 +206,12 @@ Let's create **GamesEndpoints.cs** in a new **Endpoints** directory:
 Let's break this down:
 
 #### **Extension method pattern**
-This is a static extension method on **WebApplication**, allowing us to call **app.MapGamesEndpoints()** in **Program.cs**. 
+This is a static extension method on **WebApplication**, allowing us to call **app.MapGamesEndpoints()** in **Program.cs**.
 
 Extension methods let you add functionality to existing classes without modifying them.
 
 #### **Route groups**
-**app.MapGroup("games")** creates a route group. All endpoints added to this group automatically get the **/games** prefix. 
+**app.MapGroup("games")** creates a route group. All endpoints added to this group automatically get the **/games** prefix.
 
 So when we call **group.MapPost("/")**, the actual route becomes **POST /games**. This eliminates repetition and makes it easy to apply shared configuration.
 
@@ -270,7 +270,7 @@ Our API is complete! Let's create the database and test it out.
 ​
 
 ### **Step 9: Create the database**
-Before we can store games, we need to create the actual database tables. EF Core uses **migrations** to manage database schema changes. 
+Before we can store games, we need to create the actual database tables. EF Core uses **migrations** to manage database schema changes.
 
 A migration is essentially a set of instructions that tells the database how to create or modify tables.
 
@@ -281,7 +281,7 @@ Run these commands in your terminal to create a migration and update the databas
 
 ​
 
-The first command generates a migration file that contains the SQL needed to create your **Games** table. 
+The first command generates a migration file that contains the SQL needed to create your **Games** table.
 
 The second command actually executes that migration against your database, creating the **GameStore.db** file and the **Games** table.
 
@@ -330,7 +330,7 @@ Responds with:
 
 ​
 
-Great! 
+Great!
 
 But how does this all compare to the MVC approach you're used to?
 
@@ -383,7 +383,7 @@ These charts show JSON serialization performance over several weeks of continuou
 That's **42% better throughput and 42% lower latency** for minimal APIs. This isn't a small difference—it's substantial.
 
 #### **Why such a big performance gap?**
-Controllers go through the full MVC pipeline with action filters, model binding infrastructure, and route resolution designed for maximum flexibility. 
+Controllers go through the full MVC pipeline with action filters, model binding infrastructure, and route resolution designed for maximum flexibility.
 
 Minimal APIs bypass most of this machinery and map requests directly to your functions with minimal overhead.
 
@@ -435,11 +435,11 @@ And enable validation on your route group:
 
 ​
 
-Now invalid requests will automatically return 400 Bad Request with detailed validation errors. 
+Now invalid requests will automatically return 400 Bad Request with detailed validation errors.
 
 The **WithParameterValidation()** method validates all parameters against their validation attributes before your endpoint functions even run.
 
-**And the future gets even better**: .NET 10 will include built-in validation support for minimal APIs, eliminating the need for external packages. 
+**And the future gets even better**: .NET 10 will include built-in validation support for minimal APIs, eliminating the need for external packages.
 
 ​
 
@@ -461,7 +461,7 @@ This organizational pattern works especially well with minimal APIs since you're
 ​
 
 ### **Next steps**
-Minimal APIs aren't just about writing less code—they're about writing clearer code. Everything related to an endpoint lives in one place. 
+Minimal APIs aren't just about writing less code—they're about writing clearer code. Everything related to an endpoint lives in one place.
 
 No hunting through controller constructors or figuring out which base class provides which functionality.
 
@@ -481,9 +481,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

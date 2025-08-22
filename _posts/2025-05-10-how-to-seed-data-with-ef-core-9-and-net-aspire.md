@@ -31,9 +31,9 @@ The official guidance is to configure seeding *inside* `OnConfiguring` like this
 
 ​
 
-**UseSeeding** and **UseAsyncSeeding** are called as part of EnsureCreated, Migrate and MigrateAsync methods, as well as the dotnet ef database update command. 
+**UseSeeding** and **UseAsyncSeeding** are called as part of EnsureCreated, Migrate and MigrateAsync methods, as well as the dotnet ef database update command.
 
-You don't have to come up with your own DB Seeding method or remember the right place to call it. 
+You don't have to come up with your own DB Seeding method or remember the right place to call it.
 
 But, there's a catch.
 
@@ -122,7 +122,7 @@ But if you're using .NET Aspire, don’t follow the docs blindly, and instead:
 *   <span>Configure `UseSeeding` and `UseAsyncSeeding` inside the `AddNpgsqlDbContext` call.</span>
 *   <span>Always include the sync version—EF tooling still depends on it.</span>
 
-That’s all you need. 
+That’s all you need.
 
 And if you need a production-ready blueprint using .NET Aspire and ready to deploy to the Azure cloud, it's all included in the upcoming **Containers & Cloud Native course** of [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
@@ -136,9 +136,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

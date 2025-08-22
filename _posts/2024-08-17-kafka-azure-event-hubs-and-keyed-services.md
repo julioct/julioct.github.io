@@ -64,7 +64,7 @@ But to produce messages to Azure Event Hubs you use **IEventHubProducerProvider*
 
 And, while the APIs are similar, they are fundamentally different, which means your application code will need to decide what to use depending on some sort of configuration, which is ugly.
 
-On top of that, the way you configure those 2 with MassTransit on startup is just different, meaning you can't just switch a connection string to point to Kafka or Event Hubs. 
+On top of that, the way you configure those 2 with MassTransit on startup is just different, meaning you can't just switch a connection string to point to Kafka or Event Hubs.
 
 Plus, MassTransit pretty much forces you to have one Kafka topic per event type, which will significantly complicate things for microservices that want to know the current state of our product catalog, as I'll explain later.
 
@@ -73,7 +73,7 @@ So, it's a no-go.
 ​
 
 ### **2. Similar names, different things**
-In Kafka, you can easily auto-create topics and consumer groups on the fly, as needed by your apps, and with the right defaults. 
+In Kafka, you can easily auto-create topics and consumer groups on the fly, as needed by your apps, and with the right defaults.
 
 On Azure Event Hubs, the equivalent to topics are hubs, and even when you can auto-create them on the fly, you have zero control over their default properties. This means we can't enable **Log Compaction** (more on that later) by default, which is essential for the app.
 
@@ -98,7 +98,7 @@ Now, let me explain a bit more about this important log compaction feature.
 ​
 
 ### **Why is log compaction important?**
-A core feature of our system is the ability to know the current state of resources tracked by a microservice not by making http calls to it, but by reading the event log. 
+A core feature of our system is the ability to know the current state of resources tracked by a microservice not by making http calls to it, but by reading the event log.
 
 So, for instance, if I stand up a new Promotions microservice that happens to need the full list of products owned by the Catalog microservice, we don't make Promotions call Catalog's HTTP API. We make Promotions read the event log that contains the changes to all products over time (produced by Catalog).
 
@@ -118,7 +118,7 @@ Here's where we want to enable the **Log Compaction** feature, which instructs K
 
 ​
 
-Now this is a powerful and very useful feature, but it only works because the log contains <u>an ordered list of all the events</u> that affected all our products. 
+Now this is a powerful and very useful feature, but it only works because the log contains <u>an ordered list of all the events</u> that affected all our products.
 
 Which means we arrived at an important realization.
 
@@ -131,15 +131,15 @@ So far I was following the common wisdom of having one topic per event type in t
 *   <span>catalog-game-updated</span>
 *   <span>catalog-game-deleted</span>
 
-Which corresponded to the 3 events the microservice was producing. 
+Which corresponded to the 3 events the microservice was producing.
 
-But as I was polishing this, I had a feeling it would not work as intended. If events went to different topics, there is no guarantee that a consuming microservice would read events in the right order. 
+But as I was polishing this, I had a feeling it would not work as intended. If events went to different topics, there is no guarantee that a consuming microservice would read events in the right order.
 
 The Promotions microservice might totally read a "Mario game updated" event before reading the corresponding "Mario game created" event, resulting in it ending up with the initial price of the game, not the updated one.
 
 So after a quick search, I landed on [this great blog post by Martin Kleppmann](https://www.confluent.io/blog/put-several-event-types-kafka-topic), the guy behind the popular [Designing Data-Intensive Applications](https://amzn.to/3yPNgq4) book, which confirmed my theory.
 
-So indeed, for all of this to work you can't have topics per event type, even when it is common wisdom. 
+So indeed, for all of this to work you can't have topics per event type, even when it is common wisdom.
 
 What to do then?
 
@@ -153,7 +153,7 @@ The obvious solution is to have **one topic per entity** or, as that blog post a
 
 Now, this is something that MassTransit does not naturally support, although you can make it work with some heavy hacking, which I'm not a fan of.
 
-So I decided to implement my own producer and consumer logic using the native [Kafka component](https://learn.microsoft.com/en-us/dotnet/aspire/messaging/kafka-component) provided by .NET Aspire. 
+So I decided to implement my own producer and consumer logic using the native [Kafka component](https://learn.microsoft.com/en-us/dotnet/aspire/messaging/kafka-component) provided by .NET Aspire.
 
 Producing events via that component is fairly straightforward and looks like this when done by the OutboxProcessor used in the Catalog microservice:
 
@@ -244,9 +244,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

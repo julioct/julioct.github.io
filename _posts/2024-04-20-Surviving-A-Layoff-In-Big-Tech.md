@@ -63,7 +63,7 @@ This way, I'm not trying to beat the market, but I'm investing in the market its
 #### **4. Built an emergency fund**
 I asked Microsoft to automatically deposit any extra money into a separate savings account on every pay period.
 
-That account became my emergency fund and, by the time I got laid off, I had saved enough money to cover about 6 months of expenses in case the worse happened. 
+That account became my emergency fund and, by the time I got laid off, I had saved enough money to cover about 6 months of expenses in case the worse happened.
 
 Interestingly, I have not touched the money on that account to this day.
 
@@ -144,7 +144,7 @@ So I focused on creating the best free content I could on my [YouTube channel](h
 <br/>
 
 ### **Did I make the right choice?**
-I'm not becoming a millionaire anytime soon, but I'm making enough money to pay the bills, which is something I could not have imagined just a few years ago. 
+I'm not becoming a millionaire anytime soon, but I'm making enough money to pay the bills, which is something I could not have imagined just a few years ago.
 
 Remember, this is money I'm making out of thin air, just from my knowledge and experience, paid by normal people directly to me, and is not capped by any salary.
 
@@ -161,7 +161,7 @@ So, yes, I think I made the right choice.
 ### **Would this work for everyone?**
 I think everything I did before the layoff, except for starting a side business, is something that everyone working in tech should do, no matter what.
 
-If you are earning a good salary, especially if you are working for a big tech company, you should take advantage of all the benefits they offer and invest in your future self. 
+If you are earning a good salary, especially if you are working for a big tech company, you should take advantage of all the benefits they offer and invest in your future self.
 
 Otherwise, you are leaving a lot of money on the table.
 
@@ -192,9 +192,9 @@ Hope you find them as useful as I did.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

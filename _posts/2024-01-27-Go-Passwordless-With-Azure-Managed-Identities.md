@@ -26,7 +26,7 @@ Here's one typical ASP.NET Core API, deployed as an **Azure Web App**, that need
 
 <img src="{{ site.url }}/assets/images/appservice-conn-strings.jpg" width="60%"/>
 
-To access each of these Azure resources, the API is currently using connection strings. 
+To access each of these Azure resources, the API is currently using connection strings.
 
 The problem with this is that connection strings are secrets, and having to manage secrets have several drawbacks:
 
@@ -40,7 +40,7 @@ The problem with this is that connection strings are secrets, and having to mana
 
 - **Secrets are hard to secure**: you need to make sure that secrets are not stored in plain text, and that they are not leaked in logs or error messages.
 
-Instead of using connection strings, you can use passwordless connections via **Azure Managed Identities**: 
+Instead of using connection strings, you can use passwordless connections via **Azure Managed Identities**:
 
 ![](/assets/images/appservice-managed-identity.jpg)
 
@@ -134,9 +134,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

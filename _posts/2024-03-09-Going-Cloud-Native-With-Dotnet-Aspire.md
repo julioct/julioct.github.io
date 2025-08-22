@@ -93,7 +93,7 @@ dotnet new aspire-servicedefaults -n GameStore.ServiceDefaults
 <br/>
 
 ### **Step 3: Enable the Service Defaults**
-Your new Service Defaults project includes pre-configured settings telemetry, health checks, service discovery, and a few other essential cloud-native aspects. 
+Your new Service Defaults project includes pre-configured settings telemetry, health checks, service discovery, and a few other essential cloud-native aspects.
 
 To enable them in your application, first add a reference from both your frontend and backend projects to the Service Defaults project.
 
@@ -129,8 +129,8 @@ Then, in the **Program.cs** file of the App Host project, add the following code
 ```csharp
 var builder = DistributedApplication.CreateBuilder(args);
 
-// Add a PostgreSQL container, with a GameStore database 
-// Enable PgAdmin for easy DB management and deploy to the 
+// Add a PostgreSQL container, with a GameStore database
+// Enable PgAdmin for easy DB management and deploy to the
 // cloud as an Azure PostgreSQL Flexible Server.
 var adminUser = builder.AddParameter("adminUser");
 var adminPassword = builder.AddParameter("adminPassword", secret: true);
@@ -152,7 +152,7 @@ var blobs = builder.AddAzureStorage("storage")
 var backend = builder.AddProject<Projects.GameStore_Api>("backend")
                      .WithReference(postgres);
 
-// Add the frontend UI, and establish the dependency on both 
+// Add the frontend UI, and establish the dependency on both
 // the backend API and the blob service
 builder.AddProject<Projects.GameStore_Frontend>("frontend")
        .WithReference(backend)
@@ -170,7 +170,7 @@ Now let's see how to update our frontend and backend projects to make use of the
 ### **Step 5: Use .NET Aspire components**
 .NET Aspire provides a series of components in the form of NuGet packages that make it really easy to connect your app with any dependent services.
 
-Starting with our backend API, we know it needs to connect to a database, in particular, a PostgreSQL database. 
+Starting with our backend API, we know it needs to connect to a database, in particular, a PostgreSQL database.
 
 For this, we could use the standard Npgsql package, but .NET Aspire provides a more opinionated and cloud-native package. So let's install it into our backend project:
 
@@ -194,7 +194,7 @@ var postgres = builder.AddPostgresContainer("postgres")
 
 **At runtime, the App Host will stand up the PostgreSQL container, figure out the right connection string to connect to the GameStore database and inject it as an environment variable into your backend API. Cool Magic!**
 
-What about the frontend? 
+What about the frontend?
 
 Following the same idea, start by installing the Blob Storage NuGet package into your frontend project:
 
@@ -283,9 +283,9 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

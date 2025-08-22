@@ -23,13 +23,13 @@ Let's see how to do it.
 <br/>
 
 ### **What Is Token-Based Authentication?**
-Token-based authentication is a popular method used in modern web applications and APIs to securely authenticate users and control access to resources. 
+Token-based authentication is a popular method used in modern web applications and APIs to securely authenticate users and control access to resources.
 
 <img src="{{ site.url }}/assets/images/token-based-auth.jpg"/>
 
 It follows the following broader steps:
 
-**1. Request authorization**. The client requests authorization to access your API by sending the user's credentials to an authentication server. 
+**1. Request authorization**. The client requests authorization to access your API by sending the user's credentials to an authentication server.
 
 **2. Authenticate the user**. The authorization server authenticates the user via a login page or any other sort of authentication mechanism.
 
@@ -135,7 +135,7 @@ Now, let's open the terminal and run our app:
 dotnet run
 ```
 
-And now hit **Send Request** from the **games.http** file. 
+And now hit **Send Request** from the **games.http** file.
 
 You should get this:
 
@@ -198,7 +198,7 @@ If you decode it with a page like [jwt.ms](https://jwt.ms) you will see somethin
 
 So, you got a JWT issued to you (julio), meant for any of the URLs configured for your API and issued by the dotnet-user-jwts tool.
 
-To match that JWT, the command you executed also added configurations for a new Bearer scheme to your  **appsettings.Development.json** file: 
+To match that JWT, the command you executed also added configurations for a new Bearer scheme to your  **appsettings.Development.json** file:
 
 ```json
 "Authentication": {
@@ -258,7 +258,7 @@ Mission accomplished.
 
 ### **Next Steps**
 
-If you want a more advanced authorization policy, so you can require specific user roles or check for custom claims, I also got a [YouTube video](https://youtu.be/wVFfPrB5kEw) where I cover those details. 
+If you want a more advanced authorization policy, so you can require specific user roles or check for custom claims, I also got a [YouTube video](https://youtu.be/wVFfPrB5kEw) where I cover those details.
 
 And if you are thinking on taking your API to production, I cover how to take things to the next level with OIDC and Microsoft Entra ID in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
@@ -268,9 +268,9 @@ And if you are thinking on taking your API to production, I cover how to take th
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

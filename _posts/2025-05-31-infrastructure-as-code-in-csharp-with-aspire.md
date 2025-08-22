@@ -42,7 +42,7 @@ So, if your application needs a database, a storage account, a container registr
 
 ​
 
-Then, you hand over the templates to a tool or engine that knows exactly how to provision the resources in your cloud environment, in the correct order. 
+Then, you hand over the templates to a tool or engine that knows exactly how to provision the resources in your cloud environment, in the correct order.
 
 This approach has a bunch of benefits, like:
 
@@ -146,9 +146,9 @@ Here's how the PostgreSQL resource looks in one of the generated Bicep files:
 
 ​
 
-You can feed the generated files to the Bicep engine in your current deployment pipeline, and it will take care of turning them into a live Azure environment. 
+You can feed the generated files to the Bicep engine in your current deployment pipeline, and it will take care of turning them into a live Azure environment.
 
-But what if you don't do Container Apps, but **Kubernetes**? 
+But what if you don't do Container Apps, but **Kubernetes**?
 
 In that case, install the **Aspire.Hosting.Kubernetes** NuGet package and replace the C# line you added before with this other one:
 
@@ -166,15 +166,15 @@ Now publish again with the Aspire CLI and you'll get this instead:
 
 Which is exactly what you use to deploy things to Kubernetes, wherever you are hosting your cluster.
 
-What if you need to target **Azure App Service**? 
+What if you need to target **Azure App Service**?
 
 There's a hosting integration for that too.
 
-What if what you need is a Docker compose file to stand up the entire thing with containers in your CI/CD pipeline for integration testing? 
+What if what you need is a Docker compose file to stand up the entire thing with containers in your CI/CD pipeline for integration testing?
 
 Yes, there's also a hosting integration for that.
 
-And what if you need to customize the Storage Account configuration, or modify a few of the Container Apps settings? 
+And what if you need to customize the Storage Account configuration, or modify a few of the Container Apps settings?
 
 That's also possible, and I'll cover all those in detail, plus how to even use your existing Bicep files with Aspire, in the upcoming **Containers & .NET Aspire course** that will join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp) soon.
 
@@ -184,9 +184,9 @@ That's also possible, and I'll cover all those in detail, plus how to even use y
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

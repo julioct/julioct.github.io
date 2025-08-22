@@ -20,7 +20,7 @@ But first, let me tell you a bit about **.NET Aspire 8.1** and the new Keycloak 
 ​
 
 ### **Keycloak support in .NET Aspire 8.1**
-With .NET Aspire 8.1, which [just launched](https://devblogs.microsoft.com/dotnet/whats-new-in-aspire-8-1/), we got the **new Keycloak support** [I've been working on](https://github.com/dotnet/aspire/pull/4289) for the past couple of months. 
+With .NET Aspire 8.1, which [just launched](https://devblogs.microsoft.com/dotnet/whats-new-in-aspire-8-1/), we got the **new Keycloak support** [I've been working on](https://github.com/dotnet/aspire/pull/4289) for the past couple of months.
 
 Here's why I thought we needed this support in .NET Aspire:
 
@@ -28,7 +28,7 @@ Here's why I thought we needed this support in .NET Aspire:
 2.  <span>Identity, authentication, and authorization are hard. Anything we can do to simplify things for devs is a huge help.</span>
 3.  <span>I don't want to have to manually start and configure my Keycloak container for local development. Lots of trial and error.</span>
 
-I won't go deep into how to add Keycloak support to your .NET Aspire apps since there's a good article that covers it over [here](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-component). 
+I won't go deep into how to add Keycloak support to your .NET Aspire apps since there's a good article that covers it over [here](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-component).
 
 But, in essence, you install 2 NuGet packages (currently in preview), the first one on your AppHost project, and the second one in your ASP.NET Core API or frontend project:
 
@@ -81,11 +81,11 @@ Here's the scenario that's been bothering me for a while:
 
 ​
 
-Here, any time the user adds a game to the shopping cart, we send the list of items with ID, name, quantity, and prices, to the Basket microservice. 
+Here, any time the user adds a game to the shopping cart, we send the list of items with ID, name, quantity, and prices, to the Basket microservice.
 
-And, when the user initiates the check-out, we create an order with the Basket items and send them, with ID, name, quantity, and prices, to the Ordering microservice. 
+And, when the user initiates the check-out, we create an order with the Basket items and send them, with ID, name, quantity, and prices, to the Ordering microservice.
 
-What's the problem there? Well, the prices! 
+What's the problem there? Well, the prices!
 
 **Why would any of the microservices trust that the frontend will send the correct prices when the source of truth is in the Catalog microservice, where all games live?**
 
@@ -98,7 +98,7 @@ So, to address this, what most folks would do is this:
 
 ​
 
-So now, both Basket and Ordering will make an HTTP call to the Catalog microservice to fetch the product details. 
+So now, both Basket and Ordering will make an HTTP call to the Catalog microservice to fetch the product details.
 
 **Bad idea!** Why?
 
@@ -107,7 +107,7 @@ Well because:
 1.  <span>If Catalog has any sort of trouble or goes down, Basket and Ordering can't do their job.</span>
 2.  <span>The more services you stand up, and that need Catalog data, the more load you put on that Catalog microservice, which can only handle so much.</span>
 
-Essentially, the SLA of Basket and Ordering is bound to that of Catalog. 
+Essentially, the SLA of Basket and Ordering is bound to that of Catalog.
 
 **This is the #1 mistake people make when transitioning to microservices.**
 
@@ -140,7 +140,7 @@ Goes back to the [dual-write problem](https://www.confluent.io/blog/dual-write-p
 
 Because you want those events to persist potentially forever in the message broker, not just disappear from the queue once consumed.
 
-Think about it. A year from now, we decide we need to stand up a new customer rewards microservice, which will also need a few details from the product catalog. 
+Think about it. A year from now, we decide we need to stand up a new customer rewards microservice, which will also need a few details from the product catalog.
 
 How is customer rewards going to get an updated list of all products if it can't make HTTP calls to Catalog and all events are already gone from the message broker?
 
@@ -160,7 +160,7 @@ And here's the Basket microservice consuming the GameCreated event from Kafka vi
 
 ​
 
-It did take me a while to understand how Kafka works as compared to RabbitMQ and Azure Service Bus, and how to configure it properly. But I think I got it and it works really nicely. 
+It did take me a while to understand how Kafka works as compared to RabbitMQ and Azure Service Bus, and how to configure it properly. But I think I got it and it works really nicely.
 
 Can't wait to go over all the details in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp)!
 
@@ -191,7 +191,7 @@ If you get a chance, check out this book:
 
 I've been reading it for the past month to go deep into event-driven microservices, and I must admit it's a good one.
 
-You won't find any code there, but it's compensated with tons of graphics that clearly help you get the full picture in this fascinating area. 
+You won't find any code there, but it's compensated with tons of graphics that clearly help you get the full picture in this fascinating area.
 
 ​
 
@@ -200,7 +200,7 @@ As a side note, I also had to switch all entities across all microservices to us
 
 Can't wait to start diving into deploying this entire system to Azure very soon!
 
-Until next time. 
+Until next time.
 
 ---
 
@@ -210,9 +210,9 @@ Until next time.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

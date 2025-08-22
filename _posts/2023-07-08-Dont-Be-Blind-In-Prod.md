@@ -10,11 +10,11 @@ issue-number: 2
 
 *Read time: 4 minutes*
 
-Today I'm going to show you how to avoid being blind in Prod by using the logging capabilities of ASP.NET Core. 
+Today I'm going to show you how to avoid being blind in Prod by using the logging capabilities of ASP.NET Core.
 
-Logging is one of those things that you don't really need until you do, and then you really need it. 
+Logging is one of those things that you don't really need until you do, and then you really need it.
 
-Unfortunately, it's also one of those things that are easy to overlook when you're building your app. 
+Unfortunately, it's also one of those things that are easy to overlook when you're building your app.
 
 <br/>
 
@@ -43,11 +43,11 @@ ILogger is available anywhere you need it in your application. For instance, her
 app.Logger.LogInformation(5, "The app is ready to go!");
 ```
 
-The first parameter, which is optional, is the event ID. You can use it to group related events together. 
+The first parameter, which is optional, is the event ID. You can use it to group related events together.
 
-The second parameter is the message you want to log. 
+The second parameter is the message you want to log.
 
-**What if you want to use ILogger in one of your classes?** 
+**What if you want to use ILogger in one of your classes?**
 
 No problem, just inject it in your constructor:
 
@@ -68,7 +68,7 @@ And then use it wherever needed:
 ```csharp
 public class GameMatcher
 {
-    ...    
+    ...
     public async Task<GameMatch> MatchPlayerAsync(string playerId)
     {
         logger.LogInformation("Matching player {PlayerId}...", playerId);
@@ -77,7 +77,7 @@ public class GameMatcher
 }
 ```
 
-**How about logging exceptions?** 
+**How about logging exceptions?**
 
 Again, no problem. Just use the LogError method:
 
@@ -96,7 +96,7 @@ That's to take advantage of feature called `Structured Logging`, which allows yo
 <br/>
 
 #### **Step 2: Export logs to Azure Application Insights**
-You need to take those logs out of your box and into the cloud. 
+You need to take those logs out of your box and into the cloud.
 
 For this, open a Terminal, switch to your app dir and install the `Azure Monitor OpenTelemetry Distro` client library:
 
@@ -157,13 +157,13 @@ Then, close the Queries popup dialog and type the following query in the query e
 traces | sort by timestamp desc
 ```
 
-Select a short time range, say 30 minutes and hit `Run`. 
+Select a short time range, say 30 minutes and hit `Run`.
 
 You should see your logs showing up in the results pane:
 
 ![Alt text]({{ site.url }}/assets/images/app-insights-query-logs.png)
 
-**Want to filter the results to show only errors?** 
+**Want to filter the results to show only errors?**
 
 Do this instead:
 
@@ -171,7 +171,7 @@ Do this instead:
 traces | where severityLevel == 3 | sort by timestamp desc
 ```
 
-**How about filtering by a specific player?** 
+**How about filtering by a specific player?**
 
 That's why we used structured logging. Because of the curly braces you used when logging messages, you can now do this:
 
@@ -195,9 +195,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

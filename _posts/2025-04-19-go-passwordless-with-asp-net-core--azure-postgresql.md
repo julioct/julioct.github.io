@@ -26,7 +26,7 @@ Let’s take a look.
 ### **What is Azure Database for PostgreSQL?**
 Azure Database for PostgreSQL is a fully managed relational database service built on PostgreSQL.
 
-It offers all the benefits you would expect of such a cloud offering: 
+It offers all the benefits you would expect of such a cloud offering:
 
 *   <span>Automatic backups</span>
 *   <span>Automatic OS and database engine updates </span>
@@ -41,7 +41,7 @@ And that’s where things get interesting.
 ​
 
 ### **How you’d normally connect to PostgreSQL**
-The best way to connect to PostgreSQL from a .NET application is by using the Npgsql database provider. 
+The best way to connect to PostgreSQL from a .NET application is by using the Npgsql database provider.
 
 If you use Entity Framework Core, you can integrate Npgsql with the **Npgsql.EntityFrameworkCore.PostgreSQL** NuGet package.
 
@@ -87,9 +87,9 @@ Breaking it down:
 2.  <span>Grant that identity access to your PostgreSQL database</span>
 3.  <span>The Web App gets Microsoft Entra access tokens to talk to the database server</span>
 
-If you are new to Azure managed identities, I covered the basics [over here]({{ site.url }}/blog/Go-Passwordless-With-Azure-Managed-Identities), including an example with Azure Storage. 
+If you are new to Azure managed identities, I covered the basics [over here]({{ site.url }}/blog/Go-Passwordless-With-Azure-Managed-Identities), including an example with Azure Storage.
 
-But with PostgreSQL it gets more challenging since you can't just grant the identity RBAC access to the DB. 
+But with PostgreSQL it gets more challenging since you can't just grant the identity RBAC access to the DB.
 
 **You need to create a user inside the database who represents the managed identity, and grant it the right permissions.**
 
@@ -162,7 +162,7 @@ Passwords don’t belong in the cloud.
 
 If your app is running in Azure, use managed identities to connect to Azure Database for PostgreSQL securely, without hardcoding secrets or worrying about password rotation.
 
-It's not the easiest thing to configure, but it will pay off many times as you forget about passwords and focus on building and shipping features instead of managing secrets. 
+It's not the easiest thing to configure, but it will pay off many times as you forget about passwords and focus on building and shipping features instead of managing secrets.
 
 Cloud-native apps deserve cloud-native security.
 
@@ -174,9 +174,9 @@ Go passwordless.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

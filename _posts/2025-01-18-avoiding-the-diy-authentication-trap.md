@@ -9,9 +9,9 @@ issue-number: 68
 *Read time: 9 minutes*
 ​
 
-With Course 3 of the bootcamp finally launched, I'm now switching gears to Course 4, which will be all about deploying .NET apps to the Azure cloud, one of the most exciting parts of the bootcamp. 
+With Course 3 of the bootcamp finally launched, I'm now switching gears to Course 4, which will be all about deploying .NET apps to the Azure cloud, one of the most exciting parts of the bootcamp.
 
-One key thing you need to master before doing any sort of cloud development is Docker, which I believe most developers are not using yet. That's why I spent most of this week working on tons of new Docker-specific content, learning a few new things myself along the way. 
+One key thing you need to master before doing any sort of cloud development is Docker, which I believe most developers are not using yet. That's why I spent most of this week working on tons of new Docker-specific content, learning a few new things myself along the way.
 
 But as I was wrapping up Course 3 I kept finding tutorials and even paid courses that teach you how to implement a login endpoint in a backend API to generate JWTs, which will then be used to access protected endpoints.
 
@@ -99,7 +99,7 @@ You can, but I wouldn't. Here's why:
 
 In fact, here's what[ the official docs](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-9.0#use-token-based-authentication) say:
 
-> *The tokens aren't standard JSON Web Tokens (JWTs). The use of custom tokens is intentional, as the built-in Identity API is meant primarily for simple scenarios.* 
+> *The tokens aren't standard JSON Web Tokens (JWTs). The use of custom tokens is intentional, as the built-in Identity API is meant primarily for simple scenarios.*
 
 
 So I would only use this to come up with a quick demo for my boss, thinking I'll need to use something else for the real deal.
@@ -118,7 +118,7 @@ The whole authentication flow is a bit complex, but at a very high level it look
 
 ​
 
-Notice that in this case, we have a 3rd actor: the **Authorization Server**. 
+Notice that in this case, we have a 3rd actor: the **Authorization Server**.
 
 This is a separate service completely isolated from your back-end and whose only purpose is to securely authenticate and authorize your users, as well as generate standard JWTs.
 
@@ -131,7 +131,7 @@ So this time:
 5.  <span>If valid, the authorization server generates a JWT and sends it back to the front-end.</span>
 6.  <span>The front-end uses the JWT to make requests to protected endpoints in the back-end.</span>
 
-Why is this the best option? 
+Why is this the best option?
 
 Many reasons:
 
@@ -143,7 +143,7 @@ Many reasons:
 *   <span>**Single Sign-On ready:** You can easily add new applications to your ecosystem with centralized authentication.</span>
 *   <span>**Universal compatibility:** Standard tokens work with any platform or framework, making it easy to add new services or migrate existing ones.</span>
 
-Which authorization server to use? 
+Which authorization server to use?
 
 It doesn't matter, as long as it is OpenID Connect (OIDC) certified. I go over how to configure **Keycloak** and **Entra ID** for OIDC in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp), but you can choose from a myriad of other options like Duende Identity Server, Auth0, Google, Github, and many, many others.
 
@@ -152,7 +152,7 @@ It doesn't matter, as long as it is OpenID Connect (OIDC) certified. I go over h
 ### **But I want my own login form!**
 I know, but **it's not safe**. You cannot be responsible for receiving credentials from your users, under any circumstance.
 
-Besides, all authorization servers will offer you multiple ways to customize their login forms to match your app style. 
+Besides, all authorization servers will offer you multiple ways to customize their login forms to match your app style.
 
 For instance, look at what happens when you try to log in to your ChatGPT account:
 
@@ -186,9 +186,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

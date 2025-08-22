@@ -63,7 +63,7 @@ public class Game
 <br/>
 
 ### **Step 2: Add the DBContext**
-A [DbContext](https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext){:target="_blank"} instance represents a session with the database and can be used to query and save instances of your entities. 
+A [DbContext](https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext){:target="_blank"} instance represents a session with the database and can be used to query and save instances of your entities.
 
 DbContext is a combination of the **Unit Of Work** and **Repository** patterns.
 
@@ -93,7 +93,7 @@ builder.Services.AddSqlLite<GameStoreContext>(connString);
 <br/>
 
 ### **Step 3: Generate your database**
-To turn your entities into database tables, you need to create and apply what is known as a **migration**,  
+To turn your entities into database tables, you need to create and apply what is known as a **migration**,
 
 To generate a migration, first get the **dotnet-ef** tool:
 
@@ -119,7 +119,7 @@ Finally, apply the migration:
 dotnet ef database update
 ```
 
-Your database is ready! 
+Your database is ready!
 
 Let's now start taking advantage of it.
 
@@ -137,8 +137,8 @@ app.MapPost("/games", async (CreateGameDto newGame, GameStoreContext dbContext) 
     await dbContext.SaveChangesAsync();
 
     return Results.CreatedAtRoute(
-        GetGameEndpointName, 
-        new { id = game.Id }, 
+        GetGameEndpointName,
+        new { id = game.Id },
         game.ToGameDetailsDto());
 });
 ```
@@ -157,7 +157,7 @@ app.MapGet("games/{id}", async (int id, GameStoreContext dbContext) =>
 {
     Game? game = await dbContext.Games.FindAsync(id);
 
-    return game is null ? 
+    return game is null ?
         Results.NotFound() : Results.Ok(game.ToGameDetailsDto());
 })
 .WithName(GetGameEndpointName);
@@ -175,9 +175,9 @@ I hope it was helpful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

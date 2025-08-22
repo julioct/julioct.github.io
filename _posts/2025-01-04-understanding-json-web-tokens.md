@@ -28,7 +28,7 @@ Let's dive in.
 ​
 
 ### **What is a JSON Web Token (JWT)?**
-Think of a JWT (pronounced "jot") like a digital VIP pass at a concert. Just as a VIP pass contains information about who you are and what areas you can access, a JWT contains claims about a user and their permissions. 
+Think of a JWT (pronounced "jot") like a digital VIP pass at a concert. Just as a VIP pass contains information about who you are and what areas you can access, a JWT contains claims about a user and their permissions.
 
 The key difference is that a JWT is cryptographically signed, making it tamper-proof.
 
@@ -42,7 +42,7 @@ Now, before looking at real JWTs, I think it's good to understand the concept of
 ​
 
 ### **What is a claim?**
-In our VIP pass, we have several pieces of information about the pass holder: 
+In our VIP pass, we have several pieces of information about the pass holder:
 
 
 ![](/assets/images/2025-01-04/4ghDFAZYvbFtvU3CTR72ZN-j8SfPVGJ6Ng73waYP8qEFS.jpeg)
@@ -85,7 +85,7 @@ Now if you decode the payload of a JWT, as your Web app will do, you will get so
 
 ​
 
-So it's just a list of claims related to Mr. Anderson and the access given to him in the system. 
+So it's just a list of claims related to Mr. Anderson and the access given to him in the system.
 
 To explain a few important ones:
 
@@ -123,7 +123,7 @@ It works like this:
 
 ​
 
-Now, how do you deal with these JWTs in your ASP.NET Core APIs? Let's tackle that in next week's newsletter. 
+Now, how do you deal with these JWTs in your ASP.NET Core APIs? Let's tackle that in next week's newsletter.
 
 And, if you need to learn how to configure Keycloak, a popular open-source authorization server, to authenticate your users and generate JWTs, I go over all those details (and lots more) in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
@@ -159,9 +159,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

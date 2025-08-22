@@ -13,7 +13,7 @@ One of the things I love most about .NET Aspire's dashboard is how it gives you 
 
 But here's the thing: while the built-in commands are great for basic operations, there are times when you need something more specific to your workflow.
 
-Today, I'll show you **how to add custom commands to any resource in your .NET Aspire dashboard.** 
+Today, I'll show you **how to add custom commands to any resource in your .NET Aspire dashboard.**
 
 It's simpler than you might think, and once you see how it works, you'll probably start thinking of a dozen ways to streamline your own development process.
 
@@ -22,7 +22,7 @@ Let's dive in.
 ​
 
 ### **Starting fresh with RabbitMQ**
-Let's say we recently found a small bug in our event-driven system that was preventing our notifications service from consuming messages from our RabbitMQ queue. 
+Let's say we recently found a small bug in our event-driven system that was preventing our notifications service from consuming messages from our RabbitMQ queue.
 
 Using the great tracing capabilities of .NET Aspire that I mentioned [last week]({{ site.url }}/blog/debug-distributed-systems-in-minutes-using-net-aspire), we were able to come up with a quick fix, and now we are ready to run a few initial manual tests.
 
@@ -47,7 +47,7 @@ And once in RabbitMQ's portal, I can tell that there are already a bunch of mess
 
 ​
 
-I don't want to test my notifications service bug fix with 10 messages already there. 
+I don't want to test my notifications service bug fix with 10 messages already there.
 
 A simple scenario to test first is starting with an empty queue and then publishing just 1 message to see if my service can process it.
 
@@ -178,9 +178,9 @@ Mission accomplished!
 ### **Wrapping Up**
 What started as a simple need to clear RabbitMQ queues turned into a powerful way to extend the .NET Aspire dashboard with exactly the functionality we need.
 
-The beauty of custom commands is that they're not limited to RabbitMQ. You can add them to any resource in your application model. 
+The beauty of custom commands is that they're not limited to RabbitMQ. You can add them to any resource in your application model.
 
-**The key insight is that .NET Aspire gives you the building blocks to create the exact developer experience your team needs.** 
+**The key insight is that .NET Aspire gives you the building blocks to create the exact developer experience your team needs.**
 
 No more context switching between different tools and UIs just to perform common development tasks.
 
@@ -205,9 +205,9 @@ P.S. The first 100 people also get 2 exclusive bonuses (Building Microservices w
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

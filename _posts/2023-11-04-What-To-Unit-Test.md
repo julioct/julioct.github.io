@@ -92,7 +92,7 @@ public class MatchesController : ControllerBase
 }
 ```
 
-Should you unit test that **GetMatchByIdAsync** method? 
+Should you unit test that **GetMatchByIdAsync** method?
 
 No, because it's just coordinating the work of other components (the GameMatcher) and it doesn't have any interesting logic in regard to the business domain.
 
@@ -138,7 +138,7 @@ public class GameMatch
 }
 ```
 
-Should we write unit tests for **SetServerDetails**? 
+Should we write unit tests for **SetServerDetails**?
 
 YES! That method has interesting logic regarding the business domain and it has no collaborators.
 
@@ -158,7 +158,7 @@ public void SetServerDetails_InvalidIpAddress_ThrowsInvalidIpAddressException()
     // Act
     Action act = () => sut.SetServerDetails(invalidIpAddress, port);
 
-    // Assert        
+    // Assert
     act.Should().Throw<InvalidIpAddressException>();
 }
 ```
@@ -202,7 +202,7 @@ public async Task<GameMatchResponse> JoinMatchAsync(JoinMatchRequest request)
         logger.LogInformation("{PlayerId} already assigned to existing match.", playerId);
     }
 
-    return match.ToGameMatchResponse();        
+    return match.ToGameMatchResponse();
 }
 ```
 
@@ -232,9 +232,9 @@ I hope that helped.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

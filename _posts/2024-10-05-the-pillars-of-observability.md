@@ -30,7 +30,7 @@ The 3 pillars are:
 
 ​
 
-So, what you want to do is collect logs, metrics and traces for all the services involved in your system, from the frontend, to the API gateway, and across all your microservices. It's the only way to understand what's going on when things don't go as expected, especially in cloud-based distributed apps. 
+So, what you want to do is collect logs, metrics and traces for all the services involved in your system, from the frontend, to the API gateway, and across all your microservices. It's the only way to understand what's going on when things don't go as expected, especially in cloud-based distributed apps.
 
 
 ![](/assets/images/2024-10-05/4ghDFAZYvbFtvU3CTR72ZN-a9tBA9NR6Y7xe4gtkNM8a9.jpeg)
@@ -123,7 +123,7 @@ Notice that I'm querying here all the logs for a specific operation_Id. That ID 
 ​
 
 ### **Wrapping up**
-A few of you have been asking me for the release date of this bootcamp. Although I don't have a concrete date yet, the plan is to have the first part ready by sometime around Thanksgiving. 
+A few of you have been asking me for the release date of this bootcamp. Although I don't have a concrete date yet, the plan is to have the first part ready by sometime around Thanksgiving.
 
 I'm sorry it's taking so long but I really didn't want to start recording anything until I knew exactly how the finished application would work, in the cloud, with CI/CD pipelines and full observability.
 
@@ -141,9 +141,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

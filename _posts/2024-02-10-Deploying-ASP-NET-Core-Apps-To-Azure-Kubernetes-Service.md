@@ -22,7 +22,7 @@ Let's start.
 <br/>
 
 ### **What is Kubernetes?**
-Let's say you have embraced Docker containers for your ASP.NET Core applications, which is a great step towards a more modern and scalable architecture. 
+Let's say you have embraced Docker containers for your ASP.NET Core applications, which is a great step towards a more modern and scalable architecture.
 
 Now you want to take them to your production environment, but you start facing a few issues:
 
@@ -32,7 +32,7 @@ Now you want to take them to your production environment, but you start facing a
 - How do you manage the networking between them?
 - How do you make them available to the outside world?
 
-This is where **Kubernetes** comes in. Kubernetes is a container orchestration platform that helps you solve all these problems and more. 
+This is where **Kubernetes** comes in. Kubernetes is a container orchestration platform that helps you solve all these problems and more.
 
 It is a powerful tool that can help you manage your containers in a production environment.
 
@@ -40,7 +40,7 @@ It is a powerful tool that can help you manage your containers in a production e
 
 I won't go deep into Kubernetes architecture details here (it can get very complex), but here's a high-level overview of the main concepts you should understand:
 
-- **Kubernetes Cluster**: A set of machines, called nodes, that run containerized applications. 
+- **Kubernetes Cluster**: A set of machines, called nodes, that run containerized applications.
 - **Node**: A Docker-enabled machine that runs your pods. It can be a physical machine or a virtual machine.
 - **Pod**: The smallest deployable unit in Kubernetes. Your containers run inside these pods.
 - **Service**: An abstraction that defines how to access your pods. One type of service is a **load balancer**, which allows external clients to interact with your pods.
@@ -266,9 +266,9 @@ Welcome to cloud-native development!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -22,7 +22,7 @@ Let's dive in.
 <br/>
 
 ### **What Is An API Gateway?**
-In simple terms, an API Gateway is a service that acts as a single entry point for all the microservices in your application. 
+In simple terms, an API Gateway is a service that acts as a single entry point for all the microservices in your application.
 
 ![](/assets/images/api-gateway.jpg)
 
@@ -49,7 +49,7 @@ Here I'll show you how to configure the one I've been using for the last few yea
 <br/>
 
 ### **Emissary-Ingress API Gateway**
-[Emissary-Ingress](https://www.getambassador.io/products/api-gateway){:target="_blank"} is one the most popular open-source and Kubernetes-native API gateways. 
+[Emissary-Ingress](https://www.getambassador.io/products/api-gateway){:target="_blank"} is one the most popular open-source and Kubernetes-native API gateways.
 
 ![](/assets/images/cloud-native-api-gateways.jpg)
 
@@ -59,14 +59,14 @@ I personally like it because:
 
 * It is open-source and free to use
 * It is specifically designed for Kubernetes (where every microservice should be running these days)
-* It does not require writing any code to configure 
+* It does not require writing any code to configure
 
 Let's see how to set it up.
 
 <br/>
 
 ### **Installing Emissary-Ingress**
-Since Emissary-Ingress runs on Kubernetes, you should already have a cluster and at least one microservice there before doing anything else. 
+Since Emissary-Ingress runs on Kubernetes, you should already have a cluster and at least one microservice there before doing anything else.
 
 If you need help with that part, please check my previous article over [here]({{ site.url }}/blog/Deploying-ASP-NET-Core-Apps-To-Azure-Kubernetes-Service).
 
@@ -85,7 +85,7 @@ kubectl apply -f https://app.getambassador.io/yaml/emissary/3.9.1/emissary-crds.
 # Install Emissary-Ingress:
 helm install emissary-ingress datawire/emissary-ingress \
 --set service.annotations."service\.beta\.kubernetes\.io/azure-dns-label-name"=playeconomy \
--n emissary --create-namespace 
+-n emissary --create-namespace
 ```
 
 That will deploy all the Emissary-Ingress resources into a new namespace called **emissary** in your K8s cluster.
@@ -110,11 +110,11 @@ apiVersion: getambassador.io/v3alpha1
 kind: Listener
 metadata:
   name: https-listener
-spec:   
+spec:
   port: 8443
   protocol: HTTPS
   securityModel: XFP
-  hostBinding:  
+  hostBinding:
     namespace:
       from: SELF
 ```
@@ -142,7 +142,7 @@ The main things there are the **hostname**, which is the public DNS name that cl
 
 Now run these in your terminal to apply both resources to your cluster
 
-```powershell 
+```powershell
 kubectl apply -f .\listener.yaml -n emissary
 kubectl apply -f .\host.yaml -n emissary
 ```
@@ -169,7 +169,7 @@ spec:
 
 Notice that the **service** used there is the Kubernetes service that points to the Catalog service pods.
 
-It's that simple. 
+It's that simple.
 
 You would do the same type of mapping for all the microservices in your system, and then deploy the mappings:
 
@@ -216,9 +216,9 @@ Mission accomplished.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

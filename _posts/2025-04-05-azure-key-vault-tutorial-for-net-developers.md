@@ -17,14 +17,14 @@ But how to get ready to use those secrets in the cloud while keeping your code c
 
 Azure Key Vault is the solution for this and the best thing is that it integrates beautifully with ASP.NET Core, so you can retrieve those secrets as if you were reading your appsettings.json config values.
 
-In this tutorial, I'll walk you through the entire process step-by-step. 
+In this tutorial, I'll walk you through the entire process step-by-step.
 
 Let's get started.
 
 ​
 
 ### **What is Azure Key Vault?**
-Azure Key Vault is a cloud-based service designed to store and securely manage application secrets. 
+Azure Key Vault is a cloud-based service designed to store and securely manage application secrets.
 
 It's the right place to store your connection strings, API keys, and passwords, so they stay away from your code base, but you can also store encryption keys and certificates.
 
@@ -86,7 +86,7 @@ Let's add that secret on the **Objects --> Secrets** blade:
 
 Why did we use that specific pattern, with double dashes in the middle, for the secret name?
 
-Well, because that is a pattern that ASP.NET Core will be ready to recognize via the **Key Vault Configuration Provider**, making reading the secret a trivial task for our app. 
+Well, because that is a pattern that ASP.NET Core will be ready to recognize via the **Key Vault Configuration Provider**, making reading the secret a trivial task for our app.
 
 So using the **OpenApi--ApiKey** secret name is essentially the same as adding this configuration to your appsettings.json file:
 
@@ -156,9 +156,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -22,7 +22,7 @@ Let's go over Entra ID and how I'm integrating it into the bootcamp application.
 ### **What we are trying to achieve**
 We want to enable OIDC for our distributed system since it's the industry standard for authentication and authorization. And, in this case, our OpenID provider is Entra ID.
 
-I won't explain how the OIDC protocol works here since I have already covered it on [my website](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID) and dedicated an entire module of my [microservices program ](https://dotnetmicroservices.com)to OAuth 2.0 and OpenId Connect. 
+I won't explain how the OIDC protocol works here since I have already covered it on [my website](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID) and dedicated an entire module of my [microservices program ](https://dotnetmicroservices.com)to OAuth 2.0 and OpenId Connect.
 
 But here's a high-level view of how things should work:
 
@@ -66,9 +66,9 @@ Each app registration represents either a resource to protect (your backend APIs
 
 So you want to have one for your API Gateway and one for your frontend. I have one more for testing things via the Postman client.
 
-The fact that we only have the API Gateway there and not every individual microservice may seem a bit surprising, but it's one of the benefits of having the Gateway. 
+The fact that we only have the API Gateway there and not every individual microservice may seem a bit surprising, but it's one of the benefits of having the Gateway.
 
-Your access tokens will be generated for the API Gateway, which will in turn verify the validity of the tokens before forwarding them to your microservices. 
+Your access tokens will be generated for the API Gateway, which will in turn verify the validity of the tokens before forwarding them to your microservices.
 
 Your microservices will still validate the tokens and decode the included claims, but won't have to waste resources on invalid tokens since those will get rejected by the Gateway right away.
 
@@ -173,7 +173,7 @@ Now let's see what's required in the API Gateway.
 ​
 
 ### **The API Gateway auth code**
-Since all the API Gateway is doing is validating the incoming access tokens, its JWT bearer configuration is exactly the same as any of the microservices. 
+Since all the API Gateway is doing is validating the incoming access tokens, its JWT bearer configuration is exactly the same as any of the microservices.
 
 What's new on the Gateway side is a custom policy we need to implement to support both Keycloak and Entra ID:
 
@@ -228,11 +228,11 @@ The other important thing is how to have the frontend attach proper access token
 
 ​
 
-Th **ITokenAcquisition** object is the hero here, which is registered by that **EnableTokenAcquisitionToCallDownstreamApi()** call you did before. 
+Th **ITokenAcquisition** object is the hero here, which is registered by that **EnableTokenAcquisitionToCallDownstreamApi()** call you did before.
 
 That's how we get an access token for the current user with the specified scopes and then we just attach it to the Auth header on the outgoing request. That **.default** scope, by the way, is a bit magical, since it allows you to request all scopes exposed by the resource (so strange).
 
-I have to say that I'm not very pleased with the Microsoft.Identity.Web library, its APIs, and configurations. <u>I hate magical stuff and I prefer to understand exactly what each line of code is doing in my app</u>, which this library is heavily trying to hide from me. 
+I have to say that I'm not very pleased with the Microsoft.Identity.Web library, its APIs, and configurations. <u>I hate magical stuff and I prefer to understand exactly what each line of code is doing in my app</u>, which this library is heavily trying to hide from me.
 
 So I might revert to the simpler OIDC middleware in the end, we'll see. But now let's take a look at the end result.
 
@@ -269,7 +269,7 @@ And we can even get to the shopping cart, which requires an authenticated reques
 
 ​
 
-So it's all working properly (uff!!!). And, remember, you only need to change 1 setting in the frontend to get the entire thing working with Keycloak instead. No need to touch the backend. 
+So it's all working properly (uff!!!). And, remember, you only need to change 1 setting in the frontend to get the entire thing working with Keycloak instead. No need to touch the backend.
 
 And that's it for today. I'll do a bit more polishing on the frontend to simplify the Entra ID stuff and then I'll head right into getting all this deployed to the cloud.
 
@@ -285,9 +285,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

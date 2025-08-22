@@ -13,11 +13,11 @@ If you’ve ever set up containers for your .NET app with Docker Compose, you kn
 
 Write some YAML, expose a few ports, map a volume, fiddle with environment variables, then spend a good 30 minutes wondering why your API still can’t talk to Postgres.
 
-It works, eventually. But it always feels like you're stepping out of the .NET world just to get your dev environment up and running. 
+It works, eventually. But it always feels like you're stepping out of the .NET world just to get your dev environment up and running.
 
 And it only gets worse when someone new joins your team and expects F5 to magically work.
 
-What if your container setup could live inside your .NET solution? What if you could define it in C# instead of YAML? 
+What if your container setup could live inside your .NET solution? What if you could define it in C# instead of YAML?
 
 That’s exactly what .NET Aspire offers.
 
@@ -41,7 +41,7 @@ This app needs to:
 
 Implementing the API is not rocket science, but how to test the app with those 3 external dependencies during local development?
 
-Well, that's a prime use case for Docker containers. 
+Well, that's a prime use case for Docker containers.
 
 And ideally, you don't want to run those containers manually, remembering the configurations for each one.
 
@@ -84,7 +84,7 @@ But wait, how did I come up with those 36 lines of Docker Compose?
 ### **The problem with Docker Compose**
 A year or two ago, you would figure out how to craft a docker-compose.yml by googling around to find good examples to use as a starting point, or that hopefully just work.
 
-Today, you might as well just ask ChatGPT, which will have no trouble coming up with a working starting point. 
+Today, you might as well just ask ChatGPT, which will have no trouble coming up with a working starting point.
 
 But if you are a C# developer, new to Compose, that's just the start of your problems, which include:
 
@@ -157,7 +157,7 @@ And here is Keycloak:
 
 ​
 
-Now, hit F5, and just as before you will see your containers up and running in your Docker Desktop install: 
+Now, hit F5, and just as before you will see your containers up and running in your Docker Desktop install:
 
 
 ![](/assets/images/2025-05-17/4ghDFAZYvbFtvU3CTR72ZN-3E9LFVyKgTL7ecYFbYPdiv.jpeg)
@@ -180,7 +180,7 @@ If you don’t want to wait, the full working project — ready to download and 
 ​
 
 ### **Wrapping up**
-Docker Compose was a great stepping stone for running containerized dev environments. 
+Docker Compose was a great stepping stone for running containerized dev environments.
 
 But for .NET devs, Aspire feels like home.
 
@@ -194,9 +194,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

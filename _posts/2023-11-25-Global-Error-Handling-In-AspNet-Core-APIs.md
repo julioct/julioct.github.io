@@ -39,7 +39,7 @@ app.MapGet("/games/{id}", async (IGamesRepository repository, int id) =>
 });
 ```
 
-Usually, they work fine, but what happens if your database is down? Or perhaps they invoke the second endpoint with an invalid ID? 
+Usually, they work fine, but what happens if your database is down? Or perhaps they invoke the second endpoint with an invalid ID?
 
 To simulate those scenarios let's use this simple in-memory repository class:
 
@@ -60,13 +60,13 @@ public class InMemGamesRepository : IGamesRepository
     }
 
     public async Task<Game?> GetAsync(int id)
-    {        
+    {
         // 0 or negative ids are not allowed
         if (id < 1)
         {
             throw new ArgumentOutOfRangeException(nameof(id), "The id must be greater than 0!");
         }
-        
+
         return await Task.FromResult(games.Find(game => game.Id == id));
     }
 }
@@ -100,7 +100,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IGamesRepository, InMemGamesRepository>()
                 .AddProblemDetails();
-                
+
 var app = builder.Build();
 
 app.UseStatusCodePages();
@@ -149,7 +149,7 @@ We could add a try/catch block to each endpoint and return a problem details res
 Instead, let's create a global exception handler that will:
 
 * Catch all unhandled exceptions and return a problem details response
-* Map each exception to the correct problem details response 
+* Map each exception to the correct problem details response
 * Logs the exception details to our logging provider
 
 With the new **IExceptionHandler** interface available starting with .NET 8, implementing this global exception handler is pretty straightforward:
@@ -195,11 +195,11 @@ The first thing we do is **capture a unique traceId** that will be used to corre
 
 Then we **log the exception details** using the ILogger instance, making sure we include some important details like the machine name and the traceId.
 
-Next, we use the **MapException()** method to map the exception to the correct status code and title. 
+Next, we use the **MapException()** method to map the exception to the correct status code and title.
 
 Finally, we use the **Problem()** helper method to create a problem details response with the correct status code, title, and traceId.
 
-Notice also that we **return true at the end of the method**, which means we handled the exception and the request pipeline can stop here. 
+Notice also that we **return true at the end of the method**, which means we handled the exception and the request pipeline can stop here.
 
 Here's the **MapException()** implementation:
 
@@ -214,7 +214,7 @@ private static (int StatusCode, string Title) MapException(Exception exception)
 }
 ```
 
-Any ArgumentOutOfRangeException will return a 400 status code and the exception message as the title since this will be useful for clients. 
+Any ArgumentOutOfRangeException will return a 400 status code and the exception message as the title since this will be useful for clients.
 
 Any other exception will return a 500 status code and a generic title since we don't want to reveal too much of our internal details to clients.
 
@@ -231,7 +231,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IGamesRepository, InMemGamesRepository>()
                 .AddProblemDetails()
                 .AddExceptionHandler<GlobalExceptionHandler>();
-                
+
 var app = builder.Build();
 ```
 
@@ -267,7 +267,7 @@ We will be able to use that traceId to correlate the exception with the logs, wh
 
 ```powershell{3}
 fail: HelloExceptions.GlobalExceptionHandler[0]
-      Could not process a request on machine JULIO-DESKTOP. 
+      Could not process a request on machine JULIO-DESKTOP.
       TraceId: 00-1a14f00c442cbe9c882d83e409f5513e-a8c14abf348ef27e-00
       System.InvalidOperationException: The database connection is closed!
          at HelloExceptions.Repositories.InMemGamesRepository.GetAllAsync()
@@ -301,7 +301,7 @@ This time the ArgumentOutOfRangeException got mapped to a 400 status code and th
 
 Mission accomplished!
 
-And that's it for today. 
+And that's it for today.
 
 I hope it was useful.
 
@@ -311,9 +311,9 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

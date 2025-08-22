@@ -16,7 +16,7 @@ issue-number: 88
   </div>
 </div>
 
-We've all been there. You clone a promising repo, hit F5, and... nothing works. Missing dependencies, broken connection strings, containers that won't start, and environment variables you have to guess. 
+We've all been there. You clone a promising repo, hit F5, and... nothing works. Missing dependencies, broken connection strings, containers that won't start, and environment variables you have to guess.
 
 Then, when you finally get something working locally, deployment becomes another nightmare. Kubernetes YAML files, infrastructure scripts, and a dozen services that need to talk to each other correctly.
 
@@ -24,7 +24,7 @@ Then, when you finally get something working locally, deployment becomes another
 
 **In this comprehensive tutorial, you'll build a complete distributed app using .NET Aspire and see exactly how it solves the "clone and run" problem and the "deployment nightmare" that plague modern .NET development.**
 
-We'll create a .NET Aspire application with a Web API, background worker, PostgreSQL database, and deploy it all to Azure. 
+We'll create a .NET Aspire application with a Web API, background worker, PostgreSQL database, and deploy it all to Azure.
 
 By the end, you'll understand why .NET Aspire is changing how teams build and deploy distributed applications.
 
@@ -66,7 +66,7 @@ You will also need some sort of container runtime in your box, like **Docker Des
 ​
 
 ### **Step 2: Create your .NET Aspire solution**
-With the templates installed, you can create your Aspire solution either in Visual Studio, VS Code, or the .NET CLI. 
+With the templates installed, you can create your Aspire solution either in Visual Studio, VS Code, or the .NET CLI.
 
 Here I'll use VS Code with the C# Dev Kit:
 
@@ -136,7 +136,7 @@ Now let's take care of our data model.
 ​
 
 ### **Step 4: Define the data model**
-Our two upcoming .NET apps, an ASP.NET Core API and a Worker, will need to interact with our data model and the related EF Core DBContext. 
+Our two upcoming .NET apps, an ASP.NET Core API and a Worker, will need to interact with our data model and the related EF Core DBContext.
 
 Therefore, let's define those in a new reusable class library I'll call **GameStore.Data**:
 
@@ -211,7 +211,7 @@ We can now make a single call to **AddNpgsqlDbContext<TContext>** in Program.cs 
 
 ​
 
-Notice that "**GameStoreDB"** there matches exactly the name we specified in AppHost.cs, when we added the DB to the application model. 
+Notice that "**GameStoreDB"** there matches exactly the name we specified in AppHost.cs, when we added the DB to the application model.
 
 .NET Aspire's PostgreSQL client integration will look for the **ConnectionStrings__GameStoreDB** environment variable and grab the connection string from there.
 
@@ -251,7 +251,7 @@ Now let's add a few lines to **Worker.cs** to kick off the migration on startup:
 
 ​
 
-Our Worker project is ready. 
+Our Worker project is ready.
 
 ​
 
@@ -306,7 +306,7 @@ We could run our Aspire solution now, but there's one missing piece.
 ​
 
 ### **Step 8: Use the Service Defaults**
-As soon as you run your app locally, or deploy to Prod you will want to have some sort of metrics, know if everything is healthy, and a way to correlate logs when things are not working as expected. 
+As soon as you run your app locally, or deploy to Prod you will want to have some sort of metrics, know if everything is healthy, and a way to correlate logs when things are not working as expected.
 
 That's exactly the purpose of the ServiceDefaults project that comes with Aspire and that we have not used so far:
 
@@ -416,7 +416,7 @@ Let's say we choose to go with the **Azure** cloud. Then, the first thing to do 
 
 ​
 
-That will let us express exactly how we want our PostgreSQL server and database to be provisioned in Azure. 
+That will let us express exactly how we want our PostgreSQL server and database to be provisioned in Azure.
 
 We'll keep it simple here, so we will just call the **AddAzurePostgresFlexibleServer** method, while adding a call to **RunAsContainer**, so we can keep using our local PostgreSQL container:
 
@@ -458,9 +458,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -32,7 +32,7 @@ The flow of client/server communication in this setup is like this:
 
 2. The domain name is resolved to the server's public IP address by a DNS server.
 
-3. The web server receives the request, processes it, and talks to the database to fetch the data. 
+3. The web server receives the request, processes it, and talks to the database to fetch the data.
 
 4. The database returns the data to the web server, which will then send it back to the client.
 
@@ -146,9 +146,9 @@ And that's it, on to the next million users!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -8,21 +8,21 @@ issue-number: 92
 
 *Read time: 10 minutes*
 
-Picture this: your .NET API is cruising along in production, handling a few hundred requests per second without breaking a sweat. 
+Picture this: your .NET API is cruising along in production, handling a few hundred requests per second without breaking a sweat.
 
-Then Black Friday hits, or your app goes viral, and suddenly you're watching your single container instance buckle under the load. 
+Then Black Friday hits, or your app goes viral, and suddenly you're watching your single container instance buckle under the load.
 
 Response times spike to 20+ seconds. Users get timeout errors.
 
 Sound familiar?
 
-**This is exactly why horizontal scaling exists. Instead of throwing bigger hardware at the problem, you spin up multiple identical instances to share the load.** 
+**This is exactly why horizontal scaling exists. Instead of throwing bigger hardware at the problem, you spin up multiple identical instances to share the load.**
 
 It's the difference between hiring one superhuman cashier versus opening 10 normal checkout lanes.
 
 But here's the thing: most developers have never actually seen horizontal scaling work in practice.
 
-Today, I'm going to fix that. We'll build a simple .NET API endpoint, deploy it to Azure Container Apps, and then absolutely hammer it with heavy load. 
+Today, I'm going to fix that. We'll build a simple .NET API endpoint, deploy it to Azure Container Apps, and then absolutely hammer it with heavy load.
 
 The results will show you exactly why horizontal scaling is essential for any production application.
 
@@ -53,9 +53,9 @@ Now, let me clarify something about this test.
 ​
 
 ### **Why no database calls or external dependencies?**
-While real applications often involve database calls, including them in our scaling test would introduce too many variables. 
+While real applications often involve database calls, including them in our scaling test would introduce too many variables.
 
-Database connection pools, query optimization, and external service limits can become bottlenecks that mask the benefits of horizontal container scaling. 
+Database connection pools, query optimization, and external service limits can become bottlenecks that mask the benefits of horizontal container scaling.
 
 By using CPU-intensive work instead, we can cleanly demonstrate how additional container instances improve performance when the bottleneck is actually within our application code, not external dependencies.
 
@@ -64,7 +64,7 @@ Next, let's prepare our infrastructure.
 ​
 
 ### **Configuring scaling rules**
-​[Last week]({{ site.url }}/blog/build-self-healing-apps-health-checks-and-probes-with-net-aspire), I showed how to easily customize your Azure Container Apps infrastructure via the built-in extensibility points available in .NET Aspire's Azure hosting APIs. 
+​[Last week]({{ site.url }}/blog/build-self-healing-apps-health-checks-and-probes-with-net-aspire), I showed how to easily customize your Azure Container Apps infrastructure via the built-in extensibility points available in .NET Aspire's Azure hosting APIs.
 
 Well, we can use the same approach to define the scaling rules for our .NET API, like this:
 
@@ -84,7 +84,7 @@ Now let's run our test.
 ​
 
 ### **Stress testing with 1 replica**
-For this test, I'll use **hey**, a small but powerful open-source command-line tool designed to send some load to any web application. 
+For this test, I'll use **hey**, a small but powerful open-source command-line tool designed to send some load to any web application.
 
 Now, after my app is fully provisioned in Container Apps, here's the **hey** command I ran:
 
@@ -182,7 +182,7 @@ Here are our new results:
 
 ​
 
-Just that final line, where we can see **all** **100,000 requests returned a 200 OK response,** is an amazing achievement. 
+Just that final line, where we can see **all** **100,000 requests returned a 200 OK response,** is an amazing achievement.
 
 But let's do a more detailed comparison.
 
@@ -267,9 +267,9 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

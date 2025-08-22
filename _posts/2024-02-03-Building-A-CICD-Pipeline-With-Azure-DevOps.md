@@ -39,7 +39,7 @@ What could go wrong?
 
 ![](/assets/images/missing-ci-cd-pipeline.jpg)
 
-Well, it turns out that the new feature broke the login page, and now your users cannot log in to your application. 
+Well, it turns out that the new feature broke the login page, and now your users cannot log in to your application.
 
 You have to roll back the changes, fix the bug, and go through the whole process again.
 
@@ -58,7 +58,7 @@ When you combine these two practices, you get a **CI/CD pipeline**.
 
 ![](/assets/images/ci-cd-pipeline.jpg)
 
-In a CI/CD pipeline there's usually some remote server that listens for any changes to the code repository. 
+In a CI/CD pipeline there's usually some remote server that listens for any changes to the code repository.
 
 When a change is detected, the CI/CD server will automatically pull the latest code and perform all the steps you would normally do manually.
 
@@ -74,7 +74,7 @@ This brings in huge benefits such as:
 
 - **No dev boxes are needed for build/deploy**: The CI/CD server will take care of the build and deployment process, so you don’t need to have a dedicated machine for this.
 
-And, fortunately, you don't even have to stand up your own CI/CD server. 
+And, fortunately, you don't even have to stand up your own CI/CD server.
 
 Many cloud providers can stand up one for you in a matter of minutes, and today I'll show you how to use one of the most popular ones: **Azure Pipelines**.
 
@@ -142,7 +142,7 @@ steps:
   displayName: Build
   inputs:
     command: 'build'
-    projects: 'GameStore.sln'    
+    projects: 'GameStore.sln'
     arguments: '--configuration $(buildConfiguration)'
 ```
 
@@ -165,11 +165,11 @@ The last step of the CI process would be to create a Docker image for our app in
 <br/>
 
 #### **Step 3: Add your Continuous Deployment (CD) steps**
-To get docker images published to our [Azure Container Registry](https://learn.microsoft.com/azure/container-registry){:target="_blank"}, our pipeline agent will need to first authenticate to Azure and then to the actual registry. We can achieve both with the [Azure CLI](https://learn.microsoft.com/azure/devops/pipelines/tasks/reference/azure-cli-v2){:target="_blank"} task. 
+To get docker images published to our [Azure Container Registry](https://learn.microsoft.com/azure/container-registry){:target="_blank"}, our pipeline agent will need to first authenticate to Azure and then to the actual registry. We can achieve both with the [Azure CLI](https://learn.microsoft.com/azure/devops/pipelines/tasks/reference/azure-cli-v2){:target="_blank"} task.
 
-The first time you try to use that task (and any task that interacts with Azure), you'll get asked to grant permissions to the pipeline to access your Azure subscription. 
+The first time you try to use that task (and any task that interacts with Azure), you'll get asked to grant permissions to the pipeline to access your Azure subscription.
 
-That will automatically create a [service connection](https://learn.microsoft.com/azure/devops/pipelines/library/service-endpoints){:target="_blank"} in your Azure DevOps project, and a corresponding [App Registration](https://learn.microsoft.com/security/zero-trust/develop/app-registration){:target="_blank"} in your Microsoft Entra ID tenant. 
+That will automatically create a [service connection](https://learn.microsoft.com/azure/devops/pipelines/library/service-endpoints){:target="_blank"} in your Azure DevOps project, and a corresponding [App Registration](https://learn.microsoft.com/security/zero-trust/develop/app-registration){:target="_blank"} in your Microsoft Entra ID tenant.
 
 You may need the help of your Azure DevOps admin to get this set up, but once it's done, you can use this small task to have your pipeline authenticate to your Azure Container Registry:
 
@@ -197,10 +197,10 @@ With that out of the way, we can now build and push the Docker image to the regi
 - task: DotNetCoreCLI@2
   displayName: Publish Docker image
   inputs:
-    command: 'publish'    
+    command: 'publish'
     projects: 'GameStore.Api/GameStore.Api.csproj'
-    arguments: '-p ContainerRegistry=$(appName).azurecr.io 
-                -p ContainerImageTag=$(Build.BuildId) 
+    arguments: '-p ContainerRegistry=$(appName).azurecr.io
+                -p ContainerImageTag=$(Build.BuildId)
                 /t:PublishContainer'
     publishWebProjects: false
     zipAfterPublish: false
@@ -224,7 +224,7 @@ Finally, let's deploy the image to our [Azure Container App](https://learn.micro
 <br>
 
 #### **Step 4: Run It!**
-After you save your pipeline, which will get merged as a new commit in your repo, a new pipeline run will be triggered. 
+After you save your pipeline, which will get merged as a new commit in your repo, a new pipeline run will be triggered.
 
 And if everything is set up correctly, you should see something like this:
 
@@ -245,9 +245,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

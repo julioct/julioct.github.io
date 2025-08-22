@@ -11,7 +11,7 @@ issue-number: 69
 
 It's flu season in the US and after my 5yo went down with a cold, sure enough, one of my other kids followed and then it got me. So it's been a tough week, but hope to be recovering by the time you read this.
 
-On top of that, seems like it's time for a full Windows reinstall because this box has been giving me so much trouble lately. 
+On top of that, seems like it's time for a full Windows reinstall because this box has been giving me so much trouble lately.
 
 But before getting into that adventure, I thought it would be best to finish this newsletter, where I'll cover a topic many of you will have to deal with when working with JWTs: **claims transformation**.
 
@@ -42,9 +42,9 @@ The only problem is that the identity provider we are using, Keycloak in this ca
 
 ​
 
-So it is including both the *profile* and *email* scopes there, along our *gamestore_api.all* scope, but it puts all of them in a single string. 
+So it is including both the *profile* and *email* scopes there, along our *gamestore_api.all* scope, but it puts all of them in a single string.
 
-ASP.NET Core should be smart enough to find our scope in that string, no? 
+ASP.NET Core should be smart enough to find our scope in that string, no?
 
 Sadly no, which we can tell from our logs when trying to send a request with that access token:
 
@@ -53,7 +53,7 @@ Sadly no, which we can tell from our logs when trying to send a request with tha
 
 ​
 
-It fails because it expects our scope to have the value of *gamestore_api.all*, and nothing else. 
+It fails because it expects our scope to have the value of *gamestore_api.all*, and nothing else.
 
 We can fix this either by configuring our identity provider to emit the claim the way we need it or by adding code to our app to transform the received claim into what we need.
 
@@ -98,7 +98,7 @@ That's when I prefer to use the second approach.
 ​
 
 ### **Transforming claims via OnTokenValidated**
-This second approach is very similar to the first one, with the main difference being that the class we will create will be tied to a specific authentication scheme. 
+This second approach is very similar to the first one, with the main difference being that the class we will create will be tied to a specific authentication scheme.
 
 Here's the class:
 
@@ -148,9 +148,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

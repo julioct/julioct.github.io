@@ -22,13 +22,13 @@ Let's dive in.
 <br/>
 
 ### **Why version your APIs?**
-As more and more of your API endpoints start getting consumed by your clients, it will become increasingly difficult to make changes to the API without breaking existing clients. 
+As more and more of your API endpoints start getting consumed by your clients, it will become increasingly difficult to make changes to the API without breaking existing clients.
 
 For instance, say today you have an API endpoint that returns the details of a video game. Today, the response this endpoint sends back might look like this:
 
 ```json
 {
-  "id": 2, 
+  "id": 2,
   "name": "FIFA 23",
   "price": 69.99
 }
@@ -84,7 +84,7 @@ public static GameSummaryDtoV2 AsDtoV2(this Game game)
             game.Genre
         )
     );
-}   
+}
 ```
 
 <br/>
@@ -112,7 +112,7 @@ app.MapGet("games/{id}", async (IGamesRepository repository, int id) =>
 });
 ```
 
-How to deal with this? 
+How to deal with this?
 
 Time to introduce versioning.
 
@@ -133,7 +133,7 @@ Let's see how to use it.
 
 ### **Step 4: Implement API versioning**
 First thing to do is register the API versioning services in **Program.cs**:
-    
+
 ```csharp
 builder.Services.AddApiVersioning();
 ```
@@ -249,9 +249,9 @@ I hope it helps!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

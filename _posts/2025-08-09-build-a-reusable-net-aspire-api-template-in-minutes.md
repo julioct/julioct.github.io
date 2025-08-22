@@ -134,7 +134,7 @@ Great, now let's put it to the test.
 ​
 
 ### **Using the template**
-Let's say I want to create a new Aspire-enabled API for my new inventory management application. 
+Let's say I want to create a new Aspire-enabled API for my new inventory management application.
 
 Easy to get started with the new template:
 
@@ -171,7 +171,7 @@ Yep. Let's also open the Aspire Dashboard:
 
 ​
 
-Great! 
+Great!
 
 Finally, what about the integration tests?
 
@@ -203,9 +203,9 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

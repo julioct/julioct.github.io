@@ -11,11 +11,11 @@ issue-number: 76
 
 Have you ever landed on a website filled with images and spent the last several seconds patiently waiting for those images to finish loading in your browser?
 
-This actually happened to me recently as I was testing my small Game Store front-end, which when deployed to Azure, loads images from my Azure Storage account. 
+This actually happened to me recently as I was testing my small Game Store front-end, which when deployed to Azure, loads images from my Azure Storage account.
 
 The storage account is still in the US, but in the East US region, while I'm on the West Coast. Yet, images were not loading instantly in my browser, at least not the first time I loaded the page.
 
-This is one of those things you don't think much about when rushing to get that first version of your small website out the door. Yet, it will hit you hard as you try to scale to hundreds or thousands of customers. 
+This is one of those things you don't think much about when rushing to get that first version of your small website out the door. Yet, it will hit you hard as you try to scale to hundreds or thousands of customers.
 
 The good thing is that this has a well-known solution called a Content Delivery Network (CDN), and today, I'll show you how to configure one in the Azure cloud.
 
@@ -96,7 +96,7 @@ The first time I loaded the image in the browser it did take a bit more time to 
 
 ​
 
-So we went from 1.46 seconds to **126.29** **milliseconds**. And this is after clearing the browser cache. 
+So we went from 1.46 seconds to **126.29** **milliseconds**. And this is after clearing the browser cache.
 
 Quite an improvement!
 
@@ -141,7 +141,7 @@ A small sample of what's coming:
 
 ​
 
-I'm finishing the last diagram now, which means next week will be the time to start recording the course. 
+I'm finishing the last diagram now, which means next week will be the time to start recording the course.
 
 As a reminder, all current bootcamp students will get access to this new Azure for .NET Developers course, with downloadable diagrams and full source code, at no additional cost, on day 1.
 
@@ -155,9 +155,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -12,7 +12,7 @@ issue-number: 3
 
 Today I'll try to answer this common question: should I move to microservices?
 
-Microservices can be a great way to build systems that are resilient, scalable, and easy to maintain. 
+Microservices can be a great way to build systems that are resilient, scalable, and easy to maintain.
 
 Unfortunately, they are not a silver bullet, they are not for everyone and you can get into a lot of trouble if your timing is not right.
 
@@ -42,7 +42,7 @@ When you are just getting started, your code base is naturally small, so it's tr
 
 In fact, starting with a monolith and sticking with it while the code base remains small, is the way to go. No need to complicate things.
 
-But as the system grows, the codebase becomes more complex and harder to understand. 
+But as the system grows, the codebase becomes more complex and harder to understand.
 
 ![Alt text]({{ site.url }}/assets/images/complex-codebase.png)
 
@@ -59,7 +59,7 @@ Let's say you have a team of 10 devs working on a multiplayer game backend, a mo
 
 Team A, which is in charge of the Store module, is ready to release a new shiny feature. They are on schedule.
 
-However, Teams B and C also have a bunch of unrelated updates ready for the Inventory and Match Making modules. 
+However, Teams B and C also have a bunch of unrelated updates ready for the Inventory and Match Making modules.
 
 Team C is not super confident on their updates to the Match Making module, so they want to run a bunch of additional tests before releasing.
 
@@ -82,7 +82,7 @@ But, every now and then, like in Black Friday or when your Summer Sale starts, t
 
 Eventually the Match Making module can't handle the load, and crashes, and with it the entire system.
 
-Since your system is a monolith, all you can do (other than making Match Making more efficient) is add more servers, so the load distributes better. 
+Since your system is a monolith, all you can do (other than making Match Making more efficient) is add more servers, so the load distributes better.
 
 ![Alt text]({{ site.url }}/assets/images/servers.jpg)
 
@@ -122,7 +122,7 @@ Stick with a monolith in the early days, when the team and the code base are sma
 
 But keep your eyes open for clear indicators that you might be stepping into what Chris Richardson calls the <a href="https://microservices.io/microservices/general/2018/11/04/potholes-in-road-from-monolithic-hell" target="_blank">monolithic hell</a>.
 
-It might be time to move to microservices. 
+It might be time to move to microservices.
 
 And that's it for today.
 
@@ -134,9 +134,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -90,7 +90,7 @@ Specifically, the three courses in this stage will give you hands-on experience 
 
 It is incredibly exciting to see your app up and running in the cloud, and I believe that this is the point where you start transitioning from junior level to senior level since a cloud environment is a completely different beast than your local dev box, and there are many skills to master along the way.
 
-So, at the end of this stage, you will be ready to build and contribute to most small to mid-size .NET monolithic apps out there. 
+So, at the end of this stage, you will be ready to build and contribute to most small to mid-size .NET monolithic apps out there.
 
 You can end your journey here, but some of you may need to go beyond this point given the challenges of building systems at scale.
 
@@ -142,7 +142,7 @@ I would have loved to also include some good GraphQL and gRPC content in the boo
 ​
 
 ### **Your thoughts?**
-I would love to know of any feedback you might have on the topics I covered above. 
+I would love to know of any feedback you might have on the topics I covered above.
 
 Is there anything that you are really looking forward to learning across the bootcamp? Is there something you wish was included there and seems missing?
 
@@ -162,9 +162,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

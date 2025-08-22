@@ -9,9 +9,9 @@ issue-number: 41
 *Read time: 8 minutes*
 ​
 
-I hope you have been enjoying the newsletter issues so far, but starting today I'm switching to a different format. 
+I hope you have been enjoying the newsletter issues so far, but starting today I'm switching to a different format.
 
-No more tutorial-like issues since they take more time to make than I can afford these days. Also, this and future newsletter issues will no longer get published on my site but will only arrive by email. 
+No more tutorial-like issues since they take more time to make than I can afford these days. Also, this and future newsletter issues will no longer get published on my site but will only arrive by email.
 
 From here on I'll use the weekly newsletter to tell you about anything interesting I've been working on so hopefully you can learn from my learnings.
 
@@ -38,7 +38,7 @@ This is why I always tell folks that the best way to learn tech is to build some
 ​
 
 ### **The new e-commerce system so far**
-The new Game Store system I'm building has a few similarities to the popular [eShop Reference application](https://github.com/dotnet/eShop), which I have been exploring in-depth. 
+The new Game Store system I'm building has a few similarities to the popular [eShop Reference application](https://github.com/dotnet/eShop), which I have been exploring in-depth.
 
 ![](https://github.com/dotnet/eShop/raw/main/img/eshop_architecture.png)
 ​
@@ -159,7 +159,7 @@ In fact, I'm still working on a few more comments. It's a bit frustrating since 
 ### **Closing**
 So that will do it for today's update. Let me know if you have any feedback on what I'm trying to build there and things I might be missing.
 
-Until next week! 
+Until next week!
 
 ---
 
@@ -169,9 +169,9 @@ Until next week!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

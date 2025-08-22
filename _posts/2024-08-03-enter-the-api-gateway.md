@@ -13,20 +13,20 @@ This week my family and I were supposed to be enjoying our summer vacations in s
 
 Sadly, as it usually happens on that side of the mountain when it gets too hot, a bunch of wild fires started on the north side of the lake (and all around east Washington State), bringing smoke and bad air quality. So we decided to reschedule the trip for later in the year.
 
-On the flip side, that allowed me to keep working on the [.NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) project, this time diving into a series of prerequisites to get the Game Store system deployed to the cloud. 
+On the flip side, that allowed me to keep working on the [.NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) project, this time diving into a series of prerequisites to get the Game Store system deployed to the cloud.
 
 On to this week's update.
 ​
 
 ### **Getting ready for the cloud**
-Just for fun, and since I got the whole Game Store system running end to end locally, I decided to try to deploy it as-is to Azure via the [.NET Aspire](https://juliocasal.com/blog/Going-Cloud-Native-With-Dotnet-Aspire) integration with the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview) (azd). 
+Just for fun, and since I got the whole Game Store system running end to end locally, I decided to try to deploy it as-is to Azure via the [.NET Aspire](https://juliocasal.com/blog/Going-Cloud-Native-With-Dotnet-Aspire) integration with the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview) (azd).
 
 As expected, things didn't go quite smoothly. In fact, even azd crashed right away, which as I learned from trial and error, was due to version 1.9.5 of azd being broken:
 
 
 ![](/assets/images/2024-08-03/4ghDFAZYvbFtvU3CTR72ZN-csTmYw2ZLuypGZDn3KUaSC.jpeg)
 
-Going back to version **1.9.3** fixed those. 
+Going back to version **1.9.3** fixed those.
 
 After that, I was able to deploy things to Azure, but pretty much nothing was working. And that's because my Aspire app model was not ready for deployment.
 
@@ -39,7 +39,7 @@ So, to get this going in Azure, a bunch of infra dependencies need to be updated
 *   <span>Keycloak -> Entra ID</span>
 *   <span>Kafka -> ???</span>
 
-Kafka is interesting because there is no direct equivalent for it in the Azure cloud at least. The closest you can do is Azure Event Hubs, but from what I read you can't do [topic compaction](https://developer.confluent.io/courses/architecture/compaction/#topic-compaction-key-based-retention), which would complicate the [event-carried state transfer](https://www.grahambrooks.com/event-driven-architecture/patterns/stateful-event-pattern/) pattern across the system. 
+Kafka is interesting because there is no direct equivalent for it in the Azure cloud at least. The closest you can do is Azure Event Hubs, but from what I read you can't do [topic compaction](https://developer.confluent.io/courses/architecture/compaction/#topic-compaction-key-based-retention), which would complicate the [event-carried state transfer](https://www.grahambrooks.com/event-driven-architecture/patterns/stateful-event-pattern/) pattern across the system.
 
 Maybe the right thing to use there is the [Confluent Cloud](https://www.confluent.io/partner/microsoft-azure/), but we'll get back to this later.
 
@@ -67,7 +67,7 @@ For instance, here's how the Catalog microservice configures the message broker 
 
 Notice the **AddGameStoreMassTransit()** method there. That one will figure out what broker to use (RabbitMQ or Azure Service Bus) based on the .NET Aspire configuration and also provides a delegate to further configure MassTransit as needed.
 
-I'll explain how that all works in detail in the bootcamp, but for now there's a more pressing thing that we are still missing in this system. 
+I'll explain how that all works in detail in the bootcamp, but for now there's a more pressing thing that we are still missing in this system.
 
 ​
 
@@ -77,9 +77,9 @@ I knew I had to introduce an [API gateway](https://juliocasal.com/blog/Standing-
 
 However, as I was trying to enable [Entra ID](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID) as the identity provider for the system in the cloud, I faced a complication that prevented the frontend from being able to request access tokens for all microservices at once.
 
-After playing with Entra ID for a while, I now know that what I was trying to do is actually doable in a slightly different way, but instead of keep going that route I thought it was a good time to take a step back and do the right thing by introducing an API gateway. 
+After playing with Entra ID for a while, I now know that what I was trying to do is actually doable in a slightly different way, but instead of keep going that route I thought it was a good time to take a step back and do the right thing by introducing an API gateway.
 
-There are dozens of API gateways out there, and I have tried out both [nginx](https://nginx.org/) and [Emissary Ingress](https://www.getambassador.io/products/api-gateway) in the past, but for this project I really wanted to try out [YARP](https://microsoft.github.io/reverse-proxy) (Yet Another Reverse Proxy), given how well it integrates with ASP.NET Core applications. 
+There are dozens of API gateways out there, and I have tried out both [nginx](https://nginx.org/) and [Emissary Ingress](https://www.getambassador.io/products/api-gateway) in the past, but for this project I really wanted to try out [YARP](https://microsoft.github.io/reverse-proxy) (Yet Another Reverse Proxy), given how well it integrates with ASP.NET Core applications.
 
 So, after trying it out for a few minutes, I was able to enable it for my project very easily, since it only requires a few lines of C# code and a few other lines of configuration, like this:
 
@@ -158,7 +158,7 @@ Looks like this in the .NET Aspire dashboard:
 
 ​
 
-I think it's a nice helper for local development, however I don't see how any of that will translate to actual heath checks that can be used in the cloud (or maybe I'm missing something?). 
+I think it's a nice helper for local development, however I don't see how any of that will translate to actual heath checks that can be used in the cloud (or maybe I'm missing something?).
 
 Anyways, I'll get back to finish that Entra ID configuration and hopefully start that Azure deployment for real this time.
 
@@ -172,9 +172,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

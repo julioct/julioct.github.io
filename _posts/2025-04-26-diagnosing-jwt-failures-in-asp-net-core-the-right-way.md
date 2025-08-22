@@ -84,7 +84,7 @@ The next step is to add a bit more logging around our claims.
 ​
 
 ### **Logging all claims**
-Since our decoded token looks all fine, the problem must be with how our app is reading those claims. 
+Since our decoded token looks all fine, the problem must be with how our app is reading those claims.
 
 To figure this out, we can log the exact claims our app is receiving by handling the **OnTokenValidated** event, which triggers after the JWT is successfully validated:
 
@@ -175,9 +175,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -11,11 +11,11 @@ issue-number: 67
 
 A few days ago I finished the audiobook version of [Nexus](https://amzn.to/3C1q5Lb), the latest book by Yuval Noah Harari, and wow, it's such an impressive take on the impact of AI in our society and what could come next.
 
-One potential scenario mentioned in the book is the creation of AI-powered social credit systems, where governments or organizations score individuals based on their behaviors, decisions, and interactions. 
+One potential scenario mentioned in the book is the creation of AI-powered social credit systems, where governments or organizations score individuals based on their behaviors, decisions, and interactions.
 
-Governments today are already collecting an insane amount of data from all of us all the time via surveillance cameras, online activities, social media, and even financial transactions. 
+Governments today are already collecting an insane amount of data from all of us all the time via surveillance cameras, online activities, social media, and even financial transactions.
 
-What happens when you plug in a powerful AI model that can easily ingest all that data, analyze individuals' behaviors, and assign scores based on predefined "desirable" traits? 
+What happens when you plug in a powerful AI model that can easily ingest all that data, analyze individuals' behaviors, and assign scores based on predefined "desirable" traits?
 
 AI models could then predict future behaviors based on historical data, pre-emptively penalizing or rewarding individuals, meaning that people could be punished not for what they’ve done, but for what AI predicts they *might* do.
 
@@ -49,9 +49,9 @@ You can start by installing the **Microsoft.AspNetCore.Authentication.JwtBearer*
 
 ​
 
-The **AddAuthentication** call registers the core authentication services in the DI container, and **AddJwtBearer** configures the JWT Bearer authentication scheme so your application can accept and validate JWT tokens. 
+The **AddAuthentication** call registers the core authentication services in the DI container, and **AddJwtBearer** configures the JWT Bearer authentication scheme so your application can accept and validate JWT tokens.
 
-Now, we usually add those lines and move on to the next thing without thinking too much about what's going on. 
+Now, we usually add those lines and move on to the next thing without thinking too much about what's going on.
 
 But I think it's important to understand what **AddJwtBearer** is enabling for us behind the scenes:
 
@@ -81,16 +81,16 @@ The ClaimsPrincipal user object represents the security context of the incoming 
 
 What about that *IsAuthenticated == false* check? Would *true* mean that the user has been authenticated?
 
-Not at all! 
+Not at all!
 
 > In a protected back-end API, IsAuthenticated doesn't confirm that the user exists, is active, or has appropriate permissions in your application. It simply reflects the validity of the JWT at the time of the request.
 
 
 Remember that here we are in the back-end, not in a front-end application. All we have is an access token in the form of a JWT, which tells us what the client is authorized to do.
 
-The token might include user-related claims, but it doesn’t guarantee the user's current state in your system. 
+The token might include user-related claims, but it doesn’t guarantee the user's current state in your system.
 
-In other words, IsAuthenticated is purely about the validity of the access token, not the current state of the user or even whether a user is involved. 
+In other words, IsAuthenticated is purely about the validity of the access token, not the current state of the user or even whether a user is involved.
 
 OK, but how to read the info in the decoded JWT?
 
@@ -108,7 +108,7 @@ For instance, here's a code snippet to grab either the **Email** claim or the **
 
 All that will do is pull out the value from the corresponding claim from the **user.Identity.Claims** collection, which in this case will help us calculate the user ID based on either the email or the ID assigned to the user in the identity provider, as reported in the access token.
 
-Now, many times when you try to read simple claims like that you quickly find out that both them return **null**. 
+Now, many times when you try to read simple claims like that you quickly find out that both them return **null**.
 
 How can that be?
 
@@ -123,7 +123,7 @@ What exactly is getting populated in that Claims collection of the Identity prop
 
 ![](/assets/images/2025-01-11/4ghDFAZYvbFtvU3CTR72ZN-moPZp4eLUBU5pPke6pqNbp.jpeg)
 
-Which means that the two claims we are trying to query in code actually have a different name: 
+Which means that the two claims we are trying to query in code actually have a different name:
 
 **sub** => http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
 
@@ -131,7 +131,7 @@ Which means that the two claims we are trying to query in code actually have a d
 
 That is why we can't read those claims (and a few others), but why is this happening?
 
-Well, those strange **claim types exist primarily for historical and compatibility reasons, and they were meant to help integrate with Microsoft's broader ecosystem (as of who knows how many years ago). 
+Well, those strange **claim types exist primarily for historical and compatibility reasons, and they were meant to help integrate with Microsoft's broader ecosystem (as of who knows how many years ago).
 
 ASP.NET Core is automatically mapping our raw claims to these legacy claim types that most identity providers don't use today, especially in the context of the modern OAuth 2.0 and OIDC protocols.
 
@@ -153,7 +153,7 @@ Now when your endpoint receives a valid JWT, you will see a different set of cla
 
 And your code will no longer have trouble reading those email and sub claims. Done!
 
-Now there are more known issues with reading claims, like the **role** claim coming in the wrong place (which screws up role-based authorization) or the **scope** claim landing as a single string as opposed to an array of strings (which complicates claims-based authorization). 
+Now there are more known issues with reading claims, like the **role** claim coming in the wrong place (which screws up role-based authorization) or the **scope** claim landing as a single string as opposed to an array of strings (which complicates claims-based authorization).
 
 If you are facing those issues, check out [the bootcamp,](https://juliocasal.com/courses/dotnetbootcamp) where I go over the right way to deal with them.
 
@@ -168,9 +168,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -32,7 +32,7 @@ When you combine these two practices, you get a CI/CD pipeline, which might look
 
 ​
 
-So, when a dev pushes code to a remote repo, an automated process where the code is built, tested, and deployed kicks in. 
+So, when a dev pushes code to a remote repo, an automated process where the code is built, tested, and deployed kicks in.
 
 In our specific case, we want to use [Azure Pipelines (part of Azure DevOps)](https://juliocasal.com/blog/Building-A-CICD-Pipeline-With-Azure-DevOps) to automatically do these steps after every push to our remote repo:
 
@@ -49,7 +49,7 @@ Now, we want to enable this automation for each of our microservices repos, whic
 ​
 
 ### **.NET Aspire is not for multi-repo**
-.NET Aspire encourages you to mix both your infrastructure services and your .NET applications into a single model, which lives in a single monolithic repo. 
+.NET Aspire encourages you to mix both your infrastructure services and your .NET applications into a single model, which lives in a single monolithic repo.
 
 This looks nice, works great in demos, and impresses most folks as long as you have everything in a single repository. The problem is that you don't build large distributed systems at scale from a single repository.
 
@@ -72,7 +72,7 @@ That is the simplified AppHost model for a system that involves 2 microservices 
 
 For local development, I worked around the AddProject API problem by adding virtual solution folders to my Aspire solution that include projects from other repos (conveniently cloned next to my aspire repo). Ugly, but OK for local dev.
 
-But, for Azure deployments that we want to perform via a CI/CD pipeline, that is a no-go. 
+But, for Azure deployments that we want to perform via a CI/CD pipeline, that is a no-go.
 
 And we have even more problems.
 
@@ -88,9 +88,9 @@ But let's say you want to change 1 property in an Azure Storage Account. I tried
 
 ​
 
-Which I think works, but is so weird and undiscoverable. And on top of that is an experimental API that will change soon. 
+Which I think works, but is so weird and undiscoverable. And on top of that is an experimental API that will change soon.
 
-I ran into things like this for several of the Azure resources I wanted to use, and wasted tons of time trying to make it work. Hopefully, the upcoming Azure API will make it better. 
+I ran into things like this for several of the Azure resources I wanted to use, and wasted tons of time trying to make it work. Hopefully, the upcoming Azure API will make it better.
 
 But I eventually got tired of the limitations and decided to do things in a different way.
 
@@ -113,9 +113,9 @@ Which allows me to define every Azure resource exactly as I need it for my syste
 
 ​
 
-Plus, we also remove all the actual .NET microservices from that app model, leaving only the Azure resources. 
+Plus, we also remove all the actual .NET microservices from that app model, leaving only the Azure resources.
 
-After doing that, one call to **azd provision** will get all the Azure infrastructure services deployed to Azure. 
+After doing that, one call to **azd provision** will get all the Azure infrastructure services deployed to Azure.
 
 
 ![](/assets/images/2024-09-21/4ghDFAZYvbFtvU3CTR72ZN-5QCYNzRPjHgTx8C2dPZkhd.jpeg)
@@ -161,9 +161,9 @@ For instance, during local development, each microservice defines all the connec
 
 ​
 
-But if you have a secret named exactly **connectionstrings--catalog-db** in your Key Vault, it can replace the current value you can see there, because it follows the expected configuration hierarchy. 
+But if you have a secret named exactly **connectionstrings--catalog-db** in your Key Vault, it can replace the current value you can see there, because it follows the expected configuration hierarchy.
 
-As you saw, we are already following the convention in our Key Vault, so all that's missing is adding the Key Vault configuration provider. 
+As you saw, we are already following the convention in our Key Vault, so all that's missing is adding the Key Vault configuration provider.
 
 Here's where .NET Aspire actually helps, since its Key Vault integration will use that configuration provider behind the scenes.
 
@@ -181,11 +181,11 @@ And then, after installing the **Aspire.Azure.Security.KeyVault** NuGet package,
 
 ​
 
-With that, when your microservice boots in the cloud, it will connect to the specified Key Vault and populate all configuration values from the secrets populated during infra provisioning. 
+With that, when your microservice boots in the cloud, it will connect to the specified Key Vault and populate all configuration values from the secrets populated during infra provisioning.
 
 Also, notice the use of managed identities there. That clientId identifies all our microservices in Azure, and the associated managed identity has been granted reader access to the vault secrets.
 
-Now, how do we go about deploying one of these microservices from their own repo? 
+Now, how do we go about deploying one of these microservices from their own repo?
 
 ​
 
@@ -210,7 +210,7 @@ The really nice thing about azd (which plain Bicep deployments can't do) is use 
 
 ​
 
-The values are environment variables that you can pass from whichever terminal or command line you'd like to use, which is going to be key to our Azure Pipelines deployment later. 
+The values are environment variables that you can pass from whichever terminal or command line you'd like to use, which is going to be key to our Azure Pipelines deployment later.
 
 To kick off the deployment all you do is, again, run **azd provision**:
 
@@ -238,9 +238,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

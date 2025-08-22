@@ -9,22 +9,22 @@ issue-number: 58
 *Read time: 7 minutes*
 ​
 
-We are ready for launch! 
+We are ready for launch!
 
-Earlier this week I finished editing and uploading Course 1 of the new bootcamp to the learning site, and a few All-Access Pass members already started the first few modules. 
+Earlier this week I finished editing and uploading Course 1 of the new bootcamp to the learning site, and a few All-Access Pass members already started the first few modules.
 
 If you are new to the newsletter, I'm referring to the [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), which is a multi-course program for C# developers that want to get into cloud development with .NET.
 
 The bootcamp launches with the first course, **ASP.NET Core Essentials**, this **Tuesday, November 12**, and the other 8 planned courses will follow at roughly 1 course per month starting December.
 
-Today I want to answer one common question several of you might still have: 
+Today I want to answer one common question several of you might still have:
 
 How is this bootcamp different?
 
 ​
 
 ### **Monkey see, monkey do learning**
-There are hundreds of programming courses out there, including several excellent paid .NET courses on places like Udemy, Pluralsight, Dometrain, etc. And, I probably don't have to tell you about the thousands of free courses you'll find on YouTube. 
+There are hundreds of programming courses out there, including several excellent paid .NET courses on places like Udemy, Pluralsight, Dometrain, etc. And, I probably don't have to tell you about the thousands of free courses you'll find on YouTube.
 
 However, even when many of the instructors behind those courses are amazing software engineers, most of them (not all) will follow this kind of methodology across the learning content:
 
@@ -44,7 +44,7 @@ It roughly goes like this:
 
 Do these instructors know what they are doing? Of course they do, they are the top engineers in the field, with plenty of credentials to back them up.
 
-Is this the best way to learn? I don't think so. 
+Is this the best way to learn? I don't think so.
 
 I think there's a better way.
 
@@ -117,9 +117,9 @@ Stay tuned!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -10,7 +10,7 @@ issue-number: 59
 <div style="background-color: #eef; padding: 36px; margin: 24px 0; overflow: hidden;">
   <p><strong>The .NET Saturday is brought to you by:</strong></p>
   <p>
-Grow into a better developer with Rider! The most loved .NET and game dev IDE is now free for non-commercial development. 
+Grow into a better developer with Rider! The most loved .NET and game dev IDE is now free for non-commercial development.
   </p>
   <p>
   <a href="https://www.jetbrains.com/rider/?utm_campaign=rider_free&utm_content=site&utm_medium=cpc&utm_source=dotnet_suturday_newsletter" target="_blank">Download Rider</a>
@@ -18,7 +18,7 @@ Grow into a better developer with Rider! The most loved .NET and game dev IDE is
 </div>
 ​
 
-Wow, the bootcamp launch went really well. I was expecting some excitement about becoming a .NET cloud developer, but the response has exceeded all my expectations! 
+Wow, the bootcamp launch went really well. I was expecting some excitement about becoming a .NET cloud developer, but the response has exceeded all my expectations!
 
 Now, one more thing that made big news this week was the release of **.NET 9**, which introduces C# 13 and several updates across the .NET Runtime/Libraries/SDK, ASP.NET Core, EF Core, .NET Aspire, and a bunch of other things.
 
@@ -53,13 +53,13 @@ What's the problem with that?
 
 Well, arguably that approach will work OK for a simple CRUD operation that doesn't have high scalability needs, and that can happily run in a single compute node.
 
-However, it becomes problematic when we move into more interesting scenarios, like creating a purchase order. 
+However, it becomes problematic when we move into more interesting scenarios, like creating a purchase order.
 
 The thing about taking orders in an e-commerce system is that **you have to be fast. Really fast**.
 
 I mean, have you ever tried to buy a product or a ticket at a moment when hundreds of other people are trying to do the same, just to be faced with crazy timeout errors or crashes?
 
-That happens because when receiving your request, such systems will immediately try to save your order into their DB, also relying on the DB to generate the order ID. 
+That happens because when receiving your request, such systems will immediately try to save your order into their DB, also relying on the DB to generate the order ID.
 
 And, doing that is expensive when you have hundreds of other requests coming into your system and trying to save stuff into the DB. The DB becomes a big bottleneck.
 
@@ -111,7 +111,7 @@ There's not much you can do about the first problem, but there's a way to deal w
 ​
 
 ### **Using time-ordered GUIDs**
-RFC 9562 introduced **UUID Version 7**, designed for time-ordered UUIDs. It uses a combination of a 48-bit Unix timestamp and random bits, making them sortable by the time of generation. 
+RFC 9562 introduced **UUID Version 7**, designed for time-ordered UUIDs. It uses a combination of a 48-bit Unix timestamp and random bits, making them sortable by the time of generation.
 
 This contrasts with the traditional UUID Version 4, which is what you get when doing Guid.NewGuid(), and which is fully random and has no order.
 
@@ -158,9 +158,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

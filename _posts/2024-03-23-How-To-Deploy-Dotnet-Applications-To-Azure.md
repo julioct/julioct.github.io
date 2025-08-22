@@ -60,7 +60,7 @@ After that, you will have a few new files in your repo:
 
 ```yaml
 name: aspiredemo01
-services:  
+services:
   app:
     language: dotnet
     project: .\GameStore.AppHost\GameStore.AppHost.csproj
@@ -137,7 +137,7 @@ Took me 3 minutes to fix both issues and then I was ready to try the published a
 <br/>
 
 ### **Step 5: Try the app in Azure**
-As you can see in the last screenshot, you will get Azure URLs for both your frontend and backend. 
+As you can see in the last screenshot, you will get Azure URLs for both your frontend and backend.
 
 In my case, my frontend endpoint was https://frontend.mangobeach-a7b5abba.eastus.azurecontainerapps.io, so if I navigate there I get to my frontend UI:
 
@@ -145,7 +145,7 @@ In my case, my frontend endpoint was https://frontend.mangobeach-a7b5abba.eastus
 
 (those 5 games were not there just after deployment, but I created them afterward for a nice screenshot 😄)
 
-But where are all the Azure resources that got provisioned for that app? 
+But where are all the Azure resources that got provisioned for that app?
 
 They are all in your Azure subscription, which you can explore in the Azure Portal:
 
@@ -163,9 +163,9 @@ Mission Accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

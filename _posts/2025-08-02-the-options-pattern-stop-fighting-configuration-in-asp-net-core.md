@@ -61,7 +61,7 @@ But for local development, .NET applications can also use **user secrets**, whic
 
 ​
 
-That will store the keys out of your repo, somewhere in your machine's user profile dir. 
+That will store the keys out of your repo, somewhere in your machine's user profile dir.
 
 To read them, you can use the **IConfiguration** interface, which will resolve into an object automatically registered by ASP.NET Core and that contains all configuration values:
 
@@ -148,9 +148,9 @@ So if we now run our app (without any user secret set) and invoke our endpoint, 
 
 ​
 
-That at least fails before we try to use invalid values to construct our StripeClient in our endpoint. 
+That at least fails before we try to use invalid values to construct our StripeClient in our endpoint.
 
-But why wait until a request arrives, just to realize we are missing the keys? 
+But why wait until a request arrives, just to realize we are missing the keys?
 
 Better to fail fast on startup with one small change:
 
@@ -205,7 +205,7 @@ Now let's run our AppHost and browse to Aspire's dashboard:
 
 ​
 
-Not only will our app not crash, but also: 
+Not only will our app not crash, but also:
 
 *   <span>It understands that there are required parameters with missing values</span>
 *   <span>It puts the API project on hold until the missing values are entered</span>
@@ -250,9 +250,9 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

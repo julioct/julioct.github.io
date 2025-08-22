@@ -93,8 +93,8 @@ To learn how to build web frontends or backend APIs:
 * [Get my ASP.NET Core Full Stack Bundle]({{ site.url }}/courses/aspnetcore-fullstack-bundle)
 
 To learn how to build other types of web applications:
-* [Get my .NET Backend Developer Roadmap]({{ site.url }}/roadmap) 
-* [Read the official ASP.NET Core documentation](https://learn.microsoft.com/aspnet/core){:target="_blank"}. 
+* [Get my .NET Backend Developer Roadmap]({{ site.url }}/roadmap)
+* [Read the official ASP.NET Core documentation](https://learn.microsoft.com/aspnet/core){:target="_blank"}.
 
 <br/>
 
@@ -105,7 +105,7 @@ There are a few options to build applications meant to be installed on Windows m
 * **WPF (Windows Presentation Foundation)**: A well-established framework for Windows desktop applications with access to .NET or the .NET Framework that uses XAML markup to separate UI from code.
 * **Windows Forms**: A traditional way to build desktop applications with .NET, using a drag-and-drop interface to design the user interface.
 
-For any new desktop application, the recommendation is to go with **WinUI**, as it is the most modern and future-proof option. 
+For any new desktop application, the recommendation is to go with **WinUI**, as it is the most modern and future-proof option.
 
 #### To Get Started
 * [Read this official guide](https://learn.microsoft.com/windows/apps/get-started/start-here){:target="_blank"}
@@ -134,7 +134,7 @@ That's because C# is the language of choice for the [Unity game engine](https://
 Unity is used to build games for a wide range of platforms, from consoles to Windows machines and mobile devices, and it has a large and active community of developers that contribute to the ecosystem with libraries, tools, and tutorials.
 
 #### To Get Started
-* [Read this tutorial](https://dotnet.microsoft.com/en-us/learn/games/unity-tutorial/intro){:target="_blank"} 
+* [Read this tutorial](https://dotnet.microsoft.com/en-us/learn/games/unity-tutorial/intro){:target="_blank"}
 * [Watch this YouTube video](https://youtu.be/XtQMytORBmM?si=NgwHzOEvzceaVKLR){:target="_blank"}
 
 <br/>
@@ -148,7 +148,7 @@ A common pattern for building distributed systems is the **microservices archite
 
 #### To Get Started
 To get started with .NET Aspire:
-* [Check out my article]({{ site.url }}/blog/Going-Cloud-Native-With-Dotnet-Aspire) 
+* [Check out my article]({{ site.url }}/blog/Going-Cloud-Native-With-Dotnet-Aspire)
 * [Watch my YouTube video](https://youtu.be/pk6FJfHhfq8){:target="_blank"}.
 * [Join my .NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)
 
@@ -157,10 +157,10 @@ To get started with .NET Aspire:
 ### **Internet of Things (IoT) Apps**
 You fall into this category if you are trying to build an app that can run on devices like a Raspberry Pi or a HummingBoard, to take advantage of sensors, leds, and other components built into or attached to those devices.
 
-For this, you want to use the [.NET IoT libraries](https://learn.microsoft.com/en-us/dotnet/iot/intro){:target="_blank"}, which you can use anywhere .NET is supported, including most versions of Linux that support ARM/ARM64 and Windows 10 IoT Core. 
+For this, you want to use the [.NET IoT libraries](https://learn.microsoft.com/en-us/dotnet/iot/intro){:target="_blank"}, which you can use anywhere .NET is supported, including most versions of Linux that support ARM/ARM64 and Windows 10 IoT Core.
 
 #### To Get Started
-* [Read this tutorial](https://learn.microsoft.com/en-us/training/modules/create-iot-device-dotnet){:target="_blank"} 
+* [Read this tutorial](https://learn.microsoft.com/en-us/training/modules/create-iot-device-dotnet){:target="_blank"}
 * [Watch this YouTube series](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWG4G6NxHV2yGEb42vQaFNc){:target="_blank"}
 
 <br>
@@ -181,9 +181,9 @@ And don't forget to enjoy the learning journey!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

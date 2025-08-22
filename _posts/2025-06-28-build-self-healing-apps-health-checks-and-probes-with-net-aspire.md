@@ -11,13 +11,13 @@ issue-number: 91
 
 Ever wondered how your container orchestrator knows if your .NET app is actually working, or just pretending to be alive?
 
-Most developers assume everything's fine if the container starts. But there's a huge difference between "running" and "healthy." 
+Most developers assume everything's fine if the container starts. But there's a huge difference between "running" and "healthy."
 
 **Your app might be up, but completely unable to connect to the database or process requests.**
 
 That's where health checks come in—endpoints that tell your infrastructure whether your app is genuinely ready to handle traffic.
 
-But here's the catch: getting health checks right in production is tricky. You need them accessible to your orchestrator, but not to the public internet. 
+But here's the catch: getting health checks right in production is tricky. You need them accessible to your orchestrator, but not to the public internet.
 
 Today, I'll show you how to add health checks to your .NET app that stay secure and integrate seamlessly using .NET Aspire.
 
@@ -66,7 +66,7 @@ For this, we can use the **RequireHost** method, specifying a new port that we w
 
 ​
 
-Using ***:8081** means that the health check endpoints will be reachable only if the request targets port 8081. 
+Using ***:8081** means that the health check endpoints will be reachable only if the request targets port 8081.
 
 Requests that target any other port, including ASP.NET Core's default port 8080, will be rejected.
 
@@ -180,9 +180,9 @@ Production-ready from day one.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

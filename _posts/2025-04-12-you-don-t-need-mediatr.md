@@ -30,7 +30,7 @@ Let's dive in.
 ​
 
 ### **What is MediatR, and why do people use it?**
-MediatR is a popular open-source library that implements the **mediator pattern:** 
+MediatR is a popular open-source library that implements the **mediator pattern:**
 
 You send a request (a Command or Query) to a mediator (ISender or IMediator), which dispatches it to a handler.
 
@@ -182,9 +182,9 @@ And stop abstracting away the simple stuff.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

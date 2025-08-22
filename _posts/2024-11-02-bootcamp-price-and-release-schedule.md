@@ -9,7 +9,7 @@ issue-number: 57
 *Read time: 5 minutes*
 ​
 
-Course 1 of the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) is now fully recorded! 
+Course 1 of the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) is now fully recorded!
 
 I had forgotten how intensive that process can be and how many retakes are sometimes needed for the best possible result. In fact, I just finished re-recording the entire 5th module because I didn't like the progression in those lessons. Time-consuming, but it was worth it!
 
@@ -66,7 +66,7 @@ Course 3, ASP.NET Core Security, becomes available. Again, all bootcamp owners a
 
 **February 4: Course 4 Launch**
 
-Course 4: Azure Deployment, becomes available for all bootcamp owners and All-Access Pass holders. 
+Course 4: Azure Deployment, becomes available for all bootcamp owners and All-Access Pass holders.
 
 ​
 
@@ -75,9 +75,9 @@ After course 4, each new course should land on a month-by-month schedule, but I 
 ​
 
 ### **Early access for All-Access Pass holders**
-As you saw above, All-Access Pass holders will get early access to the bootcamp several days before launch. 
+As you saw above, All-Access Pass holders will get early access to the bootcamp several days before launch.
 
-This is because their support is invaluable in keeping me going, and I would love to get some good early feedback. 
+This is because their support is invaluable in keeping me going, and I would love to get some good early feedback.
 
 Thank you folks!
 
@@ -102,9 +102,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

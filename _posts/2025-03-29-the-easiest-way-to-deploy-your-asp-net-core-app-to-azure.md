@@ -56,7 +56,7 @@ If you have an app that all it does is respond to HTTP triggers, process message
 
 If your app is bursty, irregular, or has unpredictable demand, where sometimes you need to scale out massively, where other times you might as well scale to zero, you need to use containers.
 
-The trick here is just how much control you want on the service that orchestrates those containers. 
+The trick here is just how much control you want on the service that orchestrates those containers.
 
 Need full control to fine-tune how those containers run? Go for **Azure Kubernetes Service (AKS)**, but be ready for lots of infra management.
 
@@ -66,7 +66,7 @@ Need containers but want to avoid all the infra management overhead? Go with **A
 
 **Is your app too simple for any of the above?**
 
-Then just use **Azure App Service**. If you're building a typical web app or API without special scaling needs or OS-level dependencies, or if you need to get something out quickly, this is a rock-solid choice. 
+Then just use **Azure App Service**. If you're building a typical web app or API without special scaling needs or OS-level dependencies, or if you need to get something out quickly, this is a rock-solid choice.
 
 It's stable, easy to deploy, and lets you go from your box to the cloud in minutes without having to dive into additional infrastructure or container-related concerns.
 
@@ -96,7 +96,7 @@ Then open your code base in VS Code and start the App Service Web App creation w
 
 ​
 
-The very first time you do this you will likely need to sign in to your Azure account and select your subscription. 
+The very first time you do this you will likely need to sign in to your Azure account and select your subscription.
 
 Then, give your Web App a name:
 
@@ -224,11 +224,11 @@ Need to build something at scale using containers? I'll cover Azure Container Ap
 ​
 
 ### **Wrapping Up**
-Azure gives you a dozen ways to deploy your .NET app—but most of them are overkill for getting started. 
+Azure gives you a dozen ways to deploy your .NET app—but most of them are overkill for getting started.
 
-If you just want your ASP.NET Core app running in the cloud *today*, Azure App Service is the fastest path with the least friction. 
+If you just want your ASP.NET Core app running in the cloud *today*, Azure App Service is the fastest path with the least friction.
 
-Once you’ve mastered that, you can level up to containers, scaling, and all the fancy stuff. 
+Once you’ve mastered that, you can level up to containers, scaling, and all the fancy stuff.
 
 But don’t start complicated. Start simple. Deploy. Then grow.
 
@@ -240,9 +240,9 @@ Until next week!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -9,7 +9,7 @@ issue-number: 39
 
 *Read time: 6 minutes*
 
-Today I'll show you how to add MongoDB support to your ASP.NET Core application. 
+Today I'll show you how to add MongoDB support to your ASP.NET Core application.
 
 Relational databases are great, but sometimes a NoSQL database like MongoDB can be a better fit to match your requirements.
 
@@ -22,7 +22,7 @@ Let's dive in.
 <br/>
 
 ### **What is MongoDB?**
-MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It is a popular choice for developers because it is easy to use and can scale with your application. 
+MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It is a popular choice for developers because it is easy to use and can scale with your application.
 
 ![](/assets/images/tns-39-what-is-mongodb.jpg)
 
@@ -39,7 +39,7 @@ Let me show you how to add MongoDB support to an ASP.NET Core API.
 <br/>
 
 ### **A shopping basket ASP.NET Core API**
-For this tutorial, I have prepared a simple ASP.NET Core API meant to manage the shopping basket of an e-commerce application. 
+For this tutorial, I have prepared a simple ASP.NET Core API meant to manage the shopping basket of an e-commerce application.
 
 Our minimal API currently defines these 2 endpoints:
 
@@ -87,7 +87,7 @@ public class BasketItem
 }
 ```
 
-The **Id** in **Basket** is the user ID, since each user can have only one basket. 
+The **Id** in **Basket** is the user ID, since each user can have only one basket.
 
 I'll skip the DTOs and mapping logic since they are not relevant to this tutorial.
 
@@ -119,7 +119,7 @@ Here's an initial implementation of our **MongoBasketRepository**:
 public class MongoBasketRepository(IMongoDatabase database) : IBasketRepository
 {
     private const string collectionName = "Baskets";
-    private readonly IMongoCollection<Basket> collection = 
+    private readonly IMongoCollection<Basket> collection =
         database.GetCollection<Basket>(collectionName);
 
     public async Task<Basket> GetAsync(Guid id)
@@ -173,7 +173,7 @@ public async Task UpsertAsync(Guid id, Basket basket)
 }
 ```
 
-In this method, we are using the **ReplaceOneAsync** method to replace the document that matches the filter in the collection. 
+In this method, we are using the **ReplaceOneAsync** method to replace the document that matches the filter in the collection.
 
 The really cool thing here is that we are using the **IsUpsert** option to create the document if it doesn't exist. This is a powerful feature of MongoDB that allows us to create or update a document with a single operation.
 
@@ -185,7 +185,7 @@ Here's the complete implementation, with a small helper method to build the filt
 public class MongoBasketRepository(IMongoDatabase database) : IBasketRepository
 {
     private const string collectionName = "Baskets";
-    private readonly IMongoCollection<Basket> collection = 
+    private readonly IMongoCollection<Basket> collection =
         database.GetCollection<Basket>(collectionName);
 
     public async Task<Basket> GetAsync(Guid id)
@@ -205,7 +205,7 @@ public class MongoBasketRepository(IMongoDatabase database) : IBasketRepository
                                          new ReplaceOptions { IsUpsert = true });
     }
 
-    private static FilterDefinition<Basket> BuildIdFilter(Guid id) 
+    private static FilterDefinition<Basket> BuildIdFilter(Guid id)
         => Builders<Basket>.Filter.Eq(basket => basket.Id, id);
 }
 ```
@@ -321,11 +321,11 @@ This is where the configuration magic happens. Let's break it down a bit:
 
 - **AddDatabase** adds a database resource to the application model. The **gamestore-db** parameter is the name of the database and is the name we used in the **AddMongoDBClient** method in the API project.
 
-- **AddProject** adds the API project to the application model. 
+- **AddProject** adds the API project to the application model.
 
 - **WithReference** establishes a reference between the API project and the database resource, effectively injecting the MongoDB database connection string into the API project's configuration.
 
-So, in essence, those few lines are saying: 
+So, in essence, those few lines are saying:
 
 "*I have an API that needs a MongoDB database. You go figure out the details to make the required database available to the API.*"
 
@@ -357,7 +357,7 @@ Content-Type: application/json
             "ProductName": "FIFA 23",
             "Price": 69.97,
             "Quantity": 1
-        }        
+        }
     ]
 }
 ```
@@ -382,9 +382,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

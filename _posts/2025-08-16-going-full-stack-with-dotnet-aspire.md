@@ -29,7 +29,7 @@ Let's dive in.
 ### **The initial setup**
 For this full-stack application, I'll reuse the Game Store .NET API I built in my [ASP.NET Core Full Course For Beginners](https://youtu.be/AhAxLiGC7Pc){:target="_blank"}, so I won't go over that here.
 
-And, for the React frontend, I just asked GitHub Copilot to turn the app I created in my [Blazor Full Course For Beginners](https://youtu.be/RBVIclt4sOo){:target="_blank"} into a React app with Vite. 
+And, for the React frontend, I just asked GitHub Copilot to turn the app I created in my [Blazor Full Course For Beginners](https://youtu.be/RBVIclt4sOo){:target="_blank"} into a React app with Vite.
 
 The part of the React application I find most relevant to this article is how it talks to the .NET backend, which, in Vite, starts by defining a proxy configuration in **vite.config.ts**:
 
@@ -42,9 +42,9 @@ During local development, the proxy forwards all `/api/*` requests to localhost:
 
 It will also remove /api from the request path, so it matches the correct path in the backend. For instance, this request:
 
-GET /api/games 
+GET /api/games
 
-Will be forwarded here: 
+Will be forwarded here:
 
 GET localhost:5274/games
 
@@ -110,9 +110,9 @@ Let's unwrap what's going on there:
 4.  <span>We call **WaitFor** so that the React app doesn't start unless the API has successfully done so.</span>
 5.  <span>We call **WithHttpEndpoint** so that we enable an HTTP endpoint for the React app in port **5173,** and we set that port into the **VITE_PORT** env var so that Vite understands that's the port to listen on.</span>
 
-That will take care of starting the React app, along with our API, by just running the Aspire app. 
+That will take care of starting the React app, along with our API, by just running the Aspire app.
 
-Problem 1 solved. 
+Problem 1 solved.
 
 Next problem.
 
@@ -121,9 +121,9 @@ Next problem.
 ### **Adding service discovery**
 Now that the React app is referencing the API project in our app model, Aspire will enable service discovery between them.
 
-This means that a new environment variable will be injected into the Vite process with whichever address Aspire assigned to our .NET API. 
+This means that a new environment variable will be injected into the Vite process with whichever address Aspire assigned to our .NET API.
 
-For our API, the env var will look like this: 
+For our API, the env var will look like this:
 
 **services__gamestore-api__http__0**
 
@@ -202,13 +202,13 @@ This is what full-stack development should look like.
 
 No more onboarding nightmares where new developers spend their first day just trying to get everything running.
 
-With .NET Aspire, your React frontend and .NET backend work together as a unified system. 
+With .NET Aspire, your React frontend and .NET backend work together as a unified system.
 
 **The "clone and F5" experience isn't just a nice-to-have—it's essential for productive teams.**
 
 When your development environment setup becomes invisible, your team can focus on what actually matters: building features that customers love.
 
-**P.S.** If you want to see this approach scaled up to a real-world e-commerce system—complete with Keycloak and Entra ID authentication, and production Azure deployment—check out my [Containers & .NET Aspire course](https://juliocasal.com/courses/containers-and-dotnet-aspire). 
+**P.S.** If you want to see this approach scaled up to a real-world e-commerce system—complete with Keycloak and Entra ID authentication, and production Azure deployment—check out my [Containers & .NET Aspire course](https://juliocasal.com/courses/containers-and-dotnet-aspire).
 
 ---
 
@@ -216,9 +216,9 @@ When your development environment setup becomes invisible, your team can focus o
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -25,9 +25,9 @@ Let's start.
 <br/>
 
 ### **What is NuGet?**
-In a nutshell, NuGet is a package manager for .NET. 
+In a nutshell, NuGet is a package manager for .NET.
 
-It's a tool that allows you to easily add third-party libraries to your .NET projects. 
+It's a tool that allows you to easily add third-party libraries to your .NET projects.
 
 <img src="{{ site.url }}/assets/images/what-is-nuget.png"/>
 
@@ -96,7 +96,7 @@ To do so, you can add a few properties like **Description**, **Authors** and **C
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Server networking utilities.</Description>
     <Authors>Julio Casal</Authors>
-    <Company>Game Shop</Company>        
+    <Company>Game Shop</Company>
   </PropertyGroup>
 
 </Project>
@@ -178,7 +178,7 @@ We are now ready to publish our NuGet package to the feed.
 To publish your NuGet package, switch to the location where you packaged it in your terminal and then run the following command:
 
 ```powershell
-dotnet nuget push Servers.NetworkUtils.1.0.0.nupkg --source DotnetAcademy --api-key AZ 
+dotnet nuget push Servers.NetworkUtils.1.0.0.nupkg --source DotnetAcademy --api-key AZ
 --interactive
 ```
 
@@ -237,7 +237,7 @@ app.MapPost("/servers", () =>
 
     return new GameServer(
         id,
-        $"Server-{id}", 
+        $"Server-{id}",
         AddressGenerator.GetIpAddress(),
         AddressGenerator.GetPort());
 });
@@ -251,7 +251,7 @@ Mission accomplished!
 There are a bunch of things I didn't get to cover here, like:
 
 * How to version your NuGet packages
-* How to consume NuGet packages from private feeds in Docker 
+* How to consume NuGet packages from private feeds in Docker
 * How to build and publish NuGet packages in your CI/CD pipelines
 
 If you are interested, I cover that and a bunch of other related topics in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
@@ -266,9 +266,9 @@ Till next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

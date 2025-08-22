@@ -8,17 +8,17 @@ issue-number: 95
 
 *Read time: 10 minutes*
 
-My [Keycloak tutorial]({{ site.url }}/blog/keycloak-tutorial-for-net-developers) became one of my most popular blog posts so far, and for good reason: It worked. 
+My [Keycloak tutorial]({{ site.url }}/blog/keycloak-tutorial-for-net-developers) became one of my most popular blog posts so far, and for good reason: It worked.
 
 But let's be honest about what "worked" actually meant.
 
-Sure, authentication was running locally. But every new team member had to manually configure Keycloak realms from scratch. 
+Sure, authentication was running locally. But every new team member had to manually configure Keycloak realms from scratch.
 
-And you had to remember to run `docker-compose up` before hitting F5. 
+And you had to remember to run `docker-compose up` before hitting F5.
 
 **We connected a local Keycloak server with our .NET app, but we didn't solve the 'works on my machine' problem.**
 
-What if Keycloak could start automatically with your app, pre-configured with the exact realms and clients your application needs? 
+What if Keycloak could start automatically with your app, pre-configured with the exact realms and clients your application needs?
 
 What if all connection details were wired up automatically for both backend and frontend?
 
@@ -125,7 +125,7 @@ That makes Keycloak part of our application model, not just a separate infra ser
 *   <span>Have a data volume</span>
 *   <span>Import the realm configuration we exported in Step 1</span>
 
-What about things like the container image to use, admin credentials, and where exactly to map the volume? 
+What about things like the container image to use, admin credentials, and where exactly to map the volume?
 
 Well, Aspire has good, opinionated defaults for those, which you can change if you wish, or accept and move on.
 
@@ -148,9 +148,9 @@ And if we open our **Aspire Dashboard** (from that link in the console) we'll se
 
 ​
 
-But wait, we'll need admin credentials to login to Keycloak. 
+But wait, we'll need admin credentials to login to Keycloak.
 
-Where to get those? 
+Where to get those?
 
 .NET Aspire will come up with a default admin and password, and you can get them by clicking on the Keycloak resource and scrolling down to the **Environment Variables** section:
 
@@ -289,7 +289,7 @@ Then, we can provide it to our app model, for local development at least, by run
 
 ​
 
-If you had set that secret directly in your frontend project before, it's safe to remove it now. 
+If you had set that secret directly in your frontend project before, it's safe to remove it now.
 
 Plus, you can also get rid of the hardcoded Authority URL in the frontend's OIDC configuration:
 
@@ -355,7 +355,7 @@ And that's all for today.
 
 See you next Saturday.
 
-**P.S.** If you're ready to take this containerized, production-ready approach beyond just Keycloak, my [**Containers & .NET Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire) shows you how to build bulletproof .NET applications from day 1. 
+**P.S.** If you're ready to take this containerized, production-ready approach beyond just Keycloak, my [**Containers & .NET Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire) shows you how to build bulletproof .NET applications from day 1.
 
 ---
 
@@ -363,9 +363,9 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

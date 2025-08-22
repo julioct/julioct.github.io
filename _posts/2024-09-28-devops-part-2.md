@@ -9,15 +9,15 @@ issue-number: 52
 *Read time: 9 minutes*
 ​
 
-It's done! A couple of days ago I finally completed the Game Store system, the distributed .NET Web application that will drive the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) (Is that a good name? Let me know!). 
+It's done! A couple of days ago I finally completed the Game Store system, the distributed .NET Web application that will drive the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) (Is that a good name? Let me know!).
 
-I'm amazed by how much the tech has advanced in the .NET and Azure world in the last few years. There's so much going on in this field that I have no idea how folks are solving today's chaotic puzzle to learn cloud development with .NET. 
+I'm amazed by how much the tech has advanced in the .NET and Azure world in the last few years. There's so much going on in this field that I have no idea how folks are solving today's chaotic puzzle to learn cloud development with .NET.
 
 I was lucky enough to enter the .NET and Azure era more than a decade ago, so I got a good sense of how to approach cloud development with .NET, and that's what the bootcamp is all about.
 
-With the core project ready, I'll now switch gears to the next step: try to rebuild the entire thing in the most "teachable" way. This means building it in a way that is easy to understand even for most beginners, taking plenty of notes along the way, and figuring out which parts deserve a good slide deck to land solid concepts. 
+With the core project ready, I'll now switch gears to the next step: try to rebuild the entire thing in the most "teachable" way. This means building it in a way that is easy to understand even for most beginners, taking plenty of notes along the way, and figuring out which parts deserve a good slide deck to land solid concepts.
 
-I'm very excited to start this next phase, and at some point I'll tell you more about how I like to approach teaching (quite different from other instructors) but first let me tell you what I had to do to get the Game Store properly deployed via Azure DevOps. 
+I'm very excited to start this next phase, and at some point I'll tell you more about how I like to approach teaching (quite different from other instructors) but first let me tell you what I had to do to get the Game Store properly deployed via Azure DevOps.
 
 On to this week's update.
 
@@ -49,14 +49,14 @@ We want to use Azure Pipelines (part of Azure DevOps) to automatically do these 
 ​
 
 ### **The ServiceDefaults CI pipeline**
-ServiceDefaults is the project where all the shared cross-cutting logic has been centralized for easy reusability. Everything from authorization to error handling, Azure configurations, health checks, telemetry, etc., is there. 
+ServiceDefaults is the project where all the shared cross-cutting logic has been centralized for easy reusability. Everything from authorization to error handling, Azure configurations, health checks, telemetry, etc., is there.
 
 
 ![](/assets/images/2024-09-28/4ghDFAZYvbFtvU3CTR72ZN-d44ax5pqQzqtsVwyMecAeN.jpeg)
 
 ​
 
-Every microservice consumes this library in the form of a NuGet package, so we need a CI pipeline to produce and publish that package on every push to the remote branch. 
+Every microservice consumes this library in the form of a NuGet package, so we need a CI pipeline to produce and publish that package on every push to the remote branch.
 
 I already covered how to create a pipeline over [here](https://juliocasal.com/blog/Building-A-CICD-Pipeline-With-Azure-DevOps), so today I'll just show you the yaml I used to define this specific one:
 
@@ -187,7 +187,7 @@ About this job:
 
 Last week I showed you how azd will prompt for all required environment variables needed for the deployment. But here it would seem like all we provide is the APP_IMAGE_TAG, taken from the build number, and the pipeline will certainly not prompt for anything else interactively as it does in a dev box.
 
-Where are all the other env vars coming from? 
+Where are all the other env vars coming from?
 
 Here:
 
@@ -245,9 +245,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -21,7 +21,7 @@ However what many folks always wanted was a simple identity management system th
 * Could be integrated with an existing database
 * Is quick and easy to setup
 
-That is all possible with the new ASP.NET Core Identity endpoints. 
+That is all possible with the new ASP.NET Core Identity endpoints.
 
 Let me show you how.
 
@@ -29,7 +29,7 @@ Let me show you how.
 
 ### **What is ASP.NET Core Identity?**
 
-ASP.NET Core Identity is a membership system that adds user registration and login functionality to ASP.NET Core applications. 
+ASP.NET Core Identity is a membership system that adds user registration and login functionality to ASP.NET Core applications.
 
 It's designed to manage users, passwords, roles, claims, and more. Essentially, it provides a framework for managing everything related to the users that need to access your application securely.
 
@@ -68,12 +68,12 @@ public class GameStoreUser : IdentityUser
 ### **Configure your DB context**
 ASP.NET Core Identity will use multiple tables in your DB to manage users, roles, and a few other things.
 
-And, thanks to the NuGet package you just installed, you don't have to figure out how to generate all those tables. 
+And, thanks to the NuGet package you just installed, you don't have to figure out how to generate all those tables.
 
 Define a DBContext as you usually do when using Entity Framework Core, but instead of inheriting from the standard **DbContext** class, inherit from **IdentityDbContext**, which includes all the required entities for ASP.NET Core Identity:
 
 ```csharp
-public class GameStoreContext(DbContextOptions<GameStoreContext> options) 
+public class GameStoreContext(DbContextOptions<GameStoreContext> options)
     : IdentityDbContext<GameStoreUser>(options)
 {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -193,7 +193,7 @@ POST http://localhost:5022/identity/login?useCookies=true
 }
 ```
 
-That will return a cookie that your client application can use to access the protected endpoints. 
+That will return a cookie that your client application can use to access the protected endpoints.
 
 In Postman, the stored cookie looks like this:
 
@@ -220,9 +220,9 @@ I hope it was useful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

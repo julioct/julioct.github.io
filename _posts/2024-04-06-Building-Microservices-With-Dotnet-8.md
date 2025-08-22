@@ -74,7 +74,7 @@ I created a tutorial based on the .NET 7 container support over [here](https://y
 ### **3. Native AOT**
 [Native AOT (Ahead-Of-Time)](https://learn.microsoft.com/dotnet/core/deploying/native-aot){:target="_blank"} compilation is the process of producing a self-contained app that has been ahead-of-time (AOT) compiled into native code.
 
-Apps that are published using AOT are smaller in size, use less memory, and can start faster. 
+Apps that are published using AOT are smaller in size, use less memory, and can start faster.
 
 This quality is essential for microservices because they are often deployed as containers that are expected to start quickly and use as few resources as possible.
 
@@ -124,7 +124,7 @@ More info on Native AOT over [here](https://learn.microsoft.com/en-us/aspnet/cor
 <br/>
 
 ### **4. Observability and OpenTelemetry**
-**Observability** is the ability to monitor your application so that you can tell how well it is performing and to detect potential problems before they become larger. 
+**Observability** is the ability to monitor your application so that you can tell how well it is performing and to detect potential problems before they become larger.
 
 This is incredibly important for microservices because it can be hard to understand what is happening with them as they interact with each other and with other external services in the cloud.
 
@@ -182,9 +182,9 @@ If you are building microservices with .NET, and you are not using .NET 8, it is
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

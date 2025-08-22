@@ -28,13 +28,13 @@ Let's dive in.
 <br/>
 
 #### **The Problem With Synchronous Communication**
-Synchronous communication between microservices via REST API calls might be the right way to do things some times, like in the rare case when you need an immediate response from the called service. 
+Synchronous communication between microservices via REST API calls might be the right way to do things some times, like in the rare case when you need an immediate response from the called service.
 
 <img src="{{ site.url }}/assets/images/service-coupling.png"/>
 
 But in general it's not a good idea since it introduces a bunch of issues:
 
-* **Strong coupling**, which makes it hard to evolve microservices independently. 
+* **Strong coupling**, which makes it hard to evolve microservices independently.
 * **Cascading failures**, since if the called service fails, the caller will fail too.
 * **Scalability limitations**, since the more callers a service has, the more instances of that service you'll need to handle the load.
 * **Increased latency**, since the caller has to wait for responses from the called service.
@@ -53,14 +53,14 @@ Because there's no coupling between microservices, you get a bunch of benefits r
 * **Better load distribution**, since you can easily add more instances of a service to handle more load.
 * **Reduced latency**, since the caller doesn't have to wait for the response.
 
-But enabling this kind of communication in your .NET microservices seems like a lot of work. 
+But enabling this kind of communication in your .NET microservices seems like a lot of work.
 
 Or, is it?
 
 <br/>
 
 #### **What Is MassTransit?**
-[MassTransit](https://masstransit.io) is an open-source distributed application framework for .NET that provides a consistent abstraction on top of the supported message transports. 
+[MassTransit](https://masstransit.io) is an open-source distributed application framework for .NET that provides a consistent abstraction on top of the supported message transports.
 
 <img src="{{ site.url }}/assets/images/MassTransit-logo.png" style="max-width: 30%"/>
 
@@ -94,7 +94,7 @@ public record MatchWaitingForGame(Guid MatchId);
 
 Record types are ideal for contracts because they are easier to define than classes and they are immutable by default, which works well for messages, since they should not change after they are sent.
 
-To keep things simple, let's assume that both microservices are in the same code base, so both them can simply reference the `MatchMaker.Contracts` project to get access to `MatchWaitingForGame`. 
+To keep things simple, let's assume that both microservices are in the same code base, so both them can simply reference the `MatchMaker.Contracts` project to get access to `MatchWaitingForGame`.
 
 Later on, as Game Manager moves to it's own repo (as it should be) you can turn `MatchMaker.Contracts` into a NuGet package and have Game Manager reference it instead.
 
@@ -381,9 +381,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -14,7 +14,7 @@ A few days ago, during a key 3-day enrollment window for the .NET Academy All-Ac
 > “Your order has timed out. Please try again.”
 
 
-Thinkific is the external learning platform I use, and despite engaging their support team as soon as the issue was reported, it took several hours to resolve. 
+Thinkific is the external learning platform I use, and despite engaging their support team as soon as the issue was reported, it took several hours to resolve.
 
 The issue was due to a misconfigured product ID, but this delay cost me sales, time, and peace of mind.
 
@@ -34,7 +34,7 @@ Using my Stripe dashboard (in test mode), I defined two test products:
 
 ![](/assets/images/2025-05-03/4ghDFAZYvbFtvU3CTR72ZN-r9oC2V7iPDrcFPb6BpLV6f.jpeg)
 
-Each product has one or more prices associated with it, which define the billing model (e.g. one-time vs. subscription). 
+Each product has one or more prices associated with it, which define the billing model (e.g. one-time vs. subscription).
 
 Stripe generates a **Price ID** for each price configuration—this is what we’ll use in our checkout logic.
 
@@ -77,7 +77,7 @@ Stripe handles the rest—UI, taxes, even payment method selection.
 ​
 
 ### **Step 3: Test it with a static page**
-To test the flow end-to-end, I asked Copilot (Agent Mode) to generate me a simple static HTML file with two "Buy" buttons for each of the test products I defined in Stripe: 
+To test the flow end-to-end, I asked Copilot (Agent Mode) to generate me a simple static HTML file with two "Buy" buttons for each of the test products I defined in Stripe:
 
 
 ![](/assets/images/2025-05-03/4ghDFAZYvbFtvU3CTR72ZN-m2vMQCMyDJVyS1SEKnaQGk.jpeg)
@@ -128,9 +128,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

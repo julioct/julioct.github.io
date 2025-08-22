@@ -13,7 +13,7 @@ Vibe coding is an AI programming technique in which you describe a problem in na
 
 It's a revolutionary approach that not only allows anyone to build applications with minimal or no coding knowledge but also dramatically simplifies your job as a software developer.
 
-This year we saw the appearance of a few tools specifically designed for this, with Cursor and Bolt being some of the most popular. 
+This year we saw the appearance of a few tools specifically designed for this, with Cursor and Bolt being some of the most popular.
 
 However, at the time of writing this article, vibe coding has also landed in VS Code Insiders, and I've been using it for the last few weeks with amazing results.
 
@@ -57,13 +57,13 @@ Here are my specifications:
 
 *Once an item is 1 week near expiration, an email should be sent to the configured email addresses.*
 
-*Your Tech Stack:* 
+*Your Tech Stack:*
 
 *   <span>*Front-end: React, Typescript and Bootstrap* </span>
 *   <span>*Back-end: ASP.NET Core minimal APIs*</span>
 *   <span>*DB: PostgreSQL*</span>
 
-*Also:* 
+*Also:*
 
 *   <span>*Use Vite for anything related to the frontend*</span>
 *   <span>*I’m planning to deploy this to Azure* </span>
@@ -221,7 +221,7 @@ The background service that sends the expiration notifications is also hooked up
 
 ​
 
-I'll get back to that at some point. 
+I'll get back to that at some point.
 
 Now I'd like to do something about the UI.
 
@@ -305,9 +305,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

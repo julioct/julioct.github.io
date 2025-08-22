@@ -8,15 +8,15 @@ issue-number: 54
 
 *Read time: 7 minutes*
 
-If you’ve ever felt overwhelmed by the endless layers and abstractions in a typical .NET backend, you’re not alone. 
+If you’ve ever felt overwhelmed by the endless layers and abstractions in a typical .NET backend, you’re not alone.
 
-Most of us have spent hours tracing a single feature across controllers, services, repositories, and DTOs—just to make a simple change. 
+Most of us have spent hours tracing a single feature across controllers, services, repositories, and DTOs—just to make a simple change.
 
 **It’s easy to lose sight of what really matters: delivering features that solve real problems, fast.**
 
 That’s why today I want to share a practical approach that’s made my own projects (and my students’ projects) dramatically simpler and more maintainable: **Vertical Slice Architecture**.
 
-In this article, I’ll break down what vertical slices are, why they beat the old “N-Tier” way of structuring code, and how you can start applying this mindset in your own .NET projects—without extra frameworks or over-engineering. 
+In this article, I’ll break down what vertical slices are, why they beat the old “N-Tier” way of structuring code, and how you can start applying this mindset in your own .NET projects—without extra frameworks or over-engineering.
 
 I’ll show you how to group code by feature, not by technical layer, so you and your team can move faster and keep your sanity.
 
@@ -32,7 +32,7 @@ Essentially it is a way of grouping your code around features, as opposed to tec
 
 ​
 
-That would be an N-Tier architecture, which is how we were building systems 20 years ago, and I bet many organizations still follow that structure to this day. 
+That would be an N-Tier architecture, which is how we were building systems 20 years ago, and I bet many organizations still follow that structure to this day.
 
 What's the problem with that? Well, it's just that when you need to implement a feature or fix a bug you end up needing to change files across multiple projects in your code base. For instance, to implement the "Create Game" feature, you would write code across these:
 
@@ -105,7 +105,7 @@ Then you can add an extensions class per feature area (GamesEndpoints.cs) that t
 
 ​
 
-You can call MapGames from Program.cs and your endpoints are all ready to start receiving requests. 
+You can call MapGames from Program.cs and your endpoints are all ready to start receiving requests.
 
 And, when a new team member is asked to fix a bug with Create Game, all she has to do is open that CreateGame directory and find all the code in that single place. Easy!
 
@@ -114,11 +114,11 @@ Notice you don't need flashy frameworks, abstractions nor extra architectural pi
 ​
 
 ### **Wrapping up**
-This feature-based development is the approach I personally used on the last system I implemented at Microsoft. It helped a lot with code organization and kept PRs very easy to follow. 
+This feature-based development is the approach I personally used on the last system I implemented at Microsoft. It helped a lot with code organization and kept PRs very easy to follow.
 
 I must admit I should have not also introduced Clean Architecture there (so much over engineering), which I used "just in case" we needed to change the DB, use different infra libraries, keep the code as abstract as possible, and a lot of other nonsense. But that's a story for another time.
 
-Now, back to scripting and then to create a bunch of cool slide decks. 
+Now, back to scripting and then to create a bunch of cool slide decks.
 
 Until next week!
 
@@ -132,9 +132,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

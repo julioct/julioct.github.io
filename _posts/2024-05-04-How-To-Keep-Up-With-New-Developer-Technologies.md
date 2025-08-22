@@ -15,7 +15,7 @@ The tech industry is constantly evolving, and new technologies, tools, and frame
 
 I totally get that it can be overwhelming to keep up with all these changes, especially if you have a full-time job, family, and other commitments.
 
-But to remain relevant in the industry, advance your career (and have fun in the process), you need to stay up-to-date with new technologies and trends. 
+But to remain relevant in the industry, advance your career (and have fun in the process), you need to stay up-to-date with new technologies and trends.
 
 So let me share with you the 5 steps I've been using over the years to keep up with new technologies and stay ahead of the curve.
 
@@ -24,7 +24,7 @@ Let's dive in.
 <br/>
 
 ### **Step 1: Embrace change and stay curious**
-Instead of feeling intimidated by new technologies, try to view them as opportunities to expand your skill set, improve your products or services, and stay relevant in the industry. 
+Instead of feeling intimidated by new technologies, try to view them as opportunities to expand your skill set, improve your products or services, and stay relevant in the industry.
 
 For instance, a few years ago, when I was a Microsoft employee, most teams were using Azure Virtual machines or cloud services for their deployments. Few people knew about [Docker](https://www.docker.com){:target="_blank"} and [Kubernetes](https://kubernetes.io){:target="_blank"}, which were very new but promised to revolutionize the way we deploy applications to the cloud.
 
@@ -37,7 +37,7 @@ But how to stay in the loop and keep up with new technologies?
 <br/>
 
 ### **Step 2: Stay in the loop**
-Ok, now you have accepted that change is inevitable and you are ready to embrace it. Next step is to stay in the loop. 
+Ok, now you have accepted that change is inevitable and you are ready to embrace it. Next step is to stay in the loop.
 
 Here are a few ways to do that:
 
@@ -47,20 +47,20 @@ Twitter, LinkedIn, and other social media platforms are great places to follow i
 I do my best to share what I learn on Twitter ([@julioc](https://twitter.com/julioc){:target="_blank"}) but if you are in the .NET and Azure space like me, make sure you follow folks like [Scott Hanselman](https://twitter.com/shanselman){:target="_blank"} and [David Fowler](https://twitter.com/davidfowl){:target="_blank"}, as well as key Microsoft accounts like [@dotnet](https://twitter.com/dotnet){:target="_blank"}, [@msdev](https://twitter.com/msdev){:target="_blank"} and [@azure](https://twitter.com/Azure){:target="_blank"} and essential hashtags like **#csharp**, **#dotnet**, and **#aspnetcore**.
 
 #### **2. Watch key tech conferences**
-Big annual conferences like [Microsoft Build](https://build.microsoft.com){:target="_blank"}, [Google I/O](https://io.google){:target="_blank"}, [AWS re:Invent](https://reinvent.awsevents.com){:target="_blank"}, and others are great places to learn about the latest or upcoming technologies, tools, and best practices. 
+Big annual conferences like [Microsoft Build](https://build.microsoft.com){:target="_blank"}, [Google I/O](https://io.google){:target="_blank"}, [AWS re:Invent](https://reinvent.awsevents.com){:target="_blank"}, and others are great places to learn about the latest or upcoming technologies, tools, and best practices.
 
 Most of these conferences offer free live streams or recordings of their sessions, so you can watch them from the comfort of your home or office.
 
 Since I'm in the .NET and Azure space, I always make sure to watch at the very least the keynotes and the top sessions from [Microsoft Build](https://build.microsoft.com){:target="_blank"}, and [.NET Conf](https://www.dotnetconf.net){:target="_blank"}. **[Microsoft Build 2024](https://build.microsoft.com){:target="_blank"}** starts in a few weeks, don't miss it!
 
 #### **3. Subscribe to tech newsletters, YouTube channels and podcasts**
-There are usually times across my day when I get 15 to 30 minutes to spare. Either at lunchtime, during your daily commute, or while waiting for a meeting to start. 
+There are usually times across my day when I get 15 to 30 minutes to spare. Either at lunchtime, during your daily commute, or while waiting for a meeting to start.
 
 Use that time to read newsletters, watch YouTube videos or listen to podcasts that cover the latest tech news, trends, and tutorials.
 
 I personally like the [Platformer newsletter](https://www.platformer.news){:target="_blank"}, the [.NET YouTube channel](https://www.youtube.com/@dotnet){:target="_blank"} and the [Hard Fork podcast](https://www.nytimes.com/column/hard-fork){:target="_blank"}.
 
-Now, staying in the loop is good, but it's not enough. 
+Now, staying in the loop is good, but it's not enough.
 
 <br/>
 
@@ -169,11 +169,11 @@ Yes, doing things differently will take more time at first, and it may be hard t
 <br/>
 
 ### **Wrapping Up**
-Staying up-to-date with new technologies is essential to remain relevant in the industry and advance your career. 
+Staying up-to-date with new technologies is essential to remain relevant in the industry and advance your career.
 
 By embracing change, staying in the loop, learning the latest tech, building something, and applying your learning at work, you can keep up with new technologies and stay ahead of the curve.
 
-Remember, the tech industry is constantly evolving, and what you know today will become outdated tomorrow. 
+Remember, the tech industry is constantly evolving, and what you know today will become outdated tomorrow.
 
 So, keep learning!
 
@@ -183,9 +183,9 @@ So, keep learning!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

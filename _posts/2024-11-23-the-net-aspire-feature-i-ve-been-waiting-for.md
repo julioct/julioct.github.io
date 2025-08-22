@@ -40,7 +40,7 @@ Here's the diagram they showed during .NET Conf, which I think summarizes pretty
 
 ​
 
-Now, I won't even try to explain that diagram here since it would take a while and anyway I'll go deep into all that stuff in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp). 
+Now, I won't even try to explain that diagram here since it would take a while and anyway I'll go deep into all that stuff in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
 Instead, I'll mention here what it is in terms of what it can do and what it cannot do for you:
 
@@ -70,7 +70,7 @@ Let's say you are working on a Web app that requires a bit more than a database.
 *   <span>Keycloak</span>
 *   <span>Kafka</span>
 
-You could install those 3 in your box, but an easier way is to just run Docker containers for all of them. 
+You could install those 3 in your box, but an easier way is to just run Docker containers for all of them.
 
 Why use containers? Well because:
 
@@ -101,7 +101,7 @@ As your application starts depending on more and more containers, you'll need to
 
 Each Docker image will require a different set of environment variables, ports, volumes, and other possible configurations.
 
-That's why they invented the Dockerfile, a simple text file where you declare all that you need, with the right set of configurations. 
+That's why they invented the Dockerfile, a simple text file where you declare all that you need, with the right set of configurations.
 
 For instance, here's one way to write the Dockerfile to start those 3 services I mentioned earlier:
 
@@ -115,7 +115,7 @@ Using that Dockerfile is very useful because now all you have to do to start you
 
 ​
 
-However, how did I come up with that Dockerfile? 
+However, how did I come up with that Dockerfile?
 
 Honestly, these days I would just ask ChatGPT to craft that file for me, but traditionally you have to go to the docs for each image, one by one, and learn how to craft the Dockerfile.
 
@@ -163,11 +163,11 @@ For instance, here's me waiting 20+ seconds for my Kafka container to start:
 
 The good thing is that, as you can see, Aspire's dashboard correctly reports Kafka as an unhealthy resource until it finishes its startup sequence.
 
-But I can't wait 20+ seconds for Kafka (and all the other resources) to be ready every time I hit F5 to run my application. 
+But I can't wait 20+ seconds for Kafka (and all the other resources) to be ready every time I hit F5 to run my application.
 
-That's a crazy waste of time, and I might as well stick to the Dockerfile, which I run once and forget about it. 
+That's a crazy waste of time, and I might as well stick to the Dockerfile, which I run once and forget about it.
 
-In fact, this is the reason why I stopped using Aspire for a few months. The impact on my dev inner loop is unacceptable. 
+In fact, this is the reason why I stopped using Aspire for a few months. The impact on my dev inner loop is unacceptable.
 
 But fortunately, this issue is solved in Aspire 9.
 
@@ -220,9 +220,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

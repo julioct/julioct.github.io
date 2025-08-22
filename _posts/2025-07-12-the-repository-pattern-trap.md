@@ -26,20 +26,20 @@ If you've ever wondered whether all those repository interfaces are actually wor
 ​
 
 ### **What is the Repository Pattern?**
-The Repository Pattern creates an abstraction layer between your .NET application and your data storage. 
+The Repository Pattern creates an abstraction layer between your .NET application and your data storage.
 
 
 ![](/assets/images/2025-07-12/4ghDFAZYvbFtvU3CTR72ZN-w6S61TLA6GPKLS9U99TTXS.jpeg)
 
 ​
 
-Your application code depends only on an IRepository interface—it has no idea whether data comes from SQLite, Azure SQL, or any other source. 
+Your application code depends only on an IRepository interface—it has no idea whether data comes from SQLite, Azure SQL, or any other source.
 
 Each database gets its own concrete implementation that handles the specific details of talking to that particular storage system.
 
-The promise is beautiful: write your business logic once, and it works with any database. Need to switch from SQLite to Azure SQL? Just change one line in your dependency injection configuration. 
+The promise is beautiful: write your business logic once, and it works with any database. Need to switch from SQLite to Azure SQL? Just change one line in your dependency injection configuration.
 
-Your .NET app stays database-agnostic, your code follows SOLID principles, and testing becomes trivial since you can easily mock the interface. 
+Your .NET app stays database-agnostic, your code follows SOLID principles, and testing becomes trivial since you can easily mock the interface.
 
 Now let's see one common way to implement and use the repository pattern these days.
 
@@ -125,7 +125,7 @@ And let's not forget to register the repository, along with the EF Core DBContex
 
 ​
 
-Different teams would implement their repositories in slightly different ways, but you get the idea. 
+Different teams would implement their repositories in slightly different ways, but you get the idea.
 
 Now, there's something most devs miss.
 
@@ -173,9 +173,9 @@ Now let's address a couple of common questions.
 ​
 
 ### **What if I change my DB later?**
-**You're not going to change databases.** In 15+ years of building .NET applications, I've seen this happen exactly zero times in production. 
+**You're not going to change databases.** In 15+ years of building .NET applications, I've seen this happen exactly zero times in production.
 
-Once you're running with real data, real users, and real business processes, switching databases becomes a massive undertaking involving data migration, schema differences, and retraining teams. 
+Once you're running with real data, real users, and real business processes, switching databases becomes a massive undertaking involving data migration, schema differences, and retraining teams.
 
 The repository pattern doesn't solve any of that—it just makes you feel better about a problem that doesn't exist.
 
@@ -215,9 +215,9 @@ See you next Saturday.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

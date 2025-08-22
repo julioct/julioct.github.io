@@ -15,7 +15,7 @@ Doesn't matter too much since my editing software now has a way to produce these
 
 This week, as I was getting ready to kick off the recording of Course 3 of the bootcamp, I decided to spare one day to complete a fun challenge: convert the entire Blazor front-end used in the bootcamp to React!
 
-Several students have been asking me for a React alternative to the Blazor front-end, since it seems like that is what most folks are using these days in combination with ASP.NET Core backends. 
+Several students have been asking me for a React alternative to the Blazor front-end, since it seems like that is what most folks are using these days in combination with ASP.NET Core backends.
 
 So, good news: took me most of one working day, but I just finished the React version of the frontend used in Course 2 and I plan to use it across the entire bootcamp!
 
@@ -35,7 +35,7 @@ Here's what several of you have been telling me:
 
 ​
 
-I'm a bit surprised at how high Blazor ranks there, given how new it is, but there's no doubt React is the top choice for most of you. 
+I'm a bit surprised at how high Blazor ranks there, given how new it is, but there's no doubt React is the top choice for most of you.
 
 So it only makes sense to use React as the front-end that's powered by the .NET Backend that students build and deploy to Azure across [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
@@ -102,7 +102,7 @@ And you'll your site is ready to go:
 
 Notice how much time it took to start the site: **297ms!**
 
-I was expecting Vite to be fast since speed is one of the key advertised features of this web framework, but that is ridiculously fast. 
+I was expecting Vite to be fast since speed is one of the key advertised features of this web framework, but that is ridiculously fast.
 
 **It crushes my Blazor app**, which takes at least 10 times more to start.
 
@@ -190,9 +190,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

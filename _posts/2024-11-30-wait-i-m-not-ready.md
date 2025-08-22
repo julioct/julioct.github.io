@@ -13,7 +13,7 @@ Wow, last week was rough, really rough. My home lost power for almost 6 days tha
 
 Even when it never hit land, it pulled crazy winds that tore down trees all over the place, which in turn sent tons of power lines down to the streets across a huge area, leaving thousands of people without power for several days.
 
-It's very humbling to realize how many things we take for granted. After a day without power, things got very cold in the house, everybody's cell phones ran out of battery and there was no way to heat the food. 
+It's very humbling to realize how many things we take for granted. After a day without power, things got very cold in the house, everybody's cell phones ran out of battery and there was no way to heat the food.
 
 Luckily, we were able to find a couple of places nearby on Airbnb, which had already recovered their power, so we managed to stay safe and warm in the middle of this chaos.
 
@@ -33,7 +33,7 @@ I mentioned [last week]({{ site.url }}/blog/the-net-aspire-feature-i-ve-been-wai
 
 However, what happens to your application when dependencies like Kafka are slow to start? Persistent containers will only help you after your second run, but the very first time your app will have no Kafka to talk to for a while.
 
-The same is true for any other dependencies you might have, like PostgreSQL, RabbitMQ, or Keycloak. Your .NET app started quickly, but dependencies are down for a while. 
+The same is true for any other dependencies you might have, like PostgreSQL, RabbitMQ, or Keycloak. Your .NET app started quickly, but dependencies are down for a while.
 
 In my Aspire dashboard, this situation looks like this:
 
@@ -89,7 +89,7 @@ The **/health/alive** endpoint is typically used to just report if your app is a
 
 Notice how that endpoint will match any health check with the **live** tag, which corresponds to the check we added earlier.
 
-The **/health/ready** endpoint is used to tell others if the app is ready to receive traffic. 
+The **/health/ready** endpoint is used to tell others if the app is ready to receive traffic.
 
 Both those endpoints will return a **Healthy** or **Unhealthy** status, depending on what they find when invoked.
 
@@ -190,7 +190,7 @@ The one thing I don't really like about how the .NET team announced this new **W
 
 When you containerize your microservices and deploy them to the cloud into a Kubernetes cluster or something similar, the WaitFor API will not get deployed with it, because the AppHost is never deployed anywhere.
 
-This means you still need to configure your Kubernetes deployments so they use the health checks in readiness probes. 
+This means you still need to configure your Kubernetes deployments so they use the health checks in readiness probes.
 
 If you don't do that, then Kubernetes won't know if your app is ready to receive traffic, regardless of the status of all the dependencies.
 
@@ -203,7 +203,7 @@ I can't wait to dive more into all these fun .NET Aspire features in [the bootca
 
 But, one step at a time. Let's get Course 2 ready so we have an app that is eventually worthy to deploy to the cloud, as opposed to a simple Hello World or Todo app.
 
-Also, I'm writing this early on Thanksgiving day, so for folks in the US: 
+Also, I'm writing this early on Thanksgiving day, so for folks in the US:
 
 Happy Thanksgiving!
 
@@ -217,9 +217,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

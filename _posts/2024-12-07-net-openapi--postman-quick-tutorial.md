@@ -9,7 +9,7 @@ issue-number: 62
 *Read time: 8 minutes*
 ​
 
-This week I finally decided to upgrade my video recording gear and hopefully put my Logitec C920 to rest. I'm still waiting for that new Sony camera to arrive, but boy those things are expensive! 
+This week I finally decided to upgrade my video recording gear and hopefully put my Logitec C920 to rest. I'm still waiting for that new Sony camera to arrive, but boy those things are expensive!
 
 A bit hard to justify since I rarely show up on camera (because getting ready for the camera is too much trouble and all of my videos are heavily scripted anyway), but I believe students deserve the best possible quality I can afford when I do show my face.
 
@@ -31,7 +31,7 @@ In simple terms, OpenAPI is like a blueprint for your HTTP APIs—a standard way
 
 An OpenAPI specification is usually a long JSON document that describes everything about your API.
 
-But, why should you care? 
+But, why should you care?
 
 Well, a few reasons:
 
@@ -69,7 +69,7 @@ Finally, register the middleware that will generate the JSON document:
 
 ​
 
-Notice that middleware is only added for local development. Unless you are Stripe, GitHub, or a similar big API provider, you don't want to expose your API specification in your Production environment. 
+Notice that middleware is only added for local development. Unless you are Stripe, GitHub, or a similar big API provider, you don't want to expose your API specification in your Production environment.
 
 Now you can run your app and navigate to this address in your browser:
 
@@ -85,9 +85,9 @@ And you will get a big JSON document that will start like this:
 
 ​
 
-It's quite long, so I collapsed most of it. But, you get the idea. 
+It's quite long, so I collapsed most of it. But, you get the idea.
 
-Now, from here, many tutorials will focus on how to use that spec to generate a pretty web page to use as documentation for your API. 
+Now, from here, many tutorials will focus on how to use that spec to generate a pretty web page to use as documentation for your API.
 
 However, as pretty as that can look, I can't remember the last time I used an OpenAPI spec just to render a documentation page.
 
@@ -98,7 +98,7 @@ Instead, let me tell you the primary way I use it.
 ### **Generating Postman collections from OpenAPI specs**
 If you work with backend HTTP APIs, you likely work with Postman, the most popular API development and testing tool.
 
-You would use Postman to craft requests that you can send to your APIs to ensure they work correctly without the need to involve your actual front-end application. 
+You would use Postman to craft requests that you can send to your APIs to ensure they work correctly without the need to involve your actual front-end application.
 
 That's what you do if you are starting with a brand new project, but if you are dealing with an existing code base and somehow nobody cared about creating and sharing a Postman collection with you, you can unblock yourself quickly by taking advantage of your OpenAPI specification.
 
@@ -118,7 +118,7 @@ Once the import completes (takes 1 second) you'll get a brand new Postman collec
 
 All the endpoints supported by your API are right there, ready for you to fill in the blanks for the specific parameters for each request. No need to craft requests from scratch.
 
-Notice that there's even a **baseUrl** variable defined for your collection, which you can populate in a single place and reuse across all requests. 
+Notice that there's even a **baseUrl** variable defined for your collection, which you can populate in a single place and reuse across all requests.
 
 I go over this in more detail in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp), including how to upload files to your API from Postman, how to generate access tokens to send along your request, and how to define environment-level variables so you can switch from local dev to Prod without modifying all your requests.
 
@@ -170,7 +170,7 @@ First, thanks to the huge support from all the folks who already joined the boot
 
 This saved me 3 to 4 days of work, which I invested in several other things needed to get the course ready (uploading videos, source code snapshots, handouts, quizzes, etc).
 
-So we are on track for the **course release on December 10!** 
+So we are on track for the **course release on December 10!**
 
 Second, I finally figured out a quick and cost-effective way to generate English captions for all the course videos. So, Course 2 will be released with **full English subtitles**!
 
@@ -194,9 +194,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -9,7 +9,7 @@ issue-number: 34
 
 *Read time: 7 minutes*
 
-Writing clean code is essential for building maintainable, scalable, and bug-free software. 
+Writing clean code is essential for building maintainable, scalable, and bug-free software.
 
 Clean code is easy to read, understand, and modify, making it easier to collaborate with other developers and maintain the codebase over time.
 
@@ -22,17 +22,17 @@ Let's start.
 <br/>
 
 ### **1. Use Meaningful Names**
-Using meaningful names for variables, functions, and classes helps everyone on the team understand the codebase quickly and accurately. 
+Using meaningful names for variables, functions, and classes helps everyone on the team understand the codebase quickly and accurately.
 
 For instance, take a look at this class from a role-playing game:
 
 ```csharp
 public class RPGCharacter
 {
-    public int hp; 
-    public int mp; 
-    public int atk; 
-    public int def; 
+    public int hp;
+    public int mp;
+    public int atk;
+    public int def;
 
     public void atkRPG(RPGCharacter e)
     {
@@ -79,7 +79,7 @@ So make sure you stick to meaningful names across all your classes to reduce the
 ### **2. Single Responsibility Principle (SRP)**
 This principle states that a class should have only one reason to change. In other words, a class should have only one job or responsibility.
 
-For example, imagine you're building a simple note-taking app. You start by creating a **Note** class to represent each note. 
+For example, imagine you're building a simple note-taking app. You start by creating a **Note** class to represent each note.
 
 Initially, you put everything related to a note in this class: the note's text content, the date it was created, and even the logic for saving the note to a file.
 
@@ -122,7 +122,7 @@ public class FileManager
 }
 ```
 
-Now, the **Note** class only deals with note-related data, while the **FileManager** class handles file-saving logic. 
+Now, the **Note** class only deals with note-related data, while the **FileManager** class handles file-saving logic.
 
 This separation of concerns makes the code easier to maintain, test, and understand.
 
@@ -133,7 +133,7 @@ This separation of concerns makes the code easier to maintain, test, and underst
 ### **3. Don’t Repeat Yourself (DRY)**
 DRY is a principle that encourages developers to avoid duplicating code. Instead, you should try to reuse existing code whenever possible.
 
-For example, imagine you're working on a web application and need to validate user input for various operations such as registration, login, and profile updates. 
+For example, imagine you're working on a web application and need to validate user input for various operations such as registration, login, and profile updates.
 
 Here's the initial version of your **UserService** class:
 
@@ -184,7 +184,7 @@ public class UserService
 }
 ```
 
- Writing the same validation code for each operation can lead to errors and make maintenance difficult. 
+ Writing the same validation code for each operation can lead to errors and make maintenance difficult.
 
 To follow the DRY principle, you can refactor the code to reuse the validation logic:
 
@@ -244,7 +244,7 @@ By creating a common **ValidateUser** method, you avoid repeating the same valid
 <br/>
 
 ### **4. Code Comments**
-Comments should be used sparingly and only to explain why something is done, not what is done. 
+Comments should be used sparingly and only to explain why something is done, not what is done.
 
 For example, here is the initial version of the **CalculateMonthlySalary** method in our **SalaryCalculator** class:
 
@@ -259,7 +259,7 @@ public class SalaryCalculator
         {
             throw new ArgumentException("Annual salary must be greater than zero.");
         }
-        
+
         // Check if bonus percentage is valid
         if (bonusPercentage < 0)
         {
@@ -327,7 +327,7 @@ public class SalaryCalculator
 
 By breaking down the logic into smaller, focused methods, you eliminate the need for most comments. Each method now has a single responsibility, making the code easier to read and maintain.
 
-The calculation of the monthly bonus still includes a comment to explain why the annual bonus is divided by 12, as this might not be immediately obvious. 
+The calculation of the monthly bonus still includes a comment to explain why the annual bonus is divided by 12, as this might not be immediately obvious.
 
 So, use comments effectively to clarify non-obvious logic while keeping the rest of your code self-documenting.
 
@@ -461,9 +461,9 @@ So, to write clean code, remember these key principles:
 
 3. **DRY**: Avoid duplicating code by reusing existing logic.
 
-4. **Code Comments**: Use comments sparingly to explain why something is done, not what is done. 
+4. **Code Comments**: Use comments sparingly to explain why something is done, not what is done.
 
-5. **KISS**: Aim for simplicity in your code design and avoid unnecessary complexity. 
+5. **KISS**: Aim for simplicity in your code design and avoid unnecessary complexity.
 
 By following these principles, you can write clean, maintainable code that is easy to understand and work with.
 
@@ -475,9 +475,9 @@ And remember, writing clean code is a skill that improves with practice. So keep
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

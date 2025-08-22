@@ -13,7 +13,7 @@ In one of my recent newsletters, I claimed OpenID Connect (OIDC) is the right wa
 
 However, ASP.NET Core does not include a built-in OIDC server, so you are on your own trying to figure out what to use out of dozens of possible free, paid, local, or hosted options.
 
-If you deploy your apps to Azure, a great option is Microsoft Entra ID, which I covered [here](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID). But, for local development, I find that to be overkill. 
+If you deploy your apps to Azure, a great option is Microsoft Entra ID, which I covered [here](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID). But, for local development, I find that to be overkill.
 
 You should be able to run one command in your box and have everything needed to test your app with all the OIDC goodness without ever having to leave your box or pay for cloud services.
 
@@ -85,7 +85,7 @@ Now let's configure the realm.
 ​
 
 ### **Step 2: Create the realm**
-A Keycloak Realm is a logical space for managing users, roles, groups, and authentication configurations within a Keycloak instance. 
+A Keycloak Realm is a logical space for managing users, roles, groups, and authentication configurations within a Keycloak instance.
 
 You can create one by clicking on **Create realm** in the realm drop-down:
 
@@ -241,7 +241,7 @@ In the **Capability config** step, the **Client authentication** check goes On o
 
 In my case, my front-end is a Blazor app with Static Server Side Rendering, no client interactivity, so I'll turn Client authentication On.
 
-For Authentication flow, the **Standard flow** is all you need. 
+For Authentication flow, the **Standard flow** is all you need.
 
 Moving on to the **Login settings**, you want to enter both the **Valid redirect URIs** and **Valid post logout redirect URIs**:
 
@@ -250,9 +250,9 @@ Moving on to the **Login settings**, you want to enter both the **Valid redirect
 
 ​
 
-The *host:port* to use there depends on the host and port where you run your front-end locally, *http://localhost:5002* in my case. 
+The *host:port* to use there depends on the host and port where you run your front-end locally, *http://localhost:5002* in my case.
 
-Then, to keep it simple, I used the default paths used by ASP.NET Core's OIDC middleware (*signin-oidc*, *signout-callback-oidc*). 
+Then, to keep it simple, I used the default paths used by ASP.NET Core's OIDC middleware (*signin-oidc*, *signout-callback-oidc*).
 
 You can use any other paths there, but you have to make sure they exist in your front-end and that the OIDC middleware is aware of them.
 
@@ -267,14 +267,14 @@ So from your front-end screen go to **Client scopes** and **click on Add client 
 
 ​
 
-Select the scope you had created (*gamestore_api.all* in my case), click **Add,** and choose Default or Optional. 
+Select the scope you had created (*gamestore_api.all* in my case), click **Add,** and choose Default or Optional.
 
 
 ![](/assets/images/2025-02-01/4ghDFAZYvbFtvU3CTR72ZN-thvtdGoQ47bDiXUaV72xyU.jpeg)
 
 ​
 
-Optional means the client must request the scope, while Default means the scope is always requested for this client, even if it doesn't ask for it. 
+Optional means the client must request the scope, while Default means the scope is always requested for this client, even if it doesn't ask for it.
 
 I like to pick Optional here to let the client be very explicit on what it requests.
 
@@ -295,7 +295,7 @@ We can achieve those by first installing the **Microsoft.AspNetCore.Authenticati
 
 ​
 
-Notice that **Authority** is the *host:port* where Keycloak is running plus */realms/your-realm-name*, and **Audience** must match exactly the audience we configured earlier on Keycloak. 
+Notice that **Authority** is the *host:port* where Keycloak is running plus */realms/your-realm-name*, and **Audience** must match exactly the audience we configured earlier on Keycloak.
 
 **RequireHttpsMetadata** needs to be false so that the middleware can talk to our Keycloak server locally, which is not using HTTPS.
 
@@ -359,7 +359,7 @@ You will also need to add the Cookies auth scheme, so that it can be used alongs
 
 ​
 
-How will Blazor components know if the user is authenticated or not? 
+How will Blazor components know if the user is authenticated or not?
 
 By using the authorization middleware, an authentication state provider, and the cascading authentication state, which you can register like this:
 
@@ -481,9 +481,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

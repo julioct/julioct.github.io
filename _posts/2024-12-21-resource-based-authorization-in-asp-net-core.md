@@ -19,7 +19,7 @@ So, just to be sure about this move, I sent a quick poll last Monday specificall
 
 ​
 
-This confirms React is still a top Web UI Framework choice. 
+This confirms React is still a top Web UI Framework choice.
 
 However, it also tells me that a very significant proportion of students do want to stick to Blazor for their front-ends, which makes the decision not that simple.
 
@@ -36,7 +36,7 @@ Of course, nobody other than you should be allowed to do that. Well, perhaps som
 
 But, in essence, we can't let random people mess around with your particular shopping cart. There is an authorization policy there that establishes who can access that specific resource.
 
-**So, resource-based authorization is a way to control access to specific resources by evaluating the resource's properties or the user's relationship to it.** 
+**So, resource-based authorization is a way to control access to specific resources by evaluating the resource's properties or the user's relationship to it.**
 
 How to set up this kind of authorization policy in ASP.NET Core?
 
@@ -77,7 +77,7 @@ With those two ready, we can now implement the resource-based handler:
 
 ​
 
-The handler will first extract the ID of the current user, which is available in the **sub** claim. 
+The handler will first extract the ID of the current user, which is available in the **sub** claim.
 
 Then it will check if that user ID matches the ID of the owner of the received basket, or if the current user has an Admin role.
 
@@ -108,7 +108,7 @@ Here we inject an instance of **IAuthorizationService** and we use it along with
 
 Notice that this makes it very easy to reuse that authorization check in any other endpoint, without the endpoint having to know anything about the logic behind the check.
 
-This is just one way to perform authorization checks in ASP.NET Core, along with **role-based authorization**, **claims-based authorization**, and **policy-based authorization**, which I cover in detail in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp). 
+This is just one way to perform authorization checks in ASP.NET Core, along with **role-based authorization**, **claims-based authorization**, and **policy-based authorization**, which I cover in detail in [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
 All .NET web developers should understand how authorization works in ASP.NET Core. It unlocks so many scenarios and knowing this in-depth will save you from so much trouble later.
 
@@ -117,7 +117,7 @@ All .NET web developers should understand how authorization works in ASP.NET Cor
 ### **Why people are embracing Blazor**
 Here's what one student told me after my previous announcement:
 
-> *The company I work for is a completely Microsoft-focused company from ASP.NET front-ends to Azure services, etc. We have no React devs and no plans to ever introduce React...A lot can still be learned about Blazor, it's component system, integrations with auth providers such as Microsoft Entra ID/ASP.NET Core Identity/Keycloak, various 3<sup>rd</sup>* *party integrations (i.e. Stripe), etc by seeing working solutions written by others and that was my hope.* 
+> *The company I work for is a completely Microsoft-focused company from ASP.NET front-ends to Azure services, etc. We have no React devs and no plans to ever introduce React...A lot can still be learned about Blazor, it's component system, integrations with auth providers such as Microsoft Entra ID/ASP.NET Core Identity/Keycloak, various 3<sup>rd</sup>* *party integrations (i.e. Stripe), etc by seeing working solutions written by others and that was my hope.*
 
 
 ​
@@ -129,11 +129,11 @@ And here's another reply:
 
 ​
 
-Which is fascinating! 
+Which is fascinating!
 
-People are not necessarily jumping into Blazor because they have nothing better to learn, but because they belong to one of probably hundreds of Microsoft shops out there with a huge amount of years old ASP.NET code bases that are probably still using Razor pages, MVC, or even Web Forms. 
+People are not necessarily jumping into Blazor because they have nothing better to learn, but because they belong to one of probably hundreds of Microsoft shops out there with a huge amount of years old ASP.NET code bases that are probably still using Razor pages, MVC, or even Web Forms.
 
-And all that needs to get upgraded to the latest and greatest. And what is the latest and greatest next step for Razor pages, MVC, and Web Forms? 
+And all that needs to get upgraded to the latest and greatest. And what is the latest and greatest next step for Razor pages, MVC, and Web Forms?
 
 **Blazor!**
 
@@ -159,11 +159,11 @@ However, just to be clear:
 ​
 
 ### **Wrapping up**
-Course 3, ASP.NET Core Security, is now in full production! 
+Course 3, ASP.NET Core Security, is now in full production!
 
 I must admit I'm a bit behind schedule thanks to my fun adventure with React and a few technical issues I faced with my recording software, but hopefully, things will go much more smoothly from here on.
 
-I'm actually amazed about the amount of concepts that need to be covered in this third course to fully grasp industry-standard security and authorization practices with ASP.NET Core. 
+I'm actually amazed about the amount of concepts that need to be covered in this third course to fully grasp industry-standard security and authorization practices with ASP.NET Core.
 
 Seems like it's going to be the longest course so far. And it will be the best ASP.NET Core Security course on the market. Or, at least, that's my hope.
 
@@ -179,9 +179,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

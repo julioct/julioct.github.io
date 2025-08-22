@@ -28,7 +28,7 @@ Containers are lightweight, portable environments that bundle an application wit
 
 For a concrete example, let's say I want to run the popular NGINX web server in my box.
 
-In the past, if you wanted to run NGINX on your machine, you would have to manually install it, configure it, and ensure all its dependencies were properly set up. 
+In the past, if you wanted to run NGINX on your machine, you would have to manually install it, configure it, and ensure all its dependencies were properly set up.
 
 This could involve downloading specific versions of NGINX, managing conflicts with existing software on your system, and dealing with potential issues caused by differences between environments (your machine vs. a production server).
 
@@ -52,7 +52,7 @@ Now let's walk through the commands you would use to quickly run NGINX in your b
 ### **Getting Docker Desktop**
 To run any Docker container in your box, you need the Docker Engine, which is included with Docker Desktop. You can download it for free [here](https://docs.docker.com/desktop).
 
-After you install it, you have everything you'll ever need to run any docker image. 
+After you install it, you have everything you'll ever need to run any docker image.
 
 You will also get a nice app where you can manage your Docker images, containers, volumes, and several other things:
 
@@ -110,9 +110,9 @@ When you run a Docker image we say it turns into a Docker container, and you can
 
 So, you start with **docker run** and you end with the name of your image, **nginx** in this case.
 
-The **-p 8080:80** piece is what we know as port mapping, and you use it to make the services running inside the Docker container accessible from your local machine. 
+The **-p 8080:80** piece is what we know as port mapping, and you use it to make the services running inside the Docker container accessible from your local machine.
 
-Otherwise, NGINX will be running there, but you would have no way to access it. 
+Otherwise, NGINX will be running there, but you would have no way to access it.
 
 8080 is the port you can use in your box to reach NGINX, and 80 is the port inside the container where NGINX is listening (the "container port").
 
@@ -137,7 +137,7 @@ So all you do is point your browser to that address and you'll get the NGINX hom
 
 ​
 
-Notice how your browser doesn't really care how exactly NGINX was made available at `localhost:8080`; it just sees a web server responding to its requests. 
+Notice how your browser doesn't really care how exactly NGINX was made available at `localhost:8080`; it just sees a web server responding to its requests.
 
 **This is the beauty of Docker: it abstracts away the complexities of installation, configuration, and environment-specific quirks.**
 
@@ -167,9 +167,9 @@ Happy Holidays!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

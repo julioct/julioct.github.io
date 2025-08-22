@@ -23,7 +23,7 @@ Let's dive in.
 ​
 
 ### **What do we need to test?**
-If you are new to this newsletter, here's a quick summary of what I've been covering in the last few issues: 
+If you are new to this newsletter, here's a quick summary of what I've been covering in the last few issues:
 
 I'm extending the Game Store application introduced in my [ASP.NET Core Full Stack bundle](https://juliocasal.com/courses/aspnetcore-fullstack-bundle) courses and turning it into a real-world e-commerce distributed application that will serve as the core project to be developed across my upcoming [.NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
@@ -134,7 +134,7 @@ Normally the Game Store application supports schemes for both Keycloak and Entra
 
 ​
 
-The point of this handler, which lives in your integration tests project, is to produce an authentication result driven by whatever your test needs. 
+The point of this handler, which lives in your integration tests project, is to produce an authentication result driven by whatever your test needs.
 
 As you can see, it can return success or failure, depending on the passed options, as well as include a series of other claims, also provided as options.
 
@@ -161,14 +161,14 @@ Then we can write our test like this:
 
 ​
 
-And that's all it takes to call our endpoint with a sub claim, the scope expected by our WriteAccess policy and an Admin role. 
+And that's all it takes to call our endpoint with a sub claim, the scope expected by our WriteAccess policy and an Admin role.
 
 ​
 
 ### **Closing**
 Boy, these newsletters get long very quickly and there's so much more to cover, especially on the messaging part. But I rather cover all of those (and lots more) in detail during the bootcamp.
 
-Now, I'll go back to the drawing board to figure out how to deploy all of this (the right way) via Azure Pipelines. 
+Now, I'll go back to the drawing board to figure out how to deploy all of this (the right way) via Azure Pipelines.
 
 Until next time!
 
@@ -182,9 +182,9 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

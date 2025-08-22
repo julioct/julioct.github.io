@@ -11,7 +11,7 @@ issue-number: 35
 
 Today I'll show you how to secure your ASP.NET Core applications using OpenID Connect (OIDC) and Microsoft Entra ID.
 
-OIDC is the industry-standard protocol for authentication and is pretty much the go-to choice for securing full-stack applications these days. 
+OIDC is the industry-standard protocol for authentication and is pretty much the go-to choice for securing full-stack applications these days.
 
 But the sad thing is that there are few things more frustrating than trying to understand and implement OIDC for the first time.
 
@@ -22,7 +22,7 @@ Let's dive in.
 <br/>
 
 ### **What is OpenID Connect?**
-Any [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works){:target="_blank"} definition involves [OAuth 2.0](https://oauth.net/2){:target="_blank"}, so you should first know that **OAuth 2.0** is the industry-standard protocol for authorization, allowing a website or application to access resources hosted by other web apps on behalf of a user. 
+Any [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works){:target="_blank"} definition involves [OAuth 2.0](https://oauth.net/2){:target="_blank"}, so you should first know that **OAuth 2.0** is the industry-standard protocol for authorization, allowing a website or application to access resources hosted by other web apps on behalf of a user.
 
 **OIDC** is nothing more than an authentication protocol built on top of OAuth 2.0 that allows clients to verify the identity of the end-user based on the authentication performed by an authorization server.
 
@@ -40,7 +40,7 @@ Here's how the OIDC **Authorization Code Flow with PKCE** works:
 
 4. The **client sends the code challenge, along with the openid scope, to the authorization server**, also known as the OpenID provider. The openid scope indicates that the client wants to authenticate the user.
 
-5. The **OpenID provider presents the sign-in page** where the end-user can authenticate. 
+5. The **OpenID provider presents the sign-in page** where the end-user can authenticate.
 
 6. After authentication, the OpenID provider might optionally also present an additional page where the end-user can provide explicit consent to which actions can be performed on the resources he owns.
 
@@ -69,7 +69,7 @@ I love this flow because of 3 key reasons:
 <br/>
 
 ### **Choosing an OpenID Provider**
-There are several OpenID providers you can use to enable OIDC in your ASP.NET Core applications. 
+There are several OpenID providers you can use to enable OIDC in your ASP.NET Core applications.
 
 A few of the popular ones I have used in the past are:
 - [Auth0](https://auth0.com){:target="_blank"}
@@ -77,7 +77,7 @@ A few of the popular ones I have used in the past are:
 - [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/fundamentals/whatis){:target="_blank"}
 - [Keycloak](https://www.keycloak.org){:target="_blank"}
 
-There are many others, but the key thing is that they all implement OIDC, which means that they can all enable the OIDC flow I described above. 
+There are many others, but the key thing is that they all implement OIDC, which means that they can all enable the OIDC flow I described above.
 
 Plus, once you understand OIDC via one of them, you can easily switch between providers if needed.
 
@@ -150,7 +150,7 @@ On the right side, under **Configure New Token**, select **Authorization Code (W
 
 <br>
 
-Notice that for **Scope** I also added **openid** and **profile**, so that I can get not just the **access token**, but also the **ID token** with some interesting user info on it. 
+Notice that for **Scope** I also added **openid** and **profile**, so that I can get not just the **access token**, but also the **ID token** with some interesting user info on it.
 
 And, make sure you select **Send client credentials in body** for the **Client Authentication** setting, or it won't work.
 
@@ -306,7 +306,7 @@ There's a lot more you may want to configure there depending on your scenario, b
 
 ### **Step 5: Configure the Blazor frontend for Entra ID**
 For this, we'll need to add one new NuGet package to the Blazor frontend project:
-    
+
 ```bash
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```
@@ -317,7 +317,7 @@ Then, here's how you can configure the OIDC flow in the frontend:
 var authority = "https://login.microsoftonline.com/e6244037-0452-4a93-bcb4-864751f62fcf/v2.0/";
 
 builder.Services
-        .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)        
+        .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
         .AddOpenIdConnect(options =>
         {
             options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -358,7 +358,7 @@ Let's break down that:
 - **TokenValidationParameters.NameClaimType:** Setting this to **JwtRegisteredClaimNames.Name** will make sure the user's name is populated in the claims principal after the user authenticates, so we can easily display it in the frontend.
 
 You also need to add these other two lines to your Program.cs in the frontend:
-    
+
 ```csharp
 builder.Services.AddAuthorizationBuilder();
 builder.Services.AddCascadingAuthenticationState();
@@ -369,7 +369,7 @@ The first line adds the authorization services to the frontend, while the second
 We should also add an endpoint in the frontend to kick off the OIDC sign-in flow:
 
 ```csharp
-app.MapGet("/authentication/login", () 
+app.MapGet("/authentication/login", ()
     => TypedResults.Challenge(
         new AuthenticationProperties { RedirectUri = "/" }))
     .AllowAnonymous();
@@ -398,7 +398,7 @@ We could do this manually in every request, but it's easier via a delegating han
 public class AuthorizationHandler(IHttpContextAccessor httpContextAccessor) : DelegatingHandler
 {
     protected override async Task<HttpResponseMessage> SendAsync(
-        HttpRequestMessage request, 
+        HttpRequestMessage request,
         CancellationToken cancellationToken)
     {
         var httpContext = httpContextAccessor.HttpContext ??
@@ -410,9 +410,9 @@ public class AuthorizationHandler(IHttpContextAccessor httpContextAccessor) : De
         if (!string.IsNullOrEmpty(accessToken))
         {
             request.Headers.Authorization = new AuthenticationHeaderValue(
-                "Bearer", 
+                "Bearer",
                 accessToken);
-        }            
+        }
 
         return await base.SendAsync(request, cancellationToken);
     }
@@ -425,12 +425,12 @@ Finally, to enable our authorization hander, we need to register it and add it t
 
 ```csharp
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddTransient<AuthorizationHandler>();     
+builder.Services.AddTransient<AuthorizationHandler>();
 
 builder.Services.AddHttpClient<GamesClient>(
     client => client.BaseAddress = new Uri("http://localhost:5274"))
     .AddHttpMessageHandler<AuthorizationHandler>();
-```  
+```
 
 <br/>
 
@@ -471,9 +471,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

@@ -25,7 +25,7 @@ Let's get started.
 
 ## **What is prerendering in Blazor?**
 
-[Prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) is the process of initially rendering page content on the server without enabling event handlers for rendered controls. 
+[Prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) is the process of initially rendering page content on the server without enabling event handlers for rendered controls.
 
 The server outputs the HTML UI of the page as soon as possible in response to the initial request, which makes the app feel more responsive to users.
 
@@ -39,7 +39,7 @@ Before .NET 8, I was mostly used to standalone Blazor WASM, since I love the ide
 
 However, when I started working with .NET 8 and started creating Blazor WASM apps (via the new template) that talk to my REST APIs, something odd happened.
 
-I noticed that the first time I loaded a page that fetched data from my API, it would end up calling my API twice. 
+I noticed that the first time I loaded a page that fetched data from my API, it would end up calling my API twice.
 
 For instance, in the razor component that renders this simple page:
 
@@ -50,7 +50,7 @@ This **OnInitializedAsync()** implementation would always be invoked twice:
 ```csharp
 @code {
     private Game[]? games;
-  
+
     protected override async Task OnInitializedAsync()
     {
         games = await Client.GetGamesAsync();
@@ -60,7 +60,7 @@ This **OnInitializedAsync()** implementation would always be invoked twice:
 
 That never happened in the same version of the app when running in .NET 7 Blazor WASM.
 
-This was driving me crazy for a few hours, but after learning about [prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) and how it affects the lifecycle of a Blazor app, things started making sense.  
+This was driving me crazy for a few hours, but after learning about [prerendering](https://learn.microsoft.com/aspnet/core/blazor/components/prerender) and how it affects the lifecycle of a Blazor app, things started making sense.
 
 <br>
 
@@ -77,7 +77,7 @@ And when your Blazor WASM app is hosted like this, the following happens:
 1. **OnInitializedAsync** is invoked once on the backend to try to prepare as much HTML as possible to send to the browser immediately. This happens before the actual Blazor WASM app lands in the browser.
 2. **OnInitializedAsync** is invoked once again once the Blazor WASM app finally arrives and loads in the browser.
 
-The result of this is that indeed you won't see the typical "loading" indicator as the app loads. 
+The result of this is that indeed you won't see the typical "loading" indicator as the app loads.
 
 You will see HTML right away, and in the case of my app, you will see the games table with data right away, which is pretty cool.
 
@@ -101,10 +101,10 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
         games = await Client.GetGamesAsync();
         StateHasChanged();
     }
-}  
+}
 ```
 
-This is the first thing that I tried and it will surely prevent calling my API twice. 
+This is the first thing that I tried and it will surely prevent calling my API twice.
 
 However, this code runs when the component is already rendered, so we already lost the opportunity to take advantage of prerendering.
 
@@ -180,7 +180,7 @@ protected override async Task OnInitializedAsync()
 }
 ```
 
-And that's it! 
+And that's it!
 
 With this approach:
 
@@ -199,9 +199,9 @@ I hope it was helpful.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

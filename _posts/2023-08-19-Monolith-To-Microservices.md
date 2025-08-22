@@ -108,7 +108,7 @@ So, we want to figure out a way for each microservice to work with their own dat
 
 And, to get there the first thing to do is to not let Game Manager poll the Matches table anymore.
 
-Should Match Maker expose a REST API for Game Manager to call? 
+Should Match Maker expose a REST API for Game Manager to call?
 
 **Please don't!** That would be tight coupling as well and trigger a bunch of new issues.
 
@@ -138,7 +138,7 @@ Just one more step to go.
 
 <img src="{{ site.url }}/assets/images/monolith-migrate-step7.jpg"/>
 
-There is no longer any reason to keep both the Matches and Games tables in the same database. 
+There is no longer any reason to keep both the Matches and Games tables in the same database.
 
 So, we can now split the database into two, one for each microservice.
 
@@ -152,7 +152,7 @@ Mission accomplished!
 
 ### **Is it worth it?**
 
-First confirm that [it is time for you to move to microservices](Should-I-Move-To-Microservices). 
+First confirm that [it is time for you to move to microservices](Should-I-Move-To-Microservices).
 
 After that, yes, totally worth it. With a microservices architecture, you will be able to:
 
@@ -173,9 +173,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

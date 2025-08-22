@@ -10,7 +10,7 @@ issue-number: 4
 
 *Read time: 7 minutes*
 
-This issue is a bit longer than usual, but I think it's worth it. 
+This issue is a bit longer than usual, but I think it's worth it.
 
 Today I'll show you how I've been using Clean Architecture to structure my ASP.NET Core applications.
 
@@ -49,8 +49,8 @@ There are 4 circles in Clean Architecture:
 
 Let's describe each one of them briefly:
 
-**Entities**  
-* Represent the enterprise-wide business rules 
+**Entities**
+* Represent the enterprise-wide business rules
 * Can be used across many apps
 * Are the least likely to change when something external changes
 * **Examples:** User, GameMatch, Order
@@ -93,7 +93,7 @@ But here I'll show you how I've been doing it:
 
 <img src="{{ site.url }}/assets/images/clean-arch-aspnet-core.png" />
 
-**Core**  
+**Core**
 Instead of standing up different projects for the `Entities` and `Use Cases` circles, I prefer to keep them together in a single project called Core.
 
 <img src="{{ site.url }}/assets/images/clean-arch-core.png" style="max-width: 50%" />
@@ -128,7 +128,7 @@ public class GameMatch
 
     public void SetPlayer2(string player2)
     {
-        ArgumentException.ThrowIfNullOrEmpty(player2);        
+        ArgumentException.ThrowIfNullOrEmpty(player2);
 
         Player2 = player2;
         State = GameMatchState.MatchWaitingForGame;
@@ -136,7 +136,7 @@ public class GameMatch
 }
 ```
 
-Regarding the `Use Cases`, I call them `Handlers` here, with each one being a small class dedicated to handle one, and only one use case. 
+Regarding the `Use Cases`, I call them `Handlers` here, with each one being a small class dedicated to handle one, and only one use case.
 
 Here's **MatchPlayerHandler** (logging removed for brevity):
 
@@ -213,7 +213,7 @@ public static IServiceCollection AddCore(
 
 <br/>
 
-**Contracts**  
+**Contracts**
 This one is not mentioned anywhere in the Clean Architecture theory, but I find it necessary.
 
 This is where all `DTOs` and `messages` used to interact with clients or with other microservices live.
@@ -235,7 +235,7 @@ public record JoinMatchRequest(string PlayerId);
 
 <br/>
 
-**Infrastructure**  
+**Infrastructure**
 This is where the `Interface Adapters` live, and therefore this project is allowed to get a dependency on pretty much any external framework.
 
 <img src="{{ site.url }}/assets/images/clean-arch-infra.png" style="max-width: 50%" />
@@ -249,7 +249,7 @@ And, before you ask:
 > Yes, if you are using Entity Framework, here is where you implement a concrete EF repository. Your Core project should have no idea that you are using Entity Framework.
 
 Here's **MongoGameMatchRepository** (most method implementations removed for brevity):
-    
+
 ```csharp
 public class MongoGameMatchRepository : IGameMatchRepository
 {
@@ -324,7 +324,7 @@ Cool stuff!
 
 <br/>
 
-**API**  
+**API**
 Here's where you'll define all your `controllers` and `endpoints`.
 
 <img src="{{ site.url }}/assets/images/clean-arch-api.png" style="max-width: 50%" />
@@ -365,12 +365,12 @@ Which takes care of registering all the dependencies in the Core and Infrastruct
 
 <br/>
 
-**Tests**  
+**Tests**
 Lastly, we got our test project, which is where all the automated tests live.
 
 <img src="{{ site.url }}/assets/images/clean-arch-tests.png" style="max-width: 50%" />
 
-And here's where one of the key benefits of Clean Architecture comes into play: 
+And here's where one of the key benefits of Clean Architecture comes into play:
 
 > You can focus your unit tests on the business rules (entities and use cases) without having to worry about any external dependencies.
 
@@ -428,9 +428,9 @@ I hope you enjoyed it.
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

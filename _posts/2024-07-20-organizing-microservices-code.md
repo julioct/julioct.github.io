@@ -9,7 +9,7 @@ issue-number: 43
 *Read time: 8 minutes*
 ​
 
-A couple of days ago my [Keycloak PR](https://github.com/dotnet/aspire/pull/4289) finally got merged into the [.NET Aspire repo](https://github.com/dotnet/aspire) (YAY!), which is a big relief since it took so much more work than expected. 
+A couple of days ago my [Keycloak PR](https://github.com/dotnet/aspire/pull/4289) finally got merged into the [.NET Aspire repo](https://github.com/dotnet/aspire) (YAY!), which is a big relief since it took so much more work than expected.
 
 Still, it is also very exciting since it will hopefully make adding Keycloak-based authentication to ASP.NET Core apps much simpler than before.
 
@@ -35,7 +35,7 @@ Because of those reasons (and a few more) I spent an entire day splitting my so 
 
 The **identity** repo is a failed experiment, so it will likely go away, but the rest each represents either 1 microservice, the frontend, or the .NE Aspire related code.
 
-Of course, the challenge there is how to make things work with code being scattered across so many repos. 
+Of course, the challenge there is how to make things work with code being scattered across so many repos.
 
 Well, based on my experience working on teams of dozens of engineers at Microsoft, where each microservice is assigned to a team of 1 to 3 developers, this is how things should work:
 
@@ -120,7 +120,7 @@ Hit F5 and your entire system will not just be running in your box, but also you
 ​
 
 ### **Closing**
-I do have other ideas on how to organize microservices code in the .NET Aspire world, like what if you add one Aspire AppHost project next to each microservice? 
+I do have other ideas on how to organize microservices code in the .NET Aspire world, like what if you add one Aspire AppHost project next to each microservice?
 
 That would almost work (no docker compose needed), but gets complicated when you try to run 2 microservices, each from their own repo, where they both need the same infrastructure resource (think PostgreSQL or RabbitMQ).
 
@@ -136,9 +136,9 @@ Until next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 

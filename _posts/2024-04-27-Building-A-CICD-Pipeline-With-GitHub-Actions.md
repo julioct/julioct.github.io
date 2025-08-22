@@ -37,7 +37,7 @@ Let's dive in.
 ### **What Is GitHub Actions?**
 I won't go into the details of what is a CI/CD pipeline or why you need it, since I already covered that in [this previous article]({{ site.url }}/blog/Building-A-CICD-Pipeline-With-Azure-DevOps), where I showed you how to build one with [Azure DevOps](https://learn.microsoft.com/azure/devops/user-guide/what-is-azure-devops){:target="_blank"}.
 
-[GitHub Actions](https://github.com/features/actions){:target="_blank"} is another popular CI/CD tool that allows you to automate your software development workflows. 
+[GitHub Actions](https://github.com/features/actions){:target="_blank"} is another popular CI/CD tool that allows you to automate your software development workflows.
 
 It's similar to Azure DevOps, but the difference is that it's built into [GitHub](https://github.com){:target="_blank"}, so you can easily build, test, and deploy your code right from your GitHub repository.
 
@@ -51,7 +51,7 @@ Assuming you already have your code pushed to a GitHub repository, you can get s
 ![](/assets/images/github-actions-tab.jpg)
 
 <br/>
-GitHub will detect the language of your project and suggest a few preconfigured workflow templates. 
+GitHub will detect the language of your project and suggest a few preconfigured workflow templates.
 
 If you are just getting started, the **.NET** template is a good option for a .NET microservice.
 
@@ -111,7 +111,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write          
+      contents: write
 ```
 
 Here we are defining a job called **generate-version** that will run on a Linux box that will use the **ubuntu-latest** image.
@@ -160,7 +160,7 @@ That way, we can use this new version in the next jobs of our workflow.
 Since we already have a Dockerfile in our repository that defines how to build the microservice Docker image, we can easily tell GitHub Actions to build and push that image to a container registry.
 
 First, let's define a new job:
-    
+
 ```yaml
   build-and-deploy-service:
     runs-on: ubuntu-latest
@@ -211,7 +211,7 @@ Let's briefly explain what each step does:
 
 1. **Azure Login**: This step authenticates with Azure using the service principal credentials that I grabbed from my Azure Portal and have stored as GitHub secrets. To make this work you'll also need to configure a federated identity credential for your Azure service principal as described [here](https://github.com/Azure/login?tab=readme-ov-file#login-with-openid-connect-oidc-recommended){:target="_blank"}.
 
-2. **Login to container registry**: This step uses the Azure CLI to log in to the Azure Container Registry where we will push our Docker image. 
+2. **Login to container registry**: This step uses the Azure CLI to log in to the Azure Container Registry where we will push our Docker image.
 
 3. **Build and push Docker image**: This step builds the Docker image and pushes it to my Azure Container Registry. Notice how we are using the new version that was generated in the previous job as the tag for the image.
 
@@ -224,7 +224,7 @@ To deploy our microservice to AKS, we will use a **Helm** chart that I had alrea
 
 If you are not familiar with Helm, it is basically a package manager for Kubernetes that allows you to define, install, and upgrade Kubernetes applications.
 
-What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR. 
+What I did is to create a Helm chart that defines how to deploy any of my microservices to Kubernetes and then I stored it in my ACR.
 
 So first let's add a step to get access to the AKS cluster (we can do this because we already authenticated with Azure in the previous job):
 
@@ -274,7 +274,7 @@ Now, that looks like a lot, but to break it down:
 3. We are passing a **values** file that contains the configuration for this very specific microservice.
 4. We are setting the image tag to the new version that was generated in the first job.
 
-And that's pretty much it. 
+And that's pretty much it.
 
 Here is the full workflow YAML:
 
@@ -291,7 +291,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write          
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -385,7 +385,7 @@ And, if everything went well, you should see your workflow running:
 
 You now have a fully automated CI/CD pipeline that builds your .NET microservice as a Docker image and deploys it to AKS every time you push code to your repository.
 
-Mission accomplished! 
+Mission accomplished!
 
 <br/>
 
@@ -395,9 +395,9 @@ Mission accomplished!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[​Stripe for .NET Developers (Waitlist)​]({{ site.url }}/waitlist)**: Add real payments to your .NET apps with Stripe—fast, secure, production-ready.
+1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete blueprint for C# developers who need to build production-ready .NET applications for the Azure cloud.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
 3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
 
