@@ -12,12 +12,12 @@
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code
-            discountPercentage: "2", // Default discount percentage (no decimals)
+            discountPercentage: "30", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             annualCouponCode: "", // Annual plan coupon code
-            annualDiscountPercentage: "", // Annual plan discount percentage
+            annualDiscountPercentage: "30", // Annual plan discount percentage
             quarterlyCouponCode: "", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
+            quarterlyDiscountPercentage: "30", // Quarterly plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
@@ -68,18 +68,16 @@
         {
             if (!notificationBanner) return;
 
-            const couponCode = window.parityDealsInfo.couponCode;
+            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
+            const discountDollars = window.parityDealsInfo.discountDollars;
+            const country = window.parityDealsInfo.country || "your country";
 
-            // If there's no coupon code, don't show the banner at all
-            if (!couponCode)
+            // Show banner if there's any discount available (percentage or dollar amount)
+            if (discountPercentage <= 0 && !discountDollars)
             {
                 notificationBanner.style.display = 'none';
                 return;
             }
-
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-            const discountDollars = window.parityDealsInfo.discountDollars;
-            const country = window.parityDealsInfo.country || "your country";
 
             let discountText = "";
 
@@ -107,11 +105,11 @@
         // Function to update links with coupon codes
         const updateCouponLinks = function ()
         {
-            // Update annual plan link
+            // Update annual plan link - only apply coupon if it exists and is from API
             if (annualPaymentLink && annualOriginalHref)
             {
                 const annualCouponCode = window.parityDealsInfo.annualCouponCode;
-                if (annualCouponCode)
+                if (annualCouponCode && window.parityDealsInfo.couponFromAPI)
                 {
                     const url = new URL(annualOriginalHref);
                     url.searchParams.set('coupon', annualCouponCode);
@@ -125,11 +123,11 @@
                 }
             }
 
-            // Update quarterly plan link
+            // Update quarterly plan link - only apply coupon if it exists and is from API
             if (quarterlyPaymentLink && quarterlyOriginalHref)
             {
                 const quarterlyCouponCode = window.parityDealsInfo.quarterlyCouponCode;
-                if (quarterlyCouponCode)
+                if (quarterlyCouponCode && window.parityDealsInfo.couponFromAPI)
                 {
                     const url = new URL(quarterlyOriginalHref);
                     url.searchParams.set('coupon', quarterlyCouponCode);
@@ -254,18 +252,22 @@
             const hasAnnualCouponCode = !!window.parityDealsInfo.annualCouponCode;
             const hasQuarterlyCouponCode = !!window.parityDealsInfo.quarterlyCouponCode;
 
-            // Update annual plan price display - show discounted price when coupon code is present
+            // Check if we have any discount available (percentage or dollar amount)
+            const hasAnnualDiscount = parseInt(window.parityDealsInfo.annualDiscountPercentage) > 0;
+            const hasQuarterlyDiscount = parseInt(window.parityDealsInfo.quarterlyDiscountPercentage) > 0;
+
+            // Update annual plan price display - show discounted price when discount is available
             if (annualFullPriceDiv && annualDiscountedPriceDiv)
             {
-                annualFullPriceDiv.style.display = hasAnnualCouponCode ? 'none' : 'block';
-                annualDiscountedPriceDiv.style.display = hasAnnualCouponCode ? 'block' : 'none';
+                annualFullPriceDiv.style.display = hasAnnualDiscount ? 'none' : 'block';
+                annualDiscountedPriceDiv.style.display = hasAnnualDiscount ? 'block' : 'none';
             }
 
-            // Update quarterly plan price display - show discounted price when coupon code is present
+            // Update quarterly plan price display - show discounted price when discount is available
             if (quarterlyFullPriceDiv && quarterlyDiscountedPriceDiv)
             {
-                quarterlyFullPriceDiv.style.display = hasQuarterlyCouponCode ? 'none' : 'block';
-                quarterlyDiscountedPriceDiv.style.display = hasQuarterlyCouponCode ? 'block' : 'none';
+                quarterlyFullPriceDiv.style.display = hasQuarterlyDiscount ? 'none' : 'block';
+                quarterlyDiscountedPriceDiv.style.display = hasQuarterlyDiscount ? 'block' : 'none';
             }
 
             // Update discount display values
@@ -300,6 +302,7 @@
 
                 if (data.couponCode)
                 {
+                    // Override any hardcoded discount with parity deals discount for all plans
                     window.parityDealsInfo.couponCode = data.couponCode;
                     window.parityDealsInfo.annualCouponCode = data.couponCode;
                     window.parityDealsInfo.quarterlyCouponCode = data.couponCode;

@@ -10,8 +10,8 @@
     const countdownConfig = {
         // Main countdown timer configuration
         main: {
-            targetDate: "July 7, 2025 06:00:00 PDT",
-            title: "Summer Sale Ends In",
+            targetDate: "September 2, 2025 06:00:00 PDT",
+            title: "Back to School Sale Ends In",
             selectors: {
                 days: "#countdown-days",
                 hours: "#countdown-hours",
@@ -23,7 +23,7 @@
         },
         // Banner countdown timer configuration
         banner: {
-            targetDate: "July 7, 2025 06:00:00 PDT", // Same date as main countdown
+            targetDate: "September 2, 2025 06:00:00 PDT", // Same date as main countdown
             selectors: {
                 days: "#banner-countdown-days",
                 hours: "#banner-countdown-hours",

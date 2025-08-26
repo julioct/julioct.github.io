@@ -12,10 +12,10 @@
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "", // Default discount percentage (no decimals)
+            discountPercentage: "30", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             allAccessCouponCode: "", // All-access pass coupon code
-            allAccessDiscountPercentage: "", // All-access pass discount percentage
+            allAccessDiscountPercentage: "30", // All-access pass discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
@@ -71,18 +71,16 @@
         {
             if (!notificationBanner) return;
 
-            const couponCode = window.parityDealsInfo.couponCode;
+            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
+            const discountDollars = window.parityDealsInfo.discountDollars;
+            const country = window.parityDealsInfo.country || "your country";
 
-            // If there's no coupon code, don't show the banner at all
-            if (!couponCode)
+            // Show banner if there's any discount available (percentage or dollar amount)
+            if (discountPercentage <= 0 && !discountDollars)
             {
                 notificationBanner.style.display = 'none';
                 return;
             }
-
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-            const discountDollars = window.parityDealsInfo.discountDollars;
-            const country = window.parityDealsInfo.country || "your country";
 
             let discountText = "";
 
@@ -95,7 +93,7 @@
                 discountText = `$${discountDollars}`;
             }
 
-            let bannerText = `☀️ Summer Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;July&nbsp;6`;
+            let bannerText = `📚 Back to School Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;September&nbsp;2`;
 
             // If coupon code came from the Parity Deals API, use the country-specific format
             if (window.parityDealsInfo.couponFromAPI)
@@ -110,11 +108,11 @@
         // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update one-time payment link only
+            // Update one-time payment link - only apply coupon if it exists and is from API
             if (oneTimePaymentLink && originalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
-                if (couponCode)
+                if (couponCode && window.parityDealsInfo.couponFromAPI)
                 {
                     // Remove existing coupon parameter if present, then add new one
                     const baseUrl = originalHref.split('&coupon=')[0].split('?coupon=')[0];
@@ -234,27 +232,32 @@
             const hasCouponCode = !!window.parityDealsInfo.couponCode;
             const hasAllAccessCouponCode = !!window.parityDealsInfo.allAccessCouponCode;
 
-            // Update one-time payment price display - show discounted price when coupon code is present
+            // Check if we have any discount available (percentage or dollar amount)
+            const hasOnetimeDiscount = parseInt(window.parityDealsInfo.discountPercentage) > 0 ||
+                window.parityDealsInfo.discountDollars;
+            const hasAllAccessDiscount = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) > 0;
+
+            // Update one-time payment price display - show discounted price when discount is available
             const oneTimeFullPriceDiv = document.querySelector('.pricing-card-container:first-child #full-price');
             const oneTimeDiscountedPriceDiv = document.querySelector('.pricing-card-container:first-child #discounted-price');
 
             if (oneTimeFullPriceDiv && oneTimeDiscountedPriceDiv)
             {
-                oneTimeFullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
-                oneTimeDiscountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
+                oneTimeFullPriceDiv.style.display = hasOnetimeDiscount ? 'none' : 'block';
+                oneTimeDiscountedPriceDiv.style.display = hasOnetimeDiscount ? 'block' : 'none';
             }
             // Fallback: try to find elements without the container restriction if the above doesn't work
             else if (fullPriceDiv && discountedPriceDiv)
             {
-                fullPriceDiv.style.display = hasCouponCode ? 'none' : 'block';
-                discountedPriceDiv.style.display = hasCouponCode ? 'block' : 'none';
+                fullPriceDiv.style.display = hasOnetimeDiscount ? 'none' : 'block';
+                discountedPriceDiv.style.display = hasOnetimeDiscount ? 'block' : 'none';
             }
 
-            // Update all-access pass price display
+            // Update all-access pass price display - show discounted price when discount is available
             if (allAccessFullPriceDiv && allAccessDiscountedPriceDiv)
             {
-                allAccessFullPriceDiv.style.display = hasAllAccessCouponCode ? 'none' : 'block';
-                allAccessDiscountedPriceDiv.style.display = hasAllAccessCouponCode ? 'block' : 'none';
+                allAccessFullPriceDiv.style.display = hasAllAccessDiscount ? 'none' : 'block';
+                allAccessDiscountedPriceDiv.style.display = hasAllAccessDiscount ? 'block' : 'none';
             }
 
             // Update discount display values
@@ -289,6 +292,7 @@
 
                 if (data.couponCode)
                 {
+                    // Override any hardcoded discount with parity deals discount for both onetime and all-access
                     window.parityDealsInfo.couponCode = data.couponCode;
                     window.parityDealsInfo.allAccessCouponCode = data.couponCode; // Store for display purposes only
                     window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
