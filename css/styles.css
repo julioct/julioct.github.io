@@ -21,7 +21,7 @@ Table Of Contents:
 - Social
 - Footer
 - Copyright
-- Back To Top Button 
+- Back To Top Button
 - Extra Pages
 - Media Queries
 ******************************************/
@@ -2392,6 +2392,15 @@ a:hover.back-to-top {
     }
 }
 
+/* Max-width 767px */
+@media (max-width: 767px) {
+    .btn-outline-lg {
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
+        line-height: 1.5;
+    }
+}
+
 /* Max-width 768px */
 @media (max-width: 768px) {
     .chapter-title span {
@@ -2438,6 +2447,8 @@ a:hover.back-to-top {
 
     .btn-outline-lg {
         line-height: 0;
+        font-size: 1.5rem;
+        padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     }
 
     .navbar .logo-text {
