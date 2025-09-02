@@ -12,10 +12,10 @@
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "30", // Default discount percentage (no decimals)
+            discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             allAccessCouponCode: "", // All-access pass coupon code
-            allAccessDiscountPercentage: "30", // All-access pass discount percentage
+            allAccessDiscountPercentage: "", // All-access pass discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };

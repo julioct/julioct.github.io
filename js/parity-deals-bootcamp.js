@@ -12,8 +12,8 @@
         window.parityDealsInfo = {
             couponCode: "", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
             couponCodePaymentPlan: "", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
-            discountPercentage: "30", // Set this to the discount percentage for onetime payment (e.g., "20")
-            discountPercentagePaymentPlan: "30", // Set this to the discount percentage for payment plan (e.g., "15")
+            discountPercentage: "", // Set this to the discount percentage for onetime payment (e.g., "20")
+            discountPercentagePaymentPlan: "", // Set this to the discount percentage for payment plan (e.g., "15")
             discountDollars: "",  // Alternative: set this to a fixed dollar amount
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API

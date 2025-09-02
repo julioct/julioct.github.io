@@ -12,12 +12,12 @@
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
             couponCode: "", // Default coupon code
-            discountPercentage: "30", // Default discount percentage (no decimals)
+            discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             annualCouponCode: "", // Annual plan coupon code
-            annualDiscountPercentage: "30", // Annual plan discount percentage
+            annualDiscountPercentage: "", // Annual plan discount percentage
             quarterlyCouponCode: "", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "30", // Quarterly plan discount percentage
+            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
