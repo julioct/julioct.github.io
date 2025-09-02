@@ -9,7 +9,7 @@ issue-number: 57
 *Read time: 5 minutes*
 ​
 
-Course 1 of the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) is now fully recorded!
+Course 1 of the upcoming [.NET Backend Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) is now fully recorded!
 
 I had forgotten how intensive that process can be and how many retakes are sometimes needed for the best possible result. In fact, I just finished re-recording the entire 5th module because I didn't like the progression in those lessons. Time-consuming, but it was worth it!
 
@@ -102,7 +102,7 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
 2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 

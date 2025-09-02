@@ -254,7 +254,7 @@ There are a bunch of things I didn't get to cover here, like:
 * How to consume NuGet packages from private feeds in Docker
 * How to build and publish NuGet packages in your CI/CD pipelines
 
-If you are interested, I cover that and a bunch of other related topics in my **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
+If you are interested, I cover that and a bunch of other related topics in my **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 I hope you liked it.
 
@@ -266,7 +266,7 @@ Till next time!
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
 2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 

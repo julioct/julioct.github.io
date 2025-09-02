@@ -9,7 +9,7 @@ issue-number: 52
 *Read time: 9 minutes*
 ​
 
-It's done! A couple of days ago I finally completed the Game Store system, the distributed .NET Web application that will drive the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) (Is that a good name? Let me know!).
+It's done! A couple of days ago I finally completed the Game Store system, the distributed .NET Web application that will drive the upcoming [.NET Backend Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp) (Is that a good name? Let me know!).
 
 I'm amazed by how much the tech has advanced in the .NET and Azure world in the last few years. There's so much going on in this field that I have no idea how folks are solving today's chaotic puzzle to learn cloud development with .NET.
 
@@ -245,7 +245,7 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
 2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 

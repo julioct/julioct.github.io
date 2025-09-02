@@ -9,7 +9,7 @@ issue-number: 53
 *Read time: 7 minutes*
 ​
 
-After completing the Game Store application, the last week was all about scripting the first few modules of the upcoming [.NET Cloud Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), which essentially means creating a detailed Word document for each lesson, describing exactly how that lesson should go.
+After completing the Game Store application, the last week was all about scripting the first few modules of the upcoming [.NET Backend Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), which essentially means creating a detailed Word document for each lesson, describing exactly how that lesson should go.
 
 I don't know how many content creators do this, since it's a long (and sometimes tedious) process, but I find it essential to make sure each concept and technique is introduced at exactly the right time and to significantly reduce the chance of errors during recording.
 
@@ -141,7 +141,7 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
 2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 

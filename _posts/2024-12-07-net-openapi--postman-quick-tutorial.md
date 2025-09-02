@@ -164,7 +164,7 @@ A small but very welcomed improvement!
 ​
 
 ### **Bootcamp Update**
-As promised, I got a few updates on Course 2 of my .NET Cloud Developer Bootcamp: **ASP.NET Core Advanced**.
+As promised, I got a few updates on Course 2 of my .NET Backend Developer Bootcamp: **ASP.NET Core Advanced**.
 
 First, thanks to the huge support from all the folks who already joined the bootcamp, for Course 2 I was able to bring back my awesome video editor to help me with the finishing touches.
 
@@ -194,7 +194,7 @@ Julio
 
 **Whenever you’re ready, there are 4 ways I can help you:**
 
-1. **[.NET Cloud Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
 2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
