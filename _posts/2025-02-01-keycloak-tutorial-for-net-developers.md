@@ -43,6 +43,13 @@ I love to use it primarily for local development because:
 
 Now let's see how to configure it for local development.
 
+<br>
+### **Video Walkthrough**
+
+If you prefer a visual guide, here's a video tutorial covering everything related to the Keycloak setup and the ASP.NET Core back-end configuration:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UxAiWpkyFOI?si=wo4SB6aAbakTQVZu&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ​
 
 ### **Step 1: Run Keycloak via Docker**
