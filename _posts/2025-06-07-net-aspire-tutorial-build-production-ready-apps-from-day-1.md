@@ -50,6 +50,10 @@ It achieves this by providing several key out-of-the-box features:
 
 Now let's see how to create a new .NET Aspire based application, step by step.
 
+**Prefer to watch? I also have a video tutorial that shows how to turn an existing API into an Aspire application:**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/41PD08tSH4E?si=BADAvM6S5pMFQVGr&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ​
 
 ### **Step 1: Install the templates**
