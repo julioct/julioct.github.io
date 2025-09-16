@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="LWAWGOWE" defer></script>
+    <!-- / Fathom -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GKWPQFHL1Y');
+    </script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y)
+        {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "mzlifzd36i");
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Skip years of struggle and master production-grade .NET development with comprehensive courses, live workshops, and expert guidance.">
+    <meta name="author" content="Julio Casal">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="Julio Casal" />
+    <meta property="og:site" content="https://juliocasal.com" />
+    <meta property="og:title" content="Roadmap Sent!" />
+    <meta property="og:description"
+        content="Skip years of struggle and master production-grade .NET development with comprehensive courses, live workshops, and expert guidance." />
+    <meta property="og:image" content="https://juliocasal.com/images/courses/all-access/all-access-pass-ty-hero.jpg" />
+    <meta property="og:url" content="https://juliocasal.com/roadmap-sent" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://juliocasal.com/images/courses/all-access/all-access-pass-ty-hero.jpg">
+    <meta name="thumbnail" content="https://juliocasal.com/images/courses/all-access/all-access-pass-ty-hero.jpg" />
+    <meta name="robots" content="noindex">
+
+    <!-- Webpage Title -->
+    <title>Roadmap Sent!</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon">
+
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(103, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+
+        .download-cta {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .download-cta:hover {
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(240, 147, 251, 0.4);
+            box-shadow: 0 10px 30px rgba(103, 126, 234, 0.2);
+        }
+
+        .benefit-card .media {
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-card h5 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .code-snippet {
+            background: #1a1a2e;
+            color: #16d9e3;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        body {
+            background: #1a1a2e !important;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #1a1a2e !important;
+        }
+
+        .copyright {
+            background-color: #1a1a2e !important;
+        }
+
+        .btn-outline-lg:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Header -->
+    <header id="header" class="header" style="padding: 1rem;">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10 text-center">
+                    <h1 class="text-white mb-3" style="font-size: 2.5rem; font-weight: 700;">
+                        Your roadmap is on its way 🚀
+                    </h1>
+                    <h2 class="text-white" style="font-size: 1.8rem; font-weight: 400; opacity: 0.9;">
+                        Don't know where to start? Here's a step-by-step learning path...
+                    </h2>
+                </div>
+            </div>
+
+
+            <!-- Title & Image with Background -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10 text-center">
+                    <img class="img-fluid rounded" src="images/courses/all-access/all-access-pass-ty-hero.jpg"
+                        alt=".NET Backend Blueprint Template">
+                </div>
+            </div>
+
+            <!-- Description and CTA Section -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="line-spaced-paragraph text-white mb-3">
+                        Get the <strong>complete all-access pass</strong> to master production-grade .NET development
+                        with comprehensive courses, community access, expert interviews, and enterprise-grade templates.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <!-- CTA Buttons -->
+                        <div class="text-center mb-4">
+                            <a class="btn-solid-lg"
+                                href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4451213"
+                                style="margin-right: 1rem;"><strong>Start All-Access For $49</strong></a>
+                            <a class="btn-outline-lg" href="https://juliocasal.com/new-subscriber-survey" target="_blank">
+                                <strong>No Thanks</strong>
+                            </a>
+                        </div>
+                        <!-- Special Price Message -->
+                        <div class="text-center">
+                            <div
+                                style="display: inline-block; padding: 0.75rem 1.5rem; background: rgba(245, 87, 108, 0.1); border-radius: 8px; border: 1px solid rgba(245, 87, 108, 0.2);">
+                                <span class="text-white" style="font-size: 0.85rem; font-weight: 500;">
+                                    <em>Billed $49 today. Renews at $79/month after 30 days until canceled. <br> Available only on this page.</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main-content" class="basic-1" style="padding: 0;">
+        <div class="container">
+            <!-- Pro Features Introduction -->
+            <div class="row justify-content-center mb-2 mt-3">
+                <div class="col-lg-8 text-center">
+                    <p class="line-spaced-paragraph text-white mb-3">
+                        Your all-access pass includes <strong>everything you need</strong> to become a senior .NET
+                        developer:
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-graduation-cap text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Complete Course Library</h5>
+                                <p><strong>8 comprehensive courses</strong> covering ASP.NET Core APIs, Docker
+                                    containerization, Azure cloud deployment, microservices architecture, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-microphone text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Microsoft Expert Interviews</h5>
+                                <p><strong>Insider perspectives</strong> from Microsoft employees sharing career advice,
+                                    technology insights, and industry best practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-rocket text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Early Access to New Content</h5>
+                                <p><strong>Be the first to access</strong> new courses, templates, and resources as soon
+                                    as they're released. Stay ahead of the curve.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-users text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Exclusive Community Access</h5>
+                                <p><strong>Connect with fellow developers</strong> in our private community. Get help,
+                                    share experiences, and network with like-minded professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-code text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Production-Ready Templates</h5>
+                                <p><strong>Professional project templates</strong> including the complete .NET Backend
+                                    Blueprint Pro and other enterprise-grade starting points.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-times-circle text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Cancel Anytime</h5>
+                                <p><strong>No long-term commitment</strong> required. Cancel your subscription at any
+                                    time with just one click. No questions asked.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="basic-1 pt-5 pb-0">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="benefit-card"
+                        style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.2) 0%, rgba(245, 87, 108, 0.2) 100%); border-color: rgba(240, 147, 251, 0.4);">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="images/head-shot-Ariste-Jean.jpg" alt="Student testimonial"
+                                    class="rounded-circle img-fluid"
+                                    style="width: 120px; height: 120px; object-fit: cover; border: 3px solid rgba(240, 147, 251, 0.4);">
+                            </div>
+                            <div class="col-md-9">
+                                <blockquote class="text-white"
+                                    style="font-style: italic; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                                    "Over the years I’ve built knowledge across .NET, Azure, and Azure DevOps, but your program really tied everything together. It strengthened my skills and helped me move from being a regular software engineer to stepping into a consultant/lead developer role."
+                                </blockquote>
+                                <div class="text-left">
+                                    <div class="text-white font-weight-bold" style="font-size: 1.1rem;">Ariste Jean</div>
+                                    <div class="text-white" style="opacity: 0.8; font-size: 0.95rem;">Full-Stack Developer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2025 Julio Casal LLC</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/favicon.js"></script>
+</body>
+
+</html>
