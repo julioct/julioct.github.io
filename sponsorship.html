@@ -61,8 +61,151 @@
 </head>
 
 <style>
-    li {
+    body {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        min-height: 100vh;
+    }
+
+    .modern-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .light-gradient {
+        background: linear-gradient(135deg, rgba(103, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    }
+
+    .modern-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(103, 126, 234, 0.15);
+        border-radius: 20px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .modern-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(103, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .modern-card:hover::before {
+        opacity: 1;
+    }
+
+    .modern-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(103, 126, 234, 0.3);
+        box-shadow: 0 20px 40px rgba(103, 126, 234, 0.15);
+    }
+
+    .modern-card>* {
+        position: relative;
+        z-index: 2;
+    }
+
+    .stats-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+        border: 1px solid rgba(203, 213, 225, 0.3);
+        border-radius: 16px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .stats-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-cta {
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(103, 126, 234, 0.3);
+    }
+
+    .pricing-cta:hover {
+        transform: translateY(-2px);
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 8px 25px rgba(103, 126, 234, 0.4);
+    }
+
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
+    }
+
+    .check-icon {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-right: 0.75rem;
+        line-height: 1.1;
+        font-weight: 700;
+    }
+
+    .number-badge {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        min-width: 2rem;
+        height: 2rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .brand-logo-card {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(203, 213, 225, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .brand-logo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        position: relative;
+        overflow: hidden;
     }
 
     @media (max-width: 576px) {
@@ -78,6 +221,10 @@
 
         .pricing-title {
             font-size: 2rem !important;
+        }
+
+        .modern-card {
+            padding: 1.5rem;
         }
     }
 </style>
@@ -132,83 +279,74 @@
     </div>
 
     <!-- Header -->
-    <header id="header" class="header" style="padding-top: 5rem;">
+    <header id="header" class="header hero-section" style="padding: 5rem 0 0 0;">
         <div class="container">
-            <div class="row justify-content-center align-items-center" style="min-height: 200px;">
+            <div class="row justify-content-center align-items-center" style="min-height: 300px;">
                 <div class="col-lg-10 text-center">
                     <div class="text-container">
-                        <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3;">Promote
-                            your brand to
-                            25,000+ .NET developers</h1>
+                        <h1
+                            style="font-size: 3.5rem; font-weight: 700; margin-bottom: 2rem; line-height: 1.2; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                            Promote your brand to<br>
+                            <span style="color: #1e293b;">25,000+ .NET developers</span>
+                        </h1>
+                        <p
+                            style="font-size: 1.25rem; color: #64748b; font-weight: 400; max-width: 600px; margin: 0 auto 2rem;">
+                            Join leading engineering brands in reaching the most engaged .NET developer community
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <svg class="header-decoration" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-            viewBox="0 0 1920 305.139">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: #ffffff;
-                    }
-                </style>
-            </defs>
-            <title>header-decoration</title>
-            <path class="cls-1"
-                d="M1486.486,36.773C1434.531,13.658,1401.068-5.1,1329.052,1.251c-92.939,8.2-152.759,70.189-180.71,89.478-23.154,15.979-134.286,104.091-171.753,128.16-50.559,32.48-98.365,59.228-166.492,67.5-67.648,8.21-124.574-6.25-152.992-18-42.218-17.454-42.218-17.454-90-39-35.411-15.967-81.61-34.073-141.58-34.054-116.6.037-262.78,77.981-354.895,80.062C53.1,275.793,22.75,273.566,0,260.566v44.573H1920V61.316c-36.724,23.238-76.008,61.68-177,65C1655.415,129.2,1556.216,67.8,1486.486,36.773Z"
-                transform="translate(0 0)" />
-        </svg>
     </header> <!-- end of header -->
     <!-- end of header -->
 
     <!-- Pricing Section -->
-    <div class="basic-1" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <div class="basic-1" style="padding: 2rem 0; background: transparent;">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Stats Section - Shows first on mobile, second on desktop -->
                 <div class="col-lg-6 mb-4 order-1 order-lg-2">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <div class="text-center">
+                            <div class="stats-card">
                                 <div
-                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.5rem;">
                                     25,000+
                                 </div>
-                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                <div style="font-size: 1rem; color: #64748b; font-weight: 600;">
                                     Newsletter Reach
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <div class="text-center">
+                            <div class="stats-card">
                                 <div
-                                    style="font-size: 2.5rem; font-weight: 800; color: #06b6d4; line-height: 1; margin-bottom: 0.5rem;">
+                                    style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.5rem;">
                                     32%
                                 </div>
-                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                <div style="font-size: 1rem; color: #64748b; font-weight: 600;">
                                     Average Open Rate
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <div class="text-center">
+                            <div class="stats-card">
                                 <div
-                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.5rem;">
                                     300-400
                                 </div>
-                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                <div style="font-size: 1rem; color: #64748b; font-weight: 600;">
                                     Average Sponsorship Clicks
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <div class="text-center">
+                            <div class="stats-card">
                                 <div
-                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 0.5rem;">
                                     8,500+
                                 </div>
-                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                <div style="font-size: 1rem; color: #64748b; font-weight: 600;">
                                     Average Sponsorship Views
                                 </div>
                             </div>
@@ -218,32 +356,41 @@
 
                 <!-- Pricing Section - Shows second on mobile, first on desktop -->
                 <div class="col-lg-6 mb-4 order-2 order-lg-1">
-                    <div class="card border-0 shadow-lg h-100" style="background: #2563eb;">
-                        <div class="card-body p-5 text-white text-center">
-                            <div class="h3 mb-4 pricing-title"
-                                style="color: white; font-weight: 700; font-size: 2.5rem;">$400 per issue</div>
-
-                            <div class="mb-4" style="color: rgba(255,255,255,0.95);">
-                                <div class="mb-2" style="font-size: 1rem; font-weight: 600;">
-                                    <i class="fas fa-star" style="color: #fbbf24; margin-right: 8px;"></i>
-                                    1 of only 2 sponsor slots
-                                </div>
-                                <div class="mb-2" style="font-size: 1rem; font-weight: 600;">
-                                    <i class="fas fa-clock" style="color: #fbbf24; margin-right: 8px;"></i>
-                                    Saturdays 6 AM PT
-                                </div>
-                                <div style="font-size: 1rem; font-weight: 600;">
-                                    <i class="fas fa-envelope-open-text" style="color: #fbbf24; margin-right: 8px;"></i>
-                                    Email + permanent archive
-                                </div>
-                            </div>
-
-                            <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship"
-                                class="btn btn-lg btn-warning font-weight-bold shadow"
-                                style="color: #222; text-decoration: none;">
-                                Reserve Your Sponsorship Today
-                            </a>
+                    <div class="modern-card text-center"
+                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+                        <div class="h3 mb-4 pricing-title" style="color: white; font-weight: 700; font-size: 2.5rem;">
+                            $400 per issue
                         </div>
+
+                        <div class="mb-4" style="color: rgba(255,255,255,0.95); max-width: 350px; margin: 0 auto;">
+                            <div class="mb-3 d-flex align-items-center" style="font-size: 1.1rem; font-weight: 500;">
+                                <div class="feature-icon"
+                                    style="background: rgba(255,255,255,0.2); margin-right: 1rem; margin-bottom: 0; width: 40px; height: 40px; font-size: 1.2rem; flex-shrink: 0;">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span style="text-align: left;">1 of only 2 sponsor slots</span>
+                            </div>
+                            <div class="mb-3 d-flex align-items-center" style="font-size: 1.1rem; font-weight: 500;">
+                                <div class="feature-icon"
+                                    style="background: rgba(255,255,255,0.2); margin-right: 1rem; margin-bottom: 0; width: 40px; height: 40px; font-size: 1.2rem; flex-shrink: 0;">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span style="text-align: left;">Saturdays 6 AM PT</span>
+                            </div>
+                            <div class="d-flex align-items-center" style="font-size: 1.1rem; font-weight: 500;">
+                                <div class="feature-icon"
+                                    style="background: rgba(255,255,255,0.2); margin-right: 1rem; margin-bottom: 0; width: 40px; height: 40px; font-size: 1.2rem; flex-shrink: 0;">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </div>
+                                <span style="text-align: left;">Email + permanent website archive</span>
+                            </div>
+                        </div>
+
+                        <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship"
+                            class="pricing-cta"
+                            style="background: white; color: #667eea; font-weight: 700; display: inline-block;">
+                            Reserve Your Sponsorship Today
+                        </a>
                     </div>
                 </div>
             </div>
@@ -251,39 +398,40 @@
     </div>
 
     <!-- Trusted Brands Section -->
-    <div class="basic-1" style="padding-top: 3rem; padding-bottom: 3rem; background-color: #f8f9fa;">
+    <div class="basic-1"
+        style="padding: 2rem 0; background: linear-gradient(135deg, rgba(103, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h2 class="mb-5" style="font-weight: 700; color: #333; font-size: 2.2rem;">Trusted by engineering
+                    <h2 class="mb-5" style="font-weight: 700; color: #1e293b; font-size: 2.2rem;">Trusted by engineering
                         brands</h2>
-                    <div class="row align-items-center justify-content-center" style="opacity: 0.8;">
+                    <div class="row align-items-stretch justify-content-center">
                         <div class="col-6 col-md-3 mb-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="images/sponsors/abp.png" alt="ABP.IO" class="img-fluid mb-2"
+                            <div class="brand-logo-card">
+                                <img src="images/sponsors/abp.png" alt="ABP.IO" class="img-fluid mb-3"
                                     style="max-height: 50px;">
-                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">ABP.IO</span>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #64748b;">ABP.IO</span>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 mb-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="images/sponsors/devart.png" alt="Devart" class="img-fluid mb-2"
+                            <div class="brand-logo-card">
+                                <img src="images/sponsors/devart.png" alt="Devart" class="img-fluid mb-3"
                                     style="max-height: 50px;">
-                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">Devart</span>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #64748b;">Devart</span>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 mb-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="images/sponsors/jetbrains.png" alt="JetBrains" class="img-fluid mb-2"
+                            <div class="brand-logo-card">
+                                <img src="images/sponsors/jetbrains.png" alt="JetBrains" class="img-fluid mb-3"
                                     style="max-height: 50px;">
-                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">JetBrains</span>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #64748b;">JetBrains</span>
                             </div>
                         </div>
                         <div class="col-6 col-md-3 mb-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="images/sponsors/UpCloud.png" alt="UpCloud" class="img-fluid mb-2"
+                            <div class="brand-logo-card">
+                                <img src="images/sponsors/UpCloud.png" alt="UpCloud" class="img-fluid mb-3"
                                     style="max-height: 50px;">
-                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">UpCloud</span>
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #64748b;">UpCloud</span>
                             </div>
                         </div>
                     </div>
@@ -292,75 +440,68 @@
         </div>
     </div>
 
-    <div class="basic-1 pt-0" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+    <div class="basic-1" style="padding: 2rem 0; background: transparent;">
         <div class="container">
             <div class="row justify-content-center align-items-stretch">
                 <div class="col-lg-6 mb-4">
-                    <div class="p-4 p-md-5 rounded shadow-sm border bg-white h-100">
-                        <h2 class="mb-4" style="font-weight:700;">What you get as a sponsor</h2>
-                        <ul class="mb-0" style="font-size:1.13rem; padding-left: 0; list-style: none;">
-                            <li class="mb-3" style="display: flex; align-items: flex-start;"><span
-                                    style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span><span
-                                        style="font-weight:600; color:#222;">1 of only 2 ads</span> in the Saturday
-                                    newsletter</span></li>
-                            <li class="mb-3" style="display: flex; align-items: flex-start;"><span
-                                    style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span>Published
-                                    at <span style="font-weight:600; color:#222;">6 AM PST every
-                                        Saturday</span></span></li>
-                            <li class="mb-3" style="display: flex; align-items: flex-start;"><span
-                                    style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span><span
-                                        style="font-weight:600; color:#222;">Permanent placement</span> on the website
-                                    archive</span></li>
-                            <li class="mb-3" style="display: flex; align-items: flex-start;"><span
-                                    style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span><span
-                                        style="font-weight:600; color:#222;">$400</span> per ad</span></li>
-                            <li class="mb-3" style="display: flex; align-items: flex-start; color:#888;"><span
-                                    style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span
-                                    style="font-style:italic;">No cancellations or reschedules</span></li>
+                    <div class="modern-card h-100">
+                        <h2 class="mb-4" style="font-weight: 700; color: #1e293b;">What you get as a sponsor</h2>
+                        <ul class="mb-0" style="font-size: 1.1rem; padding-left: 0; list-style: none;">
+                            <li class="mb-3 d-flex align-items: flex-start">
+                                <span class="check-icon">✓</span>
+                                <span><strong style="color: #1e293b;">1 of only 2 ads</strong> in the Saturday
+                                    newsletter</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items: flex-start">
+                                <span class="check-icon">✓</span>
+                                <span>Published at <strong style="color: #1e293b;">6 AM PST every
+                                        Saturday</strong></span>
+                            </li>
+                            <li class="mb-3 d-flex align-items: flex-start">
+                                <span class="check-icon">✓</span>
+                                <span><strong style="color: #1e293b;">Permanent placement</strong> on the website
+                                    archive</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items: flex-start">
+                                <span class="check-icon">✓</span>
+                                <span><strong style="color: #1e293b;">$400</strong> per ad</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items: flex-start">
+                                <span class="check-icon" style="color: #94a3b8;">✓</span>
+                                <span style="color: #64748b; font-style: italic;">No cancellations or reschedules</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
-                    <div class="p-4 p-md-5 rounded shadow-sm border bg-white h-100">
-                        <h2 class="mb-4" style="font-weight:700;">Ad Creative Requirements</h2>
-                        <ol class="mb-0"
-                            style="font-size:1.13rem; padding-left: 0; list-style: none; counter-reset: reqnum;">
-                            <li class="mb-4" style="display: flex; align-items: flex-start;">
-                                <span
-                                    style="counter-increment: reqnum; color:#0099e5; font-size:1.25em; font-weight:700; min-width:2.2em; text-align:right; margin-right:0.7em; line-height:1.1;">0<span
-                                        style="font-variant-numeric: tabular-nums;">1</span>.</span>
-                                <span>Ads are <span style="font-weight:600; color:#222;">text only</span> (max 140
-                                    characters) + CTA (max 20 characters).</span>
+                    <div class="modern-card h-100">
+                        <h2 class="mb-4" style="font-weight: 700; color: #1e293b;">Ad Creative Requirements</h2>
+                        <ol class="mb-0" style="font-size: 1.1rem; padding-left: 0; list-style: none;">
+                            <li class="mb-4 d-flex align-items: flex-start">
+                                <span class="number-badge">1</span>
+                                <span>Ads are <strong style="color: #1e293b;">text only</strong> (max 140 characters) +
+                                    CTA (max 20 characters).</span>
                             </li>
-                            <li class="mb-4" style="display: flex; align-items: flex-start;">
-                                <span
-                                    style="counter-increment: reqnum; color:#0099e5; font-size:1.25em; font-weight:700; min-width:2.2em; text-align:right; margin-right:0.7em; line-height:1.1;">0<span
-                                        style="font-variant-numeric: tabular-nums;">2</span>.</span>
+                            <li class="mb-4 d-flex align-items: flex-start">
+                                <span class="number-badge">2</span>
                                 <span>
-                                    <span style="font-weight:600; color:#222;">Example Copy:</span> Stop wasting time
-                                    and focus on the skills employers are actually looking for today with Julio's .NET
-                                    Backend Developer Roadmap.<br><br>
-                                    <span style="font-weight:600; color:#222;">Example CTA text:</span> Get it for free
-                                    here.
+                                    <strong style="color: #1e293b;">Example Copy:</strong> Stop wasting time and focus
+                                    on the skills employers are actually looking for today with Julio's .NET Backend
+                                    Developer Roadmap.<br><br>
+                                    <strong style="color: #1e293b;">Example CTA text:</strong> Get it for free here.
                                 </span>
                             </li>
-                            <li class="mb-4" style="display: flex; align-items: flex-start;">
-                                <span
-                                    style="counter-increment: reqnum; color:#0099e5; font-size:1.25em; font-weight:700; min-width:2.2em; text-align:right; margin-right:0.7em; line-height:1.1;">0<span
-                                        style="font-variant-numeric: tabular-nums;">3</span>.</span>
+                            <li class="mb-4 d-flex align-items: flex-start">
+                                <span class="number-badge">3</span>
                                 <span>You supply the copy, I edit for my voice.</span>
                             </li>
-                            <li class="mb-4" style="display: flex; align-items: flex-start;">
-                                <span
-                                    style="counter-increment: reqnum; color:#0099e5; font-size:1.25em; font-weight:700; min-width:2.2em; text-align:right; margin-right:0.7em; line-height:1.1;">0<span
-                                        style="font-variant-numeric: tabular-nums;">4</span>.</span>
-                                <span>Ad copy due <span style="font-weight:600; color:#222;">three days</span> prior to
+                            <li class="mb-4 d-flex align-items: flex-start">
+                                <span class="number-badge">4</span>
+                                <span>Ad copy due <strong style="color: #1e293b;">three days</strong> prior to
                                     newsletter date.</span>
                             </li>
-                            <li class="mb-4" style="display: flex; align-items: flex-start;">
-                                <span
-                                    style="counter-increment: reqnum; color:#0099e5; font-size:1.25em; font-weight:700; min-width:2.2em; text-align:right; margin-right:0.7em; line-height:1.1;">0<span
-                                        style="font-variant-numeric: tabular-nums;">5</span>.</span>
+                            <li class="mb-4 d-flex align-items: flex-start">
+                                <span class="number-badge">5</span>
                                 <span>All ads subject to editorial approval.</span>
                             </li>
                         </ol>
@@ -370,34 +511,34 @@
             <!-- Sponsorship Examples Section -->
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-10">
-                    <h2 class="text-center mb-4" style="font-weight:700;">Sponsorship Examples</h2>
+                    <h2 class="text-center mb-5" style="font-weight: 700; color: #1e293b;">Sponsorship Examples</h2>
 
                     <div class="row">
                         <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="card-body text-center p-4">
-                                    <div style="font-size: 3rem; color: #007bff; margin-bottom: 1rem;">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <h4 class="card-title mb-3" style="font-weight: 600;">Newsletter</h4>
-                                    <p class="card-text text-muted mb-4">See how ads appear in the weekly email</p>
-                                    <a href="images/sponsors/sponsorship_sample.jpg" target="_blank"
-                                        class="btn btn-primary btn-lg">View Sample</a>
+                            <div class="modern-card h-100 text-center">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
+                                <h4 class="mb-3" style="font-weight: 600; color: #1e293b;">Newsletter</h4>
+                                <p class="text-muted mb-4" style="color: #64748b;">See how ads appear in the weekly
+                                    email</p>
+                                <a href="images/sponsors/sponsorship_sample.jpg" target="_blank" class="pricing-cta">
+                                    View Sample
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <div class="card-body text-center p-4">
-                                    <div style="font-size: 3rem; color: #007bff; margin-bottom: 1rem;">
-                                        <i class="fas fa-globe"></i>
-                                    </div>
-                                    <h4 class="card-title mb-3" style="font-weight: 600;">Website</h4>
-                                    <p class="card-text text-muted mb-4">View permanent placement on blog</p>
-                                    <a href="/blog/debug-distributed-systems-in-minutes-using-net-aspire"
-                                        target="_blank" class="btn btn-primary btn-lg">View Live</a>
+                            <div class="modern-card h-100 text-center">
+                                <div class="feature-icon mx-auto">
+                                    <i class="fas fa-globe"></i>
                                 </div>
+                                <h4 class="mb-3" style="font-weight: 600; color: #1e293b;">Website</h4>
+                                <p class="text-muted mb-4" style="color: #64748b;">View permanent placement on blog</p>
+                                <a href="/blog/debug-distributed-systems-in-minutes-using-net-aspire" target="_blank"
+                                    class="pricing-cta">
+                                    View Live
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -408,10 +549,10 @@
 
     <div class="row justify-content-center">
         <div class="col-lg-8 text-center mt-4 mb-5">
-            <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship"
-                class="btn btn-lg btn-warning font-weight-bold shadow"
-                style="color: #222; text-decoration: none;">Reserve
-                Your Sponsorship Today</a>
+            <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship" class="pricing-cta"
+                style="font-size: 1.2rem; padding: 1.25rem 2.5rem;">
+                Reserve Your Sponsorship Today
+            </a>
         </div>
     </div>
     </div>
