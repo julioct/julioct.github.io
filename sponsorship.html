@@ -72,7 +72,12 @@
         }
 
         header.header {
-            padding-top: 3rem !important;
+            padding-top: 1.5rem !important;
+            min-height: 160px !important;
+        }
+
+        .pricing-title {
+            font-size: 2rem !important;
         }
     }
 </style>
@@ -127,16 +132,14 @@
     </div>
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="padding-top: 5rem;">
         <div class="container">
-            <div class="row justify-content-center align-items-center" style="min-height: 320px;">
+            <div class="row justify-content-center align-items-center" style="min-height: 200px;">
                 <div class="col-lg-10 text-center">
                     <div class="text-container">
-                        <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 3rem; line-height: 1.3;">Promote
+                        <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3;">Promote
                             your brand to
-                            25,000+ .NET professionals</h1>
-                        <a href="mailto:julioc@dotnetacademy.io" class="btn btn-lg btn-warning font-weight-bold shadow"
-                            style="color: #222; text-decoration: none;">Reserve Your Sponsorship Today</a>
+                            25,000+ .NET developers</h1>
                     </div>
                 </div>
             </div>
@@ -159,56 +162,128 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <div class="basic-1" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <!-- Pricing Section -->
+    <div class="basic-1" style="padding-top: 4rem; padding-bottom: 4rem;">
         <div class="container">
-            <div class="row justify-content-center flex-wrap">
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="card text-center shadow h-100 border-0">
-                        <div class="card-body">
-                            <div style="height: 32px;"></div> <!-- Spacer to align with icon in other cards -->
-                            <div
-                                style="font-size:3.2rem; font-weight:800; color:#2563eb; line-height:1; margin-bottom:0.5rem;">
-                                25,000+
+            <div class="row align-items-center">
+                <!-- Stats Section - Shows first on mobile, second on desktop -->
+                <div class="col-lg-6 mb-4 order-1 order-lg-2">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <div
+                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    25,000+
+                                </div>
+                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                    Newsletter Reach
+                                </div>
                             </div>
-                            <div style="font-size:1.15rem; color:#6c757d; margin-bottom:1.5rem; font-weight:600;">Reach
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <div
+                                    style="font-size: 2.5rem; font-weight: 800; color: #06b6d4; line-height: 1; margin-bottom: 0.5rem;">
+                                    32%
+                                </div>
+                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                    Average Open Rate
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <div
+                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    300-400
+                                </div>
+                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                    Average Sponsorship Clicks
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="text-center">
+                                <div
+                                    style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1; margin-bottom: 0.5rem;">
+                                    8,500+
+                                </div>
+                                <div style="font-size: 1rem; color: #6c757d; font-weight: 600;">
+                                    Average Sponsorship Views
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="card text-center shadow h-100 border-0">
-                        <div class="card-body">
-                            <div style="height: 32px;"></div>
-                            <div
-                                style="font-size:2.1rem; font-weight:800; color:#7c3aed; line-height:1; margin-bottom:0.5rem;">
-                                Audience</div>
-                            <div style="font-size:1.08rem; color:#444; font-weight:600;">Software Engineers,<br>.NET
-                                Developers,<br>Architects, Tech Leads.</div>
+
+                <!-- Pricing Section - Shows second on mobile, first on desktop -->
+                <div class="col-lg-6 mb-4 order-2 order-lg-1">
+                    <div class="card border-0 shadow-lg h-100" style="background: #2563eb;">
+                        <div class="card-body p-5 text-white text-center">
+                            <div class="h3 mb-4 pricing-title"
+                                style="color: white; font-weight: 700; font-size: 2.5rem;">$400 per issue</div>
+
+                            <div class="mb-4" style="color: rgba(255,255,255,0.95);">
+                                <div class="mb-2" style="font-size: 1rem; font-weight: 600;">
+                                    <i class="fas fa-star" style="color: #fbbf24; margin-right: 8px;"></i>
+                                    1 of only 2 sponsor slots
+                                </div>
+                                <div class="mb-2" style="font-size: 1rem; font-weight: 600;">
+                                    <i class="fas fa-clock" style="color: #fbbf24; margin-right: 8px;"></i>
+                                    Saturdays 6 AM PT
+                                </div>
+                                <div style="font-size: 1rem; font-weight: 600;">
+                                    <i class="fas fa-envelope-open-text" style="color: #fbbf24; margin-right: 8px;"></i>
+                                    Email + permanent archive
+                                </div>
+                            </div>
+
+                            <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship"
+                                class="btn btn-lg btn-warning font-weight-bold shadow"
+                                style="color: #222; text-decoration: none;">
+                                Reserve Your Sponsorship Today
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="card text-center shadow h-100 border-0">
-                        <div class="card-body">
-                            <div style="height: 32px;"></div> <!-- Spacer to align with icon in other cards -->
-                            <div
-                                style="font-size:3.2rem; font-weight:800; color:#06b6d4; line-height:1; margin-bottom:0.5rem;">
-                                32%</div>
-                            <div style="font-size:1.15rem; color:#6c757d; margin-bottom:1.5rem;">Average open rate
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted Brands Section -->
+    <div class="basic-1" style="padding-top: 3rem; padding-bottom: 3rem; background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="mb-5" style="font-weight: 700; color: #333; font-size: 2.2rem;">Trusted by engineering
+                        brands</h2>
+                    <div class="row align-items-center justify-content-center" style="opacity: 0.8;">
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="images/sponsors/abp.png" alt="ABP.IO" class="img-fluid mb-2"
+                                    style="max-height: 50px;">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">ABP.IO</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <div class="card text-center shadow h-100 border-0">
-                        <div class="card-body">
-                            <div style="height: 32px;"></div> <!-- Spacer to align with icon in other cards -->
-                            <div
-                                style="font-size:3.2rem; font-weight:800; color:#10b981; line-height:1; margin-bottom:0.5rem;">
-                                $500
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="images/sponsors/devart.png" alt="Devart" class="img-fluid mb-2"
+                                    style="max-height: 50px;">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">Devart</span>
                             </div>
-                            <div style="font-size:1.15rem; color:#6c757d; margin-bottom:1.5rem; font-weight:600;">
-                                1-Issue Sponsorship
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="images/sponsors/jetbrains.png" alt="JetBrains" class="img-fluid mb-2"
+                                    style="max-height: 50px;">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">JetBrains</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="images/sponsors/UpCloud.png" alt="UpCloud" class="img-fluid mb-2"
+                                    style="max-height: 50px;">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: #666;">UpCloud</span>
                             </div>
                         </div>
                     </div>
@@ -238,7 +313,7 @@
                                     archive</span></li>
                             <li class="mb-3" style="display: flex; align-items: flex-start;"><span
                                     style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span><span
-                                        style="font-weight:600; color:#222;">$500</span> per ad</span></li>
+                                        style="font-weight:600; color:#222;">$400</span> per ad</span></li>
                             <li class="mb-3" style="display: flex; align-items: flex-start; color:#888;"><span
                                     style="color:#007bff; font-size:1.3em; margin-right:0.7em; line-height:1.1; font-weight:900; font-family:'Segoe UI Symbol','Arial Unicode MS',sans-serif;">✔️</span><span
                                     style="font-style:italic;">No cancellations or reschedules</span></li>
@@ -292,13 +367,54 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center mt-4">
-                    <a href="mailto:julioc@dotnetacademy.io" class="btn btn-lg btn-primary font-weight-bold shadow"
-                        style="text-decoration: none">Reserve Your Sponsorship Today</a>
+            <!-- Sponsorship Examples Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <h2 class="text-center mb-4" style="font-weight:700;">Sponsorship Examples</h2>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div style="font-size: 3rem; color: #007bff; margin-bottom: 1rem;">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3" style="font-weight: 600;">Newsletter</h4>
+                                    <p class="card-text text-muted mb-4">See how ads appear in the weekly email</p>
+                                    <a href="images/sponsors/sponsorship_sample.jpg" target="_blank"
+                                        class="btn btn-primary btn-lg">View Sample</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div style="font-size: 3rem; color: #007bff; margin-bottom: 1rem;">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3" style="font-weight: 600;">Website</h4>
+                                    <p class="card-text text-muted mb-4">View permanent placement on blog</p>
+                                    <a href="/blog/debug-distributed-systems-in-minutes-using-net-aspire"
+                                        target="_blank" class="btn btn-primary btn-lg">View Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mt-4 mb-5">
+            <a href="https://calendly.com/julioc-dotnetacademy/dotnet-saturday-sponsorship"
+                class="btn btn-lg btn-warning font-weight-bold shadow"
+                style="color: #222; text-decoration: none;">Reserve
+                Your Sponsorship Today</a>
+        </div>
+    </div>
+    </div>
     </div>
 
     <!-- Footer -->
