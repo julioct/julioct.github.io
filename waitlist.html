@@ -33,7 +33,7 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Master the complete checkout experience by building a real e-commerce system with Stripe payments, Azure Service Bus queues, background workers, and webhooks—all deployed to Azure.">
+        content="Ship scalable .NET backends with queues and workers">
     <meta name="author" content="Julio Casal">
 
     <!-- OG Meta Tags -->
@@ -41,7 +41,7 @@
     <meta property="og:site" content="https://juliocasal.com" />
     <meta property="og:title" content="Payments, Queues and Workers | Join The Waitlist" />
     <meta property="og:description"
-        content="Master the complete checkout experience by building a real e-commerce system with Stripe payments, Azure Service Bus queues, background workers, and webhooks—all deployed to Azure." />
+        content="Ship scalable .NET backends with queues and workers" />
     <meta property="og:image"
         content="https://juliocasal.com/images/courses/payments-queues-and-workers/Course_Thumbnail.jpg" />
     <!-- image link, make sure it's jpg -->
@@ -85,35 +85,34 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-container">
-                                    <h1 class="h2-heading" style="text-align: left;">Master .NET Payments, Queues &
-                                        Workers
+                                    <h1 class="h2-heading" style="text-align: left;">Ship Scalable .NET Backends With Queues and Workers
                                     </h1>
                                 </div>
                             </div>
                         </div>
                         <p class="line-spaced-paragraph white" style="text-align: left;">
-                            Master the complete checkout experience by building a real e-commerce system with Stripe
-                            payments, Azure Service Bus queues, background workers, and webhooks—all deployed to Azure.
+                            Build a real-world e-commerce system while learning the production patterns that separate
+                            junior from senior engineers.
                         </p>
                         <ul class="list-unstyled mt-4" style="text-align: left;">
                             <li class="mb-3 d-flex align-items-start">
                                 <i class="fas fa-check"
                                     style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Implement Stripe
-                                    payment intents, webhooks, and idempotency patterns to prevent duplicate
-                                    charges</span>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Integrate with
+                                    external APIs using webhooks, idempotency patterns, and reliable event
+                                    handling</span>
                             </li>
                             <li class="mb-3 d-flex align-items-start">
                                 <i class="fas fa-check"
                                     style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Use Azure Service
-                                    Bus queues and background workers to handle long-running operations at scale</span>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Implement message
+                                    queues and background workers to handle async operations at scale</span>
                             </li>
                             <li class="mb-3 d-flex align-items-start">
                                 <i class="fas fa-check"
                                     style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Build a complete
-                                    e-commerce checkout flow with transactions and data consistency</span>
+                                <span class="line-spaced-paragraph white" style="text-align: left;">Master transactions,
+                                    the outbox pattern, and data consistency across distributed operations</span>
                             </li>
                         </ul>
                         <div class="row mt-5">
@@ -149,12 +148,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="h2-heading display-4 font-weight-bold mb-4" style="color: #2c3e50;">
-                        Building a complete checkout experience shouldn't be<br>
+                        Building production-ready systems shouldn't be<br>
                         <span style="color: #e74c3c;">this overwhelming</span>
                     </h2>
                     <p class="lead mb-5" style="font-size: 1.4rem; max-width: 900px; margin: 0 auto; color: #5a6c7d;">
-                        From payment processing to order fulfillment, developers struggle to connect all the pieces.
-                        Here are the biggest challenges:
+                        From third-party integrations to reliable messaging, developers struggle with the patterns
+                        that make systems production-ready. Here are the biggest challenges:
                     </p>
                 </div>
             </div> <!-- Pain Points Row -->
@@ -163,11 +162,11 @@
                     <div class="card shadow pain-point-card animate-fade-in h-100"
                         style="background: rgba(255,255,255,0.08); border-radius: 1rem; padding: 1.5rem;">
                         <div class="text-center">
-                            <span class="d-block mb-3"><i class="fas fa-credit-card fa-4x"
-                                    style="color: #e74c3c;"></i></span>
-                            <span style="font-size: 1.1rem; font-weight: 600;">Payment Integration</span>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Setting up payment intents,
-                                webhooks, and handling the complete payment lifecycle</p>
+                            <span class="d-block mb-3"><i class="fas fa-plug fa-4x" style="color: #e74c3c;"></i></span>
+                            <span style="font-size: 1.1rem; font-weight: 600;">External Integrations</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Integrating with third-party
+                                APIs,
+                                webhooks, and handling the complete lifecycle reliably</p>
                         </div>
                     </div>
                 </div>
@@ -177,9 +176,10 @@
                         <div class="text-center">
                             <span class="d-block mb-3"><i class="fas fa-sync-alt fa-4x"
                                     style="color: #e74c3c;"></i></span>
-                            <span style="font-size: 1.1rem; font-weight: 600;">Duplicate Charges</span>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Preventing duplicate charges
-                                and ensuring operations can be safely retried</p>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Handling Failures</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Preventing duplicate
+                                operations
+                                and ensuring requests can be safely retried</p>
                         </div>
                     </div>
                 </div>
@@ -189,9 +189,9 @@
                         <div class="text-center">
                             <span class="d-block mb-3"><i class="fas fa-stream fa-4x"
                                     style="color: #e74c3c;"></i></span>
-                            <span style="font-size: 1.1rem; font-weight: 600;">Scaling Under Load</span>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Handling high traffic without
-                                degrading performance</p>
+                            <span style="font-size: 1.1rem; font-weight: 600;">Async Processing</span>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Offloading long-running tasks
+                                to background workers and queues</p>
                         </div>
                     </div>
                 </div>
@@ -202,8 +202,9 @@
                             <span class="d-block mb-3"><i class="fas fa-database fa-4x"
                                     style="color: #e74c3c;"></i></span>
                             <span style="font-size: 1.1rem; font-weight: 600;">Data Consistency</span>
-                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Using transactions to apply
-                                changes to multiple tables or rollback everything.</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Coordinating transactions
+                                across
+                                databases and message queues reliably</p>
                         </div>
                     </div>
                 </div>
@@ -212,7 +213,7 @@
                 <div class="col text-center">
                     <div class="mt-5 animate-fade-in"
                         style="font-size: 1.35rem; font-weight: 600; letter-spacing: 0.01em;">
-                        Let's connect all the pieces together...
+                        Here's how you'll master them...
                         <div class="d-flex justify-content-center mt-2">
                             <span style="display: inline-block; animation: bounceDown 1.5s infinite;">
                                 <i class="fas fa-arrow-down fa-2x" style="color: #6a82fb;"></i>
@@ -229,12 +230,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="h2-heading display-4 font-weight-bold">Master the Complete Checkout Experience with
-                        Payments, Queues, and Workers
+                    <h2 class="h2-heading display-4 font-weight-bold">Build Scalable, Production-Ready Systems
+                        That Handle Complexity with Confidence
                     </h2>
                     <p class="lead" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
-                        Build a complete, working e-commerce system on Azure with Stripe payments, message queues,
-                        background workers, idempotency, and webhooks - everything integrated and deployed end-to-end.
+                        Learn the patterns and techniques that separate junior developers from senior engineers—by
+                        building
+                        a real e-commerce system with queues, workers, transactions, webhooks, and the outbox pattern,
+                        all integrated and deployed to Azure.
                     </p>
                 </div>
             </div>
@@ -246,7 +249,40 @@
                             <div class="mb-3" style="color: #2d4de0;">
                                 <i class="fas fa-credit-card fa-3x"></i>
                             </div>
-                            <h5 class="card-title font-weight-bold mb-2">Stripe Payments Integration</h5>
+                            <h5 class="card-title font-weight-bold mb-2">Stripe Checkout</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-link fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Webhook Processing</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-project-diagram fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Aspire Hosting Integration</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0"
+                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3" style="color: #2d4de0;">
+                                <i class="fas fa-exchange-alt fa-3x"></i>
+                            </div>
+                            <h5 class="card-title font-weight-bold mb-2">Transactions & Data Consistency</h5>
                         </div>
                     </div>
                 </div>
@@ -266,28 +302,6 @@
                         style="border-radius: 1rem; transition: transform 0.3s ease;">
                         <div class="card-body text-center p-4">
                             <div class="mb-3" style="color: #2d4de0;">
-                                <i class="fas fa-link fa-3x"></i>
-                            </div>
-                            <h5 class="card-title font-weight-bold mb-2">Webhook Handling</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <i class="fas fa-project-diagram fa-3x"></i>
-                            </div>
-                            <h5 class="card-title font-weight-bold mb-2">Custom Aspire Hosting Integration</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
-                        <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
                                 <i class="fas fa-stream fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure Service Bus Queues</h5>
@@ -299,9 +313,9 @@
                         style="border-radius: 1rem; transition: transform 0.3s ease;">
                         <div class="card-body text-center p-4">
                             <div class="mb-3" style="color: #2d4de0;">
-                                <i class="fas fa-cogs fa-3x"></i>
+                                <i class="fas fa-inbox fa-3x"></i>
                             </div>
-                            <h5 class="card-title font-weight-bold mb-2">Background Workers</h5>
+                            <h5 class="card-title font-weight-bold mb-2">The Outbox Pattern</h5>
                         </div>
                     </div>
                 </div>
@@ -310,9 +324,9 @@
                         style="border-radius: 1rem; transition: transform 0.3s ease;">
                         <div class="card-body text-center p-4">
                             <div class="mb-3" style="color: #2d4de0;">
-                                <i class="fas fa-shopping-cart fa-3x"></i>
+                                <i class="fas fa-cogs fa-3x"></i>
                             </div>
-                            <h5 class="card-title font-weight-bold mb-2">Full E-Commerce System</h5>
+                            <h5 class="card-title font-weight-bold mb-2">Background Workers</h5>
                         </div>
                     </div>
                 </div>
@@ -365,7 +379,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module02"
                                 aria-controls="collapseOne">
-                                <span>Getting Started with Stripe</span>
+                                <span>Getting started with Stripe</span>
                             </h5>
                             <div id="course06-module02" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -377,11 +391,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Stripe Integration options</div>
-                                        </li>
-                                        <li class="lesson-title">
-                                            <i class="fas fa-video"></i>
-                                            <div class="media-body">The Stripe payment intents flow</div>
+                                            <div class="media-body">Accepting payments with Stripe</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -394,7 +404,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module03"
                                 aria-controls="collapseOne">
-                                <span>Payment Intents</span>
+                                <span>Creating checkout sessions</span>
                             </h5>
                             <div id="course06-module03" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -406,7 +416,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Configuring Stripe Keys</div>
+                                            <div class="media-body">Configuring the API Key</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -414,11 +424,11 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Add CreatePaymentIntent endpoint</div>
+                                            <div class="media-body">Add the CreateCheckoutSession endpoint</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Testing the Create Payment Intents endpoint</div>
+                                            <div class="media-body">Testing checkout session creation</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -427,7 +437,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module04"
                                 aria-controls="collapseOne">
-                                <span>Sharing data across features</span>
+                                <span>Creating orders</span>
                             </h5>
                             <div id="course06-module04" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -451,7 +461,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Creating orders for payment intents</div>
+                                            <div class="media-body">Creating orders for the checkout session</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -472,7 +482,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module05"
                                 aria-controls="collapseOne">
-                                <span>Stripe UI Integration</span>
+                                <span>Collecting payment information</span>
                             </h5>
                             <div id="course06-module05" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -480,7 +490,11 @@
                                     <ul class="list-unstyled li-space-lg">
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Blazor: Stripe UI Checkout</div>
+                                            <div class="media-body">Configuring the checkout return url</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Blazor: Collecting payment info</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -488,7 +502,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">React: Stripe UI Checkout</div>
+                                            <div class="media-body">React: Collecting payment info</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -505,7 +519,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module06"
                                 aria-controls="collapseOne">
-                                <span>Stripe Webhooks</span>
+                                <span>Processing payments with webhooks</span>
                             </h5>
                             <div id="course06-module06" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -527,10 +541,6 @@
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Triggering Stripe events</div>
                                         </li>
-                                        <li class="lesson-title">
-                                            <i class="fas fa-video"></i>
-                                            <div class="media-body">Confirming the Order payment</div>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -538,7 +548,7 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module07"
                                 aria-controls="collapseOne">
-                                <span>Implementing a Stripe Hosting Integration</span>
+                                <span>Implementing an Aspire Hosting Integration</span>
                             </h5>
                             <div id="course06-module07" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -571,9 +581,42 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module08"
                                 aria-controls="collapseOne">
-                                <span>Idempotency</span>
+                                <span>Using Transactions</span>
                             </h5>
                             <div id="course06-module08" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">What is a transaction?</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Confirming the Order payment</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Clearing the shopping basket</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding transaction support</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Using execution strategies</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module09"
+                                aria-controls="collapseOne">
+                                <span>Idempotency</span>
+                            </h5>
+                            <div id="course06-module09" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
                                 <div class="card-body">
                                     <ul class="list-unstyled li-space-lg">
@@ -606,11 +649,11 @@
                             </div>
                         </div>
                         <div class="card">
-                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module09"
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module10"
                                 aria-controls="collapseOne">
-                                <span>Using Azure Service Bus queues</span>
+                                <span>Publishing Messages to Queues</span>
                             </h5>
-                            <div id="course06-module09" class="collapse" aria-labelledby="headingOne"
+                            <div id="course06-module10" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
                                 <div class="card-body">
                                     <ul class="list-unstyled li-space-lg">
@@ -628,7 +671,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Implementing a Service Bus event publisher</div>
+                                            <div class="media-body">Implementing a Service Bus message publisher</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -639,11 +682,44 @@
                             </div>
                         </div>
                         <div class="card">
-                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module10"
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module11"
                                 aria-controls="collapseOne">
-                                <span>Using Workers</span>
+                                <span>The Outbox Pattern</span>
                             </h5>
-                            <div id="course06-module10" class="collapse" aria-labelledby="headingOne"
+                            <div id="course06-module11" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-course06-accordion">
+                                <div class="card-body">
+                                    <ul class="list-unstyled li-space-lg">
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Introduction to the outbox pattern</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding outbox messages to the data model</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Storing messages in the outbox table</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Adding the Outbox Processor</div>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
+                                            <div class="media-body">Trying out the outbox pattern</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module12"
+                                aria-controls="collapseOne">
+                                <span>Consuming messages from queues</span>
+                            </h5>
+                            <div id="course06-module12" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
                                 <div class="card-body">
                                     <ul class="list-unstyled li-space-lg">
@@ -657,7 +733,7 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Implementing the OrdersQueueWorker</div>
+                                            <div class="media-body">Implementing a queue processor</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -665,19 +741,11 @@
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
-                                            <div class="media-body">Using transactions</div>
-                                        </li>
-                                        <li class="lesson-title">
-                                            <i class="fas fa-video"></i>
-                                            <div class="media-body">Trying out the worker</div>
+                                            <div class="media-body">Trying out the queue processor</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Handling the Dead Letter Queue</div>
-                                        </li>
-                                        <li class="lesson-title">
-                                            <i class="fas fa-video"></i>
-                                            <div class="media-body">Using execution strategies</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -688,11 +756,11 @@
                             </div>
                         </div>
                         <div class="card">
-                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module11"
+                            <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module13"
                                 aria-controls="collapseOne">
                                 <span>Payments, Queues and Workers on Azure</span>
                             </h5>
-                            <div id="course06-module11" class="collapse" aria-labelledby="headingOne"
+                            <div id="course06-module13" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
                                 <div class="card-body">
                                     <ul class="list-unstyled li-space-lg">
@@ -707,10 +775,6 @@
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Adding the Azure event destination</div>
-                                        </li>
-                                        <li class="lesson-title">
-                                            <i class="fas fa-video"></i>
-                                            <div class="media-body">Testing the payment endpoints in Azure</div>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
@@ -734,7 +798,7 @@
                             alt="Payments, Queues and Workers" class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
-                            <li><i class="fas fa-bookmark"></i> <span>11 Modules, 61 Lessons</span></li>
+                            <li><i class="fas fa-bookmark"></i> <span>13 Modules, 68 Lessons</span></li>
                             <!-- <li><i class="fas fa-video"></i> <span>7 Hours of Video</span></li> -->
                             <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
                             <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
