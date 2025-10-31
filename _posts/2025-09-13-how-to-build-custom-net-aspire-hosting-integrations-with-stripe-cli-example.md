@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Build Custom .NET Aspire Hosting Extensions (with Stripe CLI Example)"
+title: "How to Build Custom .NET Aspire Hosting Integrations (with Stripe CLI Example)"
 date: 2025-09-13
 featured-image: 2025-09-13/4ghDFAZYvbFtvU3CTR72ZN-wN43TECej59mGja96ytQJb.jpeg
 issue-number: 102
