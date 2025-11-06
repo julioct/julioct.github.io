@@ -27,13 +27,11 @@ Last week I went through the bootcamp structure and what you'll create along the
 But, in essence, this bootcamp is a multi-course learning path designed to turn C# developers into .NET Cloud developers so you can create production-ready .NET apps for the Azure cloud.
 
 
-![](/assets/images/2024-11-02/4ghDFAZYvbFtvU3CTR72ZN-p6fjqSPR7s6gVy8SUTMFwa.jpeg)
+![](/assets/images/2024-11-02/bootcamp-structure.jpg)
 
-The bootcamp is divided into 9 courses grouped across 3 stages of increased complexity, from beginner-level ASP.NET Core concepts to advanced techniques and patterns used in distributed applications development.
+The bootcamp is divided into 6 courses grouped across 2 stages of increased complexity, from beginner-level ASP.NET Core concepts to advanced techniques and patterns used in distributed applications development.
 
 The early bird launch price for this entire bootcamp, including all courses, will be **$247**, and then it will go up to $497 after launch.
-
-Since it will take a few more months to deliver all courses, the bootcamp will stay at the $497 price until the last course is released, at which point the price goes up to $797.
 
 Whatever price at which you purchase the bootcamp, you get lifetime access to all courses, no additional payments required.
 

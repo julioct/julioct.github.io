@@ -11,9 +11,9 @@ issue-number: 56
 
 After a few hours of the usual dev machine prep and last-minute slide deck updates, the recording phase of the upcoming [bootcamp](https://juliocasal.com/courses/dotnetbootcamp) is now going at full speed, with 4 modules of the first course all done, and 5 more modules to go.
 
-Also, I'm usually too optimistic about release dates, so I took a small break today to create a proper release calendar for the first two courses (out of 9). The launch date is now all set and I'll share all the details with you in next week's newsletter.
+Also, I'm usually too optimistic about release dates, so I took a small break today to create a proper release calendar for the first two courses (out of 6). The launch date is now all set and I'll share all the details with you in next week's newsletter.
 
-But just so that you are well informed, I'll dedicate this and the next 2 newsletters to give you all the details on how the bootcamp is structured, what you'll build across the included 9 courses, pricing, and why this bootcamp is different than anything else out there.
+But just so that you are well informed, I'll dedicate this and the next 2 newsletters to give you all the details on how the bootcamp is structured, what you'll build across the included 6 courses, pricing, and why this bootcamp is different than anything else out there.
 
 Today I'll start by going over the bootcamp structure and the application you'll build on each stage.
 
@@ -28,7 +28,7 @@ Let's dive in.
 The point of this bootcamp is to turn any C# developer into a senior .NET cloud developer. To get there, you need to cover a lot of ground, as I described [here](https://juliocasal.com/blog/How-To-Become-A-Senior-Dotnet-Backend-Developer), so after several iterations, I landed on the following learning path:
 
 
-![](/assets/images/2024-10-26/4ghDFAZYvbFtvU3CTR72ZN-eQmNEbW535gxNfQw1qg4XN.jpeg)
+![](/assets/images/2024-10-26/bootcamp-structure.jpg)
 
 Each stage includes 3 full courses that go from the absolute fundamentals to the more advanced topics that senior devs have to deal with on real-world projects.
 
@@ -68,11 +68,11 @@ Even if you decide to not move forward with anything else in the bootcamp, at th
 
 ​
 
-### **Stage 2: The cloud & testing**
+### **Stage 2: The cloud**
 Stage 2 is my favorite since this is where your app becomes real by reaching a public cloud environment and integrating with multiple production-ready external services.
 
 
-![](/assets/images/2024-10-26/4ghDFAZYvbFtvU3CTR72ZN-eVyAEHBqDvk4k5uMH9eYPf.jpeg)
+![](/assets/images/2024-10-26/bootcamp-stage2.jpg)
 
 ​
 
@@ -86,41 +86,11 @@ Specifically, the three courses in this stage will give you hands-on experience 
 *   <span>Using Key Vault and Managed Identities</span>
 *   <span>Using Infrastructure as Code (IaC) via Bicep</span>
 *   <span>Enabling payments via Stripe</span>
-*   <span>Adding integration tests to verify the system</span>
 
 It is incredibly exciting to see your app up and running in the cloud, and I believe that this is the point where you start transitioning from junior level to senior level since a cloud environment is a completely different beast than your local dev box, and there are many skills to master along the way.
 
 So, at the end of this stage, you will be ready to build and contribute to most small to mid-size .NET monolithic apps out there.
 
-You can end your journey here, but some of you may need to go beyond this point given the challenges of building systems at scale.
-
-That's where Stage 3 comes in.
-
-​
-
-### **Stage 3: Building systems at scale**
-If your team starts growing significantly, and suddenly you have dozens of devs or teams contributing to the same monolithic system, and the entire release process starts slowing down, you need to go beyond .NET and cloud development.
-
-
-![](/assets/images/2024-10-26/4ghDFAZYvbFtvU3CTR72ZN-obw3tdjmC21MYnczqkmZjf.jpeg)
-
-​
-
-In the third stage of this bootcamp, you will learn how to build systems at scale by learning how to introduce DevOps, microservices, and popular observability tools to your development process.
-
-Specifically, in this stage, you will get answers to these questions:
-
-*   <span>When, why and how to switch from a monolithic architecture to a microservices architecture</span>
-*   <span>How to share data across microservices via message brokers</span>
-*   <span>How to use background workers to process long-running tasks</span>
-*   <span>How to use NoSQL databases</span>
-*   <span>How to add and configure an API gateway</span>
-*   <span>How to build a complete CI/CD pipeline for fully automated verifications and deployments</span>
-*   <span>How to enable and use logging, monitoring, and distributed tracing in your Azure deployed application</span>
-
-Now, let me be clear: you don't need to get this far to work as a .NET backend/cloud developer. Most .NET devs should be good to go after completing Stage 2.
-
-Only a few of you work in teams that are big enough to demand the skills and techniques covered in Stage 3. And, it turns out this is the stage at which I worked for years at Microsoft, using the same techniques and similar tools, so I both feel very qualified and really excited to prepare the 3 courses in this last stage.
 
 ​
 
