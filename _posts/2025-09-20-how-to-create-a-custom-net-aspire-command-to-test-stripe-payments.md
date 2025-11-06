@@ -11,7 +11,7 @@ issue-number: 103
 
 Testing Stripe webhooks requires constantly switching between your Aspire dashboard and terminal commands, breaking your development flow every time you need to trigger a payment.
 
-​[Last week]({{ site.url }}/blog/how-to-build-custom-net-aspire-hosting-extensions-with-stripe-cli-example), I showed you how to build a custom .NET Aspire hosting extension for the Stripe CLI, turning messy infrastructure code into a clean, reusable API.
+​[Last week]({{ site.url }}/blog/how-to-build-custom-net-aspire-hosting-integrations-with-stripe-cli-example), I showed you how to build a custom .NET Aspire hosting integration for the Stripe CLI, turning messy infrastructure code into a clean, reusable API.
 
 But there's still one piece of friction left: you're still opening terminals to trigger successful payments via the Stripe CLI every time you want to test your webhook logic.
 
