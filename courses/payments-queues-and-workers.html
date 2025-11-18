@@ -68,8 +68,50 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
+    <div class="fixed-top">
+        <!-- Notification Bar -->
+        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
+            style="background-color: #E56717; color: white; display: none;">
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <a class="navbar-brand logo-text page-scroll" href="/"></a>
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="index.html">
+                <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
+            </a> -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#course-features">What's Inside?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#testimonials-latest">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#faq">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-solid-sm page-scroll" href="#pricing">Start Watching Now</a>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+    </div>
+
     <!-- Header -->
-    <header id="header" class="header" style="padding-top: 3rem">
+    <header id="header" class="header" style="padding-top: 9rem">
         <div class="container">
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-6 order-lg-2 d-flex align-items-center">
@@ -83,54 +125,37 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-container">
-                                    <h1 class="h2-heading" style="text-align: left;">Ship Scalable .NET Backends With
-                                        Queues and Workers
-                                    </h1>
+                                    <h1 class="h2-heading display-4 font-weight-bold"
+                                        style="text-align: left; font-size: 2.75rem;">Build Real-World .NET Systems With Payments, Queues & Workers</h1>
                                 </div>
                             </div>
                         </div>
                         <p class="line-spaced-paragraph white" style="text-align: left;">
-                            Build a real-world e-commerce system while learning the production patterns that separate
+                            Build a production-grade checkout system while learning the production patterns that separate
                             junior from senior engineers.
                         </p>
-                        <ul class="list-unstyled mt-4" style="text-align: left;">
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="fas fa-check"
-                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Integrate with
-                                    external APIs using webhooks, idempotency patterns, and reliable event
-                                    handling</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="fas fa-check"
-                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Implement message
-                                    queues and background workers to handle async operations at scale</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="fas fa-check"
-                                    style="color: white; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.1rem; flex-shrink: 0;"></i>
-                                <span class="line-spaced-paragraph white" style="text-align: left;">Master transactions,
-                                    the outbox pattern, and data consistency across distributed operations</span>
-                            </li>
-                        </ul>
                         <div class="row">
                             <div class="col">
-                                <div class="text-center">
-                                    <span class="line-spaced-paragraph white"
-                                        style="font-size: 1.5rem; font-weight: 600; letter-spacing: 0.5px;">
-                                        Launches Nov 18, 2025
-                                    </span>
-                                </div>
-                                <div class="btn-solid-lg-container  mb-1">
-                                    <a class="btn-solid-lg page-scroll"
-                                        href="https://learn.dotnetacademy.io/enroll/3579682?price_id=4513778&coupon=WORKERS97">Preorder
-                                        for <span style="text-decoration: line-through; opacity: 0.8;">$197</span>
-                                        $97</a>
+                                <div class="btn-solid-lg-container">
+                                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                                 </div>
                             </div> <!-- end of text-container -->
                         </div> <!-- end of div -->
-
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Testimonials Embed -->
+                                <div class="d-flex justify-content-center mt-3">
+                                    <div>
+                                        <script
+                                            src="https://widget.senja.io/widget/1d328d6a-5050-479e-b5b3-2fc51a13064a/platform.js"
+                                            type="text/javascript" async></script>
+                                        <div class="senja-embed" data-id="1d328d6a-5050-479e-b5b3-2fc51a13064a"
+                                            data-mode="shadow" data-lazyload="false"
+                                            style="display: block; width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of div -->
                     </div> <!-- end of div -->
                 </div> <!-- end of row -->
             </div>
@@ -621,9 +646,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn-solid-lg page-scroll"
-                        href="https://learn.dotnetacademy.io/enroll/3579682?price_id=4513778&coupon=WORKERS97">Preorder
-                        for <span style="text-decoration: line-through; opacity: 0.8;">$197</span> $97</a>
+                    <a class="btn-solid-lg page-scroll" href="#pricing">Start Watching</a>
                 </div> <!-- end of col -->
             </div>
         </div>
@@ -704,8 +727,8 @@
                         <div class="card">
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module01"
                                 aria-controls="collapseOne" aria-expanded="true">
-                                <span>Introduction</span>
-                                <span class="chapter-duration"></span>
+                                <span>Welcome to the course!</span>
+                                <span class="chapter-duration">5min</span>
                             </h5>
                             <div id="course06-module01" class="collapse show" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -713,15 +736,27 @@
                                     <ul class="list-unstyled li-space-lg">
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
+                                            <div class="media-body">Course introduction</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1137104089"
+                                                data-video-hash="d5eea8dc2e"><strong>Free Preview</strong></button>
+                                        </li>
+                                        <li class="lesson-title">
+                                            <i class="fas fa-video"></i>
                                             <div class="media-body">What you'll build in this course</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1134989923"
+                                                data-video-hash="043720e333"><strong>Free Preview</strong></button>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">What you need to know first</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1137104073"
+                                                data-video-hash="51db38a3e3"><strong>Free Preview</strong></button>
                                         </li>
                                         <li class="lesson-title">
                                             <i class="fas fa-video"></i>
                                             <div class="media-body">Software prerequisites</div>
+                                            <button class="btn btn-primary preview-button" data-video-id="1137104083"
+                                                data-video-hash="c02b8963c7"><strong>Free Preview</strong></button>
                                         </li>
                                     </ul>
                                 </div>
@@ -731,6 +766,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module02"
                                 aria-controls="collapseOne">
                                 <span>Getting started with Stripe</span>
+                                <span class="chapter-duration">9min</span>
                             </h5>
                             <div id="course06-module02" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -760,6 +796,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module03"
                                 aria-controls="collapseOne">
                                 <span>Creating checkout sessions</span>
+                                <span class="chapter-duration">54min</span>
                             </h5>
                             <div id="course06-module03" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -797,6 +834,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module04"
                                 aria-controls="collapseOne">
                                 <span>Creating orders</span>
+                                <span class="chapter-duration">1hr 8min</span>
                             </h5>
                             <div id="course06-module04" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -842,6 +880,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module05"
                                 aria-controls="collapseOne">
                                 <span>Collecting payment information</span>
+                                <span class="chapter-duration">59min</span>
                             </h5>
                             <div id="course06-module05" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -879,6 +918,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module06"
                                 aria-controls="collapseOne">
                                 <span>Processing payments with webhooks</span>
+                                <span class="chapter-duration">30min</span>
                             </h5>
                             <div id="course06-module06" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -908,6 +948,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module07"
                                 aria-controls="collapseOne">
                                 <span>Implementing an Aspire Hosting Integration</span>
+                                <span class="chapter-duration">45min</span>
                             </h5>
                             <div id="course06-module07" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -942,6 +983,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module08"
                                 aria-controls="collapseOne">
                                 <span>Using Transactions</span>
+                                <span class="chapter-duration">41min</span>
                             </h5>
                             <div id="course06-module08" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -979,6 +1021,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module09"
                                 aria-controls="collapseOne">
                                 <span>Idempotency</span>
+                                <span class="chapter-duration">40min</span>
                             </h5>
                             <div id="course06-module09" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -1017,6 +1060,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module10"
                                 aria-controls="collapseOne">
                                 <span>Publishing Messages to Queues</span>
+                                <span class="chapter-duration">34min</span>
                             </h5>
                             <div id="course06-module10" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -1051,6 +1095,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module11"
                                 aria-controls="collapseOne">
                                 <span>The Outbox Pattern</span>
+                                <span class="chapter-duration">34min</span>
                             </h5>
                             <div id="course06-module11" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -1088,6 +1133,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module12"
                                 aria-controls="collapseOne">
                                 <span>Consuming messages from queues</span>
+                                <span class="chapter-duration">1hr 18min</span>
                             </h5>
                             <div id="course06-module12" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -1133,6 +1179,7 @@
                             <h5 class="chapter-title" data-toggle="collapse" data-target="#course06-module13"
                                 aria-controls="collapseOne">
                                 <span>Payments, Queues and Workers on Azure</span>
+                                <span class="chapter-duration">52min</span>
                             </h5>
                             <div id="course06-module13" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#curriculum-course06-accordion">
@@ -1173,15 +1220,13 @@
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
                             <li><i class="fas fa-bookmark"></i> <span>13 Modules, 72 Lessons</span></li>
-                            <!-- <li><i class="fas fa-video"></i> <span>7 Hours of Video</span></li> -->
+                            <li><i class="fas fa-video"></i> <span>9 Hours of Video</span></li>
                             <li><i class="fas fa-laptop-code"></i> <span>Full source code</span></li>
                             <li><i class="fas fa-project-diagram"></i> <span>Illustrated handouts</span></li>
                             <li><i class="fas fa-award"></i> <span>Course Certificate</span></li>
                         </ul>
                         <div class="course-info-cta">
-                            <a class="btn-solid-lg-small-padding page-scroll"
-                                href="https://learn.dotnetacademy.io/enroll/3579682?price_id=4513778&coupon=WORKERS97">Preorder
-                                for <span style="text-decoration: line-through; opacity: 0.8;">$197</span> $97</a>
+                            <a class="btn-solid-lg-small-padding page-scroll" href="#pricing">Start Watching</a>
                         </div>
                     </div>
                 </div>
@@ -1226,13 +1271,30 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
 
+    <div id="testimonials-latest" class="basic-1">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading display-4 font-weight-bold">What Students Say About Julio's Courses</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col">
+                    <script src="https://widget.senja.io/widget/bffda3c7-9d3b-4e40-b0dc-e03d206fc26d/platform.js"
+                        type="text/javascript" async></script>
+                    <div class="senja-embed" data-id="bffda3c7-9d3b-4e40-b0dc-e03d206fc26d" data-mode="shadow"
+                        data-lazyload="false" style="display: block; width: 100%;"></div>
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
             <div id="countdown-title" class="row mb-4">
                 <div class="col-lg-12">
-                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">Preorder
-                        Payments,
+                    <h2 id="countdown-title-text" class="h2-heading display-4 font-weight-bold mb-0">Unlock Payments,
                         Queues & Workers Today!</h2>
                 </div>
             </div>
@@ -1290,8 +1352,17 @@
                             </div>
                             <div class="button-wrapper mb-5">
                                 <a id="one-time-payment-link" class="btn-solid-lg-small-padding"
-                                    href="https://learn.dotnetacademy.io/enroll/3579682?price_id=4513778&coupon=WORKERS97">PREORDER
-                                    NOW</a>
+                                    href="https://learn.dotnetacademy.io/enroll/3579682?price_id=4513778">START
+                                    WATCHING</a>
+                            </div>
+                            <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
+                            <div class="card-footer text-muted">
+                                <div class="frequency" style="color: #e4e7fc;">Also part of the <br><strong>.NET Cloud
+                                        Developer Bootcamp</strong></div>
+                                <div class="button-wrapper">
+                                    <a class="btn-outline-lg-small-padding btn-bootcamp-promo"
+                                        href="dotnetbootcamp">Explore Bootcamp</a>
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -1301,6 +1372,52 @@
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
     <!-- end of pricing -->
+
+    <!-- Whom Am I -->
+    <div id="who-am-i" class="basic-1">
+        <div class="container">
+            <h2 class="h2-heading display-4 font-weight-bold">Meet Your Instructor</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-3">
+                    <div class="image-container">
+                        <img class="img-fluid" src="../images/Julio-7.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <p class="line-spaced-paragraph">My name is Julio Casal. I'm a passionate software engineer with
+                            a wealth of experience building all sorts of applications and systems based on the
+                            .NET platform.</p>
+                        <p class="line-spaced-paragraph">Throughout my 10+ years working at Microsoft, I had the
+                            opportunity to work on real-world projects, building and refining backend services that
+                            handle millions of requests every month.</p>
+                        <p class="line-spaced-paragraph">I believe reducing complex concepts into simple step by step
+                            instructions is incredibly valuable and helps to make coding accessible and fun for
+                            everyone.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of Whom Am I -->
+
+    <div id="path-to-high-paying-job" class="basic-1">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col">
+                    <h2 class="h2-heading display-4 font-weight-bold" style="margin-bottom:0">Start your path to a
+                        high-paying job</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-10">
+                    <div class="image-container" style="margin-bottom:0">
+                        <img class="img-fluid" src="../images/cloud_developer_salary.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col-->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
 
     <div id="faq" class="basic-1">
         <div class="container">
@@ -1610,6 +1727,12 @@
     </div> <!-- end of copyright -->
     <!-- end of copyright -->
 
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <span id="closePopup" class="close-popup">&times;</span>
+            <iframe id="videoIframe" class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen"></iframe>
+        </div>
+    </div> <!-- Scripts -->
 
     <!-- Scripts -->
     <script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
@@ -1617,10 +1740,11 @@
     <script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
     <script src="../js/countdown-timer.js"></script>
-    <script src="../js/parity-deals-preorder.js"></script>
+    <script src="../js/parity-deals.js"></script>
     <script src="../js/favicon.js"></script>
     <script src="../js/navbar-collapse.js"></script>
     <script src="../js/video-popup.js"></script>
+
 </body>
 
 </html>
