@@ -12,21 +12,21 @@
     // Banner configuration - change these values to update the banner site-wide
     const bannerConfig = {
         // Set to true to show the banner, false to hide it
-        enabled: false,
+        enabled: true,
 
         // Banner content
-        message: "📚 Back to School Sale: <strong>30% OFF EVERYTHING</strong> • Ends&nbsp;September&nbsp;2",
+        message: "Black Friday Sale: <strong>40% OFF EVERYTHING</strong> • Ends&nbsp;December&nbsp;1",
 
         // Button configuration
         button: {
-            text: "SAVE 30% NOW",
+            text: "SAVE 40% NOW",
             url: "/courses"
         },
 
         // Countdown timer configuration (set endDate to null to disable countdown)
         countdown: {
             enabled: true, // Set to true to enable countdown timer
-            endDate: new Date('September 2, 2025 06:00:00 PDT') // Same as countdown-timer.js
+            endDate: new Date('December 1, 2025 23:59:59 PST') // Same as countdown-timer.js
         },
 
         // Styling

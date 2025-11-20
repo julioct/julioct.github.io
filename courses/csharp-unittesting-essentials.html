@@ -51,7 +51,7 @@
             "@type": "Person",
             "name": "Julio Casal",
             "image": "https://juliocasal.com/images/Julio-7.jpg"
-         }]        
+         }]
       }]
     }
     </script>
@@ -118,6 +118,7 @@
     <link href="../css/swiper.css" rel="stylesheet">
     <link href="../css/magnific-popup.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/countdown-timer.css" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon">
@@ -125,10 +126,9 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
     <div class="fixed-top">
+
         <!-- Notification Bar -->
-        <div id="notification-banner" class="alert alert-info promo-alert text-center mb-0" role="alert"
-            style="background-color: #E56717; color: white; display: none;">
-        </div>
+        <!-- Dynamic notification banner will be injected here by notification-banner.js -->
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -825,23 +825,23 @@
             <div class="row justify-content-center">
                 <div class="pricing-card-container">
                     <!-- Card-->
-                    <div class="card " style="box-shadow: 0 0 10px #5f4dee;">
+                    <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
                         <div class="card-body">
-                            <div class="card-title ">THIS COURSE</div>
+                            <div class="card-title best-value">THIS COURSE</div>
                             <div id="full-price" class="mb-4">
                                 <div>
-                                    <span class="currency ">$</span><span class="value ">147</span>
+                                    <span class="currency best-value">$</span><span class="value best-value">147</span>
                                 </div>
                                 <div class="frequency mt-3 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
                             <div id="discounted-price" class="mb-2">
                                 <div>
-                                    <span class="currency ">$</span><span id="discounted-price-value"
-                                        class="value "></span>
+                                    <span class="currency best-value">$</span><span id="discounted-price-value"
+                                        class="value best-value"></span>
                                 </div>
                                 <div>
                                     <span id="original-price" class="full-price">$147</span><span id="discount-amount"
-                                        class="save-value ">OFF</span>
+                                        class="save-value best-value">OFF</span>
                                 </div>
                                 <div class="frequency mt-3 mb-4 one-time-payment">Lifetime Access</div>
                             </div>
@@ -858,91 +858,28 @@
                             </div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
-                                    <i class="fas fa-video "></i>
+                                    <i class="fas fa-video best-value"></i>
                                     <div class="media-body">6.5 Hours of Video</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-infinity "></i>
+                                    <i class="fas fa-infinity best-value"></i>
                                     <div class="media-body">Lifetime access</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-laptop-code "></i>
+                                    <i class="fas fa-laptop-code best-value"></i>
                                     <div class="media-body">Full source code</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-closed-captioning "></i>
+                                    <i class="fas fa-closed-captioning best-value"></i>
                                     <div class="media-body">Full English captions</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-project-diagram "></i>
+                                    <i class="fas fa-project-diagram best-value"></i>
                                     <div class="media-body">Illustrated handouts</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-award "></i>
+                                    <i class="fas fa-award best-value"></i>
                                     <div class="media-body">Course certificates</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-                </div>
-
-                <div class="pricing-card-container">
-                    <!-- Card-->
-                    <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
-                        <div class="card-body">
-                            <div class="card-title best-value">ALL-ACCESS PASS</div>
-                            <div id="full-price" class="mb-4">
-                                <div>
-                                    <span class="currency best-value">$</span><span
-                                        class="value best-value">199</span><span class="frequency">/quarter</span>
-                                </div>
-                                <div class="frequency mt-3 mb-4 one-time-payment">Full Course Library</div>
-                            </div>
-                            <div id="discounted-price" class="mb-2" style="display: none;">
-                                <div>
-                                    <span class="currency best-value">$</span><span id="discounted-monthly-price-value"
-                                        class="value best-value"></span><span class="frequency">/quarter</span>
-                                </div>
-                                <div>
-                                    <span id="original-monthly-price" class="full-price">$579</span><span
-                                        id="monthly-discount-amount" class="save-value best-value">22% OFF</span>
-                                </div>
-                                <div class="frequency mt-3 mb-4 one-time-payment">Full Course Library</div>
-                            </div>
-                            <div class="button-wrapper text2">
-                                <a id="payment-plan-link" class="btn-solid-lg" style="white-space: nowrap"
-                                    href="/courses/all-access">LEARN MORE</a>
-                            </div>
-                            <hr class="cell-divide-hr" style="margin-bottom: 1rem;">
-                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
-                                <img class="img-fluid" style="width: 100%; object-fit: contain;"
-                                    src="../images/courses/all-access/all-access-pass-boxes.png" alt="alternative">
-                            </div>
-                            <ul class="list-unstyled li-space-lg" style="margin-bottom: 0;">
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Instant access to the entire course library</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Early access to new courses and updates</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Community access</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Microsoft employee interviews</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Live workshop recordings</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check best-value"></i>
-                                    <div class="media-body">Cancel anytime</div>
                                 </li>
                             </ul>
                         </div>
@@ -1107,6 +1044,7 @@
     <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="../js/scripts.js"></script> <!-- Custom scripts -->
     <script src="../js/countdown-timer.js"></script>
+    <script src="../js/notification-banner.js"></script>
     <script src="../js/parity-deals.js"></script>
     <script src="../js/favicon.js"></script>
     <script src="../js/checkbox.js"></script>

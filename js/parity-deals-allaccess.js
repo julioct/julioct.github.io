@@ -14,10 +14,10 @@
             couponCode: "", // Default coupon code
             discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
-            annualCouponCode: "", // Annual plan coupon code
-            annualDiscountPercentage: "", // Annual plan discount percentage
-            quarterlyCouponCode: "", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
+            annualCouponCode: "BLACKFRIDAY25", // Annual plan coupon code
+            annualDiscountPercentage: "40", // Annual plan discount percentage
+            quarterlyCouponCode: "BLACKFRIDAY25", // Quarterly plan coupon code
+            quarterlyDiscountPercentage: "40", // Quarterly plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
@@ -28,8 +28,6 @@
             quarterly: 199, // Quarterly plan original price
             monthly: 79     // Monthly plan original price (currently hidden)
         };
-
-        const notificationBanner = document.getElementById('notification-banner');
 
         // Get annual and quarterly plan elements
         const annualPlanContainer = document.querySelector('.col-lg-4.order-lg-2');
@@ -57,59 +55,14 @@
         const annualOriginalHref = annualPaymentLink ? annualPaymentLink.href : "";
         const quarterlyOriginalHref = quarterlyPaymentLink ? quarterlyPaymentLink.href : "";
 
-        // Make sure banner is completely hidden by default
-        if (notificationBanner)
-        {
-            notificationBanner.style.display = 'none';
-        }
-
-        // Function to update notification banner with discount information
-        const updateNotificationBanner = function ()
-        {
-            if (!notificationBanner) return;
-
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-            const discountDollars = window.parityDealsInfo.discountDollars;
-            const country = window.parityDealsInfo.country || "your country";
-
-            // Show banner if there's any discount available (percentage or dollar amount)
-            if (discountPercentage <= 0 && !discountDollars)
-            {
-                notificationBanner.style.display = 'none';
-                return;
-            }
-
-            let discountText = "";
-
-            // Determine whether to use percentage or dollar amount
-            if (discountPercentage > 0)
-            {
-                discountText = `${discountPercentage}%`;
-            } else
-            {
-                discountText = `$${discountDollars}`;
-            }
-
-            let bannerText = `☀️ Summer Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;July&nbsp;6`;
-
-            // If coupon code came from the Parity Deals API, use the country-specific format
-            if (window.parityDealsInfo.couponFromAPI)
-            {
-                bannerText = `Pricing adjusted for <strong>${country}</strong> — <strong>${discountText} OFF</strong>`;
-            }
-
-            notificationBanner.innerHTML = bannerText;
-            notificationBanner.style.display = 'block';
-        };
-
         // Function to update links with coupon codes
         const updateCouponLinks = function ()
         {
-            // Update annual plan link - only apply coupon if it exists and is from API
+            // Update annual plan link - apply coupon if it exists
             if (annualPaymentLink && annualOriginalHref)
             {
                 const annualCouponCode = window.parityDealsInfo.annualCouponCode;
-                if (annualCouponCode && window.parityDealsInfo.couponFromAPI)
+                if (annualCouponCode)
                 {
                     const url = new URL(annualOriginalHref);
                     url.searchParams.set('coupon', annualCouponCode);
@@ -123,11 +76,11 @@
                 }
             }
 
-            // Update quarterly plan link - only apply coupon if it exists and is from API
+            // Update quarterly plan link - apply coupon if it exists
             if (quarterlyPaymentLink && quarterlyOriginalHref)
             {
                 const quarterlyCouponCode = window.parityDealsInfo.quarterlyCouponCode;
-                if (quarterlyCouponCode && window.parityDealsInfo.couponFromAPI)
+                if (quarterlyCouponCode)
                 {
                     const url = new URL(quarterlyOriginalHref);
                     url.searchParams.set('coupon', quarterlyCouponCode);
@@ -272,9 +225,6 @@
 
             // Update discount display values
             updateDiscountDisplay();
-
-            // Update notification banner
-            updateNotificationBanner();
 
             // Update coupon links
             updateCouponLinks();

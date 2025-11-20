@@ -10,17 +10,16 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
-            couponCodePaymentPlan: "", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
-            discountPercentage: "", // Set this to the discount percentage for onetime payment (e.g., "20")
-            discountPercentagePaymentPlan: "", // Set this to the discount percentage for payment plan (e.g., "15")
+            couponCode: "BLACKFRIDAY25", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
+            couponCodePaymentPlan: "BLACKFRIDAY25", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
+            discountPercentage: "40", // Set this to the discount percentage for onetime payment (e.g., "20")
+            discountPercentagePaymentPlan: "40", // Set this to the discount percentage for payment plan (e.g., "15")
             discountDollars: "",  // Alternative: set this to a fixed dollar amount
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };
 
         const paymentPlanContainer = document.getElementById('payment-plan-container');
-        const notificationBanner = document.getElementById('notification-banner');
 
         // Get original URLs from existing links instead of hardcoding them
         const onetimePaymentLink = document.getElementById('onetime-payment-link');
@@ -79,57 +78,14 @@
             return 129; // Default fallback price for payment plan
         };
 
-        // Make sure banner is completely hidden by default (in case CSS doesn't do this)
-        if (notificationBanner)
-        {
-            notificationBanner.style.display = 'none';
-        }
-
-        // Function to update notification banner with discount information
-        const updateNotificationBanner = function ()
-        {
-            if (!notificationBanner) return;
-
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-            const discountDollars = window.parityDealsInfo.discountDollars;
-            const country = window.parityDealsInfo.country || "your country";
-
-            // Show banner if there's any discount available (percentage or dollar amount)
-            if (discountPercentage <= 0 && !discountDollars)
-            {
-                notificationBanner.style.display = 'none';
-                return;
-            }
-
-            let discountText = "";
-
-            // Determine whether to use percentage or dollar amount
-            if (discountPercentage > 0)
-            {
-                discountText = `${discountPercentage}%`;
-            } else
-            {
-                discountText = `$${discountDollars}`;
-            }
-
-            let bannerText = `📚 Back to School Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;September&nbsp;2`;
-
-            // If coupon code came from the Parity Deals API, use the country-specific format
-            if (window.parityDealsInfo.couponFromAPI)
-            {
-                bannerText = `Pricing adjusted for <strong>${country}</strong> — <strong>${discountText} OFF</strong>`;
-            }
-
-            notificationBanner.innerHTML = bannerText;
-            notificationBanner.style.display = 'block';
-        };        // Function to update link with coupon code
+        // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update onetime payment link - only apply coupon if it exists and is from API
+            // Update onetime payment link - apply coupon if it exists
             if (onetimePaymentLink && onetimePaymentOriginalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
-                if (couponCode && window.parityDealsInfo.couponFromAPI)
+                if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
                     const baseUrl = onetimePaymentOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
@@ -145,11 +101,11 @@
                 console.log("Onetime payment link not found or no original href");
             }
 
-            // Update payment plan link - only apply coupon if it exists and is from API
+            // Update payment plan link - apply coupon if it exists
             if (paymentPlanLink && paymentPlanOriginalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCodePaymentPlan;
-                if (couponCode && window.parityDealsInfo.couponFromAPI)
+                if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
                     const baseUrl = paymentPlanOriginalHref.split('&coupon=')[0].split('?coupon=')[0];
@@ -315,9 +271,6 @@
 
             // Update discount display values
             updateDiscountDisplay();
-
-            // Update notification banner
-            updateNotificationBanner();
 
             // Update coupon link
             updateCouponLink();

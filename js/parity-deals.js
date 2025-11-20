@@ -11,8 +11,8 @@
     {
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "", // Default discount percentage (no decimals)
+            couponCode: "BLACKFRIDAY25", // Default coupon code (empty - no hardcoded coupon)
+            discountPercentage: "40", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             allAccessCouponCode: "", // All-access pass coupon code
             allAccessDiscountPercentage: "", // All-access pass discount percentage
@@ -25,7 +25,6 @@
         const discountedPriceDiv = document.getElementById('discounted-price');
 
         const oneTimePaymentLink = document.getElementById('one-time-payment-link');
-        const notificationBanner = document.getElementById('notification-banner');
 
         // All-access pass elements - look for the second pricing card container
         const allAccessContainer = document.querySelectorAll('.pricing-card-container')[1]; // Second card container
@@ -60,59 +59,14 @@
             return 199; // Default all-access quarterly price
         };
 
-        // Make sure banner is completely hidden by default (in case CSS doesn't do this)
-        if (notificationBanner)
-        {
-            notificationBanner.style.display = 'none';
-        }
-
-        // Function to update notification banner with discount information
-        const updateNotificationBanner = function ()
-        {
-            if (!notificationBanner) return;
-
-            const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-            const discountDollars = window.parityDealsInfo.discountDollars;
-            const country = window.parityDealsInfo.country || "your country";
-
-            // Show banner if there's any discount available (percentage or dollar amount)
-            if (discountPercentage <= 0 && !discountDollars)
-            {
-                notificationBanner.style.display = 'none';
-                return;
-            }
-
-            let discountText = "";
-
-            // Determine whether to use percentage or dollar amount
-            if (discountPercentage > 0)
-            {
-                discountText = `${discountPercentage}%`;
-            } else
-            {
-                discountText = `$${discountDollars}`;
-            }
-
-            let bannerText = `📚 Back to School Sale: <strong>${discountText} OFF EVERYTHING</strong> • Ends&nbsp;September&nbsp;2`;
-
-            // If coupon code came from the Parity Deals API, use the country-specific format
-            if (window.parityDealsInfo.couponFromAPI)
-            {
-                bannerText = `Pricing adjusted for <strong>${country}</strong> — <strong>${discountText} OFF</strong>`;
-            }
-
-            notificationBanner.innerHTML = bannerText;
-            notificationBanner.style.display = 'block';
-        };
-
         // Function to update link with coupon code
         const updateCouponLink = function ()
         {
-            // Update one-time payment link - only apply coupon if it exists and is from API
+            // Update one-time payment link - apply coupon if it exists
             if (oneTimePaymentLink && originalHref)
             {
                 const couponCode = window.parityDealsInfo.couponCode;
-                if (couponCode && window.parityDealsInfo.couponFromAPI)
+                if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
                     const baseUrl = originalHref.split('&coupon=')[0].split('?coupon=')[0];
@@ -263,72 +217,69 @@
             // Update discount display values
             updateDiscountDisplay();
 
-            // Update notification banner
-            updateNotificationBanner();
-
             // Update coupon link
             updateCouponLink();
         };
 
         // Function to fetch coupon from Parity Deals API (only called once)
-        const fetchParityCoupon = async function ()
-        {
-            try
-            {
-                const apiUrl = `https://api.paritydeals.com/api/v1/deals/discount/?url=${encodeURIComponent(window.location.href)}`;
-                const response = await fetch(apiUrl);
+        // const fetchParityCoupon = async function ()
+        // {
+        //     try
+        //     {
+        //         const apiUrl = `https://api.paritydeals.com/api/v1/deals/discount/?url=${encodeURIComponent(window.location.href)}`;
+        //         const response = await fetch(apiUrl);
 
-                if (!response.ok)
-                {
-                    console.log("Failed to fetch coupon from Parity Deals API");
-                    return;
-                }
+        //         if (!response.ok)
+        //         {
+        //             console.log("Failed to fetch coupon from Parity Deals API");
+        //             return;
+        //         }
 
-                const data = await response.json();
-                console.log("Parity Deals API response:", data);
+        //         const data = await response.json();
+        //         console.log("Parity Deals API response:", data);
 
-                // Store the API response globally and update UI if needed
-                let uiNeedsUpdate = false;
+        //         // Store the API response globally and update UI if needed
+        //         let uiNeedsUpdate = false;
 
-                if (data.couponCode)
-                {
-                    // Override any hardcoded discount with parity deals discount for both onetime and all-access
-                    window.parityDealsInfo.couponCode = data.couponCode;
-                    window.parityDealsInfo.allAccessCouponCode = data.couponCode; // Store for display purposes only
-                    window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
-                    uiNeedsUpdate = true;
-                }
+        //         if (data.couponCode)
+        //         {
+        //             // Override any hardcoded discount with parity deals discount for both onetime and all-access
+        //             window.parityDealsInfo.couponCode = data.couponCode;
+        //             window.parityDealsInfo.allAccessCouponCode = data.couponCode; // Store for display purposes only
+        //             window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
+        //             uiNeedsUpdate = true;
+        //         }
 
-                if (data.discountPercentage)
-                {
-                    // Remove any decimal places from the discount percentage
-                    window.parityDealsInfo.discountPercentage = parseInt(data.discountPercentage).toString();
-                    window.parityDealsInfo.allAccessDiscountPercentage = parseInt(data.discountPercentage).toString(); // Apply same discount to all-access for display
-                    uiNeedsUpdate = true;
-                }
+        //         if (data.discountPercentage)
+        //         {
+        //             // Remove any decimal places from the discount percentage
+        //             window.parityDealsInfo.discountPercentage = parseInt(data.discountPercentage).toString();
+        //             window.parityDealsInfo.allAccessDiscountPercentage = parseInt(data.discountPercentage).toString(); // Apply same discount to all-access for display
+        //             uiNeedsUpdate = true;
+        //         }
 
-                // Add handling for country from the API
-                if (data.country)
-                {
-                    window.parityDealsInfo.country = data.country;
-                    uiNeedsUpdate = true;
-                }
+        //         // Add handling for country from the API
+        //         if (data.country)
+        //         {
+        //             window.parityDealsInfo.country = data.country;
+        //             uiNeedsUpdate = true;
+        //         }
 
-                if (uiNeedsUpdate)
-                {
-                    updateUI();
-                }
-            } catch (error)
-            {
-                console.log("Error fetching coupon from Parity Deals API:", error);
-            }
-        };
+        //         if (uiNeedsUpdate)
+        //         {
+        //             updateUI();
+        //         }
+        //     } catch (error)
+        //     {
+        //         console.log("Error fetching coupon from Parity Deals API:", error);
+        //     }
+        // };
 
         // Initialize the UI based on current state
         updateUI();
 
         // Fetch from API only once
-        fetchParityCoupon();
+        // fetchParityCoupon();
     });
 
 })(jQuery);
