@@ -8,6 +8,16 @@ issue-number: 109
 
 *Read time: 7 minutes*
 
+<p style="text-align: center; font-size: 1.2em;"><strong>The .NET Saturday is brought to you by:</strong></p>
+
+<div style="background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%); padding: 36px; margin: 24px 0; overflow: hidden; border-radius: 14px; box-shadow: 0 2px 12px rgba(80,120,200,0.08);">
+  <p style="text-align: center; max-width: 600px; margin: 0 auto 18px auto;"><a href="https://www.jetbrains.com/rider/?utm_source=newsletter_dot_net_saturday&utm_medium=cpc&utm_campaign=junie" target="_blank"><strong>JetBrains Rider​</strong></a> is better with an AI coding agent that can save you hours, if not days. Simply provide a precise prompt, and get a fully functional feature in return!</p>
+
+  <div style="display: flex; justify-content: center;">
+    <a href="https://www.jetbrains.com/rider/?utm_source=newsletter_dot_net_saturday&utm_medium=cpc&utm_campaign=junie" target="_blank" style="background: linear-gradient(90deg, #4f8cff 0%, #235390 100%); color: #fff; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 2px 8px rgba(80,120,200,0.10); transition: background 0.2s; text-align: center;">Try it today</a>
+  </div>
+</div>
+
 Every Aspire release brings new capabilities, but the pattern I've seen more and more is how the latest versions actually remove code from your projects.
 
 And I don't mean bug fixes or performance tweaks. I'm talking about infrastructure boilerplate that's been cluttering your AppHost since you started using Aspire.
@@ -299,10 +309,12 @@ See you next Saturday.
 
 <br>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, there are 4 ways I can help you:**
 
 1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
+2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
-3. **[Sponsor this newsletter​]({{ site.url }}/sponsorship)**: Get your product in front of 25,000+ .NET developers and tech leads who make buying decisions. Slots fill fast. Reserve today.
+3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this newsletter, grab exclusive course discounts, and join a private .NET community.
+
+4. **[Sponsor this newsletter​]({{ site.url }}/sponsorship)**: Get your product in front of 25,000+ .NET developers and tech leads who make buying decisions. Slots fill fast. Reserve today.
