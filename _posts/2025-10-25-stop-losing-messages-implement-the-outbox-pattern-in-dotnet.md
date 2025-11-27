@@ -338,7 +338,7 @@ And that's it for today.
 
 See you next Saturday.
 
-P.S. This is just a small summary of Module 8 of my upcoming **Payments, Queues and Workers course**, where I cover many other classic gotchas of distributed systems. [Join the waitlist]({{ site.url }}/waitlist).
+**P.S.** This is just a small summary of Module 8 of my [Payments, Queues & Workers course]({{ site.url }}/courses/payments-queues-and-workers), where I cover many other classic gotchas of distributed systems.
 
 ---
 

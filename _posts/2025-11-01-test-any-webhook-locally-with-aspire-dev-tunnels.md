@@ -256,7 +256,7 @@ And that's it for today.
 
 See you next Saturday.
 
-P.S. My upcoming **Payments, Queues and Workers course** covers the complete Stripe integration story, from webhook handling and idempotency to running payment systems in production. [Join the waitlist]({{ site.url }}/waitlist).
+**P.S.** My [Payments, Queues & Workers course]({{ site.url }}/courses/payments-queues-and-workers) covers the complete Stripe integration story, from webhook handling and idempotency to running payment systems in production.
 
 ---
 

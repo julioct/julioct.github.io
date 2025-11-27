@@ -251,7 +251,7 @@ And that’s it for today.
 
 See you next Saturday.
 
-**P.S.** For real-world Azure Service Bus patterns (retries, DLQs, tracing) in the cloud, check out my upcoming [Payments, Queues and Workers course]({{ site.url }}/waitlist).
+**P.S.** For real-world Azure Service Bus patterns (retries, DLQs, tracing) in the cloud, check out my [Payments, Queues & Workers course]({{ site.url }}/courses/payments-queues-and-workers).
 
 ---
 

@@ -242,7 +242,7 @@ And that's all for today.
 
 See you next Saturday.
 
-**P.S.** My upcoming **Stripe for .NET Developers** course dives deep into complete payment flows—from payment intents to webhooks and a complete e-commerce checkout experience. [Join the waitlist]({{ site.url }}/waitlist) to be first in line.
+**P.S.** For a deep dive into complete payment flows, from payment intents to webhooks and a complete e-commerce checkout experience, check out my [Payments, Queues & Workers course]({{ site.url }}/courses/payments-queues-and-workers).
 
 ---
 

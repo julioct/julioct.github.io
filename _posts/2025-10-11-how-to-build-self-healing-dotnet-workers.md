@@ -350,8 +350,6 @@ The worker indeed noticed PostgreSQL is back, and therefore resumed normal opera
 
 Mission accomplished!
 
-P.S. I'll cover lots more about workers and how to use them to scale your .NET systems in my upcoming **Payments, Queues & Workers** course. [​Join the Waitlist​]({{ site.url }}/waitlist).
-
 ​
 
 ### **Wrapping Up**
@@ -366,6 +364,8 @@ Not with dashboards full of red lights, but with code that knows when something�
 And that’s it for today.
 
 See you next Saturday.
+
+**P.S.** I cover lots more about workers and how to use them to scale your .NET systems in my [Payments, Queues & Workers course]({{ site.url }}/courses/payments-queues-and-workers).
 
 ---
 
