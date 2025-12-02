@@ -14,10 +14,10 @@
             couponCode: "", // Default coupon code
             discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
-            annualCouponCode: "BLACKFRIDAY25", // Annual plan coupon code
-            annualDiscountPercentage: "40", // Annual plan discount percentage
-            quarterlyCouponCode: "BLACKFRIDAY25", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "40", // Quarterly plan discount percentage
+            annualCouponCode: "", // Annual plan coupon code
+            annualDiscountPercentage: "", // Annual plan discount percentage
+            quarterlyCouponCode: "", // Quarterly plan coupon code
+            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
             country: "", // Country from Parity Deals API
             couponFromAPI: false // Flag to track if coupon code came from API
         };

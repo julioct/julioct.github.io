@@ -11,8 +11,8 @@
     {
         // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "BLACKFRIDAY25", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "40", // Default discount percentage (no decimals)
+            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
+            discountPercentage: "", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars (not provided by API)
             allAccessCouponCode: "", // All-access pass coupon code
             allAccessDiscountPercentage: "", // All-access pass discount percentage
