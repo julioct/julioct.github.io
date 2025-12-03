@@ -30,30 +30,32 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Your book list is on its way! Apply what you learned with the .NET Full-Stack Blueprint template.">
+        content="Skip weeks of setup and start delivering value on day 1 with a production-ready .NET backend template.">
     <meta name="author" content="Julio Casal">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
     <meta property="og:site_name" content="Julio Casal" />
     <meta property="og:site" content="https://juliocasal.com" />
-    <meta property="og:title" content="Book List Sent! Get Your .NET Full-Stack Blueprint" />
+    <meta property="og:title" content="Template Sent!" />
     <meta property="og:description"
-        content="Your .NET book list is ready! Apply what you learned with the .NET Full-Stack Blueprint template." />
-    <meta property="og:image" content="https://juliocasal.com/images/dotnet-fullstack-blueprint-hero.jpg" />
-    <meta property="og:url" content="https://juliocasal.com/list-sent" />
+        content="Skip weeks of setup and start delivering value on day 1 with a production-ready .NET backend template." />
+    <meta property="og:image" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-upgrade-hero.jpg" />
+    <meta property="og:url" content="https://juliocasal.com/blueprint" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://juliocasal.com/images/dotnet-fullstack-blueprint-hero.jpg">
-    <meta name="thumbnail" content="https://juliocasal.com/images/dotnet-fullstack-blueprint-hero.jpg" />
+    <meta name="twitter:image" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-upgrade-hero.jpg">
+    <meta name="thumbnail" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-upgrade-hero.jpg" />
     <meta name="robots" content="noindex">
 
     <!-- Webpage Title -->
-    <title>Book List Sent!</title>
+    <title>Template Sent!</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Favicon  -->
@@ -190,7 +192,7 @@
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".fixed-top">
     <!-- Header -->
     <header id="header" class="header" style="padding: 1rem;">
         <div class="container">
@@ -198,42 +200,45 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10 text-center">
                     <h1 class="text-white mb-3" style="font-size: 2.5rem; font-weight: 700;">
-                        Your book list is on its way! 🚀
+                        Your free template is on its way 🚀
                     </h1>
                     <h2 class="text-white" style="font-size: 1.8rem; font-weight: 400; opacity: 0.9;">
-                        Want to take your learning even further?
+                        Now get the complete solution...
                     </h2>
                 </div>
             </div>
 
-
             <!-- Image Section -->
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-10 text-center">
-                    <img class="img-fluid rounded" src="images/dotnet-fullstack-blueprint-hero.jpg"
-                        alt=".NET Full-Stack Blueprint Template">
+                    <img class="img-fluid rounded" src="images/dotnet-backend-blueprint-pro-upgrade-hero.jpg"
+                        alt=".NET Backend Blueprint Template">
                 </div>
             </div>
 
             <!-- Description and CTA Section -->
             <div class="row justify-content-center">
-                <div class="col-lg-9 text-center">
+                <div class="col-lg-8 text-center">
                     <p class="line-spaced-paragraph text-white mb-3">
-                        You now have the top engineering books to guide your software engineering journey. Next,
-                        kickstart your next project with a production-ready .NET + React full-stack template.
+                        Get the <strong>complete enterprise-ready blueprint</strong>. Everything you need to build
+                        scalable .NET backends
+                        that can handle real-world workloads.
                     </p>
                     <div style="margin-top: 2rem;">
                         <!-- CTA Buttons -->
-                        <div class="text-center mb-3">
+                        <div class="text-center mb-4">
                             <a class="btn-solid-lg"
-                                href="https://learn.dotnetacademy.io/enroll/3608284?price_id=4545291&coupon=blueprint40"
-                                style="margin-right: 1rem;"><strong>Go Full-Stack for $15</strong></a>
-                            <a class="btn-outline-lg" href="https://forms.microsoft.com/r/jnXQ0nnZ4a" target="_blank">
+                                href="https://learn.dotnetacademy.io/enroll/3581945?price_id=4516361&coupon=blueprint40"
+                                style="margin-right: 1rem;"><strong>Upgrade to
+                                    Pro
+                                    for
+                                    $15</strong></a>
+                            <a class="btn-outline-lg" href="https://forms.microsoft.com/r/9xvsKJJj4z" target="_blank">
                                 <strong>No Thanks</strong>
                             </a>
                         </div>
                         <!-- Special Price Message -->
-                        <div class="text-center mb-3">
+                        <div class="text-center">
                             <div
                                 style="display: inline-block; padding: 0.75rem 1.5rem; background: rgba(245, 87, 108, 0.1); border-radius: 8px; border: 1px solid rgba(245, 87, 108, 0.2);">
                                 <span class="text-white" style="font-size: 0.85rem; font-weight: 500;">
@@ -251,119 +256,16 @@
     <!-- Main Content -->
     <div id="main-content" class="basic-1" style="padding: 0;">
         <div class="container">
-            <!-- New Card Order: 6 rows of 2 cards each -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fab fa-react text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">React 19 + TypeScript Frontend</h5>
-                                <p><strong>Modern React setup</strong> with TypeScript, Vite for lightning-fast HMR,
-                                    React Router 7, and Bootstrap 5 for responsive UI.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-rocket text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Production-Ready .NET 10 API</h5>
-                                <p>Complete Web API with <strong>Vertical Slice Architecture</strong>, global error
-                                    handling, and health checks. Start building features immediately.</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Pro Features Introduction -->
+            <div class="row justify-content-center mb-2 mt-3">
+                <div class="col-lg-8 text-center">
+                    <p class="line-spaced-paragraph text-white mb-3">
+                        Pro version includes <strong>everything in the free template</strong> plus these additional
+                        enterprise features:
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-shield-alt text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Complete Authentication Flow</h5>
-                                <p><strong>Keycloak OAuth2/OIDC integration</strong> with JWT validation, protected
-                                    routes, and automatic token injection for API calls.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-exchange-alt text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">YARP Reverse Proxy</h5>
-                                <p><strong>Unified routing</strong> for frontend and API. Serves a static build and
-                                    routes /api/* to backend in production.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-database text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Database Integration</h5>
-                                <p><strong>PostgreSQL with Entity Framework Core</strong>, migrations, and connection
-                                    pooling. Ready for both local dev and prod.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-cloud text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Azure Deployment Ready</h5>
-                                <p><strong>One-command deployment</strong> to Azure Container Apps with PostgreSQL
-                                    Flexible Server, Keycloak and managed identities.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-vial text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Integration Tests</h5>
-                                <p><strong>Comprehensive test suite</strong> with test containers, messaging mocks, and
-                                    authentication scenarios for reliable development.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-play-circle text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">CI/CD Pipelines</h5>
-                                <p><strong>Pre-configured workflows</strong> for both GitHub Actions and Azure DevOps
-                                    with automated building and deployment to Azure.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-lg-6">
                     <div class="benefit-card">
@@ -374,6 +276,28 @@
                                 <h5 class="font-weight-bold">Pub/Sub Messaging</h5>
                                 <p><strong>Azure Service Bus integration</strong> with item event notifications, shared
                                     message contracts, and local emulator support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-vial text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Integration Tests</h5>
+                                <p><strong>Comprehensive test suite</strong> with test containers, messaging mocks,
+                                    and authentication scenarios for reliable development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-chart-line text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Azure Application Insights</h5>
+                                <p><strong>Enhanced telemetry and monitoring</strong> with distributed tracing,
+                                    custom metrics, and production-grade observability out of the box.</p>
                             </div>
                         </div>
                     </div>
@@ -390,9 +314,33 @@
                             </div>
                         </div>
                     </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-rocket text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Azure DevOps CI/CD</h5>
+                                <p>For enterprise teams using Azure DevOps. Complete pipeline with build, test, and
+                                    Azure
+                                    deployment for corporate environments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-code text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">GitHub Codespaces Ready</h5>
+                                <p><strong>Pre-configured dev container</strong> with .NET 10 SDK, Aspire CLI, and
+                                    all development tools for instant cloud development environment.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="benefit-card">
                         <div class="media">
@@ -406,53 +354,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-chart-line text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Azure Application Insights</h5>
-                                <p><strong>Enhanced telemetry and monitoring</strong> with distributed tracing, custom
-                                    metrics, and production-grade observability out of the box.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-cog text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Aspire Orchestration</h5>
-                                <p>Local development made easy with <strong>tracing, telemetry, and health
-                                        monitoring</strong>. See everything in the Aspire dashboard.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-code text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">GitHub Codespaces Ready</h5>
-                                <p><strong>Pre-configured dev container</strong> with .NET 10 SDK, Aspire CLI, and all
-                                    development tools for instant cloud development environment.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- Testimonial Section -->
-    <!-- <div class="basic-1 pt-5 pb-5">
+    <div class="basic-1 pt-5 pb-0">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -467,10 +374,11 @@
                             <div class="col-md-9">
                                 <blockquote class="text-white"
                                     style="font-style: italic; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                                    "I've been reviewing Julio's backend blueprint, and I've not been
+                                    "I've been reviewing the pro version of Julio's backend blueprint, and I've not been
                                     disappointed. Combined with the great educational material that Julio provides, this
                                     blueprint is well organised, thorough, and will provide a great way to start all my
-                                    new .NET projects."
+                                    new .NET
+                                    projects."
                                 </blockquote>
                                 <div class="text-left">
                                     <div class="text-white font-weight-bold" style="font-size: 1.1rem;">Jeffrey
@@ -485,18 +393,9 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Copyright -->
-    <!-- Repeat CTA Buttons after testimonial -->
-    <div class="container text-center mb-5">
-        <a class="btn-solid-lg" href="https://learn.dotnetacademy.io/enroll/3608284?price_id=4545291&coupon=blueprint40"
-            style="margin-right: 1rem;"><strong>Go Full-Stack for $15</strong></a>
-        <a class="btn-outline-lg" href="https://forms.microsoft.com/r/jnXQ0nnZ4a" target="_blank"
-            style="font-weight: 700; color: #fff; border: 2px solid rgba(255,255,255,0.6); background: transparent;">
-            <strong>No Thanks</strong>
-        </a>
-    </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
