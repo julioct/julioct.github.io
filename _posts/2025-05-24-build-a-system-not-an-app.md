@@ -143,7 +143,7 @@ Yes, it can do that too:
 
 It's a live view of your entire system, exactly as you defined it in your C# code.
 
-It even includes the Keycloak dependency, which I cover in detail, plus how to convert the entire thing into Bicep files to get everything deployed to Azure with one command, in the upcoming **Containers & .NET Aspire course** that will soon join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
+It even includes the Keycloak dependency, which I cover in detail, plus how to convert the entire thing into Bicep files to get everything deployed to Azure with one command, in the upcoming **Containers & Aspire course** that will soon join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 ​
 

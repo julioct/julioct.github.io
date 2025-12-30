@@ -374,7 +374,7 @@ And that’s all for today.
 
 See you next Saturday.
 
-**P.S.** If you want to go deeper into fine-tuned Azure deployments with .NET Aspire, and secure a complete e-commerce system with Keycloak, it's all covered in my [**Containers & .NET Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire).
+**P.S.** If you want to go deeper into fine-tuned Azure deployments with .NET Aspire, and secure a complete e-commerce system with Keycloak, it's all covered in my [**Containers & Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire).
 
 
 ---

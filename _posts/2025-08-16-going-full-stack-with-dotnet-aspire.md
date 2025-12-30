@@ -208,7 +208,7 @@ With .NET Aspire, your React frontend and .NET backend work together as a unifie
 
 When your development environment setup becomes invisible, your team can focus on what actually matters: building features that customers love.
 
-**P.S.** If you want to see this approach scaled up to a real-world e-commerce system—complete with Keycloak and Entra ID authentication, and production Azure deployment—check out my [Containers & .NET Aspire course](https://juliocasal.com/courses/containers-and-dotnet-aspire).
+**P.S.** If you want to see this approach scaled up to a real-world e-commerce system—complete with Keycloak and Entra ID authentication, and production Azure deployment—check out my [Containers & Aspire course](https://juliocasal.com/courses/containers-and-dotnet-aspire).
 
 ---
 

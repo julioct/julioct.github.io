@@ -176,7 +176,7 @@ Yes, there's also a hosting integration for that.
 
 And what if you need to customize the Storage Account configuration, or modify a few of the Container Apps settings?
 
-That's also possible, and I'll cover all those in detail, plus how to even use your existing Bicep files with Aspire, in the upcoming **Containers & .NET Aspire course** that will join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp) soon.
+That's also possible, and I'll cover all those in detail, plus how to even use your existing Bicep files with Aspire, in the upcoming **Containers & Aspire course** that will join [the bootcamp]({{ site.url }}/courses/dotnetbootcamp) soon.
 
 ---
 

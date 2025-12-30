@@ -355,7 +355,7 @@ And that's all for today.
 
 See you next Saturday.
 
-**P.S.** If you're ready to take this containerized, production-ready approach beyond just Keycloak, my [**Containers & .NET Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire) shows you how to build bulletproof .NET applications from day 1.
+**P.S.** If you're ready to take this containerized, production-ready approach beyond just Keycloak, my [**Containers & Aspire course**]({{ site.url }}/courses/containers-and-dotnet-aspire) shows you how to build bulletproof .NET applications from day 1.
 
 ---
 
