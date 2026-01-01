@@ -15,18 +15,18 @@
         enabled: true,
 
         // Banner content
-        message: "Black Friday Sale: <strong>40% OFF EVERYTHING</strong> • Ends&nbsp;December&nbsp;1",
+        message: "Bootcamp Expanded: <strong>Now with CI/CD & Testing • 30% Off</strong> • Ends Jan 6",
 
         // Button configuration
         button: {
-            text: "SAVE 40% NOW",
-            url: "/courses"
+            text: "CLAIM OFFER",
+            url: "/courses/dotnetbootcamp"
         },
 
         // Countdown timer configuration (set endDate to null to disable countdown)
         countdown: {
             enabled: true, // Set to true to enable countdown timer
-            endDate: new Date('December 1, 2025 23:59:59 PST') // Same as countdown-timer.js
+            endDate: new Date('January 6, 2026 23:59:59 PST') // Same as countdown-timer.js
         },
 
         // Styling
@@ -55,8 +55,8 @@
             return;
         }
 
-        // Check if we're on the courses page to conditionally hide the button
-        const isCoursesPage = window.location.pathname.includes('/courses') || window.location.pathname.endsWith('/courses/');
+        // Check if we're on the bootcamp page to conditionally hide the button
+        const isBootcampPage = window.location.pathname.includes('/dotnetbootcamp');
 
         // Create just the banner HTML (without the fixed-top wrapper)
         const bannerHtml = `
@@ -89,7 +89,7 @@
                         </span>
                     </div>
                     ` : ''}
-                    ${!isCoursesPage ? `
+                    ${!isBootcampPage ? `
                     <a href="${bannerConfig.button.url}" class="btn btn-sm ml-3"
                         style="font-weight: bold; color: ${bannerConfig.textColor}; text-decoration: none; background-color: ${bannerConfig.buttonBackgroundColor}; border: none; padding: 8px 16px; display: flex; align-items: center; height: 44px;">
                         ${bannerConfig.button.text}</a>

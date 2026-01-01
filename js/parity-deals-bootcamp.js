@@ -10,9 +10,9 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
+            couponCode: "NewYear26", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
             couponCodePaymentPlan: "", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
-            discountPercentage: "", // Set this to the discount percentage for onetime payment (e.g., "20")
+            discountPercentage: "30", // Set this to the discount percentage for onetime payment (e.g., "20")
             discountPercentagePaymentPlan: "", // Set this to the discount percentage for payment plan (e.g., "15")
             discountDollars: "",  // Alternative: set this to a fixed dollar amount
             country: "", // Country from Parity Deals API
@@ -62,8 +62,13 @@
             if (paymentPlanOriginalPriceSpan && paymentPlanOriginalPriceSpan.textContent.trim())
             {
                 const priceText = paymentPlanOriginalPriceSpan.textContent || paymentPlanOriginalPriceSpan.innerText || "";
-                const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
-                if (!isNaN(price)) return price;
+                // Extract just the first number (monthly price) before any "x" character
+                const match = priceText.match(/\$?(\d+(?:\.\d+)?)/);
+                if (match)
+                {
+                    const price = parseFloat(match[1]);
+                    if (!isNaN(price)) return price;
+                }
             }
 
             // If not found, get from the main price display (when no discount)
@@ -186,28 +191,22 @@
             }
 
             // Update payment plan discount display (only if not a parity deals discount)
-            if (paymentPlanDiscountedPriceValue && paymentPlanOriginalPriceSpan && paymentPlanDiscountAmountSpan && !window.parityDealsInfo.couponFromAPI)
+            if (!window.parityDealsInfo.couponFromAPI)
             {
-                const currentPaymentPlanPrice = getPaymentPlanPrice();
-                const discountedPaymentPlanPrice = calculateDiscountedPrice('paymentplan');
+                const paymentPlanDiscountedPriceValue = document.querySelector('#payment-plan-container #discounted-monthly-price-value');
+                const paymentPlanTotalDiv = document.querySelector('#payment-plan-container #discounted-total-price');
 
-                // Update the discounted price
-                paymentPlanDiscountedPriceValue.textContent = discountedPaymentPlanPrice;
+                if (paymentPlanDiscountedPriceValue && paymentPlanTotalDiv)
+                {
+                    const currentPaymentPlanPrice = getPaymentPlanPrice();
+                    const discountedPaymentPlanPrice = calculateDiscountedPrice('paymentplan');
 
-                // Update original price display (only if it's not already showing the correct price)
-                const currentDisplayedPaymentPlanPrice = parseFloat(paymentPlanOriginalPriceSpan.textContent.replace(/[^0-9.]/g, ''));
-                if (isNaN(currentDisplayedPaymentPlanPrice) || currentDisplayedPaymentPlanPrice !== currentPaymentPlanPrice)
-                {
-                    paymentPlanOriginalPriceSpan.textContent = `$${currentPaymentPlanPrice}`;
-                }
+                    // Update the discounted monthly price
+                    paymentPlanDiscountedPriceValue.textContent = discountedPaymentPlanPrice;
 
-                // Determine and update the discount text (use payment plan specific discount)
-                if (discountPercentagePaymentPlan > 0)
-                {
-                    paymentPlanDiscountAmountSpan.textContent = `${discountPercentagePaymentPlan}% OFF`;
-                } else
-                {
-                    paymentPlanDiscountAmountSpan.textContent = `$${discountDollars} OFF`;
+                    // Update the total price display
+                    const totalDiscountedPrice = discountedPaymentPlanPrice * 4;
+                    paymentPlanTotalDiv.textContent = `(Total: $${totalDiscountedPrice})`;
                 }
             }
         };        // Function to update UI based on coupon code availability
