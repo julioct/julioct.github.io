@@ -10,9 +10,9 @@
     document.addEventListener("DOMContentLoaded", function ()
     {        // Global variable to store Parity Deals response data
         window.parityDealsInfo = {
-            couponCode: "NewYear26", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
+            couponCode: "", // Set this to enable hardcoded discount for onetime payment (e.g., "SUMMER2025")
             couponCodePaymentPlan: "", // Set this to enable hardcoded discount for payment plan (e.g., "PAYMENT20")
-            discountPercentage: "30", // Set this to the discount percentage for onetime payment (e.g., "20")
+            discountPercentage: "", // Set this to the discount percentage for onetime payment (e.g., "20")
             discountPercentagePaymentPlan: "", // Set this to the discount percentage for payment plan (e.g., "15")
             discountDollars: "",  // Alternative: set this to a fixed dollar amount
             country: "", // Country from Parity Deals API
