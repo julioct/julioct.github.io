@@ -235,19 +235,6 @@
                 }
             }
 
-            // Update onetime payment frequency text based on whether payment plan is showing
-            const onetimeFrequencyDivs = document.querySelectorAll('#onetime-payment-container .frequency.one-time-payment');
-            onetimeFrequencyDivs.forEach(div =>
-            {
-                if (isParityDealsDiscount)
-                {
-                    div.textContent = 'Lifetime Access';
-                } else
-                {
-                    div.textContent = 'Best Value';
-                }
-            });
-
             // Update onetime payment price display - show discounted price when discount is available
             const onetimeFullPriceDiv = document.querySelector('#onetime-payment-container #full-price');
             const onetimeDiscountedPriceDiv = document.querySelector('#onetime-payment-container #discounted-price');
