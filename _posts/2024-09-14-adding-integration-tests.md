@@ -27,7 +27,7 @@ If you are new to this newsletter, here's a quick summary of what I've been cove
 
 I'm extending the Game Store application introduced in my [ASP.NET Core Full Stack bundle](https://juliocasal.com/courses/aspnetcore-fullstack-bundle) courses and turning it into a real-world e-commerce distributed application that will serve as the core project to be developed across my upcoming [.NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
-Now, I don't plan to cover anything about unit testing in this bootcamp because I already have [2 entire courses](https://juliocasal.com/courses/unittesting-bundle) dedicated to that, but I do want to dive into the world of integration testing since that is essential in this kind of system.
+Now, I don't plan to cover anything about unit testing in this bootcamp because I already have 2 entire courses dedicated to that ([C# Unit Testing Essentials](https://juliocasal.com/courses/csharp-unittesting-essentials) and [Mastering C# Unit Testing](https://juliocasal.com/courses/mastering-csharp-unittesting)), but I do want to dive into the world of integration testing since that is essential in this kind of system.
 
 But, what do we need integration tests for in this system? Well, you want to think about all the interactions between the different components of your application, especially those that talk to external services.
 
