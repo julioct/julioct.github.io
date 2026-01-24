@@ -24,12 +24,12 @@ tiers: {
         tier2: {
             discount: 30,
             couponCode: "PPP-QN4F8R"
-        },
-        // TODO: Remove this test tier after verifying PPP works in production
-        tierTest: {
-            discount: 5,   // 5% OFF - minimal for testing
-            couponCode: "PPP-TEST"
         }
+        // TODO: Remove this test tier after verifying PPP works in production
+        // tierTest: {
+        //     discount: 5,   // 5% OFF - minimal for testing
+        //     couponCode: "PPP-TEST"
+        // }
     },
 
     // ============================================================
@@ -53,7 +53,7 @@ tiers: {
         "TR": "tier2", // Turkey (29 visitors)
 
         // === TEST TIER: Remove after testing ===
-        "US": "tierTest" // TODO: Remove this line after verifying PPP works
+        // "US": "tierTest" // TODO: Remove this line after verifying PPP works
     },
 
     // ============================================================
@@ -70,6 +70,6 @@ tiers: {
         "ZA": "South Africa",
         "MX": "Mexico",
         "TR": "Turkey",
-        "US": "United States" // TODO: Remove after testing
+        // "US": "United States" // TODO: Remove after testing
     }
 };
