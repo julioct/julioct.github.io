@@ -13,19 +13,19 @@ window.PPPConfig = {
 
     // ============================================================
     // DISCOUNT TIERS
-    // Each tier has a discount percentage and a Thinkific coupon code.
-    // Replace the placeholder coupon codes with your actual Thinkific codes.
     // ============================================================
-tiers: {
+    tiers: {
         tier1: {
             discount: 40,
-            couponCode: "PPP-VKX7M2"
+            couponCode: "PPP-VKX7M2" // Heavy Discount (40%)
         },
         tier2: {
             discount: 30,
-            couponCode: "PPP-QN4F8R"
+            couponCode: "PPP-QN4F8R" // Mid Discount (30%)
         }
-        // TODO: Remove this test tier after verifying PPP works in production
+        // ========================================================
+        // TEST TIER: Uncomment below to test locally with a US VPN
+        // ========================================================
         // tierTest: {
         //     discount: 5,   // 5% OFF - minimal for testing
         //     couponCode: "PPP-TEST"
@@ -33,27 +33,31 @@ tiers: {
     },
 
     // ============================================================
-    // COUNTRY MAPPING (Strictly based on your >25 Visitors Data)
+    // COUNTRY MAPPING (Validated by Sales & Traffic Data)
     // ============================================================
     countryTiers: {
         // === TIER 1: HEAVY DISCOUNT (40%) ===
-        // High Volume / Low Currency Strength
-        "IN": "tier1", // India (366 visitors)
-        "EG": "tier1", // Egypt (35 visitors)
-        "BD": "tier1", // Bangladesh (34 visitors)
-        "NG": "tier1", // Nigeria (33 visitors)
-        "PK": "tier1", // Pakistan (26 visitors)
+        "IN": "tier1", // India (146 Users, $238 Avg Spend)
+        "EG": "tier1", // Egypt (High traffic)
+        "NG": "tier1", // Nigeria (11 Users)
+        "BD": "tier1", // Bangladesh (High traffic)
+        "PK": "tier1", // Pakistan (High traffic)
+        "PH": "tier1", // Philippines ($188 Avg Spend)
+        "VN": "tier1", // Vietnam ($228 Avg Spend)
+        "GH": "tier1", // Ghana ($164 Avg Spend)
 
         // === TIER 2: MID DISCOUNT (30%) ===
-        // Emerging Markets / Higher Purchasing Power
-        "BR": "tier2", // Brazil (63 visitors)
-        "UA": "tier2", // Ukraine (47 visitors)
-        "ZA": "tier2", // South Africa (35 visitors)
-        "MX": "tier2", // Mexico (32 visitors)
-        "TR": "tier2", // Turkey (29 visitors)
+        "BR": "tier2", // Brazil (39 Users, $290 Avg Spend)
+        "PL": "tier2", // Poland (29 Users, $241 Avg Spend)
+        "PT": "tier2", // Portugal (15 Users, $208 Avg Spend)
+        "ZA": "tier2", // South Africa (14 Users)
+        "TR": "tier2", // Turkey (13 Users)
+        "UA": "tier2", // Ukraine (15 Users)
+        "AR": "tier2", // Argentina ($277 Avg Spend)
+        "PE": "tier2"  // Peru ($254 Avg Spend)
 
-        // === TEST TIER: Remove after testing ===
-        // "US": "tierTest" // TODO: Remove this line after verifying PPP works
+        // === TEST MAPPING: Uncomment to force US users into Test Tier ===
+        // "US": "tierTest"
     },
 
     // ============================================================
@@ -62,14 +66,20 @@ tiers: {
     countryNames: {
         "IN": "India",
         "EG": "Egypt",
-        "BD": "Bangladesh",
         "NG": "Nigeria",
+        "BD": "Bangladesh",
         "PK": "Pakistan",
+        "PH": "Philippines",
+        "VN": "Vietnam",
+        "GH": "Ghana",
         "BR": "Brazil",
-        "UA": "Ukraine",
+        "PL": "Poland",
+        "PT": "Portugal",
         "ZA": "South Africa",
-        "MX": "Mexico",
         "TR": "Turkey",
+        "UA": "Ukraine",
+        "AR": "Argentina",
+        "PE": "Peru"
         // "US": "United States" // TODO: Remove after testing
     }
 };
