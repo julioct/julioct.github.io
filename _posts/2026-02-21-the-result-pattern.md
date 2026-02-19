@@ -24,14 +24,52 @@ Let's start.
 Here's a pattern I see all the time. A service that throws exceptions for every business rule violation:
 
 
-![](/assets/images/2026-02-21/code-1.png)
+```csharp
+public class UserService(AppDbContext db)
+{
+    public async Task<User> CreateUser(string name, string email)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ValidationException("Name is required");
+
+        if (!email.Contains('@'))
+            throw new ValidationException("Invalid email format");
+
+        if (await db.Users.AnyAsync(u => u.Email == email))
+            throw new ConflictException("Email already in use");
+
+        var user = new User { Name = name, Email = email };
+        db.Users.Add(user);
+        await db.SaveChangesAsync();
+
+        return user;
+    }
+}
+```
 
 
 
 And then the endpoint has to catch all of them:
 
 
-![](/assets/images/2026-02-21/code-2.png)
+```csharp
+app.MapPost("/users", async (CreateUserRequest request, UserService service) =>
+{
+    try
+    {
+        var user = await service.CreateUser(request.Name, request.Email);
+        return Results.Created($"/users/{user.Id}", user);
+    }
+    catch (ValidationException ex)
+    {
+        return Results.BadRequest(ex.Message);
+    }
+    catch (ConflictException ex)
+    {
+        return Results.Conflict(ex.Message);
+    }
+});
+```
 
 
 
@@ -54,7 +92,29 @@ Three reasons:
 Instead of throwing, we return a `Result<T>` that explicitly says: "this either worked, or here's what went wrong."
 
 
-![](/assets/images/2026-02-21/code-3.png)
+```csharp
+public record Error(string Code, string Description, ErrorType Type);
+
+public enum ErrorType
+{
+    Validation,
+    Conflict,
+    NotFound
+}
+
+public class Result<T>
+{
+    private Result(T value) { Value = value; IsSuccess = true; }
+    private Result(Error error) { Error = error; IsSuccess = false; }
+
+    public bool IsSuccess { get; }
+    public T? Value { get; }
+    public Error? Error { get; }
+
+    public static Result<T> Success(T value) => new(value);
+    public static Result<T> Failure(Error error) => new(error);
+}
+```
 
 
 
@@ -66,7 +126,25 @@ That's it. No NuGet packages. No frameworks. Just a class that makes success and
 Instead of scattering error messages across your code, define them in one place:
 
 
-![](/assets/images/2026-02-21/code-4.png)
+```csharp
+public static class UserErrors
+{
+    public static readonly Error NameRequired = new(
+        "User.NameRequired",
+        "Name is required",
+        ErrorType.Validation);
+
+    public static readonly Error InvalidEmail = new(
+        "User.InvalidEmail",
+        "Invalid email format",
+        ErrorType.Validation);
+
+    public static readonly Error EmailTaken = new(
+        "User.EmailTaken",
+        "Email is already in use",
+        ErrorType.Conflict);
+}
+```
 
 
 
@@ -78,7 +156,28 @@ Now every error has a code, a description, and a type. Clean, discoverable, and 
 Now our service returns a `Result<User>` instead of throwing:
 
 
-![](/assets/images/2026-02-21/code-5.png)
+```csharp
+public class UserService(AppDbContext db)
+{
+    public async Task<Result<User>> CreateUser(string name, string email)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return Result<User>.Failure(UserErrors.NameRequired);
+
+        if (!email.Contains('@'))
+            return Result<User>.Failure(UserErrors.InvalidEmail);
+
+        if (await db.Users.AnyAsync(u => u.Email == email))
+            return Result<User>.Failure(UserErrors.EmailTaken);
+
+        var user = new User { Name = name, Email = email };
+        db.Users.Add(user);
+        await db.SaveChangesAsync();
+
+        return Result<User>.Success(user);
+    }
+}
+```
 
 
 
@@ -90,14 +189,39 @@ Notice how the method signature now tells you everything. It returns a `Result<U
 The last piece is translating a `Result<T>` into the right HTTP status code. A small extension method does the trick:
 
 
-![](/assets/images/2026-02-21/code-6.png)
+```csharp
+public static class ResultExtensions
+{
+    public static IResult ToHttpResult<T>(
+        this Result<T> result,
+        Func<T, IResult> onSuccess)
+    {
+        if (result.IsSuccess)
+            return onSuccess(result.Value!);
+
+        return result.Error!.Type switch
+        {
+            ErrorType.Validation => Results.BadRequest(result.Error),
+            ErrorType.Conflict => Results.Conflict(result.Error),
+            ErrorType.NotFound => Results.NotFound(result.Error),
+            _ => Results.StatusCode(500)
+        };
+    }
+}
+```
 
 
 
 And now your endpoint becomes beautifully simple:
 
 
-![](/assets/images/2026-02-21/code-7.png)
+```csharp
+app.MapPost("/users", async (CreateUserRequest request, UserService service) =>
+{
+    var result = await service.CreateUser(request.Name, request.Email);
+    return result.ToHttpResult(user => Results.Created($"/users/{user.Id}", user));
+});
+```
 
 
 
