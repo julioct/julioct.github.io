@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Result Pattern: Stop Throwing Exceptions for Validation"
-date: 2026-02-22
-featured-image: 2026-02-22/featured.png
+date: 2026-02-21
+featured-image: 2026-02-21/featured.png
 issue-number: 112
 ---
 
@@ -24,14 +24,14 @@ Let's start.
 Here's a pattern I see all the time. A service that throws exceptions for every business rule violation:
 
 
-![](/assets/images/2026-02-22/code-1.png)
+![](/assets/images/2026-02-21/code-1.png)
 
 
 
 And then the endpoint has to catch all of them:
 
 
-![](/assets/images/2026-02-22/code-2.png)
+![](/assets/images/2026-02-21/code-2.png)
 
 
 
@@ -54,7 +54,7 @@ Three reasons:
 Instead of throwing, we return a `Result<T>` that explicitly says: "this either worked, or here's what went wrong."
 
 
-![](/assets/images/2026-02-22/code-3.png)
+![](/assets/images/2026-02-21/code-3.png)
 
 
 
@@ -66,7 +66,7 @@ That's it. No NuGet packages. No frameworks. Just a class that makes success and
 Instead of scattering error messages across your code, define them in one place:
 
 
-![](/assets/images/2026-02-22/code-4.png)
+![](/assets/images/2026-02-21/code-4.png)
 
 
 
@@ -78,7 +78,7 @@ Now every error has a code, a description, and a type. Clean, discoverable, and 
 Now our service returns a `Result<User>` instead of throwing:
 
 
-![](/assets/images/2026-02-22/code-5.png)
+![](/assets/images/2026-02-21/code-5.png)
 
 
 
@@ -90,14 +90,14 @@ Notice how the method signature now tells you everything. It returns a `Result<U
 The last piece is translating a `Result<T>` into the right HTTP status code. A small extension method does the trick:
 
 
-![](/assets/images/2026-02-22/code-6.png)
+![](/assets/images/2026-02-21/code-6.png)
 
 
 
 And now your endpoint becomes beautifully simple:
 
 
-![](/assets/images/2026-02-22/code-7.png)
+![](/assets/images/2026-02-21/code-7.png)
 
 
 
