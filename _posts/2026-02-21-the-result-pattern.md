@@ -20,6 +20,7 @@ Let's start.
 
 
 
+
 ### **The Problem: Exceptions as Control Flow**
 Here's a pattern I see all the time. A service that throws exceptions for every business rule violation:
 
@@ -77,6 +78,7 @@ Every new business rule means another custom exception class and another `catch`
 
 
 
+
 ### **Why This Is a Problem**
 Three reasons:
 
@@ -85,6 +87,7 @@ Three reasons:
 2. **Intent:** When you see a `throw`, you expect something has gone seriously wrong. Using exceptions for "email already taken" dilutes their meaning. Is this a bug or a business rule? You can't tell at a glance.
 
 3. **Exceptions are for exceptional things:** A user entering an invalid email is not exceptional. It's Tuesday.
+
 
 
 
@@ -122,6 +125,7 @@ That's it. No NuGet packages. No frameworks. Just a class that makes success and
 
 
 
+
 ### **Defining Your Errors**
 Instead of scattering error messages across your code, define them in one place:
 
@@ -149,6 +153,7 @@ public static class UserErrors
 
 
 Now every error has a code, a description, and a type. Clean, discoverable, and testable.
+
 
 
 
@@ -182,6 +187,7 @@ public class UserService(AppDbContext db)
 
 
 Notice how the method signature now tells you everything. It returns a `Result<User>` - meaning it might fail, and you have to handle that. No surprises.
+
 
 
 
@@ -229,6 +235,7 @@ No try/catch. No exception handlers. Just two clean lines that read exactly like
 
 
 
+
 ### **What About Existing Libraries?**
 If you don't want to roll your own, there are solid options:
 
@@ -236,6 +243,7 @@ If you don't want to roll your own, there are solid options:
 - **[ErrorOr](https://github.com/amantinband/error-or){:target="_blank"}**  -  uses discriminated unions, plays nicely with minimal APIs
 
 Both are great. But I'd still recommend understanding the pattern from scratch first - like we did above - before reaching for a library. It's a simple pattern, and knowing how it works under the hood makes you a better consumer of any library.
+
 
 
 
