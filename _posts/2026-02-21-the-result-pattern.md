@@ -21,6 +21,9 @@ Let's start.
 
 
 
+
+<br/>
+
 ### **The Problem: Exceptions as Control Flow**
 Here's a pattern I see all the time. A service that throws exceptions for every business rule violation:
 
@@ -79,6 +82,9 @@ Every new business rule means another custom exception class and another `catch`
 
 
 
+
+<br/>
+
 ### **Why This Is a Problem**
 Three reasons:
 
@@ -90,6 +96,9 @@ Three reasons:
 
 
 
+
+
+<br/>
 
 ### **The Solution: A Simple Result Type**
 Instead of throwing, we return a `Result<T>` that explicitly says: "this either worked, or here's what went wrong."
@@ -126,6 +135,9 @@ That's it. No NuGet packages. No frameworks. Just a class that makes success and
 
 
 
+
+<br/>
+
 ### **Defining Your Errors**
 Instead of scattering error messages across your code, define them in one place:
 
@@ -156,6 +168,9 @@ Now every error has a code, a description, and a type. Clean, discoverable, and 
 
 
 
+
+
+<br/>
 
 ### **Refactoring the Service**
 Now our service returns a `Result<User>` instead of throwing:
@@ -190,6 +205,9 @@ Notice how the method signature now tells you everything. It returns a `Result<U
 
 
 
+
+
+<br/>
 
 ### **Mapping Results to HTTP Responses**
 The last piece is translating a `Result<T>` into the right HTTP status code. A small extension method does the trick:
@@ -236,6 +254,9 @@ No try/catch. No exception handlers. Just two clean lines that read exactly like
 
 
 
+
+<br/>
+
 ### **What About Existing Libraries?**
 If you don't want to roll your own, there are solid options:
 
@@ -246,6 +267,9 @@ Both are great. But I'd still recommend understanding the pattern from scratch f
 
 
 
+
+
+<br/>
 
 ### **The Takeaway**
 Exceptions should be for exceptional things - unexpected failures, infrastructure errors, things that shouldn't happen during normal operation.
