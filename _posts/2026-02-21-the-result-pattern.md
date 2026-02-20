@@ -94,7 +94,7 @@ Three reasons:
 
 2. **Intent:** When you see a `throw`, you expect something has gone seriously wrong. Using exceptions for "email already taken" dilutes their meaning. Is this a bug or a business rule? You can't tell at a glance.
 
-3. **Exceptions are for exceptional things:** A user entering an invalid email is not exceptional. It's Tuesday.
+3. **Exceptions are for exceptional things:** A user entering an invalid email is not exceptional. It happens all the time.
 
 
 
