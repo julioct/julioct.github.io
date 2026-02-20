@@ -12,7 +12,7 @@ Last week, I was reviewing a pull request from a developer on my team. The code 
 
 Invalid email? `throw new ValidationException()`. Username taken? `throw new ConflictException()`. User not found? `throw new NotFoundException()`.
 
-It's like pulling the fire alarm to tell someone dinner is ready. Sure, it gets the message across—but there's a better way.
+It works, but exceptions are meant for unexpected failures, not routine validation. There's a better way.
 
 Today, I'll show you how the **Result pattern** gives you cleaner, faster, and more intentional error handling in ASP.NET Core.
 
@@ -181,7 +181,7 @@ public class UserService(AppDbContext db)
 
 
 
-Notice how the method signature now tells you everything. It returns a `Result<User>`—meaning it might fail, and you have to handle that. No surprises.
+Notice how the method signature now tells you everything. It returns a `Result<User>` - meaning it might fail, and you have to handle that. No surprises.
 
 
 
@@ -232,17 +232,17 @@ No try/catch. No exception handlers. Just two clean lines that read exactly like
 ### **What About Existing Libraries?**
 If you don't want to roll your own, there are solid options:
 
-- **[FluentResults](https://github.com/altmann/FluentResults){:target="_blank"}** — lightweight, flexible, supports multiple errors and success messages
-- **[ErrorOr](https://github.com/amantinband/error-or){:target="_blank"}** — uses discriminated unions, plays nicely with minimal APIs
+- **[FluentResults](https://github.com/altmann/FluentResults){:target="_blank"}**  -  lightweight, flexible, supports multiple errors and success messages
+- **[ErrorOr](https://github.com/amantinband/error-or){:target="_blank"}**  -  uses discriminated unions, plays nicely with minimal APIs
 
-Both are great. But I'd still recommend understanding the pattern from scratch first—like we did above—before reaching for a library. It's a simple pattern, and knowing how it works under the hood makes you a better consumer of any library.
+Both are great. But I'd still recommend understanding the pattern from scratch first - like we did above - before reaching for a library. It's a simple pattern, and knowing how it works under the hood makes you a better consumer of any library.
 
 
 
 ### **The Takeaway**
-Exceptions should be for exceptional things—unexpected failures, infrastructure errors, things that shouldn't happen during normal operation.
+Exceptions should be for exceptional things - unexpected failures, infrastructure errors, things that shouldn't happen during normal operation.
 
-For everything else—validation, business rules, expected failures—the Result pattern gives you:
+For everything else - validation, business rules, expected failures - the Result pattern gives you:
 
 - **Faster code** (no stack unwinding)
 - **Clearer intent** (the return type tells you it can fail)
