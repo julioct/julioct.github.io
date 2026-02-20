@@ -50,6 +50,7 @@ public class UserService(AppDbContext db)
     }
 }
 ```
+<br/>
 
 
 
@@ -74,6 +75,7 @@ app.MapPost("/users", async (CreateUserRequest request, UserService service) =>
     }
 });
 ```
+<br/>
 
 
 
@@ -127,6 +129,7 @@ public class Result<T>
     public static Result<T> Failure(Error error) => new(error);
 }
 ```
+<br/>
 
 
 
@@ -161,6 +164,7 @@ public static class UserErrors
         ErrorType.Conflict);
 }
 ```
+<br/>
 
 
 
@@ -198,6 +202,7 @@ public class UserService(AppDbContext db)
     }
 }
 ```
+<br/>
 
 
 
@@ -233,6 +238,7 @@ public static class ResultExtensions
     }
 }
 ```
+<br/>
 
 
 
@@ -246,6 +252,7 @@ app.MapPost("/users", async (CreateUserRequest request, UserService service) =>
     return result.ToHttpResult(user => Results.Created($"/users/{user.Id}", user));
 });
 ```
+<br/>
 
 
 
