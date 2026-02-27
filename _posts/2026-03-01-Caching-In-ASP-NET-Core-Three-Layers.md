@@ -186,19 +186,7 @@ Output caching (introduced in ASP.NET Core 7) caches entire HTTP responses. It's
 Add output caching services and middleware:
 
 ```csharp
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddOutputCache(options =>
-{
-    options.AddBasePolicy(builder => 
-        builder.Expire(TimeSpan.FromMinutes(1)));
-        
-    options.AddPolicy("Products", builder =>
-        builder.Expire(TimeSpan.FromMinutes(5))
-               .SetVaryByQuery("category", "page"));
-});
-
-var app = builder.Build();
+builder.AddRedisOutputCache("cache");
 
 app.UseOutputCache();
 ```
@@ -219,19 +207,6 @@ app.MapGet("/products/{id}", async (int id, AppDbContext db) =>
 .CacheOutput(policy => policy
     .Expire(TimeSpan.FromMinutes(5))
     .SetVaryByQuery("id"));
-```
-
-**Using Redis for output cache storage:**
-
-By default, output caching stores responses in memory. For distributed scenarios, use Redis:
-
-```csharp
-builder.Services.AddStackExchangeRedisOutputCache(options =>
-{
-    options.Configuration = builder.Configuration
-        .GetConnectionString("cache");
-    options.InstanceName = "MyApp:OutputCache:";
-});
 ```
 
 **Cache invalidation with tags:**
@@ -314,31 +289,14 @@ builder.Build().Run();
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Redis connection
-builder.AddRedisClient("cache");
-
-// Add all three caching layers
+// Layer 1: In-Memory Caching
 builder.Services.AddMemoryCache();
 
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = builder.Configuration
-        .GetConnectionString("cache");
-    options.InstanceName = "CachingApi:Distributed:";
-});
+// Layer 2: Distributed Caching with Redis
+builder.AddRedisDistributedCache("cache");
 
-builder.Services.AddStackExchangeRedisOutputCache(options =>
-{
-    options.Configuration = builder.Configuration
-        .GetConnectionString("cache");
-    options.InstanceName = "CachingApi:Output:";
-});
-
-builder.Services.AddOutputCache(options =>
-{
-    options.AddBasePolicy(builder => 
-        builder.Expire(TimeSpan.FromMinutes(1)));
-});
+// Layer 3: Output Caching with Redis
+builder.AddRedisOutputCache("cache");
 
 var app = builder.Build();
 
