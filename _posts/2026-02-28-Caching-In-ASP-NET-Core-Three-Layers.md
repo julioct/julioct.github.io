@@ -267,7 +267,7 @@ And that's it for today.
 
 See you next Saturday.
 
-<br/>
+---
 
 **Whenever you're ready, there are 3 ways I can help you:**
 
