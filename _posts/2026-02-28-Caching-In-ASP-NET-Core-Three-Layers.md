@@ -289,8 +289,8 @@ See you next Saturday.
 
 **Whenever you're ready, there are 3 ways I can help you:**
 
-1. **[​Building Microservices With .NET](https://dotnetmicroservices.com)**:​ The only .NET backend development training program that you need to become a Senior C# Backend Developer.
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
 
-2. **[Subscribe to my YouTube channel](https://www.youtube.com/@julioc)**: ​Join 12,000+ developers to learn how to build scalable cloud applications with .NET and pass critical software engineering interviews.
+2. **[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
 
-3. **[Promote yourself to 16,000+ subscribers](https://sponsorpilot.com/newsletter/the-dotnet-academy-newsletter)**: ​By sponsoring this newsletter.
+3. **[Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
