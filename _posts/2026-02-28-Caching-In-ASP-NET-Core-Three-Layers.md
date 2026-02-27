@@ -1,6 +1,7 @@
 ---
 title: "Caching in ASP.NET Core: The Three Layers You Need to Know"
 date: 2026-02-27
+issue-number: 113
 layout: post
 featured-image: CachingThreeLayers.jpg
 featured-image-alt: Caching in ASP.NET Core - The Three Layers You Need to Know
