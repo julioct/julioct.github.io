@@ -363,7 +363,7 @@ Understanding the three layers of caching in ASP.NET Core gives you powerful too
 
 Redis provides excellent backing storage for both distributed and output caching, and Aspire makes it trivial to add to your development environment.
 
-The complete working source code with all three caching layers, Redis integration, and Aspire orchestration is available to [Patreon members](https://www.patreon.com/juliocasal). Grab it, run it locally, and experiment with different caching strategies to see the performance impact!
+Start with in-memory caching for quick wins, add Redis when you scale beyond a single instance, and layer on output caching for your most-hit endpoints. You will be surprised how much performance you can squeeze out with just a few lines of configuration.
 
 <br/>
 
