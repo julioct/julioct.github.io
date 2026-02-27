@@ -8,8 +8,6 @@ featured-image-alt: Caching in ASP.NET Core - The Three Layers You Need to Know
 image: /assets/images/CachingThreeLayers.jpg
 ---
 
-<br/>
-
 *Read time: 8 minutes*
 
 Caching is one of the most effective ways to improve your ASP.NET Core application's performance. But with three different caching strategies available (in-memory, distributed, and output caching), knowing which one to use and when can be confusing.
