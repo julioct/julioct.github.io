@@ -251,51 +251,6 @@ You can use all three together! For example:
 
 <br/>
 
-## Complete Aspire Example
-
-Here's a complete setup with all three layers using Aspire:
-
-**AppHost Program.cs:**
-
-```csharp
-var builder = DistributedApplication.CreateBuilder(args);
-
-var redis = builder.AddRedis("cache");
-
-builder.AddProject<Projects.CachingApi>("api")
-    .WithReference(redis)
-    .WaitFor(redis);
-
-builder.Build().Run();
-```
-
-**API Program.cs:**
-
-```csharp
-var builder = WebApplication.CreateBuilder(args);
-
-builder.AddServiceDefaults();
-
-// Layer 1: In-Memory Caching
-builder.Services.AddMemoryCache();
-
-// Layer 2: Distributed Caching with Redis
-builder.AddRedisDistributedCache("cache");
-
-// Layer 3: Output Caching
-builder.Services.AddOutputCache();
-
-var app = builder.Build();
-
-app.MapDefaultEndpoints();
-
-app.UseOutputCache();
-
-app.Run();
-```
-
-<br/>
-
 ## Wrapping Up
 
 Understanding the three layers of caching in ASP.NET Core gives you powerful tools to optimize your applications:
