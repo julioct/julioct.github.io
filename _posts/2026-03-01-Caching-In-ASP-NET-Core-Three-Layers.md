@@ -194,26 +194,19 @@ app.UseOutputCache();
 **Apply to endpoints:**
 
 ```csharp
-app.MapGet("/api/products", async (AppDbContext db) =>
+app.MapGet("/products", async (AppDbContext db) =>
 {
     return await db.Products.ToListAsync();
 })
-.CacheOutput();
+.CacheOutput(policy => policy.Expire(TimeSpan.FromMinutes(5)));
 
-app.MapGet("/api/products/search", 
-    async (string? category, int page, AppDbContext db) =>
+app.MapGet("/products/{id}", async (int id, AppDbContext db) =>
 {
-    var query = db.Products.AsQueryable();
-    
-    if (!string.IsNullOrEmpty(category))
-        query = query.Where(p => p.Category == category);
-        
-    return await query
-        .Skip((page - 1) * 20)
-        .Take(20)
-        .ToListAsync();
+    return await db.Products.FindAsync(id);
 })
-.CacheOutput("Products");
+.CacheOutput(policy => policy
+    .Expire(TimeSpan.FromMinutes(5))
+    .SetVaryByQuery("id"));
 ```
 
 **Using Redis for output cache storage:**
@@ -232,30 +225,21 @@ builder.Services.AddStackExchangeRedisOutputCache(options =>
 **Cache invalidation with tags:**
 
 ```csharp
-builder.Services.AddOutputCache(options =>
-{
-    options.AddPolicy("Products", builder =>
-        builder.Tag("products"));
-});
-
-// Endpoint to cache
-app.MapGet("/api/products", async (AppDbContext db) =>
+app.MapGet("/products", async (AppDbContext db) =>
 {
     return await db.Products.ToListAsync();
 })
-.CacheOutput("Products");
+.CacheOutput(policy => policy.Tag("products"));
 
-// Endpoint to invalidate cache
-app.MapPost("/api/products", 
-    async (Product product, AppDbContext db, IOutputCacheStore cache) =>
+app.MapPost("/products", async (Product product,
+    AppDbContext db, IOutputCacheStore cache) =>
 {
     db.Products.Add(product);
     await db.SaveChangesAsync();
-    
-    // Invalidate all cached product responses
+
     await cache.EvictByTagAsync("products", default);
-    
-    return Results.Created($"/api/products/{product.Id}", product);
+
+    return Results.Created($"/products/{product.Id}", product);
 });
 ```
 
