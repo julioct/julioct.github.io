@@ -1,11 +1,13 @@
 ---
 title: "Caching in ASP.NET Core: The Three Layers You Need to Know"
-date: 2026-02-28
+date: 2026-02-27
 layout: post
 featured-image: CachingThreeLayers.jpg
 featured-image-alt: Caching in ASP.NET Core - The Three Layers You Need to Know
 image: /assets/images/CachingThreeLayers.jpg
 ---
+
+<br/>
 
 *Read time: 8 minutes*
 
@@ -268,6 +270,8 @@ And that's it for today.
 See you next Saturday.
 
 ---
+
+<br/>
 
 **Whenever you're ready, there are 3 ways I can help you:**
 
