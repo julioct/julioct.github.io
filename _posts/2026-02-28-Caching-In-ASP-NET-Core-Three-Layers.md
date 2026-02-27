@@ -1,0 +1,295 @@
+---
+title: "Caching in ASP.NET Core: The Three Layers You Need to Know"
+date: 2026-02-28
+issue-number: 113
+layout: post
+featured-image: CachingThreeLayers.jpg
+featured-image-alt: Caching in ASP.NET Core - The Three Layers You Need to Know
+image: /assets/images/CachingThreeLayers.jpg
+---
+
+*Read time: 8 minutes*
+
+Caching is one of the most effective ways to improve your ASP.NET Core application's performance. But with three different caching strategies available (in-memory, distributed, and output caching), knowing which one to use and when can be confusing.
+
+In this tutorial, I'll show you how to implement all three layers of caching in ASP.NET Core. You'll learn when to use each approach and see practical examples of how to add Redis for distributed caching and integrate it with Aspire.
+
+<br/>
+
+## Layer 1: In-Memory Caching
+
+In-memory caching stores data in the web server's memory using `IMemoryCache`. It's the simplest and fastest caching option.
+
+**When to use it:**
+
+* Single-server deployments
+* Data that's expensive to compute but cheap to regenerate
+* Session-like data that doesn't need to survive restarts
+
+Implementation:
+
+First, register the memory cache service in `Program.cs`:
+
+```csharp
+builder.Services.AddMemoryCache();
+```
+
+<br/>
+
+Then create a service that uses `IMemoryCache` to cache products with both sliding and absolute expiration:
+
+```csharp
+public class ProductService(IMemoryCache cache, AppDbContext context)
+{
+    public async Task<Product?> GetProductAsync(int id)
+    {
+        var cacheKey = $"product-{id}";
+
+        if (!cache.TryGetValue(cacheKey, out Product? product))
+        {
+            product = await context.Products
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product is not null)
+            {
+                var options = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(5))
+                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
+
+                cache.Set(cacheKey, product, options);
+            }
+        }
+
+        return product;
+    }
+}
+```
+
+<br/>
+
+**Key concepts:**
+
+* **Sliding expiration**: Resets the timer each time the item is accessed
+* **Absolute expiration**: Hard limit on how long the item stays cached
+* **Combine both**: Ensures items expire even if frequently accessed
+
+**Limitations:**
+
+* Data is lost on application restart
+* Not shared across multiple servers
+* Uses server memory (can cause issues under memory pressure)
+
+<br/>
+
+## Layer 2: Distributed Caching with Redis
+
+Distributed caching uses an external cache store (like Redis) that multiple application instances can share. This solves the limitations of in-memory caching.
+
+**When to use it:**
+
+* Multi-server deployments (web farms, load balancers)
+* Data that must survive application restarts
+* Session state in distributed applications
+* Cache that needs to be shared across services
+
+Setting up Redis with Aspire:
+
+For local development with Aspire, add Redis to your AppHost:
+
+```csharp
+// AppHost Program.cs
+var builder = DistributedApplication.CreateBuilder(args);
+
+var redis = builder.AddRedis("cache");
+
+builder.AddProject<Projects.CachingApi>("api")
+    .WithReference(redis)
+    .WaitFor(redis);
+
+builder.Build().Run();
+```
+
+<br/>
+
+Then register the Redis distributed cache in your API's `Program.cs`:
+
+```csharp
+builder.AddRedisDistributedCache("cache");
+```
+
+<br/>
+
+Using IDistributedCache:
+
+```csharp
+public class ProductService(IDistributedCache cache, AppDbContext context)
+{
+    public async Task<Product?> GetProductAsync(int id)
+    {
+        var cacheKey = $"product-{id}";
+        var cachedBytes = await cache.GetAsync(cacheKey);
+
+        if (cachedBytes is not null)
+        {
+            var json = Encoding.UTF8.GetString(cachedBytes);
+            return JsonSerializer.Deserialize<Product>(json);
+        }
+
+        var product = await context.Products
+            .FirstOrDefaultAsync(p => p.Id == id);
+
+        if (product is not null)
+        {
+            var json = JsonSerializer.Serialize(product);
+            var bytes = Encoding.UTF8.GetBytes(json);
+
+            var cacheOptions = new DistributedCacheEntryOptions()
+                .SetSlidingExpiration(TimeSpan.FromMinutes(5))
+                .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
+
+            await cache.SetAsync(cacheKey, bytes, cacheOptions);
+        }
+
+        return product;
+    }
+}
+```
+
+<br/>
+
+**Key differences from IMemoryCache:**
+
+* Works with `byte[]` instead of objects
+* All methods have async versions
+* Shared across all application instances
+* Survives application restarts
+
+<br/>
+
+## Layer 3: Output Caching
+
+Output caching (introduced in ASP.NET Core 7) caches entire HTTP responses. It's the most efficient form of caching because it bypasses most of your application pipeline.
+
+**When to use it:**
+
+* API endpoints that return the same response for many users
+* Pages that don't require authentication
+* Responses that change infrequently
+
+Setup:
+
+Add output caching services and middleware:
+
+```csharp
+builder.Services.AddOutputCache();
+
+app.UseOutputCache();
+```
+
+<br/>
+
+Apply to endpoints:
+
+```csharp
+app.MapGet("/products", async (AppDbContext db) =>
+{
+    return await db.Products.ToListAsync();
+})
+.CacheOutput(policy => policy.Expire(TimeSpan.FromMinutes(5)));
+
+app.MapGet("/products/{id}", async (int id, AppDbContext db) =>
+{
+    return await db.Products.FindAsync(id);
+})
+.CacheOutput(policy => policy
+    .Expire(TimeSpan.FromMinutes(5))
+    .SetVaryByQuery("id"));
+```
+
+<br/>
+
+Cache invalidation with tags:
+
+```csharp
+app.MapGet("/products", async (AppDbContext db) =>
+{
+    return await db.Products.ToListAsync();
+})
+.CacheOutput(policy => policy.Tag("products"));
+
+app.MapPost("/products", async (Product product,
+    AppDbContext db, IOutputCacheStore cache) =>
+{
+    db.Products.Add(product);
+    await db.SaveChangesAsync();
+
+    await cache.EvictByTagAsync("products", default);
+
+    return Results.Created($"/products/{product.Id}", product);
+});
+```
+
+<br/>
+
+## Choosing the Right Caching Layer
+
+Here's a decision tree to help you choose:
+
+**Use in-memory caching when:**
+
+* Running on a single server
+* Cache size is small (under 100MB)
+* Losing cache on restart is acceptable
+* You need to cache complex objects
+
+**Use distributed caching when:**
+
+* Running on multiple servers
+* Cache must survive restarts
+* Sharing cache across services
+* Cache size could grow large
+
+**Use output caching when:**
+
+* Caching entire HTTP responses
+* Same response for many users
+* Can vary by query strings or headers
+* Need maximum performance gains
+
+**Combine multiple layers:**
+
+You can use all three together! For example:
+
+* Output caching for public product listings
+* Distributed caching for user shopping carts
+* In-memory caching for configuration data
+
+<br/>
+
+## Wrapping Up
+
+Understanding the three layers of caching in ASP.NET Core gives you powerful tools to optimize your applications:
+
+* **In-memory caching** for simple, single-server scenarios
+* **Distributed caching** for shared cache across multiple servers
+* **Output caching** for maximum performance on entire HTTP responses
+
+Redis provides excellent backing storage for both distributed and output caching, and Aspire makes it trivial to add to your development environment.
+
+Start with in-memory caching for quick wins, add Redis when you scale beyond a single instance, and layer on output caching for your most-hit endpoints. You will be surprised how much performance you can squeeze out with just a few lines of configuration.
+
+And that's it for today.
+
+See you next Saturday.
+
+---
+
+<br/>
+
+**Whenever you're ready, there are 3 ways I can help you:**
+
+1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
+
+2. **[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
+
+3. **[Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
