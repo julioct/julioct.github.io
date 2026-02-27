@@ -278,8 +278,9 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var redis = builder.AddRedis("cache");
 
-var api = builder.AddProject<Projects.CachingApi>("api")
-    .WithReference(redis);
+builder.AddProject<Projects.CachingApi>("api")
+    .WithReference(redis)
+    .WaitFor(redis);
 
 builder.Build().Run();
 ```
