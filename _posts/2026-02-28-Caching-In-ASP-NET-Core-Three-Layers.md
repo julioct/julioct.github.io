@@ -1,6 +1,6 @@
 ---
 title: "Caching in ASP.NET Core: The Three Layers You Need to Know"
-date: 2026-03-01
+date: 2026-02-28
 layout: post
 featured-image: CachingThreeLayers.jpg
 featured-image-alt: Caching in ASP.NET Core - The Three Layers You Need to Know
@@ -89,12 +89,6 @@ Distributed caching uses an external cache store (like Redis) that multiple appl
 
 **Setting up Redis with Aspire:**
 
-Add the Redis package:
-
-```bash
-dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis
-```
-
 For local development with Aspire, add Redis to your AppHost:
 
 ```csharp
@@ -103,24 +97,14 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var redis = builder.AddRedis("cache");
 
-var api = builder.AddProject<Projects.MyApi>("api")
-    .WithReference(redis);
+builder.AddProject<Projects.CachingApi>("api")
+    .WithReference(redis)
+    .WaitFor(redis);
+
+builder.Build().Run();
 ```
 
-In your API's `Program.cs`:
-
-```csharp
-builder.AddRedisClient("cache");
-
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = builder.Configuration
-        .GetConnectionString("cache");
-    options.InstanceName = "MyApp:";
-});
-```
-
-Register the Redis distributed cache in `Program.cs`:
+Then register the Redis distributed cache in your API's `Program.cs`:
 
 ```csharp
 builder.AddRedisDistributedCache("cache");
@@ -290,16 +274,20 @@ builder.Build().Run();
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 // Layer 1: In-Memory Caching
 builder.Services.AddMemoryCache();
 
 // Layer 2: Distributed Caching with Redis
 builder.AddRedisDistributedCache("cache");
 
-// Layer 3: Output Caching with Redis
+// Layer 3: Output Caching
 builder.Services.AddOutputCache();
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 app.UseOutputCache();
 
