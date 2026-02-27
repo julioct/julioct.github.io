@@ -30,33 +30,24 @@ In-memory caching stores data in the web server's memory using `IMemoryCache`. I
 First, inject `IMemoryCache` into your service:
 
 ```csharp
-public class ProductService
+public class ProductService(IMemoryCache cache, AppDbContext context)
 {
-    private readonly IMemoryCache _cache;
-    private readonly AppDbContext _context;
-
-    public ProductService(IMemoryCache cache, AppDbContext context)
-    {
-        _cache = cache;
-        _context = context;
-    }
-
     public async Task<Product?> GetProductAsync(int id)
     {
         var cacheKey = $"product-{id}";
         
-        if (!_cache.TryGetValue(cacheKey, out Product? product))
+        if (!cache.TryGetValue(cacheKey, out Product? product))
         {
-            product = await _context.Products
+            product = await context.Products
                 .FirstOrDefaultAsync(p => p.Id == id);
                 
             if (product is not null)
             {
-                var cacheOptions = new MemoryCacheEntryOptions()
+                var options = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(5))
                     .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
                     
-                _cache.Set(cacheKey, product, cacheOptions);
+                cache.Set(cacheKey, product, options);
             }
         }
         
@@ -126,21 +117,12 @@ builder.Services.AddStackExchangeRedisCache(options =>
 **Using IDistributedCache:**
 
 ```csharp
-public class ProductService
+public class ProductService(IDistributedCache cache, AppDbContext context)
 {
-    private readonly IDistributedCache _cache;
-    private readonly AppDbContext _context;
-
-    public ProductService(IDistributedCache cache, AppDbContext context)
-    {
-        _cache = cache;
-        _context = context;
-    }
-
     public async Task<Product?> GetProductAsync(int id)
     {
         var cacheKey = $"product-{id}";
-        var cachedBytes = await _cache.GetAsync(cacheKey);
+        var cachedBytes = await cache.GetAsync(cacheKey);
         
         if (cachedBytes is not null)
         {
@@ -148,7 +130,7 @@ public class ProductService
             return JsonSerializer.Deserialize<Product>(json);
         }
         
-        var product = await _context.Products
+        var product = await context.Products
             .FirstOrDefaultAsync(p => p.Id == id);
             
         if (product is not null)
@@ -160,7 +142,7 @@ public class ProductService
                 .SetSlidingExpiration(TimeSpan.FromMinutes(5))
                 .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
                 
-            await _cache.SetAsync(cacheKey, bytes, cacheOptions);
+            await cache.SetAsync(cacheKey, bytes, cacheOptions);
         }
         
         return product;
