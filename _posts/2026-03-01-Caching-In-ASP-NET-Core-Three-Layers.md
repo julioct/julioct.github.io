@@ -186,7 +186,7 @@ Output caching (introduced in ASP.NET Core 7) caches entire HTTP responses. It's
 Add output caching services and middleware:
 
 ```csharp
-builder.AddRedisOutputCache("cache");
+builder.Services.AddOutputCache();
 
 app.UseOutputCache();
 ```
@@ -297,7 +297,7 @@ builder.Services.AddMemoryCache();
 builder.AddRedisDistributedCache("cache");
 
 // Layer 3: Output Caching with Redis
-builder.AddRedisOutputCache("cache");
+builder.Services.AddOutputCache();
 
 var app = builder.Build();
 
