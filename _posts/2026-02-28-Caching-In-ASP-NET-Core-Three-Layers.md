@@ -1,6 +1,6 @@
 ---
 title: "Caching in ASP.NET Core: The Three Layers You Need to Know"
-date: 2026-02-27
+date: 2026-02-28
 issue-number: 113
 layout: post
 featured-image: CachingThreeLayers.jpg
@@ -44,22 +44,22 @@ public class ProductService(IMemoryCache cache, AppDbContext context)
     public async Task<Product?> GetProductAsync(int id)
     {
         var cacheKey = $"product-{id}";
-        
+
         if (!cache.TryGetValue(cacheKey, out Product? product))
         {
             product = await context.Products
                 .FirstOrDefaultAsync(p => p.Id == id);
-                
+
             if (product is not null)
             {
                 var options = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(5))
                     .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
-                    
+
                 cache.Set(cacheKey, product, options);
             }
         }
-        
+
         return product;
     }
 }
@@ -128,28 +128,28 @@ public class ProductService(IDistributedCache cache, AppDbContext context)
     {
         var cacheKey = $"product-{id}";
         var cachedBytes = await cache.GetAsync(cacheKey);
-        
+
         if (cachedBytes is not null)
         {
             var json = Encoding.UTF8.GetString(cachedBytes);
             return JsonSerializer.Deserialize<Product>(json);
         }
-        
+
         var product = await context.Products
             .FirstOrDefaultAsync(p => p.Id == id);
-            
+
         if (product is not null)
         {
             var json = JsonSerializer.Serialize(product);
             var bytes = Encoding.UTF8.GetBytes(json);
-            
+
             var cacheOptions = new DistributedCacheEntryOptions()
                 .SetSlidingExpiration(TimeSpan.FromMinutes(5))
                 .SetAbsoluteExpiration(TimeSpan.FromMinutes(30));
-                
+
             await cache.SetAsync(cacheKey, bytes, cacheOptions);
         }
-        
+
         return product;
     }
 }
