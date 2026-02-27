@@ -120,6 +120,12 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 ```
 
+Register the Redis distributed cache in `Program.cs`:
+
+```csharp
+builder.AddRedisDistributedCache("cache");
+```
+
 **Using IDistributedCache:**
 
 ```csharp
