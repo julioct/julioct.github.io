@@ -365,7 +365,7 @@ Redis provides excellent backing storage for both distributed and output caching
 
 Start with in-memory caching for quick wins, add Redis when you scale beyond a single instance, and layer on output caching for your most-hit endpoints. You will be surprised how much performance you can squeeze out with just a few lines of configuration.
 
-If you found this useful, share it with a fellow .NET developer who could use a caching refresher.
+And that's it for today.
 
 <br/>
 
