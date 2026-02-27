@@ -27,7 +27,7 @@ In-memory caching stores data in the web server's memory using `IMemoryCache`. I
 
 **Implementation:**
 
-First, inject `IMemoryCache` into your service:
+Here's a service that uses `IMemoryCache` to cache products with both sliding and absolute expiration:
 
 ```csharp
 public class ProductService(IMemoryCache cache, AppDbContext context)
