@@ -27,13 +27,15 @@ In-memory caching stores data in the web server's memory using `IMemoryCache`. I
 * Data that's expensive to compute but cheap to regenerate
 * Session-like data that doesn't need to survive restarts
 
-**Implementation:**
+Implementation:
 
 First, register the memory cache service in `Program.cs`:
 
 ```csharp
 builder.Services.AddMemoryCache();
 ```
+
+<br/>
 
 Then create a service that uses `IMemoryCache` to cache products with both sliding and absolute expiration:
 
@@ -64,6 +66,8 @@ public class ProductService(IMemoryCache cache, AppDbContext context)
 }
 ```
 
+<br/>
+
 **Key concepts:**
 
 * **Sliding expiration**: Resets the timer each time the item is accessed
@@ -89,7 +93,7 @@ Distributed caching uses an external cache store (like Redis) that multiple appl
 * Session state in distributed applications
 * Cache that needs to be shared across services
 
-**Setting up Redis with Aspire:**
+Setting up Redis with Aspire:
 
 For local development with Aspire, add Redis to your AppHost:
 
@@ -106,13 +110,17 @@ builder.AddProject<Projects.CachingApi>("api")
 builder.Build().Run();
 ```
 
+<br/>
+
 Then register the Redis distributed cache in your API's `Program.cs`:
 
 ```csharp
 builder.AddRedisDistributedCache("cache");
 ```
 
-**Using IDistributedCache:**
+<br/>
+
+Using IDistributedCache:
 
 ```csharp
 public class ProductService(IDistributedCache cache, AppDbContext context)
@@ -148,6 +156,8 @@ public class ProductService(IDistributedCache cache, AppDbContext context)
 }
 ```
 
+<br/>
+
 **Key differences from IMemoryCache:**
 
 * Works with `byte[]` instead of objects
@@ -167,7 +177,7 @@ Output caching (introduced in ASP.NET Core 7) caches entire HTTP responses. It's
 * Pages that don't require authentication
 * Responses that change infrequently
 
-**Setup:**
+Setup:
 
 Add output caching services and middleware:
 
@@ -177,7 +187,9 @@ builder.Services.AddOutputCache();
 app.UseOutputCache();
 ```
 
-**Apply to endpoints:**
+<br/>
+
+Apply to endpoints:
 
 ```csharp
 app.MapGet("/products", async (AppDbContext db) =>
@@ -195,7 +207,9 @@ app.MapGet("/products/{id}", async (int id, AppDbContext db) =>
     .SetVaryByQuery("id"));
 ```
 
-**Cache invalidation with tags:**
+<br/>
+
+Cache invalidation with tags:
 
 ```csharp
 app.MapGet("/products", async (AppDbContext db) =>
