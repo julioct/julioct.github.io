@@ -294,18 +294,19 @@
             line-height: 1.55;
         }
 
-        /* Bootcamp badge — now below the title so no inline wrapping issues */
+        /* Bootcamp badge — absolute bottom-right corner */
         .bootcamp-tag {
-            display: inline-block;
+            position: absolute;
+            bottom: 0.75rem;
+            right: 0.85rem;
             background: linear-gradient(45deg, #f5a623 0%, #f0860a 100%);
             color: white;
             font-size: 0.62rem;
             font-weight: 700;
             letter-spacing: 0.07em;
             text-transform: uppercase;
-            padding: 0.15rem 0.6rem;
+            padding: 0.2rem 0.65rem;
             border-radius: 8px;
-            margin-bottom: 0.4rem;
         }
 
         /* ── Section heading ──────────────────────────────── */
@@ -721,10 +722,10 @@
                 <!-- App Service — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fab fa-microsoft" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Deploy Without the Server Headaches</h5>
                                 <p>Ship to Azure App Service in minutes with slots, auto-scale rules, custom domains, and TLS — no VM management required.</p>
                             </div>
@@ -735,10 +736,10 @@
                 <!-- Entra ID — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-users-cog" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Production Identity Management with Entra ID</h5>
                                 <p>Replace your local IdP with Microsoft Entra ID — enterprise SSO, conditional access, and managed tokens in production.</p>
                             </div>
@@ -749,10 +750,10 @@
                 <!-- Azure Storage — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-cloud-upload-alt" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Azure Storage: File Storage Without Limits</h5>
                                 <p>Store user uploads in Blob Storage with SAS tokens, lifecycle policies, and private/public access configurations.</p>
                             </div>
@@ -763,10 +764,10 @@
                 <!-- Azure Front Door — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-globe" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Global File Delivery with Azure Front Door</h5>
                                 <p>Put a CDN in front of your storage and APIs for millisecond response times worldwide, with WAF protection included.</p>
                             </div>
@@ -777,10 +778,10 @@
                 <!-- Managed Identities — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-fingerprint" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Passwordless Azure Authentication</h5>
                                 <p>Connect your app to Azure services without secrets or passwords using Managed Identities — the way production systems should work.</p>
                             </div>
@@ -791,10 +792,10 @@
                 <!-- PostgreSQL — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-server" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Production-Grade PostgreSQL Database</h5>
                                 <p>Provision Azure Database for PostgreSQL, connect EF Core, run migrations in CI/CD, and configure connection pooling for scale.</p>
                             </div>
@@ -805,10 +806,10 @@
                 <!-- Key Vault — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-vault" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Secure Secret Management with Key Vault</h5>
                                 <p>Move connection strings and API keys out of appsettings.json and into Azure Key Vault — no more secrets in source control.</p>
                             </div>
@@ -819,10 +820,10 @@
                 <!-- Container Fundamentals — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-box" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Transform .NET Apps Into Bulletproof Containers</h5>
                                 <p>Multi-stage builds, non-root users, image size optimization — production Docker patterns that actually matter.</p>
                             </div>
@@ -833,10 +834,10 @@
                 <!-- Azure Container Apps — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-cloud" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Production Containers with Azure Container Apps</h5>
                                 <p>Deploy containers to Azure without managing Kubernetes — built-in KEDA scaling, Dapr support, and per-revision traffic splitting.</p>
                             </div>
@@ -847,10 +848,10 @@
                 <!-- Health Checks — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-heartbeat" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Build Self-Healing APIs</h5>
                                 <p>Add liveness and readiness health checks so containers self-heal, load balancers reroute, and on-call pages stay quiet.</p>
                             </div>
@@ -861,10 +862,10 @@
                 <!-- Aspire Tracing — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-chart-line" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Debug Performance Issues with Aspire Tracing</h5>
                                 <p>Visualize distributed traces across services, spot N+1 queries, and find latency bottlenecks before they hit production.</p>
                             </div>
@@ -875,10 +876,10 @@
                 <!-- Infrastructure as Code — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-code-branch" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Define Your Entire System in C#</h5>
                                 <p>Use .NET Aspire to declare your full cloud architecture in C# — from databases to message buses — and deploy it reproducibly.</p>
                             </div>
@@ -889,10 +890,10 @@
                 <!-- Aspire Orchestration — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-project-diagram" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Map Your Architecture Visually with .NET Aspire</h5>
                                 <p>Orchestrate microservices, see dependencies in a dashboard, and run the entire system locally with one command.</p>
                             </div>
@@ -903,10 +904,10 @@
                 <!-- Bicep — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-tools" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Advanced Infrastructure-as-Code with Bicep</h5>
                                 <p>Write repeatable Azure infrastructure in Bicep, parameterize environments, and deploy everything through a single pipeline.</p>
                             </div>
@@ -917,10 +918,10 @@
                 <!-- Stripe Payments — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-credit-card" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Accept Secure Payments with Stripe</h5>
                                 <p>Integrate Stripe Checkout, handle webhooks for fulfillment, manage subscriptions, and pass PCI compliance without reinventing the wheel.</p>
                             </div>
@@ -931,10 +932,10 @@
                 <!-- Webhooks — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-broadcast-tower" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Instant Notifications with Webhooks</h5>
                                 <p>Build and consume webhooks reliably — signature validation, retry logic, idempotency, and processing events from external systems.</p>
                             </div>
@@ -945,10 +946,10 @@
                 <!-- Transactions — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-sync-alt" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Ensure Data Consistency with Transactions</h5>
                                 <p>Implement database transactions, the outbox pattern, and saga coordination so partial failures never leave data in a broken state.</p>
                             </div>
@@ -959,10 +960,10 @@
                 <!-- Queues & Workers — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-cogs" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Scale Safely with Queues and Workers</h5>
                                 <p>Offload slow work to background queues, build resilient worker services, and handle dead-letter messages without data loss.</p>
                             </div>
@@ -973,10 +974,10 @@
                 <!-- Integration Testing — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-vial" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Integration Tests That Actually Work</h5>
                                 <p>Spin up real databases with Testcontainers, test the full HTTP stack, and write tests that catch production bugs before deployment.</p>
                             </div>
@@ -987,10 +988,10 @@
                 <!-- Azure DevOps CI/CD — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-rocket" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Azure DevOps CI/CD for .NET Developers</h5>
                                 <p>Build full Azure Pipelines with build, test, Docker publish, and multi-environment Azure deployment — enterprise-grade from day one.</p>
                             </div>
@@ -1001,10 +1002,10 @@
                 <!-- Troubleshooting — bootcamp -->
                 <div class="col-lg-6">
                     <div class="benefit-card bootcamp-only">
+                        <span class="bootcamp-tag">Bootcamp Only</span>
                         <div class="media">
                             <i class="fas fa-bug" style="font-size:1.2rem;margin-right:1rem;margin-top:0.15rem;flex-shrink:0;color:#f5a623;"></i>
                             <div class="media-body">
-                                <div><span class="bootcamp-tag">Bootcamp Only</span></div>
                                 <h5 class="font-weight-bold">Troubleshoot .NET Apps in Azure</h5>
                                 <p>Diagnose crashes, memory leaks, and slow APIs in production using Azure Monitor, Log Analytics, Application Insights, and remote debugging.</p>
                             </div>
