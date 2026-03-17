@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="LWAWGOWE" defer></script>
+    <!-- / Fathom -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GKWPQFHL1Y');
+    </script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "mzlifzd36i");
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your .NET Interview Prep Guide is on its way. Upgrade your .NET skills with the full training package.">
+    <meta name="author" content="Julio Casal">
+    <meta name="robots" content="noindex">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Julio Casal" />
+    <meta property="og:site" content="https://juliocasal.com" />
+    <meta property="og:title" content="Interview Guide Sent! | Julio Casal" />
+    <meta property="og:description" content="Your .NET Interview Prep Guide is on its way. Upgrade your skills now." />
+    <meta property="og:image" content="https://juliocasal.com/images/interview-guide.png" />
+    <meta property="og:url" content="https://juliocasal.com/interview-guide-sent" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://juliocasal.com/images/interview-guide.png">
+
+    <!-- Webpage Title -->
+    <title>Interview Guide Sent!</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon">
+
+    <style>
+        body {
+            background: #1a1a2e !important;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #1a1a2e !important;
+        }
+
+        .copyright {
+            background-color: #1a1a2e !important;
+        }
+
+        /* ── Pricing Cards ──────────────────────────────────── */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.18) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(103, 126, 234, 0.25);
+        }
+
+        .pricing-card.best-deal {
+            border-color: rgba(240, 147, 251, 0.55);
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.14) 0%, rgba(245, 87, 108, 0.14) 100%);
+            position: relative;
+        }
+
+        .best-deal-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 1.1rem;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .pricing-card .bundle-name {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .pricing-card .price-row {
+            margin-bottom: 1.25rem;
+        }
+
+        .pricing-card .price-original {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+
+        .pricing-card .price-oto {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .pricing-card .price-oto sup {
+            font-size: 1.1rem;
+            vertical-align: super;
+        }
+
+        .pricing-card .price-note {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.55);
+            margin-top: 0.2rem;
+        }
+
+        .pricing-card .bundle-image {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+        }
+
+        .pricing-card .cta-btn {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .pricing-card.best-deal .cta-btn {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .pricing-card .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(103, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .pricing-card.best-deal .cta-btn:hover {
+            box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        /* ── Include list ───────────────────────────────────── */
+        .include-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .include-list li {
+            color: rgba(255,255,255,0.88);
+            font-size: 0.9rem;
+            padding: 0.35rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .include-list li .li-icon {
+            flex-shrink: 0;
+            width: 1.1rem;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        /* ── No Thanks ──────────────────────────────────────── */
+        .no-thanks-wrap {
+            text-align: center;
+            padding: 1.5rem 0 2rem;
+        }
+
+        .btn-outline-lg-oto {
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.6);
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline-lg-oto:hover {
+            border-color: rgba(255,255,255,0.6);
+            color: white;
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.08);
+        }
+
+        /* ── Feature cards ──────────────────────────────────── */
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(240,147,251,0.1) 0%, rgba(245,87,108,0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .benefit-card:hover::before { opacity: 1; }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(240, 147, 251, 0.4);
+            box-shadow: 0 10px 30px rgba(103, 126, 234, 0.2);
+        }
+
+        /* Bootcamp-only cards get a subtle pink glow */
+        .benefit-card.bootcamp-only {
+            border-color: rgba(245, 87, 108, 0.28);
+        }
+
+        .benefit-card .media {
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-card h5 {
+            color: white;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: rgba(255,255,255,0.88);
+            font-size: 0.88rem;
+            margin-bottom: 0;
+        }
+
+        /* Tiny badge shown on bootcamp-only cards */
+        .bootcamp-tag {
+            display: inline-block;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.55rem;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+
+        /* ── Section headings ───────────────────────────────── */
+        .section-label {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+
+        .legend-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.75);
+            font-size: 0.85rem;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.both { background: rgba(103,126,234,0.8); border: 1px solid rgba(103,126,234,0.9); }
+        .legend-dot.bootcamp { background: linear-gradient(45deg,#f093fb,#f5576c); }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Header / Hero -->
+    <header id="header" class="header" style="padding: 2.5rem 0 1rem;">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h1 class="text-white mb-3" style="font-size: 2.5rem; font-weight: 700;">
+                        Your Interview Prep Guide Is On Its Way! 🚀
+                    </h1>
+                    <h2 class="text-white" style="font-size: 1.65rem; font-weight: 400; opacity: 0.9;">
+                        Now, get the complete training package...
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-10">
+                    <div class="pricing-grid">
+
+                        <!-- ── Card 1: 3-Course Bundle ── -->
+                        <div class="pricing-card">
+                            <div class="bundle-name">ASP.NET Core Bundle</div>
+                            <div class="price-row">
+                                <span class="price-original">$321</span>
+                                <span class="price-oto"><sup>$</sup>197</span>
+                                <div class="price-note">One-time offer — not available anywhere else</div>
+                            </div>
+                            <img src="images/aspnet-bundle-boxes.png" alt="ASP.NET Core 3-Course Bundle" class="bundle-image">
+                            <a href="https://learn.dotnetacademy.io/bundles/aspnetcore-bundle?coupon=INTERVIEW197"
+                               class="cta-btn">
+                                Yes! I Want the 3-Course Bundle for $197
+                            </a>
+                            <ul class="include-list">
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Essentials</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Advanced</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Security</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-code"></i></span> Full source code</li>
+                                <li><span class="li-icon" style="color:#60a5fa;"><i class="fas fa-closed-captioning"></i></span> Full English captions</li>
+                                <li><span class="li-icon" style="color:#facc15;"><i class="fas fa-book-open"></i></span> Beautifully illustrated handouts</li>
+                                <li><span class="li-icon" style="color:#a78bfa;"><i class="fas fa-certificate"></i></span> Course certificates</li>
+                            </ul>
+                        </div>
+
+                        <!-- ── Card 2: Full Bootcamp ── -->
+                        <div class="pricing-card best-deal">
+                            <div class="best-deal-badge">🏆 Best Value</div>
+                            <div class="bundle-name">.NET Backend Developer Bootcamp</div>
+                            <div class="price-row">
+                                <span class="price-original">$497</span>
+                                <span class="price-oto"><sup>$</sup>297</span>
+                                <div class="price-note">One-time offer — not available anywhere else</div>
+                            </div>
+                            <img src="images/bootcamp-bundle-boxes.png" alt=".NET Backend Developer Bootcamp" class="bundle-image">
+                            <a href="https://learn.dotnetacademy.io/enroll/3631037?price_id=4570881&coupon=INTERVIEW297"
+                               class="cta-btn">
+                                Yes! I Want the Full Bootcamp for $297
+                            </a>
+                            <ul class="include-list">
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Essentials</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Advanced</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> ASP.NET Core Security</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Azure For .NET Developers</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Containers &amp; Aspire</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Payments, Queues &amp; Workers</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Integration Testing for .NET Developers</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Azure DevOps CI/CD for .NET Developers</li>
+                                <li><span class="li-icon" style="color:#667eea;"><i class="fas fa-graduation-cap"></i></span> Troubleshooting .NET Apps in Azure</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-code"></i></span> Full source code</li>
+                                <li><span class="li-icon" style="color:#60a5fa;"><i class="fas fa-closed-captioning"></i></span> Full English captions</li>
+                                <li><span class="li-icon" style="color:#facc15;"><i class="fas fa-book-open"></i></span> Beautifully illustrated handouts</li>
+                                <li><span class="li-icon" style="color:#a78bfa;"><i class="fas fa-certificate"></i></span> Course certificates</li>
+                            </ul>
+                        </div>
+
+                    </div><!-- /pricing-grid -->
+                </div>
+            </div>
+
+            <!-- No Thanks (top) -->
+            <div class="no-thanks-wrap">
+                <a href="/" class="btn-outline-lg-oto">No Thanks — I don't want a discount</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Feature Cards Section ──────────────────────────── -->
+    <div id="features" class="basic-1" style="padding: 3rem 0 1rem;">
+        <div class="container">
+
+            <p class="section-label">What's Inside</p>
+            <h2 class="section-title">Everything You'll Be Able to Build</h2>
+
+            <!-- Legend -->
+            <div class="legend-row">
+                <div class="legend-item">
+                    <div class="legend-dot both"></div>
+                    <span>Included in both bundles</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot bootcamp"></div>
+                    <span>Bootcamp only</span>
+                </div>
+            </div>
+
+            <!-- ── Features: both bundles ── -->
+            <div class="row">
+
+                <!-- Build Solid REST APIs -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-plug text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Build Solid REST APIs</h5>
+                                <p>Master HTTP verbs, status codes, resource conventions, and build client-friendly APIs with consistent error handling and Minimal APIs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Slice Architecture -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-layer-group text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Use Vertical Slice Architecture</h5>
+                                <p>Group everything per feature to reduce coupling, make changes in isolation, and stop touching 6 files just to add one field.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dependency Injection -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-sitemap text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Stop Hardcoding Dependencies</h5>
+                                <p>Register services once and let ASP.NET Core resolve them automatically — making your code testable and easy to swap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entity Framework Core -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-database text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Simplify Data Access with Entity Framework Core</h5>
+                                <p>Map C# classes to database tables, run migrations, and query data with LINQ without writing a single line of SQL.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Async Programming -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-bolt text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Scale with Asynchronous Programming</h5>
+                                <p>Use async/await to keep threads free under load, build non-blocking I/O APIs, and avoid the pitfalls that trip up senior devs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logging -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-stream text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Production-Ready Logging</h5>
+                                <p>Implement structured logging with Serilog, write searchable logs, and configure log levels for dev vs production environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middleware -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-filter text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Handle Cross-Cutting Concerns with Middleware</h5>
+                                <p>Build and chain middleware components for auth, logging, rate limiting, and request modification without polluting your handlers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Handling -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-shield-alt text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Global Error Handling</h5>
+                                <p>Centralize exception handling with ProblemDetails, return consistent error responses, and never let unhandled exceptions leak stack traces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination & Search -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-search text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Efficient Pagination &amp; Search</h5>
+                                <p>Implement cursor-based and offset pagination, full-text search, and filter patterns that scale without hammering the database.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Uploads -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-upload text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Secure File Uploads</h5>
+                                <p>Validate file types, enforce size limits, store files safely, and serve them without exposing direct paths or enabling injection attacks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JWT Authentication -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-key text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Secure APIs with JWT Authentication</h5>
+                                <p>Issue and validate JWTs, protect endpoints, handle token expiry, and understand exactly what's inside that Base64 string.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authorization -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-user-shield text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">ASP.NET Core Authorization</h5>
+                                <p>Implement role-based and policy-based authorization, write custom requirements, and lock down endpoints with granular rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fab fa-docker text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Containerize Your .NET Apps</h5>
+                                <p>Write Dockerfiles, build images, run containers locally, and push to a registry — the prerequisite for every cloud deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keycloak -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-id-badge text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Professional Identity Management with Keycloak</h5>
+                                <p>Offload login, registration, and MFA to a battle-tested identity server — no more hand-rolling auth from scratch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OAuth 2.0 & OpenID Connect -->
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-lock text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">OAuth 2.0 and OpenID Connect</h5>
+                                <p>Understand the flows that power every modern login button — and implement them correctly in your ASP.NET Core APIs and frontends.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /row: both bundles -->
+
+            <!-- ── Features: Bootcamp only ── -->
+            <div class="row">
+
+                <!-- App Service -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fab fa-microsoft text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Deploy Without the Server Headaches <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Ship to Azure App Service in minutes with slots, auto-scale rules, custom domains, and TLS — no VM management required.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entra ID -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-users-cog text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Production Identity Management with Entra ID <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Replace your local IdP with Microsoft Entra ID — enterprise SSO, conditional access, and managed tokens in production.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Storage -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-cloud-upload-alt text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Azure Storage: File Storage Without Limits <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Store user uploads in Blob Storage with SAS tokens, lifecycle policies, and private/public access configurations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Front Door -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-globe text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Global File Delivery with Azure Front Door <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Put a CDN in front of your storage and APIs for millisecond response times worldwide, with WAF protection included.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Managed Identities -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-fingerprint text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Passwordless Azure Authentication <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Connect your app to Azure services without secrets or passwords using Managed Identities — the way production systems should work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-server text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Production-Grade PostgreSQL Database <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Provision Azure Database for PostgreSQL, connect EF Core, run migrations in CI/CD, and configure connection pooling for scale.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Vault -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-vault text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Secure Secret Management with Key Vault <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Move connection strings and API keys out of appsettings.json and into Azure Key Vault — no more secrets in source control.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container Fundamentals -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-box text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Transform .NET Apps Into Bulletproof Containers <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Multi-stage builds, non-root users, image size optimization, and health checks — production Docker patterns that actually matter.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Container Apps -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-cloud text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Production Containers Made Simple with Azure Container Apps <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Deploy containers to Azure without managing Kubernetes — built-in KEDA scaling, Dapr support, and per-revision traffic splitting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Checks -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-heartbeat text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Build Self-Healing APIs <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Add liveness and readiness health checks so your containers self-heal, load balancers reroute, and on-call stays quiet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aspire Tracing -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-chart-line text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Debug Performance Issues with Aspire Tracing <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Visualize distributed traces across services, spot N+1 queries, and identify latency bottlenecks before they hit production.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure as Code -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-code-branch text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Define Your Entire System in C# <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Use .NET Aspire to declare your full cloud architecture in C# — from databases to message buses — and deploy it reproducibly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aspire Orchestration -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-project-diagram text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Map Your Architecture Visually with .NET Aspire <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Orchestrate your microservices, see service dependencies in a dashboard, and run the entire system locally with one command.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bicep -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-tools text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Advanced Infrastructure-as-Code with Bicep <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Write repeatable Azure infrastructure in Bicep, parameterize environments, and deploy everything through a single pipeline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stripe Payments -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-credit-card text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Accept Secure Payments with Stripe <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Integrate Stripe Checkout, handle webhooks for fulfillment, manage subscriptions, and pass PCI compliance without reinventing the wheel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Webhooks -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-broadcast-tower text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Instant Notifications with Webhooks <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Build and consume webhooks reliably — signature validation, retry logic, idempotency, and processing events from external systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transactions -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-sync-alt text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Ensure Data Consistency with Transactions <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Implement database transactions, the outbox pattern, and saga coordination so partial failures never leave your data in a broken state.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queues & Workers -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-cogs text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Scale Safely with Queues and Workers <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Offload slow work to background queues, build resilient worker services, and handle dead-letter messages without data loss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integration Testing -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-vial text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Integration Tests That Actually Work <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Spin up real databases with Testcontainers, test the full HTTP stack, and write tests that catch production bugs before deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure DevOps CI/CD -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-rocket text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Azure DevOps CI/CD for .NET Developers <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Build full Azure Pipelines with build, test, Docker publish, and multi-environment Azure deployment — enterprise-grade from day one.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="col-lg-6">
+                    <div class="benefit-card bootcamp-only">
+                        <div class="media">
+                            <i class="fas fa-bug text-white" style="font-size:1.25rem;margin-right:1rem;margin-top:0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Troubleshoot .NET Apps in Azure <span class="bootcamp-tag">Bootcamp</span></h5>
+                                <p>Diagnose crashes, memory leaks, and slow APIs in production using Azure Monitor, Log Analytics, Application Insights, and remote debugging.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /row: bootcamp only -->
+        </div><!-- /container -->
+    </div><!-- /features -->
+
+    <!-- ── Bottom CTA Section ─────────────────────────────── -->
+    <div class="basic-1" style="padding: 2rem 0 1rem;">
+        <div class="container">
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-10">
+                    <div class="pricing-grid">
+
+                        <!-- 3-Course Bundle CTA -->
+                        <div style="text-align:center;">
+                            <div class="text-white mb-2" style="font-size:1.15rem;font-weight:700;">ASP.NET Core Bundle</div>
+                            <div class="mb-3">
+                                <span style="color:rgba(255,255,255,0.5);text-decoration:line-through;margin-right:0.5rem;">$321</span>
+                                <span style="color:white;font-size:1.6rem;font-weight:800;">$197</span>
+                            </div>
+                            <a href="https://learn.dotnetacademy.io/bundles/aspnetcore-bundle?coupon=INTERVIEW197"
+                               class="btn-solid-lg">
+                                <strong>Yes! I Want the Bundle for $197</strong>
+                            </a>
+                        </div>
+
+                        <!-- Bootcamp CTA -->
+                        <div style="text-align:center;">
+                            <div class="text-white mb-2" style="font-size:1.15rem;font-weight:700;">.NET Backend Bootcamp <span style="background:linear-gradient(45deg,#f093fb,#f5576c);color:white;font-size:0.65rem;font-weight:700;padding:0.15rem 0.55rem;border-radius:10px;margin-left:0.4rem;vertical-align:middle;">🏆 Best Value</span></div>
+                            <div class="mb-3">
+                                <span style="color:rgba(255,255,255,0.5);text-decoration:line-through;margin-right:0.5rem;">$497</span>
+                                <span style="color:white;font-size:1.6rem;font-weight:800;">$297</span>
+                            </div>
+                            <a href="https://learn.dotnetacademy.io/enroll/3631037?price_id=4570881&coupon=INTERVIEW297"
+                               class="btn-solid-lg" style="background:linear-gradient(45deg,#f093fb,#f5576c);">
+                                <strong>Yes! I Want the Full Bootcamp for $297</strong>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Thanks (bottom) -->
+            <div class="no-thanks-wrap">
+                <a href="/" class="btn-outline-lg-oto">No Thanks — I don't want a discount</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2025 Julio Casal LLC</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/favicon.js"></script>
+</body>
+
+</html>
