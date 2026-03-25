@@ -12,13 +12,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-GKWPQFHL1Y');
     </script>
 
     <script type="text/javascript">
-        (function (c, l, a, r, i, t, y)
-        {
+        (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
@@ -28,433 +26,770 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Your .NET roadmap is ready! Apply what you learned with the .NET Backend Blueprint PRO template.">
+    <meta name="description" content="Your .NET roadmap is on its way. Get the courses that follow your roadmap, step by step.">
     <meta name="author" content="Julio Casal">
-
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-    <meta property="og:site_name" content="Julio Casal" />
-    <meta property="og:site" content="https://juliocasal.com" />
-    <meta property="og:title" content="Roadmap Sent! Get Your .NET Backend Blueprint PRO" />
-    <meta property="og:description"
-        content="Your .NET roadmap is ready! Apply what you learned with the .NET Backend Blueprint PRO template." />
-    <meta property="og:image" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-hero.jpg" />
-    <meta property="og:url" content="https://juliocasal.com/roadmap-sent" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-hero.jpg">
-    <meta name="thumbnail" content="https://juliocasal.com/images/dotnet-backend-blueprint-pro-hero.jpg" />
     <meta name="robots" content="noindex">
 
-    <!-- Webpage Title -->
+    <meta property="og:site_name" content="Julio Casal" />
+    <meta property="og:site" content="https://juliocasal.com" />
+    <meta property="og:title" content="Roadmap Sent! | Julio Casal" />
+    <meta property="og:description" content="Your .NET roadmap is on its way. Get the courses that follow it." />
+    <meta property="og:image" content="https://juliocasal.com/images/courses/all-access/all-access-pass-boxes.png" />
+    <meta property="og:url" content="https://juliocasal.com/roadmap-sent" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://juliocasal.com/images/courses/all-access/all-access-pass-boxes.png">
+
     <title>Roadmap Sent!</title>
 
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Favicon  -->
     <link rel="icon">
 
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 1rem;
-        }
-
-        .tech-badge {
-            display: inline-block;
-            background: rgba(103, 126, 234, 0.1);
-            color: #667eea;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin: 0.25rem;
-        }
-
-        .download-cta {
-            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.125rem;
-            font-weight: 600;
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.2s ease;
-        }
-
-        .download-cta:hover {
-            transform: translateY(-2px);
-            color: white;
-            text-decoration: none;
-        }
-
-        .benefit-card {
-            background: linear-gradient(135deg, rgba(103, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(103, 126, 234, 0.3);
-            border-radius: 20px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            margin-bottom: 1.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .benefit-card:hover::before {
-            opacity: 1;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(240, 147, 251, 0.4);
-            box-shadow: 0 10px 30px rgba(103, 126, 234, 0.2);
-        }
-
-        .benefit-card .media {
-            position: relative;
-            z-index: 2;
-        }
-
-        .benefit-card h5 {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .benefit-card p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        .code-snippet {
-            background: #1a1a2e;
-            color: #16d9e3;
-            padding: 1.5rem;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.875rem;
-            overflow-x: auto;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
         body {
             background: #1a1a2e !important;
             min-height: 100vh;
         }
 
-        .header {
-            background-color: #1a1a2e !important;
+        .header { background-color: #1a1a2e !important; }
+        .copyright { background-color: #1a1a2e !important; }
+
+        /* ── Pricing Cards ──────────────────────────────────── */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: start;
         }
 
-        .copyright {
-            background-color: #1a1a2e !important;
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
         }
 
-        .btn-outline-lg:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.6);
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.18) 100%);
+            border: 2px solid rgba(103, 126, 234, 0.35);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(103, 126, 234, 0.25);
+        }
+
+        /* Best deal: gold/amber accent — more readable, feels premium */
+        .pricing-card.best-deal {
+            border-color: rgba(245, 166, 35, 0.6);
+            background: linear-gradient(135deg, rgba(245, 166, 35, 0.1) 0%, rgba(240, 120, 10, 0.1) 100%);
+            position: relative;
+        }
+
+        .pricing-card.best-deal:hover {
+            box-shadow: 0 12px 40px rgba(245, 166, 35, 0.25);
+        }
+
+        .best-deal-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #f5a623 0%, #f0860a 100%);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 1.2rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(245, 166, 35, 0.4);
+        }
+
+        .pricing-card .bundle-name {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        /* #3 — course count subtitle */
+        .pricing-card .course-count {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.55);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .price-row { margin-bottom: 1.25rem; }
+
+        .pricing-card .price-original {
+            color: rgba(255,255,255,0.45);
+            font-size: 1rem;
+            text-decoration: line-through;
+            margin-right: 0.4rem;
+        }
+
+        .pricing-card .price-oto {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .pricing-card .price-oto sup {
+            font-size: 1.1rem;
+            vertical-align: super;
+        }
+
+        .pricing-card .price-note {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.25rem;
+        }
+
+        /* #1 — both images same height so boxes look comparable */
+        .pricing-card .bundle-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1.25rem;
+        }
+
+        /* CTA buttons inside pricing cards */
+        .pricing-card .cta-btn {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
             color: white;
             text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: block;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            line-height: 1.4;
+        }
+
+        .pricing-card.best-deal .cta-btn {
+            background: linear-gradient(45deg, #f5a623 0%, #f0860a 100%);
+        }
+
+        .pricing-card .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(103, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .pricing-card.best-deal .cta-btn:hover {
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.4);
+        }
+
+        /* ── Include list ───────────────────────────────────── */
+        .include-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .include-list li {
+            color: rgba(255,255,255,0.88);
+            font-size: 0.88rem;
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .include-list li .li-icon {
+            flex-shrink: 0;
+            width: 1.1rem;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        /* ── No Thanks ──────────────────────────────────────── */
+        .no-thanks-wrap {
+            text-align: center;
+            padding: 1.5rem 0 2rem;
+        }
+
+        .btn-no-thanks {
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.55);
+            padding: 0.65rem 2.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-no-thanks:hover {
+            border-color: rgba(255,255,255,0.55);
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.06);
+        }
+
+        /* ── Feature cards ──────────────────────────────────── */
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.18) 100%);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 16px;
+            padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1.25rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(103, 126, 234, 0.2);
+        }
+
+        /* #4 — Bootcamp-only cards: gold/amber left stripe + label banner */
+        .benefit-card.bootcamp-only {
+            border-color: rgba(245, 166, 35, 0.4);
+            background: linear-gradient(135deg, rgba(245, 166, 35, 0.08) 0%, rgba(240, 120, 10, 0.08) 100%);
+            border-left: 4px solid rgba(245, 166, 35, 0.7);
+            padding-bottom: 2.5rem; /* room for the absolute-positioned badge */
+        }
+
+        .benefit-card.bootcamp-only:hover {
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.18);
+        }
+
+        .benefit-card .media {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .benefit-card h5 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .benefit-card p {
+            color: rgba(255,255,255,0.82);
+            font-size: 0.87rem;
+            margin-bottom: 0;
+            line-height: 1.55;
+        }
+
+        /* Bootcamp badge — absolute bottom-right corner */
+        .bootcamp-tag {
+            position: absolute;
+            bottom: 0.75rem;
+            right: 0.85rem;
+            background: linear-gradient(45deg, #f5a623 0%, #f0860a 100%);
+            color: white;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.65rem;
+            border-radius: 8px;
+        }
+
+        /* ── Section heading ──────────────────────────────── */
+        .section-label {
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Legend */
+        .legend-row {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        .legend-swatch {
+            width: 28px;
+            height: 14px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .legend-swatch.both {
+            background: linear-gradient(135deg, rgba(103,126,234,0.7), rgba(118,75,162,0.7));
+            border: 1px solid rgba(103,126,234,0.7);
+        }
+
+        .legend-swatch.bootcamp {
+            background: linear-gradient(45deg, #f5a623, #f0860a);
+            border-left: 4px solid rgba(245,166,35,0.9);
+        }
+
+        /* ── Bottom CTA cards ─────────────────────────────── */
+        .bottom-cta-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+        }
+
+        .bottom-cta-card.best-deal {
+            border-color: rgba(245, 166, 35, 0.5);
+            background: linear-gradient(135deg, rgba(245, 166, 35, 0.1) 0%, rgba(240, 120, 10, 0.08) 100%);
+            position: relative;
+            overflow: visible;
+        }
+
+        .bottom-cta-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 0.9rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            line-height: 1.4;
+            margin-top: 0.75rem;
+        }
+
+        .bottom-cta-btn.gold {
+            background: linear-gradient(45deg, #f5a623 0%, #f0860a 100%);
+        }
+
+        .bottom-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(103, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .bottom-cta-btn.gold:hover {
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.4);
         }
     </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header id="header" class="header" style="padding: 1rem;">
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Header / Hero -->
+    <header id="header" class="header" style="padding: 2.5rem 0 1rem;">
         <div class="container">
-            <!-- Title Section -->
-            <div class="row justify-content-center mb-4">
+            <div class="row justify-content-center mb-5">
                 <div class="col-lg-10 text-center">
                     <h1 class="text-white mb-3" style="font-size: 2.5rem; font-weight: 700;">
-                        Your roadmap is on its way 🚀
+                        Your Roadmap Is On Its Way! 🚀
                     </h1>
-                    <h2 class="text-white" style="font-size: 1.8rem; font-weight: 400; opacity: 0.9;">
-                        Ready to put that roadmap into practice?
+                    <h2 class="text-white" style="font-size: 1.65rem; font-weight: 400; opacity: 0.9;">
+                        Now get the courses that follow your roadmap, step by step.
                     </h2>
+                    <p class="text-white mt-2" style="opacity:0.65;font-size:1rem;">Start learning today. Cancel anytime.</p>
                 </div>
             </div>
 
+            <!-- Pricing Cards -->
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-10">
+                    <div class="pricing-grid">
 
-            <!-- Image Section -->
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-10 text-center">
-                    <img class="img-fluid rounded" src="images/dotnet-backend-blueprint-pro-hero.jpg"
-                        alt=".NET Backend Blueprint Template">
-                </div>
-            </div>
-
-            <!-- Description and CTA Section -->
-            <div class="row justify-content-center">
-                <div class="col-lg-9 text-center">
-                    <p class="line-spaced-paragraph text-white mb-3">
-                        Turn your roadmap into a running .NET backend <strong>today</strong>. A production-ready
-                        template
-                        with auth, database, pub/sub, Azure deployment, CI/CD and lots more, wired up for you.
-                    </p>
-                    <div style="margin-top: 2rem;">
-                        <!-- CTA Buttons -->
-                        <div class="text-center mb-3">
-                            <a class="btn-solid-lg"
-                                href="https://learn.dotnetacademy.io/enroll/3581945?price_id=4516361&coupon=BLUEPRINT20"
-                                style="margin-right: 1rem;"><strong>Get the Blueprint for $19</strong></a>
-                            <a class="btn-outline-lg" href="https://juliocasal.com/new-subscriber-survey"
-                                target="_blank">
-                                <strong>No Thanks</strong>
-                            </a>
-                        </div>
-                        <!-- Special Price Message -->
-                        <div class="text-center mb-3">
-                            <div
-                                style="display: inline-block; padding: 0.75rem 1.5rem; background: rgba(245, 87, 108, 0.1); border-radius: 8px; border: 1px solid rgba(245, 87, 108, 0.2);">
-                                <span class="text-white" style="font-size: 0.85rem; font-weight: 500;">
-                                    <em>Regular price: $39. The special price on this page is not available anywhere
-                                        else.</em>
-                                </span>
+                        <!-- ── Card 1: Monthly ── -->
+                        <div class="pricing-card">
+                            <div class="bundle-name">Monthly</div>
+                            <div class="course-count">All-Access Pass</div>
+                            <div class="price-row">
+                                <span class="price-oto"><sup>$</sup>47</span>
+                                <div class="price-note">per month · cancel anytime</div>
                             </div>
+                            <img src="images/courses/all-access/all-access-pass-boxes.png" alt="All-Access Pass" class="bundle-image">
+                            <a href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4671389" class="cta-btn">
+                                Start Monthly for $47
+                            </a>
+                            <ul class="include-list">
+                                <li><span class="li-icon" style="color:#818cf8;"><i class="fas fa-unlock"></i></span> Instant access to all 12 courses</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-code"></i></span> Full source code for every course</li>
+                                <li><span class="li-icon" style="color:#60a5fa;"><i class="fas fa-closed-captioning"></i></span> Full English captions</li>
+                                <li><span class="li-icon" style="color:#facc15;"><i class="fas fa-book-open"></i></span> Beautifully illustrated handouts</li>
+                                <li><span class="li-icon" style="color:#a78bfa;"><i class="fas fa-certificate"></i></span> Course certificates</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> .NET Backend Blueprint PRO</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> .NET Full-Stack Blueprint</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> Microsoft Employee Interviews</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-times-circle"></i></span> Cancel anytime</li>
+                            </ul>
                         </div>
-                    </div>
+
+                        <!-- ── Card 2: Quarterly (Best Value) ── -->
+                        <div class="pricing-card best-deal">
+                            <div class="best-deal-badge">🏆 Best Value</div>
+                            <div class="bundle-name">Quarterly</div>
+                            <div class="course-count">All-Access Pass</div>
+                            <div class="price-row">
+                                <span class="price-original">$141</span>
+                                <span class="price-oto"><sup>$</sup>119</span>
+                                <div class="price-note">per quarter · save $22 · cancel anytime</div>
+                            </div>
+                            <img src="images/courses/all-access/all-access-pass-boxes.png" alt="All-Access Pass" class="bundle-image">
+                            <a href="https://learn.dotnetacademy.io/enroll/2413963?price_id=3961039" class="cta-btn">
+                                Start Quarterly for $119
+                            </a>
+                            <ul class="include-list">
+                                <li><span class="li-icon" style="color:#818cf8;"><i class="fas fa-unlock"></i></span> Instant access to all 12 courses</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-code"></i></span> Full source code for every course</li>
+                                <li><span class="li-icon" style="color:#60a5fa;"><i class="fas fa-closed-captioning"></i></span> Full English captions</li>
+                                <li><span class="li-icon" style="color:#facc15;"><i class="fas fa-book-open"></i></span> Beautifully illustrated handouts</li>
+                                <li><span class="li-icon" style="color:#a78bfa;"><i class="fas fa-certificate"></i></span> Course certificates</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> .NET Backend Blueprint PRO</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> .NET Full-Stack Blueprint</li>
+                                <li><span class="li-icon" style="color:#f5a623;"><i class="fas fa-gift"></i></span> Microsoft Employee Interviews</li>
+                                <li><span class="li-icon" style="color:#4ade80;"><i class="fas fa-times-circle"></i></span> Cancel anytime</li>
+                            </ul>
+                        </div>
+
+                    </div><!-- /pricing-grid -->
+                </div>
+            </div>
+
+            <!-- No Thanks (top) -->
+            <div class="no-thanks-wrap">
+                <a href="https://juliocasal.com/new-subscriber-survey" target="_blank" class="btn-no-thanks">No Thanks, I'll figure it out on my own</a>
+            </div>
+            <div class="text-center mt-3">
+                <div style="display:inline-block;padding:0.75rem 1.5rem;background:rgba(245,166,35,0.1);border-radius:8px;border:1px solid rgba(245,166,35,0.2);">
+                    <span class="text-white" style="font-size:0.85rem;font-weight:500;"><em>The All-Access Pass is not publicly available. This is the only place you can get it.</em></span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div id="main-content" class="basic-1" style="padding: 0;">
+    <!-- ── What's Inside Section ──────────────────────────── -->
+    <div id="features" class="basic-1" style="padding: 3rem 0 2rem;">
         <div class="container">
-            <!-- New Card Order: 6 rows of 2 cards each -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-rocket text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Production-Ready .NET 10 API</h5>
-                                <p>Complete Web API with <strong>Vertical Slice Architecture</strong>, global error
-                                    handling, and health checks. Start building features immediately.</p>
+            <p class="section-label">What's Inside</p>
+            <h2 class="section-title">Every Course On Your Roadmap — In One Pass</h2>
+            <p class="text-center text-white mb-5" style="opacity:0.8;max-width:680px;margin:0 auto 2.5rem;">
+                The All-Access Pass gives you instant access to the complete course library. Work through each topic on your roadmap at your own pace.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <!-- Course 1 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/aspnet-core-essentials/box-mockup.png" alt="ASP.NET Core Essentials" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">ASP.NET Core<br>Essentials</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Kick-start your backend skills with ASP.NET Core.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-database text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Database Integration</h5>
-                                <p><strong>PostgreSQL with Entity Framework Core</strong>, migrations, and connection
-                                    pooling. Ready for both local dev and prod.</p>
+                        <!-- Course 2 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/aspnet-core-advanced/box-mockup.png" alt="ASP.NET Core Advanced" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">ASP.NET Core<br>Advanced</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Build bulletproof ASP.NET Core apps for production.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-shield-alt text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Enterprise Authentication</h5>
-                                <p><strong>Keycloak integration</strong> with JWT tokens, authorization checks, and
-                                    OAuth2 flows. Security done right from day one.</p>
+                        <!-- Course 3 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/aspnet-core-security/box-mockup.png" alt="ASP.NET Core Security" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">ASP.NET Core<br>Security</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">The complete guide to ASP.NET Core security.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-cloud text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Azure Deployment Ready</h5>
-                                <p><strong>One-command deployment</strong> to Azure Container Apps with PostgreSQL
-                                    Flexible Server, Keycloak and managed identities.</p>
+                        <!-- Course 4 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/azure-for-dotnet-developers/box-mockup.png" alt="Azure for .NET Developers" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Azure for .NET Developers</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Deploy .NET apps to Azure like a Pro.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-vial text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Integration Tests</h5>
-                                <p><strong>Comprehensive test suite</strong> with test containers, messaging mocks, and
-                                    authentication scenarios for reliable development.</p>
+                        <!-- Course 5 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/containers-and-dotnet-aspire/box-mockup.png" alt="Containers &amp; .NET Aspire" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Containers &amp; .NET Aspire</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Build production ready apps from day 1.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-play-circle text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">CI/CD Pipelines</h5>
-                                <p><strong>Pre-configured workflows</strong> for both GitHub Actions and Azure DevOps
-                                    with automated building and deployment to Azure.</p>
+                        <!-- Course 6 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/core-course-box-mockup.png" alt="Building Microservices with .NET" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Building Microservices with .NET</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Transform the way you build .NET systems at scale.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-paper-plane text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Pub/Sub Messaging</h5>
-                                <p><strong>Azure Service Bus integration</strong> with item event notifications, shared
-                                    message contracts, and local emulator support.</p>
+                        <!-- Course 7 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/csharp-unittesting-essentials/UnitTesting-Essentials-Box_Mockup.png" alt="C# Unit Testing Essentials" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">C# Unit Testing Essentials</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Code, refactor and ship high quality C# code every time.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-cogs text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Background Worker Service</h5>
-                                <p><strong>Dedicated background processing</strong> to offload heavy work via
-                                    asynchronous message handling.</p>
+                        <!-- Course 8 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/mastering-csharp-unittesting/UnitTesting-Advanced-Box_Mockup.png" alt="Mastering C# Unit Testing" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Mastering C# Unit Testing</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Unlock the secrets of C# unit testing in the real world.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-heart text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Production Health Checks</h5>
-                                <p><strong>Comprehensive monitoring</strong> to let your containers self-heal when
-                                    issues appear in your app or on external dependencies.</p>
+                        <!-- Course 9 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/payments-queues-and-workers/box-mockup.png" alt="Payments, Queues &amp; Workers" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Payments, Queues &amp; Workers</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Ship scalable .NET backends with queues and workers.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-chart-line text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Azure Application Insights</h5>
-                                <p><strong>Enhanced telemetry and monitoring</strong> with distributed tracing, custom
-                                    metrics, and production-grade observability out of the box.</p>
+                        <!-- Course 10 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/integration-testing/box-mockup.png" alt="Integration Testing for .NET Developers" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Integration Testing for .NET Developers</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Test your .NET apps end-to-end with confidence.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-cog text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">Aspire Orchestration</h5>
-                                <p>Local development made easy with <strong>tracing, telemetry, and health
-                                        monitoring</strong>. See everything in the Aspire dashboard.</p>
+                        <!-- Course 11 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/ci-cd/box-mockup.png" alt="Azure DevOps CI/CD for .NET Developers" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Azure DevOps CI/CD for .NET Developers</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Automate .NET CI/CD pipelines with Azure DevOps.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="benefit-card">
-                        <div class="media">
-                            <i class="fas fa-code text-white"
-                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
-                            <div class="media-body">
-                                <h5 class="font-weight-bold">GitHub Codespaces Ready</h5>
-                                <p><strong>Pre-configured dev container</strong> with .NET 10 SDK, Aspire CLI, and all
-                                    development tools for instant cloud development environment.</p>
+                        <!-- Course 12 -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem;">
+                                <img src="images/courses/troubleshooting/box-mockup.png" alt="Troubleshooting .NET Apps in Azure" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Troubleshooting .NET Apps in Azure</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Monitor, trace, and fix .NET apps running in Azure.</p>
                             </div>
                         </div>
+
+                        <!-- Bonus 1: .NET Backend Blueprint PRO -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem; border-color: rgba(245,166,35,0.4);">
+                                <div style="margin-bottom:0.5rem;"><span style="background:linear-gradient(45deg,#f5a623,#f0860a);color:white;font-size:0.65rem;font-weight:700;padding:0.15rem 0.6rem;border-radius:6px;">🎁 BONUS</span></div>
+                                <img src="images/dotnet-backend-blueprint-pro-hero.jpg" alt=".NET Backend Blueprint PRO" style="height:90px;object-fit:contain;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">.NET Backend Blueprint PRO</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Production-ready .NET backend starter template.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bonus 2: .NET Full-Stack Blueprint -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem; border-color: rgba(245,166,35,0.4);">
+                                <div style="margin-bottom:0.5rem;"><span style="background:linear-gradient(45deg,#f5a623,#f0860a);color:white;font-size:0.65rem;font-weight:700;padding:0.15rem 0.6rem;border-radius:6px;">🎁 BONUS</span></div>
+                                <img src="images/dotnet-fullstack-blueprint-hero.jpg" alt=".NET Full-Stack Blueprint" style="height:90px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">.NET Full-Stack Blueprint</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Pre-wired React + TypeScript frontend for your .NET backend.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bonus 3: Microsoft Employee Interviews -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="benefit-card text-center" style="padding: 1.5rem 1rem; border-color: rgba(245,166,35,0.4);">
+                                <div style="margin-bottom:0.5rem;"><span style="background:linear-gradient(45deg,#f5a623,#f0860a);color:white;font-size:0.65rem;font-weight:700;padding:0.15rem 0.6rem;border-radius:6px;">🎁 BONUS</span></div>
+                                <img src="images/courses/all-access/employee-interviews.jpg" alt="Microsoft Employee Interviews" style="height:90px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;">
+                                <h5 style="font-size:0.9rem;color:white;font-weight:600;">Microsoft Employee Interviews</h5>
+                                <p style="font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:0;">4 exclusive interviews with Microsoft engineers on career growth and hiring.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Testimonial Section -->
-    <div class="basic-1 pt-5 pb-5">
+    <!-- ── Bottom CTA Section ─────────────────────────────── -->
+    <div class="basic-1" style="padding: 2rem 0 1rem;">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="benefit-card"
-                        style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.2) 0%, rgba(245, 87, 108, 0.2) 100%); border-color: rgba(240, 147, 251, 0.4);">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 text-center mb-3 mb-md-0">
-                                <img src="images/Head-shot-Jeffrey-Wilkinson.jpg" alt="Jeffrey Wilkinson"
-                                    class="rounded-circle img-fluid"
-                                    style="width: 120px; height: 120px; object-fit: cover; border: 3px solid rgba(240, 147, 251, 0.4);">
+            <h3 class="text-center text-white mb-4" style="font-weight:700;">Ready to start working through your roadmap?</h3>
+            <p class="text-center text-white mb-4" style="opacity:0.65;font-size:0.95rem;">Start today. Cancel anytime.</p>
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-10">
+                    <div class="pricing-grid">
+
+                        <!-- Monthly CTA -->
+                        <div class="bottom-cta-card">
+                            <div class="text-white mb-1" style="font-size:1.1rem;font-weight:700;">Monthly</div>
+                            <div class="course-count" style="text-align:center;margin-bottom:0.75rem;">All-Access Pass</div>
+                            <div style="margin-bottom:0.75rem;">
+                                <span style="color:white;font-size:1.7rem;font-weight:800;">$47</span>
+                                <span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">/mo</span>
                             </div>
-                            <div class="col-md-9">
-                                <blockquote class="text-white"
-                                    style="font-style: italic; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                                    "I've been reviewing Julio's backend blueprint, and I've not been
-                                    disappointed. Combined with the great educational material that Julio provides, this
-                                    blueprint is well organised, thorough, and will provide a great way to start all my
-                                    new .NET projects."
-                                </blockquote>
-                                <div class="text-left">
-                                    <div class="text-white font-weight-bold" style="font-size: 1.1rem;">Jeffrey
-                                        Wilkinson</div>
-                                    <div class="text-white" style="opacity: 0.8; font-size: 0.95rem;">Senior
-                                        Architecture and
-                                        Technical Lead<br>Obsidian R&D</div>
+                            <a href="https://learn.dotnetacademy.io/enroll/2413963?price_id=4671389" class="bottom-cta-btn">
+                                Start Monthly for $47
+                            </a>
+                            <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.6rem;">Cancel anytime.</div>
+                        </div>
+
+                        <!-- Quarterly CTA -->
+                        <div class="bottom-cta-card best-deal">
+                            <div class="best-deal-badge">🏆 Best Value</div>
+                            <div class="text-white mb-1" style="font-size:1.1rem;font-weight:700;">Quarterly</div>
+                            <div class="course-count" style="text-align:center;margin-bottom:0.75rem;">All-Access Pass</div>
+                            <div style="margin-bottom:0.75rem;">
+                                <span style="color:rgba(255,255,255,0.45);text-decoration:line-through;margin-right:0.4rem;font-size:0.95rem;">$141</span>
+                                <span style="color:white;font-size:1.7rem;font-weight:800;">$119</span>
+                                <span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">/quarter</span>
+                            </div>
+                            <a href="https://learn.dotnetacademy.io/enroll/2413963?price_id=3961039" class="bottom-cta-btn gold">
+                                Start Quarterly for $119
+                            </a>
+                            <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.6rem;">Save $22 vs monthly. Cancel anytime.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Thanks (bottom) -->
+            <div class="no-thanks-wrap">
+                <a href="https://juliocasal.com/new-subscriber-survey" target="_blank" class="btn-no-thanks">No Thanks, I'll figure it out on my own</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Testimonials Section ───────────────────────────── -->
+    <div class="basic-1" style="padding: 3rem 0 2rem;">
+        <div class="container">
+            <p class="section-label">What Students Say</p>
+            <h2 class="section-title">Trusted by .NET Developers Worldwide</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-10">
+                    <div class="row">
+
+                        <!-- 1: Microservices - career impact -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"Going through the series is probably as close as you can get to team programming at Microsoft without actually working at Microsoft. You will be left with the knowledge and skills to tackle any .NET based project."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://user-images.trustpilot.com/65ac4935a1886400127f7a71/73x73.png" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Developer">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Developer</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Building Microservices with .NET</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 2: Azure - better than Pluralsight -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"Julio, your material is better than Pluralsight. You covered the topic for both development and production. You are the only person who covered it well. Course 3 alone is GOAT."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/4131aefb-6dff-492a-b473-faa11d3ecc12_suit.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Daniel Alexander Herrera">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Daniel Alexander Herrera</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Azure for .NET Developers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3: Security - comprehensive -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"Comprehensive and up-to-date content covering JWT, OAuth/OIDC, Keycloak, containers, and real frontends. You'll learn not only how, but also why and what to do. If you're looking for depth and real-world applicability, this is a very solid course."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/9fb19890-f364-4825-ad69-a20d6cc197d7_download.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Francelino D'Alva Paquete">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Francelino D'Alva Paquete</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Software Engineer · ASP.NET Core Security</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4: Advanced - complete product -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"The best thing about the course is how it was structured — even if you just watch videos, you can always follow along with the files. If you already have the previous course, this is a definite must buy."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/4192cb66-8a1f-44cd-9927-b22a7cf498a5_avatar.png" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Tony">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Tony</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Postdoc · ASP.NET Core Advanced</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5: Essentials - take to next level -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"This course is guiding you to building something very close to professional. It's exactly what I needed to take my skills to the next level. Julio can explain things very well."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/3ebc050c-5a84-476f-b3c2-559d954d74f8_Stamp.png" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Hamad AS">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Hamad AS</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Senior Developer · ASP.NET Core Essentials</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6: Unit Testing Advanced -->
+                        <div class="col-md-6 mb-4">
+                            <div class="benefit-card" style="padding: 1.5rem;">
+                                <p style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-style:italic;margin-bottom:1rem;">"This course offers comprehensive content that addresses all aspects of unit testing, with plenty of real-world examples and guidance on best practices. Julio explains things well and shows how to achieve results with different tooling."</p>
+                                <div style="display:flex;align-items:center;gap:0.75rem;">
+                                    <img src="https://senja-io.s3.us-west-1.amazonaws.com/public/avatar/d163ad59-0ecf-4638-bffe-24700bc4b783_twitter_wKcMi21f_400x400.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" alt="Steven Daniel">
+                                    <div>
+                                        <div style="color:white;font-weight:600;font-size:0.85rem;">Steven Daniel</div>
+                                        <div style="color:rgba(255,255,255,0.5);font-size:0.78rem;">Full-Stack Developer · Mastering C# Unit Testing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -462,15 +797,6 @@
     </div>
 
     <!-- Copyright -->
-    <!-- Repeat CTA Buttons after testimonial -->
-    <div class="container text-center mb-5">
-        <a class="btn-solid-lg" href="https://learn.dotnetacademy.io/enroll/3581945?price_id=4516361&coupon=blueprint40"
-            style="margin-right: 1rem;"><strong>Get the Blueprint for $15</strong></a>
-        <a class="btn-outline-lg" href="https://juliocasal.com/new-subscriber-survey" target="_blank"
-            style="font-weight: 700; color: #fff; border: 2px solid rgba(255,255,255,0.6); background: transparent;">
-            <strong>No Thanks</strong>
-        </a>
-    </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -481,7 +807,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="js/favicon.js"></script>
 </body>
 
