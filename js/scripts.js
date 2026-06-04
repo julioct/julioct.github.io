@@ -133,8 +133,8 @@
         }
     });
 
-    // The countdown timer and parity deals logic have been moved to separate files:
+    // The countdown timer and sale pricing logic have been moved to separate files:
     // - countdown-timer.js
-    // - parity-deals.js
+    // - sale-pricing.js
 
 })(jQuery);

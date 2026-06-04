@@ -1,23 +1,21 @@
-/* Parity Deals Script for julioct.github.io
-   Description: Handles the parity deals coupon functionality
+/* Sale Pricing Script for julioct.github.io
+   Description: Applies hardcoded sale discounts (coupon + percentage) to course pricing,
+   including the all-access cross-sell card. Set the values below to enable a sale.
 */
 
 (function ($)
 {
     "use strict";
 
-    // Parity Deals coupon handling
     document.addEventListener("DOMContentLoaded", function ()
     {
-        // Global variable to store Parity Deals response data
-        window.parityDealsInfo = {
+        // Sale configuration - set these to enable a discount, leave empty for full price
+        window.salePricingInfo = {
             couponCode: "", // Default coupon code (empty - no hardcoded coupon)
             discountPercentage: "", // Default discount percentage (no decimals)
-            discountDollars: "",  // Manual default discount in dollars (not provided by API)
+            discountDollars: "",  // Manual default discount in dollars
             allAccessCouponCode: "", // All-access pass coupon code
-            allAccessDiscountPercentage: "", // All-access pass discount percentage
-            country: "", // Country from Parity Deals API
-            couponFromAPI: false // Flag to track if coupon code came from API
+            allAccessDiscountPercentage: "" // All-access pass discount percentage
         };
 
         const frequencyElement = document.querySelector('.one-time-payment');
@@ -65,7 +63,7 @@
             // Update one-time payment link - apply coupon if it exists
             if (oneTimePaymentLink && originalHref)
             {
-                const couponCode = window.parityDealsInfo.couponCode;
+                const couponCode = window.salePricingInfo.couponCode;
                 if (couponCode)
                 {
                     // Remove existing coupon parameter if present, then add new one
@@ -92,14 +90,14 @@
             {
                 // All-access pass logic
                 basePrice = getAllAccessOriginalPrice();
-                discountPercentage = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) || 0;
+                discountPercentage = parseInt(window.salePricingInfo.allAccessDiscountPercentage) || 0;
                 discountDollars = 0; // All-access only uses percentage discount
             } else
             {
                 // Use one-time payment discount
                 basePrice = getOriginalPrice();
-                discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-                discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
+                discountPercentage = parseInt(window.salePricingInfo.discountPercentage) || 0;
+                discountDollars = parseInt(window.salePricingInfo.discountDollars) || 0;
             }
 
             let discountedPrice = basePrice;
@@ -129,8 +127,8 @@
             {
                 const currentOriginalPrice = getOriginalPrice();
                 const discountedPrice = calculateDiscountedPrice(false);
-                const discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-                const discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
+                const discountPercentage = parseInt(window.salePricingInfo.discountPercentage) || 0;
+                const discountDollars = parseInt(window.salePricingInfo.discountDollars) || 0;
 
                 // Update the discounted price
                 discountedPriceValue.textContent = discountedPrice;
@@ -157,7 +155,7 @@
             {
                 const allAccessOriginalPrice = getAllAccessOriginalPrice();
                 const allAccessDiscountedPrice = calculateDiscountedPrice(true);
-                const allAccessDiscountPercentage = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) || 0;
+                const allAccessDiscountPercentage = parseInt(window.salePricingInfo.allAccessDiscountPercentage) || 0;
 
                 // Update the discounted price for all-access pass
                 allAccessDiscountedPriceValue.textContent = allAccessDiscountedPrice;
@@ -176,20 +174,20 @@
         // Function to set all-access discount percentage (for external configuration)
         window.setAllAccessDiscount = function (discountPercentage)
         {
-            window.parityDealsInfo.allAccessDiscountPercentage = discountPercentage.toString();
+            window.salePricingInfo.allAccessDiscountPercentage = discountPercentage.toString();
             updateUI(); // Update UI to reflect the new discount
         };
 
         // Function to update UI based on coupon code availability
         const updateUI = function ()
         {
-            const hasCouponCode = !!window.parityDealsInfo.couponCode;
-            const hasAllAccessCouponCode = !!window.parityDealsInfo.allAccessCouponCode;
+            const hasCouponCode = !!window.salePricingInfo.couponCode;
+            const hasAllAccessCouponCode = !!window.salePricingInfo.allAccessCouponCode;
 
             // Check if we have any discount available (percentage or dollar amount)
-            const hasOnetimeDiscount = parseInt(window.parityDealsInfo.discountPercentage) > 0 ||
-                window.parityDealsInfo.discountDollars;
-            const hasAllAccessDiscount = parseInt(window.parityDealsInfo.allAccessDiscountPercentage) > 0;
+            const hasOnetimeDiscount = parseInt(window.salePricingInfo.discountPercentage) > 0 ||
+                window.salePricingInfo.discountDollars;
+            const hasAllAccessDiscount = parseInt(window.salePricingInfo.allAccessDiscountPercentage) > 0;
 
             // Update one-time payment price display - show discounted price when discount is available
             const oneTimeFullPriceDiv = document.querySelector('.pricing-card-container:first-child #full-price');
@@ -221,65 +219,8 @@
             updateCouponLink();
         };
 
-        // Function to fetch coupon from Parity Deals API (only called once)
-        // const fetchParityCoupon = async function ()
-        // {
-        //     try
-        //     {
-        //         const apiUrl = `https://api.paritydeals.com/api/v1/deals/discount/?url=${encodeURIComponent(window.location.href)}`;
-        //         const response = await fetch(apiUrl);
-
-        //         if (!response.ok)
-        //         {
-        //             console.log("Failed to fetch coupon from Parity Deals API");
-        //             return;
-        //         }
-
-        //         const data = await response.json();
-        //         console.log("Parity Deals API response:", data);
-
-        //         // Store the API response globally and update UI if needed
-        //         let uiNeedsUpdate = false;
-
-        //         if (data.couponCode)
-        //         {
-        //             // Override any hardcoded discount with parity deals discount for both onetime and all-access
-        //             window.parityDealsInfo.couponCode = data.couponCode;
-        //             window.parityDealsInfo.allAccessCouponCode = data.couponCode; // Store for display purposes only
-        //             window.parityDealsInfo.couponFromAPI = true; // Set flag indicating coupon came from API
-        //             uiNeedsUpdate = true;
-        //         }
-
-        //         if (data.discountPercentage)
-        //         {
-        //             // Remove any decimal places from the discount percentage
-        //             window.parityDealsInfo.discountPercentage = parseInt(data.discountPercentage).toString();
-        //             window.parityDealsInfo.allAccessDiscountPercentage = parseInt(data.discountPercentage).toString(); // Apply same discount to all-access for display
-        //             uiNeedsUpdate = true;
-        //         }
-
-        //         // Add handling for country from the API
-        //         if (data.country)
-        //         {
-        //             window.parityDealsInfo.country = data.country;
-        //             uiNeedsUpdate = true;
-        //         }
-
-        //         if (uiNeedsUpdate)
-        //         {
-        //             updateUI();
-        //         }
-        //     } catch (error)
-        //     {
-        //         console.log("Error fetching coupon from Parity Deals API:", error);
-        //     }
-        // };
-
         // Initialize the UI based on current state
         updateUI();
-
-        // Fetch from API only once
-        // fetchParityCoupon();
     });
 
 })(jQuery);

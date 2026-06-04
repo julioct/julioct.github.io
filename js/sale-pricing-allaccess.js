@@ -1,25 +1,23 @@
-/* Parity Deals Script for All-Access Page
-   Description: Handles the parity deals coupon functionality for the all-access subscription page
+/* Sale Pricing Script for the All-Access Page
+   Description: Applies hardcoded sale discounts (coupon + percentage) to the all-access annual
+   and quarterly plans. Set the values below (or call the helpers) to enable a sale.
 */
 
 (function ($)
 {
     "use strict";
 
-    // Parity Deals coupon handling
     document.addEventListener("DOMContentLoaded", function ()
     {
-        // Global variable to store Parity Deals response data
-        window.parityDealsInfo = {
+        // Sale configuration - set these to enable a discount, leave empty for full price
+        window.salePricingInfo = {
             couponCode: "", // Default coupon code
             discountPercentage: "", // Default discount percentage (no decimals)
-            discountDollars: "",  // Manual default discount in dollars (not provided by API)
+            discountDollars: "",  // Manual default discount in dollars
             annualCouponCode: "", // Annual plan coupon code
             annualDiscountPercentage: "", // Annual plan discount percentage
             quarterlyCouponCode: "", // Quarterly plan coupon code
-            quarterlyDiscountPercentage: "", // Quarterly plan discount percentage
-            country: "", // Country from Parity Deals API
-            couponFromAPI: false // Flag to track if coupon code came from API
+            quarterlyDiscountPercentage: "" // Quarterly plan discount percentage
         };
 
         // Default pricing structure for all-access plans
@@ -61,7 +59,7 @@
             // Update annual plan link - apply coupon if it exists
             if (annualPaymentLink && annualOriginalHref)
             {
-                const annualCouponCode = window.parityDealsInfo.annualCouponCode;
+                const annualCouponCode = window.salePricingInfo.annualCouponCode;
                 if (annualCouponCode)
                 {
                     const url = new URL(annualOriginalHref);
@@ -79,7 +77,7 @@
             // Update quarterly plan link - apply coupon if it exists
             if (quarterlyPaymentLink && quarterlyOriginalHref)
             {
-                const quarterlyCouponCode = window.parityDealsInfo.quarterlyCouponCode;
+                const quarterlyCouponCode = window.salePricingInfo.quarterlyCouponCode;
                 if (quarterlyCouponCode)
                 {
                     const url = new URL(quarterlyOriginalHref);
@@ -102,17 +100,17 @@
 
             if (planType === 'annual')
             {
-                discountPercentage = parseInt(window.parityDealsInfo.annualDiscountPercentage) || 0;
+                discountPercentage = parseInt(window.salePricingInfo.annualDiscountPercentage) || 0;
                 discountDollars = 0; // Annual plan only uses percentage discount
             } else if (planType === 'quarterly')
             {
-                discountPercentage = parseInt(window.parityDealsInfo.quarterlyDiscountPercentage) || 0;
+                discountPercentage = parseInt(window.salePricingInfo.quarterlyDiscountPercentage) || 0;
                 discountDollars = 0; // Quarterly plan only uses percentage discount
             } else
             {
                 // Default to main discount values
-                discountPercentage = parseInt(window.parityDealsInfo.discountPercentage) || 0;
-                discountDollars = parseInt(window.parityDealsInfo.discountDollars) || 0;
+                discountPercentage = parseInt(window.salePricingInfo.discountPercentage) || 0;
+                discountDollars = parseInt(window.salePricingInfo.discountDollars) || 0;
             }
 
             let discountedPrice = originalPrice;
@@ -144,7 +142,7 @@
             {
                 const annualOriginalPrice = defaultPricing.annual;
                 const annualDiscountedPrice = calculateDiscountedPrice(annualOriginalPrice, 'annual');
-                const annualDiscountPercentage = parseInt(window.parityDealsInfo.annualDiscountPercentage) || 0;
+                const annualDiscountPercentage = parseInt(window.salePricingInfo.annualDiscountPercentage) || 0;
 
                 // Update the discounted price for annual plan
                 annualDiscountedPriceValue.textContent = annualDiscountedPrice;
@@ -170,7 +168,7 @@
             {
                 const quarterlyOriginalPrice = defaultPricing.quarterly;
                 const quarterlyDiscountedPrice = calculateDiscountedPrice(quarterlyOriginalPrice, 'quarterly');
-                const quarterlyDiscountPercentage = parseInt(window.parityDealsInfo.quarterlyDiscountPercentage) || 0;
+                const quarterlyDiscountPercentage = parseInt(window.salePricingInfo.quarterlyDiscountPercentage) || 0;
 
                 // Update the discounted price for quarterly plan
                 quarterlyDiscountedPriceValue.textContent = quarterlyDiscountedPrice;
@@ -189,25 +187,25 @@
         // Function to set plan-specific discount percentages (for external configuration)
         window.setAnnualDiscount = function (discountPercentage)
         {
-            window.parityDealsInfo.annualDiscountPercentage = discountPercentage.toString();
+            window.salePricingInfo.annualDiscountPercentage = discountPercentage.toString();
             updateUI(); // Update UI to reflect the new discount
         };
 
         window.setQuarterlyDiscount = function (discountPercentage)
         {
-            window.parityDealsInfo.quarterlyDiscountPercentage = discountPercentage.toString();
+            window.salePricingInfo.quarterlyDiscountPercentage = discountPercentage.toString();
             updateUI(); // Update UI to reflect the new discount
         };
 
         // Function to update UI based on coupon code availability
         const updateUI = function ()
         {
-            const hasAnnualCouponCode = !!window.parityDealsInfo.annualCouponCode;
-            const hasQuarterlyCouponCode = !!window.parityDealsInfo.quarterlyCouponCode;
+            const hasAnnualCouponCode = !!window.salePricingInfo.annualCouponCode;
+            const hasQuarterlyCouponCode = !!window.salePricingInfo.quarterlyCouponCode;
 
             // Check if we have any discount available (percentage or dollar amount)
-            const hasAnnualDiscount = parseInt(window.parityDealsInfo.annualDiscountPercentage) > 0;
-            const hasQuarterlyDiscount = parseInt(window.parityDealsInfo.quarterlyDiscountPercentage) > 0;
+            const hasAnnualDiscount = parseInt(window.salePricingInfo.annualDiscountPercentage) > 0;
+            const hasQuarterlyDiscount = parseInt(window.salePricingInfo.quarterlyDiscountPercentage) > 0;
 
             // Update annual plan price display - show discounted price when discount is available
             if (annualFullPriceDiv && annualDiscountedPriceDiv)
@@ -230,67 +228,8 @@
             updateCouponLinks();
         };
 
-        // Function to fetch coupon from Parity Deals API (only called once)
-        const fetchParityCoupon = async function ()
-        {
-            try
-            {
-                const apiUrl = `https://api.paritydeals.com/api/v1/deals/discount/?url=${encodeURIComponent(window.location.href)}`;
-                const response = await fetch(apiUrl);
-
-                if (!response.ok)
-                {
-                    console.log("Parity Deals API response not OK:", response.status);
-                    return;
-                }
-
-                const data = await response.json();
-                console.log("Parity Deals API response:", data);
-
-                // Store the API response globally and update UI if needed
-                let uiNeedsUpdate = false;
-
-                if (data.couponCode)
-                {
-                    // Override any hardcoded discount with parity deals discount for all plans
-                    window.parityDealsInfo.couponCode = data.couponCode;
-                    window.parityDealsInfo.annualCouponCode = data.couponCode;
-                    window.parityDealsInfo.quarterlyCouponCode = data.couponCode;
-                    window.parityDealsInfo.couponFromAPI = true;
-                    uiNeedsUpdate = true;
-                }
-
-                if (data.discountPercentage)
-                {
-                    window.parityDealsInfo.discountPercentage = data.discountPercentage.toString();
-                    window.parityDealsInfo.annualDiscountPercentage = data.discountPercentage.toString();
-                    window.parityDealsInfo.quarterlyDiscountPercentage = data.discountPercentage.toString();
-                    uiNeedsUpdate = true;
-                }
-
-                // Add handling for country from the API
-                if (data.country)
-                {
-                    window.parityDealsInfo.country = data.country;
-                    uiNeedsUpdate = true;
-                }
-
-                if (uiNeedsUpdate)
-                {
-                    updateUI();
-                }
-
-            } catch (error)
-            {
-                console.error("Error fetching parity coupon:", error);
-            }
-        };
-
         // Initialize the UI based on current state
         updateUI();
-
-        // Fetch from API only once
-        fetchParityCoupon();
     });
 
 })(jQuery);
