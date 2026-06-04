@@ -38,10 +38,13 @@
   <loc>https://juliocasal.com/courses/azure-for-dotnet-developers</loc>
 </url>
 <url>
-  <loc>https://juliocasal.com/courses/containers-and-dotnet-aspire</loc>
+  <loc>https://juliocasal.com/courses/docker-for-dotnet-developers</loc>
 </url>
 <url>
-  <loc>https://juliocasal.com/courses/payments-queues-and-workers</loc>
+  <loc>https://juliocasal.com/courses/aspire-for-dotnet-developers</loc>
+</url>
+<url>
+  <loc>https://juliocasal.com/courses/stripe-payments-for-dotnet-developers</loc>
 </url>
 <url>
   <loc>https://juliocasal.com/courses/csharp-unittesting-essentials</loc>
