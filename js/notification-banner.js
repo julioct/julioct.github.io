@@ -15,7 +15,7 @@
         enabled: true,
 
         // Banner content
-        message: "Bootcamp Expanded: <strong>Now with CI/CD & Testing • 30% Off</strong> • Ends Jan 6",
+        message: "Launch Week: <strong>.NET 10 Bootcamp • 30% Off</strong> • Ends Jun 14",
 
         // Button configuration
         button: {
@@ -26,7 +26,7 @@
         // Countdown timer configuration (set endDate to null to disable countdown)
         countdown: {
             enabled: true, // Set to true to enable countdown timer
-            endDate: new Date('January 6, 2026 23:59:59 PST') // Same as countdown-timer.js
+            endDate: new Date('June 15, 2026 06:00:00 PDT') // Same as countdown-timer.js
         },
 
         // Styling
