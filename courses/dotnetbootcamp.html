@@ -94,7 +94,9 @@
     <title>.NET Developer Bootcamp</title>
 
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/fontawesome-all.css" rel="stylesheet">
@@ -102,6 +104,7 @@
     <link href="../css/magnific-popup.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/countdown-timer.css" rel="stylesheet">
+    <link href="../css/bootcamp.css" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon">
@@ -122,7 +125,7 @@
 
                 <!-- Image Logo -->
                 <!-- <a class="navbar-brand logo-image" href="index.html">
-                <img src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
+                <img loading="lazy" src="../images/FFF_NETACADEMY_LO.png" class="d-inline-block align-top" alt="alternative">
             </a> -->
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -172,7 +175,7 @@
 
             <!-- Bootcamp Image -->
             <div class="image-container mb-5">
-                <img class="img-fluid" src="../images/bootcamp/bootcamp-hero.png" width="90%" alt="alternative">
+                <img fetchpriority="high" class="img-fluid" src="../images/bootcamp/bootcamp-hero.png" width="90%" alt="The .NET Developer Bootcamp">
             </div>
 
             <!-- CTA Button -->
@@ -239,16 +242,16 @@
     </header> <!-- end of header -->
     <!-- end of header -->
     <div id="problem-statement" class="basic-1"
-        style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0;">
+        style="background: linear-gradient(135deg, var(--bg-alt) 0%, #eef1f7 100%); padding: 80px 0;">
         <div class="container">
             <!-- Main Headline -->
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="h2-heading display-3 font-weight-bold mb-4" style="color: #2c3e50;">
+                    <h2 class="h2-heading display-3 font-weight-bold mb-4" style="color: var(--ink);">
                         Build the Production .NET Systems<br>
-                        <span style="color: #e74c3c;">Companies Actually Hire For</span>
+                        <span style="color: var(--brand);">Companies Actually Hire For</span>
                     </h2>
-                    <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                    <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: var(--muted);">
                         You know C# basics, but companies need developers who can build <strong>production-ready systems
                             on Azure</strong>.
                         There's a massive gap between tutorials and real-world applications.
@@ -257,7 +260,7 @@
             </div> <!-- Skills breakdown -->
             <div class="row mt-4 mb-4 justify-content-center">
                 <div class="col-lg-8">
-                    <div class="text-left" style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: #5a6c7d;">
+                    <div class="text-left" style="max-width: 800px; margin: 0 auto; font-size: 1.4rem; color: var(--muted);">
                         <div
                             style="display: grid; grid-template-columns: 90px 1fr; gap: 0px 20px; align-items: start; margin-bottom: 30px;">
                             <div style="justify-self: start; padding-top: 8px;">
@@ -297,7 +300,7 @@
 
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <!-- <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                    <!-- <p class="lead mb-5" style="font-size: 1.4rem; max-width: 800px; margin: 0 auto; color: var(--muted);">
                         Stop learning in isolation. Start building like a professional.
                     </p> -->
                     <div class="mt-5 animate-fade-in"
@@ -305,7 +308,7 @@
                         Ready to close the gap?
                         <div class="d-flex justify-content-center mt-2">
                             <span style="display: inline-block; animation: bounceDown 1.5s infinite;">
-                                <i class="fas fa-arrow-down fa-2x" style="color: #6a82fb;"></i>
+                                <i class="fas fa-arrow-down fa-2x" style="color: var(--brand);"></i>
                             </span>
                         </div>
                     </div>
@@ -315,11 +318,11 @@
     </div> <!-- end of basic-1 -->
 
     <!-- Application Demo Section -->
-    <div id="application-demo" class="basic-1 py-5" style="background: #f8f9fa;">
+    <div id="application-demo" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="h2-heading display-4 font-weight-bold mb-4" style="color: #2c3e50;">
+                    <h2 class="h2-heading display-4 font-weight-bold mb-4" style="color: var(--ink);">
                         See The Full System In Action
                     </h2>
                     <style>
@@ -398,7 +401,7 @@
                             <span></span>
                         </span>
                     </div>
-                    <p class="lead mt-4" style="font-size: 1.2rem;  margin: 1.5rem auto 0; color: #5a6c7d;">
+                    <p class="lead mt-4" style="font-size: 1.2rem;  margin: 1.5rem auto 0; color: var(--muted);">
                         A full walkthrough of the Game Store, the e-commerce app at the center of the Bootcamp.
                     </p>
                     <script src="https://player.vimeo.com/api/player.js"></script>
@@ -421,16 +424,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
+                    <span class="pillar-eyebrow">Part 1 · API Foundations</span>
                     <h2 class="h2-heading display-4 font-weight-bold">Master the Essential .NET Web Development Stack
                     </h2>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-exchange-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">REST API Development</h5>
@@ -438,10 +441,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-layer-group fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Vertical Slice Architecture</h5>
@@ -449,10 +451,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-plug fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Dependency Injection</h5>
@@ -460,10 +461,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-database fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Entity Framework Core</h5>
@@ -471,10 +471,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-sync-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Asynchronous Programming</h5>
@@ -482,10 +481,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-clipboard-list fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Logging</h5>
@@ -493,10 +491,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-cogs fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Middleware</h5>
@@ -504,10 +501,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-exclamation-triangle fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Error Handling</h5>
@@ -515,10 +511,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-key fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">JWT Authentication</h5>
@@ -526,10 +521,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-shield-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Authorization Policies</h5>
@@ -537,10 +531,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-users-cog fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Keycloak Identity Provider</h5>
@@ -548,10 +541,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-exchange-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">OAuth 2.0 & OpenID Connect</h5>
@@ -562,30 +554,30 @@
         </div>
     </section>
 
-    <section id="rest-api" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="rest-api" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspnet-core-essentials/rest-api.jpg" alt="Build solid REST APIs"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/aspnet-core-essentials/rest-api.jpg" alt="Build solid REST APIs"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Build Solid REST APIs</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>REST Fundamentals:</strong> Stop building inconsistent APIs - master HTTP
                                 verbs, status codes, and resource conventions that other developers expect.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Client-Friendly Design:</strong> Build APIs that don't frustrate frontend
                                 teams - proper error handling and consistent response formats.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Minimal APIs:</strong> Build lightweight endpoints with simple functions -
                                 perfect for microservices and scenarios where full MVC controllers are overkill.</span>
@@ -601,27 +593,27 @@
             <div class="row">
                 <div class="col-lg-6 my-auto order-lg-2">
                     <div class="image-container">
-                        <img class="img-fluid rounded"
-                            src="../images/courses/aspnet-core-essentials/vertical-slice-arch.jpg" alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded"
+                            src="../images/courses/aspnet-core-essentials/vertical-slice-arch.jpg" alt="Vertical slice architecture in ASP.NET Core">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Use Vertical Slice Architecture</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Feature-Based Organization:</strong> Group everything for each feature
                                 together so you can find and modify related code in one place.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Reduced Coupling:</strong> Build features that don't break each other - each
                                 slice contains its own models and logic without shared dependencies.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Simple Changes Stay Simple:</strong> Stop touching 6 different files just to
                                 add one field - make feature changes in one focused area.</span>
@@ -632,33 +624,33 @@
         </div> <!-- end of container -->
     </section>
 
-    <section id="dependency-injection" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="dependency-injection" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded"
-                            src="../images/courses/aspnet-core-essentials/dependency-injection.jpg" alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded"
+                            src="../images/courses/aspnet-core-essentials/dependency-injection.jpg" alt="Dependency injection in ASP.NET Core">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Stop Hardcoding Dependencies</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Automatic Dependency Management:</strong> Register services once and let the
                                 container handle construction and injection - stop manually wiring dependencies.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Depend on Interfaces, Not Concrete Classes:</strong> Code against abstractions
                                 instead of specific implementations - swap implementations without changing business
                                 logic.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Cleaner, More Maintainable Code:</strong> Services focus on core
                                 responsibility instead of managing dependencies - easier to modify and reuse.</span>
@@ -673,27 +665,27 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center order-lg-2">
-                    <img src="../images/courses/aspnet-core-essentials/ef-core.jpg" alt="Entity Framework Core"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/aspnet-core-essentials/ef-core.jpg" alt="Entity Framework Core"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Simplify Data Access with Entity Framework
                         Core</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Code-First Database Design:</strong> Define your database schema in C# classes
                                 and let EF generate the database - no more manual CREATE TABLE statements.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Type-Safe Database Queries:</strong> Write database queries using LINQ instead
                                 of raw SQL strings - catch errors at compile time, not in production.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Automatic Change Tracking:</strong> EF tracks entity modifications and
                                 generates INSERT, UPDATE, DELETE statements - stop writing tedious data access
@@ -705,31 +697,31 @@
         </div>
     </section>
 
-    <section id="async-programming" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="async-programming" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspnet-core-advanced/async-programming.jpg"
+                    <img loading="lazy" src="../images/courses/aspnet-core-advanced/async-programming.jpg"
                         alt="Asynchronous Programming" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Scale with Asynchronous Programming</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Dramatically Better Scalability Under Load:</strong> Handle thousands of
                                 concurrent requests without blocking threads.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Responsive User Interfaces That Don't Freeze:</strong> Keep your UI reactive
                                 during long-running operations like API calls or file processing.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Efficient Resource Utilization:</strong> Free up expensive threads while
                                 waiting for I/O operations to complete - serve more users with the same hardware
@@ -746,29 +738,29 @@
             <div class="row">
                 <div class="col-lg-6 my-auto order-lg-2">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/courses/aspnet-core-advanced/logging.jpg"
+                        <img loading="lazy" class="img-fluid rounded" src="../images/courses/aspnet-core-advanced/logging.jpg"
                             alt="Logging">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Production-Ready Logging</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Master the Three Logging Approaches:</strong> Learn when to use WebApplication
                                 logger, ILoggerFactory, and ILogger - stop guessing which one fits your
                                 situation.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Configure Log Levels Like a Pro:</strong> Control what gets logged in
                                 different environments without touching your code - debug locally, stay clean in
                                 production.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Use ASP.NET Core's Built-In Infrastructure:</strong> Skip third-party
                                 logging libraries and use the framework's native logging that's already tuned for
@@ -780,33 +772,33 @@
         </div> <!-- end of container -->
     </section>
 
-    <section id="middleware" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="middleware" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/courses/aspnet-core-advanced/middleware.jpg"
+                        <img loading="lazy" class="img-fluid rounded" src="../images/courses/aspnet-core-advanced/middleware.jpg"
                             alt="Middleware">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Handle Cross Cutting Concerns With
                         Middleware</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Build Custom Cross-Cutting Logic:</strong> Create reusable middleware classes
                                 that handle concerns across your application - write once, apply everywhere.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Control Request Processing Order:</strong> Master the pipeline sequence to
                                 ensure middleware runs in the right order - no mysterious bugs.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Use Built-In HTTP Logging:</strong> ASP.NET Core's HTTP logging
                                 middleware gives detailed diagnostics with zero custom code.</span>
@@ -821,26 +813,26 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center order-lg-2">
-                    <img src="../images/courses/aspnet-core-advanced/error-handling.png" alt="Error Handling"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/aspnet-core-advanced/error-handling.png" alt="Error Handling"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Global Error Handling</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Implement Global Exception Handling:</strong> Catch all unhandled errors in
                                 one place - no more scattered try-catch blocks.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Add Problem Details Support:</strong> Return standardized error responses that
                                 APIs and clients can actually use.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Catch and Log Errors Properly:</strong> Capture meaningful error data for
                                 debugging without exposing sensitive details.</span>
@@ -851,33 +843,33 @@
         </div>
     </section>
 
-    <section id="pagination-and-search" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="pagination-and-search" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded"
+                        <img loading="lazy" class="img-fluid rounded"
                             src="../images/courses/aspnet-core-advanced/pagination-search.png"
                             alt="Pagination and Search">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Efficient Pagination & Search</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Deliver Fast API Responses:</strong> Return manageable chunks of data instead
                                 of massive payloads - keep your APIs responsive.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Use LINQ's Skip and Take:</strong> .NET's built-in query operators give
                                 clean pagination code with no manual loops or counters.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Implement Case-Insensitive Search:</strong> Add search functionality that
                                 works like users expect - no more exact-match frustration.</span>
@@ -892,26 +884,26 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center order-lg-2">
-                    <img src="../images/courses/aspnet-core-advanced/file-upload.png" alt="File Upload"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/aspnet-core-advanced/file-upload.png" alt="File Upload"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Secure File Uploads</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Handle File Uploads Safely:</strong> Validate file types and sizes before
                                 saving - prevent your server from getting overwhelmed.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Avoid File Name Conflicts:</strong> Generate unique file names automatically -
                                 no more files overwriting each other.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Serve Uploaded Files Easily:</strong> Configure your app to serve uploaded
                                 images and documents directly to users.</span>
@@ -922,32 +914,32 @@
         </div>
     </section>
 
-    <section id="jwt-authentication" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="jwt-authentication" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspnet-core-security/token-based-auth.jpg"
+                    <img loading="lazy" src="../images/courses/aspnet-core-security/token-based-auth.jpg"
                         alt="Asynchronous Programming" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Secure APIs with JWT Authentication</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Decode and Understand JWTs:</strong> Learn JWT structure and how to quickly
                                 generate and read token
                                 contents using built-in .NET tooling.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Configure JWT Validation:</strong> Set up ASP.NET Core to properly validate
                                 incoming tokens and protect your minimal API endpoints.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Access JWT Claims in Endpoints:</strong> Extract user information from
                                 validated tokens in your API endpoints.</span>
@@ -963,27 +955,27 @@
             <div class="row">
                 <div class="col-lg-6 my-auto order-lg-2">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/courses/aspnet-core-security/authorization.jpg"
+                        <img loading="lazy" class="img-fluid rounded" src="../images/courses/aspnet-core-security/authorization.jpg"
                             alt="Logging">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">ASP.NET Core Authorization</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Master All Authorization Types:</strong> Learn role-based, claims-based,
                                 policy-based, and resource-based authorization techiques.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Build Flexible Authorization Policies:</strong> Create reusable policies that
                                 combine claims and roles for complex access rules.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Secure Individual Resources:</strong> Implement resource-based authorization
                                 to control access to specific data records.</span>
@@ -994,31 +986,31 @@
         </div> <!-- end of container -->
     </section>
 
-    <section id="Keycloak" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="Keycloak" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center order-lg-2">
-                    <img src="../images/courses/aspnet-core-security/keycloak.jpg" alt="Keycloak"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/aspnet-core-security/keycloak.jpg" alt="Keycloak"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Professional Identity Management with
                         Keycloak</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Easy Local Setup:</strong> Run Keycloak locally with just Docker - learn
                                 industry standard authorization techniques hands-on without cloud complexity.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Developer-Friendly Admin:</strong> Manage users, roles, and permissions
                                 through a simple web interface - no custom admin code needed.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Straightforward ASP.NET Core Integration:</strong> Configure your API to validate
                                 Keycloak tokens and transform claims - production-ready identity integration made
@@ -1035,27 +1027,27 @@
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/courses/aspnet-core-security/oauth-code-flow.jpg"
+                        <img loading="lazy" class="img-fluid rounded" src="../images/courses/aspnet-core-security/oauth-code-flow.jpg"
                             alt="OIDC">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">OAuth 2.0 and OpenID Connect</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Master the Authorization Code Flow:</strong> Understand the complete token
                                 exchange process with scopes, refresh tokens, and secure client configuration.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>OAuth 2.0:</strong> Stop hardcoding authentication into every endpoint -
                                 delegate to a dedicated server that issues trusted tokens.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>OpenID Connect:</strong> Get verified user identity (name, email, roles)
                                 right after OAuth login - standardized identity claims across any provider.</span>
@@ -1082,6 +1074,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
+                    <span class="pillar-eyebrow">Part 2 · Cloud &amp; Deployment</span>
                     <h2 class="h2-heading display-4 font-weight-bold">The Cloud-Native Azure Toolkit Every .NET Dev
                         Needs.
                     </h2>
@@ -1089,11 +1082,10 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-App-Services.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-App-Services.svg"
                                     alt="Azure App Service" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure App Service</h5>
@@ -1101,11 +1093,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-Azure-Database-PostgreSQL-Server.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-Azure-Database-PostgreSQL-Server.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure PostgreSQL</h5>
@@ -1113,11 +1104,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-Storage-Accounts.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-Storage-Accounts.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure Storage</h5>
@@ -1125,11 +1115,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-Front-Door-and-CDN-Profiles.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-Front-Door-and-CDN-Profiles.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure Front Door</h5>
@@ -1137,11 +1126,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-Managed-Identities.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-Managed-Identities.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Managed Identities</h5>
@@ -1149,11 +1137,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/Microsoft_Entra_ID_color_icon.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/Microsoft_Entra_ID_color_icon.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Microsoft Entra ID</h5>
@@ -1161,11 +1148,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/azure-for-dotnet-developers/icon-service-Key-Vaults.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/icon-service-Key-Vaults.svg"
                                     alt="Entra ID" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure Key Vault</h5>
@@ -1173,10 +1159,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fab fa-docker fa-4x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Docker Containers</h5>
@@ -1184,11 +1169,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/docker-for-dotnet-developers/icon-service-Container-Registries.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/icon-service-Container-Registries.svg"
                                     alt="Azure Container Registry" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Container Registry</h5>
@@ -1196,11 +1180,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/docker-for-dotnet-developers/icon-service-Worker-Container-App.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/icon-service-Worker-Container-App.svg"
                                     alt="Azure Container Apps" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Azure Container Apps</h5>
@@ -1208,10 +1191,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-heartbeat fa-4x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Health Checks</h5>
@@ -1219,11 +1201,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/aspire-for-dotnet-developers/bicep-logo.png"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/bicep-logo.png"
                                     alt="Azure Bicep" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Azure Bicep</h5>
@@ -1231,11 +1212,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-3">
-                            <div class="mb-3" style="color: #2d4de0;">
-                                <img src="../images/courses/aspire-for-dotnet-developers/dotnet-aspire-logo.svg"
+                            <div class="mb-3 tech-icon">
+                                <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/dotnet-aspire-logo.svg"
                                     alt="Aspire" style="width: 70px; height: 70px;">
                             </div>
                             <h5 class="card-title font-weight-bold mb-0">Aspire</h5>
@@ -1246,31 +1226,31 @@
         </div>
     </section>
 
-    <section id="appservice" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="appservice" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/appservice.jpg" alt="Azure App Service"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/appservice.jpg" alt="Azure App Service"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">App Service: Deploy Without the Server
                         Hassle</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Deploy from VS Code:</strong> Push your .NET apps to Azure directly from VS
                                 Code with simple commands - no server configuration needed.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Managed .NET Hosting:</strong> Focus on writing code instead of managing
                                 servers - Azure handles scaling and uptime automatically.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Azure-Native Configuration:</strong> Use built-in environment variables and
                                 connection strings - production-ready apps without complex setup.</span>
@@ -1285,29 +1265,29 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/entra.jpg" alt="Microsoft Entra ID"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/entra.jpg" alt="Microsoft Entra ID"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Production Identity Management with Entra ID
                     </h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Production-Ready Integration:</strong> Stop running your own identity server -
                                 integrate with Microsoft's managed service that handles scaling and security
                                 updates.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Complex Configuration Simplified:</strong> Stop getting lost in Microsoft's
                                 confusing docs - learn the exact steps to integrate .NET apps with Entra ID without
                                 frustration.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Complete Identity Management:</strong> Manage users, roles, and permissions
                                 through Entra's admin portal - no more building custom login flows.</span>
@@ -1317,31 +1297,31 @@
             </div>
         </div>
     </section>
-    <section id="storage" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="storage" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/storage.jpg" alt="Docker Desktop"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/storage.jpg" alt="Docker Desktop"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Azure Storage: File Storage Without Limits
                     </h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Offload File Storage:</strong> Stop storing uploads on your server's disk -
                                 let Azure handle file storage while your .NET app stays lightweight.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Simple .NET Integration:</strong> Upload, download, and manage files with
                                 Azure's .NET SDK - no complex file management needed.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Infinite Scalability:</strong> Handle millions of files without worrying about
                                 disk space - Azure Storage scales automatically as your app grows.</span>
@@ -1356,27 +1336,27 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/frontdoor.jpg" alt="Azure Front Door"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/frontdoor.jpg" alt="Azure Front Door"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Global File Delivery with Azure Front Door
                     </h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Global Performance:</strong> Deliver images from the nearest Azure edge
                                 location - faster downloads for customers worldwide.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Hide Storage URLs:</strong> Serve files through custom domain names instead of
                                 exposing your actual Azure Storage account URLs.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Handle Traffic Spikes:</strong> Let Azure's CDN absorb sudden traffic surges -
                                 your storage account stays protected from overload.</span>
@@ -1386,30 +1366,30 @@
             </div>
         </div>
     </section>
-    <section id="managed-identities" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="managed-identities" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/managed-identities.jpg" alt="Docker Desktop"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/managed-identities.jpg" alt="Docker Desktop"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Passwordless Azure Authentication</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Passwordless Azure Access:</strong> Stop hardcoding connection strings and API
                                 keys - let Azure automatically authenticate your services.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Zero Credential Management:</strong> Eliminate password rotation and secret
                                 storage complexity - Azure handles authentication automatically.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Secure by Default:</strong> Access Storage, databases and more without storing
                                 any secrets in config files or environment variables.</span>
@@ -1424,27 +1404,27 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/postgres.jpg"
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/postgres.jpg"
                         alt="Managed PostgreSQL Database" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Production-Grade PostgreSQL Database</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Managed Infrastructure:</strong> Stop managing database servers - Azure
                                 handles patching, backups, and scaling automatically.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Passwordless Database Access: </strong> Connect using managed identities - no
                                 database passwords or credentials in your .NET code.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>High Availability:</strong> Ensure 99.99% uptime with automatic failover and
                                 backups - focus on code, not database maintenance.</span>
@@ -1455,30 +1435,30 @@
         </div>
     </section>
 
-    <section id="keyvault" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="keyvault" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/azure-for-dotnet-developers/keyvault.jpg" alt="Azure Key Vault"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/keyvault.jpg" alt="Azure Key Vault"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Secure Secret Management with Key Vault</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Secure Secret Storage:</strong> Stop hardcoding API keys in config files -
                                 store sensitive data encrypted in Azure's secure vault.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Easy .NET Integration:</strong> Access secrets programmatically using .NET
                                 configuration system - it plugs directly into your apps.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Centralized Access Control:</strong> Manage who accesses which secrets across
                                 environments - audit trails and rotation included.</span>
@@ -1493,31 +1473,31 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/docker-for-dotnet-developers/docker-dashboard.png" alt="Docker Desktop"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/docker-dashboard.png" alt="Docker Desktop"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Transform .NET Apps Into Bulletproof
                         Containers</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Finally understand what containers actually are and why you need them</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Build, run, and test your .NET apps as containers, ready to publish to the
                                 cloud</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Build container images 45% smaller using optimizations and best practices</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Use modern .NET tooling to skip complex Docker commands and avoid typical
                                 errors</span>
@@ -1527,35 +1507,35 @@
             </div>
         </div>
     </section>
-    <section id="azure-container-apps" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="azure-container-apps" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/docker-for-dotnet-developers/container-apps-portal.png"
+                    <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/container-apps-portal.png"
                         alt="Azure Container Apps" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Production Containers Made Simple with
                         Container Apps</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Deploy production containers without becoming a Kubernetes expert</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Pay $0 when nobody's using your app with automatic scale-to-zero</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Sleep better with auto-scaling that handles traffic spikes</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Rollback disasters in 30 seconds with revision management</span>
                         </li>
@@ -1568,28 +1548,28 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/docker-for-dotnet-developers/health-checks.jpg" alt="Health Checks"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/health-checks.jpg" alt="Health Checks"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Build Self-Healing APIs</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Automatic Recovery from Failures:</strong> Azure restarts your containers
                                 automatically when health checks fail - no more midnight calls to manually restart
                                 crashed APIs.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Monitor Your Entire Stack:</strong> Health checks verify your database,
                                 storage, external APIs, and every dependency - complete visibility into what's
                                 working.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Prevent Bad Deployments:</strong> New container versions won't receive traffic
                                 until they pass health checks, protecting your users from broken releases.</span>
@@ -1599,32 +1579,32 @@
             </div>
         </div>
     </section>
-    <section id="aspire-orchestration" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="aspire-orchestration" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspire-for-dotnet-developers/aspire-resources.png"
+                    <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/aspire-resources.png"
                         alt="Aspire dashboard showing every service running after one F5"
                         class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Hit F5 and Your Whole System Boots</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Clone, F5, ready:</strong> one keystroke boots every service, database, and
                                 frontend in dependency order. The clone, crash, fix, crash, fix morning is gone.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>One stack, every machine:</strong> your whole system is declared once in C# and
                                 checked into git, so every teammate and every laptop runs exactly what you run.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>No setup scripts:</strong> no docker-compose.yml, no shell scripts, no "run
                                 these 7 commands first" README. The application model is the setup.</span>
@@ -1638,27 +1618,27 @@
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspire-for-dotnet-developers/infrastructure-as-code.png"
+                    <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/infrastructure-as-code.png"
                         alt="Aspire AppHost in C#" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Define Your Entire System in C#</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>One model, every dependency:</strong> declare your databases, caches, queues,
                                 identity, and your own services in a single C# AppHost project.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Add a dependency in 1 line:</strong> drop in Postgres, Redis, Key Vault, or
                                 Azure Storage, and Aspire owns the lifecycle, wiring, and connection strings.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>No connection-string plumbing:</strong> <code>.WithReference</code> injects the
                                 config into each service, and <code>.WaitFor</code> holds startup until it's
@@ -1669,33 +1649,33 @@
             </div>
         </div>
     </section>
-    <section id="infrastructure-as-code" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="infrastructure-as-code" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/aspire-for-dotnet-developers/aspire-dashboard-traces.jpg"
+                    <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/aspire-dashboard-traces.jpg"
                         alt="Aspire dashboard" class="img-fluid rounded shadow screenshot-img mb-3"
                         style="max-width: 100%; width: 100%;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Production-Ready Defaults, Not Boilerplate</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Skip ~40 lines per service:</strong> one <code>AddServiceDefaults()</code> call
                                 wires resilience (retries, timeouts, circuit breakers), service discovery, and health
                                 endpoints.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Health and traces on first F5:</strong> a built-in dashboard shows distributed
                                 traces, logs, metrics, and the health of every service. No Jaeger, Prometheus, or Grafana
                                 to set up.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Find the slow call in seconds:</strong> follow one request across your API,
                                 database, and external services with real timing.</span>
@@ -1710,28 +1690,28 @@
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded"
+                        <img loading="lazy" class="img-fluid rounded"
                             src="../images/courses/aspire-for-dotnet-developers/azure-portal.png"
                             alt="Azure resource group provisioned by azd">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Same Model, Dev to Production</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Deploy with one command:</strong> <code>azd up</code> provisions the resource
                                 group, pushes your images, and stands up an Azure Container App per service.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Dev, QA, and prod match:</strong> every environment is generated from the same
                                 C# model in git, so what you tested is what ships.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Go beyond the defaults with Bicep:</strong> drop down to Bicep for any Azure
                                 resource or setting Aspire doesn't cover, referenced straight from the AppHost.</span>
@@ -1755,14 +1735,15 @@
     <!-- end of Enroll Button -->
 
 
-    <section id="course-features" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="course-features" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
+                    <span class="pillar-eyebrow">Part 3 · Scale &amp; Resilience</span>
                     <h2 class="h2-heading display-4 font-weight-bold">Build Production-Ready Systems with Queues,
                         Workers, and Transactions
                     </h2>
-                    <p class="lead" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #5a6c7d;">
+                    <p class="lead" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--muted);">
                         Learn the patterns and techniques that separate junior developers from senior engineers, by
                         building
                         a real e-commerce system with queues, workers, transactions, webhooks, and the outbox
@@ -1773,10 +1754,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-credit-card fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Stripe Checkout</h5>
@@ -1784,10 +1764,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-link fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Webhook Processing</h5>
@@ -1795,10 +1774,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-exchange-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Transactions & Data Consistency</h5>
@@ -1806,10 +1784,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-sync-alt fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Idempotency Patterns</h5>
@@ -1817,10 +1794,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-stream fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Azure Service Bus Queues</h5>
@@ -1828,10 +1804,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-inbox fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">The Outbox Pattern</h5>
@@ -1839,10 +1814,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0"
-                        style="border-radius: 1rem; transition: transform 0.3s ease;">
+                    <div class="card h-100 border-0 tech-card">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3" style="color: #2d4de0;">
+                            <div class="mb-3 tech-icon">
                                 <i class="fas fa-cogs fa-3x"></i>
                             </div>
                             <h5 class="card-title font-weight-bold mb-2">Background Workers</h5>
@@ -1859,27 +1833,27 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/stripe-payments-for-dotnet-developers/checkout-screenshot.jpg" alt="Checkout"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/checkout-screenshot.jpg" alt="Checkout"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Accept Secure Payments with Stripe</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Create secure checkout sessions using the Stripe API and handle the complete
                                 payment
                                 lifecycle</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Use Stripe's ready-made SDKs, pre-built checkout forms, and solid libraries to
                                 simplify integration.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Let Stripe handle PCI compliance, fraud detection, and regulatory requirements
                                 automatically.</span>
@@ -1889,30 +1863,30 @@
             </div>
         </div>
     </section>
-    <section id="webhooks" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="webhooks" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/stripe-payments-for-dotnet-developers/webhooks-diagram.jpg" alt=""
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/webhooks-diagram.jpg" alt=""
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Instant Notifications with Webhooks</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Receive instant notifications from Stripe the moment transactions complete using
                                 secure webhook endpoints</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Eliminate inefficient polling patterns that waste resources and introduce
                                 delays</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Ensure events are authentic and protect your system from malicious requests</span>
                         </li>
@@ -1925,27 +1899,27 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/stripe-payments-for-dotnet-developers/transactions-diagram.jpg" alt="transactions"
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/transactions-diagram.jpg" alt="transactions"
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Ensure Data Consistency with
                         Transactions</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Avoid data inconsistencies when coordinating operations across multiple database
                                 tables.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Use database transactions to ensure multiple operations succeed or fail together,
                                 preventing data inconsistencies.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Use execution strategies to automatically retry failed transactions caused by
                                 transient errors</span>
@@ -1955,33 +1929,33 @@
             </div>
         </div>
     </section>
-    <section id="queues-and-workers" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="queues-and-workers" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/stripe-payments-for-dotnet-developers/queue-diagram.jpg" alt=""
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/queue-diagram.jpg" alt=""
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Scale Safely with Queues and Workers
                     </h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Implement message queues using Azure Service Bus to decouple services and handle
                                 async
                                 operations reliably at scale.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Build background worker services that process queued messages independently from
                                 your
                                 API, improving responsiveness and resilience.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Implement the outbox pattern to reliably publish messages, ensuring no events are
                                 lost.</span>
@@ -1995,25 +1969,25 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="../images/courses/stripe-payments-for-dotnet-developers/laptop-to-azure.jpg" alt=""
-                        class="img-fluid rounded shadow screenshot-img mb-3" style="max-width: 100%; width: 100%;">
+                    <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/laptop-to-azure.jpg" alt=""
+                        class="img-fluid rounded shadow screenshot-img mb-3">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Deploy to Production on Azure</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Deploy your complete e-commerce system to Azure with one command.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Experience your frontend and backend working together in Azure, with PostgreSQL,
                                 Service Bus and Stripe integration.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span>Define your entire application model with Aspire and infrastructure as
                                 code.</span>
@@ -2036,14 +2010,14 @@
             <div class="row mb-2">
                 <div class="col d-flex align-items-center">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/courses/aspnet-core-security/frontends-blazor.jpg"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/courses/aspnet-core-security/frontends-blazor.jpg"
+                            alt="Blazor frontend for the Game Store app">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col d-flex align-items-center">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/courses/aspnet-core-security/frontends-react.jpg"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/courses/aspnet-core-security/frontends-react.jpg"
+                            alt="React frontend for the Game Store app">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -2061,8 +2035,8 @@
             <div class="row mb-2">
                 <div class="col-lg-6 d-flex align-items-center mx-auto">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/courses/aspnet-core-security/frontends-browser.jpg"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/courses/aspnet-core-security/frontends-browser.jpg"
+                            alt="Game Store app running in the browser">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -2087,7 +2061,7 @@
             <div class="row mt-4">
                 <div class="col-lg-12 mx-auto text-center">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-stage2.png" alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded" src="../images/bootcamp/bootcamp-stage2.png" alt="Building and shipping modern .NET systems">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -2117,8 +2091,8 @@
             <div class="row">
                 <div class="col-lg-12 mx-auto text-center">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-progression.png"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded" src="../images/bootcamp/bootcamp-progression.png"
+                            alt="Bootcamp learning path progression">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -2528,7 +2502,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/aspnet-core-essentials/box-mockup.png" alt="ASP.NET Core Essentials"
+                        <img loading="lazy" src="../images/courses/aspnet-core-essentials/box-mockup.png" alt="ASP.NET Core Essentials"
                             class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -2869,7 +2843,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/aspnet-core-advanced/box-mockup.png" alt="ASP.NET Core Advanced"
+                        <img loading="lazy" src="../images/courses/aspnet-core-advanced/box-mockup.png" alt="ASP.NET Core Advanced"
                             class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -3273,7 +3247,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/aspnet-core-security/box-mockup.png" alt="ASP.NET Core Security"
+                        <img loading="lazy" src="../images/courses/aspnet-core-security/box-mockup.png" alt="ASP.NET Core Security"
                             class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -3857,7 +3831,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/azure-for-dotnet-developers/box-mockup.png"
+                        <img loading="lazy" src="../images/courses/azure-for-dotnet-developers/box-mockup.png"
                             alt="Azure For .NET Developers" class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -4132,7 +4106,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/docker-for-dotnet-developers/box-mockup.png"
+                        <img loading="lazy" src="../images/courses/docker-for-dotnet-developers/box-mockup.png"
                             alt="Docker for .NET Developers" class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -4398,7 +4372,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/aspire-for-dotnet-developers/box-mockup.png"
+                        <img loading="lazy" src="../images/courses/aspire-for-dotnet-developers/box-mockup.png"
                             alt="Aspire for .NET Developers" class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -4921,7 +4895,7 @@
                 <!-- Sidebar with course information -->
                 <div class="col-lg-4">
                     <div class="course-info-box">
-                        <img src="../images/courses/stripe-payments-for-dotnet-developers/box-mockup.png"
+                        <img loading="lazy" src="../images/courses/stripe-payments-for-dotnet-developers/box-mockup.png"
                             alt="Stripe Payments for .NET Developers" class="img-fluid mb-3 course-box-image">
                         <h4>Course Includes</h4>
                         <ul class="course-info-list">
@@ -4954,8 +4928,8 @@
             <div class="row mt-4">
                 <div class="col-lg-12 mx-auto text-center">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/bootcamp/bonus-courses_boxes.png"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded" src="../images/bootcamp/bonus-courses_boxes.png"
+                            alt="Bonus courses included with the bootcamp">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -4969,28 +4943,28 @@
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
                         <!-- TODO: Insert Integration Testing course image here -->
-                        <img class="img-fluid rounded"
+                        <img loading="lazy" class="img-fluid rounded"
                             src="../images/courses/integration-testing/integration-testing-screenshot.jpg"
                             alt="Integration Testing">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Integration Testing for .NET Developers</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Test Real Database Operations:</strong> Use Test Containers to run integration
                                 tests against actual PostgreSQL and other databases without complex setup.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Mock Authentication & External Services:</strong> Configure fake
                                 authentication and use NSubstitute to mock external APIs for isolated testing.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Test Workers & Message Queues:</strong> Verify background workers and Service
                                 Bus integration with realistic test scenarios using AutoFixture for test data
@@ -5003,33 +4977,33 @@
     </section>
 
     <!-- CI/CD with Azure DevOps Mini Course -->
-    <section id="cicd-azure-devops" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="cicd-azure-devops" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto order-lg-2">
                     <div class="image-container">
                         <!-- TODO: Insert CI/CD course image here -->
-                        <img class="img-fluid rounded" src="../images/courses/ci-cd/ci-cd-screenshot.jpg"
+                        <img loading="lazy" class="img-fluid rounded" src="../images/courses/ci-cd/ci-cd-screenshot.jpg"
                             alt="CI/CD with Azure DevOps">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto order-lg-1">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Azure DevOps CI/CD for .NET Developers</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Build & Deploy Pipelines:</strong> Create automated CI/CD pipelines in Azure
                                 DevOps that build, test, and deploy your .NET applications on every commit.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Speed Up Pipeline Performance:</strong> Enable parallel jobs and parallelize
                                 test execution to dramatically reduce build times and get faster feedback.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Master Pipeline Configuration:</strong> Understand YAML pipeline structure,
                                 add custom build and test steps, and generate production-ready pipelines from
@@ -5048,29 +5022,29 @@
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
                         <!-- TODO: Insert Observability course image here -->
-                        <img class="img-fluid rounded"
+                        <img loading="lazy" class="img-fluid rounded"
                             src="../images/courses/troubleshooting/troubleshooting-screenshot.jpg" alt="Observability">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
                     <h2 class="h2-heading text-center mb-3 animate-fade-in">Troubleshooting .NET Apps in Azure</h2>
-                    <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                    <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Monitor with Azure Application Insights:</strong> Set up comprehensive
                                 monitoring for your .NET applications with metrics, performance data, and error
                                 tracking.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Trace Requests End-to-End:</strong> Use distributed tracing to follow
                                 requests through your application components and identify bottlenecks and
                                 failures.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Debug Production Issues Fast:</strong> Learn to analyze logs, metrics, and
                                 traces to quickly diagnose and resolve real-world performance problems.</span>
@@ -5082,22 +5056,19 @@
     </section>
 
     <!-- Microservices Mini Course (NEW - featured) -->
-    <section id="microservices" class="basic-1 py-5" style="background: #f8f9fa;">
+    <section id="microservices" class="basic-1 py-5 section-alt">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div
-                        style="position: relative; background: #ffffff; border: 2px solid #2d4de0; border-radius: 1.25rem; box-shadow: 0 15px 45px rgba(45, 77, 224, 0.18); padding: 3rem 2rem 2rem;">
-                        <div class="text-center"
-                            style="position: absolute; top: -18px; left: 0; right: 0;">
-                            <span
-                                style="display: inline-block; background: #e74c3c; color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.45rem 1.2rem; border-radius: 50rem; box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);">&#10022;
+                    <div class="featured-card">
+                        <div class="featured-badge-wrap">
+                            <span class="featured-badge">&#10022;
                                 Brand-New Course</span>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-lg-6 my-auto order-lg-2">
                                 <div class="image-container">
-                                    <img class="img-fluid rounded"
+                                    <img loading="lazy" class="img-fluid rounded"
                                         src="../images/courses/microservices/microservices-architecture.png"
                                         alt="Microservices for .NET Developers">
                                 </div> <!-- end of image-container -->
@@ -5106,24 +5077,24 @@
                                 <h2 class="h2-heading text-center mb-3 animate-fade-in">Microservices for .NET
                                     Developers</h2>
                                 <p class="text-center mb-3"
-                                    style="font-size: 0.95rem; font-weight: 600; color: #2d4de0;">Full source code
+                                    style="font-size: 0.95rem; font-weight: 600; color: var(--accent);">Full source code
                                     included. Video lessons available July 2026.</p>
-                                <ul class="list-unstyled" style="font-size:1.15rem;">
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                                <ul class="list-unstyled feature-list">
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Break the Monolith Into Services:</strong> Split the Game Store app into
                                 independent Catalog, Basket, Ordering, Payments, and Notifications services, each with
                                 its own database, behind a YARP API gateway.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Connect Services Sync and Async:</strong> Call services with typed clients,
                                 service discovery, and resilience, then decouple them with events over Kafka.</span>
                         </li>
-                        <li class="d-flex align-items-start mb-2" style="gap:0.75rem;">
-                            <span style="color:#2d4de0; flex-shrink:0; margin-top:2px;"><i
+                        <li class="feature-check d-flex align-items-start mb-2">
+                            <span class="feature-check-icon"><i
                                     class="fas fa-check fa-lg"></i></span>
                             <span><strong>Coordinate a Distributed Workflow:</strong> Build a custom ordering saga over
                                 Azure Service Bus with a refund path, then deploy the whole system to Azure.</span>
@@ -5147,14 +5118,14 @@
             <div class="row mb-2">
                 <div class="col d-flex align-items-center">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/courses/aspnet-core-essentials/course-video-player.png"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/courses/aspnet-core-essentials/course-video-player.png"
+                            alt="Course video player">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col d-flex align-items-center">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/courses/aspnet-core-essentials/illustrated-handouts.png"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/courses/aspnet-core-essentials/illustrated-handouts.png"
+                            alt="Illustrated course handouts">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -5172,20 +5143,20 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
-                <div class="col" style="color: #2e3676;">
+                <div class="col" style="color: var(--brand-ink);">
                     <i class="fa-solid fa-laptop-code fa-7x"></i>
                     <h5>Full Source Code</h5>
                     <p>Full source code linked to every coding lesson so you can easily compare and troubleshoot.
                     </p>
                 </div> <!-- end of col -->
-                <div class="col" style="color: #2e3676;">
+                <div class="col" style="color: var(--brand-ink);">
                     <i class="fa-solid fa-closed-captioning fa-7x"></i>
                     <h5>Full English captions</h5>
                     <p class="line-spaced-paragraph">In case you need them, English captions can be turned on quickly
                         for any of the lessons.</p>
                 </div> <!-- end of col -->
                 <div class="col">
-                    <img class="img-fluid" src="../images/certificate.jpg" style="height: 135px;" alt="certificate">
+                    <img loading="lazy" class="img-fluid" src="../images/certificate.jpg" style="height: 135px;" alt="certificate">
                     <h5 class="mt-2">Course Certificate</h5>
                     <p>Get a certificate of completion when you finish the course to show off on your LinkedIn profile.
                     </p>
@@ -5211,8 +5182,8 @@
             <div class="row">
                 <div class="col-lg-6 my-auto">
                     <div class="image-container">
-                        <img class="img-fluid rounded" src="../images/bootcamp/bootcamp-teaching-method.png"
-                            alt="alternative">
+                        <img loading="lazy" class="img-fluid rounded" src="../images/bootcamp/bootcamp-teaching-method.png"
+                            alt="The bootcamp teaching method">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6 my-auto">
@@ -5309,13 +5280,15 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-5 col-xl-4" id="onetime-payment-container">
-                    <div class="card best-value" style="box-shadow: 0 0 10px #eb8a2f;">
-                        <div class="card-body">
-                            <div class="card-title best-value">ONE-TIME PAYMENT</div>
-                            <div class="text-center mt-2 mb-3" style="color: #fff; font-size: 0.9rem;">
-                                Lifetime access. Best price.
+                <div class="col-lg-7 col-xl-6" id="onetime-payment-container">
+                    <div class="card best-value pricing-card">
+                        <div class="card-body text-center pricing-offer">
+                            <div class="card-title best-value">.NET DEVELOPER BOOTCAMP</div>
+                            <div class="pricing-anchor">11 courses · 45+ hours of video</div>
+                            <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
                             </div>
+                            <img loading="lazy" class="img-fluid pricing-boxes"
+                                src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
                             <div id="full-price" class="mb-2">
                                 <div>
                                     <span class="currency best-value">$</span>
@@ -5335,75 +5308,11 @@
                                 </div>
                             </div>
                             <div class="button-wrapper"> <a id="onetime-payment-link" class="btn-solid-lg"
-                                    href="https://learn.dotnetacademy.io/enroll/3789750?price_id=4748767">Enroll Now</a>
+                                    href="https://learn.dotnetacademy.io/enroll/3789750?price_id=4748767">Enroll
+                                    Now</a>
                             </div>
-                            <hr class="cell-divide-hr">
-                            <div class="card-image d-flex align-items-center justify-content-center pl-2 pr-2 mb-3">
-                                <img class="img-fluid" style="object-fit: contain;"
-                                    src="../images/bootcamp/bootcamp-boxes.png" alt="alternative">
-                            </div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">ASP.NET Core Essentials</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">ASP.NET Core Advanced</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">ASP.NET Core Security</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Azure For .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Docker for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Aspire for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Stripe Payments for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Integration Testing for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Azure DevOps CI/CD for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Troubleshooting .NET Apps in Azure</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-video best-value"></i>
-                                    <div class="media-body">Microservices for .NET Developers</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-laptop-code best-value"></i>
-                                    <div class="media-body">Full source code</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-closed-captioning best-value"></i>
-                                    <div class="media-body">Full English captions</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-project-diagram best-value"></i>
-                                    <div class="media-body">Beautifully illustrated handouts</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-award best-value"></i>
-                                    <div class="media-body">Course certificates</div>
-                                </li>
-                            </ul>
+                            <div class="pricing-reassure"><i class="fas fa-lock"></i> One-time payment ·
+                                Lifetime access</div>
                         </div>
                     </div>
                 </div>
@@ -5419,7 +5328,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3">
                     <div class="image-container">
-                        <img class="img-fluid" src="../images/Julio-7.jpg" alt="alternative">
+                        <img loading="lazy" class="img-fluid" src="../images/Julio-7.jpg" alt="Julio Casal, instructor">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
@@ -5451,7 +5360,7 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-lg-10">
                     <div class="image-container" style="margin-bottom:0">
-                        <img class="img-fluid" src="../images/dotnet_developer_salary.png"
+                        <img loading="lazy" class="img-fluid" src="../images/dotnet_developer_salary.png"
                             alt="Average Senior .NET Developer salary in the United States">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col-->
