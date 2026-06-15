@@ -12,7 +12,7 @@
     // Banner configuration - change these values to update the banner site-wide
     const bannerConfig = {
         // Set to true to show the banner, false to hide it
-        enabled: true,
+        enabled: false,
 
         // Banner content
         message: "Launch Week: <strong>.NET 10 Bootcamp • 30% Off</strong> • Ends Jun 14",

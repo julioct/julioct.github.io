@@ -11,8 +11,8 @@
     {
         // Sale configuration - set these to enable a discount, leave empty for full price
         window.salePricingInfo = {
-            couponCode: "BOOTCAMP10", // Coupon appended to the checkout link (e.g., "SUMMER2025")
-            discountPercentage: "30", // Discount percentage for the one-time payment (e.g., "20")
+            couponCode: "", // Coupon appended to the checkout link (e.g., "SUMMER2025")
+            discountPercentage: "", // Discount percentage for the one-time payment (e.g., "20")
             discountDollars: ""       // Alternative: a fixed dollar amount off
         };
 
