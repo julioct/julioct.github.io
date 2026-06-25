@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "The .NET 10 Bootcamp: Price, How to Buy, and a Bonus Course"
+title: "The .NET 10 Bootcamp: A New Microservices Course and What's Inside"
 date: 2026-06-06
 issue-number: 118
 featured-image: 2026-06-06/featured.png
-featured-image-alt: The new .NET 10 Developer Bootcamp edition, price and launch details
+featured-image-alt: The new .NET 10 Developer Bootcamp edition with a new microservices course
 ---
 
 *Read time: 2 minutes*
@@ -13,7 +13,7 @@ The new .NET 10 edition of the [.NET Developer Bootcamp]({{ site.url }}/courses/
 
 Last Saturday I [walked through everything inside it]({{ site.url }}/blog/Inside-The-New-Dotnet-10-Bootcamp): all included courses, what changed in each, and what ships with every one.
 
-Today, the price and how to buy.
+Today, what's new and how to get it.
 
 But first, one thing I didn't mention last week.
 
@@ -52,13 +52,9 @@ This course is included free with the new edition. Everyone who gets the .NET 10
 
 <br/>
 
-## The price, and how to buy
+## How to get it
 
-The full .NET 10 bootcamp is $497. For launch week, it's **$348**, 30% off.
-
-You pay once and keep lifetime access. The purchase link goes live Tuesday, June 9, at 6 AM PDT.
-
-The $348 price stays until Sunday, June 14, at 11:59 PM PDT. After that it goes back to $497.
+You can find the full bootcamp and enroll [here]({{ site.url }}/courses/dotnetbootcamp). You pay once and get lifetime access to all courses, including the new microservices course.
 
 <br/>
 
@@ -68,6 +64,6 @@ What started as a routine .NET 8 to .NET 10 bump turned into the biggest bootcam
 
 This is the version of the bootcamp I always wanted to create, and I'm very excited to share it with you.
 
-If you've been waiting to jump in, Tuesday is the day.
+If you've been waiting to jump in, now is the time.
 
 See you then!

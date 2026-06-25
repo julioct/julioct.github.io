@@ -173,7 +173,7 @@ The idea is the same as before: let the owner publish changes, let consumers kee
 
 What changed is how it's built. Without a messaging framework, the consumer loop, idempotency, and the eventual-consistency handling are all code you write and own. That's more work, and it's also the only way to really understand what those frameworks were doing for you.
 
-If you want to go deeper on this, it's one slice of a new course I built, **Microservices for .NET Developers**, included in the .NET 10 edition of my [.NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp) (30% off for one more day).
+If you want to go deeper on this, it's one slice of a new course I built, **Microservices for .NET Developers**, included in the .NET 10 edition of my [.NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 It takes a monolithic version of the game store app and splits it into Catalog, Basket, Ordering, Payments, and Notifications, then wires them together with events, the ordering saga, a YARP gateway, and Aspire.
 
