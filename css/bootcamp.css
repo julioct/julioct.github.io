@@ -190,6 +190,54 @@ body {
     box-shadow: 0 8px 18px rgba(95, 77, 238, .35);
 }
 
+/* ---------- Course stats (lessons · duration) ---------- */
+.course-stats {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.course-stats-pill {
+    display: inline-block;
+    background: #1e1b2e;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.course-stats-pill .sep {
+    opacity: 0.35;
+    margin: 0 0.4rem;
+}
+
+/* ---------- Topic pills (Microservices section) ---------- */
+.topic-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.topic-pill {
+    display: inline-block;
+    background: rgba(95, 77, 238, 0.08);
+    color: var(--brand);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50rem;
+    border: 1px solid rgba(95, 77, 238, 0.2);
+    white-space: nowrap;
+}
+
+.topic-pill-count {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+}
+
 /* ---------- Pricing: compact purple focal card ---------- */
 /* Reuses the shared purple `.cards-2 .card.best-value` (light text on brand). Now that
    the card is compact and centered, the purple makes the section stand out against the
