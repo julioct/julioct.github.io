@@ -13,7 +13,7 @@ We are ready for launch!
 
 Earlier this week I finished editing and uploading Course 1 of the new bootcamp to the learning site, and a few All-Access Pass members already started the first few modules.
 
-If you are new to the newsletter, I'm referring to the [.NET Backend Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), which is a multi-course program for C# developers that want to get into cloud development with .NET.
+If you are new to the newsletter, I'm referring to the [The .NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp), which is a multi-course program for C# developers that want to get into cloud development with .NET.
 
 The bootcamp launches with the first course, **ASP.NET Core Essentials**, this **Tuesday, November 12**, and the other 8 planned courses will follow at roughly 1 course per month starting December.
 
@@ -115,10 +115,6 @@ Stay tuned!
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

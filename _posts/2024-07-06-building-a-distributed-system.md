@@ -20,8 +20,6 @@ So, what have I been working on?
 ​
 
 ### **A new .NET bootcamp**
-For my upcoming .NET Bootcamp, I was originally thinking of creating an updated version of the PlayEconomy system I built for the [.NET Microservices program](https://dotnetmicroservices.com/).
-
 However, many of you told me you'd prefer to see how to go from the small CRUD-based system I cover in my [.NET REST API Essentials](https://juliocasal.com/courses/dotnet-restapi-essentials) and [Blazor Essentials](https://juliocasal.com/courses/blazor-essentials) courses and take them into a full-blown e-commerce system.
 
 So I took on the challenge and I've been building this new system for the last two months or so.
@@ -167,10 +165,6 @@ Until next week!
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

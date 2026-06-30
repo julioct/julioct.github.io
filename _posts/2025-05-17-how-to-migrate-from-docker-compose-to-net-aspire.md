@@ -175,8 +175,6 @@ But how does your .NET API actually talk to those resources? And how did gamesto
 
 I’ll walk you through that part in next week’s newsletter — including how Aspire handles connection strings and wiring behind the scenes.
 
-If you don’t want to wait, the full working project — ready to download and run with F5 — is already in [my Patreon Community](https://patreon.com/juliocasal){:target="_blank"}.
-
 ​
 
 ### **Wrapping up**
@@ -192,10 +190,6 @@ Until next time!
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

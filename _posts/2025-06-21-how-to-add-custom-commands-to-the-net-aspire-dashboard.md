@@ -189,24 +189,18 @@ Once you start thinking this way, you'll probably find dozens of opportunities t
 <br/>
 
 ### **Last Bootcamp Sale Ends Tomorrow**
-Tomorrow at midnight is the last chance to get the **.NET Backend Developer Bootcamp**. After that, the 5 included courses will only be available individually.
+Tomorrow at midnight is the last chance to get the **The .NET Developer Bootcamp**. After that, the 5 included courses will only be available individually.
 
 If you've been thinking about diving deeper into building real-world .NET apps for Azure, using containers and .NET Aspire, now's the time.
 
 The bootcamp covers everything from ASP.NET Core fundamentals to deploying production applications to Azure with .NET Aspire — exactly the kind of skills that make you valuable to any team building modern .NET systems.
 
-**​[Join the .NET Backend Developer Bootcamp here]({{ site.url }}/courses/dotnetbootcamp)​**
-
-P.S. The first 100 people also get 2 exclusive bonuses (Building Microservices with .NET + Q&A session with me). Those bonus spots are filling up quickly.
+**​[Join the The .NET Developer Bootcamp here]({{ site.url }}/courses/dotnetbootcamp)​**
 
 ---
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

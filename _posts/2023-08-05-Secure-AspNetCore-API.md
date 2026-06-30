@@ -260,16 +260,12 @@ Mission accomplished.
 
 If you want a more advanced authorization policy, so you can require specific user roles or check for custom claims, I also got a [YouTube video](https://youtu.be/wVFfPrB5kEw) where I cover those details.
 
-And if you are thinking on taking your API to production, I cover how to take things to the next level with OIDC and Microsoft Entra ID in my **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
+And if you are thinking on taking your API to production, I cover how to take things to the next level with OIDC and Microsoft Entra ID in my **[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**.
 
 ---
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

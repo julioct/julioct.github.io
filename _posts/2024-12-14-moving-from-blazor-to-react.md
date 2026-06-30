@@ -46,8 +46,6 @@ Now, how to get started with React?
 ​
 
 ### **Starting a new React project**
-To be honest, I'm not new to React, since I already used it to build the front-end included in [my microservices program](https://dotnetmicroservices.com).
-
 However, after a quick research, I found out that **create-react-app**, a toolchain built by Meta to help devs quickly set up new React apps, is now obsolete and no longer recommended.
 
 There are several options available these days, and I spent a few hours trying to understand the preferred option.
@@ -188,10 +186,6 @@ Julio
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

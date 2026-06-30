@@ -210,7 +210,7 @@ public class MongoBasketRepository(IMongoDatabase database) : IBasketRepository
 }
 ```
 
-If you want to take things further, you could add methods to get all baskets, delete a basket, and more. I go over those, and even how to implement a generic MongoDB repository, in my [.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp).
+If you want to take things further, you could add methods to get all baskets, delete a basket, and more. I go over those, and even how to implement a generic MongoDB repository, in my [The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp).
 
 Now let's see what to do to register that repository in the application.
 
@@ -380,10 +380,6 @@ Mission accomplished!
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

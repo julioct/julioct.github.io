@@ -145,8 +145,6 @@ So, after running **azd infra synth**, you'll end up with one YAML file per each
 
 ​
 
-Those YAML files are pretty much K8s deployment files, which is why learning K8s before using ACA is a big time saver. For a deep dive into K8s for .NET devs, check out my [.NET Microservices program](https://dotnetmicroservices.com).
-
 The generated YAML files are huge, so here I'll just show you the piece I added to enable the health probes for one of the microservices:
 
 
@@ -187,10 +185,6 @@ Julio
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

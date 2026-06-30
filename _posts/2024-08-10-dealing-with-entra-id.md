@@ -22,8 +22,6 @@ Let's go over Entra ID and how I'm integrating it into the bootcamp application.
 ### **What we are trying to achieve**
 We want to enable OIDC for our distributed system since it's the industry standard for authentication and authorization. And, in this case, our OpenID provider is Entra ID.
 
-I won't explain how the OIDC protocol works here since I have already covered it on [my website](https://juliocasal.com/blog/Securing-Aspnet-Core-Applications-With-OIDC-And-Microsoft-Entra-ID) and dedicated an entire module of my [microservices program ](https://dotnetmicroservices.com)to OAuth 2.0 and OpenId Connect.
-
 But here's a high-level view of how things should work:
 
 
@@ -283,10 +281,6 @@ Julio
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

@@ -11,8 +11,6 @@ issue-number: 44
 
 This was both a challenging and a bit frustrating week as was trying to wrap my head around the right way to introduce **event-carried state transfer** via **Kafka** into the Game Store application I'm preparing for the upcoming [.NET Developer Bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
 
-I have already done this via RabbitMQ and Azure Service Bus in my [microservices program](https://dotnetmicroservices.com), but there are limitations that I was hoping Kafka could help address to take things to the next level in this new bootcamp.
-
 So today I'll tell you about the scenario that I think is a perfect fit for Kafka, how it relates to even-driven microservices, and how I'm integrating all that into the bootcamp.
 
 But first, let me tell you a bit about **.NET Aspire 8.1** and the new Keycloak support.
@@ -208,10 +206,6 @@ Until next time.
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

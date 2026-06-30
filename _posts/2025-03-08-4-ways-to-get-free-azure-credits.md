@@ -104,8 +104,6 @@ This is an amazing option for folks who are starting a small business and who ne
 
 If your business qualifies, you can get anywhere between $1,000 to $150,000 in Azure credits, which is mind-blowing.
 
-This is what I used to complete all the Azure training content included in my [microservices program](https://dotnetmicroservices.com) and is what I'm heavily using to produce the new training coming to [the bootcamp](https://juliocasal.com/courses/dotnetbootcamp).
-
 What's crazy is that they actually encourage you to spend more credits by achieving a series of milestones tied to the growth of your business.
 
 
@@ -158,10 +156,6 @@ Julio
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

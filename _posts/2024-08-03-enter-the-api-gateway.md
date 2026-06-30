@@ -56,8 +56,6 @@ That should provision a local RabbitMQ container for local development, or an Az
 
 Now, that's the easy part, but how to make the Catalog microservice (and all your microservices) publish and consume messages to and from either RabbitMQ or Azure Service Bus without a bunch of if-else logic all over the place?
 
-Well, using [MassTransit](https://juliocasal.com/blog/MassTransit)! The amazing messaging framework that can abstract all those details from you. I cover MassTransit extensively in my [microservices program](https://dotnetmicroservices.com/), and it will be a core pillar of the new bootcamp too.
-
 For instance, here's how the Catalog microservice configures the message broker via MassTransit on startup:
 
 
@@ -170,10 +168,6 @@ Until next time!
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

@@ -256,7 +256,7 @@ Which returns this:
 
 Mission accomplished!
 
-And if standing up and maintaining your own AKS cluster is too much, you can instead use the Azure Container Apps (ACA) service, covered in detail in my **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**, which abstracts away the Kubernetes complexity and lets you focus on your code.
+And if standing up and maintaining your own AKS cluster is too much, you can instead use the Azure Container Apps (ACA) service, covered in detail in my **[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**, which abstracts away the Kubernetes complexity and lets you focus on your code.
 
 Welcome to cloud-native development!
 
@@ -264,10 +264,6 @@ Welcome to cloud-native development!
 
 <br/>
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

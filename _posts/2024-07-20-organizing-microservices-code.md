@@ -20,8 +20,6 @@ Besides that, this week I've been going deep into structuring the code for the m
 ### **Multi-repo: this is the way**
 When you do microservices, you want to make sure you stick to a multi-repo approach, meaning that you should store each microservice code in a separate git repository.
 
-I go into the many reasons of why this is important and how that compares to a mono-repo approach in my [microservices program](https://dotnetmicroservices.com). But, in a nutshell, multi-repo gives you:
-
 1.  <span>**Clear ownership:** Nothing better than having full control over your microservice repo, which will result in you taking good care of it. In a mono repo there's only so much you can do.</span>
 2.  <span>**Isolation and Decoupling**: It sets a natural wall between microservices, which enforces the separation of concerns and minimizes the risk of unintended interactions between services.</span>
 3.  <span>**Developer onboarding:** Devs can easily make sense of a small microservice codebase when they join. Very different than having to understand a massive mono repo (very frustrating)</span>
@@ -134,10 +132,6 @@ Until next time!
 <br/>
 
 
-**Whenever you’re ready, there are 3 ways I can help you:**
+**Whenever you’re ready, here’s how I can help:**
 
-1. **[.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.
-
-2. **​[Building Microservices With .NET](https://dotnetmicroservices.com)**: Transform the way you build .NET systems at scale.
-
-3. **​[​Get the full source code](https://www.patreon.com/juliocasal){:target="_blank"}**: Download the working project from this article, grab exclusive course discounts, and join a private .NET community.
+**[The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp)**: A complete path from ASP.NET Core fundamentals to building, containerizing, and deploying production-ready, cloud-native apps on Azure.

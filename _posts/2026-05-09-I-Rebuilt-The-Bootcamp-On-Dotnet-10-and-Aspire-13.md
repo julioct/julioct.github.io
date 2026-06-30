@@ -9,7 +9,7 @@ featured-image-alt: I Rebuilt the Bootcamp on .NET 10
 
 *Read time: 5 minutes*
 
-A few months back, I sat down to do what I thought was a routine job. Bump the [.NET Backend Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp) from .NET 8 to .NET 10. New target framework, new package versions, re-record a few lessons, ship it.
+A few months back, I sat down to do what I thought was a routine job. Bump the [The .NET Developer Bootcamp]({{ site.url }}/courses/dotnetbootcamp) from .NET 8 to .NET 10. New target framework, new package versions, re-record a few lessons, ship it.
 
 That plan lasted about a day.
 

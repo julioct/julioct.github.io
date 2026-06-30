@@ -9,7 +9,7 @@ featured-image-alt: All 10 bootcamp courses, rebuilt on .NET 10
 
 *Read time: 8 minutes*
 
-It's almost here. Tuesday, June 9, 6 AM PT, the new .NET 10 edition of the .NET Developer Bootcamp goes live (formerly the .NET Backend Developer Bootcamp).
+It's almost here. Tuesday, June 9, 6 AM PT, the new .NET 10 edition of the .NET Developer Bootcamp goes live (formerly the The .NET Developer Bootcamp).
 
 Two Saturdays ago I [walked through the LTS upgrade itself]({{ site.url }}/blog/The-LTS-Upgrade-Dotnet-8-To-Dotnet-10), what changed between .NET 8 and .NET 10 worth caring about.
 
