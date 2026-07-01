@@ -10,7 +10,7 @@
     document.addEventListener("DOMContentLoaded", function ()
     {
         // Sale configuration - set these to enable a discount, leave empty for full price
-        window.salePricingInfo = {
+        window.salePricingInfo = window.salePricingInfo || {
             couponCode: "", // Coupon appended to the checkout link (e.g., "SUMMER2025")
             discountPercentage: "", // Discount percentage for the one-time payment (e.g., "20")
             discountDollars: ""       // Alternative: a fixed dollar amount off
