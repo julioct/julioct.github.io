@@ -206,6 +206,12 @@ For now, the Command Palette plus the file explorer context menus cover most of 
 
 If you learned .NET inside Visual Studio, working without a solution will feel wrong for a while. That's fine. Your projects don't care which tree view you use to open them.
 
+Prefer to watch the full walkthrough? Here's the video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Gcik8XO-R0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br/>
+
 And that's it for today.
 
 See you next Saturday.
