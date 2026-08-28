@@ -12,10 +12,10 @@
     // Banner configuration - change these values to update the banner site-wide
     const bannerConfig = {
         // Set to true to show the banner, false to hide it
-        enabled: false,
+        enabled: true,
 
         // Banner content
-        message: "Launch Week: <strong>.NET 10 Bootcamp • 30% Off</strong> • Ends Jun 14",
+        message: "Back to School Sale: <strong>.NET Developer Bootcamp • 30% Off</strong> • Ends Sep 6",
 
         // Button configuration
         button: {
@@ -26,7 +26,7 @@
         // Countdown timer configuration (set endDate to null to disable countdown)
         countdown: {
             enabled: true, // Set to true to enable countdown timer
-            endDate: new Date('June 15, 2026 06:00:00 PDT') // Same as countdown-timer.js
+            endDate: new Date('September 7, 2026 06:00:00 PDT') // Same as countdown-timer.js
         },
 
         // Styling
