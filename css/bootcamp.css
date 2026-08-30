@@ -301,3 +301,97 @@ body {
 
 /* drop the dated SVG wave */
 
+
+/* ---------- Limited-time bonus stack (BTS26 sale only) ----------
+   Remove this block together with the #sale-bonuses section in
+   courses/dotnetbootcamp.html when the sale ends. */
+.bonus-card {
+    position: relative;
+    background: var(--bg);
+    border: 2px solid rgba(235, 138, 47, .35);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 3rem 2rem 2rem;
+}
+
+.bonus-badge {
+    display: inline-block;
+    background: var(--warning);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.2rem;
+    border-radius: 50rem;
+    box-shadow: 0 8px 18px rgba(235, 138, 47, .35);
+}
+
+.bonus-item {
+    height: 100%;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.bonus-item .bonus-item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+}
+
+.bonus-item .bonus-item-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.bonus-item .feature-list {
+    font-size: 1rem;
+}
+
+.bonus-price {
+    display: inline-block;
+    background: rgba(235, 138, 47, .1);
+    color: var(--warning);
+    border: 1px solid rgba(235, 138, 47, .3);
+    border-radius: 50rem;
+    padding: 0.3rem 0.95rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+}
+
+.bonus-price s {
+    opacity: .6;
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+
+.bonus-deadline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.bonus-deadline strong {
+    color: var(--ink);
+}
+
+.bonus-fulfillment {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+#pricing .pricing-bonus {
+    color: #ffd9b0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: -0.75rem;
+    margin-bottom: 1.25rem;
+}

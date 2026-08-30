@@ -5125,6 +5125,159 @@
         </div> <!-- end of container -->
     </section>
 
+    <!-- ============================================================
+         BTS26 SALE BONUS - REMOVE WHEN THE SALE ENDS
+         Paired CSS: the "Limited-time bonus stack" block at the bottom
+         of css/bootcamp.css. Also remove the .pricing-bonus line inside
+         the #pricing card below. Self-hides after the sale end date.
+         ============================================================ -->
+    <section id="sale-bonuses" class="basic-1 py-5 section-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bonus-card">
+                        <div class="featured-badge-wrap">
+                            <span class="bonus-badge">&#10022; Free this week only</span>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-9 mx-auto text-center">
+                                <h2 class="h2-heading mb-3">Two production-ready templates for your own projects</h2>
+                                <p class="line-spaced-paragraph mb-2">In the bootcamp you build the Game Store from
+                                    scratch. Then you'll want to start a project of your own, and that means wiring up
+                                    auth, database, messaging, CI/CD, and Azure deployment all over again.</p>
+                                <p class="line-spaced-paragraph mb-0">These two templates come with all of it already
+                                    working, on the same .NET 10 and Aspire stack you learn in the bootcamp.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <!-- Bonus 1: Backend Blueprint PRO 10 -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container mb-3">
+                                        <img loading="lazy" class="img-fluid rounded"
+                                            src="../images/dotnet-backend-blueprint-pro-hero.jpg"
+                                            alt=".NET Backend Blueprint PRO 10 template">
+                                    </div>
+                                    <span class="bonus-price"><s>$39</s> Yours free</span>
+                                    <div class="bonus-item-title">.NET Backend Blueprint PRO 10</div>
+                                    <p class="bonus-item-sub">A production-ready .NET backend template with zero-config
+                                        auth and messaging.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Pub/sub messaging that already works.</strong> Azure Service
+                                                Bus with item event notifications, shared message contracts, and a local
+                                                emulator so you can run everything offline.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>A background worker service included.</strong> Offloads heavy
+                                                work through asynchronous message handling so your API stays
+                                                responsive.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Integration tests and 2 CI/CD pipelines.</strong> Test
+                                                containers, messaging mocks, and auth scenarios, plus ready pipelines
+                                                for GitHub Actions and Azure DevOps.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Production health checks and Application Insights.</strong>
+                                                Distributed tracing, custom metrics, and containers that self-heal when
+                                                a dependency goes down.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">.NET 10</span>
+                                        <span class="topic-pill">Aspire</span>
+                                        <span class="topic-pill">Keycloak</span>
+                                        <span class="topic-pill">PostgreSQL</span>
+                                        <span class="topic-pill">Service Bus</span>
+                                        <span class="topic-pill">Codespaces</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+
+                            <!-- Bonus 2: Full-Stack Blueprint 10 -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container mb-3">
+                                        <img loading="lazy" class="img-fluid rounded"
+                                            src="../images/dotnet-fullstack-blueprint-hero.jpg"
+                                            alt=".NET Full-Stack Blueprint 10 template">
+                                    </div>
+                                    <span class="bonus-price"><s>$39</s> Yours free</span>
+                                    <div class="bonus-item-title">.NET Full-Stack Blueprint 10</div>
+                                    <p class="bonus-item-sub">A production-ready .NET 10 and React template with
+                                        zero-config auth, database, messaging, and Azure deployment.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>A React 19 front end already talking to the API.</strong>
+                                                TypeScript, Vite for fast reloads, React Router 7, and Bootstrap
+                                                5.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Login working end to end.</strong> Keycloak OAuth2/OIDC with
+                                                JWT validation, protected routes, and tokens attached to your API calls
+                                                for you.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>One YARP reverse proxy for both halves.</strong> Serves the
+                                                static build and routes /api/* to the backend in production.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Deploys to Azure with one command.</strong> Container Apps,
+                                                PostgreSQL Flexible Server, Keycloak, and managed identities.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">React 19</span>
+                                        <span class="topic-pill">TypeScript</span>
+                                        <span class="topic-pill">.NET 10</span>
+                                        <span class="topic-pill">YARP</span>
+                                        <span class="topic-pill">Azure</span>
+                                        <span class="topic-pill">CI/CD</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto text-center">
+                                <p class="bonus-deadline mb-2"><strong>$78 of templates, free with every enrollment
+                                        before Sunday, September 6 at 11:59 PM PT.</strong> After the sale they go back
+                                    to $39 each.</p>
+                                <p class="bonus-fulfillment">Both templates are in your account the moment you enroll.
+                                    Nothing to claim.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of bonus-card -->
+                </div> <!-- end of col-12 -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section>
+
+    <script>
+        // BTS26 bonus visibility - matches the end date in js/notification-banner.js
+        document.addEventListener("DOMContentLoaded", function ()
+        {
+            var saleEnd = new Date('September 7, 2026 06:00:00 PDT');
+            if (new Date() < saleEnd) { return; }
+            ['#sale-bonuses', '#pricing .pricing-bonus'].forEach(function (sel)
+            {
+                var el = document.querySelector(sel);
+                if (el) { el.style.display = 'none'; }
+            });
+        });
+    </script>
+    <!-- end of BTS26 SALE BONUS -->
 
 
     <!-- Enroll Button -->
@@ -5305,6 +5458,8 @@
                             <div class="pricing-anchor">11 courses · 45+ hours of video</div>
                             <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
                             </div>
+                            <!-- BTS26 SALE BONUS - remove with the #sale-bonuses section -->
+                            <div class="pricing-bonus">+ 2 bonus templates, free this week ($78 value)</div>
                             <img loading="lazy" class="img-fluid pricing-boxes"
                                 src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
                             <div id="full-price" class="mb-2">
