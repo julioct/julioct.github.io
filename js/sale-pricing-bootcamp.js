@@ -40,7 +40,7 @@
                 if (!isNaN(price)) return price;
             }
 
-            return 497; // Default fallback price for onetime payment
+            return 597; // Default fallback price for onetime payment
         };
 
         // Function to update the checkout link with the coupon code
