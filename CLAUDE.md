@@ -66,12 +66,19 @@ featured-image-alt: One concrete sentence describing the image
 
 ### Jekyll post vs Kit email
 The Jekyll post is **public**. Keep subscriber/list framing ("you're on this list", "reply to this email") out of it — that belongs only in the Kit broadcast derived from the post later.
+- In Kit drafts, always leave the template's "my website" link at `https://juliocasal.com/blog/slug` until Julio explicitly asks to replace it. He uses the placeholder while sending preview emails to himself to avoid Kit's invalid-link complaints.
 
 ## Product facts (verify before writing marketing copy)
 - The course is the **.NET Developer Bootcamp** (dropped "Backend" at the .NET 10 launch). Link: `{{ site.url }}/courses/dotnetbootcamp`.
 - In marketing copy, call the product **"Aspire"**, not ".NET Aspire". Say **Aspire 13** (not "13.2").
 - Bootcamp-page styling goes through `css/bootcamp.css` design tokens/classes, not inline hex.
 - Deeper, changeable product details (course lineup, module names, launch status) live in the memory files — check those rather than hardcoding from here.
+
+## Local preview
+- Start the server with `bundle exec jekyll serve --livereload --future` (run it in the background). It serves at http://127.0.0.1:4000.
+- `--future` is required: a draft is dated its upcoming Saturday, and without the flag Jekyll silently skips it (the build succeeds, the post just isn't there).
+- Posts serve at `/blog/<slug>.html` (slug = filename minus the date prefix).
+- Before starting, stop any running Jekyll process, or the port will be taken.
 
 ## Publishing
 - Commit/push only when Julio asks.
