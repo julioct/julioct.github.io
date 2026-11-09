@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="LWAWGOWE" defer></script>
+    <!-- / Fathom -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKWPQFHL1Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GKWPQFHL1Y');
+    </script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "mzlifzd36i");
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Every area of .NET 11 with before and after code, 18 breaking changes with their fixes, and upgrade paths from .NET 8, 9 and 10. Free PDF by Julio Casal.">
+    <meta name="author" content="Julio Casal">
+
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Julio Casal" />
+    <meta property="og:site" content="https://juliocasal.com" />
+    <meta property="og:title" content="The .NET 11 Cheat Sheet | Julio Casal" />
+    <meta property="og:description" content="Every area of .NET 11 with before and after code, 18 breaking changes with their fixes, and upgrade paths from .NET 8, 9 and 10. Free PDF." />
+    <meta property="og:image" content="https://juliocasal.com/images/dotnet11-cheat-sheet.png" />
+    <meta property="og:url" content="https://juliocasal.com/dotnet11" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://juliocasal.com/images/dotnet11-cheat-sheet.png">
+    <meta name="thumbnail" content="https://juliocasal.com/images/dotnet11-cheat-sheet.png" />
+
+    <!-- Webpage Title -->
+    <title>The .NET 11 Cheat Sheet | Julio Casal</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon">
+
+    <style>
+        body {
+            background: #1a1a2e !important;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #1a1a2e !important;
+        }
+
+        .copyright {
+            background-color: #1a1a2e !important;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(103, 126, 234, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(240, 147, 251, 0.4);
+            box-shadow: 0 10px 30px rgba(103, 126, 234, 0.2);
+        }
+
+        .benefit-card .media {
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-card h5 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .stat-pill {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #00e5a0;
+            background: rgba(0, 229, 160, 0.12);
+            border: 1px solid rgba(0, 229, 160, 0.3);
+            border-radius: 20px;
+            padding: 0.3rem 0.9rem;
+            margin: 0.2rem;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Header -->
+    <header id="header" class="header" style="padding: 1rem;">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-9 text-center">
+                    <h1 class="h2-heading text-white" style="font-size: 3rem; line-height: 1.2;">
+                        The .NET 11 Cheat Sheet
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10 text-center">
+                    <img class="img-fluid rounded" src="images/dotnet11-cheat-sheet.png"
+                        alt="The cover of The .NET 11 Cheat Sheet PDF in front of 2 inside pages with before and after C# code">
+                </div>
+            </div>
+
+            <!-- Description and CTA Section -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="line-spaced-paragraph text-white mb-3">
+                        <strong>Every area of .NET 11, with the code you write today next to the code you write on .NET 11.</strong>
+                        Plus the breaking changes with their fixes, and the upgrade path from .NET 8, 9 and 10.
+                    </p>
+                    <div class="mb-0">
+                        <span class="stat-pill">31 Features</span>
+                        <span class="stat-pill">18 Breaking Changes</span>
+                        <span class="stat-pill">3 Upgrade Paths</span>
+                    </div>
+                    <script async data-uid="31611d4559" src="https://juliocasal.kit.com/31611d4559/index.js"></script>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main-content" class="basic-1" style="padding: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-route text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Upgrade paths tested from .NET 8, 9 and 10</h5>
+                                <p>Each path was tested on a Minimal API with EF Core migrations, OpenAPI and integration tests. It includes what to do about Swashbuckle if your app started on the .NET 8 template.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-exclamation-triangle text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">18 breaking changes, each with its fix</h5>
+                                <p>OpenAPI transformers that stop compiling, a failed BackgroundService that now fails RunAsync, EF Core defaulting to SQL Server 2022, and 15 more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-gift text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">6 free wins when you upgrade</h5>
+                                <p>Split queries that drop joins they don't need, no pointless CASTs in your SQL, zstd compression on by default, all without changing a line of code.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-code text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">C# 15: union types the compiler checks</h5>
+                                <p>5 features, including closed hierarchies, extension indexers, and labeled break and continue. If you use the OneOf package today, unions are its replacement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-server text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">ASP .NET Core: async validation in Minimal APIs</h5>
+                                <p>9 features, including OpenAPI 3.2 by default, built-in OpenTelemetry tracing, the [ShortCircuit] attribute and CacheView for Blazor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-database text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">EF Core: FullJoin that translates to SQL</h5>
+                                <p>5 features, including MaxByAsync, indexes on complex types, JSON_CONTAINS on SQL Server 2025 and a config file for dotnet ef.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-book text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">.NET libraries: Zstandard compression, built in</h5>
+                                <p>4 features, including EqualityComparer.Create, JSON Lines output and a process API that captures stdout and stderr with no deadlocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-puzzle-piece text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Extensions: async options validation at startup</h5>
+                                <p>Plus generic [LoggerMessage] methods. With the log level off, 1,000 calls allocate 24,000 bytes on .NET 10 and 0 bytes on .NET 11.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-terminal text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">SDK: test limits that apply to the whole run</h5>
+                                <p>--maximum-failed-tests and --timeout now cover the whole dotnet test run across projects, and included files in file-based apps can declare their own packages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-microchip text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Runtime async: from 13 stack frames to 5</h5>
+                                <p>That's the live stack of a 3-method async chain, with your real call chain in it. It's off by default and still a preview feature.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-desktop text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">Windows Forms: toggle switches and kiosk mode</h5>
+                                <p>3 features: a modern renderer for buttons and text boxes, KioskModeManager, and SuspendPainting to replace your BeginUpdate and SuspendLayout pairs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="media">
+                            <i class="fas fa-mobile-alt text-white"
+                                style="font-size: 1.25rem; margin-right: 1rem; margin-top: 0.1rem;"></i>
+                            <div class="media-body">
+                                <h5 class="font-weight-bold">.NET MAUI moves to CoreCLR</h5>
+                                <p>It replaces Mono on Android, iOS, tvOS and Mac Catalyst. For WPF, the release notes list bug fixes only, so there are no new APIs to learn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2026 Julio Casal LLC</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/favicon.js"></script>
+</body>
+
+</html>
