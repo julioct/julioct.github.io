@@ -12,21 +12,21 @@
     // Banner configuration - change these values to update the banner site-wide
     const bannerConfig = {
         // Set to true to show the banner, false to hide it
-        enabled: false,
+        enabled: true,
 
         // Banner content
-        message: "Launch Week: <strong>.NET 10 Bootcamp • 30% Off</strong> • Ends Jun 14",
+        message: "Black Friday Sale: <strong>40% OFF EVERYTHING</strong> • Ends&nbsp;November&nbsp;30",
 
         // Button configuration
         button: {
-            text: "CLAIM OFFER",
-            url: "/courses/dotnetbootcamp"
+            text: "SAVE 40% NOW",
+            url: "/courses"
         },
 
         // Countdown timer configuration (set endDate to null to disable countdown)
         countdown: {
             enabled: true, // Set to true to enable countdown timer
-            endDate: new Date('June 15, 2026 06:00:00 PDT') // Same as countdown-timer.js
+            endDate: new Date('December 1, 2026 06:00:00 PST') // Same as countdown-timer.js
         },
 
         // Styling
@@ -55,8 +55,8 @@
             return;
         }
 
-        // Check if we're on the bootcamp page to conditionally hide the button
-        const isBootcampPage = window.location.pathname.includes('/dotnetbootcamp');
+        // Hide the button on the catalog and every course page: the sale price is already on the page
+        const isCoursePage = window.location.pathname.startsWith('/courses');
 
         // Create just the banner HTML (without the fixed-top wrapper)
         const bannerHtml = `
@@ -89,7 +89,7 @@
                         </span>
                     </div>
                     ` : ''}
-                    ${!isBootcampPage ? `
+                    ${!isCoursePage ? `
                     <a href="${bannerConfig.button.url}" class="btn btn-sm ml-3"
                         style="font-weight: bold; color: ${bannerConfig.textColor}; text-decoration: none; background-color: ${bannerConfig.buttonBackgroundColor}; border: none; padding: 8px 16px; display: flex; align-items: center; height: 44px;">
                         ${bannerConfig.button.text}</a>

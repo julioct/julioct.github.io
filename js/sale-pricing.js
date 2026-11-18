@@ -11,8 +11,8 @@
     {
         // Sale configuration - set these to enable a discount, leave empty for full price
         window.salePricingInfo = {
-            couponCode: "", // Default coupon code (empty - no hardcoded coupon)
-            discountPercentage: "", // Default discount percentage (no decimals)
+            couponCode: "BLACKFRIDAY26", // Default coupon code (empty - no hardcoded coupon)
+            discountPercentage: "40", // Default discount percentage (no decimals)
             discountDollars: "",  // Manual default discount in dollars
             allAccessCouponCode: "", // All-access pass coupon code
             allAccessDiscountPercentage: "" // All-access pass discount percentage
