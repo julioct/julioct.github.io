@@ -142,6 +142,10 @@
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#complete-learning-path">Curriculum</a>
                         </li>
+                        <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
+                        <li class="nav-item" id="nav-bonuses">
+                            <a class="nav-link page-scroll" href="#early-bonus">Bonuses</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#testimonials-latest">Testimonials</a>
                         </li>
@@ -5125,6 +5129,291 @@
         </div> <!-- end of container -->
     </section>
 
+    <!-- ============================================================
+         BF26 SALE BONUS - REMOVE WHEN THE SALE ENDS
+         Black Friday 2026: two bonus blocks.
+         #early-bonus (Ultimate C# Unit Testing Bundle) self-hides at
+         November 23, 2026 06:00 PST, together with the
+         .pricing-bonus-early lines in both #pricing cards.
+         #sale-bonuses (Blueprint templates) self-hides at
+         December 1, 2026 06:00 PST, together with every .pricing-bonus line.
+         The #nav-bonuses menu link points at #early-bonus, switches to
+         #sale-bonuses on Nov 23, and hides on Dec 1.
+         Paired CSS: the "Limited-time bonus stack" block at the bottom
+         of css/bootcamp.css.
+         ============================================================ -->
+    <section id="early-bonus" class="basic-1 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bonus-card">
+                        <div class="featured-badge-wrap">
+                            <span class="bonus-badge">&#10022; Free until Sunday, Nov 22</span>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-9 mx-auto text-center">
+                                <h2 class="h2-heading mb-3">The Ultimate C# Unit Testing Bundle</h2>
+                                <p class="line-spaced-paragraph mb-0">Fast unit tests for the business logic inside
+                                    your app, with xUnit, FluentAssertions, NSubstitute and Moq.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <!-- Bonus 1: C# Unit Testing Essentials -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container bonus-item-box mb-3">
+                                        <img loading="lazy" class="img-fluid"
+                                            src="../images/courses/csharp-unittesting-essentials/UnitTesting-Essentials-Box_Mockup.png"
+                                            alt="C# Unit Testing Essentials course">
+                                    </div>
+                                    <span class="bonus-price"><s>$47</s> Yours free</span>
+                                    <div class="bonus-item-title">C# Unit Testing Essentials</div>
+                                    <p class="bonus-item-sub">2.5 hours. Write your first C# unit tests and keep them
+                                        fast and reliable.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Catch defects early.</strong> Catch regressions as soon as
+                                                they happen and refactor your C# code with confidence, in VS Code or
+                                                Visual Studio.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Write maintainable tests.</strong> Structure your tests
+                                                following best practices, and use FluentAssertions so your test code
+                                                reads like plain English.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Create fast and reliable tests.</strong> Use NSubstitute and
+                                                Moq to isolate dependencies so your tests stay fast.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">xUnit</span>
+                                        <span class="topic-pill">FluentAssertions</span>
+                                        <span class="topic-pill">NSubstitute</span>
+                                        <span class="topic-pill">Moq</span>
+                                        <span class="topic-pill">VS Code</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+
+                            <!-- Bonus 2: Mastering C# Unit Testing -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container bonus-item-box mb-3">
+                                        <img loading="lazy" class="img-fluid"
+                                            src="../images/courses/mastering-csharp-unittesting/UnitTesting-Advanced-Box_Mockup.png"
+                                            alt="Mastering C# Unit Testing course">
+                                    </div>
+                                    <span class="bonus-price"><s>$97</s> Yours free</span>
+                                    <div class="bonus-item-title">Mastering C# Unit Testing</div>
+                                    <p class="bonus-item-sub">4 hours. Unit testing the way experienced devs do it, on
+                                        real-world ASP.NET Core apps.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Best practices and antipatterns.</strong> The common mistakes
+                                                most devs make when writing unit tests, and how experienced devs write
+                                                them.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Testing real-world ASP.NET Core applications.</strong> What to
+                                                test in a real app, what to do with code that's too hard to unit test,
+                                                and how to test layer by layer.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Revealing the truth with code coverage.</strong> How to turn on
+                                                code coverage for your projects and make it work for your team.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">ASP.NET Core</span>
+                                        <span class="topic-pill">Best Practices</span>
+                                        <span class="topic-pill">Antipatterns</span>
+                                        <span class="topic-pill">Code Coverage</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto text-center">
+                                <p class="bonus-deadline mb-2"><strong>$144 of unit testing courses, free with every
+                                        enrollment until Sunday, November 22 at 11:59 PM PT.</strong> After Sunday they're
+                                    no longer included.</p>
+                                <p class="bonus-fulfillment">Both courses are in your account the moment you enroll.
+                                    Nothing to claim.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of bonus-card -->
+                </div> <!-- end of col-12 -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section>
+
+    <section id="sale-bonuses" class="basic-1 py-5 section-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bonus-card">
+                        <div class="featured-badge-wrap">
+                            <span class="bonus-badge">&#10022; Free during the Black Friday sale</span>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-9 mx-auto text-center">
+                                <h2 class="h2-heading mb-3">Two production-ready templates for your own projects</h2>
+                                <p class="line-spaced-paragraph mb-0">Auth, database, messaging, CI/CD, and Azure
+                                    deployment already working, on the same .NET 10 and Aspire stack you learn in the
+                                    bootcamp.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <!-- Bonus 1: Backend Blueprint PRO 10 -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container mb-3">
+                                        <img loading="lazy" class="img-fluid rounded"
+                                            src="../images/dotnet-backend-blueprint-pro-hero.jpg"
+                                            alt=".NET Backend Blueprint PRO 10 template">
+                                    </div>
+                                    <span class="bonus-price"><s>$39</s> Yours free</span>
+                                    <div class="bonus-item-title">.NET Backend Blueprint PRO 10</div>
+                                    <p class="bonus-item-sub">A production-ready .NET backend template with zero-config
+                                        auth and messaging.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Pub/sub messaging that already works.</strong> Azure Service
+                                                Bus with item event notifications, shared message contracts, and a local
+                                                emulator so you can run everything offline.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>A background worker service included.</strong> Offloads heavy
+                                                work through asynchronous message handling so your API stays
+                                                responsive.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Integration tests and 2 CI/CD pipelines.</strong> Test
+                                                containers, messaging mocks, and auth scenarios, plus ready pipelines
+                                                for GitHub Actions and Azure DevOps.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Production health checks and Application Insights.</strong>
+                                                Distributed tracing, custom metrics, and containers that self-heal when
+                                                a dependency goes down.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">.NET 10</span>
+                                        <span class="topic-pill">Aspire</span>
+                                        <span class="topic-pill">Keycloak</span>
+                                        <span class="topic-pill">PostgreSQL</span>
+                                        <span class="topic-pill">Service Bus</span>
+                                        <span class="topic-pill">Codespaces</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+
+                            <!-- Bonus 2: Full-Stack Blueprint 10 -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="bonus-item">
+                                    <div class="image-container mb-3">
+                                        <img loading="lazy" class="img-fluid rounded"
+                                            src="../images/dotnet-fullstack-blueprint-hero.jpg"
+                                            alt=".NET Full-Stack Blueprint 10 template">
+                                    </div>
+                                    <span class="bonus-price"><s>$39</s> Yours free</span>
+                                    <div class="bonus-item-title">.NET Full-Stack Blueprint 10</div>
+                                    <p class="bonus-item-sub">A production-ready .NET 10 and React template with
+                                        zero-config auth, database, messaging, and Azure deployment.</p>
+                                    <ul class="list-unstyled feature-list">
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>A React 19 front end already talking to the API.</strong>
+                                                TypeScript, Vite for fast reloads, React Router 7, and Bootstrap
+                                                5.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Login working end to end.</strong> Keycloak OAuth2/OIDC with
+                                                JWT validation, protected routes, and tokens attached to your API calls
+                                                for you.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>One YARP reverse proxy for both halves.</strong> Serves the
+                                                static build and routes /api/* to the backend in production.</span>
+                                        </li>
+                                        <li class="feature-check d-flex align-items-start mb-2">
+                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
+                                            <span><strong>Deploys to Azure with one command.</strong> Container Apps,
+                                                PostgreSQL Flexible Server, Keycloak, and managed identities.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="topic-pills">
+                                        <span class="topic-pill">React 19</span>
+                                        <span class="topic-pill">TypeScript</span>
+                                        <span class="topic-pill">.NET 10</span>
+                                        <span class="topic-pill">YARP</span>
+                                        <span class="topic-pill">Azure</span>
+                                        <span class="topic-pill">CI/CD</span>
+                                    </div>
+                                </div> <!-- end of bonus-item -->
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto text-center">
+                                <p class="bonus-deadline mb-2"><strong>$78 of templates, free with every enrollment
+                                        before Monday, November 30 at 11:59 PM PT.</strong> After the sale they go back
+                                    to $39 each.</p>
+                                <p class="bonus-fulfillment">Both templates are in your account the moment you enroll.
+                                    Nothing to claim.</p>
+                            </div> <!-- end of col -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of bonus-card -->
+                </div> <!-- end of col-12 -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section>
+
+    <script>
+        // BF26 bonus visibility. The sale end matches the countdown endDate in js/notification-banner.js.
+        document.addEventListener("DOMContentLoaded", function ()
+        {
+            var now = new Date();
+            var hide = function (selector)
+            {
+                document.querySelectorAll(selector).forEach(function (el) { el.style.display = 'none'; });
+            };
+            if (now >= new Date('November 23, 2026 06:00:00 PST'))
+            {
+                hide('#early-bonus');
+                hide('#pricing .pricing-bonus-early');
+                var navLink = document.querySelector('#nav-bonuses a');
+                if (navLink) { navLink.setAttribute('href', '#sale-bonuses'); }
+            }
+            if (now >= new Date('December 1, 2026 06:00:00 PST'))
+            {
+                hide('#sale-bonuses');
+                hide('#pricing .pricing-bonus');
+                hide('#nav-bonuses');
+            }
+        });
+    </script>
+    <!-- end of BF26 SALE BONUS -->
+
 
 
     <!-- Enroll Button -->
@@ -5304,6 +5593,9 @@
                             <div class="card-title best-value">ONE-TIME PAYMENT</div>
                             <div class="pricing-anchor">11 courses · 45+ hours of video</div>
                             <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
+                                <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
+                                <div class="pricing-bonus">Bonus: <span class="pricing-bonus-early">Unit testing bundle +
+                                        </span><span>2 templates</span></div>
                             </div>
                             <img loading="lazy" class="img-fluid pricing-boxes"
                                 src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
@@ -5340,6 +5632,9 @@
                             <div class="card-title best-value">INSTALLMENT PLAN</div>
                             <div class="pricing-anchor">11 courses · 45+ hours of video</div>
                             <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
+                                <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
+                                <div class="pricing-bonus">Bonus: <span class="pricing-bonus-early">Unit testing bundle +
+                                        </span><span>2 templates</span></div>
                             </div>
                             <img loading="lazy" class="img-fluid pricing-boxes"
                                 src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
