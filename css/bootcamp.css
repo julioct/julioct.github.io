@@ -302,8 +302,8 @@ body {
 /* drop the dated SVG wave */
 
 /* ---------- Limited-time bonus stack (Black Friday 2026 sale only) ----------
-   Remove this block together with the #early-bonus and #sale-bonuses
-   sections in courses/dotnetbootcamp.html when the sale ends. */
+   Remove this block together with the #sale-bonuses section
+   in courses/dotnetbootcamp.html when the sale ends. */
 .bonus-card {
     position: relative;
     background: var(--bg);

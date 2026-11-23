@@ -144,7 +144,7 @@
                         </li>
                         <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
                         <li class="nav-item" id="nav-bonuses">
-                            <a class="nav-link page-scroll" href="#early-bonus">Bonuses</a>
+                            <a class="nav-link page-scroll" href="#sale-bonuses">Bonuses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#testimonials-latest">Testimonials</a>
@@ -5131,133 +5131,13 @@
 
     <!-- ============================================================
          BF26 SALE BONUS - REMOVE WHEN THE SALE ENDS
-         Black Friday 2026: two bonus blocks.
-         #early-bonus (Ultimate C# Unit Testing Bundle) self-hides at
-         November 23, 2026 06:00 PST, together with the
-         .pricing-bonus-early lines in both #pricing cards.
-         #sale-bonuses (Blueprint templates) self-hides at
-         December 1, 2026 06:00 PST, together with every .pricing-bonus line.
-         The #nav-bonuses menu link points at #early-bonus, switches to
-         #sale-bonuses on Nov 23, and hides on Dec 1.
+         Black Friday 2026: #sale-bonuses (Blueprint templates) self-hides at
+         December 1, 2026 06:00 PST, together with every .pricing-bonus line
+         and the #nav-bonuses menu link.
          Paired CSS: the "Limited-time bonus stack" block at the bottom
          of css/bootcamp.css.
          ============================================================ -->
-    <section id="early-bonus" class="basic-1 py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bonus-card">
-                        <div class="featured-badge-wrap">
-                            <span class="bonus-badge">&#10022; Free until Sunday, Nov 22</span>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-lg-9 mx-auto text-center">
-                                <h2 class="h2-heading mb-3">The Ultimate C# Unit Testing Bundle</h2>
-                                <p class="line-spaced-paragraph mb-0">Fast unit tests for the business logic inside
-                                    your app, with xUnit, NSubstitute and Moq.</p>
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-
-                        <div class="row">
-                            <!-- Bonus 1: C# Unit Testing Essentials -->
-                            <div class="col-lg-6 mb-4">
-                                <div class="bonus-item">
-                                    <div class="image-container bonus-item-box mb-3">
-                                        <img loading="lazy" class="img-fluid"
-                                            src="../images/courses/csharp-unittesting-essentials/UnitTesting-Essentials-Box_Mockup.png"
-                                            alt="C# Unit Testing Essentials course">
-                                    </div>
-                                    <span class="bonus-price"><s>$47</s> Yours free</span>
-                                    <div class="bonus-item-title">C# Unit Testing Essentials</div>
-                                    <p class="bonus-item-sub">2.5 hours. Write your first C# unit tests and keep them
-                                        fast and reliable.</p>
-                                    <ul class="list-unstyled feature-list">
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Catch defects early.</strong> Catch regressions as soon as
-                                                they happen and refactor your C# code with confidence, in VS Code or
-                                                Visual Studio.</span>
-                                        </li>
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Write maintainable tests.</strong> Structure your tests
-                                                following best practices, and use FluentAssertions so your test code
-                                                reads like plain English.</span>
-                                        </li>
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Create fast and reliable tests.</strong> Use NSubstitute and
-                                                Moq to isolate dependencies so your tests stay fast.</span>
-                                        </li>
-                                    </ul>
-                                    <div class="topic-pills">
-                                        <span class="topic-pill">xUnit</span>
-                                        <span class="topic-pill">FluentAssertions</span>
-                                        <span class="topic-pill">NSubstitute</span>
-                                        <span class="topic-pill">Moq</span>
-                                        <span class="topic-pill">VS Code</span>
-                                    </div>
-                                </div> <!-- end of bonus-item -->
-                            </div> <!-- end of col -->
-
-                            <!-- Bonus 2: Mastering C# Unit Testing -->
-                            <div class="col-lg-6 mb-4">
-                                <div class="bonus-item">
-                                    <div class="image-container bonus-item-box mb-3">
-                                        <img loading="lazy" class="img-fluid"
-                                            src="../images/courses/mastering-csharp-unittesting/UnitTesting-Advanced-Box_Mockup.png"
-                                            alt="Mastering C# Unit Testing course">
-                                    </div>
-                                    <span class="bonus-price"><s>$97</s> Yours free</span>
-                                    <div class="bonus-item-title">Mastering C# Unit Testing</div>
-                                    <p class="bonus-item-sub">4 hours. Unit testing the way experienced devs do it, on
-                                        real-world ASP.NET Core apps.</p>
-                                    <ul class="list-unstyled feature-list">
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Best practices and antipatterns.</strong> The common mistakes
-                                                most devs make when writing unit tests, and how experienced devs write
-                                                them.</span>
-                                        </li>
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Testing real-world ASP.NET Core applications.</strong> What to
-                                                test in a real app, what to do with code that's too hard to unit test,
-                                                and how to test layer by layer.</span>
-                                        </li>
-                                        <li class="feature-check d-flex align-items-start mb-2">
-                                            <span class="feature-check-icon"><i class="fas fa-check fa-lg"></i></span>
-                                            <span><strong>Revealing the truth with code coverage.</strong> How to turn on
-                                                code coverage for your projects and make it work for your team.</span>
-                                        </li>
-                                    </ul>
-                                    <div class="topic-pills">
-                                        <span class="topic-pill">ASP.NET Core</span>
-                                        <span class="topic-pill">Best Practices</span>
-                                        <span class="topic-pill">Antipatterns</span>
-                                        <span class="topic-pill">Code Coverage</span>
-                                    </div>
-                                </div> <!-- end of bonus-item -->
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-
-                        <div class="row">
-                            <div class="col-lg-10 mx-auto text-center">
-                                <p class="bonus-deadline mb-2"><strong>$144 of unit testing courses, free with every
-                                        enrollment until Sunday, November 22 at 11:59 PM PT.</strong> After Sunday they're
-                                    no longer included.</p>
-                                <p class="bonus-fulfillment">Both courses are in your account the moment you enroll.
-                                    Nothing to claim.</p>
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-                    </div> <!-- end of bonus-card -->
-                </div> <!-- end of col-12 -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section>
-
-    <section id="sale-bonuses" class="basic-1 py-5 section-alt">
+    <section id="sale-bonuses" class="basic-1 py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -5397,13 +5277,6 @@
             {
                 document.querySelectorAll(selector).forEach(function (el) { el.style.display = 'none'; });
             };
-            if (now >= new Date('November 23, 2026 06:00:00 PST'))
-            {
-                hide('#early-bonus');
-                hide('#pricing .pricing-bonus-early');
-                var navLink = document.querySelector('#nav-bonuses a');
-                if (navLink) { navLink.setAttribute('href', '#sale-bonuses'); }
-            }
             if (now >= new Date('December 1, 2026 06:00:00 PST'))
             {
                 hide('#sale-bonuses');
@@ -5594,8 +5467,7 @@
                             <div class="pricing-anchor">11 courses · 45+ hours of video</div>
                             <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
                                 <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
-                                <div class="pricing-bonus">Bonus: <span class="pricing-bonus-early">Unit testing bundle +
-                                        </span><span>2 templates</span></div>
+                                <div class="pricing-bonus">Bonus: 2 templates</div>
                             </div>
                             <img loading="lazy" class="img-fluid pricing-boxes"
                                 src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
@@ -5633,8 +5505,7 @@
                             <div class="pricing-anchor">11 courses · 45+ hours of video</div>
                             <div class="pricing-extras">Full source code · Illustrated handouts · Course certificates
                                 <!-- BF26 SALE BONUS - remove with the #sale-bonuses section -->
-                                <div class="pricing-bonus">Bonus: <span class="pricing-bonus-early">Unit testing bundle +
-                                        </span><span>2 templates</span></div>
+                                <div class="pricing-bonus">Bonus: 2 templates</div>
                             </div>
                             <img loading="lazy" class="img-fluid pricing-boxes"
                                 src="../images/bootcamp/bootcamp-boxes.png" alt="All 11 bootcamp courses included">
